@@ -1,6 +1,7 @@
 # Alle 3 Stunden: Quellen prüfen (ohne Claude, kostet kein Kontingent). Gibt es Neues oder liegt
 # noch etwas in der Warteschlange, wird der Claude-Lauf über seine Web-Adresse gestartet.
 # Geheimnisse (Repo → Settings → Secrets and variables → Actions): ROUTINE_ID, ROUTINE_TOKEN.
+# Aufruf laut code.claude.com/docs/en/routines.md („Trigger a routine“, gelesen 02.10.2026) – mit Beta-Kopfzeile.
 name: Vorprüfung
 on:
   schedule:
@@ -45,7 +46,10 @@ jobs:
           ROUTINE_TOKEN: ${{ secrets.ROUTINE_TOKEN }}
         run: |
           curl -sS --fail-with-body -X POST "https://api.anthropic.com/v1/claude_code/routines/$ROUTINE_ID/fire" \
-            -H "Authorization: Bearer $ROUTINE_TOKEN" -H "content-type: application/json" \
+            -H "Authorization: Bearer $ROUTINE_TOKEN" \
+            -H "anthropic-beta: experimental-cc-routine-2026-04-01" \
+            -H "anthropic-version: 2023-06-01" \
+            -H "content-type: application/json" \
             -d '{"text":"In daten/warteschlange/ liegen neue Meldungen. Arbeite ROUTINE-AUFTRAG.md ab."}'
       - name: Gestörte Quelle melden
         if: steps.pruefen.outputs.code == '1' || steps.pruefen.outputs.gestoert != ''
