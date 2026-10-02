@@ -8,5 +8,9 @@
   "briefing_de": "- Bereiche: Blog, Mods, Docs, Terminal.\n- Blog-Rubriken: Agents, Engineering, Playbooks, Skills, Tutorials.\n- Hat einen RSS-Feed – diese App liest ihn mit.",
   "bereich": "entwickler",
   "datum": "2026-09-30",
-  "wichtig": false
+  "wichtig": false,
+  "ereignis": {
+    "art": "neu",
+    "titel": "claude.dev startet"
+  }
 }

@@ -42,7 +42,8 @@ Die GitHub Action „Vorprüfung“ hat Neues gefunden und dich gestartet.
   "arbeitsweise_de": "Optional: Was heißt das für jemanden, der täglich mit Claude Code und der API baut?",
   "bereich": "claude-code",
   "datum": "2026-10-01",
-  "wichtig": true
+  "wichtig": true,
+  "ereignis": { "art": "neu", "titel": "Claude Code bekommt Mods" }
 }
 ```
 - `id`: klein, a–z, 0–9, Bindestrich; sprechend und stabil (gleicher Inhalt → gleiche id).
@@ -56,6 +57,11 @@ Die GitHub Action „Vorprüfung“ hat Neues gefunden und dich gestartet.
 - `datum`: Veröffentlichungsdatum laut Quelle (JJJJ-MM-TT), sonst das Datum der Meldung.
 - `wichtig: true` nur bei: neues Modell, Abschaltung oder Abschaltdatum, Preisänderung, Änderung, die
   bestehenden Code bricht, große neue Funktion in Claude Code oder der API. Sonst `false`.
+- `ereignis` (optional) – ein Punkt auf der Zeitleiste der App. Nur bei: **neues Modell erscheint**,
+  **neue Seite oder neues Produkt von Anthropic startet**, **große neue Funktion** in Claude Code oder der API.
+  `art` ist immer `"neu"`; `titel` kurz, höchstens 60 Zeichen („Sonnet 5.5 erscheint“); `datum` nur angeben,
+  wenn das Ereignis an einem anderen Tag war als `datum` des Beitrags. **Abschaltungen nicht** als
+  ereignis eintragen – die kommen fest aus der Abschaltliste.
 
 ## 4. Wie du schreibst
 - Deutsch, klar, sachlich, Du-Form. Fachwörter, die Entwickler so sagen, bleiben (Skills, Plugins, Effort).

@@ -7,6 +7,7 @@ import { join, dirname } from 'node:path';
 import { homedir, userInfo } from 'node:os';
 import { fileURLToPath } from 'node:url';
 import { QUELLEN } from '../vorpruefung/quellen.mjs';
+import { pruefeEreignis } from './zeitleiste.mjs';
 
 export const PFLICHTFELDER = ['id', 'quelle', 'url', 'titel_original', 'titel_de', 'kurz_de', 'briefing_de', 'bereich', 'datum', 'wichtig'];
 const TEXTFELDER = ['id', 'quelle', 'url', 'titel_original', 'titel_de', 'kurz_de', 'briefing_de', 'bereich', 'datum'];
@@ -141,6 +142,7 @@ export function pruefeBeitrag(b, { projektnamen = [] } = {}) {
   if (typeof b.datum === 'string' && b.datum && !gueltigesDatum(b.datum)) fehler.push(`${id}: datum kein gültiges Datum JJJJ-MM-TT`);
   if ('wichtig' in b && typeof b.wichtig !== 'boolean') fehler.push(`${id}: wichtig muss true oder false sein`);
   if (typeof b.kurz_de === 'string' && b.kurz_de.length > KURZ_MAX) fehler.push(`${id}: kurz_de länger als ${KURZ_MAX} Zeichen`);
+  fehler.push(...pruefeEreignis(b)); // optionales Feld für die Zeitleiste (F-09)
 
   const texte = alleTexte(b);
   for (const text of texte) {

@@ -4,7 +4,11 @@ name: Veröffentlichen
 on:
   push:
     branches: [main]
-    paths: ['daten/beitraege/**']
+    paths: ['daten/beitraege/**', 'daten/quellen/**', 'daten/zeitleiste.mjs', 'daten/index-bauen.mjs']
+  # Täglich einmal: Die Vorprüfung schreibt die Abschaltliste mit dem Actions-Schlüssel, und solche
+  # Commits starten keine weitere Action. Ohne Änderung schreibt index-bauen nichts (kein leerer Commit).
+  schedule:
+    - cron: '17 5 * * *'
   workflow_dispatch: {}
 permissions:
   contents: write

@@ -8,5 +8,9 @@
   "briefing_de": "Neu in Fassung 2.1.287:\n- Mods: Plugins dürfen tieferes Verhalten ändern.\n- „You should know“: Ein Neben-Agent liest mit und weist auf Dinge hin, die du oder Claude übersehen. Einschalten mit /plugin enable cc-plugin-you-should-know@builtin.\n- In der Agenten-Ansicht filtert n:<text> nach Sitzungsnamen und Aufgaben.",
   "bereich": "claude-code",
   "datum": "2026-10-01",
-  "wichtig": true
+  "wichtig": true,
+  "ereignis": {
+    "art": "neu",
+    "titel": "Claude Code bekommt Mods"
+  }
 }
