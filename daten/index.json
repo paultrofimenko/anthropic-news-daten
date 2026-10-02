@@ -1,7 +1,7 @@
 {
  "version": 1,
- "erzeugt": "2026-10-02T18:25:49.739Z",
- "anzahl": 8,
+ "erzeugt": "2026-10-02T19:19:24.891Z",
+ "anzahl": 9,
  "beitraege": [
   {
    "id": "claude-frontier-academy",
@@ -87,6 +87,19 @@
    "bereich": "modelle",
    "datum": "2026-09-28",
    "wichtig": true
+  },
+  {
+   "id": "opus-5-5-aufgabenkosten",
+   "quelle": "claude-dev-rss",
+   "url": "https://claude.dev/blog/what-a-task-costs-on-opus-5-5/",
+   "titel_original": "What a task costs on Opus 5.5",
+   "titel_de": "Was eine Aufgabe auf Opus 5.5 kostet",
+   "kurz_de": "Opus 5.5 kostet pro Token 20 % weniger als Opus 5, Cache-Reads 60 % weniger. Der Beitrag erklärt, was Kosten treibt und wie man sie senkt.",
+   "briefing_de": "Der Beitrag von Addy Osmani (25.09.2026) rechnet die Kosten einer Aufgabe auf Opus 5.5 durch.\n- Preise je Mio. Token: Input 4 $ statt 5 $, Output 20 $ statt 25 $, Cache-Reads 0,20 $ statt 0,50 $.\n- Für typische Workloads laufe Opus 5.5 laut Beitrag 40 % günstiger als Opus 5 (Preise und Effizienz zusammen).\n- Kostentreiber: Anzahl der Turns, Cache-Reads, Output-Tokens (fünfmal teurer als Input, inkl. Thinking) und die Modellwahl.\n- Empfehlungen: Effort medium als Start, high nur wenn medium nicht weiterkommt (ca. 0,40 $ mehr je Aufgabe); Sessions warm halten, /compact an natürlichen Pausen, /usage zur Kontrolle.",
+   "arbeitsweise_de": "Opus 5.5 als Standardmodell, Fable 5.1 für schwierige Aufgaben, Sonnet/Haiku nur für Abfragen und Subagents. Der Beitrag nennt rund 13 $ je Entwickler und aktivem Tag im Unternehmensdurchschnitt – eigene Werte per /usage messen.",
+   "bereich": "modelle",
+   "datum": "2026-09-25",
+   "wichtig": false
   },
   {
    "id": "kontext-regeln-claude-5",
