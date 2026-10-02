@@ -27,9 +27,11 @@ export function mitAltenAbschaltungen(neu, altText, modelle) {
   if (!modelle.length) return neu;
   let alt;
   try { alt = JSON.parse(altText); } catch { return neu; }
-  const schon = new Set(neu.zeitleiste.map((e) => e.datum + e.titel));
-  const behalten = (alt?.zeitleiste ?? []).filter((e) => e.art === 'ende' && !schon.has(e.datum + e.titel)
-    && (e.modelle ?? []).some((m) => modelle.includes(m)));
+  // Ein Modell, das der neue Index schon kennt (z. B. aus der Verlaufstabelle), kommt nicht ein zweites Mal
+  // mit dem alten Datum dazu (Prüfrunde 3, sollte 3).
+  const schon = new Set(neu.zeitleiste.flatMap((e) => e.modelle ?? []));
+  const behalten = (alt?.zeitleiste ?? []).filter((e) => e.art === 'ende'
+    && (e.modelle ?? []).some((m) => modelle.includes(m)) && !(e.modelle ?? []).some((m) => schon.has(m)));
   if (!behalten.length) return neu;
   return { ...neu, zeitleiste: [...neu.zeitleiste, ...behalten].sort((a, b) => a.datum.localeCompare(b.datum) || (a.art === b.art ? 0 : a.art === 'neu' ? -1 : 1)) };
 }

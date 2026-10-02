@@ -92,8 +92,14 @@ function liesAbschaltliste(markdown) {
     const name = t.kopf.findIndex((k) => k === 'api model name' || k === 'deprecated model');
     const datum = t.kopf.findIndex((k) => k.includes('retirement date'));
     const zustand = t.kopf.findIndex((k) => k === 'current state' || k === 'status');
-    if (name < 0 || datum < 0) continue;
+    if (name < 0 || datum < 0) {
+      // Eine Tabelle, die nach Abschaltungen aussieht, deren Spalten aber anders heißen: melden statt
+      // still übergehen (Prüfrunde 3, sollte 1).
+      if (t.kopf.some((k) => /retire|deprecat/.test(k))) unklar.push({ api: '', text: `Tabelle mit unbekannten Spalten (${t.kopf.join(' | ')})` });
+      continue;
+    }
     for (const z of t.zeilen) {
+      if (z.length < t.kopf.length) { unklar.push({ api: API_NAME.test((z[name] ?? '').replace(/`/g, '').trim()) ? (z[name] ?? '').replace(/`/g, '').trim() : '', text: `Zeile mit zu wenigen Zellen (${z.join(' | ')})` }); continue; }
       const api = (z[name] ?? '').replace(/`/g, '').trim();
       const zelle = (z[datum] ?? '').trim();
       if (zustand >= 0) {
@@ -122,7 +128,7 @@ function liesAbschaltliste(markdown) {
 // Eindeutige Wörter immer; „eingestellt“ und „veraltet“ nur zusammen mit einem Modellnamen – sonst träfe
 // es „Einstellungen“, „Mitarbeiter eingestellt“ oder „veraltete APIs“ (Runde 2, sollte 3).
 const ABSCHALT_WORT = /abschalt|abgeschalt|abgek(ü|ue)ndigt|deprecat|\bretired?\b/i;
-const ABSCHALT_WORT_MIT_MODELL = /\b(eingestellt|veraltet)\b/i;
+const ABSCHALT_WORT_MIT_MODELL = /\b(eingestellt|veraltet|einstellung|retirement|abk(ü|ue)ndigung)\b/i;
 const MODELL_WORT = /\b(claude|opus|sonnet|haiku|fable|mythos)\b/i;
 const nenntAbschaltung = (t) => ABSCHALT_WORT.test(t) || (ABSCHALT_WORT_MIT_MODELL.test(t) && MODELL_WORT.test(t));
 
