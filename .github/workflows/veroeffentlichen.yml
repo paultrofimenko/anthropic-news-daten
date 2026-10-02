@@ -37,3 +37,7 @@ jobs:
             git pull --rebase
             git push
           fi
+      # Erst nach dem Veröffentlichen: Versteht das Skript Zeilen der Abschaltliste nicht, wird die Action
+      # rot (GitHub schickt eine Mail). Der Index mit den neuen Beiträgen ist dann schon draußen.
+      - name: Abschaltliste verstanden?
+        run: node daten/zeitleiste.mjs --pruefen

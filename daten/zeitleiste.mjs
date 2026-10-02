@@ -11,13 +11,18 @@ export const EREIGNIS_TITEL_MAX = 60;
 
 const MONATE = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
 
-// „November 30, 2026“ → „2026-11-30“; alles andere („Not sooner than …“, „To be announced“, „N/A“) → null.
+// „November 30, 2026“, „30 November 2026“ und „2026-11-30“ → „2026-11-30“; alles andere
+// („Not sooner than …“, „To be announced“, „N/A“) → null.
 export function festesDatum(text) {
-  const m = /^\s*([A-Za-z]+)\s+(\d{1,2}),\s*(\d{4})\s*$/.exec(text ?? '');
-  if (!m) return null;
-  const monat = MONATE.indexOf(m[1].toLowerCase());
-  if (monat < 0) return null;
-  const iso = `${m[3]}-${String(monat + 1).padStart(2, '0')}-${m[2].padStart(2, '0')}`;
+  const t = (text ?? '').trim();
+  let jahr, monat, tag;
+  let m = /^([A-Za-z]+)\s+(\d{1,2}),\s*(\d{4})$/.exec(t);
+  if (m) [jahr, monat, tag] = [m[3], MONATE.indexOf(m[1].toLowerCase()) + 1, m[2]];
+  else if ((m = /^(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})$/.exec(t))) [jahr, monat, tag] = [m[3], MONATE.indexOf(m[2].toLowerCase()) + 1, m[1]];
+  else if ((m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(t))) [jahr, monat, tag] = [m[1], Number(m[2]), m[3]];
+  else return null;
+  if (monat < 1) return null;
+  const iso = `${jahr}-${String(monat).padStart(2, '0')}-${String(tag).padStart(2, '0')}`;
   const d = new Date(`${iso}T00:00:00Z`);
   return !Number.isNaN(d.getTime()) && d.toISOString().slice(0, 10) === iso ? iso : null;
 }
@@ -53,12 +58,15 @@ function tabellen(markdown) {
   return ergebnis;
 }
 
-// Datumszellen ohne festes Datum, die bekannt sind. Alles andere ist „unklar“ und hält den Index an –
-// lieber kein neuer Index als eine Abschaltung, die still verschwindet (Prüfrunde 1, S5).
-const KEIN_DATUM = /^(not sooner than .+|to be announced|n\/a|tbd)$/i;
+// Datumszellen ohne festes Datum, die bekannt sind. Alles andere ist „unklar“: Es wird gemeldet (Hinweis
+// im Index, rote Action), statt still zu verschwinden (Prüfrunde 1, S5; Runde 2, sollte 1).
+const KEIN_DATUM = /^(not sooner than .+|no sooner than .+|to be announced|tba|tbd|n\/a|—|–|-|)$/i;
 const API_NAME = /^claude-[a-z0-9.-]+$/;
 // In „Model status“ sind nur diese Zustände eine angekündigte Abschaltung; Active/Legacy nicht (S4).
+// Unbekannte Zustände („Retiring“) sind unklar (Runde 2, sollte 2). Sternchen und Fettdruck zählen nicht.
 const ABGEKUENDIGT = ['deprecated', 'retired'];
+const NICHT_ABGEKUENDIGT = ['active', 'legacy'];
+const nurBuchstaben = (s) => (s ?? '').replace(/[^A-Za-z]/g, '').toLowerCase();
 
 // Je Modell mit festem Abschaltdatum ein Ereignis. Quellen: Tabelle „Model status“ (Spalten API model name,
 // Current state, Tentative retirement date) und die Tabellen der „Deprecation history“ (Retirement date,
@@ -67,9 +75,14 @@ export function abschaltEreignisse(markdown) {
   return liesAbschaltliste(markdown).ereignisse;
 }
 
-// Zeilen, deren Name oder Datum keine bekannte Form hat (leer = alles verstanden).
+// Zeilen, deren Name, Zustand oder Datum keine bekannte Form hat (leer = alles verstanden).
 export function unklareAbschaltZeilen(markdown) {
-  return liesAbschaltliste(markdown).unklar;
+  return liesAbschaltliste(markdown).unklar.map((u) => `${u.api || '(ohne Name)'}: ${u.text}`);
+}
+
+// Die API-Namen dieser Zeilen – deren Abschaltungen bleiben aus dem alten Index stehen.
+export function unklareModelle(markdown) {
+  return liesAbschaltliste(markdown).unklar.map((u) => u.api).filter(Boolean);
 }
 
 function liesAbschaltliste(markdown) {
@@ -78,15 +91,19 @@ function liesAbschaltliste(markdown) {
   for (const t of tabellen(markdown ?? '')) {
     const name = t.kopf.findIndex((k) => k === 'api model name' || k === 'deprecated model');
     const datum = t.kopf.findIndex((k) => k.includes('retirement date'));
-    const zustand = t.kopf.findIndex((k) => k === 'current state');
+    const zustand = t.kopf.findIndex((k) => k === 'current state' || k === 'status');
     if (name < 0 || datum < 0) continue;
     for (const z of t.zeilen) {
       const api = (z[name] ?? '').replace(/`/g, '').trim();
       const zelle = (z[datum] ?? '').trim();
-      if (zustand >= 0 && !ABGEKUENDIGT.includes((z[zustand] ?? '').trim().toLowerCase())) continue;
+      if (zustand >= 0) {
+        const wort = nurBuchstaben(z[zustand]);
+        if (NICHT_ABGEKUENDIGT.includes(wort)) continue;
+        if (!ABGEKUENDIGT.includes(wort)) { unklar.push({ api, text: `Zustand „${(z[zustand] ?? '').trim()}“` }); continue; }
+      }
       if (KEIN_DATUM.test(zelle)) continue;
       const iso = festesDatum(zelle);
-      if (!iso || !API_NAME.test(api)) { unklar.push(`${api || '(ohne Name)'}: ${zelle || '(ohne Datum)'}`); continue; }
+      if (!iso || !API_NAME.test(api)) { unklar.push({ api: API_NAME.test(api) ? api : '', text: `${api ? '' : '(ohne Name) '}${zelle || '(ohne Datum)'}${API_NAME.test(api) ? '' : ` – Name „${api}“`}` }); continue; }
       if (!daten.has(api)) daten.set(api, iso);
     }
   }
@@ -102,7 +119,12 @@ function liesAbschaltliste(markdown) {
 }
 
 // Ein Beitrags-Ereignis darf keine Abschaltung behaupten – die kommen nur fest aus der Abschaltliste (S3).
-const ABSCHALT_WORT = /abschalt|abgeschalt|eingestellt|retire|deprecat|veraltet|abgek(ü|ue)ndigt|einstellung/i;
+// Eindeutige Wörter immer; „eingestellt“ und „veraltet“ nur zusammen mit einem Modellnamen – sonst träfe
+// es „Einstellungen“, „Mitarbeiter eingestellt“ oder „veraltete APIs“ (Runde 2, sollte 3).
+const ABSCHALT_WORT = /abschalt|abgeschalt|abgek(ü|ue)ndigt|deprecat|\bretired?\b/i;
+const ABSCHALT_WORT_MIT_MODELL = /\b(eingestellt|veraltet)\b/i;
+const MODELL_WORT = /\b(claude|opus|sonnet|haiku|fable|mythos)\b/i;
+const nenntAbschaltung = (t) => ABSCHALT_WORT.test(t) || (ABSCHALT_WORT_MIT_MODELL.test(t) && MODELL_WORT.test(t));
 
 // Fehler im optionalen Feld „ereignis“ eines Beitrags (leer = in Ordnung).
 export function pruefeEreignis(b) {
@@ -114,7 +136,7 @@ export function pruefeEreignis(b) {
   if (!EREIGNIS_ARTEN.includes(e.art)) fehler.push(`${id}: ereignis.art muss ${EREIGNIS_ARTEN.map((a) => `„${a}“`).join(' oder ')} sein`);
   if (typeof e.titel !== 'string' || !e.titel.trim()) fehler.push(`${id}: ereignis.titel fehlt`);
   else if (e.titel.length > EREIGNIS_TITEL_MAX) fehler.push(`${id}: ereignis.titel länger als ${EREIGNIS_TITEL_MAX} Zeichen`);
-  else if (ABSCHALT_WORT.test(e.titel)) fehler.push(`${id}: ereignis.titel nennt eine Abschaltung – Abschaltungen kommen nur aus der Abschaltliste, nicht als ereignis`);
+  else if (nenntAbschaltung(e.titel)) fehler.push(`${id}: ereignis.titel nennt eine Abschaltung – Abschaltungen kommen nur aus der Abschaltliste, nicht als ereignis`);
   if ('datum' in e && !gueltig(e.datum)) fehler.push(`${id}: ereignis.datum kein gültiges Datum JJJJ-MM-TT`);
   return fehler;
 }
@@ -146,8 +168,17 @@ export function bauZeitleiste(beitraege, abschaltMarkdown = '') {
 }
 
 const istHauptprogramm = process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url);
-if (istHauptprogramm && process.argv[2] === '--zaehlen') {
+if (istHauptprogramm && ['--zaehlen', '--pruefen'].includes(process.argv[2])) {
   const datei = resolve(process.argv[3] ?? join(dirname(fileURLToPath(import.meta.url)), 'quellen', 'abschaltungen.md'));
-  const e = abschaltEreignisse(readFileSync(datei, 'utf8'));
-  console.log(`${e.flatMap((x) => x.modelle).length} Modelle, ${e.length} Ereignisse`);
+  const text = readFileSync(datei, 'utf8');
+  if (process.argv[2] === '--zaehlen') {
+    const e = abschaltEreignisse(text);
+    console.log(`${e.flatMap((x) => x.modelle).length} Modelle, ${e.length} Ereignisse`);
+  } else {
+    // Für die Action: nach dem Veröffentlichen rot werden (GitHub schickt eine Mail), wenn die Liste
+    // Zeilen enthält, die das Skript nicht versteht. Der Index ist dann trotzdem gebaut.
+    const unklar = unklareAbschaltZeilen(text);
+    for (const u of unklar) console.log(`::error::Abschaltliste nicht verstanden: ${u}`);
+    process.exit(unklar.length ? 1 : 0);
+  }
 }
