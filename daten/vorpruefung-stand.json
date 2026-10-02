@@ -14,6 +14,7 @@
    "claude.dev/blog/spending-your-effort",
    "claude.dev/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models",
    "claude.dev/blog/using-claude-code-the-unreasonable-effectiveness-of-html",
+   "claude.dev/blog/what-a-task-costs-on-opus-5-5",
    "claude.dev/mods",
    "claude.dev/terminal",
    "claude.dev/terms"
@@ -32,7 +33,8 @@
    "claude.dev/blog/seeing-like-an-agent",
    "claude.dev/blog/spending-your-effort",
    "claude.dev/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models",
-   "claude.dev/blog/using-claude-code-the-unreasonable-effectiveness-of-html"
+   "claude.dev/blog/using-claude-code-the-unreasonable-effectiveness-of-html",
+   "claude.dev/blog/what-a-task-costs-on-opus-5-5"
   ]
  },
  "code-changelog": {
