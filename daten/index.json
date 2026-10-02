@@ -1,6 +1,6 @@
 {
  "version": 1,
- "erzeugt": "2026-10-02T19:19:24.891Z",
+ "erzeugt": "2026-10-02T20:37:36.947Z",
  "anzahl": 9,
  "beitraege": [
   {
@@ -37,7 +37,11 @@
    "briefing_de": "Neu in Fassung 2.1.287:\n- Mods: Plugins dürfen tieferes Verhalten ändern.\n- „You should know“: Ein Neben-Agent liest mit und weist auf Dinge hin, die du oder Claude übersehen. Einschalten mit /plugin enable cc-plugin-you-should-know@builtin.\n- In der Agenten-Ansicht filtert n:<text> nach Sitzungsnamen und Aufgaben.",
    "bereich": "claude-code",
    "datum": "2026-10-01",
-   "wichtig": true
+   "wichtig": true,
+   "ereignis": {
+    "art": "neu",
+    "titel": "Claude Code bekommt Mods"
+   }
   },
   {
    "id": "claude-shaped-science",
@@ -62,7 +66,11 @@
    "briefing_de": "- Bereiche: Blog, Mods, Docs, Terminal.\n- Blog-Rubriken: Agents, Engineering, Playbooks, Skills, Tutorials.\n- Hat einen RSS-Feed – diese App liest ihn mit.",
    "bereich": "entwickler",
    "datum": "2026-09-30",
-   "wichtig": false
+   "wichtig": false,
+   "ereignis": {
+    "art": "neu",
+    "titel": "claude.dev startet"
+   }
   },
   {
    "id": "sonnet-4-5-abschaltung",
@@ -86,7 +94,11 @@
    "briefing_de": "- Modell-ID: claude-sonnet-5-5, erschienen am 28.09.2026.\n- Laut Anthropic über 30 % schneller als Sonnet 5, bei den meisten Aufgaben bis zu 30 % günstiger.\n- Fünf Brüche: Thinking abschalten heißt jetzt between_tools, erzwungene Tool-Wahl gibt Fehler 400, Thinking-Blöcke sind an Modell und Konto gebunden, altes Computer-Use-Tool abgelehnt, neue Advisor-Regeln.",
    "bereich": "modelle",
    "datum": "2026-09-28",
-   "wichtig": true
+   "wichtig": true,
+   "ereignis": {
+    "art": "neu",
+    "titel": "Sonnet 5.5 erscheint"
+   }
   },
   {
    "id": "opus-5-5-aufgabenkosten",
@@ -112,6 +124,201 @@
    "bereich": "entwickler",
    "datum": "2026-07-24",
    "wichtig": false
+  }
+ ],
+ "zeitleiste": [
+  {
+   "datum": "2024-11-06",
+   "art": "ende",
+   "titel": "Abschaltung von Claude 1.0",
+   "modelle": [
+    "claude-1.0"
+   ],
+   "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+  },
+  {
+   "datum": "2024-11-06",
+   "art": "ende",
+   "titel": "Abschaltung von Claude 1.1",
+   "modelle": [
+    "claude-1.1"
+   ],
+   "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+  },
+  {
+   "datum": "2024-11-06",
+   "art": "ende",
+   "titel": "Abschaltung von Claude 1.2",
+   "modelle": [
+    "claude-1.2"
+   ],
+   "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+  },
+  {
+   "datum": "2024-11-06",
+   "art": "ende",
+   "titel": "Abschaltung von Claude 1.3",
+   "modelle": [
+    "claude-1.3"
+   ],
+   "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+  },
+  {
+   "datum": "2024-11-06",
+   "art": "ende",
+   "titel": "Abschaltung von Claude Instant 1.0",
+   "modelle": [
+    "claude-instant-1.0"
+   ],
+   "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+  },
+  {
+   "datum": "2024-11-06",
+   "art": "ende",
+   "titel": "Abschaltung von Claude Instant 1.1",
+   "modelle": [
+    "claude-instant-1.1"
+   ],
+   "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+  },
+  {
+   "datum": "2024-11-06",
+   "art": "ende",
+   "titel": "Abschaltung von Claude Instant 1.2",
+   "modelle": [
+    "claude-instant-1.2"
+   ],
+   "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+  },
+  {
+   "datum": "2025-07-21",
+   "art": "ende",
+   "titel": "Abschaltung von Claude 2.0",
+   "modelle": [
+    "claude-2.0"
+   ],
+   "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+  },
+  {
+   "datum": "2025-07-21",
+   "art": "ende",
+   "titel": "Abschaltung von Claude 2.1",
+   "modelle": [
+    "claude-2.1"
+   ],
+   "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+  },
+  {
+   "datum": "2025-07-21",
+   "art": "ende",
+   "titel": "Abschaltung von Sonnet 3",
+   "modelle": [
+    "claude-3-sonnet-20240229"
+   ],
+   "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+  },
+  {
+   "datum": "2025-10-28",
+   "art": "ende",
+   "titel": "Abschaltung von Sonnet 3.5",
+   "modelle": [
+    "claude-3-5-sonnet-20240620",
+    "claude-3-5-sonnet-20241022"
+   ],
+   "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+  },
+  {
+   "datum": "2026-01-05",
+   "art": "ende",
+   "titel": "Abschaltung von Opus 3",
+   "modelle": [
+    "claude-3-opus-20240229"
+   ],
+   "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+  },
+  {
+   "datum": "2026-02-19",
+   "art": "ende",
+   "titel": "Abschaltung von Haiku 3.5",
+   "modelle": [
+    "claude-3-5-haiku-20241022"
+   ],
+   "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+  },
+  {
+   "datum": "2026-02-19",
+   "art": "ende",
+   "titel": "Abschaltung von Sonnet 3.7",
+   "modelle": [
+    "claude-3-7-sonnet-20250219"
+   ],
+   "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+  },
+  {
+   "datum": "2026-04-20",
+   "art": "ende",
+   "titel": "Abschaltung von Haiku 3",
+   "modelle": [
+    "claude-3-haiku-20240307"
+   ],
+   "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+  },
+  {
+   "datum": "2026-06-15",
+   "art": "ende",
+   "titel": "Abschaltung von Opus 4",
+   "modelle": [
+    "claude-opus-4-20250514"
+   ],
+   "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+  },
+  {
+   "datum": "2026-06-15",
+   "art": "ende",
+   "titel": "Abschaltung von Sonnet 4",
+   "modelle": [
+    "claude-sonnet-4-20250514"
+   ],
+   "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+  },
+  {
+   "datum": "2026-08-05",
+   "art": "ende",
+   "titel": "Abschaltung von Opus 4.1",
+   "modelle": [
+    "claude-opus-4-1-20250805"
+   ],
+   "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+  },
+  {
+   "datum": "2026-09-28",
+   "art": "neu",
+   "titel": "Sonnet 5.5 erscheint",
+   "beitrag": "sonnet-5-5",
+   "url": "https://platform.claude.com/docs/en/models/sonnet-5-5/overview"
+  },
+  {
+   "datum": "2026-09-30",
+   "art": "neu",
+   "titel": "claude.dev startet",
+   "beitrag": "claude-dev-start",
+   "url": "https://claude.dev"
+  },
+  {
+   "datum": "2026-10-01",
+   "art": "neu",
+   "titel": "Claude Code bekommt Mods",
+   "beitrag": "claude-code-2-1-287",
+   "url": "https://code.claude.com/docs/en/changelog"
+  },
+  {
+   "datum": "2026-11-30",
+   "art": "ende",
+   "titel": "Abschaltung von Sonnet 4.5",
+   "modelle": [
+    "claude-sonnet-4-5-20250929"
+   ],
+   "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
   }
  ]
 }
