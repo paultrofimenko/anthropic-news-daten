@@ -1,0 +1,35 @@
+# Nach jedem neuen Beitrag: Format prüfen und daten/index.json bauen – die Datei, die die App liest.
+# Schlägt die Prüfung fehl, wird nichts veröffentlicht (die App zeigt den alten Stand).
+name: Veröffentlichen
+on:
+  push:
+    branches: [main]
+    paths: ['daten/beitraege/**']
+  workflow_dispatch: {}
+permissions:
+  contents: write
+concurrency:
+  group: veroeffentlichen
+  cancel-in-progress: false
+jobs:
+  index:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Beiträge prüfen
+        run: node daten/pruefe-ordner.mjs
+      - name: Index bauen und sichern
+        run: |
+          node daten/index-bauen.mjs
+          git config user.name "anthropic-news-veroeffentlichen"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add daten/index.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Index: $(node -e "console.log(require('./daten/index.json').anzahl)") Beiträge"
+            git pull --rebase
+            git push
+          fi

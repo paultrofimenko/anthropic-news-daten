@@ -1,0 +1,12 @@
+{
+  "id": "claude-code-2-1-287",
+  "quelle": "code-changelog",
+  "url": "https://code.claude.com/docs/en/changelog",
+  "titel_original": "Claude Code 2.1.287",
+  "titel_de": "Claude Code bekommt Mods",
+  "kurz_de": "Plugins dürfen Claude Code jetzt tiefer verändern: Verhalten, Oberfläche, eigene Funktionen. Dazu kommt der eingebaute Mod „You should know“.",
+  "briefing_de": "Neu in Fassung 2.1.287:\n- Mods: Plugins dürfen tieferes Verhalten ändern.\n- „You should know“: Ein Neben-Agent liest mit und weist auf Dinge hin, die du oder Claude übersehen. Einschalten mit /plugin enable cc-plugin-you-should-know@builtin.\n- In der Agenten-Ansicht filtert n:<text> nach Sitzungsnamen und Aufgaben.",
+  "bereich": "claude-code",
+  "datum": "2026-10-01",
+  "wichtig": true
+}

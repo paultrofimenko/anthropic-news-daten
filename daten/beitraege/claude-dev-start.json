@@ -1,0 +1,12 @@
+{
+  "id": "claude-dev-start",
+  "quelle": "claude-dev",
+  "url": "https://claude.dev",
+  "titel_original": "claude.dev",
+  "titel_de": "claude.dev: neue Heimat für Entwickler",
+  "kurz_de": "Anthropics neue Seite für alle, die mit Claude bauen: Einblicke aus dem Engineering, Anleitungen zu Claude Code und API, Tipps der Teams.",
+  "briefing_de": "- Bereiche: Blog, Mods, Docs, Terminal.\n- Blog-Rubriken: Agents, Engineering, Playbooks, Skills, Tutorials.\n- Hat einen RSS-Feed – diese App liest ihn mit.",
+  "bereich": "entwickler",
+  "datum": "2026-09-30",
+  "wichtig": false
+}

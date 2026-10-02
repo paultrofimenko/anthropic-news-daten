@@ -1,0 +1,54 @@
+# Alle 3 Stunden: Quellen prüfen (ohne Claude, kostet kein Kontingent). Gibt es Neues oder liegt
+# noch etwas in der Warteschlange, wird der Claude-Lauf über seine Web-Adresse gestartet.
+# Geheimnisse (Repo → Settings → Secrets and variables → Actions): ROUTINE_ID, ROUTINE_TOKEN.
+name: Vorprüfung
+on:
+  schedule:
+    - cron: '17 */3 * * *'
+  workflow_dispatch: {}
+permissions:
+  contents: write
+concurrency:
+  group: vorpruefung
+  cancel-in-progress: false
+jobs:
+  pruefen:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Quellen prüfen
+        id: pruefen
+        run: |
+          set +e
+          node vorpruefung/pruefen.mjs --stand daten/vorpruefung-stand.json --warteschlange daten/warteschlange --quellen-ordner daten/quellen > ergebnis.json
+          echo "code=$?" >> "$GITHUB_OUTPUT"
+          cat ergebnis.json
+          echo "gestoert=$(node -e "process.stdout.write(String((JSON.parse(require('fs').readFileSync('ergebnis.json','utf8')).gestoert||[]).join(' ')))" 2>/dev/null)" >> "$GITHUB_OUTPUT"
+          echo "offen=$(ls daten/warteschlange/*.json 2>/dev/null | wc -l)" >> "$GITHUB_OUTPUT"
+      - name: Stand sichern
+        run: |
+          git config user.name "anthropic-news-vorpruefung"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add daten
+          if ! git diff --cached --quiet; then
+            git commit -m "Vorprüfung: neuer Stand"
+            git push
+          fi
+      - name: Claude-Lauf starten
+        if: steps.pruefen.outputs.offen != '0'
+        env:
+          ROUTINE_ID: ${{ secrets.ROUTINE_ID }}
+          ROUTINE_TOKEN: ${{ secrets.ROUTINE_TOKEN }}
+        run: |
+          curl -sS --fail-with-body -X POST "https://api.anthropic.com/v1/claude_code/routines/$ROUTINE_ID/fire" \
+            -H "Authorization: Bearer $ROUTINE_TOKEN" -H "content-type: application/json" \
+            -d '{"text":"In daten/warteschlange/ liegen neue Meldungen. Arbeite ROUTINE-AUFTRAG.md ab."}'
+      - name: Gestörte Quelle melden
+        if: steps.pruefen.outputs.code == '1' || steps.pruefen.outputs.gestoert != ''
+        run: |
+          echo "Gestört: ${{ steps.pruefen.outputs.gestoert }} (Exit ${{ steps.pruefen.outputs.code }})"
+          exit 1

@@ -1,0 +1,13 @@
+{
+  "id": "claude-shaped-science",
+  "quelle": "anthropic",
+  "url": "https://www.anthropic.com/research/claude-shaped-science",
+  "titel_original": "Claude-shaped science",
+  "titel_de": "Gastbeitrag: Wie ein Physiker Claude in 18 Fächern forschen ließ",
+  "kurz_de": "Der Physiker Matthew Schwartz ließ Claude gezielt Probleme suchen, die zu seinen Stärken passen. In drei Monaten entstanden 36 Manuskripte in 18 Fächern – und eine Liste von Fallen beim Arbeiten mit Claude.",
+  "briefing_de": "- Statt Claude wie einen menschlichen Forscher zu führen, suchte Schwartz „Claude-förmige“ Probleme: Fragen, die eine bekannte Methode aus einem anderen Fach sofort lösen würde.\n- Werkzeug dafür ist „BootLoops“, eine Sammlung von Programmen und Abläufen rund um Claude Code.\n- Ergebnis: 36 Manuskripte in 18 Fächern mit 19 Mitautoren in drei Monaten, etwa zu Ökologie, Populationsgenetik, Sprachwissenschaft und Kosmologie.\n- Fallen laut Schwartz: Claude erklärt zu früh den Sieg, schätzt Zeiten falsch ein und rechnet lieber tagelang, als erst ein besseres Werkzeug zu bauen.",
+  "arbeitsweise_de": "Für lange Claude-Code-Läufe: klare, strenge Kriterien für „fertig“ vorgeben, Ergebnisse selbst ansehen (Diagramme, Zahlen) statt Zusammenfassungen zu glauben, und Claude ausdrücklich bitten, erst ein Werkzeug zu bauen, statt sich durchzurechnen.",
+  "bereich": "forschung",
+  "datum": "2026-10-01",
+  "wichtig": false
+}

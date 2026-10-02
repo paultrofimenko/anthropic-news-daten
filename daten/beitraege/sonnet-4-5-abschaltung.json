@@ -1,0 +1,12 @@
+{
+  "id": "sonnet-4-5-abschaltung",
+  "quelle": "abschaltungen",
+  "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+  "titel_original": "Deprecation of Claude Sonnet 4.5",
+  "titel_de": "Sonnet 4.5 wird am 30.11.2026 abgeschaltet",
+  "kurz_de": "Anthropic hat das Ende von Sonnet 4.5 in der API angekündigt und empfiehlt den Wechsel auf Sonnet 5.5.",
+  "briefing_de": "- Betroffen: claude-sonnet-4-5-20250929.\n- Abschaltung in der Claude API: 30. November 2026.\n- Empfehlung: Sonnet 5.5, mit eigenem Umstiegsleitfaden.",
+  "bereich": "modelle",
+  "datum": "2026-09-30",
+  "wichtig": true
+}

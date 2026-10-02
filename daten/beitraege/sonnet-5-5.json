@@ -1,0 +1,12 @@
+{
+  "id": "sonnet-5-5",
+  "quelle": "platform-release-notes",
+  "url": "https://platform.claude.com/docs/en/models/sonnet-5-5/overview",
+  "titel_original": "Claude Sonnet 5.5",
+  "titel_de": "Sonnet 5.5 ist da – „schneller & günstiger“",
+  "kurz_de": "Neues Modell der 5.5-Familie: 1 Mio. Token Kontext, 2 $ / 10 $ je Mio. Token. Wer Code für Sonnet 5 hat, muss fünf Änderungen beachten.",
+  "briefing_de": "- Modell-ID: claude-sonnet-5-5, erschienen am 28.09.2026.\n- Laut Anthropic über 30 % schneller als Sonnet 5, bei den meisten Aufgaben bis zu 30 % günstiger.\n- Fünf Brüche: Thinking abschalten heißt jetzt between_tools, erzwungene Tool-Wahl gibt Fehler 400, Thinking-Blöcke sind an Modell und Konto gebunden, altes Computer-Use-Tool abgelehnt, neue Advisor-Regeln.",
+  "bereich": "modelle",
+  "datum": "2026-09-28",
+  "wichtig": true
+}

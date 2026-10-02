@@ -1,0 +1,12 @@
+{
+  "id": "kontext-regeln-claude-5",
+  "quelle": "claude-dev",
+  "url": "https://claude.dev/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models/",
+  "titel_original": "The new rules of context engineering for Claude 5 generation models",
+  "titel_de": "Die neuen Regeln für Kontext bei den Claude-5-Modellen",
+  "kurz_de": "Weniger starre Regeln, mehr Urteilsvermögen: bessere Werkzeuge statt langer Beispiele, Details in Skills auslagern, CLAUDE.md kurz halten.",
+  "briefing_de": "- Statt Regeln: Claude soll Code schreiben, der zum umgebenden Code passt.\n- Statt vieler Beispiele: Werkzeuge mit klaren Parametern.\n- Details in Skills, nicht alles vorab in den Systemtext.\n- CLAUDE.md kurz: nur Fallstricke, nichts Offensichtliches.",
+  "bereich": "entwickler",
+  "datum": "2026-07-24",
+  "wichtig": false
+}
