@@ -1,6 +1,6 @@
 {
  "version": 1,
- "erzeugt": "2026-10-02T20:37:36.947Z",
+ "erzeugt": "2026-10-02T21:24:14.783Z",
  "anzahl": 9,
  "beitraege": [
   {
@@ -320,5 +320,6 @@
    ],
    "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
   }
- ]
+ ],
+ "hinweise": []
 }
