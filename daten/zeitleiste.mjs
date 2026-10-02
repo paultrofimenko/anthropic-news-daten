@@ -53,18 +53,41 @@ function tabellen(markdown) {
   return ergebnis;
 }
 
+// Datumszellen ohne festes Datum, die bekannt sind. Alles andere ist „unklar“ und hält den Index an –
+// lieber kein neuer Index als eine Abschaltung, die still verschwindet (Prüfrunde 1, S5).
+const KEIN_DATUM = /^(not sooner than .+|to be announced|n\/a|tbd)$/i;
+const API_NAME = /^claude-[a-z0-9.-]+$/;
+// In „Model status“ sind nur diese Zustände eine angekündigte Abschaltung; Active/Legacy nicht (S4).
+const ABGEKUENDIGT = ['deprecated', 'retired'];
+
 // Je Modell mit festem Abschaltdatum ein Ereignis. Quellen: Tabelle „Model status“ (Spalten API model name,
-// Tentative retirement date) und die Tabellen der „Deprecation history“ (Retirement date, Deprecated model).
+// Current state, Tentative retirement date) und die Tabellen der „Deprecation history“ (Retirement date,
+// Deprecated model). Widersprechen sie sich, gilt „Model status“ (steht zuerst).
 export function abschaltEreignisse(markdown) {
+  return liesAbschaltliste(markdown).ereignisse;
+}
+
+// Zeilen, deren Name oder Datum keine bekannte Form hat (leer = alles verstanden).
+export function unklareAbschaltZeilen(markdown) {
+  return liesAbschaltliste(markdown).unklar;
+}
+
+function liesAbschaltliste(markdown) {
   const daten = new Map(); // API-Name → Datum
+  const unklar = [];
   for (const t of tabellen(markdown ?? '')) {
     const name = t.kopf.findIndex((k) => k === 'api model name' || k === 'deprecated model');
     const datum = t.kopf.findIndex((k) => k.includes('retirement date'));
+    const zustand = t.kopf.findIndex((k) => k === 'current state');
     if (name < 0 || datum < 0) continue;
     for (const z of t.zeilen) {
       const api = (z[name] ?? '').replace(/`/g, '').trim();
-      const iso = festesDatum(z[datum]);
-      if (api && iso && !daten.has(api)) daten.set(api, iso);
+      const zelle = (z[datum] ?? '').trim();
+      if (zustand >= 0 && !ABGEKUENDIGT.includes((z[zustand] ?? '').trim().toLowerCase())) continue;
+      if (KEIN_DATUM.test(zelle)) continue;
+      const iso = festesDatum(zelle);
+      if (!iso || !API_NAME.test(api)) { unklar.push(`${api || '(ohne Name)'}: ${zelle || '(ohne Datum)'}`); continue; }
+      if (!daten.has(api)) daten.set(api, iso);
     }
   }
   // Zwei Fassungen eines Modells am selben Tag (Sonnet 3.5 von 06/2024 und 10/2024) sind ein Ereignis.
@@ -75,8 +98,11 @@ export function abschaltEreignisse(markdown) {
     if (alt) alt.modelle.push(api);
     else ereignisse.set(datum + titel, { datum, art: 'ende', titel, modelle: [api], url: ABSCHALT_URL });
   }
-  return [...ereignisse.values()];
+  return { ereignisse: [...ereignisse.values()], unklar };
 }
+
+// Ein Beitrags-Ereignis darf keine Abschaltung behaupten – die kommen nur fest aus der Abschaltliste (S3).
+const ABSCHALT_WORT = /abschalt|abgeschalt|eingestellt|retire|deprecat|veraltet|abgek(ü|ue)ndigt|einstellung/i;
 
 // Fehler im optionalen Feld „ereignis“ eines Beitrags (leer = in Ordnung).
 export function pruefeEreignis(b) {
@@ -88,6 +114,7 @@ export function pruefeEreignis(b) {
   if (!EREIGNIS_ARTEN.includes(e.art)) fehler.push(`${id}: ereignis.art muss ${EREIGNIS_ARTEN.map((a) => `„${a}“`).join(' oder ')} sein`);
   if (typeof e.titel !== 'string' || !e.titel.trim()) fehler.push(`${id}: ereignis.titel fehlt`);
   else if (e.titel.length > EREIGNIS_TITEL_MAX) fehler.push(`${id}: ereignis.titel länger als ${EREIGNIS_TITEL_MAX} Zeichen`);
+  else if (ABSCHALT_WORT.test(e.titel)) fehler.push(`${id}: ereignis.titel nennt eine Abschaltung – Abschaltungen kommen nur aus der Abschaltliste, nicht als ereignis`);
   if ('datum' in e && !gueltig(e.datum)) fehler.push(`${id}: ereignis.datum kein gültiges Datum JJJJ-MM-TT`);
   return fehler;
 }
@@ -98,10 +125,17 @@ function gueltig(iso) {
   return !Number.isNaN(d.getTime()) && d.toISOString().slice(0, 10) === iso;
 }
 
+// Dasselbe Ereignis aus zwei Beiträgen (Newsbeitrag und Release Notes) erscheint einmal (S2).
 export function beitragsEreignisse(beitraege) {
+  const gesehen = new Set();
   return beitraege.filter((b) => b?.ereignis && pruefeEreignis(b).length === 0)
     .map((b) => ({ datum: b.ereignis.datum ?? b.datum, art: b.ereignis.art, titel: b.ereignis.titel, beitrag: b.id, url: b.url }))
-    .filter((e) => gueltig(e.datum));
+    .filter((e) => {
+      const schluessel = `${e.datum}|${e.titel.trim().toLowerCase()}`;
+      if (!gueltig(e.datum) || gesehen.has(schluessel)) return false;
+      gesehen.add(schluessel);
+      return true;
+    });
 }
 
 // Alle Ereignisse nach Datum; bei gleichem Datum Neues vor Abschaltungen, dann nach Titel.

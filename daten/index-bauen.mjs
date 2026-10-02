@@ -5,11 +5,13 @@ import { writeFileSync, readFileSync, existsSync } from 'node:fs';
 import { resolve, dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { leseOrdner } from './format.mjs';
-import { bauZeitleiste } from './zeitleiste.mjs';
+import { bauZeitleiste, unklareAbschaltZeilen } from './zeitleiste.mjs';
 
 export const INDEX_VERSION = 1;
 
 export function bauIndex(beitraege, jetzt = new Date(), abschaltMarkdown = '') {
+  const unklar = unklareAbschaltZeilen(abschaltMarkdown);
+  if (unklar.length) throw new Error(`Abschaltliste in unbekannter Form – Index nicht gebaut, damit keine Abschaltung still verschwindet:\n${unklar.join('\n')}`);
   const sortiert = [...beitraege].sort((a, b) => b.datum.localeCompare(a.datum) || a.id.localeCompare(b.id));
   return { version: INDEX_VERSION, erzeugt: jetzt.toISOString(), anzahl: sortiert.length, beitraege: sortiert, zeitleiste: bauZeitleiste(sortiert, abschaltMarkdown) };
 }
