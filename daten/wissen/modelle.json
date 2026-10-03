@@ -89,7 +89,7 @@
       "text_de": "Anthropic beschreibt zwei Wege. Entweder klein anfangen: mit Haiku 4.5 bauen, gründlich testen und nur dort aufsteigen, wo es nicht reicht. Oder stark anfangen: mit Opus 5.5 bauen und später Effort senken oder auf ein günstigeres Modell gehen. Reicht Opus 5.5 selbst auf „xhigh“ oder „max“ nicht, ist Fable 5.1 der nächste Schritt.",
       "punkte_de": [
         {
-          "text_de": "Achtung: Haiku 4.5 kann schon ab dem 15.10.2026 abgeschaltet werden, so steht es in der Liste. Anthropic kündigt jede Abschaltung aber mindestens 60 Tage vorher an – bisher ist nichts angekündigt. Vor einem neuen Projekt die Abschaltliste ansehen.",
+          "text_de": "Achtung: Haiku 4.5 kann schon ab dem 15.10.2026 abgeschaltet werden, so steht es in der Liste. Anthropic benachrichtigt Kunden, die ein Modell nutzen, aber mindestens 60 Tage vor der Abschaltung – bisher ist für Haiku 4.5 nichts angekündigt. Vor einem neuen Projekt die Abschaltliste ansehen.",
           "quelle": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
         },
         "Höchste Leistung, Agenten über Stunden, Recherche bis zum fertigen Dokument → Fable 5.1",
