@@ -1,0 +1,86 @@
+{
+  "bereich": "modelle",
+  "titel_de": "Modelle",
+  "einleitung_de": "Claude gibt es in vier aktuellen Modellen – vom schnellen, günstigen Haiku bis zum besonders starken Fable. Für die meisten Aufgaben empfiehlt Anthropic als Start Opus 5.5. Wichtiger als der Modellwechsel ist oft die Einstellung „Effort“: Sie tauscht Gründlichkeit gegen Tempo und Kosten innerhalb desselben Modells.",
+  "stand": "2026-10-03",
+  "grafik": {
+    "art": "balken",
+    "titel_de": "Preis je Million Token",
+    "einheit_de": "US-Dollar",
+    "reihen": ["Eingabe", "Ausgabe"],
+    "zeilen": [
+      { "name": "Fable 5.1", "werte": [10, 50] },
+      { "name": "Opus 5.5", "werte": [4, 20] },
+      { "name": "Sonnet 5.5", "werte": [2, 10] },
+      { "name": "Haiku 4.5", "werte": [1, 5] }
+    ],
+    "quelle": "https://platform.claude.com/docs/en/about-claude/pricing"
+  },
+  "abschnitte": [
+    {
+      "titel_de": "Die vier aktuellen Modelle",
+      "text_de": "Alle vier verstehen Text und Bilder, schreiben Text, beherrschen viele Sprachen und können Werkzeuge benutzen. Sie unterscheiden sich in Stärke, Tempo und Preis.",
+      "punkte_de": [
+        "Fable 5.1 – das stärkste Modell, das allen offensteht: für anspruchsvolles Denken und Agenten-Arbeit über viele Stunden. Am langsamsten.",
+        "Opus 5.5 – die Empfehlung für die meisten Aufgaben: lange Programmier- und Wissensarbeit, Agenten, Computersteuerung. Mittleres Tempo.",
+        "Sonnet 5.5 – die beste Mischung aus Tempo und Intelligenz für den Alltag, halb so teuer wie Opus 5.5.",
+        "Haiku 4.5 – das schnellste und günstigste Modell, gut für große Mengen, Echtzeit und Hilfsagenten.",
+        "Mythos 5.1 kann dasselbe wie Fable 5.1, ist aber nur für Teilnehmer von „Project Glasswing“ freigegeben."
+      ],
+      "quelle": "https://platform.claude.com/docs/en/models/overview"
+    },
+    {
+      "titel_de": "Kontext, Antwortlänge, Wissensstand",
+      "text_de": "Das Kontextfenster ist das, was ein Modell auf einmal im Blick hat – Gespräch, Dateien, Ergebnisse. Fable 5.1, Opus 5.5 und Sonnet 5.5 fassen 1 Million Token, das sind grob 555.000 Wörter. Haiku 4.5 fasst 200.000 Token.",
+      "punkte_de": [
+        "Längste Antwort: 128.000 Token bei Fable 5.1, Opus 5.5 und Sonnet 5.5; 64.000 bei Haiku 4.5.",
+        "Verlässliches Wissen: bis Juni 2026 bei den drei neuen Modellen, bis Februar 2025 bei Haiku 4.5.",
+        "Ab der Generation 4.7 zerlegt ein neuer Tokenizer denselben Text in etwa 30 % mehr Token – das zählt beim Preisvergleich mit alten Modellen."
+      ],
+      "quelle": "https://platform.claude.com/docs/en/models/overview"
+    },
+    {
+      "titel_de": "Denken und Effort",
+      "text_de": "„Adaptives Denken“ heißt: Das Modell entscheidet selbst, wie viel es vor der Antwort nachdenkt. Bei Fable 5.1 und Opus 5.5 ist es immer an. Wie viel Mühe es sich gibt, steuert der Effort-Wert.",
+      "punkte_de": [
+        "Voreinstellung über die API: Opus 5.5 „medium“, Fable 5.1 und Sonnet 5.5 „high“.",
+        "Haiku 4.5 kennt keinen Effort-Wert, sondern das ältere „Extended Thinking“ mit festem Denkbudget.",
+        "Anthropic rät: Effort anpassen ist oft der bessere Hebel, als das Modell zu wechseln."
+      ],
+      "quelle": "https://platform.claude.com/docs/en/about-claude/models/choosing-a-model"
+    },
+    {
+      "titel_de": "So wählst du das Modell",
+      "text_de": "Anthropic beschreibt zwei Wege. Entweder klein anfangen: mit Haiku 4.5 bauen, gründlich testen und nur dort aufsteigen, wo es nicht reicht. Oder stark anfangen: mit Opus 5.5 bauen und später Effort senken oder auf ein günstigeres Modell gehen. Reicht Opus 5.5 selbst auf „xhigh“ oder „max“ nicht, ist Fable 5.1 der nächste Schritt.",
+      "punkte_de": [
+        "Höchste Leistung, Agenten über Stunden, Recherche bis zum fertigen Dokument → Fable 5.1",
+        "Komplexes Programmieren, große Umbauten, viel Bildverarbeitung → Opus 5.5",
+        "Alltägliches Programmieren, Datenanalyse, Texte → Sonnet 5.5",
+        "Niedrigste Wartezeit und Kosten, Hilfsaufgaben für Agenten → Haiku 4.5",
+        "Kombinieren spart: Ein günstiges Modell arbeitet, ein starkes entscheidet die schweren Fragen."
+      ],
+      "quelle": "https://platform.claude.com/docs/en/about-claude/models/choosing-a-model"
+    },
+    {
+      "titel_de": "Günstiger rechnen: Stapel und Zwischenspeicher",
+      "text_de": "Neben dem Grundpreis gibt es zwei große Rabatte. Anfragen über die Batch-Schnittstelle (Stapel, Antwort später) kosten die Hälfte. Wiederholte Anfangsteile einer Anfrage lassen sich zwischenspeichern; ein Treffer im Zwischenspeicher kostet nur einen Bruchteil des Eingabepreises.",
+      "punkte_de": [
+        "Zwischenspeicher-Treffer: normal 10 % des Eingabepreises, bei Opus 5.5 nur 5 % (0,20 $ je Million Token), bei Fable 5.1 nur 2,5 % (0,25 $).",
+        "Das volle Kontextfenster von 1 Million Token kostet ab Generation 4.6 keinen Aufschlag – eine sehr lange Anfrage kostet je Token so viel wie eine kurze.",
+        "Opus 5.5 im schnellen Modus (Vorschau): 8 $ Eingabe und 40 $ Ausgabe je Million Token."
+      ],
+      "quelle": "https://platform.claude.com/docs/en/about-claude/pricing"
+    },
+    {
+      "titel_de": "Abschaltungen",
+      "text_de": "Jedes Modell wird irgendwann abgeschaltet. Anthropic nennt für aktive Modelle ein frühestes Datum („nicht vor“) und kündigt die echte Abschaltung vorher an, mit Empfehlung für den Nachfolger.",
+      "punkte_de": [
+        "Sonnet 4.5 ist seit 30.09.2026 abgekündigt und wird am 30.11.2026 abgeschaltet – Nachfolger: Sonnet 5.5.",
+        "Haiku 4.5: nicht vor dem 15.10.2026. Opus 4.5: nicht vor dem 24.11.2026.",
+        "Fable 5.1 nicht vor dem 01.09.2027, Opus 5.5 nicht vor dem 22.09.2027, Sonnet 5.5 nicht vor dem 28.09.2027.",
+        "Ältere Modelle wie Fable 5, Opus 5, Opus 4.8 und Sonnet 5 sind weiter verfügbar."
+      ],
+      "quelle": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+    }
+  ]
+}

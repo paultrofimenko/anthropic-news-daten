@@ -1,0 +1,84 @@
+{
+  "bereich": "claude-code",
+  "titel_de": "Claude Code",
+  "einleitung_de": "Claude Code ist ein Werkzeug, mit dem Claude selbst programmiert: Es liest den ganzen Code eines Projekts, ändert Dateien, führt Befehle aus und arbeitet sich durch Probleme, während du zusiehst, umlenkst oder weggehst. Du beschreibst, was du willst – Claude erkundet, plant und baut.",
+  "stand": "2026-10-03",
+  "grafik": {
+    "art": "schritte",
+    "titel_de": "Der empfohlene Ablauf",
+    "schritte": [
+      { "titel_de": "Erkunden", "text_de": "Im Planmodus liest Claude Dateien und beantwortet Fragen, ohne etwas zu ändern." },
+      { "titel_de": "Planen", "text_de": "Claude schreibt einen genauen Plan; du kannst ihn vorher selbst bearbeiten." },
+      { "titel_de": "Umsetzen", "text_de": "Planmodus verlassen, Claude baut nach dem Plan, schreibt Tests und lässt sie laufen." },
+      { "titel_de": "Sichern", "text_de": "Claude committet mit verständlicher Nachricht und öffnet auf Wunsch einen Pull Request." }
+    ],
+    "quelle": "https://code.claude.com/docs/en/best-practices"
+  },
+  "abschnitte": [
+    {
+      "titel_de": "Wo es läuft",
+      "text_de": "Claude Code gibt es im Terminal, als Erweiterung für VS Code und JetBrains, in der Desktop-App und im Browser. Alle Oberflächen benutzen denselben Kern – CLAUDE.md, Einstellungen und MCP-Server gelten überall. Man braucht ein Claude-Abo oder ein Konto in der Anthropic Console.",
+      "punkte_de": [
+        "Eine Sitzung vom Handy aus weiterführen: Remote Control",
+        "Regelmäßig von selbst laufen lassen: Routines in der Cloud oder geplante Aufgaben in der Desktop-App",
+        "Pull Requests prüfen lassen: GitHub Actions und Code Review",
+        "Laufende Web-Apps untersuchen: Claude in Chrome",
+        "Eigene Agenten bauen: Agent SDK"
+      ],
+      "quelle": "https://code.claude.com/docs/en/overview"
+    },
+    {
+      "titel_de": "Das Wichtigste: der Kontext ist knapp",
+      "text_de": "Fast alle Empfehlungen folgen aus einer Grenze: Das Kontextfenster füllt sich schnell, und je voller es ist, desto schlechter arbeitet Claude – es vergisst frühere Anweisungen oder macht mehr Fehler. Eine einzige Fehlersuche kann Zehntausende Token verbrauchen. Der Kontext ist die wichtigste Ressource, die man verwalten muss.",
+      "quelle": "https://code.claude.com/docs/en/best-practices"
+    },
+    {
+      "titel_de": "Gib Claude eine Prüfung",
+      "text_de": "Claude hört auf, wenn die Arbeit fertig aussieht. Ohne etwas, das „bestanden“ oder „durchgefallen“ meldet, bist du selbst die Prüfung. Mit Tests, einem Build oder einem Bildschirmfoto zum Vergleichen prüft Claude sich selbst und bessert nach, bis es stimmt.",
+      "punkte_de": [
+        "In einer Anweisung: „Schreib die Funktion, hier sind Testfälle, lass die Tests laufen.“",
+        "Über die ganze Sitzung: eine /goal-Bedingung, die nach jedem Schritt neu geprüft wird.",
+        "Als feste Sperre: ein Stop-Hook, der das Ende verhindert, bis die Prüfung besteht.",
+        "Als zweite Meinung: ein Prüf-Subagent, der das Ergebnis zu widerlegen versucht.",
+        "Belege statt Behauptungen verlangen: Testausgabe, Befehl und Ergebnis, Bildschirmfoto."
+      ],
+      "quelle": "https://code.claude.com/docs/en/best-practices"
+    },
+    {
+      "titel_de": "Die Umgebung einrichten",
+      "text_de": "CLAUDE.md ist eine Datei, die Claude zu Beginn jedes Gesprächs liest: Befehle, Stil, Arbeitsregeln – alles, was es nicht aus dem Code erraten kann. Sie soll kurz und gut lesbar bleiben; /init erzeugt einen ersten Entwurf.",
+      "punkte_de": [
+        "Berechtigungen festlegen, damit nicht jeder harmlose Befehl nachfragt",
+        "Kommandozeilen-Werkzeuge und MCP-Server anbinden",
+        "Hooks für Dinge, die immer passieren müssen",
+        "Skills für wiederkehrende Abläufe, eigene Subagenten, Plugins"
+      ],
+      "quelle": "https://code.claude.com/docs/en/best-practices"
+    },
+    {
+      "titel_de": "Die Sitzung führen",
+      "text_de": "Früh und oft korrigieren bringt die besten Ergebnisse. Gespräche lassen sich anhalten, zurückspulen und neu beginnen.",
+      "punkte_de": [
+        "Esc hält Claude mitten in der Arbeit an, der Kontext bleibt.",
+        "Zweimal Esc oder /rewind springt zu einem früheren Stand von Gespräch und Code.",
+        "/clear zwischen Aufgaben, die nichts miteinander zu tun haben.",
+        "Zweimal dasselbe korrigiert und immer noch falsch? /clear und mit einer besseren Anweisung neu anfangen.",
+        "/compact fasst das Gespräch gezielt zusammen, /btw stellt eine Nebenfrage, die nicht im Verlauf bleibt.",
+        "Recherche an Subagenten geben – sie lesen in eigenem Kontext."
+      ],
+      "quelle": "https://code.claude.com/docs/en/best-practices"
+    },
+    {
+      "titel_de": "Typische Fehler",
+      "text_de": "Fünf Muster nennt Anthropic ausdrücklich – wer sie früh erkennt, spart Zeit.",
+      "punkte_de": [
+        "Alles in einer Sitzung: Aufgabe, Nebenfrage, wieder Aufgabe – der Kontext ist voller Unwichtigem.",
+        "Immer wieder korrigieren: Fehlversuche verstopfen den Kontext.",
+        "Zu lange CLAUDE.md: Wichtige Regeln gehen im Rauschen unter. Kürzen, oder in einen Hook verwandeln.",
+        "Vertrauen ohne Prüfen: Es sieht richtig aus, übersieht aber Grenzfälle.",
+        "Endloses Erkunden: „Untersuch mal“ ohne Grenze lässt Claude Hunderte Dateien lesen."
+      ],
+      "quelle": "https://code.claude.com/docs/en/best-practices"
+    }
+  ]
+}

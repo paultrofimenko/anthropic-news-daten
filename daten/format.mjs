@@ -97,7 +97,7 @@ export function persoenlicheStellen(text, woerter = []) {
 }
 
 // Alle Texte im Beitrag, auch in verschachtelten Zusatzfeldern.
-function alleTexte(wert) {
+export function alleTexte(wert) {
   if (typeof wert === 'string') return [wert];
   if (Array.isArray(wert)) return wert.flatMap(alleTexte);
   if (wert && typeof wert === 'object') return Object.values(wert).flatMap(alleTexte);
@@ -106,7 +106,7 @@ function alleTexte(wert) {
 
 // Links mit Schema und nackte Adressen („x.com/ClaudeDevs“); E-Mail-Adressen zählen nicht.
 const TLD = '(?:com|dev|ai|io|org|net|de|co|app|me|tv|gg)';
-function links(text) {
+export function links(text) {
   const mitSchema = text.match(/https?:\/\/[^\s"'<>)\]`]+/gi) ?? [];
   const rest = text.replace(/https?:\/\/[^\s"'<>)\]`]+/gi, ' ');
   const nackt = [...rest.matchAll(new RegExp(`(?<![@\\w.-])((?:[a-z0-9-]+\\.)+${TLD})(?![\\w-])(\\/[^\\s"'<>)\\]\`]*)?`, 'gi'))]

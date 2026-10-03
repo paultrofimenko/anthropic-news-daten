@@ -1,24 +1,26 @@
 // Baut daten/index.json – die eine Datei, die die App liest: alle Beiträge, neueste zuerst, und die
-// Zeitleiste (F-09: Abschaltungen aus daten/quellen/abschaltungen.md, Neues aus dem Feld „ereignis“).
-//   node daten/index-bauen.mjs [beitraege-ordner] [ziel-datei] [abschaltungen.md]
+// Zeitleiste (F-09: Abschaltungen aus daten/quellen/abschaltungen.md, Neues aus dem Feld „ereignis“) und das
+// Wissen je Bereich (F-12: daten/wissen/<bereich>.json).
+//   node daten/index-bauen.mjs [beitraege-ordner] [ziel-datei] [abschaltungen.md] [wissen-ordner]
 import { writeFileSync, readFileSync, existsSync } from 'node:fs';
 import { resolve, dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { leseOrdner } from './format.mjs';
 import { bauZeitleiste, unklareAbschaltZeilen, unklareModelle } from './zeitleiste.mjs';
+import { leseWissen, sortiereWissen } from './wissen.mjs';
 
 export const INDEX_VERSION = 1;
 
 // Versteht das Skript Zeilen der Abschaltliste nicht, wird der Index trotzdem gebaut – neue Beiträge sollen
 // nicht hängen bleiben (Prüfrunde 2, sollte 1). Die App zeigt dann den Hinweis, und die Action wird nach dem
 // Veröffentlichen rot (zeitleiste.mjs --pruefen).
-export function bauIndex(beitraege, jetzt = new Date(), abschaltMarkdown = '') {
+export function bauIndex(beitraege, jetzt = new Date(), abschaltMarkdown = '', wissen = []) {
   const unklar = unklareAbschaltZeilen(abschaltMarkdown);
   const hinweise = unklar.length
     ? [`Abschaltliste: ${unklar.length === 1 ? 'eine Zeile' : `${unklar.length} Zeilen`} nicht verstanden – Abschaltungen können fehlen (${unklar.join('; ')}).`]
     : [];
   const sortiert = [...beitraege].sort((a, b) => b.datum.localeCompare(a.datum) || a.id.localeCompare(b.id));
-  return { version: INDEX_VERSION, erzeugt: jetzt.toISOString(), anzahl: sortiert.length, beitraege: sortiert, zeitleiste: bauZeitleiste(sortiert, abschaltMarkdown), hinweise };
+  return { version: INDEX_VERSION, erzeugt: jetzt.toISOString(), anzahl: sortiert.length, beitraege: sortiert, zeitleiste: bauZeitleiste(sortiert, abschaltMarkdown), hinweise, wissen: sortiereWissen(wissen) };
 }
 
 // Abschaltungen der Modelle, deren Zeile nicht verstanden wurde, bleiben aus dem alten Index stehen –
@@ -52,11 +54,12 @@ if (istHauptprogramm) {
   const ordner = resolve(process.argv[2] ?? join(hier, 'beitraege'));
   const ziel = resolve(process.argv[3] ?? join(hier, 'index.json'));
   const abschaltungen = resolve(process.argv[4] ?? join(hier, 'quellen', 'abschaltungen.md'));
+  const wissenOrdner = resolve(process.argv[5] ?? join(hier, 'wissen'));
   const liste = existsSync(abschaltungen) ? readFileSync(abschaltungen, 'utf8') : '';
   const altText = existsSync(ziel) ? readFileSync(ziel, 'utf8') : '';
-  const neu = mitAltenAbschaltungen(bauIndex(leseOrdner(ordner).map((e) => e.beitrag), new Date(), liste), altText, unklareModelle(liste));
+  const neu = mitAltenAbschaltungen(bauIndex(leseOrdner(ordner).map((e) => e.beitrag), new Date(), liste, leseWissen(wissenOrdner).map((e) => e.wissen)), altText, unklareModelle(liste));
   const index = mitAltemZeitstempel(neu, altText);
   writeFileSync(ziel, JSON.stringify(index, null, 1) + '\n');
-  console.log(`${index.anzahl} Beiträge, ${index.zeitleiste.length} Ereignisse in der Zeitleiste: ${ziel}`);
+  console.log(`${index.anzahl} Beiträge, ${index.zeitleiste.length} Ereignisse in der Zeitleiste, ${index.wissen.length} Wissensblätter: ${ziel}`);
   for (const h of index.hinweise) console.log(`::warning::${h}`);
 }

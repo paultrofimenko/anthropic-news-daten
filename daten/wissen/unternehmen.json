@@ -1,0 +1,64 @@
+{
+  "bereich": "unternehmen",
+  "titel_de": "Unternehmen",
+  "einleitung_de": "Anthropic ist ein Unternehmen für KI-Sicherheit und -Forschung. Es baut KI-Systeme, die verlässlich, durchschaubar und steuerbar sein sollen, und veröffentlicht Forschung über Chancen und Risiken von KI. Rechtlich ist Anthropic eine „Public Benefit Corporation“ – ein Unternehmen, das per Satzung auch dem Gemeinwohl verpflichtet ist.",
+  "stand": "2026-10-03",
+  "grafik": {
+    "art": "schritte",
+    "titel_de": "Sicherheit als Wissenschaft – der Kreislauf",
+    "schritte": [
+      { "titel_de": "Forschen", "text_de": "Sicherheit wird systematisch untersucht wie jedes andere Fach." },
+      { "titel_de": "Anwenden", "text_de": "Die Ergebnisse fließen in die Produkte." },
+      { "titel_de": "Zurückführen", "text_de": "Was man in den Produkten lernt, geht zurück in die Forschung." },
+      { "titel_de": "Teilen", "text_de": "Erkenntnisse werden regelmäßig öffentlich gemacht." }
+    ],
+    "quelle": "https://www.anthropic.com/company"
+  },
+  "abschnitte": [
+    {
+      "titel_de": "Die sieben Werte",
+      "text_de": "Nach diesen Werten will Anthropic entscheiden und zusammenarbeiten.",
+      "punkte_de": [
+        "Für das Wohl der ganzen Welt handeln.",
+        "Licht und Schatten zugleich sehen: KI kann beispiellos schaden und beispiellos nützen.",
+        "Gut zu den Nutzern sein – dazu zählen Kunden, Politik, Mitarbeitende und alle, die die Technik betrifft.",
+        "Einen Wettlauf nach oben bei der Sicherheit anstoßen, dem andere folgen müssen.",
+        "Das Einfache tun, das funktioniert: „kein Raumschiff, wenn ein Fahrrad reicht“.",
+        "Hilfreich, ehrlich und harmlos sein.",
+        "Die Mission an erste Stelle setzen."
+      ],
+      "quelle": "https://www.anthropic.com/company"
+    },
+    {
+      "titel_de": "Wer entscheidet",
+      "text_de": "Den Vorstand (Board of Directors) wählen die Aktionäre und der „Long-Term Benefit Trust“ – eine Treuhand, die das langfristige Wohl der Menschheit im Blick halten soll.",
+      "punkte_de": [
+        "Vorstand: Dario Amodei, Daniela Amodei, Yasmin Razavi, Reed Hastings, Chris Liddell und Vas Narasimhan.",
+        "Treuhänder des Long-Term Benefit Trust: Neil Buddy Shah, Richard Fontaine und Ben Bernanke."
+      ],
+      "quelle": "https://www.anthropic.com/company"
+    },
+    {
+      "titel_de": "Die Teams",
+      "text_de": "Forschende, Ingenieure, Politik-Fachleute und Betriebsteams arbeiten zusammen.",
+      "punkte_de": [
+        "Forschung: von Interpretierbarkeit über Lernen aus menschlicher Rückmeldung bis zu gesellschaftlichen Folgen.",
+        "Politik: berichtet Regierungen und Zivilgesellschaft in den USA und anderswo, was an der Spitze der Entwicklung passiert.",
+        "Produkt: macht aus der Forschung Werkzeuge wie Claude.",
+        "Betrieb: Personal, Finanzen, Recht und Anwerbung."
+      ],
+      "quelle": "https://www.anthropic.com/company"
+    },
+    {
+      "titel_de": "Die Produkte",
+      "text_de": "Rund um Claude gibt es inzwischen eine ganze Familie von Produkten.",
+      "punkte_de": [
+        "Claude als App, dazu Claude Code und Claude Code Enterprise",
+        "Claude Cowork, Claude Design, Claude Science und Claude Security",
+        "Claude in Chrome und Claude für Microsoft 365",
+        "Für Entwickler: die Claude-Plattform mit Doku, Konsole und Marktplatz"
+      ],
+      "quelle": "https://www.anthropic.com/company"
+    }
+  ]
+}
