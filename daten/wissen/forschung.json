@@ -8,13 +8,40 @@
     "art": "balken",
     "titel_de": "Die zehn neuesten Veröffentlichungen nach Gebiet",
     "einheit_de": "Anzahl, 4. September bis 1. Oktober 2026",
-    "reihen": ["Anzahl"],
+    "reihen": [
+      "Anzahl"
+    ],
     "zeilen": [
-      { "name": "Wissenschaft (Science)", "werte": [4] },
-      { "name": "Wirtschaft (Economics)", "werte": [2] },
-      { "name": "Frontier Red Team", "werte": [2] },
-      { "name": "Alignment", "werte": [1] },
-      { "name": "Gesellschaft (Societal Impacts)", "werte": [1] }
+      {
+        "name": "Wissenschaft (Science)",
+        "werte": [
+          4
+        ]
+      },
+      {
+        "name": "Wirtschaft (Economics)",
+        "werte": [
+          2
+        ]
+      },
+      {
+        "name": "Prüfer-Team (Frontier Red Team)",
+        "werte": [
+          2
+        ]
+      },
+      {
+        "name": "Ausrichtung (Alignment)",
+        "werte": [
+          1
+        ]
+      },
+      {
+        "name": "Gesellschaft (Societal Impacts)",
+        "werte": [
+          1
+        ]
+      }
     ],
     "quelle": "https://www.anthropic.com/research"
   },
@@ -33,11 +60,20 @@
     },
     {
       "titel_de": "Claude forscht mit",
-      "text_de": "Anthropic hat eine eigene Gruppe mit Labor für Lebenswissenschaften gegründet. Dort entdeckte Claude mit nur grober Anleitung ein neues Enzymsystem, das an CRISPR erinnert.",
+      "text_de": "Anthropic hat eine eigene Gruppe mit Labor für Lebenswissenschaften gegründet. Dort entdeckte Claude mit nur grober Anleitung ein neues Enzymsystem, das an CRISPR (ein Werkzeug der Biologie, mit dem man Erbgut gezielt verändert) erinnert.",
       "punkte_de": [
-        { "text_de": "Großer Fermatscher Satz (4. Sept.): der erste vollständig vom Computer geprüfte Beweis. Claude schrieb ihn weitgehend selbstständig in elf Tagen in Lean (einer Programmiersprache, in der Beweise maschinell geprüft werden).", "quelle": "https://www.anthropic.com/research" },
-        { "text_de": "Biomolekulare Modelle (17. Sept.): wie Claude diese Forschung voranbringt.", "quelle": "https://www.anthropic.com/research" },
-        { "text_de": "„Claude-shaped science“ (1. Okt.): wie sich Wissenschaft durch Claude verändert.", "quelle": "https://www.anthropic.com/research" }
+        {
+          "text_de": "Großer Fermatscher Satz (4. Sept.): der erste vollständig vom Computer geprüfte Beweis. Claude schrieb ihn weitgehend selbstständig in elf Tagen in Lean (einer Programmiersprache, in der Beweise maschinell geprüft werden).",
+          "quelle": "https://www.anthropic.com/research"
+        },
+        {
+          "text_de": "Biomolekulare Modelle (17. Sept.): wie Claude diese Forschung voranbringt.",
+          "quelle": "https://www.anthropic.com/research"
+        },
+        {
+          "text_de": "„Claude-shaped science“ (1. Okt.): wie sich Wissenschaft durch Claude verändert.",
+          "quelle": "https://www.anthropic.com/research"
+        }
       ],
       "quelle": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system"
     },
@@ -55,9 +91,18 @@
       "titel_de": "Wirtschaft und Gesellschaft",
       "text_de": "Das Economics-Team hat ein Modell veröffentlicht, wie KI bis 2030 Wachstum, Arbeitsplätze und Löhne beeinflussen könnte. Man kann die Szenarien selbst durchspielen und seine Einschätzung mit über 10.000 Amerikanern vergleichen.",
       "punkte_de": [
-        { "text_de": "„What work can robots do?“ (30. Sept.) – welche Arbeit Roboter übernehmen können", "quelle": "https://www.anthropic.com/research" },
-        { "text_de": "„Project Swap“ (24. Sept.) – was passiert, wenn Agenten für uns handeln und tauschen", "quelle": "https://www.anthropic.com/research" },
-        { "text_de": "„What do you want from AI?“ (29. Sept., Societal Impacts) – was Menschen sich von KI wünschen", "quelle": "https://www.anthropic.com/research" }
+        {
+          "text_de": "„What work can robots do?“ (30. Sept.) – welche Arbeit Roboter übernehmen können",
+          "quelle": "https://www.anthropic.com/research"
+        },
+        {
+          "text_de": "„Project Swap“ (24. Sept.) – was passiert, wenn Agenten für uns handeln und tauschen",
+          "quelle": "https://www.anthropic.com/research"
+        },
+        {
+          "text_de": "„What do you want from AI?“ (29. Sept., Societal Impacts) – was Menschen sich von KI wünschen",
+          "quelle": "https://www.anthropic.com/research"
+        }
       ],
       "quelle": "https://www.anthropic.com/institute/econ-scenarios"
     }

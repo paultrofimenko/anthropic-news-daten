@@ -52,6 +52,7 @@ function pruefeGrafik(g, id) {
     if (g.einheit_kurz !== undefined && !(istText(g.einheit_kurz) && g.einheit_kurz.length <= EINHEIT_KURZ_MAX)) fehler.push(`${id}: grafik.einheit_kurz höchstens ${EINHEIT_KURZ_MAX} Zeichen`);
     const reihen = Array.isArray(g.reihen) && g.reihen.length >= 1 && g.reihen.length <= 3 && g.reihen.every(istText) ? g.reihen : null;
     if (!reihen) fehler.push(`${id}: grafik.reihen braucht 1 bis 3 Namen`);
+    else fehler.push(...doppelte(reihen, 'Reihe', id));
     if (!Array.isArray(g.zeilen) || g.zeilen.length < 2 || g.zeilen.length > 12) fehler.push(`${id}: grafik.zeilen braucht 2 bis 12 Einträge`);
     else for (const z of g.zeilen) {
       if (!z || typeof z !== 'object') { fehler.push(`${id}: grafik.zeilen: Eintrag kein Objekt`); continue; }
@@ -75,6 +76,7 @@ function pruefeGrafik(g, id) {
       if (!istText(z?.wert) || z.wert.length > WERT_MAX) fehler.push(`${id}: grafik.zahlen: wert kurz halten (höchstens ${WERT_MAX} Zeichen)`);
       if (!istText(z?.text_de)) fehler.push(`${id}: grafik.zahlen: text_de fehlt`);
     }
+    if (Array.isArray(g.zahlen)) fehler.push(...doppelte(g.zahlen.map((z) => `${z?.wert} ${z?.text_de}`), 'Kennzahl', id));
   }
   return fehler;
 }

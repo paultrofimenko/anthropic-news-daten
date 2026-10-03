@@ -9,12 +9,39 @@
     "titel_de": "Preis je Million Token",
     "einheit_de": "in US-Dollar",
     "einheit_kurz": "$",
-    "reihen": ["Eingabe", "Ausgabe"],
+    "reihen": [
+      "Eingabe",
+      "Ausgabe"
+    ],
     "zeilen": [
-      { "name": "Fable 5.1", "werte": [10, 50] },
-      { "name": "Opus 5.5", "werte": [4, 20] },
-      { "name": "Sonnet 5.5", "werte": [2, 10] },
-      { "name": "Haiku 4.5", "werte": [1, 5] }
+      {
+        "name": "Fable 5.1",
+        "werte": [
+          10,
+          50
+        ]
+      },
+      {
+        "name": "Opus 5.5",
+        "werte": [
+          4,
+          20
+        ]
+      },
+      {
+        "name": "Sonnet 5.5",
+        "werte": [
+          2,
+          10
+        ]
+      },
+      {
+        "name": "Haiku 4.5",
+        "werte": [
+          1,
+          5
+        ]
+      }
     ],
     "quelle": "https://platform.claude.com/docs/en/about-claude/pricing"
   },
@@ -23,11 +50,14 @@
       "titel_de": "Die vier aktuellen Modelle",
       "text_de": "Alle vier verstehen Text und Bilder, schreiben Text, beherrschen viele Sprachen und können Werkzeuge benutzen. Für die meisten Aufgaben empfiehlt Anthropic, mit Opus 5.5 anzufangen.",
       "punkte_de": [
-        "Fable 5.1 – für anspruchsvolles Denken und lange Agenten-Arbeit. Am langsamsten.",
+        "Fable 5.1 – für anspruchsvolles Denken und lange Agenten-Arbeit (eine KI erledigt selbstständig viele Schritte nacheinander). Am langsamsten.",
         "Opus 5.5 – für lange Programmier- und Wissensarbeit. Mittleres Tempo.",
         "Sonnet 5.5 – die beste Mischung aus Tempo und Intelligenz, halb so teuer wie Opus 5.5. Schnell.",
         "Haiku 4.5 – das schnellste Modell, fast so klug wie die Spitze, und das günstigste.",
-        { "text_de": "Fable 5.1 ist das stärkste Modell, das allen Kunden offensteht. Mythos 5.1 kann dasselbe, ist aber nur für Teilnehmer von „Project Glasswing“ freigegeben.", "quelle": "https://platform.claude.com/docs/en/about-claude/models/choosing-a-model" }
+        {
+          "text_de": "Fable 5.1 ist das stärkste Modell, das allen Kunden offensteht. Mythos 5.1 kann dasselbe, ist aber nur für Teilnehmer von „Project Glasswing“ freigegeben.",
+          "quelle": "https://platform.claude.com/docs/en/about-claude/models/choosing-a-model"
+        }
       ],
       "quelle": "https://platform.claude.com/docs/en/models/overview"
     },
@@ -45,9 +75,12 @@
       "titel_de": "Denken und Effort",
       "text_de": "„Adaptives Denken“ heißt: Das Modell entscheidet selbst, wie viel es vor der Antwort nachdenkt. Bei Fable 5.1 und Opus 5.5 ist es immer an. Wie viel Mühe es sich gibt, steuert der Effort-Wert.",
       "punkte_de": [
-        "Voreinstellung über die API: Opus 5.5 „medium“, Fable 5.1 und Sonnet 5.5 „high“.",
+        "Voreinstellung über die API (die Schnittstelle für Programme): Opus 5.5 „medium“, Fable 5.1 und Sonnet 5.5 „high“.",
         "Haiku 4.5 kennt keinen Effort-Wert, sondern das ältere „Extended Thinking“ mit festem Denkbudget.",
-        { "text_de": "Anthropic rät: Den Effort anzupassen ist oft der bessere Hebel, als das Modell zu wechseln.", "quelle": "https://platform.claude.com/docs/en/about-claude/models/choosing-a-model" }
+        {
+          "text_de": "Anthropic rät: Den Effort anzupassen ist oft der bessere Hebel, als das Modell zu wechseln.",
+          "quelle": "https://platform.claude.com/docs/en/about-claude/models/choosing-a-model"
+        }
       ],
       "quelle": "https://platform.claude.com/docs/en/models/overview"
     },
@@ -55,12 +88,15 @@
       "titel_de": "So wählst du das Modell",
       "text_de": "Anthropic beschreibt zwei Wege. Entweder klein anfangen: mit Haiku 4.5 bauen, gründlich testen und nur dort aufsteigen, wo es nicht reicht. Oder stark anfangen: mit Opus 5.5 bauen und später Effort senken oder auf ein günstigeres Modell gehen. Reicht Opus 5.5 selbst auf „xhigh“ oder „max“ nicht, ist Fable 5.1 der nächste Schritt.",
       "punkte_de": [
+        {
+          "text_de": "Achtung: Haiku 4.5 kann schon ab dem 15.10.2026 abgeschaltet werden, so steht es in der Liste. Anthropic kündigt jede Abschaltung aber mindestens 60 Tage vorher an – bisher ist nichts angekündigt. Vor einem neuen Projekt die Abschaltliste ansehen.",
+          "quelle": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+        },
         "Höchste Leistung, Agenten über Stunden, Recherche bis zum fertigen Dokument → Fable 5.1",
         "Komplexes Programmieren, große Umbauten, viel Bildverarbeitung, Computersteuerung → Opus 5.5",
         "Alltägliches Programmieren, Datenanalyse, Texte → Sonnet 5.5",
         "Niedrigste Wartezeit und Kosten, Hilfsaufgaben für Agenten → Haiku 4.5",
-        "Kombinieren spart: Ein günstiges Modell arbeitet, ein starkes entscheidet die schweren Fragen.",
-        { "text_de": "Achtung: Haiku 4.5 kann schon ab dem 15.10.2026 abgeschaltet werden – vor einem neuen Projekt die Abschaltliste ansehen.", "quelle": "https://platform.claude.com/docs/en/about-claude/model-deprecations" }
+        "Kombinieren spart: Ein günstiges Modell arbeitet, ein starkes entscheidet die schweren Fragen."
       ],
       "quelle": "https://platform.claude.com/docs/en/about-claude/models/choosing-a-model"
     },
@@ -81,7 +117,10 @@
         "Sonnet 4.5 ist seit 30.09.2026 abgekündigt und wird am 30.11.2026 abgeschaltet – Nachfolger: Sonnet 5.5.",
         "Haiku 4.5: nicht vor dem 15.10.2026. Opus 4.5: nicht vor dem 24.11.2026.",
         "Fable 5.1 nicht vor dem 01.09.2027, Opus 5.5 nicht vor dem 22.09.2027, Sonnet 5.5 nicht vor dem 28.09.2027.",
-        { "text_de": "Ältere Modelle wie Fable 5, Opus 5, Opus 4.8 und Sonnet 5 sind weiter verfügbar.", "quelle": "https://platform.claude.com/docs/en/models/overview" }
+        {
+          "text_de": "Ältere Modelle wie Fable 5, Opus 5, Opus 4.8 und Sonnet 5 sind weiter verfügbar.",
+          "quelle": "https://platform.claude.com/docs/en/models/overview"
+        }
       ],
       "quelle": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
     }

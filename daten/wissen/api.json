@@ -1,18 +1,33 @@
 {
   "bereich": "api",
   "titel_de": "API und Plattform",
-  "kurz_de": "Wie Programme Claude einbauen: Schnittstellen, Werkzeuge, Grenzen, Preise.",
+  "kurz_de": "Wie Programme Claude einbauen: Schnittstellen, Werkzeuge, Grenzen.",
   "einleitung_de": "Über die Claude-API (eine Schnittstelle, über die Programme mit Claude sprechen) bauen Entwickler Claude in eigene Anwendungen ein. Dafür gibt es zwei Wege: die Messages-API für volle Kontrolle und Claude Managed Agents für lange Aufgaben, die Anthropic betreibt.",
   "stand": "2026-10-03",
   "grafik": {
     "art": "schritte",
     "titel_de": "Der Weg für neue Entwickler",
     "schritte": [
-      { "titel_de": "Erster Aufruf", "text_de": "Umgebung einrichten, ein SDK (fertige Programmbibliothek) installieren, die erste Nachricht an Claude schicken." },
-      { "titel_de": "Schlüssel schützen", "text_de": "Beim Anlegen ein Ablaufdatum setzen; den Schlüssel nie in die Versionsverwaltung, in Code, der beim Nutzer läuft, oder in Anweisungen schreiben." },
-      { "titel_de": "Messages-API verstehen", "text_de": "Aufbau von Anfrage und Antwort, Gespräche über mehrere Runden, Systemtext." },
-      { "titel_de": "Modell wählen", "text_de": "Modelle nach Fähigkeit und Kosten vergleichen." },
-      { "titel_de": "Funktionen erkunden", "text_de": "Denken, Websuche, Dateien, strukturierte Ausgabe und mehr." }
+      {
+        "titel_de": "Erster Aufruf",
+        "text_de": "Umgebung einrichten, ein SDK (fertige Programmbibliothek) installieren, die erste Nachricht an Claude schicken."
+      },
+      {
+        "titel_de": "Schlüssel schützen",
+        "text_de": "Beim Anlegen ein Ablaufdatum setzen; den Schlüssel nie in die Versionsverwaltung, in Code, der beim Nutzer läuft, oder in Anweisungen schreiben."
+      },
+      {
+        "titel_de": "Messages-API verstehen",
+        "text_de": "Aufbau von Anfrage und Antwort, Gespräche über mehrere Runden, Systemtext."
+      },
+      {
+        "titel_de": "Modell wählen",
+        "text_de": "Modelle nach Fähigkeit und Kosten vergleichen."
+      },
+      {
+        "titel_de": "Funktionen erkunden",
+        "text_de": "Denken, Websuche, Dateien, strukturierte Ausgabe und mehr."
+      }
     ],
     "quelle": "https://platform.claude.com/docs/en/intro"
   },

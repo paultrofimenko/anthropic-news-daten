@@ -2,7 +2,7 @@
   "bereich": "entwickler",
   "titel_de": "Entwickler",
   "kurz_de": "claude.dev: Anleitungen und Erfahrungen von Anthropics eigenen Entwicklern.",
-  "einleitung_de": "claude.dev ist der Blog von Anthropics eigenen Entwicklern: Artikel, Videos und Bauberichte darüber, wie man mit Claude und Claude Code baut. Unten stehen die Artikel nach Thema, jeder mit Link zum Original.",
+  "einleitung_de": "claude.dev ist der Blog von Anthropics eigenen Entwicklern: Artikel, Videos und Bauberichte darüber, wie man mit Claude und Claude Code baut. Der Lesepfad zeigt die wichtigsten Artikel, darunter stehen die übrigen.",
   "stand": "2026-10-03",
   "grafik": {
     "art": "schritte",
@@ -10,32 +10,32 @@
     "schritte": [
       {
         "titel_de": "Kontext für Claude 5",
-        "text_de": "Warum Anthropic über 80 % des Systemtexts von Claude Code gestrichen hat.",
+        "text_de": "Warum Anthropic über 80 % des Systemtexts (der Grundanweisungen, die Claude Code jedem Gespräch mitgibt) gestrichen hat (24.07.2026).",
         "quelle": "https://claude.dev/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models/"
       },
       {
         "titel_de": "Opus 5.5 gut nutzen",
-        "text_de": "Anweisen, einen langen Lauf steuern, Ergebnisse prüfen.",
+        "text_de": "Anweisen, einen langen Lauf steuern, Ergebnisse prüfen (22.09.2026).",
         "quelle": "https://claude.dev/blog/getting-the-most-out-of-opus-5-5/"
       },
       {
         "titel_de": "Effort richtig wählen",
-        "text_de": "Welche Stufe wann – aus Tests an drei echten Bauvorhaben.",
+        "text_de": "Welche Stufe wann – aus Tests an drei echten Bauvorhaben (25.09.2026).",
         "quelle": "https://claude.dev/blog/spending-your-effort/"
       },
       {
         "titel_de": "Was eine Aufgabe kostet",
-        "text_de": "Gleicher Tokenpreis, ganz verschiedene Kosten je Aufgabe.",
+        "text_de": "Gleicher Tokenpreis, ganz verschiedene Kosten je Aufgabe – und welche Einstellungen die Rechnung verändern (25.09.2026).",
         "quelle": "https://claude.dev/blog/what-a-task-costs-on-opus-5-5/"
       },
       {
         "titel_de": "Skills",
-        "text_de": "Was Anthropic beim Bauen von Hunderten Skills gelernt hat.",
+        "text_de": "Was Anthropic beim Bauen von Hunderten interner Skills gelernt hat (03.06.2026).",
         "quelle": "https://claude.dev/blog/lessons-from-building-claude-code-how-we-use-skills/"
       },
       {
         "titel_de": "Mods",
-        "text_de": "Claude Code selbst erweitern – vom leeren Ordner an.",
+        "text_de": "Hooks, die in Plugins stecken und in der laufenden Sitzung arbeiten – vom leeren Ordner an (01.10.2026).",
         "quelle": "https://claude.dev/blog/getting-started-with-claude-code-mods/"
       }
     ],
@@ -48,35 +48,8 @@
       "quelle": "https://claude.dev/"
     },
     {
-      "titel_de": "Mit den Claude-5-Modellen arbeiten",
-      "text_de": "Die neuesten Beiträge drehen sich um die aktuelle Modellgeneration: wie man sie anweist, wie man Kosten und Gründlichkeit abwägt, und wann welches Modell passt.",
-      "punkte_de": [
-        {
-          "text_de": "Die neuen Regeln für Kontext bei Claude-5-Modellen (24.07.2026): Über 80 % des Systemtexts von Claude Code wurden für die stärkeren Modelle entfernt – und was man daraus für eigene Agenten lernt.",
-          "quelle": "https://claude.dev/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models/"
-        },
-        {
-          "text_de": "Opus 5.5 in Claude und Claude Code ausreizen (22.09.2026): Anweisen, lange Läufe lenken, Ergebnisse prüfen.",
-          "quelle": "https://claude.dev/blog/getting-the-most-out-of-opus-5-5/"
-        },
-        {
-          "text_de": "Effort einsetzen (25.09.2026): was Effort wirklich ist und welche Stufe wann passt.",
-          "quelle": "https://claude.dev/blog/spending-your-effort/"
-        },
-        {
-          "text_de": "Was eine Aufgabe auf Opus 5.5 kostet (25.09.2026): welche Einstellungen die Rechnung verändern.",
-          "quelle": "https://claude.dev/blog/what-a-task-costs-on-opus-5-5/"
-        },
-        {
-          "text_de": "Bauen mit Sonnet 5.5 (28.09.2026): wann Sonnet statt Opus, was es kostet, wie man es einstellt.",
-          "quelle": "https://claude.dev/blog/building-with-claude-sonnet-5-5/"
-        }
-      ],
-      "quelle": "https://claude.dev/"
-    },
-    {
       "titel_de": "Wie das Claude-Code-Team arbeitet",
-      "text_de": "Mehrere Beiträge zeigen, was das Team hinter Claude Code beim Bauen gelernt hat.",
+      "text_de": "Diese Beiträge zeigen, was das Team hinter Claude Code beim Bauen gelernt hat.",
       "punkte_de": [
         {
           "text_de": "Werkzeuge aus Sicht des Modells entwerfen (10.04.2026)",
@@ -93,21 +66,17 @@
         {
           "text_de": "Dynamische Workflows (02.06.2026): Claude Code baut sich selbst ein Gespann aus vielen Agenten.",
           "quelle": "https://claude.dev/blog/a-harness-for-every-task-dynamic-workflows-in-claude-code/"
-        },
-        {
-          "text_de": "Wie Anthropic Skills einsetzt (03.06.2026): Erfahrungen aus Hunderten interner Skills.",
-          "quelle": "https://claude.dev/blog/lessons-from-building-claude-code-how-we-use-skills/"
         }
       ],
       "quelle": "https://claude.dev/"
     },
     {
-      "titel_de": "Erweitern, messen, schneller werden",
-      "text_de": "Praktische Anleitungen für Fortgeschrittene.",
+      "titel_de": "Weitere Anleitungen",
+      "text_de": "Für bestimmte Modelle und Aufgaben.",
       "punkte_de": [
         {
-          "text_de": "Einstieg in Mods (01.10.2026): Hooks, die in Plugins stecken und in der laufenden Sitzung arbeiten – vom leeren Ordner bis zu zwei großen Beispielen.",
-          "quelle": "https://claude.dev/blog/getting-started-with-claude-code-mods/"
+          "text_de": "Bauen mit Sonnet 5.5 (28.09.2026): wann Sonnet statt Opus, was es kostet, wie man es einstellt.",
+          "quelle": "https://claude.dev/blog/building-with-claude-sonnet-5-5/"
         },
         {
           "text_de": "Evals (Prüfaufgaben, an denen man misst, ob etwas besser wird) entwerfen und daran verbessern, ohne sich selbst zu täuschen (28.09.2026).",
