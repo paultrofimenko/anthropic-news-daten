@@ -1,6 +1,6 @@
 {
  "version": 1,
- "erzeugt": "2026-10-03T06:37:37.590Z",
+ "erzeugt": "2026-10-03T07:08:59.102Z",
  "anzahl": 9,
  "beitraege": [
   {
@@ -326,12 +326,14 @@
   {
    "bereich": "modelle",
    "titel_de": "Modelle",
-   "einleitung_de": "Claude gibt es in vier aktuellen Modellen – vom schnellen, günstigen Haiku bis zum besonders starken Fable. Für die meisten Aufgaben empfiehlt Anthropic als Start Opus 5.5. Wichtiger als der Modellwechsel ist oft die Einstellung „Effort“: Sie tauscht Gründlichkeit gegen Tempo und Kosten innerhalb desselben Modells.",
+   "kurz_de": "Fable, Opus, Sonnet, Haiku – was sie können, was sie kosten, wann sie abgeschaltet werden.",
+   "einleitung_de": "Claude gibt es in vier aktuellen Modellen, vom schnellen, günstigen Haiku bis zum besonders starken Fable. Abgerechnet wird nach Token – Wortstücken, aus denen ein Modell Text zusammensetzt. Oft hilft die Einstellung „Effort“ mehr als ein anderes Modell.",
    "stand": "2026-10-03",
    "grafik": {
     "art": "balken",
     "titel_de": "Preis je Million Token",
-    "einheit_de": "US-Dollar",
+    "einheit_de": "in US-Dollar",
+    "einheit_kurz": "$",
     "reihen": [
      "Eingabe",
      "Ausgabe"
@@ -371,13 +373,16 @@
    "abschnitte": [
     {
      "titel_de": "Die vier aktuellen Modelle",
-     "text_de": "Alle vier verstehen Text und Bilder, schreiben Text, beherrschen viele Sprachen und können Werkzeuge benutzen. Sie unterscheiden sich in Stärke, Tempo und Preis.",
+     "text_de": "Alle vier verstehen Text und Bilder, schreiben Text, beherrschen viele Sprachen und können Werkzeuge benutzen. Für die meisten Aufgaben empfiehlt Anthropic, mit Opus 5.5 anzufangen.",
      "punkte_de": [
-      "Fable 5.1 – das stärkste Modell, das allen offensteht: für anspruchsvolles Denken und Agenten-Arbeit über viele Stunden. Am langsamsten.",
-      "Opus 5.5 – die Empfehlung für die meisten Aufgaben: lange Programmier- und Wissensarbeit, Agenten, Computersteuerung. Mittleres Tempo.",
-      "Sonnet 5.5 – die beste Mischung aus Tempo und Intelligenz für den Alltag, halb so teuer wie Opus 5.5.",
-      "Haiku 4.5 – das schnellste und günstigste Modell, gut für große Mengen, Echtzeit und Hilfsagenten.",
-      "Mythos 5.1 kann dasselbe wie Fable 5.1, ist aber nur für Teilnehmer von „Project Glasswing“ freigegeben."
+      "Fable 5.1 – für anspruchsvolles Denken und lange Agenten-Arbeit. Am langsamsten.",
+      "Opus 5.5 – für lange Programmier- und Wissensarbeit. Mittleres Tempo.",
+      "Sonnet 5.5 – die beste Mischung aus Tempo und Intelligenz, halb so teuer wie Opus 5.5. Schnell.",
+      "Haiku 4.5 – das schnellste Modell, fast so klug wie die Spitze, und das günstigste.",
+      {
+       "text_de": "Fable 5.1 ist das stärkste Modell, das allen Kunden offensteht. Mythos 5.1 kann dasselbe, ist aber nur für Teilnehmer von „Project Glasswing“ freigegeben.",
+       "quelle": "https://platform.claude.com/docs/en/about-claude/models/choosing-a-model"
+      }
      ],
      "quelle": "https://platform.claude.com/docs/en/models/overview"
     },
@@ -387,7 +392,7 @@
      "punkte_de": [
       "Längste Antwort: 128.000 Token bei Fable 5.1, Opus 5.5 und Sonnet 5.5; 64.000 bei Haiku 4.5.",
       "Verlässliches Wissen: bis Juni 2026 bei den drei neuen Modellen, bis Februar 2025 bei Haiku 4.5.",
-      "Ab der Generation 4.7 zerlegt ein neuer Tokenizer denselben Text in etwa 30 % mehr Token – das zählt beim Preisvergleich mit alten Modellen."
+      "Seit Opus 4.7 zerlegen die Modelle Text feiner: In 1 Million Token passen jetzt grob 555.000 Wörter, bei älteren Modellen etwa 750.000 – das zählt beim Preisvergleich."
      ],
      "quelle": "https://platform.claude.com/docs/en/models/overview"
     },
@@ -397,25 +402,32 @@
      "punkte_de": [
       "Voreinstellung über die API: Opus 5.5 „medium“, Fable 5.1 und Sonnet 5.5 „high“.",
       "Haiku 4.5 kennt keinen Effort-Wert, sondern das ältere „Extended Thinking“ mit festem Denkbudget.",
-      "Anthropic rät: Effort anpassen ist oft der bessere Hebel, als das Modell zu wechseln."
+      {
+       "text_de": "Anthropic rät: Den Effort anzupassen ist oft der bessere Hebel, als das Modell zu wechseln.",
+       "quelle": "https://platform.claude.com/docs/en/about-claude/models/choosing-a-model"
+      }
      ],
-     "quelle": "https://platform.claude.com/docs/en/about-claude/models/choosing-a-model"
+     "quelle": "https://platform.claude.com/docs/en/models/overview"
     },
     {
      "titel_de": "So wählst du das Modell",
      "text_de": "Anthropic beschreibt zwei Wege. Entweder klein anfangen: mit Haiku 4.5 bauen, gründlich testen und nur dort aufsteigen, wo es nicht reicht. Oder stark anfangen: mit Opus 5.5 bauen und später Effort senken oder auf ein günstigeres Modell gehen. Reicht Opus 5.5 selbst auf „xhigh“ oder „max“ nicht, ist Fable 5.1 der nächste Schritt.",
      "punkte_de": [
       "Höchste Leistung, Agenten über Stunden, Recherche bis zum fertigen Dokument → Fable 5.1",
-      "Komplexes Programmieren, große Umbauten, viel Bildverarbeitung → Opus 5.5",
+      "Komplexes Programmieren, große Umbauten, viel Bildverarbeitung, Computersteuerung → Opus 5.5",
       "Alltägliches Programmieren, Datenanalyse, Texte → Sonnet 5.5",
       "Niedrigste Wartezeit und Kosten, Hilfsaufgaben für Agenten → Haiku 4.5",
-      "Kombinieren spart: Ein günstiges Modell arbeitet, ein starkes entscheidet die schweren Fragen."
+      "Kombinieren spart: Ein günstiges Modell arbeitet, ein starkes entscheidet die schweren Fragen.",
+      {
+       "text_de": "Achtung: Haiku 4.5 kann schon ab dem 15.10.2026 abgeschaltet werden – vor einem neuen Projekt die Abschaltliste ansehen.",
+       "quelle": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+      }
      ],
      "quelle": "https://platform.claude.com/docs/en/about-claude/models/choosing-a-model"
     },
     {
      "titel_de": "Günstiger rechnen: Stapel und Zwischenspeicher",
-     "text_de": "Neben dem Grundpreis gibt es zwei große Rabatte. Anfragen über die Batch-Schnittstelle (Stapel, Antwort später) kosten die Hälfte. Wiederholte Anfangsteile einer Anfrage lassen sich zwischenspeichern; ein Treffer im Zwischenspeicher kostet nur einen Bruchteil des Eingabepreises.",
+     "text_de": "Neben dem Grundpreis gibt es zwei große Rabatte. Anfragen über die Batch-Schnittstelle (Stapel, Antwort kommt später) kosten die Hälfte – 50 % weniger für Eingabe und Ausgabe. Wiederholte Anfangsteile einer Anfrage lassen sich zwischenspeichern; ein Treffer im Zwischenspeicher kostet nur einen Bruchteil des Eingabepreises.",
      "punkte_de": [
       "Zwischenspeicher-Treffer: normal 10 % des Eingabepreises, bei Opus 5.5 nur 5 % (0,20 $ je Million Token), bei Fable 5.1 nur 2,5 % (0,25 $).",
       "Das volle Kontextfenster von 1 Million Token kostet ab Generation 4.6 keinen Aufschlag – eine sehr lange Anfrage kostet je Token so viel wie eine kurze.",
@@ -430,7 +442,10 @@
       "Sonnet 4.5 ist seit 30.09.2026 abgekündigt und wird am 30.11.2026 abgeschaltet – Nachfolger: Sonnet 5.5.",
       "Haiku 4.5: nicht vor dem 15.10.2026. Opus 4.5: nicht vor dem 24.11.2026.",
       "Fable 5.1 nicht vor dem 01.09.2027, Opus 5.5 nicht vor dem 22.09.2027, Sonnet 5.5 nicht vor dem 28.09.2027.",
-      "Ältere Modelle wie Fable 5, Opus 5, Opus 4.8 und Sonnet 5 sind weiter verfügbar."
+      {
+       "text_de": "Ältere Modelle wie Fable 5, Opus 5, Opus 4.8 und Sonnet 5 sind weiter verfügbar.",
+       "quelle": "https://platform.claude.com/docs/en/models/overview"
+      }
      ],
      "quelle": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
     }
@@ -439,7 +454,8 @@
   {
    "bereich": "claude-code",
    "titel_de": "Claude Code",
-   "einleitung_de": "Claude Code ist ein Werkzeug, mit dem Claude selbst programmiert: Es liest den ganzen Code eines Projekts, ändert Dateien, führt Befehle aus und arbeitet sich durch Probleme, während du zusiehst, umlenkst oder weggehst. Du beschreibst, was du willst – Claude erkundet, plant und baut.",
+   "kurz_de": "Das Werkzeug, mit dem Claude selbst programmiert – und wie man gut damit arbeitet.",
+   "einleitung_de": "Mit Claude Code programmiert Claude selbst: Es liest den Code eines Projekts, ändert Dateien und führt Befehle aus. Du beschreibst, was du willst – Claude erkundet, plant und baut, während du zusiehst oder umlenkst.",
    "stand": "2026-10-03",
    "grafik": {
     "art": "schritte",
@@ -459,7 +475,7 @@
      },
      {
       "titel_de": "Sichern",
-      "text_de": "Claude committet mit verständlicher Nachricht und öffnet auf Wunsch einen Pull Request."
+      "text_de": "Claude legt einen Commit (einen gespeicherten Stand mit Beschreibung) an und öffnet auf Wunsch einen Pull Request – einen Änderungsvorschlag zum Prüfen."
      }
     ],
     "quelle": "https://code.claude.com/docs/en/best-practices"
@@ -467,7 +483,7 @@
    "abschnitte": [
     {
      "titel_de": "Wo es läuft",
-     "text_de": "Claude Code gibt es im Terminal, als Erweiterung für VS Code und JetBrains, in der Desktop-App und im Browser. Alle Oberflächen benutzen denselben Kern – CLAUDE.md, Einstellungen und MCP-Server gelten überall. Man braucht ein Claude-Abo oder ein Konto in der Anthropic Console.",
+     "text_de": "Claude Code gibt es im Terminal, als Erweiterung für VS Code und JetBrains, in der Desktop-App und im Browser. Alle Oberflächen benutzen denselben Kern – CLAUDE.md, Einstellungen und MCP-Server (Anbindungen an andere Dienste) gelten überall. Die meisten Oberflächen brauchen ein Claude-Abo oder ein Konto in der Anthropic Console.",
      "punkte_de": [
       "Eine Sitzung vom Handy aus weiterführen: Remote Control",
       "Regelmäßig von selbst laufen lassen: Routines in der Cloud oder geplante Aufgaben in der Desktop-App",
@@ -499,9 +515,9 @@
      "text_de": "CLAUDE.md ist eine Datei, die Claude zu Beginn jedes Gesprächs liest: Befehle, Stil, Arbeitsregeln – alles, was es nicht aus dem Code erraten kann. Sie soll kurz und gut lesbar bleiben; /init erzeugt einen ersten Entwurf.",
      "punkte_de": [
       "Berechtigungen festlegen, damit nicht jeder harmlose Befehl nachfragt",
-      "Kommandozeilen-Werkzeuge und MCP-Server anbinden",
-      "Hooks für Dinge, die immer passieren müssen",
-      "Skills für wiederkehrende Abläufe, eigene Subagenten, Plugins"
+      "Kommandozeilen-Werkzeuge und MCP-Server einrichten",
+      "Hooks (kleine Skripte, die bei bestimmten Ereignissen immer laufen) für Dinge, die nie vergessen werden dürfen",
+      "Skills (gespeicherte Anleitungen) für wiederkehrende Abläufe, eigene Subagenten (Helfer mit eigenem Kontext), Plugins (Pakete aus all dem)"
      ],
      "quelle": "https://code.claude.com/docs/en/best-practices"
     },
@@ -535,7 +551,8 @@
   {
    "bereich": "entwickler",
    "titel_de": "Entwickler",
-   "einleitung_de": "claude.dev ist der Blog von Anthropics eigenen Entwicklern: Artikel, Videos und Bauberichte darüber, wie man mit Claude und Claude Code baut – mit Tipps, Tricks und Meinungen. Die Beiträge sind in fünf Rubriken sortiert: Agenten, Engineering, Playbooks, Skills und Anleitungen. Neues kommt über einen RSS-Feed.",
+   "kurz_de": "claude.dev: Anleitungen und Erfahrungen von Anthropics eigenen Entwicklern.",
+   "einleitung_de": "claude.dev ist der Blog von Anthropics eigenen Entwicklern: Artikel, Videos und Bauberichte darüber, wie man mit Claude und Claude Code baut. Unten stehen die Artikel nach Thema, jeder mit Link zum Original.",
    "stand": "2026-10-03",
    "grafik": {
     "art": "schritte",
@@ -543,68 +560,123 @@
     "schritte": [
      {
       "titel_de": "Kontext für Claude 5",
-      "text_de": "Warum Anthropic über 80 % des Systemtexts von Claude Code gestrichen hat."
+      "text_de": "Warum Anthropic über 80 % des Systemtexts von Claude Code gestrichen hat.",
+      "quelle": "https://claude.dev/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models/"
      },
      {
       "titel_de": "Opus 5.5 gut nutzen",
-      "text_de": "Anweisen, einen langen Lauf steuern, Ergebnisse prüfen."
+      "text_de": "Anweisen, einen langen Lauf steuern, Ergebnisse prüfen.",
+      "quelle": "https://claude.dev/blog/getting-the-most-out-of-opus-5-5/"
      },
      {
       "titel_de": "Effort richtig wählen",
-      "text_de": "Welche Stufe wann – aus eigenen Messungen."
+      "text_de": "Welche Stufe wann – aus Tests an drei echten Bauvorhaben.",
+      "quelle": "https://claude.dev/blog/spending-your-effort/"
      },
      {
       "titel_de": "Was eine Aufgabe kostet",
-      "text_de": "Gleicher Tokenpreis, ganz verschiedene Kosten je Aufgabe."
+      "text_de": "Gleicher Tokenpreis, ganz verschiedene Kosten je Aufgabe.",
+      "quelle": "https://claude.dev/blog/what-a-task-costs-on-opus-5-5/"
      },
      {
-      "titel_de": "Skills und Mods",
-      "text_de": "Wie Anthropic Hunderte Skills baut – und wie Mods Claude Code erweitern."
+      "titel_de": "Skills",
+      "text_de": "Was Anthropic beim Bauen von Hunderten Skills gelernt hat.",
+      "quelle": "https://claude.dev/blog/lessons-from-building-claude-code-how-we-use-skills/"
+     },
+     {
+      "titel_de": "Mods",
+      "text_de": "Claude Code selbst erweitern – vom leeren Ordner an.",
+      "quelle": "https://claude.dev/blog/getting-started-with-claude-code-mods/"
      }
     ],
     "quelle": "https://claude.dev/"
    },
    "abschnitte": [
     {
+     "titel_de": "Was claude.dev ist",
+     "text_de": "Anthropics Entwickler teilen hier Tipps, Tricks und Meinungen. Die Beiträge sind in fünf Rubriken sortiert: Agents, Engineering, Playbooks (Schritt-für-Schritt-Rezepte), Skills und Tutorials (Anleitungen zum Mitmachen).",
+     "quelle": "https://claude.dev/"
+    },
+    {
      "titel_de": "Mit den Claude-5-Modellen arbeiten",
      "text_de": "Die neuesten Beiträge drehen sich um die aktuelle Modellgeneration: wie man sie anweist, wie man Kosten und Gründlichkeit abwägt, und wann welches Modell passt.",
      "punkte_de": [
-      "Die neuen Regeln für Kontext bei Claude-5-Modellen (24.07.2026): Über 80 % des Systemtexts von Claude Code wurden für die stärkeren Modelle entfernt – und was man daraus für eigene Agenten lernt.",
-      "Opus 5.5 in Claude und Claude Code ausreizen (22.09.2026): Anweisen, lange Läufe lenken, Ergebnisse prüfen.",
-      "Effort einsetzen (25.09.2026): was Effort wirklich ist und welche Stufe wann passt.",
-      "Was eine Aufgabe auf Opus 5.5 kostet (25.09.2026): welche Einstellungen die Rechnung verändern.",
-      "Bauen mit Sonnet 5.5 (28.09.2026): wann Sonnet statt Opus, was es kostet, wie man es einstellt."
+      {
+       "text_de": "Die neuen Regeln für Kontext bei Claude-5-Modellen (24.07.2026): Über 80 % des Systemtexts von Claude Code wurden für die stärkeren Modelle entfernt – und was man daraus für eigene Agenten lernt.",
+       "quelle": "https://claude.dev/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models/"
+      },
+      {
+       "text_de": "Opus 5.5 in Claude und Claude Code ausreizen (22.09.2026): Anweisen, lange Läufe lenken, Ergebnisse prüfen.",
+       "quelle": "https://claude.dev/blog/getting-the-most-out-of-opus-5-5/"
+      },
+      {
+       "text_de": "Effort einsetzen (25.09.2026): was Effort wirklich ist und welche Stufe wann passt.",
+       "quelle": "https://claude.dev/blog/spending-your-effort/"
+      },
+      {
+       "text_de": "Was eine Aufgabe auf Opus 5.5 kostet (25.09.2026): welche Einstellungen die Rechnung verändern.",
+       "quelle": "https://claude.dev/blog/what-a-task-costs-on-opus-5-5/"
+      },
+      {
+       "text_de": "Bauen mit Sonnet 5.5 (28.09.2026): wann Sonnet statt Opus, was es kostet, wie man es einstellt.",
+       "quelle": "https://claude.dev/blog/building-with-claude-sonnet-5-5/"
+      }
      ],
-     "quelle": "https://claude.dev/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models/"
+     "quelle": "https://claude.dev/"
     },
     {
-     "titel_de": "Wie Claude Code innen gebaut ist",
-     "text_de": "Eine Reihe „Lessons from building Claude Code“ zeigt, was das Team selbst gelernt hat.",
+     "titel_de": "Wie das Claude-Code-Team arbeitet",
+     "text_de": "Mehrere Beiträge zeigen, was das Team hinter Claude Code beim Bauen gelernt hat.",
      "punkte_de": [
-      "Werkzeuge aus Sicht des Modells entwerfen (10.04.2026)",
-      "Zwischenspeicher ist alles (30.04.2026): Anweisungen so aufbauen, dass der Zwischenspeicher trifft.",
-      "HTML statt Markdown für Ergebnisse, die man teilt (20.05.2026)",
-      "Dynamische Workflows (02.06.2026): Claude Code baut sich selbst ein Gespann aus vielen Agenten.",
-      "Wie Anthropic Skills einsetzt (03.06.2026): Erfahrungen aus Hunderten interner Skills."
+      {
+       "text_de": "Werkzeuge aus Sicht des Modells entwerfen (10.04.2026)",
+       "quelle": "https://claude.dev/blog/seeing-like-an-agent/"
+      },
+      {
+       "text_de": "Zwischenspeicher ist alles (30.04.2026): Anweisungen so aufbauen, dass der Zwischenspeicher trifft.",
+       "quelle": "https://claude.dev/blog/lessons-from-building-claude-code-prompt-caching-is-everything/"
+      },
+      {
+       "text_de": "HTML statt Markdown für Ergebnisse, die man lesen und teilen will (20.05.2026)",
+       "quelle": "https://claude.dev/blog/using-claude-code-the-unreasonable-effectiveness-of-html/"
+      },
+      {
+       "text_de": "Dynamische Workflows (02.06.2026): Claude Code baut sich selbst ein Gespann aus vielen Agenten.",
+       "quelle": "https://claude.dev/blog/a-harness-for-every-task-dynamic-workflows-in-claude-code/"
+      },
+      {
+       "text_de": "Wie Anthropic Skills einsetzt (03.06.2026): Erfahrungen aus Hunderten interner Skills.",
+       "quelle": "https://claude.dev/blog/lessons-from-building-claude-code-how-we-use-skills/"
+      }
      ],
-     "quelle": "https://claude.dev/blog/lessons-from-building-claude-code-how-we-use-skills/"
+     "quelle": "https://claude.dev/"
     },
     {
      "titel_de": "Erweitern, messen, schneller werden",
      "text_de": "Praktische Anleitungen für Fortgeschrittene.",
      "punkte_de": [
-      "Einstieg in Mods (01.10.2026): Hooks, die in Plugins stecken und in der laufenden Sitzung arbeiten – vom leeren Ordner bis zu zwei großen Beispielen.",
-      "Evals entwerfen und daran verbessern (28.09.2026), ohne sich selbst zu täuschen.",
-      "claude.ai in zwei Wochen dreimal schneller (23.09.2026): 3.000 Änderungen mit Claude und Schutzgeländern."
+      {
+       "text_de": "Einstieg in Mods (01.10.2026): Hooks, die in Plugins stecken und in der laufenden Sitzung arbeiten – vom leeren Ordner bis zu zwei großen Beispielen.",
+       "quelle": "https://claude.dev/blog/getting-started-with-claude-code-mods/"
+      },
+      {
+       "text_de": "Evals (Prüfaufgaben, an denen man misst, ob etwas besser wird) entwerfen und daran verbessern, ohne sich selbst zu täuschen (28.09.2026).",
+       "quelle": "https://claude.dev/blog/automating-eval-design-and-hillclimbing/"
+      },
+      {
+       "text_de": "claude.ai in zwei Wochen dreimal schneller (23.09.2026): über 3.000 Änderungen mit Claude, ohne einen einzigen Ausfall bei Kunden.",
+       "quelle": "https://claude.dev/blog/how-we-made-claude-ai-faster/"
+      }
      ],
-     "quelle": "https://claude.dev/blog/getting-started-with-claude-code-mods/"
+     "quelle": "https://claude.dev/"
     }
    ]
   },
   {
    "bereich": "api",
    "titel_de": "API und Plattform",
-   "einleitung_de": "Über die Claude-API bauen Entwickler Claude in eigene Programme ein. Anthropic bietet dafür zwei Wege: die Messages-API für volle Kontrolle über jeden Schritt, und Claude Managed Agents – ein fertiges Agenten-Gerüst, das in Anthropics Rechenzentren läuft und sich für lange, nebenher laufende Aufgaben eignet.",
+   "kurz_de": "Wie Programme Claude einbauen: Schnittstellen, Werkzeuge, Grenzen, Preise.",
+   "einleitung_de": "Über die Claude-API (eine Schnittstelle, über die Programme mit Claude sprechen) bauen Entwickler Claude in eigene Anwendungen ein. Dafür gibt es zwei Wege: die Messages-API für volle Kontrolle und Claude Managed Agents für lange Aufgaben, die Anthropic betreibt.",
    "stand": "2026-10-03",
    "grafik": {
     "art": "schritte",
@@ -612,11 +684,11 @@
     "schritte": [
      {
       "titel_de": "Erster Aufruf",
-      "text_de": "Umgebung einrichten, ein SDK installieren, die erste Nachricht an Claude schicken."
+      "text_de": "Umgebung einrichten, ein SDK (fertige Programmbibliothek) installieren, die erste Nachricht an Claude schicken."
      },
      {
       "titel_de": "Schlüssel schützen",
-      "text_de": "Ablaufdatum setzen; nie in Quellcode, App oder Anweisungen."
+      "text_de": "Beim Anlegen ein Ablaufdatum setzen; den Schlüssel nie in die Versionsverwaltung, in Code, der beim Nutzer läuft, oder in Anweisungen schreiben."
      },
      {
       "titel_de": "Messages-API verstehen",
@@ -639,12 +711,12 @@
      "text_de": "Die Claude-API besteht aus mehreren Teilen. Alle haben eine feste Adresse und werden mit einem API-Schlüssel benutzt.",
      "punkte_de": [
       "Messages – Nachrichten an Claude schicken, das Herzstück",
-      "Message Batches – viele Anfragen auf einmal, Antwort später, 50 % günstiger",
-      "Token Counting – Token zählen, bevor man schickt",
+      "Message Batches – viele Anfragen als Stapel, Antwort später, 50 % günstiger",
+      "Token Counting – vorher zählen, wie viele Token eine Anfrage hat",
       "Models – welche Modelle es gibt und was sie können",
       "Files – Dateien einmal hochladen und in vielen Anfragen benutzen",
-      "Skills – eigene Agenten-Skills anlegen",
-      "Noch in Erprobung: Agents, Sessions und Environments für Managed Agents"
+      "Skills – eigene Anleitungen für Agenten anlegen",
+      "Noch in Erprobung, also Beta (Vorabfassung, kann sich ändern): Agents, Sessions und Environments – Agenten festlegen, laufen lassen und ihre abgeschottete Umgebung einrichten"
      ],
      "quelle": "https://platform.claude.com/docs/en/api/overview"
     },
@@ -662,11 +734,11 @@
     },
     {
      "titel_de": "Werkzeuge",
-     "text_de": "Werkzeuge ruft Claude selbst auf. Manche führt Anthropic aus (auf dem Server), andere baust und betreibst du selbst (beim Kunden).",
+     "text_de": "Werkzeuge ruft Claude selbst auf. Manche führt Anthropic auf seinen Servern aus, andere baust und betreibst du selbst.",
      "punkte_de": [
-      "Auf dem Server: Websuche, Webseiten abrufen, Code in einer abgeschotteten Umgebung ausführen, ein „Berater“-Modell, das ein schnelleres Modell bei langen Aufgaben anleitet",
+      "Bei Anthropic: Websuche, Webseiten abrufen, Code in einer abgeschotteten Umgebung ausführen, ein „Berater“-Modell, das ein schnelleres Modell bei langen Aufgaben anleitet",
       "Bei dir: Kommandozeile, Texteditor, Browser- und Computersteuerung, ein Gedächtnis über Gespräche hinweg",
-      "Unterbau: Skills, MCP-Anbindung, Werkzeugsuche für Tausende Werkzeuge, Werkzeugaufrufe aus Code heraus"
+      "Unterbau: Skills, MCP (Model Context Protocol – ein Standard, um andere Dienste anzuschließen), Werkzeugsuche für Tausende Werkzeuge, Werkzeugaufrufe aus Code heraus"
      ],
      "quelle": "https://platform.claude.com/docs/en/build-with-claude/overview"
     },
@@ -683,10 +755,10 @@
     },
     {
      "titel_de": "Grenzen und Plattformen",
-     "text_de": "Jede Organisation bekommt automatisch eine Nutzungsstufe mit Grenzen für Anfragen und Token je Minute und für die monatlichen Ausgaben; mit der Zeit steigt sie auf. Eine einzelne Anfrage darf bei Messages höchstens 32 MB groß sein, bei Batches 256 MB, bei Files 500 MB.",
+     "text_de": "Jede Organisation bekommt automatisch eine Nutzungsstufe mit Grenzen für Anfragen und Token je Minute und für die monatlichen Ausgaben; mit der Zeit kann sie aufsteigen. Eine einzelne Anfrage darf bei Messages höchstens 32 MB groß sein, bei Batches 256 MB, bei Files 500 MB.",
      "punkte_de": [
-      "Claude gibt es direkt bei Anthropic und über Amazon Bedrock, Google Cloud, Microsoft Foundry und die Claude Platform on AWS.",
-      "Die offiziellen SDKs übernehmen Anmeldung, Wiederholungen bei Fehlern und Streaming."
+      "Claude gibt es direkt bei Anthropic und über die Cloud-Angebote von Amazon (Bedrock), Google und Microsoft (Foundry) sowie die Claude Platform on AWS.",
+      "Die offiziellen SDKs übernehmen Anmeldung, Wiederholungen bei Fehlern und Streaming (die Antwort kommt Stück für Stück, während sie entsteht)."
      ],
      "quelle": "https://platform.claude.com/docs/en/api/overview"
     }
@@ -695,24 +767,25 @@
   {
    "bereich": "forschung",
    "titel_de": "Forschung",
-   "einleitung_de": "Anthropics Forschung untersucht, wie sicher KI-Modelle sind, was in ihnen vorgeht und wie sie die Gesellschaft verändern – damit KI auch dann Gutes bewirkt, wenn sie immer fähiger wird. Zunehmend forscht Claude selbst mit: In den letzten Wochen kamen mehrere Ergebnisse, an denen Claude weitgehend eigenständig gearbeitet hat.",
+   "kurz_de": "Was Anthropic über KI herausfindet – Sicherheit, Innenleben, Folgen, Wissenschaft.",
+   "einleitung_de": "Anthropics Forschung untersucht, wie sicher KI-Modelle sind, was in ihnen vorgeht und wie sie die Gesellschaft verändern. Zunehmend forscht Claude selbst mit.",
    "stand": "2026-10-03",
    "grafik": {
     "art": "balken",
     "titel_de": "Die zehn neuesten Veröffentlichungen nach Gebiet",
-    "einheit_de": "Veröffentlichungen (4. Sept. bis 1. Okt. 2026)",
+    "einheit_de": "Anzahl, 4. September bis 1. Oktober 2026",
     "reihen": [
      "Anzahl"
     ],
     "zeilen": [
      {
-      "name": "Wissenschaft",
+      "name": "Wissenschaft (Science)",
       "werte": [
        4
       ]
      },
      {
-      "name": "Wirtschaft",
+      "name": "Wirtschaft (Economics)",
       "werte": [
        2
       ]
@@ -730,7 +803,7 @@
       ]
      },
      {
-      "name": "Gesellschaft",
+      "name": "Gesellschaft (Societal Impacts)",
       "werte": [
        1
       ]
@@ -743,11 +816,11 @@
      "titel_de": "Die Forschungsteams",
      "text_de": "Fünf Teams teilen sich die Arbeit.",
      "punkte_de": [
-      "Alignment – versteht die Risiken von KI-Modellen und sorgt dafür, dass künftige Modelle hilfreich, ehrlich und harmlos bleiben.",
-      "Interpretability – erforscht, wie große Sprachmodelle innen funktionieren, als Grundlage für Sicherheit.",
-      "Frontier Red Team – prüft, was die stärksten Modelle für Cybersicherheit, Biosicherheit und selbstständige Systeme bedeuten.",
-      "Societal Impacts – untersucht mit den Teams für Politik und Schutzmaßnahmen, wie KI in der echten Welt benutzt wird.",
-      "Economics – erforscht, wie KI Arbeit, Produktivität und wirtschaftliche Chancen verändert."
+      "Alignment (Ausrichtung) – versteht die Risiken von KI-Modellen und sorgt dafür, dass künftige Modelle hilfreich, ehrlich und harmlos bleiben.",
+      "Interpretability (Durchschaubarkeit) – erforscht, wie große Sprachmodelle innen funktionieren, als Grundlage für Sicherheit.",
+      "Frontier Red Team (Prüfer für die stärksten Modelle) – untersucht, was diese für Cybersicherheit, Biosicherheit und selbstständige Systeme bedeuten.",
+      "Societal Impacts (gesellschaftliche Folgen) – untersucht mit den Teams für Politik und Schutzmaßnahmen, wie KI in der echten Welt benutzt wird.",
+      "Economics (Wirtschaft) – erforscht, wie KI Arbeit, Produktivität und wirtschaftliche Chancen verändert."
      ],
      "quelle": "https://www.anthropic.com/research"
     },
@@ -755,9 +828,18 @@
      "titel_de": "Claude forscht mit",
      "text_de": "Anthropic hat eine eigene Gruppe mit Labor für Lebenswissenschaften gegründet. Dort entdeckte Claude mit nur grober Anleitung ein neues Enzymsystem, das an CRISPR erinnert.",
      "punkte_de": [
-      "Großer Fermatscher Satz (4. Sept.): der erste vollständig maschinell geprüfte Beweis. Claude schrieb ihn weitgehend selbstständig in elf Tagen in der Sprache Lean.",
-      "Biomolekulare Modelle (17. Sept.): wie Claude diese Forschung voranbringt.",
-      "„Claude-shaped science“ (1. Okt.): wie sich Wissenschaft durch Claude verändert."
+      {
+       "text_de": "Großer Fermatscher Satz (4. Sept.): der erste vollständig vom Computer geprüfte Beweis. Claude schrieb ihn weitgehend selbstständig in elf Tagen in Lean (einer Programmiersprache, in der Beweise maschinell geprüft werden).",
+       "quelle": "https://www.anthropic.com/research"
+      },
+      {
+       "text_de": "Biomolekulare Modelle (17. Sept.): wie Claude diese Forschung voranbringt.",
+       "quelle": "https://www.anthropic.com/research"
+      },
+      {
+       "text_de": "„Claude-shaped science“ (1. Okt.): wie sich Wissenschaft durch Claude verändert.",
+       "quelle": "https://www.anthropic.com/research"
+      }
      ],
      "quelle": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system"
     },
@@ -769,15 +851,24 @@
       "Messgrößen für das Tempo der KI-Entwicklung (17. Sept.): Anthropic schlägt Kennzahlen vor, damit die Öffentlichkeit sieht, was in den großen KI-Laboren passiert.",
       "Frontier Red Team (10. und 29. Sept.): was Modelle bei taktischer Zielaufklärung und konventionellen Waffen können, und wie sich fortgeschrittene Cyber-Fähigkeiten verbreiten."
      ],
-     "quelle": "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents"
+     "quelle": "https://www.anthropic.com/research"
     },
     {
      "titel_de": "Wirtschaft und Gesellschaft",
-     "text_de": "Das Wirtschafts-Team hat ein Modell veröffentlicht, wie KI bis 2030 Wachstum, Arbeitsplätze und Löhne beeinflussen könnte. Man kann die Szenarien selbst durchspielen und seine Einschätzung mit über 10.000 Amerikanern vergleichen.",
+     "text_de": "Das Economics-Team hat ein Modell veröffentlicht, wie KI bis 2030 Wachstum, Arbeitsplätze und Löhne beeinflussen könnte. Man kann die Szenarien selbst durchspielen und seine Einschätzung mit über 10.000 Amerikanern vergleichen.",
      "punkte_de": [
-      "„What work can robots do?“ (30. Sept.) – welche Arbeit Roboter übernehmen können",
-      "„Project Swap“ (24. Sept.) – was passiert, wenn Agenten für uns handeln und tauschen",
-      "„What do you want from AI?“ (29. Sept.) – was Menschen sich von KI wünschen"
+      {
+       "text_de": "„What work can robots do?“ (30. Sept.) – welche Arbeit Roboter übernehmen können",
+       "quelle": "https://www.anthropic.com/research"
+      },
+      {
+       "text_de": "„Project Swap“ (24. Sept.) – was passiert, wenn Agenten für uns handeln und tauschen",
+       "quelle": "https://www.anthropic.com/research"
+      },
+      {
+       "text_de": "„What do you want from AI?“ (29. Sept., Societal Impacts) – was Menschen sich von KI wünschen",
+       "quelle": "https://www.anthropic.com/research"
+      }
      ],
      "quelle": "https://www.anthropic.com/institute/econ-scenarios"
     }
@@ -786,11 +877,12 @@
   {
    "bereich": "unternehmen",
    "titel_de": "Unternehmen",
-   "einleitung_de": "Anthropic ist ein Unternehmen für KI-Sicherheit und -Forschung. Es baut KI-Systeme, die verlässlich, durchschaubar und steuerbar sein sollen, und veröffentlicht Forschung über Chancen und Risiken von KI. Rechtlich ist Anthropic eine „Public Benefit Corporation“ – ein Unternehmen, das per Satzung auch dem Gemeinwohl verpflichtet ist.",
+   "kurz_de": "Wer Anthropic ist: Auftrag, Werte, wer entscheidet, welche Produkte es gibt.",
+   "einleitung_de": "Anthropic ist ein Unternehmen für KI-Sicherheit und -Forschung, das verlässliche, durchschaubare und steuerbare KI-Systeme bauen will. Rechtlich ist es eine Public Benefit Corporation – per Satzung auch dem Gemeinwohl verpflichtet.",
    "stand": "2026-10-03",
    "grafik": {
     "art": "schritte",
-    "titel_de": "Sicherheit als Wissenschaft – der Kreislauf",
+    "titel_de": "Sicherheit als Wissenschaft – ein Kreislauf",
     "schritte": [
      {
       "titel_de": "Forschen",
@@ -802,11 +894,11 @@
      },
      {
       "titel_de": "Zurückführen",
-      "text_de": "Was man in den Produkten lernt, geht zurück in die Forschung."
+      "text_de": "Was man in den Produkten lernt, geht zurück in die Forschung – der Kreis schließt sich."
      },
      {
       "titel_de": "Teilen",
-      "text_de": "Erkenntnisse werden regelmäßig öffentlich gemacht."
+      "text_de": "Unterwegs wird regelmäßig öffentlich gemacht, was man gelernt hat."
      }
     ],
     "quelle": "https://www.anthropic.com/company"
@@ -828,7 +920,7 @@
     },
     {
      "titel_de": "Wer entscheidet",
-     "text_de": "Den Vorstand (Board of Directors) wählen die Aktionäre und der „Long-Term Benefit Trust“ – eine Treuhand, die das langfristige Wohl der Menschheit im Blick halten soll.",
+     "text_de": "Anthropic ist eine Public Benefit Corporation. Den Vorstand (Board of Directors) wählen die Aktionäre und der Long-Term Benefit Trust, eine eigene Treuhand-Stelle.",
      "punkte_de": [
       "Vorstand: Dario Amodei, Daniela Amodei, Yasmin Razavi, Reed Hastings, Chris Liddell und Vas Narasimhan.",
       "Treuhänder des Long-Term Benefit Trust: Neil Buddy Shah, Richard Fontaine und Ben Bernanke."
