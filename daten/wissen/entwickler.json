@@ -1,54 +1,124 @@
 {
   "bereich": "entwickler",
   "titel_de": "Entwickler",
-  "einleitung_de": "claude.dev ist der Blog von Anthropics eigenen Entwicklern: Artikel, Videos und Bauberichte darüber, wie man mit Claude und Claude Code baut – mit Tipps, Tricks und Meinungen. Die Beiträge sind in fünf Rubriken sortiert: Agenten, Engineering, Playbooks, Skills und Anleitungen. Neues kommt über einen RSS-Feed.",
+  "kurz_de": "claude.dev: Anleitungen und Erfahrungen von Anthropics eigenen Entwicklern.",
+  "einleitung_de": "claude.dev ist der Blog von Anthropics eigenen Entwicklern: Artikel, Videos und Bauberichte darüber, wie man mit Claude und Claude Code baut. Unten stehen die Artikel nach Thema, jeder mit Link zum Original.",
   "stand": "2026-10-03",
   "grafik": {
     "art": "schritte",
     "titel_de": "Ein Lesepfad durch claude.dev (Vorschlag)",
     "schritte": [
-      { "titel_de": "Kontext für Claude 5", "text_de": "Warum Anthropic über 80 % des Systemtexts von Claude Code gestrichen hat." },
-      { "titel_de": "Opus 5.5 gut nutzen", "text_de": "Anweisen, einen langen Lauf steuern, Ergebnisse prüfen." },
-      { "titel_de": "Effort richtig wählen", "text_de": "Welche Stufe wann – aus eigenen Messungen." },
-      { "titel_de": "Was eine Aufgabe kostet", "text_de": "Gleicher Tokenpreis, ganz verschiedene Kosten je Aufgabe." },
-      { "titel_de": "Skills und Mods", "text_de": "Wie Anthropic Hunderte Skills baut – und wie Mods Claude Code erweitern." }
+      {
+        "titel_de": "Kontext für Claude 5",
+        "text_de": "Warum Anthropic über 80 % des Systemtexts von Claude Code gestrichen hat.",
+        "quelle": "https://claude.dev/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models/"
+      },
+      {
+        "titel_de": "Opus 5.5 gut nutzen",
+        "text_de": "Anweisen, einen langen Lauf steuern, Ergebnisse prüfen.",
+        "quelle": "https://claude.dev/blog/getting-the-most-out-of-opus-5-5/"
+      },
+      {
+        "titel_de": "Effort richtig wählen",
+        "text_de": "Welche Stufe wann – aus Tests an drei echten Bauvorhaben.",
+        "quelle": "https://claude.dev/blog/spending-your-effort/"
+      },
+      {
+        "titel_de": "Was eine Aufgabe kostet",
+        "text_de": "Gleicher Tokenpreis, ganz verschiedene Kosten je Aufgabe.",
+        "quelle": "https://claude.dev/blog/what-a-task-costs-on-opus-5-5/"
+      },
+      {
+        "titel_de": "Skills",
+        "text_de": "Was Anthropic beim Bauen von Hunderten Skills gelernt hat.",
+        "quelle": "https://claude.dev/blog/lessons-from-building-claude-code-how-we-use-skills/"
+      },
+      {
+        "titel_de": "Mods",
+        "text_de": "Claude Code selbst erweitern – vom leeren Ordner an.",
+        "quelle": "https://claude.dev/blog/getting-started-with-claude-code-mods/"
+      }
     ],
     "quelle": "https://claude.dev/"
   },
   "abschnitte": [
     {
+      "titel_de": "Was claude.dev ist",
+      "text_de": "Anthropics Entwickler teilen hier Tipps, Tricks und Meinungen. Die Beiträge sind in fünf Rubriken sortiert: Agents, Engineering, Playbooks (Schritt-für-Schritt-Rezepte), Skills und Tutorials (Anleitungen zum Mitmachen).",
+      "quelle": "https://claude.dev/"
+    },
+    {
       "titel_de": "Mit den Claude-5-Modellen arbeiten",
       "text_de": "Die neuesten Beiträge drehen sich um die aktuelle Modellgeneration: wie man sie anweist, wie man Kosten und Gründlichkeit abwägt, und wann welches Modell passt.",
       "punkte_de": [
-        "Die neuen Regeln für Kontext bei Claude-5-Modellen (24.07.2026): Über 80 % des Systemtexts von Claude Code wurden für die stärkeren Modelle entfernt – und was man daraus für eigene Agenten lernt.",
-        "Opus 5.5 in Claude und Claude Code ausreizen (22.09.2026): Anweisen, lange Läufe lenken, Ergebnisse prüfen.",
-        "Effort einsetzen (25.09.2026): was Effort wirklich ist und welche Stufe wann passt.",
-        "Was eine Aufgabe auf Opus 5.5 kostet (25.09.2026): welche Einstellungen die Rechnung verändern.",
-        "Bauen mit Sonnet 5.5 (28.09.2026): wann Sonnet statt Opus, was es kostet, wie man es einstellt."
+        {
+          "text_de": "Die neuen Regeln für Kontext bei Claude-5-Modellen (24.07.2026): Über 80 % des Systemtexts von Claude Code wurden für die stärkeren Modelle entfernt – und was man daraus für eigene Agenten lernt.",
+          "quelle": "https://claude.dev/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models/"
+        },
+        {
+          "text_de": "Opus 5.5 in Claude und Claude Code ausreizen (22.09.2026): Anweisen, lange Läufe lenken, Ergebnisse prüfen.",
+          "quelle": "https://claude.dev/blog/getting-the-most-out-of-opus-5-5/"
+        },
+        {
+          "text_de": "Effort einsetzen (25.09.2026): was Effort wirklich ist und welche Stufe wann passt.",
+          "quelle": "https://claude.dev/blog/spending-your-effort/"
+        },
+        {
+          "text_de": "Was eine Aufgabe auf Opus 5.5 kostet (25.09.2026): welche Einstellungen die Rechnung verändern.",
+          "quelle": "https://claude.dev/blog/what-a-task-costs-on-opus-5-5/"
+        },
+        {
+          "text_de": "Bauen mit Sonnet 5.5 (28.09.2026): wann Sonnet statt Opus, was es kostet, wie man es einstellt.",
+          "quelle": "https://claude.dev/blog/building-with-claude-sonnet-5-5/"
+        }
       ],
-      "quelle": "https://claude.dev/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models/"
+      "quelle": "https://claude.dev/"
     },
     {
-      "titel_de": "Wie Claude Code innen gebaut ist",
-      "text_de": "Eine Reihe „Lessons from building Claude Code“ zeigt, was das Team selbst gelernt hat.",
+      "titel_de": "Wie das Claude-Code-Team arbeitet",
+      "text_de": "Mehrere Beiträge zeigen, was das Team hinter Claude Code beim Bauen gelernt hat.",
       "punkte_de": [
-        "Werkzeuge aus Sicht des Modells entwerfen (10.04.2026)",
-        "Zwischenspeicher ist alles (30.04.2026): Anweisungen so aufbauen, dass der Zwischenspeicher trifft.",
-        "HTML statt Markdown für Ergebnisse, die man teilt (20.05.2026)",
-        "Dynamische Workflows (02.06.2026): Claude Code baut sich selbst ein Gespann aus vielen Agenten.",
-        "Wie Anthropic Skills einsetzt (03.06.2026): Erfahrungen aus Hunderten interner Skills."
+        {
+          "text_de": "Werkzeuge aus Sicht des Modells entwerfen (10.04.2026)",
+          "quelle": "https://claude.dev/blog/seeing-like-an-agent/"
+        },
+        {
+          "text_de": "Zwischenspeicher ist alles (30.04.2026): Anweisungen so aufbauen, dass der Zwischenspeicher trifft.",
+          "quelle": "https://claude.dev/blog/lessons-from-building-claude-code-prompt-caching-is-everything/"
+        },
+        {
+          "text_de": "HTML statt Markdown für Ergebnisse, die man lesen und teilen will (20.05.2026)",
+          "quelle": "https://claude.dev/blog/using-claude-code-the-unreasonable-effectiveness-of-html/"
+        },
+        {
+          "text_de": "Dynamische Workflows (02.06.2026): Claude Code baut sich selbst ein Gespann aus vielen Agenten.",
+          "quelle": "https://claude.dev/blog/a-harness-for-every-task-dynamic-workflows-in-claude-code/"
+        },
+        {
+          "text_de": "Wie Anthropic Skills einsetzt (03.06.2026): Erfahrungen aus Hunderten interner Skills.",
+          "quelle": "https://claude.dev/blog/lessons-from-building-claude-code-how-we-use-skills/"
+        }
       ],
-      "quelle": "https://claude.dev/blog/lessons-from-building-claude-code-how-we-use-skills/"
+      "quelle": "https://claude.dev/"
     },
     {
       "titel_de": "Erweitern, messen, schneller werden",
       "text_de": "Praktische Anleitungen für Fortgeschrittene.",
       "punkte_de": [
-        "Einstieg in Mods (01.10.2026): Hooks, die in Plugins stecken und in der laufenden Sitzung arbeiten – vom leeren Ordner bis zu zwei großen Beispielen.",
-        "Evals entwerfen und daran verbessern (28.09.2026), ohne sich selbst zu täuschen.",
-        "claude.ai in zwei Wochen dreimal schneller (23.09.2026): 3.000 Änderungen mit Claude und Schutzgeländern."
+        {
+          "text_de": "Einstieg in Mods (01.10.2026): Hooks, die in Plugins stecken und in der laufenden Sitzung arbeiten – vom leeren Ordner bis zu zwei großen Beispielen.",
+          "quelle": "https://claude.dev/blog/getting-started-with-claude-code-mods/"
+        },
+        {
+          "text_de": "Evals (Prüfaufgaben, an denen man misst, ob etwas besser wird) entwerfen und daran verbessern, ohne sich selbst zu täuschen (28.09.2026).",
+          "quelle": "https://claude.dev/blog/automating-eval-design-and-hillclimbing/"
+        },
+        {
+          "text_de": "claude.ai in zwei Wochen dreimal schneller (23.09.2026): über 3.000 Änderungen mit Claude, ohne einen einzigen Ausfall bei Kunden.",
+          "quelle": "https://claude.dev/blog/how-we-made-claude-ai-faster/"
+        }
       ],
-      "quelle": "https://claude.dev/blog/getting-started-with-claude-code-mods/"
+      "quelle": "https://claude.dev/"
     }
   ]
 }

@@ -1,16 +1,29 @@
 {
   "bereich": "unternehmen",
   "titel_de": "Unternehmen",
-  "einleitung_de": "Anthropic ist ein Unternehmen für KI-Sicherheit und -Forschung. Es baut KI-Systeme, die verlässlich, durchschaubar und steuerbar sein sollen, und veröffentlicht Forschung über Chancen und Risiken von KI. Rechtlich ist Anthropic eine „Public Benefit Corporation“ – ein Unternehmen, das per Satzung auch dem Gemeinwohl verpflichtet ist.",
+  "kurz_de": "Wer Anthropic ist: Auftrag, Werte, wer entscheidet, welche Produkte es gibt.",
+  "einleitung_de": "Anthropic ist ein Unternehmen für KI-Sicherheit und -Forschung, das verlässliche, durchschaubare und steuerbare KI-Systeme bauen will. Rechtlich ist es eine Public Benefit Corporation – per Satzung auch dem Gemeinwohl verpflichtet.",
   "stand": "2026-10-03",
   "grafik": {
     "art": "schritte",
-    "titel_de": "Sicherheit als Wissenschaft – der Kreislauf",
+    "titel_de": "Sicherheit als Wissenschaft – ein Kreislauf",
     "schritte": [
-      { "titel_de": "Forschen", "text_de": "Sicherheit wird systematisch untersucht wie jedes andere Fach." },
-      { "titel_de": "Anwenden", "text_de": "Die Ergebnisse fließen in die Produkte." },
-      { "titel_de": "Zurückführen", "text_de": "Was man in den Produkten lernt, geht zurück in die Forschung." },
-      { "titel_de": "Teilen", "text_de": "Erkenntnisse werden regelmäßig öffentlich gemacht." }
+      {
+        "titel_de": "Forschen",
+        "text_de": "Sicherheit wird systematisch untersucht wie jedes andere Fach."
+      },
+      {
+        "titel_de": "Anwenden",
+        "text_de": "Die Ergebnisse fließen in die Produkte."
+      },
+      {
+        "titel_de": "Zurückführen",
+        "text_de": "Was man in den Produkten lernt, geht zurück in die Forschung – der Kreis schließt sich."
+      },
+      {
+        "titel_de": "Teilen",
+        "text_de": "Unterwegs wird regelmäßig öffentlich gemacht, was man gelernt hat."
+      }
     ],
     "quelle": "https://www.anthropic.com/company"
   },
@@ -31,7 +44,7 @@
     },
     {
       "titel_de": "Wer entscheidet",
-      "text_de": "Den Vorstand (Board of Directors) wählen die Aktionäre und der „Long-Term Benefit Trust“ – eine Treuhand, die das langfristige Wohl der Menschheit im Blick halten soll.",
+      "text_de": "Anthropic ist eine Public Benefit Corporation. Den Vorstand (Board of Directors) wählen die Aktionäre und der Long-Term Benefit Trust, eine eigene Treuhand-Stelle.",
       "punkte_de": [
         "Vorstand: Dario Amodei, Daniela Amodei, Yasmin Razavi, Reed Hastings, Chris Liddell und Vas Narasimhan.",
         "Treuhänder des Long-Term Benefit Trust: Neil Buddy Shah, Richard Fontaine und Ben Bernanke."

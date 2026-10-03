@@ -1,7 +1,8 @@
 {
   "bereich": "claude-code",
   "titel_de": "Claude Code",
-  "einleitung_de": "Claude Code ist ein Werkzeug, mit dem Claude selbst programmiert: Es liest den ganzen Code eines Projekts, ändert Dateien, führt Befehle aus und arbeitet sich durch Probleme, während du zusiehst, umlenkst oder weggehst. Du beschreibst, was du willst – Claude erkundet, plant und baut.",
+  "kurz_de": "Das Werkzeug, mit dem Claude selbst programmiert – und wie man gut damit arbeitet.",
+  "einleitung_de": "Mit Claude Code programmiert Claude selbst: Es liest den Code eines Projekts, ändert Dateien und führt Befehle aus. Du beschreibst, was du willst – Claude erkundet, plant und baut, während du zusiehst oder umlenkst.",
   "stand": "2026-10-03",
   "grafik": {
     "art": "schritte",
@@ -10,14 +11,14 @@
       { "titel_de": "Erkunden", "text_de": "Im Planmodus liest Claude Dateien und beantwortet Fragen, ohne etwas zu ändern." },
       { "titel_de": "Planen", "text_de": "Claude schreibt einen genauen Plan; du kannst ihn vorher selbst bearbeiten." },
       { "titel_de": "Umsetzen", "text_de": "Planmodus verlassen, Claude baut nach dem Plan, schreibt Tests und lässt sie laufen." },
-      { "titel_de": "Sichern", "text_de": "Claude committet mit verständlicher Nachricht und öffnet auf Wunsch einen Pull Request." }
+      { "titel_de": "Sichern", "text_de": "Claude legt einen Commit (einen gespeicherten Stand mit Beschreibung) an und öffnet auf Wunsch einen Pull Request – einen Änderungsvorschlag zum Prüfen." }
     ],
     "quelle": "https://code.claude.com/docs/en/best-practices"
   },
   "abschnitte": [
     {
       "titel_de": "Wo es läuft",
-      "text_de": "Claude Code gibt es im Terminal, als Erweiterung für VS Code und JetBrains, in der Desktop-App und im Browser. Alle Oberflächen benutzen denselben Kern – CLAUDE.md, Einstellungen und MCP-Server gelten überall. Man braucht ein Claude-Abo oder ein Konto in der Anthropic Console.",
+      "text_de": "Claude Code gibt es im Terminal, als Erweiterung für VS Code und JetBrains, in der Desktop-App und im Browser. Alle Oberflächen benutzen denselben Kern – CLAUDE.md, Einstellungen und MCP-Server (Anbindungen an andere Dienste) gelten überall. Die meisten Oberflächen brauchen ein Claude-Abo oder ein Konto in der Anthropic Console.",
       "punkte_de": [
         "Eine Sitzung vom Handy aus weiterführen: Remote Control",
         "Regelmäßig von selbst laufen lassen: Routines in der Cloud oder geplante Aufgaben in der Desktop-App",
@@ -49,9 +50,9 @@
       "text_de": "CLAUDE.md ist eine Datei, die Claude zu Beginn jedes Gesprächs liest: Befehle, Stil, Arbeitsregeln – alles, was es nicht aus dem Code erraten kann. Sie soll kurz und gut lesbar bleiben; /init erzeugt einen ersten Entwurf.",
       "punkte_de": [
         "Berechtigungen festlegen, damit nicht jeder harmlose Befehl nachfragt",
-        "Kommandozeilen-Werkzeuge und MCP-Server anbinden",
-        "Hooks für Dinge, die immer passieren müssen",
-        "Skills für wiederkehrende Abläufe, eigene Subagenten, Plugins"
+        "Kommandozeilen-Werkzeuge und MCP-Server einrichten",
+        "Hooks (kleine Skripte, die bei bestimmten Ereignissen immer laufen) für Dinge, die nie vergessen werden dürfen",
+        "Skills (gespeicherte Anleitungen) für wiederkehrende Abläufe, eigene Subagenten (Helfer mit eigenem Kontext), Plugins (Pakete aus all dem)"
       ],
       "quelle": "https://code.claude.com/docs/en/best-practices"
     },

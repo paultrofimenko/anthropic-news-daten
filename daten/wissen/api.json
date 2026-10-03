@@ -1,14 +1,15 @@
 {
   "bereich": "api",
   "titel_de": "API und Plattform",
-  "einleitung_de": "Über die Claude-API bauen Entwickler Claude in eigene Programme ein. Anthropic bietet dafür zwei Wege: die Messages-API für volle Kontrolle über jeden Schritt, und Claude Managed Agents – ein fertiges Agenten-Gerüst, das in Anthropics Rechenzentren läuft und sich für lange, nebenher laufende Aufgaben eignet.",
+  "kurz_de": "Wie Programme Claude einbauen: Schnittstellen, Werkzeuge, Grenzen, Preise.",
+  "einleitung_de": "Über die Claude-API (eine Schnittstelle, über die Programme mit Claude sprechen) bauen Entwickler Claude in eigene Anwendungen ein. Dafür gibt es zwei Wege: die Messages-API für volle Kontrolle und Claude Managed Agents für lange Aufgaben, die Anthropic betreibt.",
   "stand": "2026-10-03",
   "grafik": {
     "art": "schritte",
     "titel_de": "Der Weg für neue Entwickler",
     "schritte": [
-      { "titel_de": "Erster Aufruf", "text_de": "Umgebung einrichten, ein SDK installieren, die erste Nachricht an Claude schicken." },
-      { "titel_de": "Schlüssel schützen", "text_de": "Ablaufdatum setzen; nie in Quellcode, App oder Anweisungen." },
+      { "titel_de": "Erster Aufruf", "text_de": "Umgebung einrichten, ein SDK (fertige Programmbibliothek) installieren, die erste Nachricht an Claude schicken." },
+      { "titel_de": "Schlüssel schützen", "text_de": "Beim Anlegen ein Ablaufdatum setzen; den Schlüssel nie in die Versionsverwaltung, in Code, der beim Nutzer läuft, oder in Anweisungen schreiben." },
       { "titel_de": "Messages-API verstehen", "text_de": "Aufbau von Anfrage und Antwort, Gespräche über mehrere Runden, Systemtext." },
       { "titel_de": "Modell wählen", "text_de": "Modelle nach Fähigkeit und Kosten vergleichen." },
       { "titel_de": "Funktionen erkunden", "text_de": "Denken, Websuche, Dateien, strukturierte Ausgabe und mehr." }
@@ -21,12 +22,12 @@
       "text_de": "Die Claude-API besteht aus mehreren Teilen. Alle haben eine feste Adresse und werden mit einem API-Schlüssel benutzt.",
       "punkte_de": [
         "Messages – Nachrichten an Claude schicken, das Herzstück",
-        "Message Batches – viele Anfragen auf einmal, Antwort später, 50 % günstiger",
-        "Token Counting – Token zählen, bevor man schickt",
+        "Message Batches – viele Anfragen als Stapel, Antwort später, 50 % günstiger",
+        "Token Counting – vorher zählen, wie viele Token eine Anfrage hat",
         "Models – welche Modelle es gibt und was sie können",
         "Files – Dateien einmal hochladen und in vielen Anfragen benutzen",
-        "Skills – eigene Agenten-Skills anlegen",
-        "Noch in Erprobung: Agents, Sessions und Environments für Managed Agents"
+        "Skills – eigene Anleitungen für Agenten anlegen",
+        "Noch in Erprobung, also Beta (Vorabfassung, kann sich ändern): Agents, Sessions und Environments – Agenten festlegen, laufen lassen und ihre abgeschottete Umgebung einrichten"
       ],
       "quelle": "https://platform.claude.com/docs/en/api/overview"
     },
@@ -44,11 +45,11 @@
     },
     {
       "titel_de": "Werkzeuge",
-      "text_de": "Werkzeuge ruft Claude selbst auf. Manche führt Anthropic aus (auf dem Server), andere baust und betreibst du selbst (beim Kunden).",
+      "text_de": "Werkzeuge ruft Claude selbst auf. Manche führt Anthropic auf seinen Servern aus, andere baust und betreibst du selbst.",
       "punkte_de": [
-        "Auf dem Server: Websuche, Webseiten abrufen, Code in einer abgeschotteten Umgebung ausführen, ein „Berater“-Modell, das ein schnelleres Modell bei langen Aufgaben anleitet",
+        "Bei Anthropic: Websuche, Webseiten abrufen, Code in einer abgeschotteten Umgebung ausführen, ein „Berater“-Modell, das ein schnelleres Modell bei langen Aufgaben anleitet",
         "Bei dir: Kommandozeile, Texteditor, Browser- und Computersteuerung, ein Gedächtnis über Gespräche hinweg",
-        "Unterbau: Skills, MCP-Anbindung, Werkzeugsuche für Tausende Werkzeuge, Werkzeugaufrufe aus Code heraus"
+        "Unterbau: Skills, MCP (Model Context Protocol – ein Standard, um andere Dienste anzuschließen), Werkzeugsuche für Tausende Werkzeuge, Werkzeugaufrufe aus Code heraus"
       ],
       "quelle": "https://platform.claude.com/docs/en/build-with-claude/overview"
     },
@@ -65,10 +66,10 @@
     },
     {
       "titel_de": "Grenzen und Plattformen",
-      "text_de": "Jede Organisation bekommt automatisch eine Nutzungsstufe mit Grenzen für Anfragen und Token je Minute und für die monatlichen Ausgaben; mit der Zeit steigt sie auf. Eine einzelne Anfrage darf bei Messages höchstens 32 MB groß sein, bei Batches 256 MB, bei Files 500 MB.",
+      "text_de": "Jede Organisation bekommt automatisch eine Nutzungsstufe mit Grenzen für Anfragen und Token je Minute und für die monatlichen Ausgaben; mit der Zeit kann sie aufsteigen. Eine einzelne Anfrage darf bei Messages höchstens 32 MB groß sein, bei Batches 256 MB, bei Files 500 MB.",
       "punkte_de": [
-        "Claude gibt es direkt bei Anthropic und über Amazon Bedrock, Google Cloud, Microsoft Foundry und die Claude Platform on AWS.",
-        "Die offiziellen SDKs übernehmen Anmeldung, Wiederholungen bei Fehlern und Streaming."
+        "Claude gibt es direkt bei Anthropic und über die Cloud-Angebote von Amazon (Bedrock), Google und Microsoft (Foundry) sowie die Claude Platform on AWS.",
+        "Die offiziellen SDKs übernehmen Anmeldung, Wiederholungen bei Fehlern und Streaming (die Antwort kommt Stück für Stück, während sie entsteht)."
       ],
       "quelle": "https://platform.claude.com/docs/en/api/overview"
     }

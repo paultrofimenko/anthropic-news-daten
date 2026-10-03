@@ -1,19 +1,20 @@
 {
   "bereich": "forschung",
   "titel_de": "Forschung",
-  "einleitung_de": "Anthropics Forschung untersucht, wie sicher KI-Modelle sind, was in ihnen vorgeht und wie sie die Gesellschaft verändern – damit KI auch dann Gutes bewirkt, wenn sie immer fähiger wird. Zunehmend forscht Claude selbst mit: In den letzten Wochen kamen mehrere Ergebnisse, an denen Claude weitgehend eigenständig gearbeitet hat.",
+  "kurz_de": "Was Anthropic über KI herausfindet – Sicherheit, Innenleben, Folgen, Wissenschaft.",
+  "einleitung_de": "Anthropics Forschung untersucht, wie sicher KI-Modelle sind, was in ihnen vorgeht und wie sie die Gesellschaft verändern. Zunehmend forscht Claude selbst mit.",
   "stand": "2026-10-03",
   "grafik": {
     "art": "balken",
     "titel_de": "Die zehn neuesten Veröffentlichungen nach Gebiet",
-    "einheit_de": "Veröffentlichungen (4. Sept. bis 1. Okt. 2026)",
+    "einheit_de": "Anzahl, 4. September bis 1. Oktober 2026",
     "reihen": ["Anzahl"],
     "zeilen": [
-      { "name": "Wissenschaft", "werte": [4] },
-      { "name": "Wirtschaft", "werte": [2] },
+      { "name": "Wissenschaft (Science)", "werte": [4] },
+      { "name": "Wirtschaft (Economics)", "werte": [2] },
       { "name": "Frontier Red Team", "werte": [2] },
       { "name": "Alignment", "werte": [1] },
-      { "name": "Gesellschaft", "werte": [1] }
+      { "name": "Gesellschaft (Societal Impacts)", "werte": [1] }
     ],
     "quelle": "https://www.anthropic.com/research"
   },
@@ -22,11 +23,11 @@
       "titel_de": "Die Forschungsteams",
       "text_de": "Fünf Teams teilen sich die Arbeit.",
       "punkte_de": [
-        "Alignment – versteht die Risiken von KI-Modellen und sorgt dafür, dass künftige Modelle hilfreich, ehrlich und harmlos bleiben.",
-        "Interpretability – erforscht, wie große Sprachmodelle innen funktionieren, als Grundlage für Sicherheit.",
-        "Frontier Red Team – prüft, was die stärksten Modelle für Cybersicherheit, Biosicherheit und selbstständige Systeme bedeuten.",
-        "Societal Impacts – untersucht mit den Teams für Politik und Schutzmaßnahmen, wie KI in der echten Welt benutzt wird.",
-        "Economics – erforscht, wie KI Arbeit, Produktivität und wirtschaftliche Chancen verändert."
+        "Alignment (Ausrichtung) – versteht die Risiken von KI-Modellen und sorgt dafür, dass künftige Modelle hilfreich, ehrlich und harmlos bleiben.",
+        "Interpretability (Durchschaubarkeit) – erforscht, wie große Sprachmodelle innen funktionieren, als Grundlage für Sicherheit.",
+        "Frontier Red Team (Prüfer für die stärksten Modelle) – untersucht, was diese für Cybersicherheit, Biosicherheit und selbstständige Systeme bedeuten.",
+        "Societal Impacts (gesellschaftliche Folgen) – untersucht mit den Teams für Politik und Schutzmaßnahmen, wie KI in der echten Welt benutzt wird.",
+        "Economics (Wirtschaft) – erforscht, wie KI Arbeit, Produktivität und wirtschaftliche Chancen verändert."
       ],
       "quelle": "https://www.anthropic.com/research"
     },
@@ -34,9 +35,9 @@
       "titel_de": "Claude forscht mit",
       "text_de": "Anthropic hat eine eigene Gruppe mit Labor für Lebenswissenschaften gegründet. Dort entdeckte Claude mit nur grober Anleitung ein neues Enzymsystem, das an CRISPR erinnert.",
       "punkte_de": [
-        "Großer Fermatscher Satz (4. Sept.): der erste vollständig maschinell geprüfte Beweis. Claude schrieb ihn weitgehend selbstständig in elf Tagen in der Sprache Lean.",
-        "Biomolekulare Modelle (17. Sept.): wie Claude diese Forschung voranbringt.",
-        "„Claude-shaped science“ (1. Okt.): wie sich Wissenschaft durch Claude verändert."
+        { "text_de": "Großer Fermatscher Satz (4. Sept.): der erste vollständig vom Computer geprüfte Beweis. Claude schrieb ihn weitgehend selbstständig in elf Tagen in Lean (einer Programmiersprache, in der Beweise maschinell geprüft werden).", "quelle": "https://www.anthropic.com/research" },
+        { "text_de": "Biomolekulare Modelle (17. Sept.): wie Claude diese Forschung voranbringt.", "quelle": "https://www.anthropic.com/research" },
+        { "text_de": "„Claude-shaped science“ (1. Okt.): wie sich Wissenschaft durch Claude verändert.", "quelle": "https://www.anthropic.com/research" }
       ],
       "quelle": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system"
     },
@@ -48,15 +49,15 @@
         "Messgrößen für das Tempo der KI-Entwicklung (17. Sept.): Anthropic schlägt Kennzahlen vor, damit die Öffentlichkeit sieht, was in den großen KI-Laboren passiert.",
         "Frontier Red Team (10. und 29. Sept.): was Modelle bei taktischer Zielaufklärung und konventionellen Waffen können, und wie sich fortgeschrittene Cyber-Fähigkeiten verbreiten."
       ],
-      "quelle": "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents"
+      "quelle": "https://www.anthropic.com/research"
     },
     {
       "titel_de": "Wirtschaft und Gesellschaft",
-      "text_de": "Das Wirtschafts-Team hat ein Modell veröffentlicht, wie KI bis 2030 Wachstum, Arbeitsplätze und Löhne beeinflussen könnte. Man kann die Szenarien selbst durchspielen und seine Einschätzung mit über 10.000 Amerikanern vergleichen.",
+      "text_de": "Das Economics-Team hat ein Modell veröffentlicht, wie KI bis 2030 Wachstum, Arbeitsplätze und Löhne beeinflussen könnte. Man kann die Szenarien selbst durchspielen und seine Einschätzung mit über 10.000 Amerikanern vergleichen.",
       "punkte_de": [
-        "„What work can robots do?“ (30. Sept.) – welche Arbeit Roboter übernehmen können",
-        "„Project Swap“ (24. Sept.) – was passiert, wenn Agenten für uns handeln und tauschen",
-        "„What do you want from AI?“ (29. Sept.) – was Menschen sich von KI wünschen"
+        { "text_de": "„What work can robots do?“ (30. Sept.) – welche Arbeit Roboter übernehmen können", "quelle": "https://www.anthropic.com/research" },
+        { "text_de": "„Project Swap“ (24. Sept.) – was passiert, wenn Agenten für uns handeln und tauschen", "quelle": "https://www.anthropic.com/research" },
+        { "text_de": "„What do you want from AI?“ (29. Sept., Societal Impacts) – was Menschen sich von KI wünschen", "quelle": "https://www.anthropic.com/research" }
       ],
       "quelle": "https://www.anthropic.com/institute/econ-scenarios"
     }
