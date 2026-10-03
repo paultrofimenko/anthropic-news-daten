@@ -1,7 +1,7 @@
 {
  "version": 1,
- "erzeugt": "2026-10-03T14:20:05.517Z",
- "anzahl": 10,
+ "erzeugt": "2026-10-03T23:47:39.688Z",
+ "anzahl": 11,
  "beitraege": [
   {
    "id": "claude-code-2-1-288",
@@ -12,6 +12,19 @@
    "kurz_de": "Ein mit Strg+C gelöschter Prompt lässt sich per Pfeil hoch zurückholen. /code-review bekommt --max-findings, dazu viele Korrekturen bei Resume, Plugins und Berechtigungen.",
    "briefing_de": "Neu in Fassung 2.1.288:\n- Ein mit Strg+C geleerter Prompt kommt mit Pfeil hoch zurück, samt eingefügtem Text und Bildern.\n- /code-review kennt --max-findings <n>|all; die Wahl gilt, bis du --max-findings default angibst.\n- Neu für Mods: $.ui.selection() liefert den zuletzt markierten Text im Vollbildmodus.\n- Agenten-Ansicht: Strg+F sucht Sitzungen nach Namen, Alt+↑/↓ springt zwischen Gruppen (in keybindings.json änderbar).\n- Viele Fixes, u. a. zu --resume, API-Timeouts mitten in der Antwort, Plugins, LSP-Aufrufen und Sicherheitsprüfungen (gefährliches rm in bash -c, übersprungene Hooks).",
    "arbeitsweise_de": "Wer Gateways ohne Unterstützung für strukturierte Ausgaben nutzt, kann diese jetzt mit CLAUDE_CODE_DISABLE_STRUCTURED_OUTPUTS abschalten. Hooks für PreToolUse und PermissionRequest blockieren den Aufruf nun, wenn das Matching scheitert.",
+   "bereich": "claude-code",
+   "datum": "2026-10-03",
+   "wichtig": false
+  },
+  {
+   "id": "claude-code-2-1-289",
+   "quelle": "code-changelog",
+   "url": "https://code.claude.com/docs/en/changelog",
+   "titel_original": "Claude Code 2.1.289",
+   "titel_de": "Claude Code 2.1.289: Sicherheitsfixes und Mod-Korrekturen",
+   "kurz_de": "Mehrere Korrekturen bei Deny- und Ask-Regeln für Bash und Read, dazu viele Fixes für Plugins und Mods. Neu: agent.spawn für Teammates.",
+   "briefing_de": "Neu in Fassung 2.1.289:\n- Deny- und Ask-Regeln greifen jetzt auch bei verschachtelten Teilen zusammengesetzter Shell-Befehle, bei Variablenpräfix vor dem Befehl (z. B. TZ=\"$HOME\" rm -rf build) und bei Read über Symlinks.\n- Hinzugefügt: agent.spawn für Teammates, eine Agent-ID über alle Plugin-Hook-Events sowie Zustände „idle“ und „waiting“ in $.agent.list().\n- Viele Fixes für Plugins und Mods: Anzeige veralteter Plugin-Kopien, Mods laden nach einem Upgrade in der ersten Sitzung, Panes und Bänder zeichnen robuster, Fehler bleiben auf die betroffene Komponente begrenzt.\n- Das Einfrieren des Terminals bei kurzen Codeblöcken mit vielen ungeschlossenen <script>-Tags wurde behoben, ebenso bei veröffentlichten Artifact-Seiten im Browser.\n- [VSCode] Eine Änderung an claude auth status aus 2.1.288, die Abmeldungen häufiger machen konnte, wurde zurückgenommen.",
+   "arbeitsweise_de": "Wer Deny- oder Ask-Regeln für Bash oder Read einsetzt, profitiert vom Update: Mehrere Fälle, in denen Regeln umgangen werden konnten, sind geschlossen.",
    "bereich": "claude-code",
    "datum": "2026-10-03",
    "wichtig": false
