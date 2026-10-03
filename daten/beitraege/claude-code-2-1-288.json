@@ -1,0 +1,13 @@
+{
+  "id": "claude-code-2-1-288",
+  "quelle": "code-changelog",
+  "url": "https://code.claude.com/docs/en/changelog",
+  "titel_original": "Claude Code 2.1.288",
+  "titel_de": "Claude Code 2.1.288: Prompt-Wiederherstellung und viele Fixes",
+  "kurz_de": "Ctrl+C-Prompt per Pfeil-hoch zurückholen, /code-review mit --max-findings, neue Mod-Funktion $.ui.selection() und viele Korrekturen bei Resume, Plugins und Berechtigungen.",
+  "briefing_de": "Neue Version mit vielen Verbesserungen\n- Mit Ctrl+C geleerter Prompt: Pfeil-hoch im leeren Prompt holt den Entwurf zurück, inklusive eingefügtem Text und Bildern.\n- /code-review hat `--max-findings <n>|all`; die Wahl bleibt, bis du `--max-findings default` übergibst.\n- Für Mods: `$.ui.selection()` liefert den zuletzt markierten Text im Vollbildmodus.\n- Cloud-Sessions bekommen ein eingebautes `gh api`, wenn das Image keine GitHub CLI hat.\n- Agentenansicht: Ctrl+F sucht Sessions nach Namen, Alt+↑/↓ springt zwischen Gruppen.\n- Viele Fixes: `--resume` (verlorene Dateien, fehlende letzte Antwort), Auto-Compact bei „Prompt is too long“, Plugin-Platzhalter in LSP-Servern, Berechtigungsprüfung für `rm` in `bash -c` und PreToolUse-Hooks.",
+  "arbeitsweise_de": "Wer Plugins mit LSP-Servern baut: `${user_config.*}` und `${CLAUDE_PLUGIN_ROOT}` werden in `initializationOptions` und `settings` jetzt ersetzt. Hooks (PreToolUse, PermissionRequest) blockieren den Aufruf nun, wenn das Matching fehlschlägt oder die Eingabe nicht serialisierbar ist.",
+  "bereich": "claude-code",
+  "datum": "2026-10-03",
+  "wichtig": false
+}
