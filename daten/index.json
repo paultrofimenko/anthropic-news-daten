@@ -1,8 +1,21 @@
 {
  "version": 1,
- "erzeugt": "2026-10-03T23:47:39.688Z",
- "anzahl": 11,
+ "erzeugt": "2026-10-05T22:03:02.986Z",
+ "anzahl": 13,
  "beitraege": [
+  {
+   "id": "claude-code-hipaa-einrichtung",
+   "quelle": "code-doku",
+   "url": "https://code.claude.com/docs/en/hipaa-setup",
+   "titel_original": "Set up Claude Code (local mode) for a HIPAA-ready organization",
+   "titel_de": "Neue Doku: Claude Code für HIPAA-Organisationen einrichten",
+   "kurz_de": "Neue Doku-Seite für Administratoren: Wie Rechner für Claude Code (local mode) unter der HIPAA-Konfiguration vorbereitet werden – Versionen, Netzwerk, Managed Settings, lokale Daten.",
+   "briefing_de": "Die HIPAA-Konfiguration ist eine Organisationseinstellung für Claude-Enterprise-Pläne mit Business Associate Agreement (BAA).\n- Voraussetzung: Claude Code ab v2.1.285 und Claude Desktop ab v2.19675.0; ältere Versionen werden abgewiesen.\n- Sie greift nur bei Anmeldung mit Enterprise-Konto und direkter Verbindung zur Claude API, nicht bei Bedrock, Gateways oder eigener ANTHROPIC_BASE_URL.\n- Beispiel für Managed Settings: forceLoginMethod, forceLoginOrgUUID, allowedProviders und cleanupPeriodDays.\n- Mit aktiver Konfiguration ist z. B. das WebFetch-Tool nicht verfügbar; die Code-Tab in Claude Desktop ist zunächst aus, bis ein Owner sie wieder einschaltet.",
+   "arbeitsweise_de": "Nur relevant für Organisationen mit BAA: Vor dem Anwenden der Konfiguration Versionen aktualisieren, api.anthropic.com im Proxy freigeben und Managed Settings ausrollen.",
+   "bereich": "unternehmen",
+   "datum": "2026-10-05",
+   "wichtig": false
+  },
   {
    "id": "claude-code-2-1-288",
    "quelle": "code-changelog",
@@ -79,6 +92,19 @@
    "briefing_de": "- Statt Claude wie einen menschlichen Forscher zu führen, suchte Schwartz „Claude-förmige“ Probleme: Fragen, die eine bekannte Methode aus einem anderen Fach sofort lösen würde.\n- Werkzeug dafür ist „BootLoops“, eine Sammlung von Programmen und Abläufen rund um Claude Code.\n- Ergebnis: 36 Manuskripte in 18 Fächern mit 19 Mitautoren in drei Monaten, etwa zu Ökologie, Populationsgenetik, Sprachwissenschaft und Kosmologie.\n- Fallen laut Schwartz: Claude erklärt zu früh den Sieg, schätzt Zeiten falsch ein und rechnet lieber tagelang, als erst ein besseres Werkzeug zu bauen.",
    "arbeitsweise_de": "Für lange Claude-Code-Läufe: klare, strenge Kriterien für „fertig“ vorgeben, Ergebnisse selbst ansehen (Diagramme, Zahlen) statt Zusammenfassungen zu glauben, und Claude ausdrücklich bitten, erst ein Werkzeug zu bauen, statt sich durchzurechnen.",
    "bereich": "forschung",
+   "datum": "2026-10-01",
+   "wichtig": false
+  },
+  {
+   "id": "models-api-line-feld",
+   "quelle": "platform-release-notes",
+   "url": "https://platform.claude.com/docs/en/release-notes/overview",
+   "titel_original": "October 1, 2026",
+   "titel_de": "Models API liefert jetzt das Feld „line“",
+   "kurz_de": "GET /v1/models und GET /v1/models/{model_id} geben jetzt das Feld line zurück, die Modelllinie eines Modells. So lassen sich Modelle gruppieren, ohne IDs zu zerlegen.",
+   "briefing_de": "- Neues Feld line in den Antworten von GET /v1/models und GET /v1/models/{model_id}.\n- Claude Opus 4.5 und Claude Opus 4.6 melden beide opus.\n- Für ein Modell ohne Linie ist line null.\n- Laut Modellübersicht kann Anthropic weitere Linien hinzufügen; die Werte sind keine feste Menge.",
+   "arbeitsweise_de": "Wer Modelle in einer Auswahl gruppiert, kann line lesen, statt die Gruppe aus der Modell-ID abzuleiten. Mit null und neuen Werten sollte der Code rechnen.",
+   "bereich": "api",
    "datum": "2026-10-01",
    "wichtig": false
   },
