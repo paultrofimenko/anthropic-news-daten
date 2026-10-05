@@ -2348,6 +2348,7 @@
    "code.claude.com/docs/en/goal",
    "code.claude.com/docs/en/google-vertex-ai",
    "code.claude.com/docs/en/headless",
+   "code.claude.com/docs/en/hipaa-setup",
    "code.claude.com/docs/en/hooks",
    "code.claude.com/docs/en/hooks-guide",
    "code.claude.com/docs/en/how-claude-code-works",
@@ -3024,7 +3025,7 @@
   "hash": "75bf7786c340ec3e"
  },
  "modelle": {
-  "hash": "5cbffa60fbfccd43"
+  "hash": "392583a71b66ad05"
  },
  "platform-release-notes": {
   "schluessel": [
@@ -3173,9 +3174,13 @@
    "June 27, 2024",
    "June 20, 2024",
    "May 30, 2024",
-   "May 10, 2024"
+   "May 10, 2024",
+   "October 1, 2026"
   ],
   "zeilen": {
+   "October 1, 2026": [
+    "323d103291"
+   ],
    "September 30, 2026": [
     "8936617436"
    ],
@@ -3212,10 +3217,6 @@
    ],
    "September 9, 2026": [
     "2b39e36caa"
-   ],
-   "September 3, 2026": [
-    "be88b932bc",
-    "5fb679cb97"
    ]
   },
   "zeilenVersion": 2
