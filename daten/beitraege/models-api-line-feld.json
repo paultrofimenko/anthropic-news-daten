@@ -1,0 +1,13 @@
+{
+  "id": "models-api-line-feld",
+  "quelle": "platform-release-notes",
+  "url": "https://platform.claude.com/docs/en/release-notes/overview",
+  "titel_original": "October 1, 2026",
+  "titel_de": "Models API liefert jetzt das Feld „line“",
+  "kurz_de": "GET /v1/models und GET /v1/models/{model_id} geben jetzt das Feld line zurück, die Modelllinie eines Modells. So lassen sich Modelle gruppieren, ohne IDs zu zerlegen.",
+  "briefing_de": "- Neues Feld line in den Antworten von GET /v1/models und GET /v1/models/{model_id}.\n- Claude Opus 4.5 und Claude Opus 4.6 melden beide opus.\n- Für ein Modell ohne Linie ist line null.\n- Laut Modellübersicht kann Anthropic weitere Linien hinzufügen; die Werte sind keine feste Menge.",
+  "arbeitsweise_de": "Wer Modelle in einer Auswahl gruppiert, kann line lesen, statt die Gruppe aus der Modell-ID abzuleiten. Mit null und neuen Werten sollte der Code rechnen.",
+  "bereich": "api",
+  "datum": "2026-10-01",
+  "wichtig": false
+}

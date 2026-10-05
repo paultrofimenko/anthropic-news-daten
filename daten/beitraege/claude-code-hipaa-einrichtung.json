@@ -1,0 +1,13 @@
+{
+  "id": "claude-code-hipaa-einrichtung",
+  "quelle": "code-doku",
+  "url": "https://code.claude.com/docs/en/hipaa-setup",
+  "titel_original": "Set up Claude Code (local mode) for a HIPAA-ready organization",
+  "titel_de": "Neue Doku: Claude Code für HIPAA-Organisationen einrichten",
+  "kurz_de": "Neue Doku-Seite für Administratoren: Wie Rechner für Claude Code (local mode) unter der HIPAA-Konfiguration vorbereitet werden – Versionen, Netzwerk, Managed Settings, lokale Daten.",
+  "briefing_de": "Die HIPAA-Konfiguration ist eine Organisationseinstellung für Claude-Enterprise-Pläne mit Business Associate Agreement (BAA).\n- Voraussetzung: Claude Code ab v2.1.285 und Claude Desktop ab v2.19675.0; ältere Versionen werden abgewiesen.\n- Sie greift nur bei Anmeldung mit Enterprise-Konto und direkter Verbindung zur Claude API, nicht bei Bedrock, Gateways oder eigener ANTHROPIC_BASE_URL.\n- Beispiel für Managed Settings: forceLoginMethod, forceLoginOrgUUID, allowedProviders und cleanupPeriodDays.\n- Mit aktiver Konfiguration ist z. B. das WebFetch-Tool nicht verfügbar; die Code-Tab in Claude Desktop ist zunächst aus, bis ein Owner sie wieder einschaltet.",
+  "arbeitsweise_de": "Nur relevant für Organisationen mit BAA: Vor dem Anwenden der Konfiguration Versionen aktualisieren, api.anthropic.com im Proxy freigeben und Managed Settings ausrollen.",
+  "bereich": "unternehmen",
+  "datum": "2026-10-05",
+  "wichtig": false
+}
