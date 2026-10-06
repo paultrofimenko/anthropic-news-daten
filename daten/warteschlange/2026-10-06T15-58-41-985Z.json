@@ -1,0 +1,23 @@
+{
+ "zeit": "2026-10-06T15:58:41.985Z",
+ "neu": [
+  {
+   "quelle": "claude-dev-rss",
+   "name": "claude.dev",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://claude.dev/blog/claude-code-in-the-cloud/",
+   "titel": "Claude Code in the cloud: a field guide to cloud sessions",
+   "datum": "Tue, 06 Oct 2026 12:00:00 GMT"
+  },
+  {
+   "quelle": "anthropic",
+   "name": "anthropic.com",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://www.anthropic.com/legal/startup-program-addendum",
+   "titel": null,
+   "datum": "2026-10-06T14:08:18.000Z"
+  }
+ ]
+}
