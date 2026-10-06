@@ -1,0 +1,13 @@
+{
+  "id": "claude-code-in-the-cloud",
+  "quelle": "claude-dev-rss",
+  "url": "https://claude.dev/blog/claude-code-in-the-cloud/",
+  "titel_original": "Claude Code in the cloud: a field guide to cloud sessions",
+  "titel_de": "Feldführer zu Claude-Code-Cloud-Sitzungen",
+  "kurz_de": "Ein Leitfaden zu Cloud-Sitzungen: jede Aufgabe auf einer frischen VM mit eigenem Branch, parallel nutzbar, in Pro, Max, Team und Enterprise enthalten. Dazu Einrichtung und Tipps.",
+  "briefing_de": "Cloud-Sitzungen laufen auf eigenen virtuellen Maschinen statt lokal:\n- Jede Aufgabe bekommt eine frische VM mit geklontem Repo auf einem neuen Branch; parallele Aufgaben stören sich nicht. Enthalten in Pro, Max, Team und Enterprise, ohne separate Compute-Kosten.\n- Genannte Abläufe: Backlog parallel abarbeiten, Fixes durch viele Testläufe belegen, lokal planen und in der Cloud bauen (`claude --teleport` zurück), CI-Fehler automatisch beheben, Routinen per Zeitplan oder GitHub-Event.\n- Für private Repos: mit GitHub anmelden und die Claude GitHub App installieren. Setup-Skript und SessionStart-Hooks richten die Umgebung ein.\n- Laut Artikel: ca. 4 vCPUs, 16 GB RAM, 30 GB Disk; parallele Sitzungen verbrauchen das Planlimit entsprechend schneller.\n- Einmaliger Bonus: 100 $ (Pro) bzw. 250 $ (Max), gültig bis 4. November 2026, einlösbar unter claude.ai/code/claim-credit.",
+  "arbeitsweise_de": "Für unabhängige Aufgaben lohnt eine Sitzung je Aufgabe, mit einem benannten Beweisbefehl (z. B. Testlauf). Vor `claude --cloud` pushen, weil die VM von GitHub klont.",
+  "bereich": "claude-code",
+  "datum": "2026-10-06",
+  "wichtig": false
+}

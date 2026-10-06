@@ -1,0 +1,12 @@
+{
+  "id": "cyber-verification-program",
+  "quelle": "anthropic",
+  "url": "https://www.anthropic.com/news/cyber-verification-program",
+  "titel_original": "Expanding the Cyber Verification Program",
+  "titel_de": "Cyber Verification Program wächst auf drei Zugangsstufen",
+  "kurz_de": "Anthropic erweitert das Cyber Verification Program um drei Stufen für Sicherheitsfachleute: Defense, Red Team und Specialized Access. Project Glasswing geht darin auf.",
+  "briefing_de": "Das erweiterte Programm führt Project Glasswing und das bisherige CVP zusammen:\n- Defense Access: Sicherheitsteams für defensive Arbeit wie Incident Response und Malware-Analyse; Prüfung binnen Tagen.\n- Red Team Access: autorisierte Penetrationstests und Red Teaming, Blockaden schädlicher Aktionen in Echtzeit bleiben; Prüfung dauert Wochen.\n- Specialized Access: verifizierte Organisationen, die sicherheitskritische Systeme testen (z. B. Flugsystem-Betriebssysteme, Stromnetze); erfordert Zusammenarbeit mit der US-Regierung.\n- Alle Stufen: Zugang zu Claude Opus 5.5, Claude Sonnet 5.5 und Claude Mythos 5.1 sowie künftigen Modellen.\n- Zahlen laut Beitrag: 129.000 verifizierte Schwachstellen durch Glasswing-Partner (April–Juli 2026), 5.500 weitere durch Open-Source-Arbeit (April–Oktober 2026).",
+  "bereich": "unternehmen",
+  "datum": "2026-10-06",
+  "wichtig": false
+}

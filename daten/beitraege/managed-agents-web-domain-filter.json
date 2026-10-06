@@ -1,0 +1,13 @@
+{
+  "id": "managed-agents-web-domain-filter",
+  "quelle": "platform-doku",
+  "url": "https://platform.claude.com/docs/en/managed-agents/tools-web-restrictions",
+  "titel_original": "Restrict web search and web fetch domains",
+  "titel_de": "Managed Agents: Domains für Websuche und Web Fetch einschränken",
+  "kurz_de": "Neue Doku-Seite (Beta): Pro Tool lassen sich mit allowed_domains oder blocked_domains die erreichbaren Seiten von web_search und web_fetch festlegen.",
+  "briefing_de": "Neue Doku zu Managed Agents (Beta, `managed-agents-2026-04-01`):\n- Auf den Einträgen `web_search` und `web_fetch` setzt du entweder `allowed_domains` oder `blocked_domains` (nicht beides); 1 bis 64 Domains je Liste.\n- Zusätzlich: `max_content_tokens` für web_fetch und `user_location` für web_search.\n- Umgebungs-Netzwerkeinstellungen und Organisationseinstellungen der Console wirken auf diese Tools nicht.\n- Nicht erlaubte web_fetch-Aufrufe liefern den Fehler `url_not_allowed`.\n- In Multiagent-Sitzungen gelten alle Listen gleichzeitig; ein Roster-Agent kann nur einschränken, nie erweitern.",
+  "arbeitsweise_de": "Wer Managed Agents mit Websuche betreibt, steuert den Zugriff über die Listen am jeweiligen Tool, nicht über Umgebungs- oder Organisationseinstellungen.",
+  "bereich": "api",
+  "datum": "2026-10-06",
+  "wichtig": false
+}
