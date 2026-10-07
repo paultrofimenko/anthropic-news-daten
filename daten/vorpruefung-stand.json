@@ -454,9 +454,68 @@
    "2.1.289",
    "2.1.291",
    "2.1.290",
-   "2.1.292"
+   "2.1.292",
+   "2.1.293"
   ],
   "zeilen": {
+   "2.1.293": [
+    "b98e6b1945",
+    "11a58d06dd",
+    "64477dc9fe",
+    "ec2321f004",
+    "7877251994",
+    "6f3fc36bbd",
+    "4459f75d9e",
+    "a0b0785dff",
+    "277c605b5a",
+    "c7f968e305",
+    "3767608be8",
+    "b5377790db",
+    "bf70a2ade3",
+    "6c51577e05",
+    "267b702a96",
+    "a612522b56",
+    "e4689925e1",
+    "66ba1290ba",
+    "09b473e9a4",
+    "c8d71734f3",
+    "219c021f11",
+    "4949454cee",
+    "30c48da243",
+    "f128e0388f",
+    "d6b975e3c9",
+    "b5826f7097",
+    "24dd55c5a3",
+    "fd9aa32f67",
+    "9150f2f838",
+    "7c2deb2c58",
+    "36e03e98d2",
+    "e2c038a927",
+    "5f6627c002",
+    "8f1d3ac144",
+    "2d19c78705",
+    "370666e479",
+    "c44f116810",
+    "8e11cb7db2",
+    "84e221c087",
+    "dce310c63a",
+    "6bad9ae859",
+    "1699cbad37",
+    "23ecf1592f",
+    "3d911e4efe",
+    "013b24be06",
+    "3b3fc4591b",
+    "b5ab21279d",
+    "6bd6691c7c",
+    "1b44160eac",
+    "3a1b73ea57",
+    "dd55af2b76",
+    "fe72890b1f",
+    "fe9e97bd13",
+    "b5bfab2e94",
+    "0a0f8520f6",
+    "600529bddb"
+   ],
    "2.1.292": [
     "336927c7dd",
     "0e1c696682",
@@ -1304,102 +1363,6 @@
     "64ff810bb5",
     "8955c99bcd",
     "70c407775f"
-   ],
-   "2.1.283": [
-    "fe22ac2a38",
-    "ede965f774",
-    "83c8ea23ae",
-    "f4190dd6c4",
-    "2bc691ab6f",
-    "07f580d7c7",
-    "02f6405e0d",
-    "31c04a29b9",
-    "6117084a74",
-    "bdfe203d69",
-    "7b18bf36be",
-    "e11c23f9b0",
-    "872e69d44c",
-    "792e23247d",
-    "b7817bcfb1",
-    "3e5fe1f15a",
-    "e05b331c17",
-    "71d8bcf352",
-    "3ecae8a898",
-    "c454fa0732",
-    "22f1cfac82",
-    "9ebed161dc",
-    "e335f6cdb6",
-    "872b1e9f43",
-    "95496a76fa",
-    "c1e8b65239",
-    "6c8f6c6b90",
-    "bf48d52998",
-    "261cbed7a5",
-    "7c858fa29d",
-    "79f27b7d54",
-    "2c946d7791",
-    "6e6e3ef272",
-    "11d4f3d3ae",
-    "acd2fff6e6",
-    "bdd0f282d4",
-    "29bcb61cdf",
-    "aaf8131257",
-    "e81ea94ac4",
-    "58050cd1d7",
-    "7e714da010",
-    "4afd8099c0",
-    "4665f08168",
-    "70e33b2ae3",
-    "9d54107cd9",
-    "270e86c965",
-    "b108c2a4ca",
-    "3d7e709419",
-    "b9cf3f787e",
-    "a1d5fe93be",
-    "4372b950b7",
-    "0b4a5493bf",
-    "e5c0af51b8",
-    "0da3c9d74e",
-    "377890520b",
-    "177a62c734",
-    "5a835c1f89",
-    "a5db9e970c",
-    "18b776fae6",
-    "2d7ea3cc1d",
-    "5040e77201",
-    "b3462d8295",
-    "4b83ce0a53",
-    "95aa68f7e0",
-    "c94a7c7be6",
-    "15c3727c12",
-    "9754bdea20",
-    "52b4ed6f51",
-    "e2c734483c",
-    "630358f138",
-    "ece1795f03",
-    "92a13278d5",
-    "4004f7743a",
-    "f54002ae0d",
-    "9d1e822642",
-    "ce3beb390b",
-    "e517f384f1",
-    "3dccc6c1c8",
-    "38fff9e081",
-    "d86b2a9c71",
-    "06512f19a0",
-    "962c4ddc4e",
-    "e4f8338698",
-    "d670b2ba12",
-    "4c73ccb793",
-    "718ee4141b",
-    "02fea47cb2",
-    "9ac773d099",
-    "9a308e90ec",
-    "f79eb3c038",
-    "f1001f36a9",
-    "bce234516c",
-    "2e2aaf5bf1",
-    "faba6dcdfe"
    ]
   },
   "zeilenVersion": 2
@@ -2399,6 +2362,7 @@
    "anthropic.com/claude-corps/fellow",
    "anthropic.com/claude-corps/host",
    "anthropic.com/claude-fable-and-mythos-5-1",
+   "anthropic.com/claude-haiku-5-5",
    "anthropic.com/claude-opus-5-5",
    "anthropic.com/claude-sonnet-5-5",
    "anthropic.com/claude/fable",
@@ -2937,10 +2901,10 @@
   ]
  },
  "abschaltungen": {
-  "hash": "75bf7786c340ec3e"
+  "hash": "2202b37f2b9e7837"
  },
  "modelle": {
-  "hash": "d44c1ad0b51a5c07"
+  "hash": "124dcca288e32d32"
  },
  "platform-release-notes": {
   "schluessel": [
@@ -3091,9 +3055,27 @@
    "May 30, 2024",
    "May 10, 2024",
    "October 1, 2026",
-   "October 5, 2026"
+   "October 5, 2026",
+   "October 8, 2026",
+   "October 7, 2026",
+   "October 6, 2026"
   ],
   "zeilen": {
+   "October 8, 2026": [
+    "1a7a2858b6"
+   ],
+   "October 7, 2026": [
+    "cdd06ce370",
+    "f65f34f1d6",
+    "cf999caee5",
+    "318b2a7e3e",
+    "446d46691e",
+    "68a7cf61dd",
+    "925700cf5c"
+   ],
+   "October 6, 2026": [
+    "b423810914"
+   ],
    "October 5, 2026": [
     "11c275e142"
    ],
@@ -3103,37 +3085,6 @@
    "September 30, 2026": [
     "8936617436",
     "f7d9fea84b"
-   ],
-   "September 28, 2026": [
-    "141476a2f8",
-    "0b0b7799d3",
-    "0e1008a6f0"
-   ],
-   "September 24, 2026": [
-    "e204337791",
-    "b01c36c8db",
-    "8b0d28b8ca"
-   ],
-   "September 23, 2026": [
-    "3075811c09"
-   ],
-   "September 22, 2026": [
-    "370d7b9026",
-    "b5ac73c54e",
-    "7defe1ec19",
-    "0516550475"
-   ],
-   "September 18, 2026": [
-    "c4b2f63067",
-    "205dca961b"
-   ],
-   "September 14, 2026": [
-    "3aca66872b",
-    "6844206a9c"
-   ],
-   "September 10, 2026": [
-    "82a5cb433f",
-    "267b38b10f"
    ]
   },
   "zeilenVersion": 2
