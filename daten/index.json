@@ -1,8 +1,96 @@
 {
  "version": 1,
- "erzeugt": "2026-10-05T22:03:02.986Z",
- "anzahl": 13,
+ "erzeugt": "2026-10-07T06:04:51.425Z",
+ "anzahl": 22,
  "beitraege": [
+  {
+   "id": "claude-code-2-1-290",
+   "quelle": "code-changelog",
+   "url": "https://code.claude.com/docs/en/changelog",
+   "titel_original": "Claude Code 2.1.290",
+   "titel_de": "Claude Code 2.1.290: Mod-Hooks, claude attach und viele Fixes",
+   "kurz_de": "Neue Felder für Mod- und Plugin-Hooks, claude attach/logs mit Teil des Sitzungsnamens und /claude-api managed-agents-onboard. Dazu viele Fixes, auch bei Berechtigungsregeln.",
+   "briefing_de": "Neu in Fassung 2.1.290:\n- Hooks: serverToolUses im Ergebnis von turn.step, agentId im Event tool.check, ceiling in der Frage von tool.check sowie Typen ThemeKey und Color.\n- claude attach <name> und claude logs <name> akzeptieren einen Teil des Sitzungsnamens statt der ID.\n- /claude-api managed-agents-onboard richtet das Managed-Agents-Muster einer Seite ein oder baut ein Console-Quickstart-Template (z. B. deep-researcher) mit der ant CLI.\n- Neue Warnungen bei verwalteten Einstellungen (Link auf Datei außerhalb des Ordners; ignorierte Sandbox-Pfade und -Domains).\n- Fixes u. a. für WebFetch (meldet jetzt, wie viel ungelesen blieb, und nimmt offset), geplante Aufgaben (/loop) nach Resume und Kompaktierung sowie mehrere Lücken bei Deny- und Ask-Regeln.",
+   "arbeitsweise_de": "Wer Deny- oder Ask-Regeln, Plugins oder geplante Aufgaben einsetzt, profitiert von den Korrekturen. Wer Mods schreibt, findet neue Hook-Felder.",
+   "bereich": "claude-code",
+   "datum": "2026-10-06",
+   "wichtig": false
+  },
+  {
+   "id": "claude-code-2-1-291",
+   "quelle": "code-changelog",
+   "url": "https://code.claude.com/docs/en/changelog",
+   "titel_original": "Claude Code 2.1.291",
+   "titel_de": "Claude Code 2.1.291: Zwei Regressions-Fixes",
+   "kurz_de": "Zwei Korrekturen: In Cloud-Sessions gingen Antworten auf Rückfragen zu Berechtigungen verloren, und beim Beenden konnten die letzten Nachrichten einer Sitzung fehlen.",
+   "briefing_de": "Neu in Fassung 2.1.291:\n- Behoben: Regression aus 2.1.290, bei der Cloud-Sessions Antworten auf Berechtigungsabfragen verwerfen konnten.\n- Behoben: Regression aus 2.1.288, bei der beim Beenden die letzten Nachrichten einer Sitzung verloren gehen konnten.",
+   "arbeitsweise_de": "Wer Cloud-Sessions nutzt oder Sitzungen häufig beendet und fortsetzt, sollte auf 2.1.291 aktualisieren.",
+   "bereich": "claude-code",
+   "datum": "2026-10-06",
+   "wichtig": false
+  },
+  {
+   "id": "claude-code-2-1-292",
+   "quelle": "code-changelog",
+   "url": "https://code.claude.com/docs/en/changelog",
+   "titel_original": "Claude Code 2.1.292",
+   "titel_de": "Claude Code 2.1.292: effort für Subagents und Plugin-Installation per Marketplace",
+   "kurz_de": "Der Agent-Tool bekommt einen effort-Parameter für Subagents, claude plugin install kennt --marketplace. Dazu ein Sicherheits-Fix für Dateizugriffe über Netzwerkpfade (UNC).",
+   "briefing_de": "Neu in Fassung 2.1.292:\n- Der Agent-Tool hat einen effort-Parameter: Claude startet einen Subagent mit dem gewünschten Effort-Level.\n- claude plugin install --marketplace <source> fügt den Marketplace bei Bedarf hinzu (mit denselben Richtlinienprüfungen) und installiert dann das Plugin.\n- Neue Umgebungsvariable CLAUDE_CODE_OVERLOADED_RETRY_BASE_DELAY_MS für eine längere Basis-Wartezeit bei 529-Wiederholungen.\n- Für Mods: Event prompt.autocomplete, Prompt Caching in $.model.complete und Workflow-Agents im Hook agent.spawn.\n- Sicherheit: PreToolUse-Hook-Freigaben und Auto-Modus umgingen die Berechtigungsabfrage für Dateilesen von Netzwerkpfaden (UNC); behoben. Außerdem viele weitere Fixes.",
+   "arbeitsweise_de": "Wer Subagents nutzt, kann deren Effort nun gezielt wählen. Wer in Netzwerkumgebungen (UNC-Pfade) arbeitet, sollte aktualisieren.",
+   "bereich": "claude-code",
+   "datum": "2026-10-06",
+   "wichtig": false
+  },
+  {
+   "id": "claude-code-in-der-cloud-leitfaden",
+   "quelle": "claude-dev-rss",
+   "url": "https://claude.dev/blog/claude-code-in-the-cloud/",
+   "titel_original": "Claude Code in the cloud: a field guide to cloud sessions",
+   "titel_de": "Leitfaden: Claude Code in Cloud-Sessions",
+   "kurz_de": "Ein Leitfaden auf claude.dev erklärt Cloud-Sessions: eigene VM pro Aufgabe, parallele Sessions, GitHub-Anbindung, Setup-Skripte und sieben typische Einsatzfälle.",
+   "briefing_de": "Der Beitrag von Addy Osmani (6. Oktober 2026) beschreibt Cloud-Sessions:\n- Jede Aufgabe läuft in einer eigenen VM mit frischem Klon auf neuem Branch; die Sitzung läuft weiter, wenn der Laptop schläft. GitHub-Tokens gelangen nicht in die VM.\n- Sieben Einsatzfälle, u. a. Backlog parallel abarbeiten, Fixes durch wiederholte Testläufe belegen, CI-Fehler automatisch beheben und geplante Routinen.\n- Für private Repos braucht es neben dem GitHub-Login die Claude GitHub App.\n- Setup-Skripte für Werkzeuge auf Maschinenebene, SessionStart-Hooks für Projekt-Setup, Befehle in der CLAUDE.md des Repos.\n- Enthalten in Pro, Max, Team und Enterprise; die Nutzung zählt auf dieselben Limits wie lokales Claude Code.",
+   "bereich": "claude-code",
+   "datum": "2026-10-06",
+   "wichtig": false
+  },
+  {
+   "id": "cyber-verification-program",
+   "quelle": "anthropic",
+   "url": "https://www.anthropic.com/news/cyber-verification-program",
+   "titel_original": "Expanding the Cyber Verification Program",
+   "titel_de": "Cyber Verification Program wird erweitert",
+   "kurz_de": "Das Cyber Verification Program bietet jetzt drei Zugangsstufen für Sicherheitsfachleute: Defense, Red Team und Specialized Access, jeweils mit Claude Opus 5.5, Sonnet 5.5 und Mythos 5.1.",
+   "briefing_de": "Anthropic führt frühere Initiativen im erweiterten Cyber Verification Program zusammen:\n- Defense Access: für defensive Arbeit wie Incident Response, Malware-Analyse und Validierung von Schwachstellen; Antwort laut Beitrag innerhalb von Tagen.\n- Red Team Access: zusätzlich autorisierte Penetrationstests und Red-Teaming; Prüfung dauert mehrere Wochen, derzeit nur für Organisationen.\n- Specialized Access: die wenigsten Cyber-Blockaden, z. B. für kritische Systeme; Prüfung gemeinsam mit der US-Regierung.\n- Alle Stufen umfassen Claude Opus 5.5, Claude Sonnet 5.5, Claude Mythos 5.1 und künftige Modelle.\n- Bewerbung unter portal.anthropic.com/programs/cvp.",
+   "bereich": "produkte",
+   "datum": "2026-10-06",
+   "wichtig": false
+  },
+  {
+   "id": "managed-agents-web-domains",
+   "quelle": "platform-doku",
+   "url": "https://platform.claude.com/docs/en/managed-agents/tools-web-restrictions",
+   "titel_original": "Restrict web search and web fetch domains",
+   "titel_de": "Managed Agents: Domains für Websuche und Web-Fetch einschränken",
+   "kurz_de": "Neue Doku-Seite: Bei Managed Agents lassen sich die Domains für web_search und web_fetch per allowed_domains oder blocked_domains je Tool begrenzen (Beta).",
+   "briefing_de": "Die neue Seite zu Managed Agents (Beta, Header managed-agents-2026-04-01) beschreibt:\n- Pro Tool-Eintrag gilt entweder allowed_domains oder blocked_domains, nicht beides; je 1 bis 64 Domains.\n- Eine Domain deckt auch ihre Subdomains ab; Schema, Port, Wildcard und IP-Adressen sind nicht erlaubt.\n- Nicht erlaubte web_fetch-Aufrufe liefern den Fehler url_not_allowed.\n- Zusätzlich: max_content_tokens für web_fetch und user_location für web_search.\n- In Multiagent-Sessions gelten alle Listen gleichzeitig; ein Roster-Agent kann nur einschränken, nicht erweitern.\n- Netzwerk-Einstellungen der Umgebung und Organisationseinstellungen wirken auf diese Tools nicht.",
+   "arbeitsweise_de": "Wer Managed Agents mit Websuche baut, kann den Zugriff damit pro Agent und Tool begrenzen.",
+   "bereich": "api",
+   "datum": "2026-10-06",
+   "wichtig": false
+  },
+  {
+   "id": "startup-programm-zusatzbedingungen",
+   "quelle": "anthropic",
+   "url": "https://www.anthropic.com/legal/startup-program-addendum",
+   "titel_original": "Claude Startups Additional Benefits Addendum",
+   "titel_de": "Startup-Programm: Zusatzbedingungen für weitere Vorteile",
+   "kurz_de": "Anthropic veröffentlicht Zusatzbedingungen zum Startup-Programm: Rabatte von Drittanbietern, Applied-AI-Sprechstunden und Promotional Credits. Gültig ab 6. Oktober 2026.",
+   "briefing_de": "Der Zusatz zu den Startup-Programm-Bedingungen (gültig ab 6. Oktober 2026) regelt:\n- Claude Startup Stack: Rabatte von Drittanbietern werden von Anthropic nur gehostet; es gelten die Bedingungen des jeweiligen Anbieters.\n- Applied-AI-Sprechstunden: optionale Beratung, z. B. zu Prompt-Optimierung und Architektur-Reviews.\n- Promotional Credits unterliegen separaten Bedingungen.\n- Vorteile gibt es nur für Mitglieder in gutem Stand und werden ohne Gewähr bereitgestellt.",
+   "bereich": "richtlinien",
+   "datum": "2026-10-06",
+   "wichtig": false
+  },
   {
    "id": "claude-code-hipaa-einrichtung",
    "quelle": "code-doku",
@@ -13,6 +101,19 @@
    "briefing_de": "Die HIPAA-Konfiguration ist eine Organisationseinstellung für Claude-Enterprise-Pläne mit Business Associate Agreement (BAA).\n- Voraussetzung: Claude Code ab v2.1.285 und Claude Desktop ab v2.19675.0; ältere Versionen werden abgewiesen.\n- Sie greift nur bei Anmeldung mit Enterprise-Konto und direkter Verbindung zur Claude API, nicht bei Bedrock, Gateways oder eigener ANTHROPIC_BASE_URL.\n- Beispiel für Managed Settings: forceLoginMethod, forceLoginOrgUUID, allowedProviders und cleanupPeriodDays.\n- Mit aktiver Konfiguration ist z. B. das WebFetch-Tool nicht verfügbar; die Code-Tab in Claude Desktop ist zunächst aus, bis ein Owner sie wieder einschaltet.",
    "arbeitsweise_de": "Nur relevant für Organisationen mit BAA: Vor dem Anwenden der Konfiguration Versionen aktualisieren, api.anthropic.com im Proxy freigeben und Managed Settings ausrollen.",
    "bereich": "unternehmen",
+   "datum": "2026-10-05",
+   "wichtig": false
+  },
+  {
+   "id": "models-api-thinking-disabled",
+   "quelle": "platform-release-notes",
+   "url": "https://platform.claude.com/docs/en/release-notes/overview",
+   "titel_original": "October 5, 2026",
+   "titel_de": "Models API meldet, ob ein Modell thinking: disabled akzeptiert",
+   "kurz_de": "GET /v1/models und GET /v1/models/{model_id} zeigen jetzt in capabilities.thinking.types.disabled, ob ein Modell thinking: {type: \"disabled\"} akzeptiert.",
+   "briefing_de": "- Neues Feld capabilities.thinking.types.disabled in den Antworten der Models API.\n- supported ist false, wenn das Modell \"disabled\" mit einem 400-Fehler ablehnt, und true bei Modellen ohne Thinking-Unterstützung.\n- Auch bei true kann die API die Anfrage aus anderem Grund ablehnen, etwa wegen eines Effort-Levels, das ohne Thinking nicht erlaubt ist.",
+   "arbeitsweise_de": "Wer Thinking per Code abschaltet, kann vorher das Feld abfragen, statt auf einen 400-Fehler zu laufen.",
+   "bereich": "api",
    "datum": "2026-10-05",
    "wichtig": false
   },
@@ -106,6 +207,19 @@
    "arbeitsweise_de": "Wer Modelle in einer Auswahl gruppiert, kann line lesen, statt die Gruppe aus der Modell-ID abzuleiten. Mit null und neuen Werten sollte der Code rechnen.",
    "bereich": "api",
    "datum": "2026-10-01",
+   "wichtig": false
+  },
+  {
+   "id": "admin-api-ga",
+   "quelle": "platform-release-notes",
+   "url": "https://platform.claude.com/docs/en/release-notes/overview",
+   "titel_original": "September 30, 2026",
+   "titel_de": "Admin API-Methoden verlassen die Beta",
+   "kurz_de": "Die Admin-API-Methoden für Organisation, Mitglieder, Workspaces, API-Keys und mehr sind aus der Beta: Aufruf über client.organization und ant organization.",
+   "briefing_de": "Ab Python SDK 1.10.0, TypeScript SDK 0.130.0, C# SDK 12.52.0, Go SDK 1.77.0, Java SDK 2.67.0, PHP SDK 0.53.0, Ruby SDK 1.75.0 und ant CLI 1.37.0:\n- Admin-API-Methoden für Organisationsinfo, Mitglieder, Einladungen, Workspaces, API-Keys, Rate Limits, Service Accounts, Workload Identity Federation, kundenverwaltete Schlüssel und Compliance-Einstellungen sind nicht mehr Beta.\n- Aufruf unter client.organization und ant organization.\n- client.beta.organization und ant beta:organization bleiben erhalten.",
+   "arbeitsweise_de": "Wer die Admin API nutzt, kann auf die Nicht-Beta-Pfade umstellen; die alten bleiben vorerst bestehen.",
+   "bereich": "api",
+   "datum": "2026-09-30",
    "wichtig": false
   },
   {
