@@ -1,8 +1,62 @@
 {
  "version": 1,
- "erzeugt": "2026-10-07T06:04:51.425Z",
- "anzahl": 22,
+ "erzeugt": "2026-10-07T20:39:48.971Z",
+ "anzahl": 27,
  "beitraege": [
+  {
+   "id": "compliance-api-unified-claude",
+   "quelle": "platform-release-notes",
+   "url": "https://platform.claude.com/docs/en/manage-claude/compliance-api",
+   "titel_original": "Compliance API: chats from the unified Claude experience",
+   "titel_de": "Compliance API liefert auch Chats der vereinheitlichten Claude-Oberfläche",
+   "kurz_de": "Die Chat-Endpunkte der Compliance API geben nun auch Chats aus dem vereinheitlichten Claude-Erlebnis zurück (Beta, Claude Enterprise).",
+   "briefing_de": "- Die Chat-Endpunkte der Compliance API liefern jetzt auch Chats der vereinheitlichten Claude-Oberfläche.\n- Status: Beta für Claude-Enterprise-Organisationen.\n- Es genügt der bestehende Compliance Access Key.",
+   "bereich": "unternehmen",
+   "datum": "2026-10-08",
+   "wichtig": false
+  },
+  {
+   "id": "claude-code-2-1-293",
+   "quelle": "code-changelog",
+   "url": "https://code.claude.com/docs/en/changelog",
+   "titel_original": "Claude Code 2.1.293",
+   "titel_de": "Claude Code 2.1.293: Haiku 5.5 als Standard-Haiku",
+   "kurz_de": "Claude Code kennt Claude Haiku 5.5 (claude-haiku-5-5) als Standard-Haiku in der API. Dazu neue Felder für Subagent-Statuszeile und Mods sowie viele Fixes.",
+   "briefing_de": "Neu in Fassung 2.1.293:\n- Claude Haiku 5.5 (claude-haiku-5-5) ist jetzt das Standard-Haiku auf der Anthropic API: 1M Kontext, 0,10 $ / 0,50 $ je Mio. Token (0,50 $ / 2,50 $ bei Prompts über 100K).\n- subagentStatusLine-Payload enthält agentType, um eigene Subagent-Typen zu unterscheiden.\n- Für Mods: $.tool.register kennt isDeferred; false listet das Tool-Schema gleich im Prompt statt hinter der Tool-Suche.\n- Fixes u. a.: Claude wiederholte nach einer Kontext-Verdichtung teils fertige Arbeit; Speicherleck bei HTTP-MCP-Verbindungen; /model-Effort lief über die Grenzen hinaus.\n- Zurückgenommen: die Änderung der Auto-Modus-Ablehnungsmeldung aus 2.1.281 und der Fix aus 2.1.290 zu schlafenden Cloud-Sessions.",
+   "bereich": "claude-code",
+   "datum": "2026-10-07",
+   "wichtig": false
+  },
+  {
+   "id": "haiku-5-5",
+   "quelle": "anthropic",
+   "url": "https://www.anthropic.com/claude-haiku-5-5",
+   "titel_original": "Claude Haiku 5.5",
+   "titel_de": "Haiku 5.5: kleines Modell mit 1M Kontext und Effort-Einstellung",
+   "kurz_de": "Claude Haiku 5.5 (claude-haiku-5-5) erscheint ab 0,10 $ / 0,50 $ je Mio. Token, mit 1M Kontext und erstmals einstellbarem Effort für ein Haiku-Modell.",
+   "briefing_de": "Haiku 5.5 ist laut Anthropic das günstigste, schnellste und leistungsfähigste kleine Modell bisher.\n- Modell-ID: claude-haiku-5-5, erschienen am 07.10.2026, auf allen Plattformen (u. a. AWS, Google Cloud, Azure).\n- Preis: ab 0,10 $ Input / 0,50 $ Output je Mio. Token (über 100K Prompt-Token 0,50 $ / 2,50 $); Haiku 4.5 kostete 1 $ / 5 $.\n- 1M Kontext, 128K Max Output, adaptives Thinking, Standard-Effort medium; erstes Haiku mit einstellbarem Effort.\n- Neuer Tokenizer: etwas mehr Token pro Aufgabe.\n- Einsatz laut Anthropic: Zusammenfassungen, Compaction, Datenbankabfragen, Klassifikation; auch als Subagent neben Opus 5.5 und Sonnet 5.5.\n- Abschaltung frühestens am 07.10.2027; Haiku 4.5 bleibt bis mindestens 15.10.2026 aktiv.",
+   "arbeitsweise_de": "Wer bisher Haiku 4.5 nutzt, kann auf claude-haiku-5-5 wechseln und den Effort gezielt setzen; wegen des neuen Tokenizers Token-Verbrauch und Kosten neu messen. Es gibt einen Migrationsleitfaden.",
+   "bereich": "modelle",
+   "datum": "2026-10-07",
+   "wichtig": true,
+   "ereignis": {
+    "art": "neu",
+    "titel": "Haiku 5.5 erscheint"
+   }
+  },
+  {
+   "id": "sonnet-5-5-cache-lesepreis",
+   "quelle": "platform-release-notes",
+   "url": "https://platform.claude.com/docs/en/release-notes/overview",
+   "titel_original": "Prompt cache read price cut for Claude Sonnet 5.5",
+   "titel_de": "Sonnet 5.5: Cache-Lesen halbiert sich auf 0,10 $",
+   "kurz_de": "Prompt-Cache-Lesezugriffe bei Sonnet 5.5 kosten nur noch 0,10 $ statt 0,20 $ je Mio. Token. Cache-Schreiben und alle anderen Preise bleiben gleich.",
+   "briefing_de": "- Cache-Lesen bei Claude Sonnet 5.5: 0,10 $ statt 0,20 $ je Mio. Token (0,05-faches statt 0,1-faches des Basis-Inputpreises).\n- Cache-Schreibpreise und alle übrigen Preise bleiben unverändert.",
+   "arbeitsweise_de": "Wer Sonnet 5.5 mit Prompt Caching nutzt, zahlt für wiederholt gelesene Kontexte weniger; nichts am Code ist nötig.",
+   "bereich": "api",
+   "datum": "2026-10-07",
+   "wichtig": true
+  },
   {
    "id": "claude-code-2-1-290",
    "quelle": "code-changelog",
@@ -75,6 +129,19 @@
    "kurz_de": "Neue Doku-Seite: Bei Managed Agents lassen sich die Domains für web_search und web_fetch per allowed_domains oder blocked_domains je Tool begrenzen (Beta).",
    "briefing_de": "Die neue Seite zu Managed Agents (Beta, Header managed-agents-2026-04-01) beschreibt:\n- Pro Tool-Eintrag gilt entweder allowed_domains oder blocked_domains, nicht beides; je 1 bis 64 Domains.\n- Eine Domain deckt auch ihre Subdomains ab; Schema, Port, Wildcard und IP-Adressen sind nicht erlaubt.\n- Nicht erlaubte web_fetch-Aufrufe liefern den Fehler url_not_allowed.\n- Zusätzlich: max_content_tokens für web_fetch und user_location für web_search.\n- In Multiagent-Sessions gelten alle Listen gleichzeitig; ein Roster-Agent kann nur einschränken, nicht erweitern.\n- Netzwerk-Einstellungen der Umgebung und Organisationseinstellungen wirken auf diese Tools nicht.",
    "arbeitsweise_de": "Wer Managed Agents mit Websuche baut, kann den Zugriff damit pro Agent und Tool begrenzen.",
+   "bereich": "api",
+   "datum": "2026-10-06",
+   "wichtig": false
+  },
+  {
+   "id": "models-api-server-tools",
+   "quelle": "platform-release-notes",
+   "url": "https://platform.claude.com/docs/en/api/models/list",
+   "titel_original": "capabilities.server_tools in the Models API",
+   "titel_de": "Models API zeigt, welche Server-Tools ein Modell kann",
+   "kurz_de": "GET /v1/models meldet jetzt je Modell in capabilities.server_tools, ob Websuche und Code-Ausführung unterstützt werden.",
+   "briefing_de": "- Neu: capabilities.server_tools in GET /v1/models und GET /v1/models/{model_id}.\n- Zeigt, ob ein Modell das Web-Search- und das Code-Execution-Tool akzeptiert; für Code-Ausführung capabilities.server_tools.code_execution lesen.\n- Das bestehende capabilities.code_execution auf oberster Ebene meldet etwas anderes: ob Code die weiteren Tools der Anfrage aufrufen kann.",
+   "arbeitsweise_de": "Wer Modelle dynamisch auswählt, kann die Tool-Unterstützung nun per Models API abfragen.",
    "bereich": "api",
    "datum": "2026-10-06",
    "wichtig": false
@@ -476,6 +543,13 @@
    "titel": "Claude Code bekommt Mods",
    "beitrag": "claude-code-2-1-287",
    "url": "https://code.claude.com/docs/en/changelog"
+  },
+  {
+   "datum": "2026-10-07",
+   "art": "neu",
+   "titel": "Haiku 5.5 erscheint",
+   "beitrag": "haiku-5-5",
+   "url": "https://www.anthropic.com/claude-haiku-5-5"
   },
   {
    "datum": "2026-11-30",
