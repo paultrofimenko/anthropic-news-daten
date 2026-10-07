@@ -1,0 +1,13 @@
+{
+  "id": "managed-agents-web-domains",
+  "quelle": "platform-doku",
+  "url": "https://platform.claude.com/docs/en/managed-agents/tools-web-restrictions",
+  "titel_original": "Restrict web search and web fetch domains",
+  "titel_de": "Managed Agents: Domains für Websuche und Web-Fetch einschränken",
+  "kurz_de": "Neue Doku-Seite: Bei Managed Agents lassen sich die Domains für web_search und web_fetch per allowed_domains oder blocked_domains je Tool begrenzen (Beta).",
+  "briefing_de": "Die neue Seite zu Managed Agents (Beta, Header managed-agents-2026-04-01) beschreibt:\n- Pro Tool-Eintrag gilt entweder allowed_domains oder blocked_domains, nicht beides; je 1 bis 64 Domains.\n- Eine Domain deckt auch ihre Subdomains ab; Schema, Port, Wildcard und IP-Adressen sind nicht erlaubt.\n- Nicht erlaubte web_fetch-Aufrufe liefern den Fehler url_not_allowed.\n- Zusätzlich: max_content_tokens für web_fetch und user_location für web_search.\n- In Multiagent-Sessions gelten alle Listen gleichzeitig; ein Roster-Agent kann nur einschränken, nicht erweitern.\n- Netzwerk-Einstellungen der Umgebung und Organisationseinstellungen wirken auf diese Tools nicht.",
+  "arbeitsweise_de": "Wer Managed Agents mit Websuche baut, kann den Zugriff damit pro Agent und Tool begrenzen.",
+  "bereich": "api",
+  "datum": "2026-10-06",
+  "wichtig": false
+}

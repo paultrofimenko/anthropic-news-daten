@@ -1,0 +1,13 @@
+{
+  "id": "admin-api-ga",
+  "quelle": "platform-release-notes",
+  "url": "https://platform.claude.com/docs/en/release-notes/overview",
+  "titel_original": "September 30, 2026",
+  "titel_de": "Admin API-Methoden verlassen die Beta",
+  "kurz_de": "Die Admin-API-Methoden für Organisation, Mitglieder, Workspaces, API-Keys und mehr sind aus der Beta: Aufruf über client.organization und ant organization.",
+  "briefing_de": "Ab Python SDK 1.10.0, TypeScript SDK 0.130.0, C# SDK 12.52.0, Go SDK 1.77.0, Java SDK 2.67.0, PHP SDK 0.53.0, Ruby SDK 1.75.0 und ant CLI 1.37.0:\n- Admin-API-Methoden für Organisationsinfo, Mitglieder, Einladungen, Workspaces, API-Keys, Rate Limits, Service Accounts, Workload Identity Federation, kundenverwaltete Schlüssel und Compliance-Einstellungen sind nicht mehr Beta.\n- Aufruf unter client.organization und ant organization.\n- client.beta.organization und ant beta:organization bleiben erhalten.",
+  "arbeitsweise_de": "Wer die Admin API nutzt, kann auf die Nicht-Beta-Pfade umstellen; die alten bleiben vorerst bestehen.",
+  "bereich": "api",
+  "datum": "2026-09-30",
+  "wichtig": false
+}

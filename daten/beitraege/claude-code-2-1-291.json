@@ -1,0 +1,13 @@
+{
+  "id": "claude-code-2-1-291",
+  "quelle": "code-changelog",
+  "url": "https://code.claude.com/docs/en/changelog",
+  "titel_original": "Claude Code 2.1.291",
+  "titel_de": "Claude Code 2.1.291: Zwei Regressions-Fixes",
+  "kurz_de": "Zwei Korrekturen: In Cloud-Sessions gingen Antworten auf Rückfragen zu Berechtigungen verloren, und beim Beenden konnten die letzten Nachrichten einer Sitzung fehlen.",
+  "briefing_de": "Neu in Fassung 2.1.291:\n- Behoben: Regression aus 2.1.290, bei der Cloud-Sessions Antworten auf Berechtigungsabfragen verwerfen konnten.\n- Behoben: Regression aus 2.1.288, bei der beim Beenden die letzten Nachrichten einer Sitzung verloren gehen konnten.",
+  "arbeitsweise_de": "Wer Cloud-Sessions nutzt oder Sitzungen häufig beendet und fortsetzt, sollte auf 2.1.291 aktualisieren.",
+  "bereich": "claude-code",
+  "datum": "2026-10-06",
+  "wichtig": false
+}

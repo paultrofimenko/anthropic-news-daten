@@ -1,0 +1,13 @@
+{
+  "id": "models-api-thinking-disabled",
+  "quelle": "platform-release-notes",
+  "url": "https://platform.claude.com/docs/en/release-notes/overview",
+  "titel_original": "October 5, 2026",
+  "titel_de": "Models API meldet, ob ein Modell thinking: disabled akzeptiert",
+  "kurz_de": "GET /v1/models und GET /v1/models/{model_id} zeigen jetzt in capabilities.thinking.types.disabled, ob ein Modell thinking: {type: \"disabled\"} akzeptiert.",
+  "briefing_de": "- Neues Feld capabilities.thinking.types.disabled in den Antworten der Models API.\n- supported ist false, wenn das Modell \"disabled\" mit einem 400-Fehler ablehnt, und true bei Modellen ohne Thinking-Unterstützung.\n- Auch bei true kann die API die Anfrage aus anderem Grund ablehnen, etwa wegen eines Effort-Levels, das ohne Thinking nicht erlaubt ist.",
+  "arbeitsweise_de": "Wer Thinking per Code abschaltet, kann vorher das Feld abfragen, statt auf einen 400-Fehler zu laufen.",
+  "bereich": "api",
+  "datum": "2026-10-05",
+  "wichtig": false
+}

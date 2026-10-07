@@ -1,0 +1,12 @@
+{
+  "id": "startup-programm-zusatzbedingungen",
+  "quelle": "anthropic",
+  "url": "https://www.anthropic.com/legal/startup-program-addendum",
+  "titel_original": "Claude Startups Additional Benefits Addendum",
+  "titel_de": "Startup-Programm: Zusatzbedingungen für weitere Vorteile",
+  "kurz_de": "Anthropic veröffentlicht Zusatzbedingungen zum Startup-Programm: Rabatte von Drittanbietern, Applied-AI-Sprechstunden und Promotional Credits. Gültig ab 6. Oktober 2026.",
+  "briefing_de": "Der Zusatz zu den Startup-Programm-Bedingungen (gültig ab 6. Oktober 2026) regelt:\n- Claude Startup Stack: Rabatte von Drittanbietern werden von Anthropic nur gehostet; es gelten die Bedingungen des jeweiligen Anbieters.\n- Applied-AI-Sprechstunden: optionale Beratung, z. B. zu Prompt-Optimierung und Architektur-Reviews.\n- Promotional Credits unterliegen separaten Bedingungen.\n- Vorteile gibt es nur für Mitglieder in gutem Stand und werden ohne Gewähr bereitgestellt.",
+  "bereich": "richtlinien",
+  "datum": "2026-10-06",
+  "wichtig": false
+}

@@ -1,0 +1,12 @@
+{
+  "id": "claude-code-in-der-cloud-leitfaden",
+  "quelle": "claude-dev-rss",
+  "url": "https://claude.dev/blog/claude-code-in-the-cloud/",
+  "titel_original": "Claude Code in the cloud: a field guide to cloud sessions",
+  "titel_de": "Leitfaden: Claude Code in Cloud-Sessions",
+  "kurz_de": "Ein Leitfaden auf claude.dev erklärt Cloud-Sessions: eigene VM pro Aufgabe, parallele Sessions, GitHub-Anbindung, Setup-Skripte und sieben typische Einsatzfälle.",
+  "briefing_de": "Der Beitrag von Addy Osmani (6. Oktober 2026) beschreibt Cloud-Sessions:\n- Jede Aufgabe läuft in einer eigenen VM mit frischem Klon auf neuem Branch; die Sitzung läuft weiter, wenn der Laptop schläft. GitHub-Tokens gelangen nicht in die VM.\n- Sieben Einsatzfälle, u. a. Backlog parallel abarbeiten, Fixes durch wiederholte Testläufe belegen, CI-Fehler automatisch beheben und geplante Routinen.\n- Für private Repos braucht es neben dem GitHub-Login die Claude GitHub App.\n- Setup-Skripte für Werkzeuge auf Maschinenebene, SessionStart-Hooks für Projekt-Setup, Befehle in der CLAUDE.md des Repos.\n- Enthalten in Pro, Max, Team und Enterprise; die Nutzung zählt auf dieselben Limits wie lokales Claude Code.",
+  "bereich": "claude-code",
+  "datum": "2026-10-06",
+  "wichtig": false
+}

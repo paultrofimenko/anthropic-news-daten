@@ -1,0 +1,12 @@
+{
+  "id": "cyber-verification-program",
+  "quelle": "anthropic",
+  "url": "https://www.anthropic.com/news/cyber-verification-program",
+  "titel_original": "Expanding the Cyber Verification Program",
+  "titel_de": "Cyber Verification Program wird erweitert",
+  "kurz_de": "Das Cyber Verification Program bietet jetzt drei Zugangsstufen für Sicherheitsfachleute: Defense, Red Team und Specialized Access, jeweils mit Claude Opus 5.5, Sonnet 5.5 und Mythos 5.1.",
+  "briefing_de": "Anthropic führt frühere Initiativen im erweiterten Cyber Verification Program zusammen:\n- Defense Access: für defensive Arbeit wie Incident Response, Malware-Analyse und Validierung von Schwachstellen; Antwort laut Beitrag innerhalb von Tagen.\n- Red Team Access: zusätzlich autorisierte Penetrationstests und Red-Teaming; Prüfung dauert mehrere Wochen, derzeit nur für Organisationen.\n- Specialized Access: die wenigsten Cyber-Blockaden, z. B. für kritische Systeme; Prüfung gemeinsam mit der US-Regierung.\n- Alle Stufen umfassen Claude Opus 5.5, Claude Sonnet 5.5, Claude Mythos 5.1 und künftige Modelle.\n- Bewerbung unter portal.anthropic.com/programs/cvp.",
+  "bereich": "produkte",
+  "datum": "2026-10-06",
+  "wichtig": false
+}
