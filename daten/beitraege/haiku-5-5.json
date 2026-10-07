@@ -1,0 +1,17 @@
+{
+  "id": "haiku-5-5",
+  "quelle": "anthropic",
+  "url": "https://www.anthropic.com/claude-haiku-5-5",
+  "titel_original": "Claude Haiku 5.5",
+  "titel_de": "Haiku 5.5: kleines Modell mit 1M Kontext und Effort-Einstellung",
+  "kurz_de": "Claude Haiku 5.5 (claude-haiku-5-5) erscheint ab 0,10 $ / 0,50 $ je Mio. Token, mit 1M Kontext und erstmals einstellbarem Effort für ein Haiku-Modell.",
+  "briefing_de": "Haiku 5.5 ist laut Anthropic das günstigste, schnellste und leistungsfähigste kleine Modell bisher.\n- Modell-ID: claude-haiku-5-5, erschienen am 07.10.2026, auf allen Plattformen (u. a. AWS, Google Cloud, Azure).\n- Preis: ab 0,10 $ Input / 0,50 $ Output je Mio. Token (über 100K Prompt-Token 0,50 $ / 2,50 $); Haiku 4.5 kostete 1 $ / 5 $.\n- 1M Kontext, 128K Max Output, adaptives Thinking, Standard-Effort medium; erstes Haiku mit einstellbarem Effort.\n- Neuer Tokenizer: etwas mehr Token pro Aufgabe.\n- Einsatz laut Anthropic: Zusammenfassungen, Compaction, Datenbankabfragen, Klassifikation; auch als Subagent neben Opus 5.5 und Sonnet 5.5.\n- Abschaltung frühestens am 07.10.2027; Haiku 4.5 bleibt bis mindestens 15.10.2026 aktiv.",
+  "arbeitsweise_de": "Wer bisher Haiku 4.5 nutzt, kann auf claude-haiku-5-5 wechseln und den Effort gezielt setzen; wegen des neuen Tokenizers Token-Verbrauch und Kosten neu messen. Es gibt einen Migrationsleitfaden.",
+  "bereich": "modelle",
+  "datum": "2026-10-07",
+  "wichtig": true,
+  "ereignis": {
+    "art": "neu",
+    "titel": "Haiku 5.5 erscheint"
+  }
+}

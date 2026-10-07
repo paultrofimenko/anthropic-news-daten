@@ -1,0 +1,13 @@
+{
+  "id": "sonnet-5-5-cache-lesepreis",
+  "quelle": "platform-release-notes",
+  "url": "https://platform.claude.com/docs/en/release-notes/overview",
+  "titel_original": "Prompt cache read price cut for Claude Sonnet 5.5",
+  "titel_de": "Sonnet 5.5: Cache-Lesen halbiert sich auf 0,10 $",
+  "kurz_de": "Prompt-Cache-Lesezugriffe bei Sonnet 5.5 kosten nur noch 0,10 $ statt 0,20 $ je Mio. Token. Cache-Schreiben und alle anderen Preise bleiben gleich.",
+  "briefing_de": "- Cache-Lesen bei Claude Sonnet 5.5: 0,10 $ statt 0,20 $ je Mio. Token (0,05-faches statt 0,1-faches des Basis-Inputpreises).\n- Cache-Schreibpreise und alle übrigen Preise bleiben unverändert.",
+  "arbeitsweise_de": "Wer Sonnet 5.5 mit Prompt Caching nutzt, zahlt für wiederholt gelesene Kontexte weniger; nichts am Code ist nötig.",
+  "bereich": "api",
+  "datum": "2026-10-07",
+  "wichtig": true
+}

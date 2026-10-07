@@ -1,0 +1,12 @@
+{
+  "id": "claude-code-2-1-293",
+  "quelle": "code-changelog",
+  "url": "https://code.claude.com/docs/en/changelog",
+  "titel_original": "Claude Code 2.1.293",
+  "titel_de": "Claude Code 2.1.293: Haiku 5.5 als Standard-Haiku",
+  "kurz_de": "Claude Code kennt Claude Haiku 5.5 (claude-haiku-5-5) als Standard-Haiku in der API. Dazu neue Felder für Subagent-Statuszeile und Mods sowie viele Fixes.",
+  "briefing_de": "Neu in Fassung 2.1.293:\n- Claude Haiku 5.5 (claude-haiku-5-5) ist jetzt das Standard-Haiku auf der Anthropic API: 1M Kontext, 0,10 $ / 0,50 $ je Mio. Token (0,50 $ / 2,50 $ bei Prompts über 100K).\n- subagentStatusLine-Payload enthält agentType, um eigene Subagent-Typen zu unterscheiden.\n- Für Mods: $.tool.register kennt isDeferred; false listet das Tool-Schema gleich im Prompt statt hinter der Tool-Suche.\n- Fixes u. a.: Claude wiederholte nach einer Kontext-Verdichtung teils fertige Arbeit; Speicherleck bei HTTP-MCP-Verbindungen; /model-Effort lief über die Grenzen hinaus.\n- Zurückgenommen: die Änderung der Auto-Modus-Ablehnungsmeldung aus 2.1.281 und der Fix aus 2.1.290 zu schlafenden Cloud-Sessions.",
+  "bereich": "claude-code",
+  "datum": "2026-10-07",
+  "wichtig": false
+}

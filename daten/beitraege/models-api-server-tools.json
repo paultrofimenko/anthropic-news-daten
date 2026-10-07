@@ -1,0 +1,13 @@
+{
+  "id": "models-api-server-tools",
+  "quelle": "platform-release-notes",
+  "url": "https://platform.claude.com/docs/en/api/models/list",
+  "titel_original": "capabilities.server_tools in the Models API",
+  "titel_de": "Models API zeigt, welche Server-Tools ein Modell kann",
+  "kurz_de": "GET /v1/models meldet jetzt je Modell in capabilities.server_tools, ob Websuche und Code-Ausführung unterstützt werden.",
+  "briefing_de": "- Neu: capabilities.server_tools in GET /v1/models und GET /v1/models/{model_id}.\n- Zeigt, ob ein Modell das Web-Search- und das Code-Execution-Tool akzeptiert; für Code-Ausführung capabilities.server_tools.code_execution lesen.\n- Das bestehende capabilities.code_execution auf oberster Ebene meldet etwas anderes: ob Code die weiteren Tools der Anfrage aufrufen kann.",
+  "arbeitsweise_de": "Wer Modelle dynamisch auswählt, kann die Tool-Unterstützung nun per Models API abfragen.",
+  "bereich": "api",
+  "datum": "2026-10-06",
+  "wichtig": false
+}

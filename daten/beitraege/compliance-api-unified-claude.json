@@ -1,0 +1,12 @@
+{
+  "id": "compliance-api-unified-claude",
+  "quelle": "platform-release-notes",
+  "url": "https://platform.claude.com/docs/en/manage-claude/compliance-api",
+  "titel_original": "Compliance API: chats from the unified Claude experience",
+  "titel_de": "Compliance API liefert auch Chats der vereinheitlichten Claude-Oberfläche",
+  "kurz_de": "Die Chat-Endpunkte der Compliance API geben nun auch Chats aus dem vereinheitlichten Claude-Erlebnis zurück (Beta, Claude Enterprise).",
+  "briefing_de": "- Die Chat-Endpunkte der Compliance API liefern jetzt auch Chats der vereinheitlichten Claude-Oberfläche.\n- Status: Beta für Claude-Enterprise-Organisationen.\n- Es genügt der bestehende Compliance Access Key.",
+  "bereich": "unternehmen",
+  "datum": "2026-10-08",
+  "wichtig": false
+}
