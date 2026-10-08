@@ -1,0 +1,12 @@
+{
+  "id": "usage-policy-2026",
+  "quelle": "anthropic",
+  "url": "https://www.anthropic.com/news/2026-usage-policy-update",
+  "titel_original": "2026 Usage Policy update",
+  "titel_de": "Neue Usage Policy gilt ab 12. November 2026",
+  "kurz_de": "Anthropic veröffentlicht eine neue Usage Policy, in Kraft ab 12.11.2026. Die meisten Änderungen sollen bestehende Regeln klarstellen.",
+  "briefing_de": "- Neuer Abschnitt zu täuschenden Kampagnen und künstlicher Aktivität (Fake-Konten, erfundene Nachrichtenseiten, Einflussoperationen).\n- Wahlen: Abschnitt umbenannt in „Do Not Undermine Democratic Processes“; das pauschale Verbot personalisierter Wahl- und Kampagnenansprache entfällt.\n- Waffen: Verbot umfasst ausdrücklich Software und Komponenten sowie das Bewaffnen von Drohnen und autonomen Fahrzeugen.\n- Überwachung und Strafverfolgung neu gefasst; neue Anforderungen, wenn Claude Hardware mit autonomen physischen Aktionen steuert.\n- Neu: Verbot anhaltender, grundloser Misshandlung von Claude; Supported-Regions-Durchsetzung präzisiert.",
+  "bereich": "richtlinien",
+  "datum": "2026-10-08",
+  "wichtig": false
+}

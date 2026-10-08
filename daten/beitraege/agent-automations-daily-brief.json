@@ -1,0 +1,13 @@
+{
+  "id": "agent-automations-daily-brief",
+  "quelle": "claude-dev-rss",
+  "url": "https://claude.dev/blog/building-effective-agent-automations/",
+  "titel_original": "Building effective agent automations",
+  "titel_de": "Agent-Automationen bauen: Beispiel „daily-brief“",
+  "kurz_de": "Blog von Lance Martin und CJ Avilla: Ein Referenzbeispiel mit Managed Agents liest Slack und GitHub und postet täglich einen Kurzbericht, samt Fehlerfallen.",
+  "briefing_de": "Das Beispiel „daily-brief“ nutzt Claude Managed Agents (Beta) mit Cron-Zeitplan, Memory-Stores und Vault für Zugangsdaten.\n- Lesepunkt pro Quelle als Bookmark statt festem Zeitfenster.\n- Fehlgeschlagene Lesezugriffe als Fehler melden, nicht als „nichts Neues“.\n- Posts erst nach Bestätigung durch Slack (ok: true) als gesendet verbuchen.\n- Ausgabenlimit pro Lauf auf das 3- bis 5-Fache eines normalen Laufs setzen; bei Erreichen pausiert der Lauf mit budget_reached.\n- Text aus Nachrichten und Issues als mögliche Injection behandeln; Zugriffe möglichst nur lesend.",
+  "arbeitsweise_de": "Die Muster lassen sich auf eigene geplante Agenten übertragen.",
+  "bereich": "entwickler",
+  "datum": "2026-10-08",
+  "wichtig": false
+}

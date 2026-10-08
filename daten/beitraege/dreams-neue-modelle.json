@@ -1,0 +1,12 @@
+{
+  "id": "dreams-neue-modelle",
+  "quelle": "platform-release-notes",
+  "url": "https://platform.claude.com/docs/en/release-notes/overview",
+  "titel_original": "Platform Release Notes, October 1, 2026",
+  "titel_de": "Dreams unterstützt Opus 5.5, Fable 5.1 und Sonnet 5.5",
+  "kurz_de": "Dreams (Research Preview) in Managed Agents unterstützt jetzt Claude Opus 5.5, Claude Fable 5.1 und Claude Sonnet 5.5.",
+  "briefing_de": "- Dreams (Research Preview) läuft jetzt mit Claude Opus 5.5, Claude Fable 5.1 und Claude Sonnet 5.5.\n- Die unterstützten Modelle stehen in der Doku unter den Limits von Dreams.",
+  "bereich": "api",
+  "datum": "2026-10-01",
+  "wichtig": false
+}

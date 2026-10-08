@@ -1,0 +1,13 @@
+{
+  "id": "managed-agents-web-fetch-kontext",
+  "quelle": "platform-release-notes",
+  "url": "https://platform.claude.com/docs/en/release-notes/overview",
+  "titel_original": "Platform Release Notes, October 7, 2026",
+  "titel_de": "Managed Agents: web_fetch ruft nur noch bekannte URLs ab",
+  "kurz_de": "Das web_fetch-Tool in Managed Agents holt nur noch URLs, die in der Session schon vorkamen. Sonst kommt der Fehler url_not_in_prior_context.",
+  "briefing_de": "Zur Verringerung des Risikos von Datenabfluss gilt:\n- web_fetch ruft nur URLs ab, die bereits in der Session auftauchten, etwa in einer User-Nachricht, einem web_search-Ergebnis oder einer zuvor per web_fetch geholten Seite.\n- Nicht zählen URLs, die nur in Claudes eigener Ausgabe, im System-Prompt, in angehängten Dokumenten oder in Tool-Ausgaben (bash, read, MCP) stehen; der Aufruf liefert url_not_in_prior_context.",
+  "arbeitsweise_de": "Soll ein Agent eine bestimmte URL abrufen, sende sie im Text eines user.message-Events.",
+  "bereich": "api",
+  "datum": "2026-10-07",
+  "wichtig": true
+}
