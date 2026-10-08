@@ -1,0 +1,13 @@
+{
+  "quelle": "platform-doku",
+  "url": "https://platform.claude.com/docs/en/models/haiku-5-5/migration-guide",
+  "titel_original": "Claude Haiku 5.5 migration guide / Prompting Claude Haiku 5.5",
+  "titel_de": "Haiku 5.5: Migrationsleitfaden und Prompting-Tipps",
+  "kurz_de": "Neue Doku zu Haiku 5.5: Beim Wechsel von Haiku 4.5 gibt es Breaking Changes (Thinking, Sampling, Prefill, Computer Use) sowie Prompting-Hinweise.",
+  "briefing_de": "Neue Doku-Seiten zu claude-haiku-5-5 (u. a. Migrationsleitfaden, Prompting-Guide, System-Prompt-Notizen):\n- Neuer Tokenizer: derselbe Text ergibt ca. 30 % mehr Token als bei Haiku 4.5.\n- thinking mit budget_tokens ergibt Fehler 400; stattdessen adaptives Thinking und output_config.effort.\n- temperature, top_p, top_k entfernen; Assistant-Prefill wird mit 400 abgelehnt.\n- Computer Use nur noch über computer_toolset_20260801; Priority Tier wird für Haiku 5.5 nicht unterstützt.\n- Neue Refusals (stop_reason: refusal) müssen im Client behandelt werden; kein serverseitiger Fallback.\n- Prompting: medium ist Standard-Effort; bei Suche das Datum mitgeben, bei langen Agent-Prompts gegen frühes Stoppen formulieren.",
+  "arbeitsweise_de": "Wer Haiku 4.5 nutzt, sollte vor dem Wechsel Token-Zählung, max_tokens und Kosten neu messen und die genannten Parameter anpassen.",
+  "bereich": "modelle",
+  "datum": "2026-10-07",
+  "wichtig": false,
+  "id": "haiku-5-5-migration-und-prompting"
+}

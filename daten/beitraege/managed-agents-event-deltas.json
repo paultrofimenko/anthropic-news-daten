@@ -1,0 +1,13 @@
+{
+  "quelle": "platform-doku",
+  "url": "https://platform.claude.com/docs/en/managed-agents/event-deltas",
+  "titel_original": "Preview responses with event deltas",
+  "titel_de": "Managed Agents: Antworten live per Event Deltas anzeigen",
+  "kurz_de": "Neue Doku-Seite (Beta): Mit dem Parameter event_deltas[] zeigt der Event-Stream den Antworttext schon während der Generierung als Vorschau.",
+  "briefing_de": "Neue Seite zu Managed Agents (Beta, Header managed-agents-2026-04-01):\n- Vorschau pro Stream-Verbindung per Query-Parameter event_deltas[] aktivieren; erlaubt sind agent.message und agent.thinking, alles andere ergibt Fehler 400.\n- Der Stream liefert event_start und event_delta; die gepufferte agent.message bleibt die maßgebliche Fassung.\n- Subagenten-Vorschau gibt es auf dem Thread-Stream des jeweiligen Subagenten.\n- Grenzen: Deltas können unter Last wegfallen, werden bei Reconnect nicht nachgeliefert und nicht gespeichert; nur Text, keine Tool-Aufrufe.\n- SDKs bieten Accumulator-Helfer.",
+  "arbeitsweise_de": "Wer Managed Agents mit Live-Anzeige baut, kann Vorschau-Text darstellen und danach durch die gepufferte Nachricht ersetzen.",
+  "bereich": "api",
+  "datum": "2026-10-08",
+  "wichtig": false,
+  "id": "managed-agents-event-deltas"
+}

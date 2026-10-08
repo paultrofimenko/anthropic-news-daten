@@ -1,0 +1,12 @@
+{
+  "quelle": "platform-doku",
+  "url": "https://platform.claude.com/docs/en/managed-agents/session-observability",
+  "titel_original": "Inspect sessions and track usage",
+  "titel_de": "Managed Agents: Sessions prüfen und Verbrauch verfolgen",
+  "kurz_de": "Neue Doku-Seite (Beta): Session-Viewer in der Claude Console sowie usage-Feld und session.usage-Event für Token, Listenkosten und aktive Zeit.",
+  "briefing_de": "Neue Seite zu Managed Agents (Beta):\n- Session-Viewer in der Console (nur Developer und Admins) mit Timeline, Transcript und Inspector (Session, Events, Tools, Resources, Threads).\n- Das Session-Objekt hat ein usage-Feld mit Tokens, list_cost, active_seconds und server_tool_use.\n- Das Event session.usage liefert denselben Stand im Stream, z. B. kurz vor dem Idle-Wechsel.\n- Ausgabenlimit: lieber ein Session-Budget setzen, als selbst zu pollen.",
+  "bereich": "api",
+  "datum": "2026-10-08",
+  "wichtig": false,
+  "id": "managed-agents-session-observability"
+}
