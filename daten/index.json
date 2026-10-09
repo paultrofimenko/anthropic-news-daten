@@ -1,8 +1,47 @@
 {
  "version": 1,
- "erzeugt": "2026-10-07T20:39:48.971Z",
- "anzahl": 27,
+ "erzeugt": "2026-10-09T01:16:01.993Z",
+ "anzahl": 37,
  "beitraege": [
+  {
+   "id": "claude-code-2-1-295",
+   "quelle": "code-changelog",
+   "url": "https://code.claude.com/docs/en/changelog",
+   "titel_original": "Claude Code 2.1.295",
+   "titel_de": "Claude Code 2.1.295: onFailure „block“ für Hooks und viele Fixes",
+   "kurz_de": "Fassung 2.1.295 bringt onFailure: \"block\" für Command- und HTTP-Hooks, OSC-7501-Statusanzeige fürs Terminal, mehr Optionen am Claude-apps-Gateway und Mods sowie zahlreiche Fixes.",
+   "briefing_de": "Neu in Fassung 2.1.295:\n- Command- und HTTP-Hooks kennen onFailure: \"block\": Ein Hook, der nicht startet, ein Timeout hat oder unerwartet endet, blockiert die Aktion, statt sie durchzulassen.\n- Program Status Protocol (OSC 7501): Terminals, die es unterstützen, zeigen, ob Claude Code arbeitet, auf dich wartet oder fertig ist.\n- Claude-apps-Gateway: timeouts.upstream_ttfb_ms für Bedrock-, Vertex- und Foundry-Upstreams, optionale models-Liste je Upstream, upstream_request_id im inference-Audit-Event, request-id-Header in Antworten.\n- Mods: $.ui.notify für native Benachrichtigungen; Button nimmt Kinder (Strings und Text).\n- Neue Variable CLAUDE_CODE_RETRY_WATCHDOG_MAX_WAIT_MS begrenzt die Wartezeit des unbeaufsichtigten Retry-Modus bei 429/529.\n- Viele Fixes, u. a. zu [1m]-Modellen hinter Gateway/Bedrock/Vertex/Foundry, MCP-Verbindungen, claude -p und Plugins.",
+   "arbeitsweise_de": "Wer Hooks als Sicherheitsnetz nutzt, kann mit onFailure: \"block\" festlegen, dass ein defekter Hook die Aktion stoppt statt sie durchzulassen.",
+   "bereich": "claude-code",
+   "datum": "2026-10-09",
+   "wichtig": false
+  },
+  {
+   "id": "agent-automatisierungen-bauen",
+   "quelle": "claude-dev-rss",
+   "url": "https://claude.dev/blog/building-effective-agent-automations/",
+   "titel_original": "Building effective agent automations",
+   "titel_de": "Wie man zuverlässige Agent-Automatisierungen baut",
+   "kurz_de": "Blogbeitrag mit Referenzimplementierung: ein geplanter Managed Agent liest Slack und GitHub, merkt sich den Stand je Quelle und postet einen kurzen Tagesüberblick. Dazu sechs Regeln gegen typische Fehler.",
+   "briefing_de": "Der Beitrag (8. Okt 2026) zeigt einen täglichen Brief auf Claude Managed Agents (Beta); Code in anthropics/claude-quickstarts unter managed-agents/daily-brief.\n- Sechs Bausteine: Quellen (nur lesend), Ziel, Agent, Zeitplan (Cron), Memory, Leitplanken.\n- Regeln: ab Lesezeichen statt festem Zeitfenster lesen; fehlgeschlagene Lesezugriffe als „nicht lesbar“ melden; Einträge vor dem Posten neu prüfen; Post erst nach Slack-Bestätigung als gesendet zählen; Präferenzen jeden Lauf neu lesen; nur Lesezugriff und Ausgabenlimit je Lauf.\n- Zugangsdaten liegen in einem Vault außerhalb der Sandbox; Slack-Token ersetzt die Plattform nur für erlaubte Hosts.\n- Beispiel-Budget: 500 Cent je Lauf; bei Erreichen pausiert der Lauf mit budget_reached.",
+   "arbeitsweise_de": "Wer geplante Agenten baut, kann die sechs Regeln als Checkliste nehmen: Lesezeichen je Quelle, Zeitzone setzen, Budget pro Lauf.",
+   "bereich": "entwickler",
+   "datum": "2026-10-08",
+   "wichtig": false
+  },
+  {
+   "id": "claude-code-2-1-294",
+   "quelle": "code-changelog",
+   "url": "https://code.claude.com/docs/en/changelog",
+   "titel_original": "Claude Code 2.1.294",
+   "titel_de": "Claude Code 2.1.294: Hook-Anweisungen greifen zuverlässiger",
+   "kurz_de": "Fassung 2.1.294 korrigiert prompt- und agent-Hooks, die als Anweisung formuliert sind und Verbotenes durchließen, und verbessert die Bewertung von Stop-Hooks.",
+   "briefing_de": "- Behoben: prompt- und agent-Hooks, die als Anweisung formuliert waren (etwa „Block commands that...“), ließen durch, was sie blockieren sollten.\n- Verbessert: prompt-Hooks auf Stop und SubagentStop, die als Anweisung formuliert sind (etwa „Carry on if the build is broken“), werden besser bewertet; Claude hört seltener zu früh auf.",
+   "arbeitsweise_de": "Wer Hooks als Anweisungstext schreibt, sollte prüfen, ob sie nach dem Update wie gewollt blockieren oder weiterarbeiten lassen.",
+   "bereich": "claude-code",
+   "datum": "2026-10-08",
+   "wichtig": false
+  },
   {
    "id": "compliance-api-unified-claude",
    "quelle": "platform-release-notes",
@@ -12,6 +51,72 @@
    "kurz_de": "Die Chat-Endpunkte der Compliance API geben nun auch Chats aus dem vereinheitlichten Claude-Erlebnis zurück (Beta, Claude Enterprise).",
    "briefing_de": "- Die Chat-Endpunkte der Compliance API liefern jetzt auch Chats der vereinheitlichten Claude-Oberfläche.\n- Status: Beta für Claude-Enterprise-Organisationen.\n- Es genügt der bestehende Compliance Access Key.",
    "bereich": "unternehmen",
+   "datum": "2026-10-08",
+   "wichtig": false
+  },
+  {
+   "id": "cyber-mission-oss-scanner",
+   "quelle": "anthropic",
+   "url": "https://www.anthropic.com/news/anthropic-cyber-mission",
+   "titel_original": "Anthropic Cyber Mission / Launching OSS Scanner",
+   "titel_de": "Anthropic Cyber Mission: Schutzprogramm und kostenloser OSS Scanner",
+   "kurz_de": "Anthropic startet die Cyber Mission mit einem Programm für kritische Infrastruktur und dem OSS Scanner, einem kostenlosen Opt-in-Dienst, der Open-Source-Projekte regelmäßig auf Schwachstellen scannt.",
+   "briefing_de": "- Cyber Mission: langfristiges Vorhaben, Verteidigern Werkzeuge zu geben; Start mit kritischer Infrastruktur und Open Source. Project Glasswing geht im erweiterten Cyber Verification Program auf.\n- Critical Infrastructure Defense Program: Claude-Modelle, Ingenieure vor Ort und Bedrohungsforschung für Anbieter von OT-Sicherheit; Gründungspartner u. a. Accenture, CrowdStrike, Palo Alto Networks, Rockwell Automation.\n- OSS Scanner: kostenlos, Opt-in, Bericht mit Reproducer, Erklärung und Patch-Vorschlag. Berichte entstehen ohne menschliche Prüfung; erwartet wird eine Trefferquote über 90 %.\n- Zahlen: In sechs Monaten über 29.000 Kandidaten, rund 6.000 manuell geprüft; von 97 kritischen/hohen Funden in 48 Projekten erfüllten 85 (88 %) die Disclosure-Schwelle.\n- Aufnahme: Maintainer stellen einen Pull Request im Repo anthropics/oss-scanner.",
+   "bereich": "news",
+   "datum": "2026-10-08",
+   "wichtig": false,
+   "ereignis": {
+    "art": "neu",
+    "titel": "OSS Scanner startet"
+   }
+  },
+  {
+   "id": "genesis-mission-zusage",
+   "quelle": "anthropic",
+   "url": "https://www.anthropic.com/news/genesis-mission-commitment",
+   "titel_original": "Anthropic's Genesis Mission commitment",
+   "titel_de": "Anthropic sagt 150 Mio. $ für die Genesis Mission zu",
+   "kurz_de": "Anthropic will über drei Jahre 150 Millionen Dollar in die Genesis Mission geben und Claude für mehr als 15 Behörden bereitstellen, darunter NASA, NIH und NSF.",
+   "briefing_de": "- Angekündigt beim Science-Gipfel des White House Office of Science and Technology Policy in Washington, DC.\n- Geplant: Claude, Claude Code und API-Guthaben für mehrere hundert Forschungsprojekte.\n- Partnerschaften mit Behörden und Nationallabors, u. a. zu Fusionsenergie und Quantencomputing.\n- Schulung, Onboarding und technischer Support für neue Behörden.\n- Bereits laufend: Claude Science, 10.000 Plätze für Wissenschaftler, AI for Science, Model Hardware Standard (Research Preview).",
+   "bereich": "unternehmen",
+   "datum": "2026-10-08",
+   "wichtig": false
+  },
+  {
+   "id": "karte-des-himmels-uv",
+   "quelle": "anthropic",
+   "url": "https://www.anthropic.com/research/the-missing-map-of-the-sky",
+   "titel_original": "The missing map of the sky",
+   "titel_de": "Claude Science erstellt erste vollständige UV-Karte des Himmels",
+   "kurz_de": "Mit Claude Science und vielen parallelen Agenten entstand laut Anthropic die erste vollständige UV-Karte des Himmels. Etwa ein Drittel des Himmels war nie in UV beobachtet und wurde geschätzt.",
+   "briefing_de": "- Brice Ménard (Johns Hopkins, Anthropic) kombinierte Daten aus GALEX, Swift, FIMS/SPEAR und TD-1 bei 154 nm und 232 nm.\n- Agenten sammelten Surveys, entfernten Sternenglanz, kalibrierten Instrumente und führten alles zusammen.\n- Lücken wurden per Inpainting und Zusammenhängen aus Sichtbar-, Infrarot- und Radiodaten geschätzt; Tests liegen laut Artikel etwa 10 % neben den Messwerten.\n- UV-Schätzungen für über 100 Millionen Sterne aus Gaia-Daten; jedes Pixel ist als „measured“ oder „predicted“ markiert.",
+   "bereich": "forschung",
+   "datum": "2026-10-08",
+   "wichtig": false
+  },
+  {
+   "id": "managed-agents-vorschau-und-beobachtung",
+   "quelle": "platform-doku",
+   "url": "https://platform.claude.com/docs/en/managed-agents/event-deltas",
+   "titel_original": "Preview responses with event deltas / Inspect sessions and track usage",
+   "titel_de": "Managed Agents: Live-Vorschau von Antworten und Sitzungs-Inspektor",
+   "kurz_de": "Zwei neue Doku-Seiten zu Managed Agents (Beta): Antworttext per event_deltas live als Vorschau streamen, und Sitzungen in der Console prüfen sowie Verbrauch und Listenkosten auslesen.",
+   "briefing_de": "- Event Deltas: Mit dem Query-Parameter event_deltas[] (agent.message, agent.thinking) auf dem Session- oder Thread-Stream erscheint der Antworttext schon während der Erzeugung. Der gepufferte agent.message bleibt die verbindliche Fassung.\n- Vorschauen sind Best Effort: Deltas können unter Last wegfallen, werden nicht wiederholt und nicht in der Event-Historie gespeichert; nur Text, keine Tool-Aufrufe.\n- Session-Viewer in der Console (für Developer und Admins): Timeline, Transcript und Inspector mit Tabs Session, Events, Tools, Resources, Threads.\n- Das Session-Objekt enthält usage (Tokens, list_cost in Cent, active_seconds); das Event session.usage liefert denselben Stand im Stream.\n- Ausgaben begrenzt man über ein Session-Budget statt per Polling.",
+   "arbeitsweise_de": "Wer Managed Agents in eine Oberfläche einbaut, kann Antworten live anzeigen und muss am Ende mit dem gepufferten Event abgleichen.",
+   "bereich": "api",
+   "datum": "2026-10-08",
+   "wichtig": false
+  },
+  {
+   "id": "nutzungsrichtlinie-2026",
+   "quelle": "anthropic",
+   "url": "https://www.anthropic.com/news/2026-usage-policy-update",
+   "titel_original": "2026 Usage Policy update",
+   "titel_de": "Neue Nutzungsrichtlinie gilt ab 12. November",
+   "kurz_de": "Anthropic aktualisiert die Usage Policy: neue Regeln zu Täuschungskampagnen, Waffen, Überwachung, Hardware-Steuerung und Abuse gegenüber Modellen. Sie gilt ab 12. November.",
+   "briefing_de": "- Neuer Abschnitt zu Täuschungskampagnen und künstlicher Aktivität (Fake-Konten, erfundene Nachrichtenseiten, Einflussoperationen).\n- Wahlen: Verbot nun auf Täuschung von Wählern und Störung von Wahlen beschränkt; das pauschale Verbot personalisierter Ansprache entfällt.\n- Waffen: Verbote umfassen ausdrücklich Steuerungssoftware und Aktionen wie das Bewaffnen von Drohnen.\n- Überwachung: Verfolgen von Personen ohne Einwilligung verboten; Claude soll nicht entscheiden, wer ermittelt oder angeklagt wird.\n- Hardware mit autonomen physischen Aktionen: ein qualifizierter Mensch muss beobachten und stoppen können; sichere Ruhelage bei Verbindungsabbruch.\n- Neu: Verbot anhaltender, grundloser Grausamkeit gegenüber Modellen.\n- Supported Regions: Nutzung durch Personen, Firmen und mehrheitlich kontrollierte Entitäten aus nicht unterstützten Regionen ist verboten.",
+   "arbeitsweise_de": "Wer Claude in Produkte mit Überwachungs-, Hardware- oder Kampagnen-Bezug einbaut, sollte den neuen Text vor dem 12. November prüfen.",
+   "bereich": "richtlinien",
    "datum": "2026-10-08",
    "wichtig": false
   },
@@ -43,6 +148,19 @@
     "art": "neu",
     "titel": "Haiku 5.5 erscheint"
    }
+  },
+  {
+   "id": "managed-agents-web-fetch-url-regel",
+   "quelle": "platform-release-notes",
+   "url": "https://platform.claude.com/docs/en/release-notes/overview",
+   "titel_original": "Claude Platform Release Notes, October 7, 2026",
+   "titel_de": "Managed Agents: web_fetch ruft nur noch bekannte URLs ab",
+   "kurz_de": "In Claude Managed Agents holt web_fetch nur noch URLs, die in der Sitzung schon aufgetaucht sind. Das senkt das Risiko von Datenabfluss; andere URLs liefern url_not_in_prior_context.",
+   "briefing_de": "- Zählen: URLs im Text einer Nutzernachricht, in einem web_search-Ergebnis oder auf einer zuvor per web_fetch geholten Seite.\n- Zählen nicht: URLs nur in Claudes eigener Ausgabe, im System-Prompt des Agenten, in angehängten Dokumenten oder in Ausgaben von Tools wie bash, read oder MCP-Tools.\n- Solche Aufrufe liefern den Fehlerresultat url_not_in_prior_context.\n- Soll der Agent eine URL abrufen dürfen, sendet man sie im Text eines user.message-Events.",
+   "arbeitsweise_de": "Wer Agenten URLs aus Systemprompt oder Dateien abrufen lässt, muss sie künftig in einer Nutzernachricht mitschicken.",
+   "bereich": "api",
+   "datum": "2026-10-07",
+   "wichtig": true
   },
   {
    "id": "sonnet-5-5-cache-lesepreis",
@@ -260,6 +378,18 @@
    "briefing_de": "- Statt Claude wie einen menschlichen Forscher zu führen, suchte Schwartz „Claude-förmige“ Probleme: Fragen, die eine bekannte Methode aus einem anderen Fach sofort lösen würde.\n- Werkzeug dafür ist „BootLoops“, eine Sammlung von Programmen und Abläufen rund um Claude Code.\n- Ergebnis: 36 Manuskripte in 18 Fächern mit 19 Mitautoren in drei Monaten, etwa zu Ökologie, Populationsgenetik, Sprachwissenschaft und Kosmologie.\n- Fallen laut Schwartz: Claude erklärt zu früh den Sieg, schätzt Zeiten falsch ein und rechnet lieber tagelang, als erst ein besseres Werkzeug zu bauen.",
    "arbeitsweise_de": "Für lange Claude-Code-Läufe: klare, strenge Kriterien für „fertig“ vorgeben, Ergebnisse selbst ansehen (Diagramme, Zahlen) statt Zusammenfassungen zu glauben, und Claude ausdrücklich bitten, erst ein Werkzeug zu bauen, statt sich durchzurechnen.",
    "bereich": "forschung",
+   "datum": "2026-10-01",
+   "wichtig": false
+  },
+  {
+   "id": "managed-agents-dreams-modelle",
+   "quelle": "platform-release-notes",
+   "url": "https://platform.claude.com/docs/en/release-notes/overview",
+   "titel_original": "Claude Platform Release Notes, October 1, 2026",
+   "titel_de": "Dreams unterstützt jetzt Opus 5.5, Fable 5.1 und Sonnet 5.5",
+   "kurz_de": "Dreams (Research Preview) in Managed Agents unterstützt jetzt Claude Opus 5.5, Claude Fable 5.1 und Claude Sonnet 5.5.",
+   "briefing_de": "- Betroffen: Dreams in Claude Managed Agents (Research Preview).\n- Neu unterstützte Modelle: Claude Opus 5.5, Claude Fable 5.1, Claude Sonnet 5.5.\n- Die vollständige Liste steht in der Doku unter „Supported models“.",
+   "bereich": "api",
    "datum": "2026-10-01",
    "wichtig": false
   },
@@ -550,6 +680,13 @@
    "titel": "Haiku 5.5 erscheint",
    "beitrag": "haiku-5-5",
    "url": "https://www.anthropic.com/claude-haiku-5-5"
+  },
+  {
+   "datum": "2026-10-08",
+   "art": "neu",
+   "titel": "OSS Scanner startet",
+   "beitrag": "cyber-mission-oss-scanner",
+   "url": "https://www.anthropic.com/news/anthropic-cyber-mission"
   },
   {
    "datum": "2026-11-30",
