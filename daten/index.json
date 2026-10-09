@@ -1,7 +1,7 @@
 {
  "version": 1,
- "erzeugt": "2026-10-09T01:16:01.993Z",
- "anzahl": 37,
+ "erzeugt": "2026-10-09T18:23:15.984Z",
+ "anzahl": 38,
  "beitraege": [
   {
    "id": "claude-code-2-1-295",
@@ -15,6 +15,23 @@
    "bereich": "claude-code",
    "datum": "2026-10-09",
    "wichtig": false
+  },
+  {
+   "id": "managed-agents-dynamische-workflows",
+   "quelle": "platform-release-notes",
+   "url": "https://platform.claude.com/docs/en/managed-agents/multiagent-orchestration",
+   "titel_original": "Dynamic workflows for Claude Managed Agents",
+   "titel_de": "Managed Agents: Agent schreibt eigene Workflows",
+   "kurz_de": "Managed-Agents-Agenten können in der Beta dynamische Workflows nutzen: Der Agent schreibt ein Programm, das viele Agenten in Phasen im Hintergrund laufen lässt und die Ergebnisse zusammenführt.",
+   "briefing_de": "Für Aufgaben mit vielen Teilen, etwa hunderte Dokumente prüfen, kann der Agent einen Workflow schreiben.\n- Ein Workflow ist ein Programm, das viele Agenten in Phasen ausführt und ihre Ergebnisse kombiniert; der Server führt ihn im Hintergrund als Workflow-Run aus.\n- Beta mit dem Beta-Header managed-agents-2026-04-01.\n- Aktivieren: Feld multiagent des Agenten auf {\"type\": \"multiagent_20261001\", \"workflows\": {\"type\": \"enabled\"}} setzen.\n- Im System-Prompt lässt sich steuern, wann der Agent einen Run startet; Runs verfolgst du über workflow_run.*-Events im Event-Stream der Sitzung.",
+   "arbeitsweise_de": "Für Massenaufgaben mit Managed Agents lohnt ein Test: Workflows einschalten, im System-Prompt festlegen, wann ein Run starten soll, und die workflow_run.*-Events mitlesen.",
+   "bereich": "api",
+   "datum": "2026-10-09",
+   "wichtig": true,
+   "ereignis": {
+    "art": "neu",
+    "titel": "Managed Agents: dynamische Workflows"
+   }
   },
   {
    "id": "agent-automatisierungen-bauen",
@@ -139,8 +156,8 @@
    "titel_original": "Claude Haiku 5.5",
    "titel_de": "Haiku 5.5: kleines Modell mit 1M Kontext und Effort-Einstellung",
    "kurz_de": "Claude Haiku 5.5 (claude-haiku-5-5) erscheint ab 0,10 $ / 0,50 $ je Mio. Token, mit 1M Kontext und erstmals einstellbarem Effort für ein Haiku-Modell.",
-   "briefing_de": "Haiku 5.5 ist laut Anthropic das günstigste, schnellste und leistungsfähigste kleine Modell bisher.\n- Modell-ID: claude-haiku-5-5, erschienen am 07.10.2026, auf allen Plattformen (u. a. AWS, Google Cloud, Azure).\n- Preis: ab 0,10 $ Input / 0,50 $ Output je Mio. Token (über 100K Prompt-Token 0,50 $ / 2,50 $); Haiku 4.5 kostete 1 $ / 5 $.\n- 1M Kontext, 128K Max Output, adaptives Thinking, Standard-Effort medium; erstes Haiku mit einstellbarem Effort.\n- Neuer Tokenizer: etwas mehr Token pro Aufgabe.\n- Einsatz laut Anthropic: Zusammenfassungen, Compaction, Datenbankabfragen, Klassifikation; auch als Subagent neben Opus 5.5 und Sonnet 5.5.\n- Abschaltung frühestens am 07.10.2027; Haiku 4.5 bleibt bis mindestens 15.10.2026 aktiv.",
-   "arbeitsweise_de": "Wer bisher Haiku 4.5 nutzt, kann auf claude-haiku-5-5 wechseln und den Effort gezielt setzen; wegen des neuen Tokenizers Token-Verbrauch und Kosten neu messen. Es gibt einen Migrationsleitfaden.",
+   "briefing_de": "Haiku 5.5 ist laut Anthropic das günstigste, schnellste und leistungsfähigste kleine Modell bisher.\n- Modell-ID: claude-haiku-5-5, erschienen am 07.10.2026, auf allen Plattformen (u. a. AWS, Google Cloud, Azure).\n- Preis: ab 0,10 $ Input / 0,50 $ Output je Mio. Token (über 100K Prompt-Token 0,50 $ / 2,50 $); Haiku 4.5 kostete 1 $ / 5 $.\n- 1M Kontext, 128K Max Output, adaptives Thinking, Standard-Effort medium; erstes Haiku mit einstellbarem Effort.\n- Neuer Tokenizer: etwas mehr Token pro Aufgabe.\n- Einsatz laut Anthropic: Zusammenfassungen, Compaction, Datenbankabfragen, Klassifikation; auch als Subagent neben Opus 5.5 und Sonnet 5.5.\n- Abschaltung frühestens am 07.10.2027; Haiku 4.5 bleibt bis mindestens 15.10.2026 aktiv.\n- Achtung bei der Migration von Haiku 4.5: manuelles Extended Thinking (budget_tokens), temperature/top_p/top_k und Prefill der Assistant-Nachricht können einen 400-Fehler liefern; ebenso computer_20250124 (stattdessen computer_toolset_20260801 bzw. auf Amazon Bedrock computer_20251124). Auf Bedrock sind Structured Outputs für Haiku 5.5 nicht verfügbar.",
+   "arbeitsweise_de": "Wer bisher Haiku 4.5 nutzt, kann auf claude-haiku-5-5 wechseln und den Effort gezielt setzen; wegen des neuen Tokenizers Token-Verbrauch und Kosten neu messen. Bestehender Code kann brechen: Parameter wie budget_tokens, Sampling-Parameter und Prefill vor dem Wechsel entfernen. Adaptives Thinking ist standardmäßig an, Antworten können mit thinking-Blöcken beginnen (Text nur mit thinking.display auf \"summarized\") und zählen mehr Token. Der Migrationsleitfaden listet jede Änderung.",
    "bereich": "modelle",
    "datum": "2026-10-07",
    "wichtig": true,
@@ -687,6 +704,13 @@
    "titel": "OSS Scanner startet",
    "beitrag": "cyber-mission-oss-scanner",
    "url": "https://www.anthropic.com/news/anthropic-cyber-mission"
+  },
+  {
+   "datum": "2026-10-09",
+   "art": "neu",
+   "titel": "Managed Agents: dynamische Workflows",
+   "beitrag": "managed-agents-dynamische-workflows",
+   "url": "https://platform.claude.com/docs/en/managed-agents/multiagent-orchestration"
   },
   {
    "datum": "2026-11-30",
