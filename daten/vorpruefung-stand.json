@@ -2826,10 +2826,10 @@
   ]
  },
  "abschaltungen": {
-  "hash": "2202b37f2b9e7837"
+  "hash": "0a1e64c3a4533890"
  },
  "modelle": {
-  "hash": "c826491d09cbeb33"
+  "hash": "17be4c15161349cd"
  },
  "platform-release-notes": {
   "schluessel": [
@@ -2983,9 +2983,13 @@
    "October 5, 2026",
    "October 8, 2026",
    "October 7, 2026",
-   "October 6, 2026"
+   "October 6, 2026",
+   "October 9, 2026"
   ],
   "zeilen": {
+   "October 9, 2026": [
+    "513bb1c6b0"
+   ],
    "October 8, 2026": [
     "1a7a2858b6"
    ],
@@ -2997,7 +3001,8 @@
     "446d46691e",
     "68a7cf61dd",
     "925700cf5c",
-    "5af2746e44"
+    "5af2746e44",
+    "4f3be6038a"
    ],
    "October 6, 2026": [
     "b423810914"
@@ -3025,12 +3030,6 @@
    ],
    "September 23, 2026": [
     "3075811c09"
-   ],
-   "September 22, 2026": [
-    "370d7b9026",
-    "b5ac73c54e",
-    "7defe1ec19",
-    "0516550475"
    ]
   },
   "zeilenVersion": 2
