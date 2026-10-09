@@ -1,0 +1,17 @@
+{
+  "id": "managed-agents-dynamische-workflows",
+  "quelle": "platform-release-notes",
+  "url": "https://platform.claude.com/docs/en/managed-agents/multiagent-orchestration",
+  "titel_original": "Dynamic workflows for Claude Managed Agents",
+  "titel_de": "Managed Agents: Agent schreibt eigene Workflows",
+  "kurz_de": "Managed-Agents-Agenten können in der Beta dynamische Workflows nutzen: Der Agent schreibt ein Programm, das viele Agenten in Phasen im Hintergrund laufen lässt und die Ergebnisse zusammenführt.",
+  "briefing_de": "Für Aufgaben mit vielen Teilen, etwa hunderte Dokumente prüfen, kann der Agent einen Workflow schreiben.\n- Ein Workflow ist ein Programm, das viele Agenten in Phasen ausführt und ihre Ergebnisse kombiniert; der Server führt ihn im Hintergrund als Workflow-Run aus.\n- Beta mit dem Beta-Header managed-agents-2026-04-01.\n- Aktivieren: Feld multiagent des Agenten auf {\"type\": \"multiagent_20261001\", \"workflows\": {\"type\": \"enabled\"}} setzen.\n- Im System-Prompt lässt sich steuern, wann der Agent einen Run startet; Runs verfolgst du über workflow_run.*-Events im Event-Stream der Sitzung.",
+  "arbeitsweise_de": "Für Massenaufgaben mit Managed Agents lohnt ein Test: Workflows einschalten, im System-Prompt festlegen, wann ein Run starten soll, und die workflow_run.*-Events mitlesen.",
+  "bereich": "api",
+  "datum": "2026-10-09",
+  "wichtig": true,
+  "ereignis": {
+    "art": "neu",
+    "titel": "Managed Agents: dynamische Workflows"
+  }
+}
