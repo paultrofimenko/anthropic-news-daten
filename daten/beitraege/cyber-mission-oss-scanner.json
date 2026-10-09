@@ -1,0 +1,16 @@
+{
+  "id": "cyber-mission-oss-scanner",
+  "quelle": "anthropic",
+  "url": "https://www.anthropic.com/news/anthropic-cyber-mission",
+  "titel_original": "Anthropic Cyber Mission / Launching OSS Scanner",
+  "titel_de": "Anthropic Cyber Mission: Schutzprogramm und kostenloser OSS Scanner",
+  "kurz_de": "Anthropic startet die Cyber Mission mit einem Programm für kritische Infrastruktur und dem OSS Scanner, einem kostenlosen Opt-in-Dienst, der Open-Source-Projekte regelmäßig auf Schwachstellen scannt.",
+  "briefing_de": "- Cyber Mission: langfristiges Vorhaben, Verteidigern Werkzeuge zu geben; Start mit kritischer Infrastruktur und Open Source. Project Glasswing geht im erweiterten Cyber Verification Program auf.\n- Critical Infrastructure Defense Program: Claude-Modelle, Ingenieure vor Ort und Bedrohungsforschung für Anbieter von OT-Sicherheit; Gründungspartner u. a. Accenture, CrowdStrike, Palo Alto Networks, Rockwell Automation.\n- OSS Scanner: kostenlos, Opt-in, Bericht mit Reproducer, Erklärung und Patch-Vorschlag. Berichte entstehen ohne menschliche Prüfung; erwartet wird eine Trefferquote über 90 %.\n- Zahlen: In sechs Monaten über 29.000 Kandidaten, rund 6.000 manuell geprüft; von 97 kritischen/hohen Funden in 48 Projekten erfüllten 85 (88 %) die Disclosure-Schwelle.\n- Aufnahme: Maintainer stellen einen Pull Request im Repo anthropics/oss-scanner.",
+  "bereich": "news",
+  "datum": "2026-10-08",
+  "wichtig": false,
+  "ereignis": {
+    "art": "neu",
+    "titel": "OSS Scanner startet"
+  }
+}

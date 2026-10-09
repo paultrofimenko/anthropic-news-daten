@@ -1,0 +1,13 @@
+{
+  "id": "claude-code-2-1-294",
+  "quelle": "code-changelog",
+  "url": "https://code.claude.com/docs/en/changelog",
+  "titel_original": "Claude Code 2.1.294",
+  "titel_de": "Claude Code 2.1.294: Hook-Anweisungen greifen zuverlässiger",
+  "kurz_de": "Fassung 2.1.294 korrigiert prompt- und agent-Hooks, die als Anweisung formuliert sind und Verbotenes durchließen, und verbessert die Bewertung von Stop-Hooks.",
+  "briefing_de": "- Behoben: prompt- und agent-Hooks, die als Anweisung formuliert waren (etwa „Block commands that...“), ließen durch, was sie blockieren sollten.\n- Verbessert: prompt-Hooks auf Stop und SubagentStop, die als Anweisung formuliert sind (etwa „Carry on if the build is broken“), werden besser bewertet; Claude hört seltener zu früh auf.",
+  "arbeitsweise_de": "Wer Hooks als Anweisungstext schreibt, sollte prüfen, ob sie nach dem Update wie gewollt blockieren oder weiterarbeiten lassen.",
+  "bereich": "claude-code",
+  "datum": "2026-10-08",
+  "wichtig": false
+}

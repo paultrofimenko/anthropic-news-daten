@@ -1,0 +1,13 @@
+{
+  "id": "managed-agents-vorschau-und-beobachtung",
+  "quelle": "platform-doku",
+  "url": "https://platform.claude.com/docs/en/managed-agents/event-deltas",
+  "titel_original": "Preview responses with event deltas / Inspect sessions and track usage",
+  "titel_de": "Managed Agents: Live-Vorschau von Antworten und Sitzungs-Inspektor",
+  "kurz_de": "Zwei neue Doku-Seiten zu Managed Agents (Beta): Antworttext per event_deltas live als Vorschau streamen, und Sitzungen in der Console prüfen sowie Verbrauch und Listenkosten auslesen.",
+  "briefing_de": "- Event Deltas: Mit dem Query-Parameter event_deltas[] (agent.message, agent.thinking) auf dem Session- oder Thread-Stream erscheint der Antworttext schon während der Erzeugung. Der gepufferte agent.message bleibt die verbindliche Fassung.\n- Vorschauen sind Best Effort: Deltas können unter Last wegfallen, werden nicht wiederholt und nicht in der Event-Historie gespeichert; nur Text, keine Tool-Aufrufe.\n- Session-Viewer in der Console (für Developer und Admins): Timeline, Transcript und Inspector mit Tabs Session, Events, Tools, Resources, Threads.\n- Das Session-Objekt enthält usage (Tokens, list_cost in Cent, active_seconds); das Event session.usage liefert denselben Stand im Stream.\n- Ausgaben begrenzt man über ein Session-Budget statt per Polling.",
+  "arbeitsweise_de": "Wer Managed Agents in eine Oberfläche einbaut, kann Antworten live anzeigen und muss am Ende mit dem gepufferten Event abgleichen.",
+  "bereich": "api",
+  "datum": "2026-10-08",
+  "wichtig": false
+}

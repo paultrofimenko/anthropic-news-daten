@@ -1,0 +1,13 @@
+{
+  "id": "agent-automatisierungen-bauen",
+  "quelle": "claude-dev-rss",
+  "url": "https://claude.dev/blog/building-effective-agent-automations/",
+  "titel_original": "Building effective agent automations",
+  "titel_de": "Wie man zuverlässige Agent-Automatisierungen baut",
+  "kurz_de": "Blogbeitrag mit Referenzimplementierung: ein geplanter Managed Agent liest Slack und GitHub, merkt sich den Stand je Quelle und postet einen kurzen Tagesüberblick. Dazu sechs Regeln gegen typische Fehler.",
+  "briefing_de": "Der Beitrag (8. Okt 2026) zeigt einen täglichen Brief auf Claude Managed Agents (Beta); Code in anthropics/claude-quickstarts unter managed-agents/daily-brief.\n- Sechs Bausteine: Quellen (nur lesend), Ziel, Agent, Zeitplan (Cron), Memory, Leitplanken.\n- Regeln: ab Lesezeichen statt festem Zeitfenster lesen; fehlgeschlagene Lesezugriffe als „nicht lesbar“ melden; Einträge vor dem Posten neu prüfen; Post erst nach Slack-Bestätigung als gesendet zählen; Präferenzen jeden Lauf neu lesen; nur Lesezugriff und Ausgabenlimit je Lauf.\n- Zugangsdaten liegen in einem Vault außerhalb der Sandbox; Slack-Token ersetzt die Plattform nur für erlaubte Hosts.\n- Beispiel-Budget: 500 Cent je Lauf; bei Erreichen pausiert der Lauf mit budget_reached.",
+  "arbeitsweise_de": "Wer geplante Agenten baut, kann die sechs Regeln als Checkliste nehmen: Lesezeichen je Quelle, Zeitzone setzen, Budget pro Lauf.",
+  "bereich": "entwickler",
+  "datum": "2026-10-08",
+  "wichtig": false
+}

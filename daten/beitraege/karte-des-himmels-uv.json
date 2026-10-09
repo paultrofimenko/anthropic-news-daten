@@ -1,0 +1,12 @@
+{
+  "id": "karte-des-himmels-uv",
+  "quelle": "anthropic",
+  "url": "https://www.anthropic.com/research/the-missing-map-of-the-sky",
+  "titel_original": "The missing map of the sky",
+  "titel_de": "Claude Science erstellt erste vollständige UV-Karte des Himmels",
+  "kurz_de": "Mit Claude Science und vielen parallelen Agenten entstand laut Anthropic die erste vollständige UV-Karte des Himmels. Etwa ein Drittel des Himmels war nie in UV beobachtet und wurde geschätzt.",
+  "briefing_de": "- Brice Ménard (Johns Hopkins, Anthropic) kombinierte Daten aus GALEX, Swift, FIMS/SPEAR und TD-1 bei 154 nm und 232 nm.\n- Agenten sammelten Surveys, entfernten Sternenglanz, kalibrierten Instrumente und führten alles zusammen.\n- Lücken wurden per Inpainting und Zusammenhängen aus Sichtbar-, Infrarot- und Radiodaten geschätzt; Tests liegen laut Artikel etwa 10 % neben den Messwerten.\n- UV-Schätzungen für über 100 Millionen Sterne aus Gaia-Daten; jedes Pixel ist als „measured“ oder „predicted“ markiert.",
+  "bereich": "forschung",
+  "datum": "2026-10-08",
+  "wichtig": false
+}

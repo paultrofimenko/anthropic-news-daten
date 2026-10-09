@@ -1,0 +1,13 @@
+{
+  "id": "nutzungsrichtlinie-2026",
+  "quelle": "anthropic",
+  "url": "https://www.anthropic.com/news/2026-usage-policy-update",
+  "titel_original": "2026 Usage Policy update",
+  "titel_de": "Neue Nutzungsrichtlinie gilt ab 12. November",
+  "kurz_de": "Anthropic aktualisiert die Usage Policy: neue Regeln zu Täuschungskampagnen, Waffen, Überwachung, Hardware-Steuerung und Abuse gegenüber Modellen. Sie gilt ab 12. November.",
+  "briefing_de": "- Neuer Abschnitt zu Täuschungskampagnen und künstlicher Aktivität (Fake-Konten, erfundene Nachrichtenseiten, Einflussoperationen).\n- Wahlen: Verbot nun auf Täuschung von Wählern und Störung von Wahlen beschränkt; das pauschale Verbot personalisierter Ansprache entfällt.\n- Waffen: Verbote umfassen ausdrücklich Steuerungssoftware und Aktionen wie das Bewaffnen von Drohnen.\n- Überwachung: Verfolgen von Personen ohne Einwilligung verboten; Claude soll nicht entscheiden, wer ermittelt oder angeklagt wird.\n- Hardware mit autonomen physischen Aktionen: ein qualifizierter Mensch muss beobachten und stoppen können; sichere Ruhelage bei Verbindungsabbruch.\n- Neu: Verbot anhaltender, grundloser Grausamkeit gegenüber Modellen.\n- Supported Regions: Nutzung durch Personen, Firmen und mehrheitlich kontrollierte Entitäten aus nicht unterstützten Regionen ist verboten.",
+  "arbeitsweise_de": "Wer Claude in Produkte mit Überwachungs-, Hardware- oder Kampagnen-Bezug einbaut, sollte den neuen Text vor dem 12. November prüfen.",
+  "bereich": "richtlinien",
+  "datum": "2026-10-08",
+  "wichtig": false
+}

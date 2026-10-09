@@ -1,0 +1,13 @@
+{
+  "id": "claude-code-2-1-295",
+  "quelle": "code-changelog",
+  "url": "https://code.claude.com/docs/en/changelog",
+  "titel_original": "Claude Code 2.1.295",
+  "titel_de": "Claude Code 2.1.295: onFailure „block“ für Hooks und viele Fixes",
+  "kurz_de": "Fassung 2.1.295 bringt onFailure: \"block\" für Command- und HTTP-Hooks, OSC-7501-Statusanzeige fürs Terminal, mehr Optionen am Claude-apps-Gateway und Mods sowie zahlreiche Fixes.",
+  "briefing_de": "Neu in Fassung 2.1.295:\n- Command- und HTTP-Hooks kennen onFailure: \"block\": Ein Hook, der nicht startet, ein Timeout hat oder unerwartet endet, blockiert die Aktion, statt sie durchzulassen.\n- Program Status Protocol (OSC 7501): Terminals, die es unterstützen, zeigen, ob Claude Code arbeitet, auf dich wartet oder fertig ist.\n- Claude-apps-Gateway: timeouts.upstream_ttfb_ms für Bedrock-, Vertex- und Foundry-Upstreams, optionale models-Liste je Upstream, upstream_request_id im inference-Audit-Event, request-id-Header in Antworten.\n- Mods: $.ui.notify für native Benachrichtigungen; Button nimmt Kinder (Strings und Text).\n- Neue Variable CLAUDE_CODE_RETRY_WATCHDOG_MAX_WAIT_MS begrenzt die Wartezeit des unbeaufsichtigten Retry-Modus bei 429/529.\n- Viele Fixes, u. a. zu [1m]-Modellen hinter Gateway/Bedrock/Vertex/Foundry, MCP-Verbindungen, claude -p und Plugins.",
+  "arbeitsweise_de": "Wer Hooks als Sicherheitsnetz nutzt, kann mit onFailure: \"block\" festlegen, dass ein defekter Hook die Aktion stoppt statt sie durchzulassen.",
+  "bereich": "claude-code",
+  "datum": "2026-10-09",
+  "wichtig": false
+}
