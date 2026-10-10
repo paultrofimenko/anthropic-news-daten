@@ -1,7 +1,7 @@
 {
  "version": 1,
- "erzeugt": "2026-10-10T09:53:55.288Z",
- "anzahl": 41,
+ "erzeugt": "2026-10-10T21:47:38.469Z",
+ "anzahl": 42,
  "beitraege": [
   {
    "id": "claude-code-2-1-296",
@@ -518,6 +518,19 @@
     "art": "neu",
     "titel": "Sonnet 5.5 erscheint"
    }
+  },
+  {
+   "id": "auto-mode-classifier-abrechnung",
+   "quelle": "code-doku",
+   "url": "https://code.claude.com/docs/en/auto-mode-classifier-billing",
+   "titel_original": "Auto mode classifier request charges",
+   "titel_de": "Auto Mode: Hinweis zu Classifier-Anfragen und Kosten",
+   "kurz_de": "Neue Doku-Seite erklärt den Claude-Code-Hinweis, dass eine Session nicht für kostenlose Classifier-Anfragen im Auto Mode berechtigt ist – meist wegen eines LLM-Gateways.",
+   "briefing_de": "Neue Seite in der Claude-Code-Doku zum Auto Mode:\n- Wo serverseitige Prüfungen aktiv sind, führt der Server die Classifier-Prüfungen ohne Kosten als Teil der Session-Anfragen aus.\n- Der Hinweis erscheint, wenn diese Prüfungen die Session nicht erreichen; dann stellt Claude Code eigene Classifier-Anfragen, die auf die Token-Nutzung zählen. Auto Mode funktioniert weiter.\n- Häufigste Ursache ist ein LLM-Gateway oder Proxy, der Header oder Felder verändert oder entfernt. Pro-, Max- und Team-Pläne sehen den Hinweis nie.\n- Mit Enter fortfahren, oder die Variable CLAUDE_CODE_AUTO_MODE_SERVER=0 setzen, um den Hinweis zu unterdrücken (laut Doku temporär).",
+   "arbeitsweise_de": "Wenn du Claude Code hinter einem Gateway betreibst: Das Gateway sollte Header, Request-Felder und Antworten unverändert durchreichen, damit die kostenlosen serverseitigen Prüfungen greifen.",
+   "bereich": "claude-code",
+   "datum": "2026-09-26",
+   "wichtig": false
   },
   {
    "id": "opus-5-5-aufgabenkosten",
