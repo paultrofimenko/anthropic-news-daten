@@ -3,9 +3,9 @@
   "quelle": "platform-release-notes",
   "url": "https://platform.claude.com/docs/en/manage-claude/compliance-api",
   "titel_original": "Compliance API: chats from the unified Claude experience",
-  "titel_de": "Compliance API liefert auch Chats der vereinheitlichten Claude-Oberfläche",
-  "kurz_de": "Die Chat-Endpunkte der Compliance API geben nun auch Chats aus dem vereinheitlichten Claude-Erlebnis zurück (Beta, Claude Enterprise).",
-  "briefing_de": "- Die Chat-Endpunkte der Compliance API liefern jetzt auch Chats der vereinheitlichten Claude-Oberfläche.\n- Status: Beta für Claude-Enterprise-Organisationen.\n- Es genügt der bestehende Compliance Access Key.",
+  "titel_de": "Compliance API: Chats der vereinheitlichten Oberfläche und Claude-Docs-Dateien",
+  "kurz_de": "Die Compliance API liefert auch Chats der vereinheitlichten Claude-Oberfläche und kann Claude-Docs-Dokumente als Word-Dateien herunterladen (jeweils Beta).",
+  "briefing_de": "- Die Chat-Endpunkte der Compliance API liefern jetzt auch Chats der vereinheitlichten Claude-Oberfläche.\n- Status: Beta für Claude-Enterprise-Organisationen.\n- Es genügt der bestehende Compliance Access Key.\n- Neu (Nachtrag): Die Compliance API kann Claude-Docs-Dokumente als Word-Dateien herunterladen, ebenfalls in Beta. Details unter „Retrieve files and artifacts“ in der Doku.",
   "bereich": "unternehmen",
   "datum": "2026-10-08",
   "wichtig": false
