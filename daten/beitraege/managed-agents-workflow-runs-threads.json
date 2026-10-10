@@ -1,0 +1,13 @@
+{
+  "id": "managed-agents-workflow-runs-threads",
+  "quelle": "platform-doku",
+  "url": "https://platform.claude.com/docs/en/managed-agents/workflow-runs",
+  "titel_original": "Workflow runs / Session threads (Managed Agents docs)",
+  "titel_de": "Managed Agents: neue Doku zu Workflow-Runs und Session-Threads",
+  "kurz_de": "Zwei neue Doku-Seiten zu Managed Agents: Workflow-Runs mit Zuständen, Events und Limits sowie Session-Threads zum Auflisten, Unterbrechen und Archivieren. Beides ist in der Beta.",
+  "briefing_de": "Neue Seiten in der Managed-Agents-Doku (Beta, Header managed-agents-2026-04-01):\n- Workflow-Runs: Ein Run ist die Ausführung eines vom Agenten geschriebenen Workflows; Zustände running, idle und ended, Verfolgung über workflow_run.*-Events im Event-Stream.\n- Limits: 64 gleichzeitig arbeitende Threads je Run, 1.000 gestartete Agenten pro Run, 24 Stunden Standard-Laufzeit, 10 offene Runs je Sitzung. Am Budget pausieren alle offenen Runs.\n- Session-Threads: Threads einer Multiagent-Sitzung auflisten, mit user.interrupt unterbrechen und archivieren; höchstens 25 Child-Threads gleichzeitig, Threads eines Runs sind davon ausgenommen.\n- Ein Interrupt beendet keinen Run.",
+  "arbeitsweise_de": "Wer Workflows mit Managed Agents nutzt: Runs über den Event-Stream verfolgen statt abzufragen und Tools so bauen, dass ein doppelter Aufruf unschädlich ist, weil ein Run Arbeit auf mehreren Threads wiederholen kann.",
+  "bereich": "api",
+  "datum": "2026-10-10",
+  "wichtig": false
+}
