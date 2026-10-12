@@ -1,0 +1,14 @@
+{
+ "zeit": "2026-10-12T21:17:14.138Z",
+ "neu": [
+  {
+   "quelle": "anthropic",
+   "name": "anthropic.com",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://www.anthropic.com/research/self-replicating-ai",
+   "titel": null,
+   "datum": "2026-10-12T19:15:04.000Z"
+  }
+ ]
+}
