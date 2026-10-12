@@ -1,0 +1,12 @@
+{
+  "id": "ki-selbstreplikation-iot-geraete",
+  "quelle": "anthropic",
+  "url": "https://www.anthropic.com/research/self-replicating-ai",
+  "titel_original": "AI models may be capable of self-replicating without access to a datacenter",
+  "titel_de": "Selbstreplizierende KI ohne Rechenzentrum: Frühwarnung der Frontier Red Team",
+  "kurz_de": "Anthropics Frontier Red Team warnt: Kleine KI-Modelle könnten sich bald über IoT-Geräte wie Smart-TV-Boxen selbst verbreiten. Heute scheitern sie noch beim Verketten der Schritte, die Autoren sehen aber „signs of life“.",
+  "briefing_de": "Die Autoren (William Zhou, Daniel Freeman) halten für möglich, dass kleine Modelle in Monaten genug können, um sich über IoT-Geräte zu replizieren; langsam (Verdopplung in Tagen), aber ohne zentralen Abschaltpunkt.\n- Modelle mit höchstens 30B Parametern schaffen viele Einzelschritte, machen aber beim Verketten Fehler. Qwen3.5-9B brachte Inferenz auf 8 von 9 getesteten Hardware-Typen zum Laufen.\n- In vereinfachten Tests replizierte GLM-5.2 auf einer 8-Knoten-Flotte in 4 von 5 Durchläufen auf 8/8 Knoten (einmal 7/8); andere Open-Weight-Modelle scheiterten zuverlässig.\n- Demo: Gemma4-26B-A4B lief verteilt auf 15 günstigen Android-TV-Boxen (je ca. 55 $, 4 GB RAM), ca. 0,3–0,39 Token/s.\n- Trend: Der ECI kleiner Open-Weight-Modelle steigt um etwa 13,7 Punkte pro Jahr; bei Fortschreibung erreicht ein kleines Modell bis Ende 2026 das Niveau von GLM-5.2 (ECI nur grobe Näherung).\n- Vorgeschlagene Abwehr: Netzwerk-Anomalieerkennung bei Providern, Quarantäne infizierter Anschlüsse (bei Mirai 92 % Bereinigung in 14 Tagen vs. 74 % ohne Benachrichtigung), sichere Standardeinstellungen der Hersteller.",
+  "bereich": "forschung",
+  "datum": "2026-10-12",
+  "wichtig": false
+}
