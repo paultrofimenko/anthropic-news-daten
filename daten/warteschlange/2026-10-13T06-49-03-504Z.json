@@ -1,0 +1,14 @@
+{
+ "zeit": "2026-10-13T06:49:03.504Z",
+ "neu": [
+  {
+   "quelle": "anthropic",
+   "name": "anthropic.com",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://www.anthropic.com/research/distillation-defenses",
+   "titel": null,
+   "datum": "2026-10-12T23:54:41.000Z"
+  }
+ ]
+}
