@@ -1,0 +1,12 @@
+{
+  "id": "unterstuetzte-regionen-richtlinie",
+  "quelle": "anthropic",
+  "url": "https://www.anthropic.com/legal/supported-regions",
+  "titel_original": "Supported Regions Policy",
+  "titel_de": "Richtlinie zu unterstützten Ländern und Regionen",
+  "kurz_de": "Anthropic führt die unterstützten Länder und Regionen auf einer Richtlinien-Seite (gültig ab 12. Mai 2026). Nicht gelistete Länder gelten als nicht unterstützt.",
+  "briefing_de": "- Die Seite enthält eine alphabetische Liste unterstützter Länder und Regionen; die Richtlinie gilt laut Seite ab 12. Mai 2026.\n- Die Ukraine ist eingeschränkt unterstützt, ohne die Regionen Crimea, Donetsk, Kherson, Luhansk und Zaporizhzhia.\n- Nicht gelistete Länder gelten als nicht unterstützt – das betrifft auch Nutzer vor Ort sowie Unternehmen mit Sitz dort oder mehrheitlicher Kontrolle durch dortige Personen oder Unternehmen.",
+  "bereich": "richtlinien",
+  "datum": "2026-10-13",
+  "wichtig": false
+}
