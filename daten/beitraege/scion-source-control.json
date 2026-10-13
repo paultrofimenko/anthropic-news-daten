@@ -1,0 +1,13 @@
+{
+  "id": "scion-source-control",
+  "quelle": "anthropic",
+  "url": "https://www.anthropic.com/engineering/redesigning-source-control",
+  "titel_original": "Redesigning source control at Anthropic",
+  "titel_de": "Scion: Anthropic baut eigene Versionsverwaltung statt git",
+  "kurz_de": "Weil Claude immer mehr Code schreibt, wurde Source Control zum Engpass. Anthropic baute das System Scion und zog das Monorepo in fünf Monaten von git um. Es ist nicht zur Veröffentlichung gedacht.",
+  "briefing_de": "Source Control war der größte Engpass der Entwicklung: Merges pro Tag stiegen von rund 2.500 (Mai 2026) auf über 30.000 (September 2026).\n- Scion ist ein intern gebautes Versionsverwaltungssystem; der Server übernimmt die schwere Arbeit (Historie, Blame, Commits, Merges), der Client bleibt leicht.\n- Der Zugriff läuft per API, sodass viele Jobs kein lokales Repo brauchen; Working Copies sind optional und sparse.\n- Rund 25 Mio. CI-Checkouts pro Tag laufen etwa zwei Größenordnungen schneller (von Minuten auf Sekunden); die Infrastruktur ist etwa 200-mal kleiner als die alten git-Mirrors.\n- Sieben Leute bauten Scion und das Review-Tool Antique und migrierten in fünf Monaten. Scion ist kein allgemeiner git-Ersatz und zu speziell zum Veröffentlichen.",
+  "arbeitsweise_de": "Wenn Agenten den Großteil der Commits erzeugen, passen globale Locks und klassische Merge Queues schlecht: Anthropic setzt stattdessen auf Tests nach dem Merge und vor dem Deploy. Für eigene Setups lohnt der Blick auf serverseitige Operationen sowie sparse und shallow Checkouts.",
+  "bereich": "engineering",
+  "datum": "2026-10-13",
+  "wichtig": false
+}
