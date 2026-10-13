@@ -1,8 +1,32 @@
 {
  "version": 1,
- "erzeugt": "2026-10-13T06:49:52.160Z",
- "anzahl": 44,
+ "erzeugt": "2026-10-13T22:47:37.515Z",
+ "anzahl": 46,
  "beitraege": [
+  {
+   "id": "scion-source-control",
+   "quelle": "anthropic",
+   "url": "https://www.anthropic.com/engineering/redesigning-source-control",
+   "titel_original": "Redesigning source control at Anthropic",
+   "titel_de": "Scion: Anthropics neues Source-Control-System",
+   "kurz_de": "Anthropic hat sein Monorepo von Git auf das eigene System Scion umgestellt, weil Agenten die Zahl der Merges von rund 2.500 auf über 30.000 pro Tag getrieben haben.",
+   "briefing_de": "Source Control war der größte Engpass: Im Mai 2026 wurden im Schnitt etwa 2.500 Änderungen pro Tag gemergt, im September über 30.000.\n- Das in-house System Scion löste Git ab; die Migration des Monorepos dauerte fünf Monate, das Team bestand aus sieben Personen.\n- Prinzipien: Clients sind immer online, der Server übernimmt die Hauptarbeit, Commits sind günstig und sperrfrei, Working Copies sind optional.\n- Checkouts sind etwa zwei Größenordnungen schneller (Sekunden statt Minuten), CI spart rund 25 % CPU-Kapazität.\n- Scion ist laut Artikel kein allgemeiner Git-Ersatz, sondern für extrem große Monorepos gedacht.",
+   "bereich": "engineering",
+   "datum": "2026-10-13",
+   "wichtig": false
+  },
+  {
+   "id": "unterstuetzte-regionen-richtlinie",
+   "quelle": "anthropic",
+   "url": "https://www.anthropic.com/legal/supported-regions",
+   "titel_original": "Supported Regions Policy",
+   "titel_de": "Richtlinie zu unterstützten Ländern und Regionen",
+   "kurz_de": "Anthropic führt die unterstützten Länder und Regionen auf einer Richtlinien-Seite (gültig ab 12. Mai 2026). Nicht gelistete Länder gelten als nicht unterstützt.",
+   "briefing_de": "- Die Seite enthält eine alphabetische Liste unterstützter Länder und Regionen; die Richtlinie gilt laut Seite ab 12. Mai 2026.\n- Die Ukraine ist eingeschränkt unterstützt, ohne die Regionen Crimea, Donetsk, Kherson, Luhansk und Zaporizhzhia.\n- Nicht gelistete Länder gelten als nicht unterstützt – das betrifft auch Nutzer vor Ort sowie Unternehmen mit Sitz dort oder mehrheitlicher Kontrolle durch dortige Personen oder Unternehmen.",
+   "bereich": "richtlinien",
+   "datum": "2026-10-13",
+   "wichtig": false
+  },
   {
    "id": "distillation-abwehr",
    "quelle": "anthropic",
