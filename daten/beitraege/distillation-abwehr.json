@@ -1,0 +1,13 @@
+{
+  "id": "distillation-abwehr",
+  "quelle": "anthropic",
+  "url": "https://www.anthropic.com/research/distillation-defenses",
+  "titel_original": "Strengthening our defenses against distillation attacks",
+  "titel_de": "Anthropic verstärkt die Abwehr gegen Distillation",
+  "kurz_de": "Neue Schutzmaßnahmen senken laut Anthropic die von Distillern abgreifbaren Reasoning-Daten um etwa 90 bis 99 Prozent. Dazu gehören „preserved thinking“, ein Klassifikator und strengere Limits.",
+  "briefing_de": "Anthropic beschreibt neue Maßnahmen gegen Distillation, also das unerlaubte Abgreifen von Claudes Fähigkeiten für andere Modelle:\n- Preserved thinking: Neue API-Konten (angelegt ab dem 31. August 2026) können den früheren Kontext von Claude nicht mehr bearbeiten. Mit Claude Sonnet 5.5 sind Reasoning-Transkripte auf die Organisation beschränkt, deren Anfrage sie erzeugt hat.\n- Ein zweistufiger Klassifikator erkennt Extraktionsversuche; die Falsch-Positiv-Rate liegt laut Beitrag unter 0,1 %. Er läuft auf Claude Sonnet 5.5, Opus 5 und 5.5 sowie Fable 5 und 5.1.\n- Wiederholungstäter bekommen strengere Nutzungslimits und Kontosperren. Seit dem 24. September werden Anfragen, die von Schutzmaßnahmen in bestimmten Bereichen (u. a. Distillation) blockiert wurden, berechnet.\n- Ergebnis: Von Distillern extrahierte Reasoning-Tokens sanken um das 10- bis über 100-Fache; zehntausende verknüpfte Konten wurden gesperrt.\n- Anthropic nennt Nachteile: Manche Integrationen müssen angepasst werden, und der Klassifikator blockiert selten harmlose Anfragen.",
+  "arbeitsweise_de": "Wenn du die API nutzt und Claudes frühere Reasoning-Inhalte im Kontext bearbeitest, prüfe bei neuen Konten, ob deine Integration mit „preserved thinking“ funktioniert. Rechne außerdem damit, dass vom Klassifikator blockierte Anfragen berechnet werden.",
+  "bereich": "richtlinien",
+  "datum": "2026-10-12",
+  "wichtig": false
+}
