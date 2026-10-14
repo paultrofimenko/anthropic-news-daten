@@ -1,0 +1,13 @@
+{
+  "id": "claude-code-2-1-300",
+  "quelle": "code-changelog",
+  "url": "https://code.claude.com/docs/en/changelog",
+  "titel_original": "Claude Code 2.1.300",
+  "titel_de": "Claude Code 2.1.300: OTel-Cache-Felder, Mod-Hooks und Worktree-Fixes",
+  "kurz_de": "Fassung 2.1.300 ergänzt cache_creation_5m_tokens und cache_creation_1h_tokens im OpenTelemetry-Event, /advisor auf Claude Platform on AWS, neue Mod-Hooks und viele Fixes.",
+  "briefing_de": "Neu in Fassung 2.1.300:\n- OpenTelemetry: Das api_request-Event trennt Cache-Writes nach Lebensdauer (cache_creation_5m_tokens, cache_creation_1h_tokens); Trace-Spans bekommen GenAI-Attribute wie gen_ai.provider.name und gen_ai.tool.name.\n- /advisor auf Claude Platform on AWS: Ein Advisor läuft erst, wenn du ihn per /advisor, advisorModel oder --advisor wählst; CLAUDE_CODE_DISABLE_ADVISOR_TOOL=1 schaltet ihn ab.\n- Mods: virtualText, $.ui.view({ agentId }), dir-Prop für Text, prompt.change-Hook und Umschreiben von prompt und model im agent.spawn-Hook.\n- Große Anfragen an api.anthropic.com nutzen gzip; CLAUDE_CODE_GZIP_REQUEST_BODIES=0 schaltet das ab.\n- Fixes u. a. zu --worktree (falscher Start-Commit, reftable-Repos), Resume von Headless-/SDK-Sessions nach Compaction und Cloud-Sessions.",
+  "arbeitsweise_de": "Wer Claude-Code-Telemetrie auswertet, kann Cache-Kosten jetzt nach 5-Minuten- und 1-Stunden-Cache trennen.",
+  "bereich": "claude-code",
+  "datum": "2026-10-14",
+  "wichtig": false
+}

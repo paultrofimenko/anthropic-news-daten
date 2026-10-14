@@ -1,0 +1,13 @@
+{
+  "id": "claude-code-2-1-299",
+  "quelle": "code-changelog",
+  "url": "https://code.claude.com/docs/en/changelog",
+  "titel_original": "Claude Code 2.1.299",
+  "titel_de": "Claude Code 2.1.299: Idle-Compaction und neue Mod-Funktionen",
+  "kurz_de": "Fassung 2.1.299 komprimiert lange, ruhende Konversationen vor Ablauf des Prompt-Caches (Idle-Compaction) und bringt CLAUDE_CODE_DISABLE_FILE_MENTIONS, neue Mod-Hooks und viele Fixes.",
+  "briefing_de": "Neu in Fassung 2.1.299:\n- Idle-Compaction im Terminal: Eine Konversation mit 200K+ Tokens, die etwa 54 Minuten ruht, wird vor Ablauf des einstündigen Prompt-Caches komprimiert. Mit CLAUDE_CODE_IDLE_COMPACT_MIN_TOKENS lässt sich die 200K-Grenze ändern, \"idleCompaction\": false in settings.json schaltet sie ab (beides ab v2.1.290).\n- CLAUDE_CODE_DISABLE_FILE_MENTIONS: Bei @-Dateierwähnungen bekommt Claude nur die Pfade statt der Inhalte.\n- Mods: $.prompt.media, $.session.identity() (für per Managed Settings installierte Mods), size/weight/mono/tabular für Text und benannte Abstandsstufen für Box; bold ist zugunsten von weight veraltet.\n- Neu: --shutdown-drain-sec für claude self-hosted-runner orchestrator, --disallow-tools für claude plugin eval, /usage-Warnungen für max effort, Workflows, Always-on-Kontext und große Tool-Ergebnisse.\n- Viele Fixes, u. a. zu Remote Control, Sandbox (WSL2, --plugin-dir), Speicherverbrauch beim Debug-Logging und /usage-Anzeigen über 100 %.",
+  "arbeitsweise_de": "Wer oft lange Sessions pausiert, spart durch Idle-Compaction erneutes Verarbeiten des Kontexts; bei Bedarf Grenze oder Abschaltung per Einstellung anpassen.",
+  "bereich": "claude-code",
+  "datum": "2026-10-14",
+  "wichtig": false
+}

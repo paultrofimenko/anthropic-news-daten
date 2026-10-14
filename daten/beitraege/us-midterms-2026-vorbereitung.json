@@ -1,0 +1,12 @@
+{
+  "id": "us-midterms-2026-vorbereitung",
+  "quelle": "anthropic",
+  "url": "https://www.anthropic.com/news/2026-us-midterms",
+  "titel_original": "Preparing for the 2026 US midterms",
+  "titel_de": "Anthropic zu den US-Zwischenwahlen 2026: Schutzmaßnahmen",
+  "kurz_de": "Anthropic beschreibt Schutzmaßnahmen vor den US-Midterms: offizielle Wahlinfos von Democracy Works in Claude.ai, Wahlergebnisse am Wahlabend und neue Classifier gegen mehrstufigen Missbrauch.",
+  "briefing_de": "Wichtigste Punkte:\n- Politik-Themen machen etwa 5,75 % der US-Gespräche auf Claude.ai aus, Wahlen und Abstimmung etwa 0,51 %; Fragen, wen man wählen soll, rund 0,01 %.\n- Noch im Oktober nutzt Claude.ai für US-Nutzer offizielle Wahlinfos von Democracy Works (z. B. Wahllokal, nötiger Ausweis); am Wahlabend zeigt Claude aktuelle offizielle Ergebnisse.\n- Opus 5.5, Sonnet 5.5 und Haiku 5.5 erreichen 99 % in der Evenhandedness-Evaluation.\n- Externe Tests (ISD, McCain Institute) zeigten: Einzelne schädliche Anfragen werden abgelehnt, aufgeteilte Kampagnen können durchrutschen; neue Classifier erkennen nun mehrstufigen Missbrauch.\n- Bericht über eine Fake-News-Seite, die mit Claude Midterm-Berichte im Sinne russischer, iranischer und nordkoreanischer Narrative erstellte.",
+  "bereich": "richtlinien",
+  "datum": "2026-10-14",
+  "wichtig": false
+}

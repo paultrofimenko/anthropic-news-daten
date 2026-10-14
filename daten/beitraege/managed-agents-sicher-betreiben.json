@@ -1,0 +1,13 @@
+{
+  "id": "managed-agents-sicher-betreiben",
+  "quelle": "platform-doku",
+  "url": "https://platform.claude.com/docs/en/managed-agents/secure-deployment",
+  "titel_original": "Secure your Managed Agents deployment",
+  "titel_de": "Managed Agents: Neue Leitfäden zum sicheren Betrieb",
+  "kurz_de": "Drei neue Doku-Seiten (Beta) erklären, mit welchen Einstellungen Managed Agents begrenzt werden, welche Risiken bestehen und wie Sessions per Offline-Reviewer und Webhooks überwacht werden.",
+  "briefing_de": "Neue Seiten zu Managed Agents (Beta, Header managed-agents-2026-04-01):\n- Sicherheits-Checkliste nach Wichtigkeit: Cloud oder Self-hosted wählen, Netzwerk auf limited mit nur nötigen Hosts, Zugangsdaten in Vaults, allowed_domains für web_search/web_fetch, permission_policy je Tool, kleinstmögliches Tool-Set, budget je Session und Deployment.\n- Untrusted Input nicht mit mächtigen Tools kombinieren: Kein Agent, der unvertraute Eingaben liest, hat ein schreibendes oder ausführendes Tool auf always_allow.\n- Risiken-Seite: Prompt Injection und unerwartete Schritte von Claude; die Einstellungen senken das Risiko, entfernen es aber nicht.\n- Überwachung: Optional prüft ein Offline-Reviewer über die Messages API jedes Session-Transkript (Overreach, wiederholte Versuche, Falschberichte); Webhooks wie session.status_idled, session.budget_reached und session.status_terminated melden Sessions, die Aufmerksamkeit brauchen.",
+  "arbeitsweise_de": "Wer Managed Agents produktiv betreibt, kann die Checkliste als Prüfliste für Netzwerk, Zugangsdaten, Freigaben und Budgets nutzen.",
+  "bereich": "api",
+  "datum": "2026-10-14",
+  "wichtig": false
+}

@@ -1,0 +1,17 @@
+{
+  "id": "opentelemetry-export-beta",
+  "quelle": "platform-doku",
+  "url": "https://platform.claude.com/docs/en/manage-claude/opentelemetry",
+  "titel_original": "OpenTelemetry for the Claude API",
+  "titel_de": "OpenTelemetry-Export für die Claude API startet in der Beta",
+  "kurz_de": "Messages-API-Anfragen und Managed-Agents-Sessions lassen sich jetzt per OpenTelemetry in der eigenen Observability-Plattform nachverfolgen – über SDK-Spans oder ein Ziel in der Claude Console (Beta).",
+  "briefing_de": "Neu am 14. Oktober 2026 (Beta):\n- SDK-Tracing: Das Claude SDK erzeugt Spans in Python, TypeScript, C#, Go, Java, PHP und Ruby.\n- API-Tracing: Ein Admin legt in der Claude Console (oder per Admin API und CLI) ein Ziel (destination) mit OTLP/HTTP-Endpunkt an; die API sendet Spans für Modellanfragen und Tool-Nutzung.\n- Beides zusammen zeigt SDK- und API-Spans in einer Trace; die Spans folgen den GenAI Semantic Conventions.\n- Neue Seiten: Span-Referenz und API-Referenz für telemetry_destinations (erstellen, auflisten, ändern, löschen, testen, Workspaces zuordnen).\n- Während der Beta können sich SDK-Optionen und Span-Schema inkompatibel ändern; SDK-Version festpinnen.",
+  "arbeitsweise_de": "Wer Claude in Produktion betreibt, kann Fehler, Latenz und Tokenverbrauch im vorhandenen Observability-Tool auswerten; SDK-Version dafür pinnen.",
+  "bereich": "api",
+  "datum": "2026-10-14",
+  "wichtig": true,
+  "ereignis": {
+    "art": "neu",
+    "titel": "OpenTelemetry-Export für die API (Beta)"
+  }
+}
