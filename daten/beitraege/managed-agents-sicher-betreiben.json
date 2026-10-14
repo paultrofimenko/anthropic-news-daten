@@ -1,0 +1,13 @@
+{
+  "id": "managed-agents-sicher-betreiben",
+  "quelle": "platform-doku",
+  "url": "https://platform.claude.com/docs/en/managed-agents/secure-deployment",
+  "titel_original": "Secure your Managed Agents deployment",
+  "titel_de": "Managed Agents: neue Leitfäden zu Sicherheit und Überwachung",
+  "kurz_de": "Drei neue Doku-Seiten zu Managed Agents (Beta) listen die wichtigsten Sicherheitseinstellungen, erklären Risiken und Sandbox-Grenzen und zeigen, wie man Sessions überwacht.",
+  "briefing_de": "Drei neue Seiten in der Managed-Agents-Doku:\n- Secure your Managed Agents deployment: Einstellungen nach Wichtigkeit, u. a. networking.type auf limited mit nur nötigen Hosts, Zugangsdaten in Vaults, allowed_domains für web_fetch und web_search, permission_policy je Tool, kleinstmögliches Tool-Set und ein budget je Session.\n- Security risks and sandbox boundaries: Warum die Einstellungen wichtig sind (Prompt Injection, offenes Netz, unerwartete Schritte von Claude) und was die Sandbox kann und nicht kann.\n- Review and monitor agent sessions: optionaler Offline-Reviewer, der Session-Events über die Messages API prüft, Webhooks wie session.status_idled und session.budget_reached sowie Aufbewahrung (Session-Verlauf bis zum Löschen, Sandbox-Zustand 30 Tage).\n- Managed Agents ist derzeit nicht für Zero Data Retention oder HIPAA-BAA-Abdeckung vorgesehen.",
+  "arbeitsweise_de": "Wer Managed Agents einsetzt, sollte bei jedem Environment networking explizit auf limited setzen, da ein fehlender Eintrag unrestricted ergeben kann, und Webhooks für idle, Budget und Abbruch einrichten.",
+  "bereich": "api",
+  "datum": "2026-10-14",
+  "wichtig": false
+}
