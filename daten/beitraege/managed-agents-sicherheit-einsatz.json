@@ -1,0 +1,13 @@
+{
+  "id": "managed-agents-sicherheit-einsatz",
+  "quelle": "platform-doku",
+  "url": "https://platform.claude.com/docs/en/managed-agents/secure-deployment",
+  "titel_original": "Secure your Managed Agents deployment",
+  "titel_de": "Managed Agents: Sicherheitsleitfaden für den Einsatz",
+  "kurz_de": "Neue Doku-Seiten zu Managed Agents (Beta) listen die Einstellungen, die begrenzen, was ein Agent erreichen und tun kann – dazu Überwachung und Sandbox-Grenzen.",
+  "briefing_de": "Drei neue Seiten zur sicheren Nutzung von Managed Agents (Beta):\n- Leitfaden: Einstellungen nach Wichtigkeit, u. a. Ausführungsort, begrenztes Netzwerk (networking.type limited), Zugangsdaten in Vaults, allowed_domains für Web-Tools, permission_policy, kleinstmögliche Tool-Auswahl und Limits zum Stoppen.\n- Überwachung: optional ein Offline-Reviewer, der Session-Events über die Messages API prüft; Webhooks wie session.status_idled, session.status_terminated und session.budget_reached.\n- Risiken: erklärt, warum die Einstellungen wichtig sind (Prompt Injection, Zugangsdaten im Sandbox-Code, offenes Netzwerk, unerwartete Schritte) und was die Sandbox kann und nicht kann.",
+  "arbeitsweise_de": "Wer Managed Agents baut, kann die Empfehlungen als Checkliste nutzen, etwa Netzwerk auf limited setzen und Tools standardmäßig deaktivieren.",
+  "bereich": "api",
+  "datum": "2026-10-14",
+  "wichtig": false
+}
