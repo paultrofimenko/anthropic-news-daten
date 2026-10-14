@@ -1,0 +1,13 @@
+{
+  "id": "managed-agents-sicher-betreiben",
+  "quelle": "platform-doku",
+  "url": "https://platform.claude.com/docs/en/managed-agents/secure-deployment",
+  "titel_original": "Secure your Managed Agents deployment",
+  "titel_de": "Managed Agents: Neue Leitfäden zur sicheren Bereitstellung",
+  "kurz_de": "Die Platform-Doku hat drei neue Seiten zur Absicherung von Managed Agents: Einstellungen nach Wichtigkeit, Überwachung und Review von Sessions sowie Sicherheitsrisiken und Sandbox-Grenzen.",
+  "briefing_de": "Drei neue Doku-Seiten zu Managed Agents (Beta):\n- „Secure your Managed Agents deployment“ listet die Einstellungen, die begrenzen, was ein Agent erreichen und tun kann: Netzwerk auf limited mit nur nötigen Hosts, Zugangsdaten in Vaults, allowed_domains für web_search und web_fetch, permission_policy je Tool, kleinstmögliches Tool-Set und ein budget je Session und Deployment.\n- „Review and monitor agent sessions“ beschreibt einen optionalen Offline-Reviewer, der Session-Events über die Messages API prüft, sowie Webhooks wie session.status_idled, session.budget_reached und session.status_terminated und die Aufbewahrung von Sessions.\n- „Security risks and sandbox boundaries“ erklärt, warum diese Einstellungen wichtig sind (u. a. Prompt Injection) und was die Sandbox kann und nicht kann.",
+  "arbeitsweise_de": "Wer Managed Agents betreibt, kann die Empfehlungstabelle als Checkliste nutzen: networking in jeder Environment-Anfrage ausdrücklich auf limited setzen, Zugangsdaten nur über Vaults einbinden und Budgets für Sessions festlegen.",
+  "bereich": "api",
+  "datum": "2026-10-14",
+  "wichtig": false
+}

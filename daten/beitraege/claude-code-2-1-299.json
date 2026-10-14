@@ -1,0 +1,13 @@
+{
+  "id": "claude-code-2-1-299",
+  "quelle": "code-changelog",
+  "url": "https://code.claude.com/docs/en/changelog",
+  "titel_original": "Claude Code 2.1.299",
+  "titel_de": "Claude Code 2.1.299: Idle-Compaction, Mod-Erweiterungen und viele Fixes",
+  "kurz_de": "Fassung 2.1.299 komprimiert lange, inaktive Terminal-Sessions vor Ablauf des Prompt-Caches, bringt CLAUDE_CODE_DISABLE_FILE_MENTIONS und neue Mod-Funktionen sowie zahlreiche Fixes.",
+  "briefing_de": "Neu in Fassung 2.1.299:\n- Idle-Compaction im Terminal: Eine Konversation mit mehr als 200K Tokens, die etwa 54 Minuten ruht, wird vor Ablauf des einstündigen Prompt-Caches komprimiert. Mindestgröße über CLAUDE_CODE_IDLE_COMPACT_MIN_TOKENS, Abschalten mit \"idleCompaction\": false in settings.json (beides ab v2.1.290).\n- CLAUDE_CODE_DISABLE_FILE_MENTIONS: Bei @-Dateierwähnungen bekommt Claude nur die Pfade statt der Dateiinhalte.\n- Mods: $.prompt.media, $.session.identity(), neue Text- und Box-Optionen (size, weight, mono, tabular; bold ist zugunsten von weight veraltet), eine queue-Tür im session.append-Hook.\n- /effort und /fast in der Agent-Ansicht legen fest, womit neue Sessions starten; /usage warnt zusätzlich bei max Effort, Workflows, Always-on-Kontext und großen Tool-Ergebnissen.\n- Viele Fixes, u. a. zu Sandbox, MCP-Servern, Remote Control, Gateway-Modellrichtlinien und /usage-Anzeigen über 100 %.",
+  "arbeitsweise_de": "Wer lange Sessions mit großem Kontext offen lässt, profitiert von der Idle-Compaction; wer sie nicht will, schaltet sie in den Einstellungen ab. Mit CLAUDE_CODE_DISABLE_FILE_MENTIONS lässt sich steuern, dass @-Erwähnungen nur Pfade statt Inhalte mitschicken.",
+  "bereich": "claude-code",
+  "datum": "2026-10-14",
+  "wichtig": false
+}
