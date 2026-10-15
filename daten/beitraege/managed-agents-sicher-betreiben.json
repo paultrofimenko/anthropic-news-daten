@@ -1,0 +1,13 @@
+{
+  "id": "managed-agents-sicher-betreiben",
+  "quelle": "platform-doku",
+  "url": "https://platform.claude.com/docs/en/managed-agents/secure-deployment",
+  "titel_original": "Secure your Managed Agents deployment",
+  "titel_de": "Managed Agents: Neue Leitfäden zum sicheren Betrieb",
+  "kurz_de": "Drei neue Doku-Seiten (Beta) zu Managed Agents: Einstellungen, die Reichweite eines Agents begrenzen, Überwachung von Sessions und die Grenzen der Sandbox.",
+  "briefing_de": "Neu in der Platform-Doku (Beta, Header managed-agents-2026-04-01):\n- „Secure your Managed Agents deployment“ listet die Einstellungen nach Wichtigkeit: Netzwerk begrenzen, Zugangsdaten in Vaults halten, Websuche/Web-Fetch einschränken, riskante Aktionen freigeben lassen, kleinstmögliche Tool-Auswahl.\n- „Review and monitor agent sessions“: optionaler Offline-Reviewer für Transkripte, Webhooks wie session.status_idled und session.budget_reached, Aufbewahrung (Session-Verlauf bis zum Löschen, Sandbox-Zustand 30 Tage). Managed Agents ist derzeit nicht für Zero Data Retention oder HIPAA-BAA geeignet.\n- „Security risks and sandbox boundaries“: erklärt Prompt Injection und was die Sandbox kann und nicht kann. Die Einstellungen senken das Risiko, beseitigen es aber nicht.",
+  "arbeitsweise_de": "Wer Managed Agents baut, kann die Seiten als Checkliste nutzen, bevor ein Agent echte Zugangsdaten oder offenes Netzwerk bekommt.",
+  "bereich": "api",
+  "datum": "2026-10-14",
+  "wichtig": false
+}

@@ -1,0 +1,12 @@
+{
+  "id": "managed-agents-geplante-deployments-aws",
+  "quelle": "platform-release-notes",
+  "url": "https://platform.claude.com/docs/en/managed-agents/scheduled-deployments",
+  "titel_original": "Scheduled deployments on Claude Platform on AWS",
+  "titel_de": "Managed Agents: Geplante Deployments jetzt auf Claude Platform on AWS",
+  "kurz_de": "Scheduled deployments für Claude Managed Agents sind jetzt auch auf Claude Platform on AWS verfügbar.",
+  "briefing_de": "Laut den Release Notes vom 14. Oktober 2026 (Nachtrag):\n- Claude Managed Agents scheduled deployments sind jetzt auf Claude Platform on AWS verfügbar.",
+  "bereich": "api",
+  "datum": "2026-10-14",
+  "wichtig": false
+}

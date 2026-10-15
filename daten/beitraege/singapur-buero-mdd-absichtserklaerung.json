@@ -1,0 +1,16 @@
+{
+  "id": "singapur-buero-mdd-absichtserklaerung",
+  "quelle": "anthropic",
+  "url": "https://www.anthropic.com/news/singapore-office-opening",
+  "titel_original": "Anthropic opens Singapore office",
+  "titel_de": "Anthropic eröffnet Büro in Singapur und schließt Absichtserklärung mit MDDI",
+  "kurz_de": "Anthropic eröffnet in Singapur sein fünftes Büro im asiatisch-pazifischen Raum und unterzeichnet mit dem Ministerium MDDI eine Absichtserklärung zu KI-Sicherheit, Forschung und Einführung.",
+  "briefing_de": "Das ist neu:\n- Neues Büro in Singapur, das fünfte im asiatisch-pazifischen Raum; das lokale Team stellt ein.\n- Absichtserklärung (MOU) mit Singapurs Ministry of Digital Development and Information: KI-Sicherheit, Sicherheit und Modellbewertung, Forschung zu Einführung und Auswirkungen, verantwortungsvolle Nutzung.\n- Singapur liegt bei der Claude.ai-Nutzung im Verhältnis zur Bevölkerung auf Rang 2 von 121 Ländern.\n- Kunden und Partner u. a. GovTech Singapore (über 1.500 Engineers nutzen Claude Code), DBS, GIC, Grab und Sea; Amazon Bedrock bietet Inferenz in der Region Singapur.\n- Builder Summit Singapore mit über 300 Entwicklern.",
+  "bereich": "unternehmen",
+  "datum": "2026-10-14",
+  "wichtig": false,
+  "ereignis": {
+    "art": "neu",
+    "titel": "Büro in Singapur eröffnet"
+  }
+}

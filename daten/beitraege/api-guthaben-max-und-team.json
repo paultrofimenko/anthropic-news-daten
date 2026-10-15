@@ -1,0 +1,13 @@
+{
+  "id": "api-guthaben-max-und-team",
+  "quelle": "platform-doku",
+  "url": "https://platform.claude.com/docs/en/about-claude/api-credits-for-subscribers",
+  "titel_original": "API credits for Max and Team plans",
+  "titel_de": "API-Guthaben für Max- und Team-Pläne",
+  "kurz_de": "Neue Doku-Seite: Max 5x, Max 20x und Team-Pläne enthalten monatliches Guthaben für die Claude API, das über eine verknüpfte Console-Organisation eingelöst wird.",
+  "briefing_de": "Laut der neuen Seite:\n- Monatliches Guthaben: 100 USD (Max 5x), 200 USD (Max 20x), bei Team 20 USD je Standard-Platz und 100 USD je Premium-Platz, gepoolt bis höchstens 500 USD.\n- Gilt für Claude API, Managed Agents, Agent SDK und Playground; nicht für Claude Code, Zusatznutzung in den Claude-Apps und andere Plattformen (AWS, Bedrock, Google Cloud, Foundry).\n- Einlösen unter Billing in den Einstellungen; neue Abonnenten nach 7 Tagen. Eine Zahlungsmethode ist nicht nötig.\n- Das Guthaben verfällt am Ende jedes Abrechnungszeitraums ohne Übertrag; Free, Pro und Enterprise sind nicht berechtigt.",
+  "arbeitsweise_de": "Wer einen berechtigten Plan hat, kann damit eigene API-Anwendungen testen, ohne eine Zahlungsmethode bei Claude Platform zu hinterlegen.",
+  "bereich": "api",
+  "datum": "2026-10-15",
+  "wichtig": false
+}

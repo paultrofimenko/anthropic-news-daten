@@ -1,0 +1,12 @@
+{
+  "id": "us-zwischenwahlen-2026",
+  "quelle": "anthropic",
+  "url": "https://www.anthropic.com/news/2026-us-midterms",
+  "titel_original": "Preparing for the 2026 US midterms",
+  "titel_de": "Wie Claude sich auf die US-Zwischenwahlen 2026 vorbereitet",
+  "kurz_de": "Anthropic beschreibt Maßnahmen zu den US-Zwischenwahlen 2026: Wahlinformationen von Democracy Works, Tests auf politische Ausgewogenheit und Schutz vor Missbrauch.",
+  "briefing_de": "Anthropic nennt diese Punkte:\n- In einer Stichprobe von 250.000 US-Konversationen (21.–27. September 2026) betrafen etwa 0,51 % Wahlen oder Abstimmungen und etwa 0,002 % verletzten die Richtlinien zur Wahlintegrität.\n- Bei Fragen zu Wählerregistrierung, Wahllokalen und Terminen verweist ein Banner auf TurboVote; später im Oktober folgen staatenspezifische offizielle Infos sowie Ergebnisse in der Wahlnacht.\n- Claude Opus 5.5, Sonnet 5.5 und Haiku 5.5 erreichen 99 % in der Evaluation zur politischen Ausgewogenheit.\n- Neue Klassifikatoren gegen mehrstufigen Missbrauch; Konten, die Claude für gefälschte Nachrichten nutzten, wurden gesperrt.",
+  "bereich": "richtlinien",
+  "datum": "2026-10-14",
+  "wichtig": false
+}

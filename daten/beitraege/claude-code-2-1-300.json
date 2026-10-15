@@ -1,0 +1,13 @@
+{
+  "id": "claude-code-2-1-300",
+  "quelle": "code-changelog",
+  "url": "https://code.claude.com/docs/en/changelog",
+  "titel_original": "Claude Code 2.1.300",
+  "titel_de": "Claude Code 2.1.300: OpenTelemetry-Attribute, Mod-Hooks und Worktree-Fixes",
+  "kurz_de": "Fassung 2.1.300 ergänzt GenAI-Attribute in Trace-Spans, Cache-Schreibzahlen nach Lebensdauer im api_request-Event, neue Mod-Hooks und viele Fixes, u. a. zu --worktree.",
+  "briefing_de": "Neu in Fassung 2.1.300:\n- OpenTelemetry: GenAI-Attribute an Trace-Spans (z. B. gen_ai.provider.name, gen_ai.conversation.id) und cache_creation_5m_tokens/cache_creation_1h_tokens im api_request-Event.\n- Mods: virtualText, $.ui.view({ agentId }), dir-Prop für Rechts-nach-links-Text, Hook prompt.change und umschreibbare prompt/model im agent.spawn-Hook.\n- /advisor auf Claude Platform on AWS; CLAUDE_CODE_DISABLE_ADVISOR_TOOL=1 schaltet es ab.\n- Große Anfragen an api.anthropic.com nutzen gzip, auch ohne Telemetrie; CLAUDE_CODE_GZIP_REQUEST_BODIES=0 schaltet das ab.\n- Fixes u. a. zu --worktree (falscher Start-Commit, reftable), Resume von SDK-Sessions nach Compaction und Cloud-Sessions.",
+  "arbeitsweise_de": "Wer Claude Code mit OpenTelemetry überwacht, kann Cache-Schreibzugriffe jetzt nach Lebensdauer getrennt auswerten.",
+  "bereich": "claude-code",
+  "datum": "2026-10-14",
+  "wichtig": false
+}
