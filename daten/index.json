@@ -1,7 +1,7 @@
 {
  "version": 1,
- "erzeugt": "2026-10-15T04:44:40.910Z",
- "anzahl": 54,
+ "erzeugt": "2026-10-15T21:26:37.432Z",
+ "anzahl": 60,
  "beitraege": [
   {
    "id": "api-guthaben-max-und-team",
@@ -13,6 +13,83 @@
    "briefing_de": "Laut der neuen Seite:\n- Monatliches Guthaben: 100 USD (Max 5x), 200 USD (Max 20x), bei Team 20 USD je Standard-Platz und 100 USD je Premium-Platz, gepoolt bis höchstens 500 USD.\n- Gilt für Claude API, Managed Agents, Agent SDK und Playground; nicht für Claude Code, Zusatznutzung in den Claude-Apps und andere Plattformen (AWS, Bedrock, Google Cloud, Foundry).\n- Einlösen unter Billing in den Einstellungen; neue Abonnenten nach 7 Tagen. Eine Zahlungsmethode ist nicht nötig.\n- Das Guthaben verfällt am Ende jedes Abrechnungszeitraums ohne Übertrag; Free, Pro und Enterprise sind nicht berechtigt.",
    "arbeitsweise_de": "Wer einen berechtigten Plan hat, kann damit eigene API-Anwendungen testen, ohne eine Zahlungsmethode bei Claude Platform zu hinterlegen.",
    "bereich": "api",
+   "datum": "2026-10-15",
+   "wichtig": false
+  },
+  {
+   "id": "browser-computer-use-sdk-toolsets",
+   "quelle": "platform-doku",
+   "url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/browser-use-sdk",
+   "titel_original": "Browser and computer use with the SDK toolsets",
+   "titel_de": "Browser- und Computer-Use mit den SDK-Toolsets",
+   "kurz_de": "Neue Doku-Seite: Mit den Browser- und Computer-Toolsets der Python- und TypeScript-SDKs baust du Agenten, die im Browser oder auf einem Desktop arbeiten. Du stellst den Treiber.",
+   "briefing_de": "Neue Seite in der Platform-Doku:\n- Die Toolsets für Browser und Computer gibt es in den Python- und TypeScript-SDKs (Beta).\n- Das SDK führt die konfigurierten Prüfungen aus (z. B. URL-Regel für navigate oder Freigabe-Callback) und schickt Aufrufe an deinen Treiber.\n- Den Treiber, der Browser oder Desktop bedient, stellst du selbst: von einem Anbieter (Browser Use, Browserbase, Daytona und E2B veröffentlichen eigene) oder selbst geschrieben, z. B. mit Playwright.\n- Der Tool Runner kann die Agentenschleife übernehmen.",
+   "arbeitsweise_de": "Wer Browser-Agenten baut, kann mit einem Treiber eines Anbieters in wenigen Zeilen starten.",
+   "bereich": "api",
+   "datum": "2026-10-15",
+   "wichtig": false
+  },
+  {
+   "id": "claude-code-2-1-301",
+   "quelle": "code-changelog",
+   "url": "https://code.claude.com/docs/en/changelog",
+   "titel_original": "Claude Code 2.1.301",
+   "titel_de": "Claude Code 2.1.301: Vim-Motion %, OpenTelemetry-Felder und viele Fixes",
+   "kurz_de": "Fassung 2.1.301 ergänzt die Vim-Motion %, neue Felder in OpenTelemetry-tool_decision-Events, mehrzeilige Eingabefelder für Mods und viele Fixes, u. a. beim Modellwechsel.",
+   "briefing_de": "Neu in Fassung 2.1.301:\n- Neue Umgebungsvariable CLAUDE_CODE_RETRY_WATCHDOG_MAX_USAGE_LIMIT_WAIT_MS: Der unbeaufsichtigte Retry-Modus beendet eine Anfrage, wenn das Nutzungslimit zu weit in der Zukunft zurückgesetzt wird.\n- OpenTelemetry: tool_decision-Events enthalten classifier_verdict und permission_mode, mit OTEL_LOG_TOOL_DETAILS=1 auch classifier_category; der claude-api-Skill hat Hinweise zu OpenTelemetry-Tracing.\n- Vim-Modus: Motion % springt zur passenden Klammer; Esc verwirft eine getippte AskUserQuestion-Antwort nicht mehr.\n- Mods: Input hat jetzt rows (mehrzeiliges Textfeld); der .catch-Handler eines Hooks läuft nur noch bei Fehler oder Timeout.\n- Beim Wechsel auf ein Modell mit kleinerem Kontextfenster fasst das bisherige Modell die Unterhaltung zuerst zusammen. Der Alias fable (und best) fällt auf das vorherige Fable-Modell zurück, wenn das neueste für die Organisation nicht verfügbar ist.\n- VS Code: LaTeX-Darstellung in Antworten.",
+   "arbeitsweise_de": "Wer Claude Code mit OpenTelemetry überwacht, kann Entscheidungen des Auto-Mode-Classifiers jetzt von Berechtigungsregeln unterscheiden.",
+   "bereich": "claude-code",
+   "datum": "2026-10-15",
+   "wichtig": false
+  },
+  {
+   "id": "code-review-doku-neu",
+   "quelle": "code-doku",
+   "url": "https://code.claude.com/docs/en/code-review-pull-requests",
+   "titel_original": "Code Review documentation",
+   "titel_de": "Neue Doku-Seiten zu Code Review in Claude Code",
+   "kurz_de": "Die Claude-Code-Doku hat sechs neue Seiten zu Code Review: Einrichtung, Anpassung, Kosten, Pull Requests, lokales /code-review und Fehlersuche.",
+   "briefing_de": "Neu in der Claude-Code-Doku:\n- Code Review ist ein verwalteter Dienst, den ein Owner für GitHub-Repositories einschaltet. Findings erscheinen als Inline-Kommentare, Zusammenfassung und Check Run „Claude Code Review“, der nie blockiert oder fehlschlägt.\n- Schweregrade: Important (🔴), Nit (🟡), Pre-existing (🟣). Eine Prüfung startet mit „@claude review“; „@claude review always“ abonniert weitere Pushes.\n- Anpassen lässt sich Code Review über REVIEW.md und CLAUDE.md; Kosten und Ausgabenlimit haben eine eigene Seite.\n- Lokal gibt es /code-review (Alias /review) in jeder Sitzung, mit --fix, --comment, Zielangabe (PR, Branch, Pfad) und Aufwandsstufe.",
+   "arbeitsweise_de": "Wer Pull Requests auf GitHub baut, kann Claude-Reviews pro Repository steuern und lokal vor dem Push dieselbe Prüfung laufen lassen.",
+   "bereich": "claude-code",
+   "datum": "2026-10-15",
+   "wichtig": false
+  },
+  {
+   "id": "compliance-api-nutzereinstellungen-artefakte",
+   "quelle": "platform-release-notes",
+   "url": "https://platform.claude.com/docs/en/release-notes/overview",
+   "titel_original": "October 15, 2026 (Platform Release Notes)",
+   "titel_de": "Compliance API: Nutzer-Anweisungen und Code-Artifacts abrufbar",
+   "kurz_de": "Die Compliance API liefert in der Beta für Claude Enterprise die Anweisungen, die Mitglieder in claude.ai und Cowork gespeichert haben. Neu in der Doku: Endpunkte für Claude-Code-Artifacts.",
+   "briefing_de": "Compliance API, Stand 15. Oktober 2026:\n- Neuer Endpunkt GET /v1/compliance/organizations/{org_uuid}/user_preferences (Beta, Claude Enterprise) gibt den Text zurück, den Mitglieder als „Instructions for Claude“ in claude.ai und als „Global instructions“ in Cowork gespeichert haben.\n- Nötig sind der bestehende Compliance Access Key und der Scope read:compliance_user_data.\n- Neue Doku-Seiten beschreiben Endpunkte für Claude-Code-Artifacts unter /v1/compliance/apps/code/artifacts: auflisten, Version herunterladen, Inhalt herunterladen, löschen.\n- Das Löschen eines Artifacts ist endgültig und entfernt alle Versionen.",
+   "arbeitsweise_de": "Wer die Compliance API nutzt, kann Nutzer-Anweisungen und Code-Artifacts jetzt in Exporte und Audits einbeziehen.",
+   "bereich": "api",
+   "datum": "2026-10-15",
+   "wichtig": false
+  },
+  {
+   "id": "managed-agents-umgebung-waehlen",
+   "quelle": "platform-doku",
+   "url": "https://platform.claude.com/docs/en/managed-agents/choosing-an-environment",
+   "titel_original": "Choosing an agent environment",
+   "titel_de": "Managed Agents: Cloud-Umgebung oder eigene Sandbox wählen",
+   "kurz_de": "Neue Doku-Seite vergleicht für Claude Managed Agents die Cloud-Umgebung (von Anthropic betrieben) mit einer selbst gehosteten Sandbox und erklärt, was sich beim Wechsel ändert.",
+   "briefing_de": "Neue Seite zu Managed Agents (Beta):\n- Cloud-Umgebung: Anthropic betreibt je Sitzung einen frischen Linux-Container. Das ist der empfohlene Start.\n- Selbst gehostete Sandbox: Ein Worker auf deiner Infrastruktur führt Bash- und Datei-Tool-Aufrufe aus. Sinnvoll bei Daten, die dein Netz nicht verlassen dürfen, bei internen Diensten oder eigenen Compliance-Vorgaben.\n- Bei beiden gehen Unterhaltungsverlauf und Tool-Ergebnisse an den Managed-Agents-Dienst.\n- Selbst gehostet entfallen u. a. file- und github_repository-Ressourcen, Skill-Erkennung aus Repositories und Umgebungsvariablen-Zugangsdaten in Vaults; du betreibst und härtest die Worker.\n- Die Agentendefinition bleibt gleich.",
+   "arbeitsweise_de": "Wer Managed Agents einsetzt, entscheidet früh, ob Tools in der Cloud oder auf eigener Infrastruktur laufen müssen.",
+   "bereich": "api",
+   "datum": "2026-10-15",
+   "wichtig": false
+  },
+  {
+   "id": "unabhaengige-evaluatoren-update",
+   "quelle": "anthropic",
+   "url": "https://www.anthropic.com/news/an-update-on-independent-evaluators",
+   "titel_original": "An update on independent evaluators",
+   "titel_de": "Unabhängige Prüfer: METR bekommt Zugang wie Mitarbeitende",
+   "kurz_de": "Anthropic gibt einem Team von METR mitarbeiterähnlichen Zugang zu internen Systemen und unterzeichnete das White House Accord on Super Intelligence. SecureBio prüft das Kapitel zu chemischen und biologischen Waffen.",
+   "briefing_de": "Einen Monat nach der Zusage, Modelle und Sicherheitspraxis stärker von Dritten prüfen zu lassen:\n- Sechs METR-Mitarbeitende haben Firmen-Hardware, Büroplätze und Zugang zu internen Werkzeugen, etwa auf Höhe der Risikoteams von Anthropic.\n- METR veröffentlicht seine Analysen; Anthropic kann nicht widersprechen, aber Schwärzungen in eng definierten Kategorien verlangen (z. B. Kundendaten, anwaltlich geschützte Informationen, Modellarchitektur).\n- SecureBio prüft das Kapitel zu chemischen und biologischen Waffen im Risk Report vom August 2026.\n- Accenture und Faculty arbeiten auf eine breitere Partnerschaft hin; Gespräche laufen u. a. mit Hugging Face.\n- Es gibt drei Zugangsstufen, von eng begrenzten Risikoprüfungen bis zu mitarbeiterähnlichem Zugang mit Veröffentlichungsrecht.",
+   "bereich": "richtlinien",
    "datum": "2026-10-15",
    "wichtig": false
   },
