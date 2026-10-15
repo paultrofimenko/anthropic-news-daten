@@ -1,0 +1,13 @@
+{
+  "id": "code-review-doku-neu",
+  "quelle": "code-doku",
+  "url": "https://code.claude.com/docs/en/code-review-pull-requests",
+  "titel_original": "Code Review documentation",
+  "titel_de": "Neue Doku-Seiten zu Code Review in Claude Code",
+  "kurz_de": "Die Claude-Code-Doku hat sechs neue Seiten zu Code Review: Einrichtung, Anpassung, Kosten, Pull Requests, lokales /code-review und Fehlersuche.",
+  "briefing_de": "Neu in der Claude-Code-Doku:\n- Code Review ist ein verwalteter Dienst, den ein Owner für GitHub-Repositories einschaltet. Findings erscheinen als Inline-Kommentare, Zusammenfassung und Check Run „Claude Code Review“, der nie blockiert oder fehlschlägt.\n- Schweregrade: Important (🔴), Nit (🟡), Pre-existing (🟣). Eine Prüfung startet mit „@claude review“; „@claude review always“ abonniert weitere Pushes.\n- Anpassen lässt sich Code Review über REVIEW.md und CLAUDE.md; Kosten und Ausgabenlimit haben eine eigene Seite.\n- Lokal gibt es /code-review (Alias /review) in jeder Sitzung, mit --fix, --comment, Zielangabe (PR, Branch, Pfad) und Aufwandsstufe.",
+  "arbeitsweise_de": "Wer Pull Requests auf GitHub baut, kann Claude-Reviews pro Repository steuern und lokal vor dem Push dieselbe Prüfung laufen lassen.",
+  "bereich": "claude-code",
+  "datum": "2026-10-15",
+  "wichtig": false
+}

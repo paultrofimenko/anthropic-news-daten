@@ -1,0 +1,13 @@
+{
+  "id": "claude-code-2-1-301",
+  "quelle": "code-changelog",
+  "url": "https://code.claude.com/docs/en/changelog",
+  "titel_original": "Claude Code 2.1.301",
+  "titel_de": "Claude Code 2.1.301: Vim-Motion %, OpenTelemetry-Felder und viele Fixes",
+  "kurz_de": "Fassung 2.1.301 ergänzt die Vim-Motion %, neue Felder in OpenTelemetry-tool_decision-Events, mehrzeilige Eingabefelder für Mods und viele Fixes, u. a. beim Modellwechsel.",
+  "briefing_de": "Neu in Fassung 2.1.301:\n- Neue Umgebungsvariable CLAUDE_CODE_RETRY_WATCHDOG_MAX_USAGE_LIMIT_WAIT_MS: Der unbeaufsichtigte Retry-Modus beendet eine Anfrage, wenn das Nutzungslimit zu weit in der Zukunft zurückgesetzt wird.\n- OpenTelemetry: tool_decision-Events enthalten classifier_verdict und permission_mode, mit OTEL_LOG_TOOL_DETAILS=1 auch classifier_category; der claude-api-Skill hat Hinweise zu OpenTelemetry-Tracing.\n- Vim-Modus: Motion % springt zur passenden Klammer; Esc verwirft eine getippte AskUserQuestion-Antwort nicht mehr.\n- Mods: Input hat jetzt rows (mehrzeiliges Textfeld); der .catch-Handler eines Hooks läuft nur noch bei Fehler oder Timeout.\n- Beim Wechsel auf ein Modell mit kleinerem Kontextfenster fasst das bisherige Modell die Unterhaltung zuerst zusammen. Der Alias fable (und best) fällt auf das vorherige Fable-Modell zurück, wenn das neueste für die Organisation nicht verfügbar ist.\n- VS Code: LaTeX-Darstellung in Antworten.",
+  "arbeitsweise_de": "Wer Claude Code mit OpenTelemetry überwacht, kann Entscheidungen des Auto-Mode-Classifiers jetzt von Berechtigungsregeln unterscheiden.",
+  "bereich": "claude-code",
+  "datum": "2026-10-15",
+  "wichtig": false
+}

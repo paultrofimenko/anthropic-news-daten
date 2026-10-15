@@ -1,0 +1,14 @@
+{
+  "id": "compliance-api-nutzereinstellungen-artefakte",
+  "quelle": "platform-release-notes",
+  "url": "https://platform.claude.com/docs/en/release-notes/overview",
+  "titel_original": "October 15, 2026 (Platform Release Notes)",
+  "titel_de": "Compliance API: Nutzer-Anweisungen und Code-Artifacts abrufbar",
+  "kurz_de": "Die Compliance API liefert in der Beta für Claude Enterprise die Anweisungen, die Mitglieder in claude.ai und Cowork gespeichert haben. Neu in der Doku: Endpunkte für Claude-Code-Artifacts.",
+  "briefing_de": "Compliance API, Stand 15. Oktober 2026:\n- Neuer Endpunkt GET /v1/compliance/organizations/{org_uuid}/user_preferences (Beta, Claude Enterprise) gibt den Text zurück, den Mitglieder als „Instructions for Claude“ in claude.ai und als „Global instructions“ in Cowork gespeichert haben.\n- Nötig sind der bestehende Compliance Access Key und der Scope read:compliance_user_data.\n- Neue Doku-Seiten beschreiben Endpunkte für Claude-Code-Artifacts unter /v1/compliance/apps/code/artifacts: auflisten, Version herunterladen, Inhalt herunterladen, löschen.\n- Das Löschen eines Artifacts ist endgültig und entfernt alle Versionen."
+  ,
+  "arbeitsweise_de": "Wer die Compliance API nutzt, kann Nutzer-Anweisungen und Code-Artifacts jetzt in Exporte und Audits einbeziehen.",
+  "bereich": "api",
+  "datum": "2026-10-15",
+  "wichtig": false
+}

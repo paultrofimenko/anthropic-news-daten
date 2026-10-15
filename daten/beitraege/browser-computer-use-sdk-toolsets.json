@@ -1,0 +1,13 @@
+{
+  "id": "browser-computer-use-sdk-toolsets",
+  "quelle": "platform-doku",
+  "url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/browser-use-sdk",
+  "titel_original": "Browser and computer use with the SDK toolsets",
+  "titel_de": "Browser- und Computer-Use mit den SDK-Toolsets",
+  "kurz_de": "Neue Doku-Seite: Mit den Browser- und Computer-Toolsets der Python- und TypeScript-SDKs baust du Agenten, die im Browser oder auf einem Desktop arbeiten. Du stellst den Treiber.",
+  "briefing_de": "Neue Seite in der Platform-Doku:\n- Die Toolsets für Browser und Computer gibt es in den Python- und TypeScript-SDKs (Beta).\n- Das SDK führt die konfigurierten Prüfungen aus (z. B. URL-Regel für navigate oder Freigabe-Callback) und schickt Aufrufe an deinen Treiber.\n- Den Treiber, der Browser oder Desktop bedient, stellst du selbst: von einem Anbieter (Browser Use, Browserbase, Daytona und E2B veröffentlichen eigene) oder selbst geschrieben, z. B. mit Playwright.\n- Der Tool Runner kann die Agentenschleife übernehmen.",
+  "arbeitsweise_de": "Wer Browser-Agenten baut, kann mit einem Treiber eines Anbieters in wenigen Zeilen starten.",
+  "bereich": "api",
+  "datum": "2026-10-15",
+  "wichtig": false
+}

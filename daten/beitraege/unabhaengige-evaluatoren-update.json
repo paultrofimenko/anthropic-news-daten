@@ -1,0 +1,12 @@
+{
+  "id": "unabhaengige-evaluatoren-update",
+  "quelle": "anthropic",
+  "url": "https://www.anthropic.com/news/an-update-on-independent-evaluators",
+  "titel_original": "An update on independent evaluators",
+  "titel_de": "Unabhängige Prüfer: METR bekommt Zugang wie Mitarbeitende",
+  "kurz_de": "Anthropic gibt einem Team von METR mitarbeiterähnlichen Zugang zu internen Systemen und unterzeichnete das White House Accord on Super Intelligence. SecureBio prüft das Kapitel zu chemischen und biologischen Waffen.",
+  "briefing_de": "Einen Monat nach der Zusage, Modelle und Sicherheitspraxis stärker von Dritten prüfen zu lassen:\n- Sechs METR-Mitarbeitende haben Firmen-Hardware, Büroplätze und Zugang zu internen Werkzeugen, etwa auf Höhe der Risikoteams von Anthropic.\n- METR veröffentlicht seine Analysen; Anthropic kann nicht widersprechen, aber Schwärzungen in eng definierten Kategorien verlangen (z. B. Kundendaten, anwaltlich geschützte Informationen, Modellarchitektur).\n- SecureBio prüft das Kapitel zu chemischen und biologischen Waffen im Risk Report vom August 2026.\n- Accenture und Faculty arbeiten auf eine breitere Partnerschaft hin; Gespräche laufen u. a. mit Hugging Face.\n- Es gibt drei Zugangsstufen, von eng begrenzten Risikoprüfungen bis zu mitarbeiterähnlichem Zugang mit Veröffentlichungsrecht.",
+  "bereich": "richtlinien",
+  "datum": "2026-10-15",
+  "wichtig": false
+}

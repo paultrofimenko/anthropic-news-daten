@@ -1,0 +1,13 @@
+{
+  "id": "managed-agents-umgebung-waehlen",
+  "quelle": "platform-doku",
+  "url": "https://platform.claude.com/docs/en/managed-agents/choosing-an-environment",
+  "titel_original": "Choosing an agent environment",
+  "titel_de": "Managed Agents: Cloud-Umgebung oder eigene Sandbox wählen",
+  "kurz_de": "Neue Doku-Seite vergleicht für Claude Managed Agents die Cloud-Umgebung (von Anthropic betrieben) mit einer selbst gehosteten Sandbox und erklärt, was sich beim Wechsel ändert.",
+  "briefing_de": "Neue Seite zu Managed Agents (Beta):\n- Cloud-Umgebung: Anthropic betreibt je Sitzung einen frischen Linux-Container. Das ist der empfohlene Start.\n- Selbst gehostete Sandbox: Ein Worker auf deiner Infrastruktur führt Bash- und Datei-Tool-Aufrufe aus. Sinnvoll bei Daten, die dein Netz nicht verlassen dürfen, bei internen Diensten oder eigenen Compliance-Vorgaben.\n- Bei beiden gehen Unterhaltungsverlauf und Tool-Ergebnisse an den Managed-Agents-Dienst.\n- Selbst gehostet entfallen u. a. file- und github_repository-Ressourcen, Skill-Erkennung aus Repositories und Umgebungsvariablen-Zugangsdaten in Vaults; du betreibst und härtest die Worker.\n- Die Agentendefinition bleibt gleich.",
+  "arbeitsweise_de": "Wer Managed Agents einsetzt, entscheidet früh, ob Tools in der Cloud oder auf eigener Infrastruktur laufen müssen.",
+  "bereich": "api",
+  "datum": "2026-10-15",
+  "wichtig": false
+}
