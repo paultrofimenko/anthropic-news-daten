@@ -1,8 +1,117 @@
 {
  "version": 1,
- "erzeugt": "2026-10-13T22:47:37.515Z",
- "anzahl": 46,
+ "erzeugt": "2026-10-15T04:44:40.910Z",
+ "anzahl": 54,
  "beitraege": [
+  {
+   "id": "api-guthaben-max-und-team",
+   "quelle": "platform-doku",
+   "url": "https://platform.claude.com/docs/en/about-claude/api-credits-for-subscribers",
+   "titel_original": "API credits for Max and Team plans",
+   "titel_de": "API-Guthaben für Max- und Team-Pläne",
+   "kurz_de": "Neue Doku-Seite: Max 5x, Max 20x und Team-Pläne enthalten monatliches Guthaben für die Claude API, das über eine verknüpfte Console-Organisation eingelöst wird.",
+   "briefing_de": "Laut der neuen Seite:\n- Monatliches Guthaben: 100 USD (Max 5x), 200 USD (Max 20x), bei Team 20 USD je Standard-Platz und 100 USD je Premium-Platz, gepoolt bis höchstens 500 USD.\n- Gilt für Claude API, Managed Agents, Agent SDK und Playground; nicht für Claude Code, Zusatznutzung in den Claude-Apps und andere Plattformen (AWS, Bedrock, Google Cloud, Foundry).\n- Einlösen unter Billing in den Einstellungen; neue Abonnenten nach 7 Tagen. Eine Zahlungsmethode ist nicht nötig.\n- Das Guthaben verfällt am Ende jedes Abrechnungszeitraums ohne Übertrag; Free, Pro und Enterprise sind nicht berechtigt.",
+   "arbeitsweise_de": "Wer einen berechtigten Plan hat, kann damit eigene API-Anwendungen testen, ohne eine Zahlungsmethode bei Claude Platform zu hinterlegen.",
+   "bereich": "api",
+   "datum": "2026-10-15",
+   "wichtig": false
+  },
+  {
+   "id": "claude-code-2-1-299",
+   "quelle": "code-changelog",
+   "url": "https://code.claude.com/docs/en/changelog",
+   "titel_original": "Claude Code 2.1.299",
+   "titel_de": "Claude Code 2.1.299: Idle-Compaction und neue Mod-Funktionen",
+   "kurz_de": "Fassung 2.1.299 komprimiert lange, ruhende Konversationen vor Ablauf des Prompt-Caches, bringt CLAUDE_CODE_DISABLE_FILE_MENTIONS und neue Mod-Hooks sowie viele Fixes.",
+   "briefing_de": "Neu in Fassung 2.1.299:\n- Idle-Compaction im Terminal: Eine Konversation mit 200K+ Tokens, die etwa 54 Minuten ruht, wird vor Ablauf des Ein-Stunden-Prompt-Caches komprimiert. Mindestgröße über CLAUDE_CODE_IDLE_COMPACT_MIN_TOKENS, Abschalten mit \"idleCompaction\": false (beides ab v2.1.290).\n- CLAUDE_CODE_DISABLE_FILE_MENTIONS: Bei @-Dateierwähnungen bekommt Claude nur die Pfade statt der Inhalte.\n- Mods: $.prompt.media, $.session.identity(), size/weight/mono/tabular für Text, Abstandsstufen xs bis xl für Box (bold ist zugunsten von weight veraltet).\n- /usage warnt vor max Effort, Workflows, Always-on-Kontext und großen Tool-Ergebnissen; --disallow-tools für claude plugin eval.\n- Viele Fixes, u. a. zu Remote Control, Cloud-Sessions, Sandbox (WSL2) und MCP-Servern.",
+   "arbeitsweise_de": "Wer lange Sitzungen oft ruhen lässt, spart mit Idle-Compaction erneutes Verarbeiten des Kontexts; bei Bedarf lässt sie sich per Einstellung abschalten.",
+   "bereich": "claude-code",
+   "datum": "2026-10-14",
+   "wichtig": false
+  },
+  {
+   "id": "claude-code-2-1-300",
+   "quelle": "code-changelog",
+   "url": "https://code.claude.com/docs/en/changelog",
+   "titel_original": "Claude Code 2.1.300",
+   "titel_de": "Claude Code 2.1.300: OpenTelemetry-Attribute, Mod-Hooks und Worktree-Fixes",
+   "kurz_de": "Fassung 2.1.300 ergänzt GenAI-Attribute in Trace-Spans, Cache-Schreibzahlen nach Lebensdauer im api_request-Event, neue Mod-Hooks und viele Fixes, u. a. zu --worktree.",
+   "briefing_de": "Neu in Fassung 2.1.300:\n- OpenTelemetry: GenAI-Attribute an Trace-Spans (z. B. gen_ai.provider.name, gen_ai.conversation.id) und cache_creation_5m_tokens/cache_creation_1h_tokens im api_request-Event.\n- Mods: virtualText, $.ui.view({ agentId }), dir-Prop für Rechts-nach-links-Text, Hook prompt.change und umschreibbare prompt/model im agent.spawn-Hook.\n- /advisor auf Claude Platform on AWS; CLAUDE_CODE_DISABLE_ADVISOR_TOOL=1 schaltet es ab.\n- Große Anfragen an api.anthropic.com nutzen gzip, auch ohne Telemetrie; CLAUDE_CODE_GZIP_REQUEST_BODIES=0 schaltet das ab.\n- Fixes u. a. zu --worktree (falscher Start-Commit, reftable), Resume von SDK-Sessions nach Compaction und Cloud-Sessions.",
+   "arbeitsweise_de": "Wer Claude Code mit OpenTelemetry überwacht, kann Cache-Schreibzugriffe jetzt nach Lebensdauer getrennt auswerten.",
+   "bereich": "claude-code",
+   "datum": "2026-10-14",
+   "wichtig": false
+  },
+  {
+   "id": "managed-agents-geplante-deployments-aws",
+   "quelle": "platform-release-notes",
+   "url": "https://platform.claude.com/docs/en/managed-agents/scheduled-deployments",
+   "titel_original": "Scheduled deployments on Claude Platform on AWS",
+   "titel_de": "Managed Agents: Geplante Deployments jetzt auf Claude Platform on AWS",
+   "kurz_de": "Scheduled deployments für Claude Managed Agents sind jetzt auch auf Claude Platform on AWS verfügbar.",
+   "briefing_de": "Laut den Release Notes vom 14. Oktober 2026 (Nachtrag):\n- Claude Managed Agents scheduled deployments sind jetzt auf Claude Platform on AWS verfügbar.",
+   "bereich": "api",
+   "datum": "2026-10-14",
+   "wichtig": false
+  },
+  {
+   "id": "managed-agents-sicher-betreiben",
+   "quelle": "platform-doku",
+   "url": "https://platform.claude.com/docs/en/managed-agents/secure-deployment",
+   "titel_original": "Secure your Managed Agents deployment",
+   "titel_de": "Managed Agents: Neue Leitfäden zum sicheren Betrieb",
+   "kurz_de": "Drei neue Doku-Seiten (Beta) zu Managed Agents: Einstellungen, die Reichweite eines Agents begrenzen, Überwachung von Sessions und die Grenzen der Sandbox.",
+   "briefing_de": "Neu in der Platform-Doku (Beta, Header managed-agents-2026-04-01):\n- „Secure your Managed Agents deployment“ listet die Einstellungen nach Wichtigkeit: Netzwerk begrenzen, Zugangsdaten in Vaults halten, Websuche/Web-Fetch einschränken, riskante Aktionen freigeben lassen, kleinstmögliche Tool-Auswahl.\n- „Review and monitor agent sessions“: optionaler Offline-Reviewer für Transkripte, Webhooks wie session.status_idled und session.budget_reached, Aufbewahrung (Session-Verlauf bis zum Löschen, Sandbox-Zustand 30 Tage). Managed Agents ist derzeit nicht für Zero Data Retention oder HIPAA-BAA geeignet.\n- „Security risks and sandbox boundaries“: erklärt Prompt Injection und was die Sandbox kann und nicht kann. Die Einstellungen senken das Risiko, beseitigen es aber nicht.",
+   "arbeitsweise_de": "Wer Managed Agents baut, kann die Seiten als Checkliste nutzen, bevor ein Agent echte Zugangsdaten oder offenes Netzwerk bekommt.",
+   "bereich": "api",
+   "datum": "2026-10-14",
+   "wichtig": false
+  },
+  {
+   "id": "opentelemetry-export-beta",
+   "quelle": "platform-release-notes",
+   "url": "https://platform.claude.com/docs/en/manage-claude/opentelemetry",
+   "titel_original": "OpenTelemetry export (beta)",
+   "titel_de": "OpenTelemetry-Export für die Claude API startet in der Beta",
+   "kurz_de": "Messages-API-Anfragen und Managed-Agents-Sessions lassen sich jetzt als OpenTelemetry-Spans in der eigenen Observability-Plattform verfolgen; SDK-Spans gibt es in sieben Sprachen.",
+   "briefing_de": "Die Beta bringt:\n- Das Claude SDK sendet Spans in Python, TypeScript, C#, Go, Java, PHP und Ruby; API-Spans richtest du als OpenTelemetry-Ziel in der Claude Console ein (Admin-Berechtigung).\n- Erfasst werden Messages-API-Anfragen, Sessions-API-Anfragen, Token-Nutzung, Server-Tools sowie Managed-Agents-Turns.\n- Inhaltsmodus: standardmäßig nur Metadaten, optional voller Inhalt mit Prompts und Antworten (Standardlimit 0,75 MB pro Span).\n- Partner u. a. Arize AI, Braintrust, Databricks, Datadog, Grafana Cloud, Honeycomb, Langfuse, LangSmith, New Relic, PostHog, Sentry und Splunk.\n- Neue Referenzseiten zu Spans und zur API für Telemetrie-Ziele.",
+   "arbeitsweise_de": "Wer die API oder Managed Agents produktiv nutzt, kann Fehler, Latenz und Token-Verbrauch in der vorhandenen Observability-Plattform nachverfolgen.",
+   "bereich": "api",
+   "datum": "2026-10-14",
+   "wichtig": true,
+   "ereignis": {
+    "art": "neu",
+    "titel": "OpenTelemetry-Export (Beta)"
+   }
+  },
+  {
+   "id": "singapur-buero-mdd-absichtserklaerung",
+   "quelle": "anthropic",
+   "url": "https://www.anthropic.com/news/singapore-office-opening",
+   "titel_original": "Anthropic opens Singapore office",
+   "titel_de": "Anthropic eröffnet Büro in Singapur und schließt Absichtserklärung mit MDDI",
+   "kurz_de": "Anthropic eröffnet in Singapur sein fünftes Büro im asiatisch-pazifischen Raum und unterzeichnet mit dem Ministerium MDDI eine Absichtserklärung zu KI-Sicherheit, Forschung und Einführung.",
+   "briefing_de": "Das ist neu:\n- Neues Büro in Singapur, das fünfte im asiatisch-pazifischen Raum; das lokale Team stellt ein.\n- Absichtserklärung (MOU) mit Singapurs Ministry of Digital Development and Information: KI-Sicherheit, Sicherheit und Modellbewertung, Forschung zu Einführung und Auswirkungen, verantwortungsvolle Nutzung.\n- Singapur liegt bei der Claude.ai-Nutzung im Verhältnis zur Bevölkerung auf Rang 2 von 121 Ländern.\n- Kunden und Partner u. a. GovTech Singapore (über 1.500 Engineers nutzen Claude Code), DBS, GIC, Grab und Sea; Amazon Bedrock bietet Inferenz in der Region Singapur.\n- Builder Summit Singapore mit über 300 Entwicklern.",
+   "bereich": "unternehmen",
+   "datum": "2026-10-14",
+   "wichtig": false,
+   "ereignis": {
+    "art": "neu",
+    "titel": "Büro in Singapur eröffnet"
+   }
+  },
+  {
+   "id": "us-zwischenwahlen-2026",
+   "quelle": "anthropic",
+   "url": "https://www.anthropic.com/news/2026-us-midterms",
+   "titel_original": "Preparing for the 2026 US midterms",
+   "titel_de": "Wie Claude sich auf die US-Zwischenwahlen 2026 vorbereitet",
+   "kurz_de": "Anthropic beschreibt Maßnahmen zu den US-Zwischenwahlen 2026: Wahlinformationen von Democracy Works, Tests auf politische Ausgewogenheit und Schutz vor Missbrauch.",
+   "briefing_de": "Anthropic nennt diese Punkte:\n- In einer Stichprobe von 250.000 US-Konversationen (21.–27. September 2026) betrafen etwa 0,51 % Wahlen oder Abstimmungen und etwa 0,002 % verletzten die Richtlinien zur Wahlintegrität.\n- Bei Fragen zu Wählerregistrierung, Wahllokalen und Terminen verweist ein Banner auf TurboVote; später im Oktober folgen staatenspezifische offizielle Infos sowie Ergebnisse in der Wahlnacht.\n- Claude Opus 5.5, Sonnet 5.5 und Haiku 5.5 erreichen 99 % in der Evaluation zur politischen Ausgewogenheit.\n- Neue Klassifikatoren gegen mehrstufigen Missbrauch; Konten, die Claude für gefälschte Nachrichten nutzten, wurden gesperrt.",
+   "bereich": "richtlinien",
+   "datum": "2026-10-14",
+   "wichtig": false
+  },
   {
    "id": "scion-source-control",
    "quelle": "anthropic",
@@ -812,6 +921,20 @@
    "titel": "Managed Agents: dynamische Workflows",
    "beitrag": "managed-agents-dynamische-workflows",
    "url": "https://platform.claude.com/docs/en/managed-agents/multiagent-orchestration"
+  },
+  {
+   "datum": "2026-10-14",
+   "art": "neu",
+   "titel": "Büro in Singapur eröffnet",
+   "beitrag": "singapur-buero-mdd-absichtserklaerung",
+   "url": "https://www.anthropic.com/news/singapore-office-opening"
+  },
+  {
+   "datum": "2026-10-14",
+   "art": "neu",
+   "titel": "OpenTelemetry-Export (Beta)",
+   "beitrag": "opentelemetry-export-beta",
+   "url": "https://platform.claude.com/docs/en/manage-claude/opentelemetry"
   },
   {
    "datum": "2026-11-30",
