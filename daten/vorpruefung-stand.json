@@ -1360,6 +1360,7 @@
  "platform-doku": {
   "urls": [
    "platform.claude.com/docs/en/about-claude/additional-resources",
+   "platform.claude.com/docs/en/about-claude/api-credits-for-subscribers",
    "platform.claude.com/docs/en/about-claude/glossary",
    "platform.claude.com/docs/en/about-claude/model-deprecations",
    "platform.claude.com/docs/en/about-claude/models/choosing-a-model",
@@ -3094,7 +3095,8 @@
   ],
   "zeilen": {
    "October 14, 2026": [
-    "d3ab9175a4"
+    "d3ab9175a4",
+    "4bfd213226"
    ],
    "October 9, 2026": [
     "513bb1c6b0"
