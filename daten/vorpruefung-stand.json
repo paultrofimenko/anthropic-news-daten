@@ -462,9 +462,63 @@
    "2.1.295",
    "2.1.296",
    "2.1.299",
-   "2.1.300"
+   "2.1.300",
+   "2.1.301"
   ],
   "zeilen": {
+   "2.1.301": [
+    "b79e086ffe",
+    "34053457db",
+    "3b65b0b7e6",
+    "6a60d66e33",
+    "30977955e2",
+    "fa4b530dac",
+    "8d0bf66d07",
+    "003d971cfd",
+    "9f6c0bb9e4",
+    "85a96b5853",
+    "a45904a9e8",
+    "b56d8dfa9d",
+    "6b2a21990c",
+    "f7a78c2873",
+    "7abc440f69",
+    "c75fa3efe1",
+    "11409319ec",
+    "9dc6bb3d18",
+    "3e01584f8b",
+    "3226c4a720",
+    "f5c4ceea81",
+    "08c10dc4c5",
+    "915257ba51",
+    "8ba7eb0c11",
+    "a1d55757de",
+    "b0d7624fb2",
+    "e09a6f9f56",
+    "d823a209c9",
+    "bd40f34832",
+    "e8cc24dd4e",
+    "c9cc70b424",
+    "b30faf8a06",
+    "e77247c963",
+    "f19eee8a58",
+    "047c92913b",
+    "ab7615243b",
+    "05bd0d7c98",
+    "0523c90890",
+    "91ba9eb9f5",
+    "5b66615676",
+    "26ad7b844d",
+    "1ac9662bd3",
+    "d99a2abaaa",
+    "747db08e39",
+    "488d5d4260",
+    "8c243b70ae",
+    "8aacac2ac3",
+    "5c199146ed",
+    "b0ff596242",
+    "071152410c",
+    "273c904e36"
+   ],
    "2.1.300": [
     "e063263abe",
     "fae555d017",
@@ -1324,35 +1378,6 @@
     "6a1423310f",
     "badb586040",
     "06c655611f"
-   ],
-   "2.1.289": [
-    "632c1b39fd",
-    "af4d277444",
-    "80c521f402",
-    "dcb0e341e3",
-    "8698aa7952",
-    "3ec7cf597f",
-    "02d69d08f7",
-    "c0d83e5c75",
-    "7662f11fbf",
-    "d2ac7b257d",
-    "a9d02b9d2c",
-    "3271535d24",
-    "6d6158fb00",
-    "382f95220a",
-    "7cbf00db79",
-    "919e3ded4e",
-    "e7332621d3",
-    "d78e537513",
-    "ed06332ec4",
-    "585605d196",
-    "4c4dc964e8",
-    "4155ae8621",
-    "62f3bcba48",
-    "7f0e423d53",
-    "ee46e40a9b",
-    "d69b327532",
-    "c3568c875f"
    ]
   },
   "zeilenVersion": 2
@@ -1392,6 +1417,7 @@
    "platform.claude.com/docs/en/agents-and-tools/remote-mcp-servers",
    "platform.claude.com/docs/en/agents-and-tools/tool-use/advisor-tool",
    "platform.claude.com/docs/en/agents-and-tools/tool-use/bash-tool",
+   "platform.claude.com/docs/en/agents-and-tools/tool-use/browser-use-sdk",
    "platform.claude.com/docs/en/agents-and-tools/tool-use/browser-use-tool",
    "platform.claude.com/docs/en/agents-and-tools/tool-use/build-a-tool-using-agent",
    "platform.claude.com/docs/en/agents-and-tools/tool-use/code-execution-tool",
@@ -1765,6 +1791,12 @@
    "platform.claude.com/docs/en/api/compliance/apps/chats/list",
    "platform.claude.com/docs/en/api/compliance/apps/chats/messages",
    "platform.claude.com/docs/en/api/compliance/apps/chats/messages/list",
+   "platform.claude.com/docs/en/api/compliance/apps/code",
+   "platform.claude.com/docs/en/api/compliance/apps/code/artifacts",
+   "platform.claude.com/docs/en/api/compliance/apps/code/artifacts/delete",
+   "platform.claude.com/docs/en/api/compliance/apps/code/artifacts/download",
+   "platform.claude.com/docs/en/api/compliance/apps/code/artifacts/list",
+   "platform.claude.com/docs/en/api/compliance/apps/code/artifacts/retrieve_version",
    "platform.claude.com/docs/en/api/compliance/apps/projects",
    "platform.claude.com/docs/en/api/compliance/apps/projects/attachments",
    "platform.claude.com/docs/en/api/compliance/apps/projects/attachments/list",
@@ -2043,6 +2075,7 @@
    "platform.claude.com/docs/en/manage-claude/workspaces",
    "platform.claude.com/docs/en/managed-agents/agent-setup",
    "platform.claude.com/docs/en/managed-agents/budgets",
+   "platform.claude.com/docs/en/managed-agents/choosing-an-environment",
    "platform.claude.com/docs/en/managed-agents/cloud-sandboxes-reference",
    "platform.claude.com/docs/en/managed-agents/define-outcomes",
    "platform.claude.com/docs/en/managed-agents/dreams",
@@ -2210,6 +2243,12 @@
    "code.claude.com/docs/en/cli-reference",
    "code.claude.com/docs/en/cloud-environments",
    "code.claude.com/docs/en/code-review",
+   "code.claude.com/docs/en/code-review-costs",
+   "code.claude.com/docs/en/code-review-customize",
+   "code.claude.com/docs/en/code-review-local",
+   "code.claude.com/docs/en/code-review-pull-requests",
+   "code.claude.com/docs/en/code-review-setup",
+   "code.claude.com/docs/en/code-review-troubleshooting",
    "code.claude.com/docs/en/commands",
    "code.claude.com/docs/en/common-workflows",
    "code.claude.com/docs/en/communications-kit",
@@ -2484,6 +2523,7 @@
    "anthropic.com/news/ai-for-science-program",
    "anthropic.com/news/alberta-government-claude-cybersecurity",
    "anthropic.com/news/an-ai-policy-tool-for-today-ambitiously-invest-in-nist",
+   "anthropic.com/news/an-update-on-independent-evaluators",
    "anthropic.com/news/announcing-our-updated-responsible-scaling-policy",
    "anthropic.com/news/anthropic-accenture-partnership",
    "anthropic.com/news/anthropic-achieves-iso-42001-certification-for-responsible-ai",
@@ -3091,9 +3131,15 @@
    "October 7, 2026",
    "October 6, 2026",
    "October 9, 2026",
-   "October 14, 2026"
+   "October 14, 2026",
+   "October 15, 2026"
   ],
   "zeilen": {
+   "October 15, 2026": [
+    "06f36b26ab",
+    "736d8b6181",
+    "a4b043ada9"
+   ],
    "October 14, 2026": [
     "d3ab9175a4",
     "4bfd213226"
@@ -3125,20 +3171,6 @@
    "October 1, 2026": [
     "323d103291",
     "3f1b6f1251"
-   ],
-   "September 30, 2026": [
-    "8936617436",
-    "f7d9fea84b"
-   ],
-   "September 28, 2026": [
-    "141476a2f8",
-    "0b0b7799d3",
-    "0e1008a6f0"
-   ],
-   "September 24, 2026": [
-    "e204337791",
-    "b01c36c8db",
-    "8b0d28b8ca"
    ]
   },
   "zeilenVersion": 2
