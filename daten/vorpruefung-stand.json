@@ -2042,6 +2042,7 @@
    "platform.claude.com/docs/en/manage-claude/cmek",
    "platform.claude.com/docs/en/manage-claude/cmek-aws-kms",
    "platform.claude.com/docs/en/manage-claude/cmek-azure-key-vault",
+   "platform.claude.com/docs/en/manage-claude/cmek-claude-platform-on-aws",
    "platform.claude.com/docs/en/manage-claude/cmek-google-cloud-kms",
    "platform.claude.com/docs/en/manage-claude/compliance-activity-feed",
    "platform.claude.com/docs/en/manage-claude/compliance-api",
