@@ -32,15 +32,24 @@ export function erlaubteUrl(url) {
 }
 
 // Ordnernamen aus ~/Projekte, nur lokal. Kurze oder allgemeine Namen („3D“, „Test“)
-// würden normale Wörter treffen.
+// würden normale Wörter treffen – ebenso Ordner, die einfach normale Wörter sind. Diese stehen in
+// lokal/allgemein.txt (eine Zeile je Wort) und nicht hier: Ordnernamen gehören nicht ins öffentliche Repo.
+function allgemeineOrdner() {
+  const datei = join(dirname(fileURLToPath(import.meta.url)), '..', 'lokal', 'allgemein.txt');
+  return existsSync(datei)
+    ? readFileSync(datei, 'utf8').split(/\r?\n/).map((z) => z.trim().toLowerCase()).filter((z) => z && !z.startsWith('#'))
+    : [];
+}
 // Hinnehmbar: Manche Ordnernamen sind auch normale deutsche Wörter – ein Treffer weist den
 // Beitrag nur ab, er wird umformuliert. In der Cloud fehlt der Ordner, die Liste ist dort
 // leer; Persönliches kann aber nur über den lokalen „Betrifft dich“-Teil hineinkommen.
 export function lokaleProjektnamen(ordner = join(homedir(), 'Projekte')) {
   if (!existsSync(ordner)) return [];
+  const allgemein = allgemeineOrdner();
   return readdirSync(ordner, { withFileTypes: true })
     .filter((e) => e.isDirectory() && e.name.length >= 5 && e.name !== 'anthropic-news')
-    .map((e) => e.name.toLowerCase());
+    .map((e) => e.name.toLowerCase())
+    .filter((n) => !allgemein.includes(n));
 }
 
 // Alles Persönliche, das lokal bekannt ist: Projektnamen, Benutzername, und die Wörter aus
@@ -51,7 +60,9 @@ export function persoenlicheWoerter() {
     ? readFileSync(datei, 'utf8').split(/\r?\n/).map((z) => z.trim().toLowerCase()).filter((z) => z && !z.startsWith('#'))
     : [];
   const benutzer = benutzerWort(BENUTZER, existsSync(LOKAL));
-  return [...new Set([...lokaleProjektnamen(), ...benutzer, ...ausDatei])];
+  // Ordnernamen wie der Benutzername nur mit lokal/ – im Daten-Repo am PC wären sonst normale Wörter Treffer.
+  const projekte = existsSync(LOKAL) ? lokaleProjektnamen() : [];
+  return [...new Set([...projekte, ...benutzer, ...ausDatei])];
 }
 
 // Geprüft wird der Text der Felder, nicht das JSON – dort würde „\n“ wie ein Pfad aussehen.

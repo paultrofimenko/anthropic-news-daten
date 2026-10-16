@@ -90,6 +90,10 @@ export function pruefeWissen(w, { projektnamen = [] } = {}) {
   if (w.kurz_de !== undefined && !(istText(w.kurz_de) && w.kurz_de.length <= KURZ_MAX)) fehler.push(`${id}: kurz_de (Kacheltext) höchstens ${KURZ_MAX} Zeichen`);
   if (istText(w.bereich) && !WISSEN_BEREICHE.includes(w.bereich)) fehler.push(`${id}: unbekannter Bereich „${w.bereich}“`);
   if (istText(w.stand) && !gueltigesDatum(w.stand)) fehler.push(`${id}: stand kein gültiges Datum JJJJ-MM-TT`);
+  // F-13: Beiträge, die der Claude-Lauf für dieses Blatt schon abgearbeitet hat (daten/nachpflege.mjs).
+  if (w.gesehen !== undefined && !(Array.isArray(w.gesehen) && w.gesehen.length <= 100 && w.gesehen.every((g) => typeof g === 'string' && /^[a-z0-9-]+$/.test(g)))) {
+    fehler.push(`${id}: gesehen muss eine Liste von Beitrags-ids sein (a–z, 0–9, Bindestrich)`);
+  }
   fehler.push(...pruefeGrafik(w.grafik, id));
 
   if (!Array.isArray(w.abschnitte) || w.abschnitte.length === 0) fehler.push(`${id}: Feld „abschnitte“ fehlt oder ist leer`);
@@ -103,6 +107,8 @@ export function pruefeWissen(w, { projektnamen = [] } = {}) {
       if (!(Array.isArray(a.punkte_de) && a.punkte_de.every(istPunkt))) fehler.push(`${wo}: punkte_de muss eine Liste von Texten oder { text_de, quelle } sein`);
       else {
         for (const p of a.punkte_de) if (typeof p === 'object') fehler.push(...pruefeEigeneQuelle(p.quelle, `Punkt „${p.text_de.slice(0, 30)}“`, `${id} Abschnitt ${i + 1}`));
+        // Eine eigene Quelle muss eine andere sein – sonst lässt die App den Abschnittslink weg (F-13, 16.10.2026).
+        for (const p of a.punkte_de) if (typeof p === 'object' && p.quelle === a.quelle) fehler.push(`${wo}: Punkt „${p.text_de.slice(0, 30)}“ hat die gleiche Quelle wie der Abschnitt – als einfachen Text schreiben`);
         fehler.push(...doppelte(a.punkte_de.map((p) => (typeof p === 'string' ? p : p.text_de)), 'Punkt', `${id} Abschnitt ${i + 1}`));
       }
     }

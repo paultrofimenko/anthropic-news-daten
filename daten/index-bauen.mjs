@@ -8,6 +8,7 @@ import { fileURLToPath } from 'node:url';
 import { leseOrdner } from './format.mjs';
 import { bauZeitleiste, unklareAbschaltZeilen, unklareModelle } from './zeitleiste.mjs';
 import { leseWissen, sortiereWissen } from './wissen.mjs';
+import { nachpflegeListe } from './nachpflege.mjs';
 
 export const INDEX_VERSION = 1;
 
@@ -20,7 +21,8 @@ export function bauIndex(beitraege, jetzt = new Date(), abschaltMarkdown = '', w
     ? [`Abschaltliste: ${unklar.length === 1 ? 'eine Zeile' : `${unklar.length} Zeilen`} nicht verstanden – Abschaltungen können fehlen (${unklar.join('; ')}).`]
     : [];
   const sortiert = [...beitraege].sort((a, b) => b.datum.localeCompare(a.datum) || a.id.localeCompare(b.id));
-  return { version: INDEX_VERSION, erzeugt: jetzt.toISOString(), anzahl: sortiert.length, beitraege: sortiert, zeitleiste: bauZeitleiste(sortiert, abschaltMarkdown), hinweise, wissen: sortiereWissen(wissen) };
+  // F-13: welche Wissensblätter älter sind als ein wichtiger Beitrag ihres Bereichs – die App zeigt es als Hinweis.
+  return { version: INDEX_VERSION, erzeugt: jetzt.toISOString(), anzahl: sortiert.length, beitraege: sortiert, zeitleiste: bauZeitleiste(sortiert, abschaltMarkdown), hinweise, wissen: sortiereWissen(wissen), nachpflege: nachpflegeListe(sortiert, wissen) };
 }
 
 // Abschaltungen der Modelle, deren Zeile nicht verstanden wurde, bleiben aus dem alten Index stehen –

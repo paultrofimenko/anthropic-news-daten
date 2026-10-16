@@ -4,6 +4,9 @@
   "kurz_de": "claude.dev: Anleitungen und Erfahrungen von Anthropics eigenen Entwicklern.",
   "einleitung_de": "claude.dev ist der Blog von Anthropics eigenen Entwicklern: Artikel, Videos und Bauberichte darüber, wie man mit Claude und Claude Code baut. Der Lesepfad zeigt die wichtigsten Artikel, darunter stehen die übrigen.",
   "stand": "2026-10-03",
+  "gesehen": [
+    "claude-dev-start"
+  ],
   "grafik": {
     "art": "schritte",
     "titel_de": "Ein Lesepfad durch claude.dev (Vorschlag)",
