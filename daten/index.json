@@ -1,8 +1,21 @@
 {
  "version": 1,
- "erzeugt": "2026-10-16T06:38:33.812Z",
- "anzahl": 62,
+ "erzeugt": "2026-10-16T16:43:38.545Z",
+ "anzahl": 63,
  "beitraege": [
+  {
+   "id": "cmek-claude-platform-on-aws",
+   "quelle": "platform-doku",
+   "url": "https://platform.claude.com/docs/en/manage-claude/cmek-claude-platform-on-aws",
+   "titel_original": "Set up CMEK on Claude Platform on AWS",
+   "titel_de": "CMEK-Anleitung für Claude Platform on AWS",
+   "kurz_de": "Neue Doku-Seite: So nutzt du einen AWS-KMS-Schlüssel als kundenverwalteten Schlüssel (CMEK) auf Claude Platform on AWS. Das Aktivieren ist dauerhaft.",
+   "briefing_de": "Die Seite erklärt, wie du einen AWS-KMS-Schlüssel als CMEK auf Claude Platform on AWS einrichtest.\n- Voraussetzungen: AWS-Konto der Organisation mit Rechten für kms:CreateKey und kms:PutKeyPolicy, Admin-Rolle in der Claude Console und passende aws-external-anthropic-Berechtigungen (z. B. RegisterKey).\n- Die Key Policy erlaubt dem den veröffentlichten AWS-Service-Principal von Anthropic Encrypt, Decrypt, GenerateDataKey und DescribeKey; eine Bedingung auf die Compartment-ID des Workspace ist optional.\n- Der Schlüssel muss symmetrisch und ein Single-Region-Key sein, im selben Konto und in derselben Region wie der Workspace; Alias-ARNs und Multi-Region-Schlüssel lehnt Anthropic ab.\n- Registrierung in der Claude Console unter Data retention > Encryption keys, danach den Schlüssel einem Workspace zuweisen.\n- Warnung: Das Aktivieren von CMEK ist dauerhaft. Wird der KMS-Schlüssel gelöscht oder deaktiviert, kann Anthropic die damit verschlüsselten Daten nicht wiederherstellen.",
+   "arbeitsweise_de": "Wer Claude Platform on AWS nutzt und eigene Schlüssel verlangt, sollte den Schlüssel möglichst einem neuen Workspace zuweisen, bevor dieser Anfragen erhält. In einem Workspace mit laufenden Anfragen kann es bis zu einen Tag dauern, bis der Schlüssel wirkt.",
+   "bereich": "unternehmen",
+   "datum": "2026-10-16",
+   "wichtig": false
+  },
   {
    "id": "api-guthaben-max-und-team",
    "quelle": "platform-doku",
@@ -1270,7 +1283,7 @@
    "titel_de": "Claude Code",
    "kurz_de": "Das Werkzeug, mit dem Claude selbst programmiert – und wie man gut damit arbeitet.",
    "einleitung_de": "Mit Claude Code programmiert Claude selbst: Es liest den Code eines Projekts, ändert Dateien und führt Befehle aus. Du beschreibst, was du willst – Claude erkundet, plant und baut, während du zusiehst oder umlenkst.",
-   "stand": "2026-10-03",
+   "stand": "2026-10-16",
    "grafik": {
     "art": "schritte",
     "titel_de": "Der empfohlene Ablauf",
@@ -1331,7 +1344,11 @@
       "Berechtigungen festlegen, damit nicht jeder harmlose Befehl nachfragt",
       "Kommandozeilen-Werkzeuge und MCP-Server einrichten",
       "Hooks (kleine Skripte, die bei bestimmten Ereignissen immer laufen) für Dinge, die nie vergessen werden dürfen",
-      "Skills (gespeicherte Anleitungen) für wiederkehrende Abläufe, eigene Subagenten (Helfer mit eigenem Kontext), Plugins (Pakete aus all dem)"
+      "Skills (gespeicherte Anleitungen) für wiederkehrende Abläufe, eigene Subagenten (Helfer mit eigenem Kontext), Plugins (Pakete aus all dem)",
+      {
+       "text_de": "Mods: Plugins mit einem Hooks-Modul (Hooks als JavaScript-Funktionen) können tieferes Verhalten ändern, Oberflächen zeichnen und Befehle ergänzen; manche Mods sind in Claude Code eingebaut",
+       "quelle": "https://code.claude.com/docs/en/plugins"
+      }
      ],
      "quelle": "https://code.claude.com/docs/en/best-practices"
     },
@@ -1360,7 +1377,8 @@
      ],
      "quelle": "https://code.claude.com/docs/en/best-practices"
     }
-   ]
+   ],
+   "gesehen": []
   },
   {
    "bereich": "entwickler",
@@ -1463,7 +1481,7 @@
    "titel_de": "API und Plattform",
    "kurz_de": "Wie Programme Claude einbauen: Schnittstellen, Werkzeuge, Grenzen.",
    "einleitung_de": "Über die Claude-API (eine Schnittstelle, über die Programme mit Claude sprechen) bauen Entwickler Claude in eigene Anwendungen ein. Dafür gibt es zwei Wege: die Messages-API für volle Kontrolle und Claude Managed Agents für lange Aufgaben, die Anthropic betreibt.",
-   "stand": "2026-10-03",
+   "stand": "2026-10-16",
    "grafik": {
     "art": "schritte",
     "titel_de": "Der Weg für neue Entwickler",
@@ -1502,7 +1520,15 @@
       "Models – welche Modelle es gibt und was sie können",
       "Files – Dateien einmal hochladen und in vielen Anfragen benutzen",
       "Skills – eigene Anleitungen für Agenten anlegen",
-      "Noch in Erprobung, also Beta (Vorabfassung, kann sich ändern): Agents, Sessions und Environments – Agenten festlegen, laufen lassen und ihre abgeschottete Umgebung einrichten"
+      "Noch in Erprobung, also Beta (Vorabfassung, kann sich ändern): Agents, Sessions und Environments – Agenten festlegen, laufen lassen und ihre abgeschottete Umgebung einrichten",
+      {
+       "text_de": "OpenTelemetry-Export (Beta): Messages-API-Anfragen und Managed-Agents-Sessions als Spans in der eigenen Observability-Plattform verfolgen",
+       "quelle": "https://platform.claude.com/docs/en/manage-claude/opentelemetry"
+      },
+      {
+       "text_de": "Managed Agents (Beta): Agenten können dynamische Workflows nutzen – ein Programm, das viele Agenten in Phasen im Hintergrund ausführt",
+       "quelle": "https://platform.claude.com/docs/en/managed-agents/multiagent-orchestration"
+      }
      ],
      "quelle": "https://platform.claude.com/docs/en/api/overview"
     },
@@ -1524,7 +1550,11 @@
      "punkte_de": [
       "Bei Anthropic: Websuche, Webseiten abrufen, Code in einer abgeschotteten Umgebung ausführen, ein „Berater“-Modell, das ein schnelleres Modell bei langen Aufgaben anleitet",
       "Bei dir: Kommandozeile, Texteditor, Browser- und Computersteuerung, ein Gedächtnis über Gespräche hinweg",
-      "Unterbau: Skills, MCP (Model Context Protocol – ein Standard, um andere Dienste anzuschließen), Werkzeugsuche für Tausende Werkzeuge, Werkzeugaufrufe aus Code heraus"
+      "Unterbau: Skills, MCP (Model Context Protocol – ein Standard, um andere Dienste anzuschließen), Werkzeugsuche für Tausende Werkzeuge, Werkzeugaufrufe aus Code heraus",
+      {
+       "text_de": "In Managed Agents holt web_fetch nur noch URLs, die in der Sitzung schon aufgetaucht sind (z. B. im Text einer Nutzernachricht); andere liefern den Fehler url_not_in_prior_context",
+       "quelle": "https://platform.claude.com/docs/en/release-notes/overview"
+      }
      ],
      "quelle": "https://platform.claude.com/docs/en/build-with-claude/overview"
     },
@@ -1532,7 +1562,10 @@
      "titel_de": "Kontext sparen",
      "text_de": "Lange Gespräche werden teuer und unübersichtlich. Die API hilft mit mehreren Mitteln.",
      "punkte_de": [
-      "Zwischenspeicher für Anweisungen: 5 Minuten oder 1 Stunde, auch automatisch",
+      {
+       "text_de": "Zwischenspeicher für Anweisungen: 5 Minuten oder 1 Stunde, auch automatisch; Lesezugriffe auf Claude Sonnet 5.5 kosten 0,10 $ je Mio. Token",
+       "quelle": "https://platform.claude.com/docs/en/about-claude/pricing"
+      },
       "Automatisches Zusammenfassen, sobald eine Token-Schwelle erreicht ist",
       "Kontext bearbeiten: alte Werkzeug-Ergebnisse entfernen, wenn es eng wird",
       "Token vorher zählen"
@@ -1548,6 +1581,12 @@
      ],
      "quelle": "https://platform.claude.com/docs/en/api/overview"
     }
+   ],
+   "gesehen": [
+    "opentelemetry-export-beta",
+    "managed-agents-dynamische-workflows",
+    "managed-agents-web-fetch-url-regel",
+    "sonnet-5-5-cache-lesepreis"
    ]
   },
   {
@@ -1665,7 +1704,7 @@
    "titel_de": "Unternehmen",
    "kurz_de": "Wer Anthropic ist: Auftrag, Werte, wer entscheidet, welche Produkte es gibt.",
    "einleitung_de": "Anthropic ist ein Unternehmen für KI-Sicherheit und -Forschung, das verlässliche, durchschaubare und steuerbare KI-Systeme bauen will. Rechtlich ist es eine Public Benefit Corporation – per Satzung auch dem Gemeinwohl verpflichtet.",
-   "stand": "2026-10-03",
+   "stand": "2026-10-16",
    "grafik": {
     "art": "schritte",
     "titel_de": "Sicherheit als Wissenschaft – ein Kreislauf",
@@ -1735,45 +1774,11 @@
      ],
      "quelle": "https://www.anthropic.com/company"
     }
+   ],
+   "gesehen": [
+    "singapur-buero-mdd-absichtserklaerung"
    ]
   }
  ],
- "nachpflege": {
-  "api": [
-   {
-    "id": "opentelemetry-export-beta",
-    "titel_de": "OpenTelemetry-Export für die Claude API startet in der Beta",
-    "datum": "2026-10-14"
-   },
-   {
-    "id": "managed-agents-dynamische-workflows",
-    "titel_de": "Managed Agents: Agent schreibt eigene Workflows",
-    "datum": "2026-10-09"
-   },
-   {
-    "id": "managed-agents-web-fetch-url-regel",
-    "titel_de": "Managed Agents: web_fetch ruft nur noch bekannte URLs ab",
-    "datum": "2026-10-07"
-   },
-   {
-    "id": "sonnet-5-5-cache-lesepreis",
-    "titel_de": "Sonnet 5.5: Cache-Lesen halbiert sich auf 0,10 $",
-    "datum": "2026-10-07"
-   }
-  ],
-  "unternehmen": [
-   {
-    "id": "singapur-buero-mdd-absichtserklaerung",
-    "titel_de": "Anthropic eröffnet Büro in Singapur und schließt Absichtserklärung mit MDDI",
-    "datum": "2026-10-14"
-   }
-  ],
-  "claude-code": [
-   {
-    "id": "claude-code-2-1-287",
-    "titel_de": "Claude Code bekommt Mods",
-    "datum": "2026-10-01"
-   }
-  ]
- }
+ "nachpflege": {}
 }
