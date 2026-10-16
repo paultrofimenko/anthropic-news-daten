@@ -1,7 +1,7 @@
 {
  "version": 1,
- "erzeugt": "2026-10-15T21:26:37.432Z",
- "anzahl": 60,
+ "erzeugt": "2026-10-16T04:35:44.202Z",
+ "anzahl": 62,
  "beitraege": [
   {
    "id": "api-guthaben-max-und-team",
@@ -43,6 +43,19 @@
    "wichtig": false
   },
   {
+   "id": "code-review-claude-code-team",
+   "quelle": "claude-dev-rss",
+   "url": "https://claude.dev/blog/solving-code-review-at-anthropic/",
+   "titel_original": "How the Claude Code team does code review",
+   "titel_de": "So läuft Code Review im Claude-Code-Team",
+   "kurz_de": "Das Claude-Code-Team beschreibt sein mehrstufiges Review: Claude prüft jeden Pull Request, Menschen entscheiden nach Risiko. Von Juni bis September stiegen gemergte PRs auf mehr als das Doppelte, Reverts sanken um über 40 Prozent.",
+   "briefing_de": "Das Team setzt auf Schichten statt einer Schranke: Verifikation vor dem PR, CI, Claude-Review, Security-Review, menschliche Freigabe nach Risikostufe, Merge-Queue, Flags und schnelles Zurückrollen.\n- Von Juni bis September wurden mehr als doppelt so viele PRs gemergt, der Anteil der zurückgenommenen PRs fiel um über 40 Prozent.\n- Ziel: Die meisten PRs werden mit höchstens einem Menschen im Loop gemergt, ohne mehr Reverts oder Incidents.\n- Offene Funde aus Bug- oder Security-Review blockieren den Merge; jeder Fund muss behoben oder mit Begründung geschlossen werden.\n- Gegen endlose Review-Runden gibt es eine Obergrenze: Nach drei Runden soll der Autor den Ansatz überdenken. Im Schnitt sanken die Reviews bis zum Bestehen von 2,08 auf 1,32.\n- Die öffentliche Variante, Code Review for Claude Code, ist laut Beitrag für Team und Enterprise allgemein verfügbar.",
+   "arbeitsweise_de": "Wer mit Claude Code arbeitet, kann Claude Tests, Build oder Screenshots ausführen lassen und das Ergebnis zeigen lassen, bevor ein PR entsteht. Wiederkehrende Review-Funde lassen sich in CLAUDE.md, REVIEW.md oder Lint-Regeln festhalten.",
+   "bereich": "engineering",
+   "datum": "2026-10-15",
+   "wichtig": false
+  },
+  {
    "id": "code-review-doku-neu",
    "quelle": "code-doku",
    "url": "https://code.claude.com/docs/en/code-review-pull-requests",
@@ -64,6 +77,19 @@
    "kurz_de": "Die Compliance API liefert in der Beta für Claude Enterprise die Anweisungen, die Mitglieder in claude.ai und Cowork gespeichert haben. Neu in der Doku: Endpunkte für Claude-Code-Artifacts.",
    "briefing_de": "Compliance API, Stand 15. Oktober 2026:\n- Neuer Endpunkt GET /v1/compliance/organizations/{org_uuid}/user_preferences (Beta, Claude Enterprise) gibt den Text zurück, den Mitglieder als „Instructions for Claude“ in claude.ai und als „Global instructions“ in Cowork gespeichert haben.\n- Nötig sind der bestehende Compliance Access Key und der Scope read:compliance_user_data.\n- Neue Doku-Seiten beschreiben Endpunkte für Claude-Code-Artifacts unter /v1/compliance/apps/code/artifacts: auflisten, Version herunterladen, Inhalt herunterladen, löschen.\n- Das Löschen eines Artifacts ist endgültig und entfernt alle Versionen.",
    "arbeitsweise_de": "Wer die Compliance API nutzt, kann Nutzer-Anweisungen und Code-Artifacts jetzt in Exporte und Audits einbeziehen.",
+   "bereich": "api",
+   "datum": "2026-10-15",
+   "wichtig": false
+  },
+  {
+   "id": "fast-mode-opus-5-5-ga",
+   "quelle": "platform-release-notes",
+   "url": "https://platform.claude.com/docs/en/release-notes/overview",
+   "titel_original": "Fast mode is out of research preview for Claude Opus 5.5",
+   "titel_de": "Fast Mode für Claude Opus 5.5 ohne Vorabzugang",
+   "kurz_de": "Fast Mode ist für Claude Opus 5.5 aus der Research Preview heraus: Kein Zugangsantrag und kein Beta-Header mehr nötig. Für Opus 5 und Opus 4.8 bleibt er in der Research Preview.",
+   "briefing_de": "- Fast Mode für Claude Opus 5.5 ist nicht mehr in der Research Preview; du musst keinen Zugang mehr anfragen.\n- Anfragen an Opus 5.5 brauchen den Beta-Header `fast-mode-2026-02-01` nicht mehr; Anfragen, die ihn weiter senden, funktionieren weiter.\n- Opus 5.5 hat jetzt ein Standard-Ratenlimit für Fast Mode in den Nutzungsstufen Start, Build und Scale.\n- Für Claude Opus 5 und Claude Opus 4.8 bleibt Fast Mode in der Research Preview; dort den Beta-Header weiter mitsenden.",
+   "arbeitsweise_de": "Für Opus 5.5 kannst du den Beta-Header für Fast Mode weglassen. Für Opus 5 und Opus 4.8 muss er weiter gesendet werden.",
    "bereich": "api",
    "datum": "2026-10-15",
    "wichtig": false
