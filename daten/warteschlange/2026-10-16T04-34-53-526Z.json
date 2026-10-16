@@ -1,0 +1,25 @@
+{
+ "zeit": "2026-10-16T04:34:53.526Z",
+ "neu": [
+  {
+   "quelle": "claude-dev-rss",
+   "name": "claude.dev",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://claude.dev/blog/solving-code-review-at-anthropic/",
+   "titel": "How the Claude Code team does code review",
+   "datum": "Thu, 15 Oct 2026 12:00:00 GMT"
+  },
+  {
+   "quelle": "platform-release-notes",
+   "name": "Claude Platform Release Notes",
+   "wichtig": false,
+   "art": "ergaenzt",
+   "url": "https://platform.claude.com/docs/en/release-notes/overview",
+   "titel": "October 15, 2026",
+   "zeilen": [
+    "* [Fast mode](https://platform.claude.com/docs/en/build-with-claude/fast-mode) is out of research preview for Claude Opus 5.5, and you no longer need to request access. Requests to Claude Opus 5.5 no longer require the `fast-mode-2026-02-01` beta header, and requests that still send it keep working. Claude Opus 5.5 now has a default fast mode rate limit in the Start, Build, and Scale usage tiers. Fast mode for Claude Opus 5 and Claude Opus 4.8 remains in research preview. Keep sending the beta header with fast mode requests to those models."
+   ]
+  }
+ ]
+}

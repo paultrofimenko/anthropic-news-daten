@@ -13,6 +13,7 @@
    "claude.dev/blog/lessons-from-building-claude-code-how-we-use-skills",
    "claude.dev/blog/lessons-from-building-claude-code-prompt-caching-is-everything",
    "claude.dev/blog/seeing-like-an-agent",
+   "claude.dev/blog/solving-code-review-at-anthropic",
    "claude.dev/blog/spending-your-effort",
    "claude.dev/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models",
    "claude.dev/blog/using-claude-code-the-unreasonable-effectiveness-of-html",
@@ -35,6 +36,7 @@
    "claude.dev/blog/lessons-from-building-claude-code-how-we-use-skills",
    "claude.dev/blog/lessons-from-building-claude-code-prompt-caching-is-everything",
    "claude.dev/blog/seeing-like-an-agent",
+   "claude.dev/blog/solving-code-review-at-anthropic",
    "claude.dev/blog/spending-your-effort",
    "claude.dev/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models",
    "claude.dev/blog/using-claude-code-the-unreasonable-effectiveness-of-html",
@@ -3138,7 +3140,8 @@
    "October 15, 2026": [
     "06f36b26ab",
     "736d8b6181",
-    "a4b043ada9"
+    "a4b043ada9",
+    "b0c1a2f99e"
    ],
    "October 14, 2026": [
     "d3ab9175a4",
@@ -3171,6 +3174,15 @@
    "October 1, 2026": [
     "323d103291",
     "3f1b6f1251"
+   ],
+   "September 30, 2026": [
+    "f7d9fea84b",
+    "8936617436"
+   ],
+   "September 28, 2026": [
+    "141476a2f8",
+    "0b0b7799d3",
+    "0e1008a6f0"
    ]
   },
   "zeilenVersion": 2
