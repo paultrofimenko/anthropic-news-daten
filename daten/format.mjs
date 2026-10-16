@@ -154,6 +154,7 @@ export function pruefeBeitrag(b, { projektnamen = [] } = {}) {
   if ('wichtig' in b && typeof b.wichtig !== 'boolean') fehler.push(`${id}: wichtig muss true oder false sein`);
   if (typeof b.kurz_de === 'string' && b.kurz_de.length > KURZ_MAX) fehler.push(`${id}: kurz_de länger als ${KURZ_MAX} Zeichen`);
   fehler.push(...pruefeEreignis(b)); // optionales Feld für die Zeitleiste (F-09)
+  fehler.push(...pruefeLernkarten(b)); // optionales Feld für Abfragekarten (F-14)
 
   const texte = alleTexte(b);
   for (const text of texte) {
@@ -164,6 +165,36 @@ export function pruefeBeitrag(b, { projektnamen = [] } = {}) {
   const stellen = persoenlicheStellen(texte.join('\n'), projektnamen);
   if (stellen.length) fehler.push(`${id}: Persönliches gefunden (${stellen.join(', ')})`);
   return [...new Set(fehler)];
+}
+
+// F-14: 1 bis 3 Abfragekarten { frage_de, antwort_de }. Links und Persönliches prüft pruefeBeitrag über alleTexte mit.
+export const LERNKARTEN_MAX = 3;
+const FRAGE_MAX = 200;
+const ANTWORT_MAX = 400;
+// Ab diesem Datum muss jeder wichtige Beitrag Karten haben (Prüfrunde 1, B) – ältere bleiben, wie sie sind.
+export const LERNKARTEN_PFLICHT_AB = '2026-10-17';
+export function pruefeLernkarten(b) {
+  if (!b || typeof b !== 'object') return [];
+  const id = typeof b.id === 'string' ? b.id : '(ohne id)';
+  if (!('lernkarten' in b)) {
+    return b.wichtig === true && typeof b.datum === 'string' && b.datum >= LERNKARTEN_PFLICHT_AB
+      ? [`${id}: wichtiger Beitrag ohne lernkarten (Pflicht ab ${LERNKARTEN_PFLICHT_AB})`] : [];
+  }
+  const l = b.lernkarten;
+  if (!Array.isArray(l) || l.length < 1 || l.length > LERNKARTEN_MAX) return [`${id}: lernkarten muss eine Liste mit 1 bis ${LERNKARTEN_MAX} Karten sein`];
+  const fehler = [];
+  const fragen = new Set();
+  l.forEach((k, i) => {
+    const wo = `${id}: Lernkarte ${i + 1}`;
+    if (!k || typeof k !== 'object' || Array.isArray(k)) { fehler.push(`${wo}: kein Objekt`); return; }
+    const frage = typeof k.frage_de === 'string' ? k.frage_de.trim() : '';
+    if (!frage || !frage.endsWith('?') || frage.length > FRAGE_MAX) fehler.push(`${wo}: Frage fehlt, endet nicht mit „?“ oder ist länger als ${FRAGE_MAX} Zeichen`);
+    const antwort = typeof k.antwort_de === 'string' ? k.antwort_de.trim() : '';
+    if (!antwort || antwort.length > ANTWORT_MAX) fehler.push(`${wo}: Antwort fehlt oder ist länger als ${ANTWORT_MAX} Zeichen`);
+    if (frage && fragen.has(frage)) fehler.push(`${wo}: Frage doppelt`);
+    fragen.add(frage);
+  });
+  return fehler;
 }
 
 export function pruefeAlle(beitraege, optionen) {

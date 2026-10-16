@@ -9,5 +9,11 @@
   "arbeitsweise_de": "Wer Sonnet 5.5 mit Prompt Caching nutzt, zahlt für wiederholt gelesene Kontexte weniger; nichts am Code ist nötig.",
   "bereich": "api",
   "datum": "2026-10-07",
-  "wichtig": true
+  "wichtig": true,
+  "lernkarten": [
+    {
+      "frage_de": "Was kostet ein Prompt-Cache-Lesezugriff bei Claude Sonnet 5.5 je Million Token?",
+      "antwort_de": "0,10 $ statt vorher 0,20 $ – das 0,05-fache des Basis-Eingabepreises. Cache-Schreiben und alle übrigen Preise bleiben gleich."
+    }
+  ]
 }

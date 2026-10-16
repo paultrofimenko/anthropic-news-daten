@@ -8,5 +8,15 @@
   "briefing_de": "- Betroffen: claude-sonnet-4-5-20250929.\n- Abschaltung in der Claude API: 30. November 2026.\n- Empfehlung: Sonnet 5.5, mit eigenem Umstiegsleitfaden.",
   "bereich": "modelle",
   "datum": "2026-09-30",
-  "wichtig": true
+  "wichtig": true,
+  "lernkarten": [
+    {
+      "frage_de": "Wann wird Claude Sonnet 4.5 in der Claude API abgeschaltet?",
+      "antwort_de": "Am 30. November 2026 (Modell claude-sonnet-4-5-20250929)."
+    },
+    {
+      "frage_de": "Auf welches Modell empfiehlt Anthropic, von Sonnet 4.5 umzusteigen?",
+      "antwort_de": "Auf Sonnet 5.5 – dafür gibt es einen eigenen Umstiegsleitfaden."
+    }
+  ]
 }

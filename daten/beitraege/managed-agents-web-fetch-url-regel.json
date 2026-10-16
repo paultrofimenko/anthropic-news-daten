@@ -5,9 +5,19 @@
   "titel_original": "Claude Platform Release Notes, October 7, 2026",
   "titel_de": "Managed Agents: web_fetch ruft nur noch bekannte URLs ab",
   "kurz_de": "In Claude Managed Agents holt web_fetch nur noch URLs, die in der Sitzung schon aufgetaucht sind. Das senkt das Risiko von Datenabfluss; andere URLs liefern url_not_in_prior_context.",
-  "briefing_de": "- Zählen: URLs im Text einer Nutzernachricht, in einem web_search-Ergebnis oder auf einer zuvor per web_fetch geholten Seite.\n- Zählen nicht: URLs nur in Claudes eigener Ausgabe, im System-Prompt des Agenten, in angehängten Dokumenten oder in Ausgaben von Tools wie bash, read oder MCP-Tools.\n- Solche Aufrufe liefern den Fehlerresultat url_not_in_prior_context.\n- Soll der Agent eine URL abrufen dürfen, sendet man sie im Text eines user.message-Events.",
+  "briefing_de": "- Zählen: URLs im Text einer Nutzernachricht, in einem web_search-Ergebnis oder auf einer zuvor per web_fetch geholten Seite.\n- Zählen nicht: URLs nur in Claudes eigener Ausgabe, im System-Prompt des Agenten, in angehängten Dokumenten oder in Ausgaben von Tools wie bash, read oder MCP-Tools.\n- Solche Aufrufe liefern den Fehlerresultat url_not_in_prior_context.\n- Soll der Agent eine URL abrufen dürfen, sendet man sie im Text eines user.message-Events.\n- Bei limited networking gilt zusätzlich allowed_hosts: Hosts außerhalb davon liefern url_not_allowed.",
   "arbeitsweise_de": "Wer Agenten URLs aus Systemprompt oder Dateien abrufen lässt, muss sie künftig in einer Nutzernachricht mitschicken.",
   "bereich": "api",
   "datum": "2026-10-07",
-  "wichtig": true
+  "wichtig": true,
+  "lernkarten": [
+    {
+      "frage_de": "Welche URLs ruft web_fetch in Claude Managed Agents noch ab?",
+      "antwort_de": "Nur URLs, die in der Sitzung schon aufgetaucht sind: im Text einer Nutzernachricht, in einem web_search-Ergebnis oder auf einer zuvor geholten Seite."
+    },
+    {
+      "frage_de": "Welchen Fehler liefert web_fetch in Managed Agents für eine unbekannte URL, und wie erlaubt man sie?",
+      "antwort_de": "url_not_in_prior_context. Erlauben: die URL im Text eines user.message-Events senden; bei limited networking muss der Host außerdem in allowed_hosts stehen (sonst url_not_allowed)."
+    }
+  ]
 }

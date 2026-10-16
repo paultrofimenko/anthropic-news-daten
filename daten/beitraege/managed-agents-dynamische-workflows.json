@@ -13,5 +13,15 @@
   "ereignis": {
     "art": "neu",
     "titel": "Managed Agents: dynamische Workflows"
-  }
+  },
+  "lernkarten": [
+    {
+      "frage_de": "Was ist ein dynamischer Workflow in Claude Managed Agents?",
+      "antwort_de": "Ein Programm, das der Agent selbst schreibt: Es lässt viele Agenten in Phasen im Hintergrund laufen und kombiniert ihre Ergebnisse (Workflow-Run)."
+    },
+    {
+      "frage_de": "Wie schaltet man dynamische Workflows für einen Managed Agent ein?",
+      "antwort_de": "Beta-Header managed-agents-2026-04-01 und Feld multiagent auf {\"type\": \"multiagent_20261001\", \"workflows\": {\"type\": \"enabled\"}} setzen."
+    }
+  ]
 }

@@ -48,7 +48,10 @@ Die GitHub Action „Vorprüfung“ hat Neues gefunden und dich gestartet.
   "bereich": "claude-code",
   "datum": "2026-10-01",
   "wichtig": true,
-  "ereignis": { "art": "neu", "titel": "Claude Code bekommt Mods" }
+  "ereignis": { "art": "neu", "titel": "Claude Code bekommt Mods" },
+  "lernkarten": [
+    { "frage_de": "Was dürfen Plugins in Claude Code seit Fassung 2.1.287?", "antwort_de": "Als Mods tieferes Verhalten ändern: Verhalten, Oberfläche und eigene Funktionen." }
+  ]
 }
 ```
 - `id`: klein, a–z, 0–9, Bindestrich; sprechend und stabil (gleicher Inhalt → gleiche id).
@@ -67,6 +70,11 @@ Die GitHub Action „Vorprüfung“ hat Neues gefunden und dich gestartet.
   `art` ist immer `"neu"`; `titel` kurz, höchstens 60 Zeichen („Sonnet 5.5 erscheint“); `datum` nur angeben,
   wenn das Ereignis an einem anderen Tag war als `datum` des Beitrags. **Abschaltungen nicht** als
   ereignis eintragen – die kommen fest aus der Abschaltliste.
+- `lernkarten` – Abfragekarten zum Merken, **Pflicht bei `wichtig: true`**, sonst weglassen. 1 bis 3 Karten
+  `{ "frage_de": …, "antwort_de": … }` zum Wichtigsten des Beitrags (Modell-ID, Preis, Datum, was sich ändert).
+  - Frage aktiv stellen: Warum/Wie/Was, keine Ja/Nein-Fragen; endet mit „?“, höchstens 200 Zeichen.
+  - Antwort kurz (höchstens 400 Zeichen), nur, was in der Quelle steht – Zahlen und IDs genau übernehmen.
+  - Jede Karte muss ohne den Beitrag verständlich sein: Modell oder Produkt in der Frage nennen.
 
 ## 4. Wie du schreibst
 - Deutsch, klar, sachlich, Du-Form. Fachwörter, die Entwickler so sagen, bleiben (Skills, Plugins, Effort).

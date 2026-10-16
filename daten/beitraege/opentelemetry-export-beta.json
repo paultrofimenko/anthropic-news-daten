@@ -13,5 +13,15 @@
   "ereignis": {
     "art": "neu",
     "titel": "OpenTelemetry-Export (Beta)"
-  }
+  },
+  "lernkarten": [
+    {
+      "frage_de": "Was lässt sich mit dem OpenTelemetry-Export der Claude API verfolgen?",
+      "antwort_de": "Messages-API- und Sessions-API-Anfragen, Token-Nutzung, Server-Tools und Managed-Agents-Turns – als Spans in der eigenen Observability-Plattform."
+    },
+    {
+      "frage_de": "Was enthalten die OpenTelemetry-Spans der Claude API standardmäßig?",
+      "antwort_de": "Nur Metadaten. Optional voller Inhalt mit Prompts und Antworten, Standardlimit 0,75 MB pro Span."
+    }
+  ]
 }

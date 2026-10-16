@@ -13,5 +13,19 @@
   "ereignis": {
     "art": "neu",
     "titel": "Haiku 5.5 erscheint"
-  }
+  },
+  "lernkarten": [
+    {
+      "frage_de": "Welche Modell-ID hat Claude Haiku 5.5, und was kostet es je Million Token?",
+      "antwort_de": "claude-haiku-5-5; ab 0,10 $ Eingabe und 0,50 $ Ausgabe, bei mehr als 100K Prompt-Token 0,50 $ und 2,50 $."
+    },
+    {
+      "frage_de": "Was ist bei Claude Haiku 5.5 neu gegenüber früheren Haiku-Modellen beim Denken?",
+      "antwort_de": "Es ist das erste Haiku mit einstellbarem Effort (Standard medium); dazu kommt adaptives Thinking."
+    },
+    {
+      "frage_de": "Welche alten Einstellungen können beim Wechsel von Haiku 4.5 auf Haiku 5.5 einen 400-Fehler auslösen?",
+      "antwort_de": "Manuelles Extended Thinking (budget_tokens), temperature/top_p/top_k, Prefill der Assistant-Nachricht und computer_20250124."
+    }
+  ]
 }
