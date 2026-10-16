@@ -3,7 +3,7 @@
   "titel_de": "Unternehmen",
   "kurz_de": "Wer Anthropic ist: Auftrag, Werte, wer entscheidet, welche Produkte es gibt.",
   "einleitung_de": "Anthropic ist ein Unternehmen für KI-Sicherheit und -Forschung, das verlässliche, durchschaubare und steuerbare KI-Systeme bauen will. Rechtlich ist es eine Public Benefit Corporation – per Satzung auch dem Gemeinwohl verpflichtet.",
-  "stand": "2026-10-03",
+  "stand": "2026-10-16",
   "grafik": {
     "art": "schritte",
     "titel_de": "Sicherheit als Wissenschaft – ein Kreislauf",
@@ -73,5 +73,8 @@
       ],
       "quelle": "https://www.anthropic.com/company"
     }
+  ],
+  "gesehen": [
+    "singapur-buero-mdd-absichtserklaerung"
   ]
 }

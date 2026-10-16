@@ -3,7 +3,7 @@
   "titel_de": "API und Plattform",
   "kurz_de": "Wie Programme Claude einbauen: Schnittstellen, Werkzeuge, Grenzen.",
   "einleitung_de": "Über die Claude-API (eine Schnittstelle, über die Programme mit Claude sprechen) bauen Entwickler Claude in eigene Anwendungen ein. Dafür gibt es zwei Wege: die Messages-API für volle Kontrolle und Claude Managed Agents für lange Aufgaben, die Anthropic betreibt.",
-  "stand": "2026-10-03",
+  "stand": "2026-10-16",
   "grafik": {
     "art": "schritte",
     "titel_de": "Der Weg für neue Entwickler",
@@ -42,7 +42,15 @@
         "Models – welche Modelle es gibt und was sie können",
         "Files – Dateien einmal hochladen und in vielen Anfragen benutzen",
         "Skills – eigene Anleitungen für Agenten anlegen",
-        "Noch in Erprobung, also Beta (Vorabfassung, kann sich ändern): Agents, Sessions und Environments – Agenten festlegen, laufen lassen und ihre abgeschottete Umgebung einrichten"
+        "Noch in Erprobung, also Beta (Vorabfassung, kann sich ändern): Agents, Sessions und Environments – Agenten festlegen, laufen lassen und ihre abgeschottete Umgebung einrichten",
+        {
+          "text_de": "OpenTelemetry-Export (Beta): Messages-API-Anfragen und Managed-Agents-Sessions als Spans in der eigenen Observability-Plattform verfolgen",
+          "quelle": "https://platform.claude.com/docs/en/manage-claude/opentelemetry"
+        },
+        {
+          "text_de": "Managed Agents (Beta): Agenten können dynamische Workflows nutzen – ein Programm, das viele Agenten in Phasen im Hintergrund ausführt",
+          "quelle": "https://platform.claude.com/docs/en/managed-agents/multiagent-orchestration"
+        }
       ],
       "quelle": "https://platform.claude.com/docs/en/api/overview"
     },
@@ -64,7 +72,11 @@
       "punkte_de": [
         "Bei Anthropic: Websuche, Webseiten abrufen, Code in einer abgeschotteten Umgebung ausführen, ein „Berater“-Modell, das ein schnelleres Modell bei langen Aufgaben anleitet",
         "Bei dir: Kommandozeile, Texteditor, Browser- und Computersteuerung, ein Gedächtnis über Gespräche hinweg",
-        "Unterbau: Skills, MCP (Model Context Protocol – ein Standard, um andere Dienste anzuschließen), Werkzeugsuche für Tausende Werkzeuge, Werkzeugaufrufe aus Code heraus"
+        "Unterbau: Skills, MCP (Model Context Protocol – ein Standard, um andere Dienste anzuschließen), Werkzeugsuche für Tausende Werkzeuge, Werkzeugaufrufe aus Code heraus",
+        {
+          "text_de": "In Managed Agents holt web_fetch nur noch URLs, die in der Sitzung schon aufgetaucht sind (z. B. im Text einer Nutzernachricht); andere liefern den Fehler url_not_in_prior_context",
+          "quelle": "https://platform.claude.com/docs/en/release-notes/overview"
+        }
       ],
       "quelle": "https://platform.claude.com/docs/en/build-with-claude/overview"
     },
@@ -72,7 +84,10 @@
       "titel_de": "Kontext sparen",
       "text_de": "Lange Gespräche werden teuer und unübersichtlich. Die API hilft mit mehreren Mitteln.",
       "punkte_de": [
-        "Zwischenspeicher für Anweisungen: 5 Minuten oder 1 Stunde, auch automatisch",
+        {
+          "text_de": "Zwischenspeicher für Anweisungen: 5 Minuten oder 1 Stunde, auch automatisch; Lesezugriffe auf Claude Sonnet 5.5 kosten 0,10 $ je Mio. Token",
+          "quelle": "https://platform.claude.com/docs/en/about-claude/pricing"
+        },
         "Automatisches Zusammenfassen, sobald eine Token-Schwelle erreicht ist",
         "Kontext bearbeiten: alte Werkzeug-Ergebnisse entfernen, wenn es eng wird",
         "Token vorher zählen"
@@ -88,5 +103,11 @@
       ],
       "quelle": "https://platform.claude.com/docs/en/api/overview"
     }
+  ],
+  "gesehen": [
+    "opentelemetry-export-beta",
+    "managed-agents-dynamische-workflows",
+    "managed-agents-web-fetch-url-regel",
+    "sonnet-5-5-cache-lesepreis"
   ]
 }

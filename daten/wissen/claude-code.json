@@ -3,15 +3,27 @@
   "titel_de": "Claude Code",
   "kurz_de": "Das Werkzeug, mit dem Claude selbst programmiert – und wie man gut damit arbeitet.",
   "einleitung_de": "Mit Claude Code programmiert Claude selbst: Es liest den Code eines Projekts, ändert Dateien und führt Befehle aus. Du beschreibst, was du willst – Claude erkundet, plant und baut, während du zusiehst oder umlenkst.",
-  "stand": "2026-10-03",
+  "stand": "2026-10-16",
   "grafik": {
     "art": "schritte",
     "titel_de": "Der empfohlene Ablauf",
     "schritte": [
-      { "titel_de": "Erkunden", "text_de": "Im Planmodus liest Claude Dateien und beantwortet Fragen, ohne etwas zu ändern." },
-      { "titel_de": "Planen", "text_de": "Claude schreibt einen genauen Plan; du kannst ihn vorher selbst bearbeiten." },
-      { "titel_de": "Umsetzen", "text_de": "Planmodus verlassen, Claude baut nach dem Plan, schreibt Tests und lässt sie laufen." },
-      { "titel_de": "Sichern", "text_de": "Claude legt einen Commit (einen gespeicherten Stand mit Beschreibung) an und öffnet auf Wunsch einen Pull Request – einen Änderungsvorschlag zum Prüfen." }
+      {
+        "titel_de": "Erkunden",
+        "text_de": "Im Planmodus liest Claude Dateien und beantwortet Fragen, ohne etwas zu ändern."
+      },
+      {
+        "titel_de": "Planen",
+        "text_de": "Claude schreibt einen genauen Plan; du kannst ihn vorher selbst bearbeiten."
+      },
+      {
+        "titel_de": "Umsetzen",
+        "text_de": "Planmodus verlassen, Claude baut nach dem Plan, schreibt Tests und lässt sie laufen."
+      },
+      {
+        "titel_de": "Sichern",
+        "text_de": "Claude legt einen Commit (einen gespeicherten Stand mit Beschreibung) an und öffnet auf Wunsch einen Pull Request – einen Änderungsvorschlag zum Prüfen."
+      }
     ],
     "quelle": "https://code.claude.com/docs/en/best-practices"
   },
@@ -52,7 +64,11 @@
         "Berechtigungen festlegen, damit nicht jeder harmlose Befehl nachfragt",
         "Kommandozeilen-Werkzeuge und MCP-Server einrichten",
         "Hooks (kleine Skripte, die bei bestimmten Ereignissen immer laufen) für Dinge, die nie vergessen werden dürfen",
-        "Skills (gespeicherte Anleitungen) für wiederkehrende Abläufe, eigene Subagenten (Helfer mit eigenem Kontext), Plugins (Pakete aus all dem)"
+        "Skills (gespeicherte Anleitungen) für wiederkehrende Abläufe, eigene Subagenten (Helfer mit eigenem Kontext), Plugins (Pakete aus all dem)",
+        {
+          "text_de": "Mods: Plugins mit einem Hooks-Modul (Hooks als JavaScript-Funktionen) können tieferes Verhalten ändern, Oberflächen zeichnen und Befehle ergänzen; manche Mods sind in Claude Code eingebaut",
+          "quelle": "https://code.claude.com/docs/en/plugins"
+        }
       ],
       "quelle": "https://code.claude.com/docs/en/best-practices"
     },
@@ -81,5 +97,6 @@
       ],
       "quelle": "https://code.claude.com/docs/en/best-practices"
     }
-  ]
+  ],
+  "gesehen": []
 }
