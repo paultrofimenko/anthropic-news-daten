@@ -1,8 +1,33 @@
 {
  "version": 1,
- "erzeugt": "2026-10-16T16:43:38.545Z",
- "anzahl": 63,
+ "erzeugt": "2026-10-16T21:13:19.052Z",
+ "anzahl": 67,
  "beitraege": [
+  {
+   "id": "arbeit-und-erwartungen-bei-anthropic",
+   "quelle": "anthropic",
+   "url": "https://www.anthropic.com/research/expectations-for-the-future",
+   "titel_original": "Working at the frontier shapes expectations for the future",
+   "titel_de": "Wie KI die Arbeit bei Anthropic verändert – und was Beschäftigte erwarten",
+   "kurz_de": "Zwei Berichte: Bei Anthropic sinkt der Anteil junger Technik-Einstellungen, Agenten leisten mehr Arbeitsstunden als Menschen. Mitarbeitende erwarten von KI deutlich mehr als die US-Bevölkerung.",
+   "briefing_de": "Zwei neue Berichte von Anthropic:\n- Beschäftigung intern: Der Anteil von Junior-Beschäftigten in den technischen Abteilungen fiel von 21 % auf 14 %; im März 2026 überstiegen die Arbeitsstunden von Agenten erstmals die der Menschen, im August arbeiteten interaktive Agenten sechs Stunden je Mitarbeiterstunde.\n- Der Code-Output pro Person stieg; Claude-Sitzungen warten etwa 80 % der Zeit auf menschliche Eingaben, menschliche Aufmerksamkeit ist der Engpass.\n- Erwartungsumfrage (August 2026, 10.980 US-Erwachsene, 1.334 Anthropic-Beschäftigte): 39 % der US-Erwachsenen und 91 % der Beschäftigten erwarten bis 2030 eine Entdeckung auf Nobel-Niveau.\n- Beschäftigte erwarten, dass KI bis 2030 im Schnitt etwa 75 % ihrer Arbeitsstunden übernimmt; US-Beschäftigte erwarten etwa 28 %.",
+   "bereich": "forschung",
+   "datum": "2026-10-16",
+   "wichtig": false
+  },
+  {
+   "id": "claude-code-2-1-302",
+   "quelle": "code-changelog",
+   "url": "https://code.claude.com/docs/en/changelog",
+   "titel_original": "Claude Code 2.1.302",
+   "titel_de": "Claude Code 2.1.302: Auto-Mode-Modell wählbar, Leerlauf-Kompaktierung und viele Fixes",
+   "kurz_de": "Fassung 2.1.302 bringt CLAUDE_CODE_AUTO_MODE_MODEL, eine Einstellung für Leerlauf-Kompaktierung in /config, Fork-Subagents als Standard in mehr Oberflächen und viele Fixes.",
+   "briefing_de": "Neu in Fassung 2.1.302:\n- CLAUDE_CODE_AUTO_MODE_MODEL wählt das Modell des clientseitigen Auto-Mode-Classifiers; das serverseitige ändert sich nicht.\n- In /config gibt es die Zeile „Idle compaction“ zum Ein- und Ausschalten.\n- Fork-Subagents sind jetzt auch in claude -p, im Agent SDK, in der Desktop-App und in VS Code standardmäßig an (CLAUDE_CODE_FORK_SUBAGENT=0 schaltet sie ab); Desktop-App und VS Code lassen Subagents des Hauptgesprächs immer im Hintergrund laufen.\n- Hinweis in /design-sync und /design-login: Claude Design (claude.ai/design) als eigenständiges Produkt schließt am 14. Dezember 2026.\n- Prompt- und Agent-Hooks: höchstens 12 gleichzeitig je Ereignis.\n- Viele Fixes, u. a. „Prompt is too long“ beim Abbrechen während der Kompaktierung, Prompt-Cache-Miss bei nachgeladenen Tools und Bilder über 128 MB im Read-Tool.",
+   "arbeitsweise_de": "Wer Claude Code in Skripten (claude -p) oder über das Agent SDK nutzt, sollte beachten, dass Fork-Subagents jetzt standardmäßig an sind.",
+   "bereich": "claude-code",
+   "datum": "2026-10-16",
+   "wichtig": false
+  },
   {
    "id": "cmek-claude-platform-on-aws",
    "quelle": "platform-doku",
@@ -13,6 +38,30 @@
    "briefing_de": "Die Seite erklärt, wie du einen AWS-KMS-Schlüssel als CMEK auf Claude Platform on AWS einrichtest.\n- Voraussetzungen: AWS-Konto der Organisation mit Rechten für kms:CreateKey und kms:PutKeyPolicy, Admin-Rolle in der Claude Console und passende aws-external-anthropic-Berechtigungen (z. B. RegisterKey).\n- Die Key Policy erlaubt dem den veröffentlichten AWS-Service-Principal von Anthropic Encrypt, Decrypt, GenerateDataKey und DescribeKey; eine Bedingung auf die Compartment-ID des Workspace ist optional.\n- Der Schlüssel muss symmetrisch und ein Single-Region-Key sein, im selben Konto und in derselben Region wie der Workspace; Alias-ARNs und Multi-Region-Schlüssel lehnt Anthropic ab.\n- Registrierung in der Claude Console unter Data retention > Encryption keys, danach den Schlüssel einem Workspace zuweisen.\n- Warnung: Das Aktivieren von CMEK ist dauerhaft. Wird der KMS-Schlüssel gelöscht oder deaktiviert, kann Anthropic die damit verschlüsselten Daten nicht wiederherstellen.",
    "arbeitsweise_de": "Wer Claude Platform on AWS nutzt und eigene Schlüssel verlangt, sollte den Schlüssel möglichst einem neuen Workspace zuweisen, bevor dieser Anfragen erhält. In einem Workspace mit laufenden Anfragen kann es bis zu einen Tag dauern, bis der Schlüssel wirkt.",
    "bereich": "unternehmen",
+   "datum": "2026-10-16",
+   "wichtig": false
+  },
+  {
+   "id": "ecdsa-kurven-herkunft",
+   "quelle": "anthropic",
+   "url": "https://www.anthropic.com/research/ecdsa-curve-origins",
+   "titel_original": "Claude reveals ECDSA curve origins",
+   "titel_de": "Claude klärt Herkunft der ECDSA-Kurvenparameter",
+   "kurz_de": "Ein internes Claude-Modell fand in unter 30 Minuten heraus, wie die ungeklärten Seeds der NIST-Kurven erzeugt wurden: mit lrand48, nicht per Hash. Eine Schwachstelle zeigt sich dabei nicht.",
+   "briefing_de": "- NIST nahm ECDSA 2000 in FIPS 186-2 auf; die Seeds für Prim- und Binärkurven blieben unerklärt.\n- Die Seeds stammen aus dem C-Zufallsgenerator lrand48, initialisiert mit einem Unix-Zeitstempel; für P-256 waren es 1842 Iterationen. Erklärt sind P-192, P-224, P-256, P-384 und P-521.\n- Ungeklärt bleiben der Seed von B-163 und die Basispunkte von P-224, P-256, P-384, P-521 und den NIST-Binärkurven.\n- Die Befunde zeigen keine kryptografische Schwäche, machen gezielte Hintertüren in diesen Parametern aber weniger plausibel.\n- Das Preisgeld von 36.864 $ geht an die Internet Security Research Group.",
+   "bereich": "forschung",
+   "datum": "2026-10-16",
+   "wichtig": false
+  },
+  {
+   "id": "quantenschaltkreise-mit-claude",
+   "quelle": "anthropic",
+   "url": "https://www.anthropic.com/research/designing-efficient-quantum-circuits",
+   "titel_original": "Designing more efficient quantum circuits with Claude",
+   "titel_de": "Claude entwirft effizientere Quantenschaltkreise",
+   "kurz_de": "Claude fand für acht Quantenschaltkreise Entwürfe mit weniger Qubits und Gattern als die besten veröffentlichten. Die FeMoco-Schätzung sank von etwa 50 Billionen auf etwa 340 Millionen Toffoli-Gatter.",
+   "briefing_de": "Claude (im Artikel: Claude Mythos 5) lief in einer geschlossenen Schleife ohne menschliche Eingaben zwischen den Runden, geprüft von einem automatischen Evaluator:\n- Für alle acht Aufgaben aus Chemie, Optimierung, Physiksimulation und Zahlentheorie gab es Entwürfe mit weniger Qubits und Gattern als die besten veröffentlichten, teils um eine Größenordnung oder mehr.\n- FeMoco: von etwa 50 Billionen Toffoli-Gattern (Schätzung 2017) auf etwa 340 Millionen, rund 150.000-fach weniger.\n- Elliptische Kurven: ein Schaltkreis braucht 12 % mehr Qubits, aber 17-mal weniger Gatter als der kleinste bisherige Entwurf.\n- DQI-Decoder: 12-mal weniger Gatter als Googles bisherige Konstruktion.\n- Grenze: Claude war anfangs übervorsichtig und bevorzugte bekannte Ansätze.",
+   "bereich": "forschung",
    "datum": "2026-10-16",
    "wichtig": false
   },
