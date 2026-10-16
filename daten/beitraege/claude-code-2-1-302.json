@@ -1,0 +1,13 @@
+{
+  "id": "claude-code-2-1-302",
+  "quelle": "code-changelog",
+  "url": "https://code.claude.com/docs/en/changelog",
+  "titel_original": "Claude Code 2.1.302",
+  "titel_de": "Claude Code 2.1.302: Auto-Mode-Modell wählbar, Leerlauf-Kompaktierung und viele Fixes",
+  "kurz_de": "Fassung 2.1.302 bringt CLAUDE_CODE_AUTO_MODE_MODEL, eine Einstellung für Leerlauf-Kompaktierung in /config, Fork-Subagents als Standard in mehr Oberflächen und viele Fixes.",
+  "briefing_de": "Neu in Fassung 2.1.302:\n- CLAUDE_CODE_AUTO_MODE_MODEL wählt das Modell des clientseitigen Auto-Mode-Classifiers; das serverseitige ändert sich nicht.\n- In /config gibt es die Zeile „Idle compaction“ zum Ein- und Ausschalten.\n- Fork-Subagents sind jetzt auch in claude -p, im Agent SDK, in der Desktop-App und in VS Code standardmäßig an (CLAUDE_CODE_FORK_SUBAGENT=0 schaltet sie ab); Desktop-App und VS Code lassen Subagents des Hauptgesprächs immer im Hintergrund laufen.\n- Hinweis in /design-sync und /design-login: Claude Design (claude.ai/design) als eigenständiges Produkt schließt am 14. Dezember 2026.\n- Prompt- und Agent-Hooks: höchstens 12 gleichzeitig je Ereignis.\n- Viele Fixes, u. a. „Prompt is too long“ beim Abbrechen während der Kompaktierung, Prompt-Cache-Miss bei nachgeladenen Tools und Bilder über 128 MB im Read-Tool.",
+  "arbeitsweise_de": "Wer Claude Code in Skripten (claude -p) oder über das Agent SDK nutzt, sollte beachten, dass Fork-Subagents jetzt standardmäßig an sind.",
+  "bereich": "claude-code",
+  "datum": "2026-10-16",
+  "wichtig": false
+}

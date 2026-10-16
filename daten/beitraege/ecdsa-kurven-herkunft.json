@@ -1,0 +1,12 @@
+{
+  "id": "ecdsa-kurven-herkunft",
+  "quelle": "anthropic",
+  "url": "https://www.anthropic.com/research/ecdsa-curve-origins",
+  "titel_original": "Claude reveals ECDSA curve origins",
+  "titel_de": "Claude klärt Herkunft der ECDSA-Kurvenparameter",
+  "kurz_de": "Ein internes Claude-Modell fand in unter 30 Minuten heraus, wie die ungeklärten Seeds der NIST-Kurven erzeugt wurden: mit lrand48, nicht per Hash. Eine Schwachstelle zeigt sich dabei nicht.",
+  "briefing_de": "- NIST nahm ECDSA 2000 in FIPS 186-2 auf; die Seeds für Prim- und Binärkurven blieben unerklärt.\n- Die Seeds stammen aus dem C-Zufallsgenerator lrand48, initialisiert mit einem Unix-Zeitstempel; für P-256 waren es 1842 Iterationen. Erklärt sind P-192, P-224, P-256, P-384 und P-521.\n- Ungeklärt bleiben der Seed von B-163 und die Basispunkte von P-224, P-256, P-384, P-521 und den NIST-Binärkurven.\n- Die Befunde zeigen keine kryptografische Schwäche, machen gezielte Hintertüren in diesen Parametern aber weniger plausibel.\n- Das Preisgeld von 36.864 $ geht an die Internet Security Research Group.",
+  "bereich": "forschung",
+  "datum": "2026-10-16",
+  "wichtig": false
+}

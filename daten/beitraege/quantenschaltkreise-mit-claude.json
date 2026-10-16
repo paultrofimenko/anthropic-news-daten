@@ -1,0 +1,12 @@
+{
+  "id": "quantenschaltkreise-mit-claude",
+  "quelle": "anthropic",
+  "url": "https://www.anthropic.com/research/designing-efficient-quantum-circuits",
+  "titel_original": "Designing more efficient quantum circuits with Claude",
+  "titel_de": "Claude entwirft effizientere Quantenschaltkreise",
+  "kurz_de": "Claude fand für acht Quantenschaltkreise Entwürfe mit weniger Qubits und Gattern als die besten veröffentlichten. Die FeMoco-Schätzung sank von etwa 50 Billionen auf etwa 340 Millionen Toffoli-Gatter.",
+  "briefing_de": "Claude (im Artikel: Claude Mythos 5) lief in einer geschlossenen Schleife ohne menschliche Eingaben zwischen den Runden, geprüft von einem automatischen Evaluator:\n- Für alle acht Aufgaben aus Chemie, Optimierung, Physiksimulation und Zahlentheorie gab es Entwürfe mit weniger Qubits und Gattern als die besten veröffentlichten, teils um eine Größenordnung oder mehr.\n- FeMoco: von etwa 50 Billionen Toffoli-Gattern (Schätzung 2017) auf etwa 340 Millionen, rund 150.000-fach weniger.\n- Elliptische Kurven: ein Schaltkreis braucht 12 % mehr Qubits, aber 17-mal weniger Gatter als der kleinste bisherige Entwurf.\n- DQI-Decoder: 12-mal weniger Gatter als Googles bisherige Konstruktion.\n- Grenze: Claude war anfangs übervorsichtig und bevorzugte bekannte Ansätze.",
+  "bereich": "forschung",
+  "datum": "2026-10-16",
+  "wichtig": false
+}

@@ -1,0 +1,12 @@
+{
+  "id": "arbeit-und-erwartungen-bei-anthropic",
+  "quelle": "anthropic",
+  "url": "https://www.anthropic.com/research/expectations-for-the-future",
+  "titel_original": "Working at the frontier shapes expectations for the future",
+  "titel_de": "Wie KI die Arbeit bei Anthropic verändert – und was Beschäftigte erwarten",
+  "kurz_de": "Zwei Berichte: Bei Anthropic sinkt der Anteil junger Technik-Einstellungen, Agenten leisten mehr Arbeitsstunden als Menschen. Mitarbeitende erwarten von KI deutlich mehr als die US-Bevölkerung.",
+  "briefing_de": "Zwei neue Berichte von Anthropic:\n- Beschäftigung intern: Der Anteil von Junior-Beschäftigten in den technischen Abteilungen fiel von 21 % auf 14 %; im März 2026 überstiegen die Arbeitsstunden von Agenten erstmals die der Menschen, im August arbeiteten interaktive Agenten sechs Stunden je Mitarbeiterstunde.\n- Der Code-Output pro Person stieg; Claude-Sitzungen warten etwa 80 % der Zeit auf menschliche Eingaben, menschliche Aufmerksamkeit ist der Engpass.\n- Erwartungsumfrage (August 2026, 10.980 US-Erwachsene, 1.334 Anthropic-Beschäftigte): 39 % der US-Erwachsenen und 91 % der Beschäftigten erwarten bis 2030 eine Entdeckung auf Nobel-Niveau.\n- Beschäftigte erwarten, dass KI bis 2030 im Schnitt etwa 75 % ihrer Arbeitsstunden übernimmt; US-Beschäftigte erwarten etwa 28 %.",
+  "bereich": "forschung",
+  "datum": "2026-10-16",
+  "wichtig": false
+}
