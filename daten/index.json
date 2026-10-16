@@ -1,6 +1,6 @@
 {
  "version": 1,
- "erzeugt": "2026-10-16T05:58:55.467Z",
+ "erzeugt": "2026-10-16T06:38:33.812Z",
  "anzahl": 62,
  "beitraege": [
   {
@@ -185,7 +185,17 @@
    "ereignis": {
     "art": "neu",
     "titel": "OpenTelemetry-Export (Beta)"
-   }
+   },
+   "lernkarten": [
+    {
+     "frage_de": "Was lässt sich mit dem OpenTelemetry-Export der Claude API verfolgen?",
+     "antwort_de": "Messages-API- und Sessions-API-Anfragen, Token-Nutzung, Server-Tools und Managed-Agents-Turns – als Spans in der eigenen Observability-Plattform."
+    },
+    {
+     "frage_de": "Was enthalten die OpenTelemetry-Spans der Claude API standardmäßig?",
+     "antwort_de": "Nur Metadaten. Optional voller Inhalt mit Prompts und Antworten, Standardlimit 0,75 MB pro Span."
+    }
+   ]
   },
   {
    "id": "singapur-buero-mdd-absichtserklaerung",
@@ -318,7 +328,17 @@
    "ereignis": {
     "art": "neu",
     "titel": "Managed Agents: dynamische Workflows"
-   }
+   },
+   "lernkarten": [
+    {
+     "frage_de": "Was ist ein dynamischer Workflow in Claude Managed Agents?",
+     "antwort_de": "Ein Programm, das der Agent selbst schreibt: Es lässt viele Agenten in Phasen im Hintergrund laufen und kombiniert ihre Ergebnisse (Workflow-Run)."
+    },
+    {
+     "frage_de": "Wie schaltet man dynamische Workflows für einen Managed Agent ein?",
+     "antwort_de": "Beta-Header managed-agents-2026-04-01 und Feld multiagent auf {\"type\": \"multiagent_20261001\", \"workflows\": {\"type\": \"enabled\"}} setzen."
+    }
+   ]
   },
   {
    "id": "unbeabsichtigte-modellaktionen-untersucht",
@@ -464,7 +484,21 @@
    "ereignis": {
     "art": "neu",
     "titel": "Haiku 5.5 erscheint"
-   }
+   },
+   "lernkarten": [
+    {
+     "frage_de": "Welche Modell-ID hat Claude Haiku 5.5, und was kostet es je Million Token?",
+     "antwort_de": "claude-haiku-5-5; ab 0,10 $ Eingabe und 0,50 $ Ausgabe, bei mehr als 100K Prompt-Token 0,50 $ und 2,50 $."
+    },
+    {
+     "frage_de": "Was ist bei Claude Haiku 5.5 neu gegenüber früheren Haiku-Modellen beim Denken?",
+     "antwort_de": "Es ist das erste Haiku mit einstellbarem Effort (Standard medium); dazu kommt adaptives Thinking."
+    },
+    {
+     "frage_de": "Welche alten Einstellungen können beim Wechsel von Haiku 4.5 auf Haiku 5.5 einen 400-Fehler auslösen?",
+     "antwort_de": "Manuelles Extended Thinking (budget_tokens), temperature/top_p/top_k, Prefill der Assistant-Nachricht und computer_20250124."
+    }
+   ]
   },
   {
    "id": "managed-agents-web-fetch-url-regel",
@@ -473,11 +507,21 @@
    "titel_original": "Claude Platform Release Notes, October 7, 2026",
    "titel_de": "Managed Agents: web_fetch ruft nur noch bekannte URLs ab",
    "kurz_de": "In Claude Managed Agents holt web_fetch nur noch URLs, die in der Sitzung schon aufgetaucht sind. Das senkt das Risiko von Datenabfluss; andere URLs liefern url_not_in_prior_context.",
-   "briefing_de": "- Zählen: URLs im Text einer Nutzernachricht, in einem web_search-Ergebnis oder auf einer zuvor per web_fetch geholten Seite.\n- Zählen nicht: URLs nur in Claudes eigener Ausgabe, im System-Prompt des Agenten, in angehängten Dokumenten oder in Ausgaben von Tools wie bash, read oder MCP-Tools.\n- Solche Aufrufe liefern den Fehlerresultat url_not_in_prior_context.\n- Soll der Agent eine URL abrufen dürfen, sendet man sie im Text eines user.message-Events.",
+   "briefing_de": "- Zählen: URLs im Text einer Nutzernachricht, in einem web_search-Ergebnis oder auf einer zuvor per web_fetch geholten Seite.\n- Zählen nicht: URLs nur in Claudes eigener Ausgabe, im System-Prompt des Agenten, in angehängten Dokumenten oder in Ausgaben von Tools wie bash, read oder MCP-Tools.\n- Solche Aufrufe liefern den Fehlerresultat url_not_in_prior_context.\n- Soll der Agent eine URL abrufen dürfen, sendet man sie im Text eines user.message-Events.\n- Bei limited networking gilt zusätzlich allowed_hosts: Hosts außerhalb davon liefern url_not_allowed.",
    "arbeitsweise_de": "Wer Agenten URLs aus Systemprompt oder Dateien abrufen lässt, muss sie künftig in einer Nutzernachricht mitschicken.",
    "bereich": "api",
    "datum": "2026-10-07",
-   "wichtig": true
+   "wichtig": true,
+   "lernkarten": [
+    {
+     "frage_de": "Welche URLs ruft web_fetch in Claude Managed Agents noch ab?",
+     "antwort_de": "Nur URLs, die in der Sitzung schon aufgetaucht sind: im Text einer Nutzernachricht, in einem web_search-Ergebnis oder auf einer zuvor geholten Seite."
+    },
+    {
+     "frage_de": "Welchen Fehler liefert web_fetch in Managed Agents für eine unbekannte URL, und wie erlaubt man sie?",
+     "antwort_de": "url_not_in_prior_context. Erlauben: die URL im Text eines user.message-Events senden; bei limited networking muss der Host außerdem in allowed_hosts stehen (sonst url_not_allowed)."
+    }
+   ]
   },
   {
    "id": "sonnet-5-5-cache-lesepreis",
@@ -490,7 +534,13 @@
    "arbeitsweise_de": "Wer Sonnet 5.5 mit Prompt Caching nutzt, zahlt für wiederholt gelesene Kontexte weniger; nichts am Code ist nötig.",
    "bereich": "api",
    "datum": "2026-10-07",
-   "wichtig": true
+   "wichtig": true,
+   "lernkarten": [
+    {
+     "frage_de": "Was kostet ein Prompt-Cache-Lesezugriff bei Claude Sonnet 5.5 je Million Token?",
+     "antwort_de": "0,10 $ statt vorher 0,20 $ – das 0,05-fache des Basis-Eingabepreises. Cache-Schreiben und alle übrigen Preise bleiben gleich."
+    }
+   ]
   },
   {
    "id": "claude-code-2-1-290",
@@ -675,15 +725,25 @@
    "url": "https://code.claude.com/docs/en/changelog",
    "titel_original": "Claude Code 2.1.287",
    "titel_de": "Claude Code bekommt Mods",
-   "kurz_de": "Plugins dürfen Claude Code jetzt tiefer verändern: Verhalten, Oberfläche, eigene Funktionen. Dazu kommt der eingebaute Mod „You should know“.",
-   "briefing_de": "Neu in Fassung 2.1.287:\n- Mods: Plugins dürfen tieferes Verhalten ändern.\n- „You should know“: Ein Neben-Agent liest mit und weist auf Dinge hin, die du oder Claude übersehen. Einschalten mit /plugin enable cc-plugin-you-should-know@builtin.\n- In der Agenten-Ansicht filtert n:<text> nach Sitzungsnamen und Aufgaben.",
+   "kurz_de": "Plugins dürfen als Mods jetzt tieferes Verhalten von Claude Code ändern. Dazu kommt der eingebaute Mod „You should know“.",
+   "briefing_de": "Neu in Fassung 2.1.287:\n- Mods: Plugins dürfen tieferes Verhalten ändern.\n- „You should know“: Ein Neben-Agent liest mit und weist auf Dinge hin, die du oder Claude übersehen. Einschalten mit /plugin enable cc-plugin-you-should-know@builtin – nur in Sitzungen direkt bei Anthropic mit eingeschalteter Telemetrie.\n- In der Agenten-Ansicht filtert n:<text> nach Sitzungsnamen und Aufgaben.",
    "bereich": "claude-code",
    "datum": "2026-10-01",
    "wichtig": true,
    "ereignis": {
     "art": "neu",
     "titel": "Claude Code bekommt Mods"
-   }
+   },
+   "lernkarten": [
+    {
+     "frage_de": "Was dürfen Plugins in Claude Code seit Fassung 2.1.287?",
+     "antwort_de": "Als Mods tieferes Verhalten von Claude Code ändern."
+    },
+    {
+     "frage_de": "Was macht der eingebaute Mod „You should know“ in Claude Code, und wie schaltet man ihn ein?",
+     "antwort_de": "Ein Neben-Agent liest mit und weist auf Übersehenes hin. Einschalten mit /plugin enable cc-plugin-you-should-know@builtin – nur in Sitzungen direkt bei Anthropic mit eingeschalteter Telemetrie."
+    }
+   ]
   },
   {
    "id": "claude-shaped-science",
@@ -762,7 +822,17 @@
    "briefing_de": "- Betroffen: claude-sonnet-4-5-20250929.\n- Abschaltung in der Claude API: 30. November 2026.\n- Empfehlung: Sonnet 5.5, mit eigenem Umstiegsleitfaden.",
    "bereich": "modelle",
    "datum": "2026-09-30",
-   "wichtig": true
+   "wichtig": true,
+   "lernkarten": [
+    {
+     "frage_de": "Wann wird Claude Sonnet 4.5 in der Claude API abgeschaltet?",
+     "antwort_de": "Am 30. November 2026 (Modell claude-sonnet-4-5-20250929)."
+    },
+    {
+     "frage_de": "Auf welches Modell empfiehlt Anthropic, von Sonnet 4.5 umzusteigen?",
+     "antwort_de": "Auf Sonnet 5.5 – dafür gibt es einen eigenen Umstiegsleitfaden."
+    }
+   ]
   },
   {
    "id": "sonnet-5-5",
@@ -771,14 +841,28 @@
    "titel_original": "Claude Sonnet 5.5",
    "titel_de": "Sonnet 5.5 ist da – „schneller & günstiger“",
    "kurz_de": "Neues Modell der 5.5-Familie: 1 Mio. Token Kontext, 2 $ / 10 $ je Mio. Token. Wer Code für Sonnet 5 hat, muss fünf Änderungen beachten.",
-   "briefing_de": "- Modell-ID: claude-sonnet-5-5, erschienen am 28.09.2026.\n- Laut Anthropic über 30 % schneller als Sonnet 5, bei den meisten Aufgaben bis zu 30 % günstiger.\n- Fünf Brüche: Thinking abschalten heißt jetzt between_tools, erzwungene Tool-Wahl gibt Fehler 400, Thinking-Blöcke sind an Modell und Konto gebunden, altes Computer-Use-Tool abgelehnt, neue Advisor-Regeln.",
+   "briefing_de": "- Modell-ID: claude-sonnet-5-5, erschienen am 28.09.2026.\n- Laut Anthropic 30 % schneller als Sonnet 5, bei den meisten Aufgaben bis zu 30 % günstiger.\n- Fünf Brüche: Vorgelagertes Thinking abschalten heißt jetzt between_tools statt disabled (bei Effort high oder darunter), erzwungene Tool-Wahl gibt Fehler 400, Thinking-Blöcke sind an Modell und Gespräch gebunden, altes Computer-Use-Tool computer_20251124 auf Claude API und Google Cloud abgelehnt, neue Advisor-Regeln.",
    "bereich": "modelle",
    "datum": "2026-09-28",
    "wichtig": true,
    "ereignis": {
     "art": "neu",
     "titel": "Sonnet 5.5 erscheint"
-   }
+   },
+   "lernkarten": [
+    {
+     "frage_de": "Welche Modell-ID hat Claude Sonnet 5.5, und was kostet es je Million Token?",
+     "antwort_de": "claude-sonnet-5-5; 2 $ Eingabe und 10 $ Ausgabe je Million Token, mit 1 Mio. Token Kontext."
+    },
+    {
+     "frage_de": "Was schickt man bei Claude Sonnet 5.5, um das vorgelagerte Thinking abzuschalten?",
+     "antwort_de": "thinking between_tools statt disabled – bei Effort high oder darunter."
+    },
+    {
+     "frage_de": "Was passiert bei Sonnet 5.5, wenn man eine bestimmte Tool-Wahl erzwingt?",
+     "antwort_de": "Die API antwortet mit Fehler 400."
+    }
+   ]
   },
   {
    "id": "auto-mode-classifier-abrechnung",
