@@ -1,0 +1,13 @@
+{
+  "id": "fast-mode-opus-5-5-ga",
+  "quelle": "platform-release-notes",
+  "url": "https://platform.claude.com/docs/en/release-notes/overview",
+  "titel_original": "Fast mode is out of research preview for Claude Opus 5.5",
+  "titel_de": "Fast Mode für Claude Opus 5.5 ohne Vorabzugang",
+  "kurz_de": "Fast Mode ist für Claude Opus 5.5 aus der Research Preview heraus: Kein Zugangsantrag und kein Beta-Header mehr nötig. Für Opus 5 und Opus 4.8 bleibt er in der Research Preview.",
+  "briefing_de": "- Fast Mode für Claude Opus 5.5 ist nicht mehr in der Research Preview; du musst keinen Zugang mehr anfragen.\n- Anfragen an Opus 5.5 brauchen den Beta-Header `fast-mode-2026-02-01` nicht mehr; Anfragen, die ihn weiter senden, funktionieren weiter.\n- Opus 5.5 hat jetzt ein Standard-Ratenlimit für Fast Mode in den Nutzungsstufen Start, Build und Scale.\n- Für Claude Opus 5 und Claude Opus 4.8 bleibt Fast Mode in der Research Preview; dort den Beta-Header weiter mitsenden.",
+  "arbeitsweise_de": "Für Opus 5.5 kannst du den Beta-Header für Fast Mode weglassen. Für Opus 5 und Opus 4.8 muss er weiter gesendet werden.",
+  "bereich": "api",
+  "datum": "2026-10-15",
+  "wichtig": false
+}

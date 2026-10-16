@@ -1,0 +1,13 @@
+{
+  "id": "code-review-claude-code-team",
+  "quelle": "claude-dev-rss",
+  "url": "https://claude.dev/blog/solving-code-review-at-anthropic/",
+  "titel_original": "How the Claude Code team does code review",
+  "titel_de": "So läuft Code Review im Claude-Code-Team",
+  "kurz_de": "Das Claude-Code-Team beschreibt sein mehrstufiges Review: Claude prüft jeden Pull Request, Menschen entscheiden nach Risiko. Von Juni bis September stiegen gemergte PRs auf mehr als das Doppelte, Reverts sanken um über 40 Prozent.",
+  "briefing_de": "Das Team setzt auf Schichten statt einer Schranke: Verifikation vor dem PR, CI, Claude-Review, Security-Review, menschliche Freigabe nach Risikostufe, Merge-Queue, Flags und schnelles Zurückrollen.\n- Von Juni bis September wurden mehr als doppelt so viele PRs gemergt, der Anteil der zurückgenommenen PRs fiel um über 40 Prozent.\n- Ziel: Die meisten PRs werden mit höchstens einem Menschen im Loop gemergt, ohne mehr Reverts oder Incidents.\n- Offene Funde aus Bug- oder Security-Review blockieren den Merge; jeder Fund muss behoben oder mit Begründung geschlossen werden.\n- Gegen endlose Review-Runden gibt es eine Obergrenze: Nach drei Runden soll der Autor den Ansatz überdenken. Im Schnitt sanken die Reviews bis zum Bestehen von 2,08 auf 1,32.\n- Die öffentliche Variante, Code Review for Claude Code, ist laut Beitrag für Team und Enterprise allgemein verfügbar.",
+  "arbeitsweise_de": "Wer mit Claude Code arbeitet, kann Claude Tests, Build oder Screenshots ausführen lassen und das Ergebnis zeigen lassen, bevor ein PR entsteht. Wiederkehrende Review-Funde lassen sich in CLAUDE.md, REVIEW.md oder Lint-Regeln festhalten.",
+  "bereich": "engineering",
+  "datum": "2026-10-15",
+  "wichtig": false
+}
