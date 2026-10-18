@@ -1,8 +1,20 @@
 {
  "version": 1,
- "erzeugt": "2026-10-16T21:13:19.052Z",
- "anzahl": 67,
+ "erzeugt": "2026-10-18T20:47:23.000Z",
+ "anzahl": 68,
  "beitraege": [
+  {
+   "id": "public-benefit-fund",
+   "quelle": "anthropic",
+   "url": "https://www.anthropic.com/news/public-benefit-fund",
+   "titel_original": "Investing in the public benefit",
+   "titel_de": "Anthropic gründet den Public Benefit Fund",
+   "kurz_de": "Anthropic sagt vorbehaltlich der Zustimmung der Aktionäre 5 % seiner Anteile einem neuen Public Benefit Fund zu. Insgesamt sind damit etwa 20 % der Anteile dem Gemeinwohl gewidmet.",
+   "briefing_de": "Anthropic kündigt einen neuen Fonds an, der Anteile des Unternehmens für gemeinnützige Zwecke hält:\n- Heute werden 5 % der Anthropic-Anteile zugesagt, vorbehaltlich der Zustimmung der Aktionäre. Der Verwaltungsrat kann 2 % für jede 50-prozentige Wertsteigerung über einer festgelegten Basis hinzufügen.\n- Der Fonds ist eine hundertprozentige LLC, keine 501(c)(3)-Organisation, um flexibel zwischen Förderformen wechseln zu können. Möglich sind große Spenden an Nonprofits oder direkte Zuwendungen an bestimmte Bevölkerungsgruppen.\n- Die LLC darf ihre Anthropic-Anteile weder für Lobbyarbeit noch für politische Spenden im In- oder Ausland verwenden.\n- Anthropic verzichtet auf steigende Vergütungspakete für Führungskräfte; dieser Anteil fließt in den Fonds.\n- Zusammen mit früheren Verpflichtungen (u. a. 80 % der Anteile der Mitgründer) sind etwa 20 % der Anteile dem Gemeinwohl gewidmet. Struktur, Governance und Bewertungsmeilensteine sollen in den kommenden Monaten erläutert werden.",
+   "bereich": "unternehmen",
+   "datum": "2026-10-18",
+   "wichtig": false
+  },
   {
    "id": "arbeit-und-erwartungen-bei-anthropic",
    "quelle": "anthropic",
