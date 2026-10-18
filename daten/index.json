@@ -1,8 +1,20 @@
 {
  "version": 1,
- "erzeugt": "2026-10-18T20:47:23.000Z",
- "anzahl": 68,
+ "erzeugt": "2026-10-18T23:15:52.902Z",
+ "anzahl": 69,
  "beitraege": [
+  {
+   "id": "claude-code-2-1-303",
+   "quelle": "code-changelog",
+   "url": "https://code.claude.com/docs/en/changelog",
+   "titel_original": "Claude Code 2.1.303",
+   "titel_de": "Claude Code 2.1.303: Fehlerbehebungen",
+   "kurz_de": "Claude Code 2.1.303 bringt laut Changelog Fehlerbehebungen und Zuverlässigkeitsverbesserungen.",
+   "briefing_de": "- Fassung 2.1.303 von Claude Code ist erschienen.\n- Der Changelog nennt nur Fehlerbehebungen und Verbesserungen der Zuverlässigkeit.",
+   "bereich": "claude-code",
+   "datum": "2026-10-18",
+   "wichtig": false
+  },
   {
    "id": "public-benefit-fund",
    "quelle": "anthropic",
