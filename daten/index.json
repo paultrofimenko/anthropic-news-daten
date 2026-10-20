@@ -1,7 +1,7 @@
 {
  "version": 1,
- "erzeugt": "2026-10-20T14:20:27.535Z",
- "anzahl": 72,
+ "erzeugt": "2026-10-20T19:19:22.403Z",
+ "anzahl": 74,
  "beitraege": [
   {
    "id": "claude-code-2-1-304",
@@ -25,6 +25,32 @@
    "kurz_de": "Mit Citrini Research ließ Anthropic Claude Binder gegen fünf Skorpion-Neurotoxine entwerfen. Von 211 getesteten Designs erfüllten 17 die Bindungskriterien – ein Gegenmittel ist das noch nicht.",
    "briefing_de": "Anthropic und Citrini Research testeten, ob Claude bei einem realen Gesundheitsproblem helfen kann: Skorpionstiche treffen mindestens 1,2 Millionen Menschen im Jahr, mehr als 3.250 sterben.\n- Ein Forschungsmodell in Claude Science lief 64 Stunden weitgehend selbstständig und zielte auf fünf Neurotoxine (Cn2, Ts1, AaH I, AaH II, LqhIII).\n- Es entstanden 318.484 Designs mit 12 Tools; 211 gingen ins Labor (Adaptyv Bio, Twist Bioscience).\n- 17 Designs erfüllten die Kriterien (Treffer in beiden Labs, KD höchstens 1 µM, kein Signal gegen CLEC12A), alle gegen nur ein Toxin. Cn2-B1 und Cn2-B2 erreichten einstellige Nanomolar-Werte.\n- Grenzen: nur rekombinante Toxine getestet, keine Neutralisation in Zellen oder Tieren. Anthropic: „we do not claim to have produced an antivenom.“",
    "bereich": "forschung",
+   "datum": "2026-10-20",
+   "wichtig": false
+  },
+  {
+   "id": "inference-hooks-ga-enterprise",
+   "quelle": "platform-release-notes",
+   "url": "https://platform.claude.com/docs/en/manage-claude/inference-hooks",
+   "titel_original": "Inference hooks are out of beta for Claude Enterprise organizations",
+   "titel_de": "Inference hooks sind für Claude Enterprise aus der Beta",
+   "kurz_de": "Inference hooks sind für Claude-Enterprise-Organisationen nicht mehr in der Beta. Ein eigener Sicherheitsserver gibt vor jeder Inferenz ein Allow oder Deny zurück.",
+   "briefing_de": "Laut Release Notes vom 20. Oktober 2026 und der Doku:\n- Inference hooks sind für Claude-Enterprise-Organisationen aus der Beta.\n- Anthropic schickt jeden geregelten Prompt an den HTTPS-Server deiner Organisation und wartet auf ein Allow oder Deny; ein abgelehnter Prompt erreicht das Modell nicht.\n- Zwei Ereignisse: `prompt` vor jeder Inferenz, `tool_call` vor dem Ausführen von Tool-Aufrufen (bei aktivem „Validate tool calls“).\n- Einrichten dürfen nur Owner und Primary owner; Platform-Organisationen (API) und Amazon Bedrock oder Google Cloud sind nicht erfasst.",
+   "arbeitsweise_de": "Sicherheitsteams, die Datenrichtlinien erzwingen wollen, können einen eigenen Verdict-Server anbinden; Rollout lässt sich per Shadow-Modus oder Prozentsatz schrittweise steuern.",
+   "bereich": "unternehmen",
+   "datum": "2026-10-20",
+   "wichtig": false
+  },
+  {
+   "id": "user-profiles-end-kunden",
+   "quelle": "platform-doku",
+   "url": "https://platform.claude.com/docs/en/manage-claude/user-profiles",
+   "titel_original": "User profiles for end-customer attribution",
+   "titel_de": "User Profiles: API-Anfragen einzelnen Endkunden zuordnen",
+   "kurz_de": "Neue Doku-Seiten: Mit User Profiles ordnest du API-Anfragen einzelnen Endkunden zu, damit eine Sicherheitsmaßnahme nur ein Profil trifft statt deine ganze Organisation.",
+   "briefing_de": "Zwei neue Seiten in der Platform-Doku:\n- Du legst je Endkunde einmal ein Profil mit `POST /v1/user_profiles` an und sendest die `uprof_`-ID bei jeder Anfrage im Header `anthropic-user-profile-id`.\n- Eine Maßnahme wie Sperre oder Block kann so auf einen Endkunden begrenzt werden; der übrige Verkehr bleibt unberührt. Profile sind nicht abrechenbar und ändern keine Preise.\n- `access_type`: `application` (Standard) für jeden angemeldeten Nutzer deines Produkts, `passthrough` für jede Firma, der du API-Zugang weiterverkaufst.\n- Zweite Seite: Für Programme im Verification Portal erzeugst du mit `POST /v1/user_profiles/{id}/action_urls` (`enroll_end_user`) einen Link, mit dem der Endkunde sein Profil mit seiner eigenen Anthropic-Organisation verknüpft. Der Link gilt etwa eine Stunde.",
+   "arbeitsweise_de": "Wer eine Plattform oder ein Gateway betreibt oder API-Zugang weiterverkauft, sollte Profile beim Onboarding der Endkunden anlegen und eigene interne Nutzung in einer getrennten Organisation halten.",
+   "bereich": "api",
    "datum": "2026-10-20",
    "wichtig": false
   },
