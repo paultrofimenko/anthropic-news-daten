@@ -1,0 +1,12 @@
+{
+  "id": "claude-scorpion-toxin-binder-design",
+  "quelle": "anthropic",
+  "url": "https://www.anthropic.com/research/claude-scorpion-toxin-binder-design",
+  "titel_original": "How Claude designed protein binders against scorpion neurotoxins",
+  "titel_de": "Claude entwirft Proteine, die an Skorpiongifte binden",
+  "kurz_de": "Mit Citrini Research ließ Anthropic Claude Binder gegen fünf Skorpion-Neurotoxine entwerfen. Von 211 getesteten Designs erfüllten 17 die Bindungskriterien – ein Gegenmittel ist das noch nicht.",
+  "briefing_de": "Anthropic und Citrini Research testeten, ob Claude bei einem realen Gesundheitsproblem helfen kann: Skorpionstiche treffen mindestens 1,2 Millionen Menschen im Jahr, mehr als 3.250 sterben.\n- Ein Forschungsmodell in Claude Science lief 64 Stunden weitgehend selbstständig und zielte auf fünf Neurotoxine (Cn2, Ts1, AaH I, AaH II, LqhIII).\n- Es entstanden 318.484 Designs mit 12 Tools; 211 gingen ins Labor (Adaptyv Bio, Twist Bioscience).\n- 17 Designs erfüllten die Kriterien (Treffer in beiden Labs, KD höchstens 1 µM, kein Signal gegen CLEC12A), alle gegen nur ein Toxin. Cn2-B1 und Cn2-B2 erreichten einstellige Nanomolar-Werte.\n- Grenzen: nur rekombinante Toxine getestet, keine Neutralisation in Zellen oder Tieren. Anthropic: „we do not claim to have produced an antivenom.“",
+  "bereich": "forschung",
+  "datum": "2026-10-20",
+  "wichtig": false
+}
