@@ -1,0 +1,12 @@
+{
+  "id": "anthropic-seiten-neu-erfasst",
+  "quelle": "anthropic",
+  "url": "https://www.anthropic.com/institute/econ-scenarios",
+  "titel_original": "Scenarios for our Economic Future",
+  "titel_de": "anthropic.com: Seiten zu Wirtschaft, KI-Führung, Modell-Abschaltung und Glasswing neu erfasst",
+  "kurz_de": "Rund 50 anthropic.com-Seiten sind neu in der Übersicht, darunter ein Wirtschafts-Szenarien-Explorer, die Agenda des Anthropic Institute, Abschalt-Zusagen für Modelle und ein erstes Glasswing-Update.",
+  "briefing_de": "Neu erfasst wurden etwa 50 Seiten auf anthropic.com, vor allem ältere Beiträge. Beispiele:\n- Scenarios for our Economic Future: Szenarien-Explorer des Economics-Teams zu Jobs, Wachstum und Arbeitslosigkeit in den USA bis 2030 (modest, substantial, extreme).\n- Focus areas for The Anthropic Institute (7. Mai 2026): vier Forschungsfelder – Economic diffusion, Threats and resilience, AI systems in the wild, AI-driven R&D.\n- 2028: Two scenarios for global AI leadership (14. Mai 2026): zwei Szenarien zum KI-Wettbewerb zwischen USA und China.\n- Commitments on model deprecation and preservation: Zusage, die Gewichte aller veröffentlichten Modelle aufzubewahren, und Interviews mit Modellen bei der Abschaltung. Dazu das Update zu Claude Opus 3 (25. Februar 2026): nach der Abschaltung am 5. Januar 2026 weiter für zahlende claude.ai-Nutzer und per Anfrage in der API verfügbar.\n- Project Glasswing: An initial update (22. Mai 2026): rund 50 Partner fanden mit Claude Mythos Preview mehr als zehntausend Schwachstellen hoher oder kritischer Schwere.\n- Außerdem neu in der Übersicht: Legal Center sowie die Listen Announcements und Features.",
+  "bereich": "news",
+  "datum": "2026-10-20",
+  "wichtig": false
+}
