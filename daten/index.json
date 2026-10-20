@@ -1,7 +1,7 @@
 {
  "version": 1,
- "erzeugt": "2026-10-20T00:22:58.376Z",
- "anzahl": 70,
+ "erzeugt": "2026-10-20T08:36:07.029Z",
+ "anzahl": 71,
  "beitraege": [
   {
    "id": "claude-code-2-1-304",
@@ -202,6 +202,19 @@
    "kurz_de": "Neue Doku-Seite vergleicht für Claude Managed Agents die Cloud-Umgebung (von Anthropic betrieben) mit einer selbst gehosteten Sandbox und erklärt, was sich beim Wechsel ändert.",
    "briefing_de": "Neue Seite zu Managed Agents (Beta):\n- Cloud-Umgebung: Anthropic betreibt je Sitzung einen frischen Linux-Container. Das ist der empfohlene Start.\n- Selbst gehostete Sandbox: Ein Worker auf deiner Infrastruktur führt Bash- und Datei-Tool-Aufrufe aus. Sinnvoll bei Daten, die dein Netz nicht verlassen dürfen, bei internen Diensten oder eigenen Compliance-Vorgaben.\n- Bei beiden gehen Unterhaltungsverlauf und Tool-Ergebnisse an den Managed-Agents-Dienst.\n- Selbst gehostet entfallen u. a. file- und github_repository-Ressourcen, Skill-Erkennung aus Repositories und Umgebungsvariablen-Zugangsdaten in Vaults; du betreibst und härtest die Worker.\n- Die Agentendefinition bleibt gleich.",
    "arbeitsweise_de": "Wer Managed Agents einsetzt, entscheidet früh, ob Tools in der Cloud oder auf eigener Infrastruktur laufen müssen.",
+   "bereich": "api",
+   "datum": "2026-10-15",
+   "wichtig": false
+  },
+  {
+   "id": "models-api-thinking-between-tools",
+   "quelle": "platform-release-notes",
+   "url": "https://platform.claude.com/docs/en/release-notes/overview",
+   "titel_original": "October 15, 2026 (Platform Release Notes)",
+   "titel_de": "Models API meldet, ob ein Modell thinking: between_tools akzeptiert",
+   "kurz_de": "GET /v1/models und GET /v1/models/{model_id} zeigen jetzt in capabilities.thinking.types.between_tools, ob ein Modell thinking: {type: \"between_tools\"} akzeptiert.",
+   "briefing_de": "- Neues Feld capabilities.thinking.types.between_tools in den Antworten der Models API.\n- Die Einstellung thinking: {type: \"between_tools\"} schaltet das Thinking vor der eigentlichen Antwort ab.\n- supported ist false, wenn das Modell \"between_tools\" mit einem 400-Fehler ablehnt; auch bei true kann die API die Anfrage aus anderem Grund ablehnen, etwa wegen eines nicht erlaubten Effort-Levels.\n- Beispiel Claude Sonnet 5.5: between_tools.supported ist true, disabled.supported ist false.",
+   "arbeitsweise_de": "Wer das Thinking vor der Antwort per Code abschalten will, kann vorher das Feld abfragen, statt auf einen 400-Fehler zu laufen.",
    "bereich": "api",
    "datum": "2026-10-15",
    "wichtig": false
