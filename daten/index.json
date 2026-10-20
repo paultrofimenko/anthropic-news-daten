@@ -1,7 +1,7 @@
 {
  "version": 1,
- "erzeugt": "2026-10-20T08:36:07.029Z",
- "anzahl": 71,
+ "erzeugt": "2026-10-20T14:20:27.535Z",
+ "anzahl": 72,
  "beitraege": [
   {
    "id": "claude-code-2-1-304",
@@ -13,6 +13,18 @@
    "briefing_de": "Neu in Fassung 2.1.304:\n- `/auto-mode-setup`: geführte Einrichtung, die Projekt und letzte Sessions liest, um dem Auto Mode deine Umgebung beizubringen; jetzt auch auf Bedrock, Vertex, Foundry, Claude apps gateway und bei deaktivierter Telemetrie.\n- Mods: `tool.check` kennt jetzt `e.isReadOnly` und `decider: \"person\"` (nur Rückfrage-Dialog oder Host-Callback kann freigeben); `settings.read`-Hooks erhalten jede Settings-Ebene und können die zusammengeführten Einstellungen umschreiben.\n- `/claude-api managed-agents-secure` vergleicht die Einstellungen eines Managed-Agents-Agenten mit Anthropics Sicherheitsleitfaden, ohne etwas zu ändern.\n- Auf Pro und Max erscheint eine Warnung, wenn das Fortsetzen einer inaktiven Unterhaltung einen spürbaren Teil des 5-Stunden-Limits verbrauchen würde.\n- Dazu viele Fehlerbehebungen, etwa bei `claude --worktree` (Worktree und Branch wurden bei losgelöstem HEAD ohne Rückfrage entfernt), Sandbox-Befehlen unter Linux und Remote Control.",
    "arbeitsweise_de": "Wer Mods nutzt, kann mit `e.isReadOnly` und `decider: \"person\"` Berechtigungsprüfungen genauer steuern. Für den Auto Mode lohnt sich ein Lauf von `/auto-mode-setup`.",
    "bereich": "claude-code",
+   "datum": "2026-10-20",
+   "wichtig": false
+  },
+  {
+   "id": "claude-scorpion-toxin-binder-design",
+   "quelle": "anthropic",
+   "url": "https://www.anthropic.com/research/claude-scorpion-toxin-binder-design",
+   "titel_original": "How Claude designed protein binders against scorpion neurotoxins",
+   "titel_de": "Claude entwirft Proteine, die an Skorpiongifte binden",
+   "kurz_de": "Mit Citrini Research ließ Anthropic Claude Binder gegen fünf Skorpion-Neurotoxine entwerfen. Von 211 getesteten Designs erfüllten 17 die Bindungskriterien – ein Gegenmittel ist das noch nicht.",
+   "briefing_de": "Anthropic und Citrini Research testeten, ob Claude bei einem realen Gesundheitsproblem helfen kann: Skorpionstiche treffen mindestens 1,2 Millionen Menschen im Jahr, mehr als 3.250 sterben.\n- Ein Forschungsmodell in Claude Science lief 64 Stunden weitgehend selbstständig und zielte auf fünf Neurotoxine (Cn2, Ts1, AaH I, AaH II, LqhIII).\n- Es entstanden 318.484 Designs mit 12 Tools; 211 gingen ins Labor (Adaptyv Bio, Twist Bioscience).\n- 17 Designs erfüllten die Kriterien (Treffer in beiden Labs, KD höchstens 1 µM, kein Signal gegen CLEC12A), alle gegen nur ein Toxin. Cn2-B1 und Cn2-B2 erreichten einstellige Nanomolar-Werte.\n- Grenzen: nur rekombinante Toxine getestet, keine Neutralisation in Zellen oder Tieren. Anthropic: „we do not claim to have produced an antivenom.“",
+   "bereich": "forschung",
    "datum": "2026-10-20",
    "wichtig": false
   },
