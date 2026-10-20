@@ -1,0 +1,53 @@
+{
+ "zeit": "2026-10-20T08:35:15.795Z",
+ "neu": [
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/api/compliance/organizations/user_preferences",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/api/compliance/organizations/user_preferences/list",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "modelle",
+   "name": "Modellübersicht",
+   "wichtig": true,
+   "art": "geaendert",
+   "url": "https://platform.claude.com/docs/en/models/overview",
+   "titel": "Modellübersicht"
+  },
+  {
+   "quelle": "platform-release-notes",
+   "name": "Claude Platform Release Notes",
+   "wichtig": false,
+   "art": "ergaenzt",
+   "url": "https://platform.claude.com/docs/en/release-notes/overview",
+   "titel": "October 15, 2026",
+   "zeilen": [
+    "* We've added `capabilities.thinking.types.between_tools` to the [Models API](https://platform.claude.com/docs/en/api/models/list). `GET /v1/models` and `GET /v1/models/{model_id}` now report whether each model accepts `thinking: {type: \"between_tools\"}`, which turns off up-front thinking. See [Using the Models API](https://platform.claude.com/docs/en/models/overview#using-the-models-api)."
+   ]
+  },
+  {
+   "quelle": "platform-release-notes",
+   "name": "Claude Platform Release Notes",
+   "wichtig": false,
+   "art": "ergaenzt",
+   "url": "https://platform.claude.com/docs/en/release-notes/overview",
+   "titel": "October 7, 2026",
+   "zeilen": [
+    "* Code written for Claude Haiku 4.5 can break on Claude Haiku 5.5. Manual extended thinking (`budget_tokens`), the sampling parameters `temperature`, `top_p`, and `top_k`, and assistant message prefill can each return a 400 error. `computer_20250124` also returns a 400 error: use the `computer_toolset_20260801` toolset on the Claude API and Google Cloud, or `computer_20251124` on Amazon Bedrock. A request that sends thinking blocks back after a change to `system`, `tools`, or earlier turns can also return a 400 error. Adaptive thinking is on by default, so a response can begin with `thinking` blocks, and their text is omitted unless you set `thinking.display` to `\"summarized\"`. The same text also counts as more tokens. See the [migration guide](https://platform.claude.com/docs/en/models/haiku-5-5/migration-guide) for each change. For model-specific prompting patterns, see [Prompting Claude Haiku 5.5](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-haiku-5-5)."
+   ]
+  }
+ ]
+}

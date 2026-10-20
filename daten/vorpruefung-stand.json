@@ -1699,6 +1699,8 @@
    "platform.claude.com/docs/en/api/compliance/organizations/roles/retrieve",
    "platform.claude.com/docs/en/api/compliance/organizations/settings",
    "platform.claude.com/docs/en/api/compliance/organizations/settings/retrieve",
+   "platform.claude.com/docs/en/api/compliance/organizations/user_preferences",
+   "platform.claude.com/docs/en/api/compliance/organizations/user_preferences/list",
    "platform.claude.com/docs/en/api/compliance/organizations/users",
    "platform.claude.com/docs/en/api/compliance/organizations/users/list",
    "platform.claude.com/docs/en/api/errors",
@@ -2843,7 +2845,7 @@
   "hash": "0a1e64c3a4533890"
  },
  "modelle": {
-  "hash": "17be4c15161349cd"
+  "hash": "639ca562d981be1d"
  },
  "platform-release-notes": {
   "schluessel": [
@@ -3007,7 +3009,8 @@
     "06f36b26ab",
     "736d8b6181",
     "a4b043ada9",
-    "b0c1a2f99e"
+    "b0c1a2f99e",
+    "408f2f5223"
    ],
    "October 14, 2026": [
     "d3ab9175a4",
@@ -3029,7 +3032,8 @@
     "68a7cf61dd",
     "925700cf5c",
     "5af2746e44",
-    "4f3be6038a"
+    "4f3be6038a",
+    "003ffc12bf"
    ],
    "October 6, 2026": [
     "b423810914"
