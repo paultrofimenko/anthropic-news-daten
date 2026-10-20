@@ -1,0 +1,13 @@
+{
+  "id": "inference-hooks-ga-enterprise",
+  "quelle": "platform-release-notes",
+  "url": "https://platform.claude.com/docs/en/manage-claude/inference-hooks",
+  "titel_original": "Inference hooks are out of beta for Claude Enterprise organizations",
+  "titel_de": "Inference hooks sind für Claude Enterprise aus der Beta",
+  "kurz_de": "Inference hooks sind für Claude-Enterprise-Organisationen nicht mehr in der Beta. Ein eigener Sicherheitsserver gibt vor jeder Inferenz ein Allow oder Deny zurück.",
+  "briefing_de": "Laut Release Notes vom 20. Oktober 2026 und der Doku:\n- Inference hooks sind für Claude-Enterprise-Organisationen aus der Beta.\n- Anthropic schickt jeden geregelten Prompt an den HTTPS-Server deiner Organisation und wartet auf ein Allow oder Deny; ein abgelehnter Prompt erreicht das Modell nicht.\n- Zwei Ereignisse: `prompt` vor jeder Inferenz, `tool_call` vor dem Ausführen von Tool-Aufrufen (bei aktivem „Validate tool calls“).\n- Einrichten dürfen nur Owner und Primary owner; Platform-Organisationen (API) und Amazon Bedrock oder Google Cloud sind nicht erfasst.",
+  "arbeitsweise_de": "Sicherheitsteams, die Datenrichtlinien erzwingen wollen, können einen eigenen Verdict-Server anbinden; Rollout lässt sich per Shadow-Modus oder Prozentsatz schrittweise steuern.",
+  "bereich": "unternehmen",
+  "datum": "2026-10-20",
+  "wichtig": false
+}
