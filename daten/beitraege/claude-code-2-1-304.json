@@ -1,0 +1,13 @@
+{
+  "id": "claude-code-2-1-304",
+  "quelle": "code-changelog",
+  "url": "https://code.claude.com/docs/en/changelog",
+  "titel_original": "Claude Code 2.1.304",
+  "titel_de": "Claude Code 2.1.304: /auto-mode-setup und Mod-Erweiterungen",
+  "kurz_de": "Claude Code 2.1.304 bringt /auto-mode-setup für die Einrichtung des Auto Mode, neue Optionen für Mod-Hooks und viele Fehlerbehebungen.",
+  "briefing_de": "Neu in Fassung 2.1.304:\n- `/auto-mode-setup`: geführte Einrichtung, die Projekt und letzte Sessions liest, um dem Auto Mode deine Umgebung beizubringen; jetzt auch auf Bedrock, Vertex, Foundry, Claude apps gateway und bei deaktivierter Telemetrie.\n- Mods: `tool.check` kennt jetzt `e.isReadOnly` und `decider: \"person\"` (nur Rückfrage-Dialog oder Host-Callback kann freigeben); `settings.read`-Hooks erhalten jede Settings-Ebene und können die zusammengeführten Einstellungen umschreiben.\n- `/claude-api managed-agents-secure` vergleicht die Einstellungen eines Managed-Agents-Agenten mit Anthropics Sicherheitsleitfaden, ohne etwas zu ändern.\n- Auf Pro und Max erscheint eine Warnung, wenn das Fortsetzen einer inaktiven Unterhaltung einen spürbaren Teil des 5-Stunden-Limits verbrauchen würde.\n- Dazu viele Fehlerbehebungen, etwa bei `claude --worktree` (Worktree und Branch wurden bei losgelöstem HEAD ohne Rückfrage entfernt), Sandbox-Befehlen unter Linux und Remote Control.",
+  "arbeitsweise_de": "Wer Mods nutzt, kann mit `e.isReadOnly` und `decider: \"person\"` Berechtigungsprüfungen genauer steuern. Für den Auto Mode lohnt sich ein Lauf von `/auto-mode-setup`.",
+  "bereich": "claude-code",
+  "datum": "2026-10-20",
+  "wichtig": false
+}
