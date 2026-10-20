@@ -1926,6 +1926,8 @@
    "platform.claude.com/docs/en/manage-claude/spend-limits-api",
    "platform.claude.com/docs/en/manage-claude/usage-cost-api",
    "platform.claude.com/docs/en/manage-claude/user-management",
+   "platform.claude.com/docs/en/manage-claude/user-profiles",
+   "platform.claude.com/docs/en/manage-claude/user-profiles-verification-portal",
    "platform.claude.com/docs/en/manage-claude/wif-admin-api",
    "platform.claude.com/docs/en/manage-claude/wif-providers/aws",
    "platform.claude.com/docs/en/manage-claude/wif-providers/azure",
@@ -3003,9 +3005,13 @@
    "October 6, 2026",
    "October 9, 2026",
    "October 14, 2026",
-   "October 15, 2026"
+   "October 15, 2026",
+   "October 20, 2026"
   ],
   "zeilen": {
+   "October 20, 2026": [
+    "4bb3ba8520"
+   ],
    "October 15, 2026": [
     "06f36b26ab",
     "736d8b6181",
@@ -3049,13 +3055,14 @@
    "September 30, 2026": [
     "f7d9fea84b",
     "8936617436"
-   ],
-   "September 28, 2026": [
-    "141476a2f8",
-    "0b0b7799d3",
-    "0e1008a6f0"
    ]
   },
   "zeilenVersion": 2
+ },
+ "_stoerungen": {
+  "anthropic": {
+   "anzahl": 1,
+   "deckel": true
+  }
  }
 }
