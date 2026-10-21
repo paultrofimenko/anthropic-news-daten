@@ -1,8 +1,32 @@
 {
  "version": 1,
- "erzeugt": "2026-10-20T19:19:22.403Z",
- "anzahl": 74,
+ "erzeugt": "2026-10-21T11:54:07.573Z",
+ "anzahl": 77,
  "beitraege": [
+  {
+   "id": "claude-code-2-1-306",
+   "quelle": "code-changelog",
+   "url": "https://code.claude.com/docs/en/changelog",
+   "titel_original": "Claude Code 2.1.306",
+   "titel_de": "Claude Code 2.1.306: zwei Fehlerbehebungen",
+   "kurz_de": "Claude Code 2.1.306 behebt „Not logged in“ bei `claude -p` in Cloud Sessions und falsche „prompt is too long“-Fehler bei vielen MCP-Tools.",
+   "briefing_de": "Neu in Fassung 2.1.306:\n- `claude -p` in Cloud Sessions meldete „Not logged in“, wenn es ohne die Umgebungsvariablen der Session gestartet wurde; behoben.\n- Ein API-Fehler wurde in Sessions mit vielen MCP-Tools durch „prompt is too long“ und eine unnötige Compaction ersetzt; behoben.",
+   "bereich": "claude-code",
+   "datum": "2026-10-21",
+   "wichtig": false
+  },
+  {
+   "id": "anthropic-seiten-sammlung",
+   "quelle": "anthropic",
+   "url": "https://www.anthropic.com/institute/econ-scenarios",
+   "titel_original": "50 new entries on anthropic.com",
+   "titel_de": "anthropic.com: rund 50 weitere Seiten erfasst, darunter Econ Scenarios",
+   "kurz_de": "Auf anthropic.com sind rund 50 Seiten neu erfasst, darunter der Econ Scenario Explorer, die Institute-Agenda und Seiten zu Abschaltungszusagen und Destillationsabwehr.",
+   "briefing_de": "Erfasst wurden unter anderem diese Seiten:\n- „Scenarios for our Economic Future“: Modell des Economics-Teams zu US-Jobs, Wachstum und Arbeitslosigkeit bis 2030 mit drei Szenarien; laut Seite +1,6 % (modest), +8,3 % (substantial) und +32,4 % (extreme) beim BIP 2030.\n- „Focus areas for The Anthropic Institute“ (7. Mai 2026): vier Schwerpunkte – wirtschaftliche Diffusion, Bedrohungen und Resilienz, KI-Systeme im Einsatz, KI-getriebene F&E.\n- Weitere neu erfasste Seiten, u. a. zu Abschaltungszusagen (`deprecation-commitments`), Abschaltungs-Update zu Opus 3, Destillationsabwehr, Glasswing-Update und Rechtliches (`legal`).",
+   "bereich": "news",
+   "datum": "2026-10-20",
+   "wichtig": false
+  },
   {
    "id": "claude-code-2-1-304",
    "quelle": "code-changelog",
@@ -12,6 +36,19 @@
    "kurz_de": "Claude Code 2.1.304 bringt /auto-mode-setup für die Einrichtung des Auto Mode, neue Optionen für Mod-Hooks und viele Fehlerbehebungen.",
    "briefing_de": "Neu in Fassung 2.1.304:\n- `/auto-mode-setup`: geführte Einrichtung, die Projekt und letzte Sessions liest, um dem Auto Mode deine Umgebung beizubringen; jetzt auch auf Bedrock, Vertex, Foundry, Claude apps gateway und bei deaktivierter Telemetrie.\n- Mods: `tool.check` kennt jetzt `e.isReadOnly` und `decider: \"person\"` (nur Rückfrage-Dialog oder Host-Callback kann freigeben); `settings.read`-Hooks erhalten jede Settings-Ebene und können die zusammengeführten Einstellungen umschreiben.\n- `/claude-api managed-agents-secure` vergleicht die Einstellungen eines Managed-Agents-Agenten mit Anthropics Sicherheitsleitfaden, ohne etwas zu ändern.\n- Auf Pro und Max erscheint eine Warnung, wenn das Fortsetzen einer inaktiven Unterhaltung einen spürbaren Teil des 5-Stunden-Limits verbrauchen würde.\n- Dazu viele Fehlerbehebungen, etwa bei `claude --worktree` (Worktree und Branch wurden bei losgelöstem HEAD ohne Rückfrage entfernt), Sandbox-Befehlen unter Linux und Remote Control.",
    "arbeitsweise_de": "Wer Mods nutzt, kann mit `e.isReadOnly` und `decider: \"person\"` Berechtigungsprüfungen genauer steuern. Für den Auto Mode lohnt sich ein Lauf von `/auto-mode-setup`.",
+   "bereich": "claude-code",
+   "datum": "2026-10-20",
+   "wichtig": false
+  },
+  {
+   "id": "claude-code-2-1-305",
+   "quelle": "code-changelog",
+   "url": "https://code.claude.com/docs/en/changelog",
+   "titel_original": "Claude Code 2.1.305",
+   "titel_de": "Claude Code 2.1.305: Sandbox-Option und Fehlerbehebungen",
+   "kurz_de": "Claude Code 2.1.305 bringt die Sandbox-Option allowNestedUserNamespaces, eine neue Retry-Watchdog-Variable und viele Fehlerbehebungen.",
+   "briefing_de": "Neu in Fassung 2.1.305:\n- `sandbox.allowNestedUserNamespaces`: Sandbox-Befehle unter Linux dürfen User Namespaces anlegen (Chromium, rootless podman); damit lassen sich die Dateischutz-Regeln der Sandbox umgehen.\n- `CLAUDE_CODE_RETRY_WATCHDOG_USAGE_LIMIT_RECHECK_MS`: Der unbeaufsichtigte Retry-Modus (`CLAUDE_CODE_RETRY_WATCHDOG`) bemerkt ein Usage Limit, das vor dem Reset aufgehoben wurde.\n- Behoben: Anfragen scheiterten auf Vertex, Bedrock und anderen Anbietern, wenn Endpunkt oder Gateway Tool Search ablehnt (Regression aus 2.1.304); Claude Code versucht es jetzt ohne.\n- Geändert: `allowedMcpServers` filtert `managed-mcp.json`-stdio-Server nicht mehr, die `${VAR}` nur in `env` nutzen; mit `deniedMcpServers` bleiben sie aus.\n- Dazu Korrekturen bei Worktrees, Workflow-Resume, Remote Control, Claude Tag und Code Review.",
+   "arbeitsweise_de": "Wer `allowedMcpServers` mit verwalteten stdio-Servern nutzt, sollte vor dem Update prüfen, ob ein bisher ausgefilterter Server nun lädt; `deniedMcpServers` hält ihn draußen.",
    "bereich": "claude-code",
    "datum": "2026-10-20",
    "wichtig": false
@@ -46,10 +83,10 @@
    "quelle": "platform-doku",
    "url": "https://platform.claude.com/docs/en/manage-claude/user-profiles",
    "titel_original": "User profiles for end-customer attribution",
-   "titel_de": "User Profiles: API-Anfragen einzelnen Endkunden zuordnen",
-   "kurz_de": "Neue Doku-Seiten: Mit User Profiles ordnest du API-Anfragen einzelnen Endkunden zu, damit eine Sicherheitsmaßnahme nur ein Profil trifft statt deine ganze Organisation.",
-   "briefing_de": "Zwei neue Seiten in der Platform-Doku:\n- Du legst je Endkunde einmal ein Profil mit `POST /v1/user_profiles` an und sendest die `uprof_`-ID bei jeder Anfrage im Header `anthropic-user-profile-id`.\n- Eine Maßnahme wie Sperre oder Block kann so auf einen Endkunden begrenzt werden; der übrige Verkehr bleibt unberührt. Profile sind nicht abrechenbar und ändern keine Preise.\n- `access_type`: `application` (Standard) für jeden angemeldeten Nutzer deines Produkts, `passthrough` für jede Firma, der du API-Zugang weiterverkaufst.\n- Zweite Seite: Für Programme im Verification Portal erzeugst du mit `POST /v1/user_profiles/{id}/action_urls` (`enroll_end_user`) einen Link, mit dem der Endkunde sein Profil mit seiner eigenen Anthropic-Organisation verknüpft. Der Link gilt etwa eine Stunde.",
-   "arbeitsweise_de": "Wer eine Plattform oder ein Gateway betreibt oder API-Zugang weiterverkauft, sollte Profile beim Onboarding der Endkunden anlegen und eigene interne Nutzung in einer getrennten Organisation halten.",
+   "titel_de": "User Profiles und Organization Webhooks: Endkunden zuordnen",
+   "kurz_de": "Mit User Profiles ordnest du API-Anfragen Endkunden zu, damit eine Sicherheitsmaßnahme nur ein Profil trifft. Neu: Organization Webhooks (Beta) für Maßnahmen auf Profilen.",
+   "briefing_de": "Zwei neue Seiten in der Platform-Doku:\n- Du legst je Endkunde einmal ein Profil mit `POST /v1/user_profiles` an und sendest die `uprof_`-ID bei jeder Anfrage im Header `anthropic-user-profile-id`.\n- Eine Maßnahme wie Sperre oder Block kann so auf einen Endkunden begrenzt werden; der übrige Verkehr bleibt unberührt. Profile sind nicht abrechenbar und ändern keine Preise.\n- `access_type`: `application` (Standard) für jeden angemeldeten Nutzer deines Produkts, `passthrough` für jede Firma, der du API-Zugang weiterverkaufst.\n- Zweite Seite: Für Programme im Verification Portal erzeugst du mit `POST /v1/user_profiles/{id}/action_urls` (`enroll_end_user`) einen Link, mit dem der Endkunde sein Profil mit seiner eigenen Anthropic-Organisation verknüpft. Der Link gilt etwa eine Stunde.\n- Neu in den Release Notes: Organization Webhooks in der Admin API (Beta, Header `anthropic-beta: webhooks-2026-10-07`). Über `/v1/organizations/webhooks` registrierst du Endpunkte für zwei Events: `user_profile.enforcement_action_opened` (Anthropic schränkt ein Profil ein oder sperrt es) und `user_profile.enforcement_action_resolved` (Einschränkung oder Sperre endet). Zugang über das Anthropic-Account-Team; laut Doku wird die Event-Zustellung noch nicht live ausgeführt.",
+   "arbeitsweise_de": "Wer eine Plattform oder ein Gateway betreibt oder API-Zugang weiterverkauft, sollte Profile beim Onboarding der Endkunden anlegen und eigene interne Nutzung in einer getrennten Organisation halten. Webhook-Handler kannst du schon jetzt anhand des Eventformats vorbereiten und Signaturen nach dem Standard-Webhooks-Verfahren prüfen.",
    "bereich": "api",
    "datum": "2026-10-20",
    "wichtig": false
