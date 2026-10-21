@@ -1,7 +1,7 @@
 {
  "version": 1,
- "erzeugt": "2026-10-21T11:54:07.573Z",
- "anzahl": 77,
+ "erzeugt": "2026-10-21T17:15:15.356Z",
+ "anzahl": 78,
  "beitraege": [
   {
    "id": "claude-code-2-1-306",
@@ -12,6 +12,18 @@
    "kurz_de": "Claude Code 2.1.306 behebt „Not logged in“ bei `claude -p` in Cloud Sessions und falsche „prompt is too long“-Fehler bei vielen MCP-Tools.",
    "briefing_de": "Neu in Fassung 2.1.306:\n- `claude -p` in Cloud Sessions meldete „Not logged in“, wenn es ohne die Umgebungsvariablen der Session gestartet wurde; behoben.\n- Ein API-Fehler wurde in Sessions mit vielen MCP-Tools durch „prompt is too long“ und eine unnötige Compaction ersetzt; behoben.",
    "bereich": "claude-code",
+   "datum": "2026-10-21",
+   "wichtig": false
+  },
+  {
+   "id": "stubbs-long-term-benefit-trust",
+   "quelle": "anthropic",
+   "url": "https://www.anthropic.com/news/christopher-stubbs-joins-long-term-benefit-trust",
+   "titel_original": "Physicist Christopher Stubbs joins Anthropic's Long-Term Benefit Trust",
+   "titel_de": "Physiker Christopher Stubbs wird Mitglied im Long-Term Benefit Trust",
+   "kurz_de": "Der Harvard-Physiker Christopher Stubbs ist als erster Physiker dem Long-Term Benefit Trust von Anthropic beigetreten.",
+   "briefing_de": "Der Trust bekommt ein neues Mitglied:\n- Christopher Stubbs ist Professor für Physik und Astronomie in Harvard und war von 2018 bis 2024 Dean of Science.\n- Er ist Experte für beobachtende Kosmologie und Präzisionsmessung und gehört zur Beratergruppe JASON.\n- 1998 half er im High-Z Supernova Search Team, die beschleunigte Expansion des Universums zu entdecken.\n- Der Trust kann laut Seite die Mehrheit des Anthropic-Boards ernennen und berät zu Risiken und gesellschaftlichen Folgen von KI; weitere Trustees sind Neil Buddy Shah (Vorsitz), Richard Fontaine und Ben Bernanke.",
+   "bereich": "unternehmen",
    "datum": "2026-10-21",
    "wichtig": false
   },
@@ -364,7 +376,7 @@
    "titel_original": "OpenTelemetry export (beta)",
    "titel_de": "OpenTelemetry-Export für die Claude API startet in der Beta",
    "kurz_de": "Messages-API-Anfragen und Managed-Agents-Sessions lassen sich jetzt als OpenTelemetry-Spans in der eigenen Observability-Plattform verfolgen; SDK-Spans gibt es in sieben Sprachen.",
-   "briefing_de": "Die Beta bringt:\n- Das Claude SDK sendet Spans in Python, TypeScript, C#, Go, Java, PHP und Ruby; API-Spans richtest du als OpenTelemetry-Ziel in der Claude Console ein (Admin-Berechtigung).\n- Erfasst werden Messages-API-Anfragen, Sessions-API-Anfragen, Token-Nutzung, Server-Tools sowie Managed-Agents-Turns.\n- Inhaltsmodus: standardmäßig nur Metadaten, optional voller Inhalt mit Prompts und Antworten (Standardlimit 0,75 MB pro Span).\n- Partner u. a. Arize AI, Braintrust, Databricks, Datadog, Grafana Cloud, Honeycomb, Langfuse, LangSmith, New Relic, PostHog, Sentry und Splunk.\n- Neue Referenzseiten zu Spans und zur API für Telemetrie-Ziele.",
+   "briefing_de": "Die Beta bringt:\n- Das Claude SDK sendet Spans in Python, TypeScript, C#, Go, Java, PHP und Ruby; API-Spans richtest du als OpenTelemetry-Ziel in der Claude Console ein (Admin-Berechtigung).\n- Erfasst werden Messages-API-Anfragen, Sessions-API-Anfragen, Token-Nutzung, Server-Tools sowie Managed-Agents-Turns.\n- Inhaltsmodus: standardmäßig nur Metadaten, optional voller Inhalt mit Prompts und Antworten (Standardlimit 0,75 MB pro Span).\n- Partner u. a. Arize AI, Braintrust, Databricks, Datadog, Grafana Cloud, Honeycomb, Langfuse, LangSmith, New Relic, PostHog, Sentry und Splunk.\n- Neue Referenzseiten zu Spans und zur API für Telemetrie-Ziele.\n- Nachtrag: Das web_search-Tool in Managed Agents folgt jetzt den Domain-Einschränkungen der Organisation aus der Claude Console; der Agent erhält nur Treffer, die sowohl die Organisations- als auch die allowed_domains/blocked_domains-Liste des Tools erlauben.",
    "arbeitsweise_de": "Wer die API oder Managed Agents produktiv nutzt, kann Fehler, Latenz und Token-Verbrauch in der vorhandenen Observability-Plattform nachverfolgen.",
    "bereich": "api",
    "datum": "2026-10-14",
