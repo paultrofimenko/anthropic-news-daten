@@ -1716,6 +1716,7 @@
    "platform.claude.com/docs/en/api/messages/batches/retrieve",
    "platform.claude.com/docs/en/api/messages/count_tokens",
    "platform.claude.com/docs/en/api/messages/create",
+   "platform.claude.com/docs/en/api/migration-2026-10-21",
    "platform.claude.com/docs/en/api/models",
    "platform.claude.com/docs/en/api/models/list",
    "platform.claude.com/docs/en/api/models/retrieve",
@@ -2901,10 +2902,10 @@
   ]
  },
  "abschaltungen": {
-  "hash": "0a1e64c3a4533890"
+  "hash": "328e777c4a643429"
  },
  "modelle": {
-  "hash": "639ca562d981be1d"
+  "hash": "493da938cf41d063"
  },
  "platform-release-notes": {
   "schluessel": [
@@ -3062,13 +3063,23 @@
    "October 9, 2026",
    "October 14, 2026",
    "October 15, 2026",
-   "October 20, 2026"
+   "October 20, 2026",
+   "October 21, 2026"
   ],
   "zeilen": {
+   "October 21, 2026": [
+    "ecd68fcaa3",
+    "7786d12cdb",
+    "0a93cb28c3",
+    "c266068edb"
+   ],
    "October 20, 2026": [
     "4bb3ba8520",
     "99d15b13df",
-    "679c1304dc"
+    "679c1304dc",
+    "b6dc5b24ee",
+    "a57b5d7fa5",
+    "10db948f14"
    ],
    "October 15, 2026": [
     "06f36b26ab",
@@ -3111,10 +3122,6 @@
    "October 1, 2026": [
     "323d103291",
     "3f1b6f1251"
-   ],
-   "September 30, 2026": [
-    "f7d9fea84b",
-    "8936617436"
    ]
   },
   "zeilenVersion": 2
