@@ -1,0 +1,12 @@
+{
+  "id": "anthropic-seiten-sammlung",
+  "quelle": "anthropic",
+  "url": "https://www.anthropic.com/institute/econ-scenarios",
+  "titel_original": "50 new entries on anthropic.com",
+  "titel_de": "anthropic.com: rund 50 weitere Seiten erfasst, darunter Econ Scenarios",
+  "kurz_de": "Auf anthropic.com sind rund 50 Seiten neu erfasst, darunter der Econ Scenario Explorer, die Institute-Agenda und Seiten zu Abschaltungszusagen und Destillationsabwehr.",
+  "briefing_de": "Erfasst wurden unter anderem diese Seiten:\n- „Scenarios for our Economic Future“: Modell des Economics-Teams zu US-Jobs, Wachstum und Arbeitslosigkeit bis 2030 mit drei Szenarien; laut Seite +1,6 % (modest), +8,3 % (substantial) und +32,4 % (extreme) beim BIP 2030.\n- „Focus areas for The Anthropic Institute“ (7. Mai 2026): vier Schwerpunkte – wirtschaftliche Diffusion, Bedrohungen und Resilienz, KI-Systeme im Einsatz, KI-getriebene F&E.\n- Weitere neu erfasste Seiten, u. a. zu Abschaltungszusagen (`deprecation-commitments`), Abschaltungs-Update zu Opus 3, Destillationsabwehr, Glasswing-Update und Rechtliches (`legal`).",
+  "bereich": "news",
+  "datum": "2026-10-20",
+  "wichtig": false
+}
