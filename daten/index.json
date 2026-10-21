@@ -1,8 +1,35 @@
 {
  "version": 1,
- "erzeugt": "2026-10-21T17:15:15.356Z",
- "anzahl": 78,
+ "erzeugt": "2026-10-21T21:46:14.325Z",
+ "anzahl": 80,
  "beitraege": [
+  {
+   "id": "api-version-2026-10-21",
+   "quelle": "platform-release-notes",
+   "url": "https://platform.claude.com/docs/en/api/migration-2026-10-21",
+   "titel_original": "Migrating to API version 2026-10-21",
+   "titel_de": "Neue API-Version 2026-10-21 mit Breaking Changes",
+   "kurz_de": "API-Version 2026-10-21 ist da: temperature, top_p und top_k liefern einen 400-Fehler. Neue SDK-Hauptversionen senden sie standardmäßig, dazu kommen Feldumbenennungen in der Admin API.",
+   "briefing_de": "Die Version löst 2023-06-01 ab; die neuen SDK- und CLI-Versionen senden sie standardmäßig.\n- Neue Versionen: Python SDK 2.0.0, TypeScript SDK 1.0.0, C# SDK 13.0.0, Go SDK 2.0.0, Java SDK 3.0.0, PHP SDK 1.0.0, Ruby SDK 2.0.0, ant CLI 2.0.0. Ohne SDK: Header anthropic-version: 2026-10-21 setzen.\n- Messages API: temperature, top_p und top_k liefern einen 400-Fehler, auch beim Standardwert. Ein document-Block direkt in einer assistant-Nachricht und citations auf text-Blöcken in user-Nachrichten liefern ebenfalls 400.\n- Admin API und Enterprise Analytics API: Felder umbenannt (z. B. roles → role_ids, actor.email → actor.email_address); workspace_id an API-Keys entfällt, stattdessen scope.\n- Die SDKs und die CLI stehen jetzt unter Apache 2.0 statt MIT; MessageParam ist eine Union je Rolle (UserMessageParam, AssistantMessageParam, SystemMessageParam).\n- Auf Amazon Bedrock gilt 2026-10-21 nur für Claude 4.7 und neuere Modelle.",
+   "arbeitsweise_de": "Vor dem SDK-Upgrade temperature, top_p und top_k aus Anfragen entfernen und Admin-API-Felder auf die neuen Namen umstellen. Wer Anfragen mit niedrigerer temperature auf Modellen braucht, die andere Werte erlauben, kann diese Anfragen auf 2023-06-01 lassen.",
+   "bereich": "api",
+   "datum": "2026-10-21",
+   "wichtig": true,
+   "ereignis": {
+    "art": "neu",
+    "titel": "API-Version 2026-10-21 erscheint"
+   },
+   "lernkarten": [
+    {
+     "frage_de": "Was passiert in der Claude API ab Version 2026-10-21, wenn eine Anfrage temperature, top_p oder top_k sendet?",
+     "antwort_de": "Die Anfrage liefert einen 400-Fehler, auch beim Standardwert. Die drei Parameter müssen weg."
+    },
+    {
+     "frage_de": "Wie stellt man Anfragen an die Claude API auf API-Version 2026-10-21 um?",
+     "antwort_de": "Mit SDK auf die neue Hauptversion upgraden, z. B. Python SDK 2.0.0 oder TypeScript SDK 1.0.0. Ohne SDK den Header anthropic-version auf 2026-10-21 setzen."
+    }
+   ]
+  },
   {
    "id": "claude-code-2-1-306",
    "quelle": "code-changelog",
@@ -99,6 +126,19 @@
    "kurz_de": "Mit User Profiles ordnest du API-Anfragen Endkunden zu, damit eine Sicherheitsmaßnahme nur ein Profil trifft. Neu: Organization Webhooks (Beta) für Maßnahmen auf Profilen.",
    "briefing_de": "Zwei neue Seiten in der Platform-Doku:\n- Du legst je Endkunde einmal ein Profil mit `POST /v1/user_profiles` an und sendest die `uprof_`-ID bei jeder Anfrage im Header `anthropic-user-profile-id`.\n- Eine Maßnahme wie Sperre oder Block kann so auf einen Endkunden begrenzt werden; der übrige Verkehr bleibt unberührt. Profile sind nicht abrechenbar und ändern keine Preise.\n- `access_type`: `application` (Standard) für jeden angemeldeten Nutzer deines Produkts, `passthrough` für jede Firma, der du API-Zugang weiterverkaufst.\n- Zweite Seite: Für Programme im Verification Portal erzeugst du mit `POST /v1/user_profiles/{id}/action_urls` (`enroll_end_user`) einen Link, mit dem der Endkunde sein Profil mit seiner eigenen Anthropic-Organisation verknüpft. Der Link gilt etwa eine Stunde.\n- Neu in den Release Notes: Organization Webhooks in der Admin API (Beta, Header `anthropic-beta: webhooks-2026-10-07`). Über `/v1/organizations/webhooks` registrierst du Endpunkte für zwei Events: `user_profile.enforcement_action_opened` (Anthropic schränkt ein Profil ein oder sperrt es) und `user_profile.enforcement_action_resolved` (Einschränkung oder Sperre endet). Zugang über das Anthropic-Account-Team; laut Doku wird die Event-Zustellung noch nicht live ausgeführt.",
    "arbeitsweise_de": "Wer eine Plattform oder ein Gateway betreibt oder API-Zugang weiterverkauft, sollte Profile beim Onboarding der Endkunden anlegen und eigene interne Nutzung in einer getrennten Organisation halten. Webhook-Handler kannst du schon jetzt anhand des Eventformats vorbereiten und Signaturen nach dem Standard-Webhooks-Verfahren prüfen.",
+   "bereich": "api",
+   "datum": "2026-10-20",
+   "wichtig": false
+  },
+  {
+   "id": "web-fetch-org-schalter",
+   "quelle": "platform-release-notes",
+   "url": "https://platform.claude.com/docs/en/release-notes/overview",
+   "titel_original": "Claude Platform Release Notes, October 20, 2026",
+   "titel_de": "Web Fetch lässt sich organisationsweit abschalten",
+   "kurz_de": "Organisations-Admins können Web Fetch in der Console auf der Seite Capabilities ausschalten oder per Domain-Listen einschränken. Managed Agents halten sich bei web_fetch und web_search daran.",
+   "briefing_de": "- Bei ausgeschaltetem Web Fetch scheitert eine Messages-API-Anfrage mit dem Web-Fetch-Tool mit einem 400-Fehler; in Managed-Agents-Sitzungen liefert web_fetch ein Fehlerergebnis an den Agenten.\n- Bei eingeschaltetem Web Fetch können Admins erlaubte oder gesperrte Domains festlegen.\n- In Managed Agents muss eine URL (auch nach Weiterleitung) sowohl die Liste der Organisation als auch allowed_domains/blocked_domains des web_fetch-Tools bestehen.\n- Für web_search gilt dasselbe: Die Einstellung „Allow web search“ greift seit 6. Oktober, die Domain-Einschränkungen seit 14. Oktober.",
+   "arbeitsweise_de": "Wer Agenten mit Web Fetch oder Web Search betreibt, sollte prüfen, ob die Organisationseinstellungen die gewünschten Domains zulassen.",
    "bereich": "api",
    "datum": "2026-10-20",
    "wichtig": false
@@ -1323,6 +1363,13 @@
    "url": "https://platform.claude.com/docs/en/manage-claude/opentelemetry"
   },
   {
+   "datum": "2026-10-21",
+   "art": "neu",
+   "titel": "API-Version 2026-10-21 erscheint",
+   "beitrag": "api-version-2026-10-21",
+   "url": "https://platform.claude.com/docs/en/api/migration-2026-10-21"
+  },
+  {
    "datum": "2026-11-30",
    "art": "ende",
    "titel": "Abschaltung von Sonnet 4.5",
@@ -1667,7 +1714,7 @@
    "titel_de": "API und Plattform",
    "kurz_de": "Wie Programme Claude einbauen: Schnittstellen, Werkzeuge, Grenzen.",
    "einleitung_de": "Über die Claude-API (eine Schnittstelle, über die Programme mit Claude sprechen) bauen Entwickler Claude in eigene Anwendungen ein. Dafür gibt es zwei Wege: die Messages-API für volle Kontrolle und Claude Managed Agents für lange Aufgaben, die Anthropic betreibt.",
-   "stand": "2026-10-16",
+   "stand": "2026-10-21",
    "grafik": {
     "art": "schritte",
     "titel_de": "Der Weg für neue Entwickler",
@@ -1714,6 +1761,10 @@
       {
        "text_de": "Managed Agents (Beta): Agenten können dynamische Workflows nutzen – ein Programm, das viele Agenten in Phasen im Hintergrund ausführt",
        "quelle": "https://platform.claude.com/docs/en/managed-agents/multiagent-orchestration"
+      },
+      {
+       "text_de": "API-Version 2026-10-21: temperature, top_p und top_k liefern einen 400-Fehler; neue SDK-Hauptversionen (z. B. Python SDK 2.0.0, TypeScript SDK 1.0.0) senden sie standardmäßig",
+       "quelle": "https://platform.claude.com/docs/en/api/migration-2026-10-21"
       }
      ],
      "quelle": "https://platform.claude.com/docs/en/api/overview"
@@ -1771,8 +1822,7 @@
    "gesehen": [
     "opentelemetry-export-beta",
     "managed-agents-dynamische-workflows",
-    "managed-agents-web-fetch-url-regel",
-    "sonnet-5-5-cache-lesepreis"
+    "api-version-2026-10-21"
    ]
   },
   {
