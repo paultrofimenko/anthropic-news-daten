@@ -1,0 +1,13 @@
+{
+  "id": "anthropic-seiten-neu-erfasst",
+  "quelle": "anthropic",
+  "url": "https://www.anthropic.com/institute/econ-scenarios",
+  "titel_original": "50 new entries on anthropic.com",
+  "titel_de": "Anthropic.com: Szenario-Explorer zur Wirtschaft und neue Übersichtsseiten",
+  "kurz_de": "Auf anthropic.com sind rund 50 Seiten neu erfasst: der Szenario-Explorer „Scenarios for our Economic Future“, Übersichten wie „Announcements“ und „Features“ sowie ältere Beiträge unter neuen Adressen.",
+  "briefing_de": "Neu erfasst auf anthropic.com:\n- „Scenarios for our Economic Future“ (Institute): Ein Modell des Anthropic-Economics-Teams zeigt, wie KI Jobs, Wachstum und Arbeitslosigkeit in den USA beeinflussen könnte; man trägt eigene Erwartungen zu KI-Fähigkeiten ein und sieht die daraus folgende Wirtschaft 2030. Laut Seite bleibt die Arbeitslosigkeit in Szenarien bis etwa doppeltem Normalwachstum im historischen Rahmen; bei noch schnellerem Wachstum drohen Nachteile für Wissensarbeiter.\n- Neue Übersichtsseiten unter `/news/`, etwa „Announcements“ (74 Artikel) und „Features“ (aktuell ein Artikel: „The Situation Report“ vom 21. Sep 2026), dazu eine `/legal`-Seite.\n- Ältere Beiträge erscheinen unter eigenen Adressen, darunter die Anthropic-Institute-Agenda (7. Mai 2026), „2028 AI leadership“ (14. Mai 2026), das Glasswing-Update (22. Mai 2026), die Opus-3-Abschaltupdates (25. Feb 2026) und die Commitments zu Modell-Abschaltung und -Erhalt (aktualisiert am 28. Sep 2026)."
+  ,
+  "bereich": "news",
+  "datum": "2026-10-20",
+  "wichtig": false
+}

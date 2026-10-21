@@ -1,0 +1,12 @@
+{
+  "id": "claude-code-2-1-306",
+  "quelle": "code-changelog",
+  "url": "https://code.claude.com/docs/en/changelog",
+  "titel_original": "Claude Code 2.1.306",
+  "titel_de": "Claude Code 2.1.306: zwei Korrekturen",
+  "kurz_de": "Claude Code 2.1.306 behebt „Not logged in“ bei `claude -p` in Cloud-Sessions und einen fälschlichen „prompt is too long“-Fehler bei vielen MCP-Tools.",
+  "briefing_de": "Neu in Fassung 2.1.306:\n- `claude -p` in Cloud-Sessions meldete „Not logged in“, wenn es ohne die Umgebungsvariablen der Session gestartet wurde; das ist behoben.\n- Ein API-Fehler wurde in Sessions mit vielen MCP-Tools durch „prompt is too long“ und eine unnötige Compaction ersetzt; das ist behoben.",
+  "bereich": "claude-code",
+  "datum": "2026-10-21",
+  "wichtig": false
+}

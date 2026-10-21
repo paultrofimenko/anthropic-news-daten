@@ -1,0 +1,13 @@
+{
+  "id": "organisation-webhooks-user-profiles",
+  "quelle": "platform-release-notes",
+  "url": "https://platform.claude.com/docs/en/manage-claude/organization-webhooks",
+  "titel_original": "Organization webhooks",
+  "titel_de": "Organization Webhooks: Benachrichtigung bei Maßnahmen gegen User Profiles",
+  "kurz_de": "Neu in der Admin API (Beta): Organization Webhooks melden, wenn Anthropic ein User Profile deiner Organisation einschränkt oder sperrt und wenn die Maßnahme endet.",
+  "briefing_de": "Neue Doku-Seite und Admin-API-Endpunkte unter `/v1/organizations/webhooks` (Beta-Header `webhooks-2026-10-07`):\n- Zwei Ereignisse: `user_profile.enforcement_action_opened` (Anthropic öffnet eine Maßnahme auf einem Profil) und `user_profile.enforcement_action_resolved` (Maßnahme endet).\n- Die Ereigniszustellung ist laut Doku noch nicht live: Ein registrierter Endpunkt erhält vorerst nichts, du kannst aber Endpunkte registrieren und deinen Handler nach dem Ereignisformat bauen.\n- Ansehen darf jedes Organisationsmitglied; anlegen, ändern, löschen und das Signing Secret ersetzen dürfen nur Admin, Owner und Primary Owner.\n- Zugang gibt es über das Anthropic-Account-Team; die Organisation darf kein aktiviertes HIPAA readiness haben.",
+  "arbeitsweise_de": "Wer User Profiles für Endkunden nutzt, kann den Handler für Sperr- und Einschränkungs-Ereignisse schon vorbereiten.",
+  "bereich": "api",
+  "datum": "2026-10-20",
+  "wichtig": false
+}

@@ -1,0 +1,13 @@
+{
+  "id": "claude-code-2-1-305",
+  "quelle": "code-changelog",
+  "url": "https://code.claude.com/docs/en/changelog",
+  "titel_original": "Claude Code 2.1.305",
+  "titel_de": "Claude Code 2.1.305: Sandbox-Option und viele Fehlerbehebungen",
+  "kurz_de": "Claude Code 2.1.305 bringt `sandbox.allowNestedUserNamespaces` für Linux, einen Schalter für den Retry-Watchdog und viele Korrekturen, darunter eine Regression aus 2.1.304 bei Tool Search.",
+  "briefing_de": "Neu in Fassung 2.1.305:\n- `sandbox.allowNestedUserNamespaces`: Sandbox-Befehle unter Linux dürfen User Namespaces anlegen (Chromium, rootless podman); laut Changelog umgehen sie damit den Dateischutz der Sandbox.\n- `CLAUDE_CODE_RETRY_WATCHDOG_USAGE_LIMIT_RECHECK_MS`: Der unbeaufsichtigte Retry-Modus (`CLAUDE_CODE_RETRY_WATCHDOG`) bemerkt ein Nutzungslimit, das vor dem Reset aufgehoben wurde.\n- Behoben: Auf Vertex, Bedrock und hinter Gateways schlugen alle Anfragen fehl, wenn Tool Search abgelehnt wurde (Regression aus 2.1.304); Claude Code versucht es jetzt ohne.\n- Geändert: `allowedMcpServers` filtert Stdio-Server aus `managed-mcp.json` nicht mehr, die `${VAR}` nur in `env` nutzen; ein von deiner Allowlist ausgelassener Server lädt nach dem Update. Mit `deniedMcpServers` bleibt er aus.\n- Dazu viele weitere Korrekturen, etwa zu Worktrees, `/usage`, Remote Control, Claude Tag und Code Review.",
+  "arbeitsweise_de": "Wer `allowedMcpServers` zusammen mit `managed-mcp.json` nutzt, sollte nach dem Update prüfen, ob ein bisher ausgefilterter Server jetzt lädt, und ihn bei Bedarf über `deniedMcpServers` sperren.",
+  "bereich": "claude-code",
+  "datum": "2026-10-20",
+  "wichtig": false
+}
