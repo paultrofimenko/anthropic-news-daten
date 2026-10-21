@@ -1,0 +1,119 @@
+{
+ "zeit": "2026-10-21T04:52:18.208Z",
+ "neu": [
+  {
+   "quelle": "code-changelog",
+   "name": "Claude Code Changelog",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://code.claude.com/docs/en/changelog",
+   "titel": "2.1.306",
+   "zeilen": [
+    "- Fixed `claude -p` inside cloud sessions reporting \"Not logged in\" when started without the session's environment variables",
+    "- Fixed an API error being replaced by \"prompt is too long\", and an unneeded compaction, in sessions with many MCP tools"
+   ]
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/manage-claude/organization-webhooks",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/api/organization/workspaces/rate_limits/update",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/api/beta/organization/workspaces/rate_limits/update",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/api/beta/organization/webhooks",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/api/beta/organization/webhooks/create",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/api/beta/organization/webhooks/list",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/api/beta/organization/webhooks/retrieve",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/api/beta/organization/webhooks/update",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/api/beta/organization/webhooks/delete",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/api/beta/organization/webhooks/regenerate_signing_secret",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-release-notes",
+   "name": "Claude Platform Release Notes",
+   "wichtig": false,
+   "art": "ergaenzt",
+   "url": "https://platform.claude.com/docs/en/release-notes/overview",
+   "titel": "October 20, 2026",
+   "zeilen": [
+    "* We've launched [user profiles](https://platform.claude.com/docs/en/manage-claude/user-profiles), so you can tell Anthropic which of your end customers each API request is for. If you operate a platform or gateway, or resell API access, a safety enforcement action can then apply to one end customer instead of your whole organization. The SDK and the `ant` CLI support the new [`/v1/user_profiles` endpoints](https://platform.claude.com/docs/en/api/user_profiles).",
+    "* We've added [organization webhooks](https://platform.claude.com/docs/en/manage-claude/organization-webhooks) to the [Admin API](https://platform.claude.com/docs/en/manage-claude/admin-api), in beta with the `webhooks-2026-10-07` beta header. Its [`/v1/organizations/webhooks` endpoints](https://platform.claude.com/docs/en/api/beta/organization/webhooks) register webhook endpoints for two event types: one for when Anthropic restricts or bans one of your organization's user profiles, and one for when the restriction or ban ends. To request access, contact your Anthropic account team."
+   ]
+  }
+ ]
+}

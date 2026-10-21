@@ -469,9 +469,14 @@
    "2.1.302",
    "2.1.303",
    "2.1.304",
-   "2.1.305"
+   "2.1.305",
+   "2.1.306"
   ],
   "zeilen": {
+   "2.1.306": [
+    "21a8e050a7",
+    "82cdf78a6d"
+   ],
    "2.1.305": [
     "8cb995b58c",
     "de7d45764f",
@@ -1218,10 +1223,6 @@
     "b849fe5d15",
     "d77ccc780f",
     "5568e7bffc"
-   ],
-   "2.1.294": [
-    "76f8706752",
-    "9cd4471244"
    ]
   },
   "zeilenVersion": 2
@@ -1523,6 +1524,13 @@
    "platform.claude.com/docs/en/api/beta/organization/users/remove",
    "platform.claude.com/docs/en/api/beta/organization/users/retrieve",
    "platform.claude.com/docs/en/api/beta/organization/users/update",
+   "platform.claude.com/docs/en/api/beta/organization/webhooks",
+   "platform.claude.com/docs/en/api/beta/organization/webhooks/create",
+   "platform.claude.com/docs/en/api/beta/organization/webhooks/delete",
+   "platform.claude.com/docs/en/api/beta/organization/webhooks/list",
+   "platform.claude.com/docs/en/api/beta/organization/webhooks/regenerate_signing_secret",
+   "platform.claude.com/docs/en/api/beta/organization/webhooks/retrieve",
+   "platform.claude.com/docs/en/api/beta/organization/webhooks/update",
    "platform.claude.com/docs/en/api/beta/organization/workspaces",
    "platform.claude.com/docs/en/api/beta/organization/workspaces/archive",
    "platform.claude.com/docs/en/api/beta/organization/workspaces/create",
@@ -1535,6 +1543,7 @@
    "platform.claude.com/docs/en/api/beta/organization/workspaces/members/update",
    "platform.claude.com/docs/en/api/beta/organization/workspaces/rate_limits",
    "platform.claude.com/docs/en/api/beta/organization/workspaces/rate_limits/list",
+   "platform.claude.com/docs/en/api/beta/organization/workspaces/rate_limits/update",
    "platform.claude.com/docs/en/api/beta/organization/workspaces/retrieve",
    "platform.claude.com/docs/en/api/beta/organization/workspaces/service_accounts",
    "platform.claude.com/docs/en/api/beta/organization/workspaces/service_accounts/add",
@@ -1778,6 +1787,7 @@
    "platform.claude.com/docs/en/api/organization/workspaces/members/update",
    "platform.claude.com/docs/en/api/organization/workspaces/rate_limits",
    "platform.claude.com/docs/en/api/organization/workspaces/rate_limits/list",
+   "platform.claude.com/docs/en/api/organization/workspaces/rate_limits/update",
    "platform.claude.com/docs/en/api/organization/workspaces/retrieve",
    "platform.claude.com/docs/en/api/organization/workspaces/service_accounts",
    "platform.claude.com/docs/en/api/organization/workspaces/service_accounts/add",
@@ -1915,6 +1925,7 @@
    "platform.claude.com/docs/en/manage-claude/opentelemetry",
    "platform.claude.com/docs/en/manage-claude/opentelemetry/api",
    "platform.claude.com/docs/en/manage-claude/opentelemetry/sdk",
+   "platform.claude.com/docs/en/manage-claude/organization-webhooks",
    "platform.claude.com/docs/en/manage-claude/plugins-api",
    "platform.claude.com/docs/en/manage-claude/rate-limits-api",
    "platform.claude.com/docs/en/manage-claude/spend-limits-api",
@@ -3054,7 +3065,9 @@
   ],
   "zeilen": {
    "October 20, 2026": [
-    "4bb3ba8520"
+    "4bb3ba8520",
+    "99d15b13df",
+    "679c1304dc"
    ],
    "October 15, 2026": [
     "06f36b26ab",
