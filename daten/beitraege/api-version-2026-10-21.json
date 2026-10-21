@@ -1,0 +1,24 @@
+{
+  "id": "api-version-2026-10-21",
+  "quelle": "platform-release-notes",
+  "url": "https://platform.claude.com/docs/en/api/migration-2026-10-21",
+  "titel_original": "Migrating to API version 2026-10-21",
+  "titel_de": "Neue API-Version 2026-10-21 mit Breaking Changes",
+  "kurz_de": "API-Version 2026-10-21 ist da: temperature, top_p und top_k liefern einen 400-Fehler. Neue SDK-Hauptversionen senden sie standardmäßig, dazu kommen Feldumbenennungen in der Admin API.",
+  "briefing_de": "Die Version löst 2023-06-01 ab; die neuen SDK- und CLI-Versionen senden sie standardmäßig.\n- Neue Versionen: Python SDK 2.0.0, TypeScript SDK 1.0.0, C# SDK 13.0.0, Go SDK 2.0.0, Java SDK 3.0.0, PHP SDK 1.0.0, Ruby SDK 2.0.0, ant CLI 2.0.0. Ohne SDK: Header anthropic-version: 2026-10-21 setzen.\n- Messages API: temperature, top_p und top_k liefern einen 400-Fehler, auch beim Standardwert. Ein document-Block direkt in einer assistant-Nachricht und citations auf text-Blöcken in user-Nachrichten liefern ebenfalls 400.\n- Admin API und Enterprise Analytics API: Felder umbenannt (z. B. roles → role_ids, actor.email → actor.email_address); workspace_id an API-Keys entfällt, stattdessen scope.\n- Die SDKs und die CLI stehen jetzt unter Apache 2.0 statt MIT; MessageParam ist eine Union je Rolle (UserMessageParam, AssistantMessageParam, SystemMessageParam).\n- Auf Amazon Bedrock gilt 2026-10-21 nur für Claude 4.7 und neuere Modelle.",
+  "arbeitsweise_de": "Vor dem SDK-Upgrade temperature, top_p und top_k aus Anfragen entfernen und Admin-API-Felder auf die neuen Namen umstellen. Wer Anfragen mit niedrigerer temperature auf Modellen braucht, die andere Werte erlauben, kann diese Anfragen auf 2023-06-01 lassen.",
+  "bereich": "api",
+  "datum": "2026-10-21",
+  "wichtig": true,
+  "ereignis": { "art": "neu", "titel": "API-Version 2026-10-21 erscheint" },
+  "lernkarten": [
+    {
+      "frage_de": "Was passiert in der Claude API ab Version 2026-10-21, wenn eine Anfrage temperature, top_p oder top_k sendet?",
+      "antwort_de": "Die Anfrage liefert einen 400-Fehler, auch beim Standardwert. Die drei Parameter müssen weg."
+    },
+    {
+      "frage_de": "Wie stellt man Anfragen an die Claude API auf API-Version 2026-10-21 um?",
+      "antwort_de": "Mit SDK auf die neue Hauptversion upgraden, z. B. Python SDK 2.0.0 oder TypeScript SDK 1.0.0. Ohne SDK den Header anthropic-version auf 2026-10-21 setzen."
+    }
+  ]
+}

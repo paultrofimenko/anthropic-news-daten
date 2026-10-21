@@ -1,0 +1,13 @@
+{
+  "id": "web-fetch-org-schalter",
+  "quelle": "platform-release-notes",
+  "url": "https://platform.claude.com/docs/en/release-notes/overview",
+  "titel_original": "Claude Platform Release Notes, October 20, 2026",
+  "titel_de": "Web Fetch lässt sich organisationsweit abschalten",
+  "kurz_de": "Organisations-Admins können Web Fetch in der Console auf der Seite Capabilities ausschalten oder per Domain-Listen einschränken. Managed Agents halten sich bei web_fetch und web_search daran.",
+  "briefing_de": "- Bei ausgeschaltetem Web Fetch scheitert eine Messages-API-Anfrage mit dem Web-Fetch-Tool mit einem 400-Fehler; in Managed-Agents-Sitzungen liefert web_fetch ein Fehlerergebnis an den Agenten.\n- Bei eingeschaltetem Web Fetch können Admins erlaubte oder gesperrte Domains festlegen.\n- In Managed Agents muss eine URL (auch nach Weiterleitung) sowohl die Liste der Organisation als auch allowed_domains/blocked_domains des web_fetch-Tools bestehen.\n- Für web_search gilt dasselbe: Die Einstellung „Allow web search“ greift seit 6. Oktober, die Domain-Einschränkungen seit 14. Oktober.",
+  "arbeitsweise_de": "Wer Agenten mit Web Fetch oder Web Search betreibt, sollte prüfen, ob die Organisationseinstellungen die gewünschten Domains zulassen.",
+  "bereich": "api",
+  "datum": "2026-10-20",
+  "wichtig": false
+}

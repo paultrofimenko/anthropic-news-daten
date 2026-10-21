@@ -3,7 +3,7 @@
   "titel_de": "API und Plattform",
   "kurz_de": "Wie Programme Claude einbauen: Schnittstellen, Werkzeuge, Grenzen.",
   "einleitung_de": "Über die Claude-API (eine Schnittstelle, über die Programme mit Claude sprechen) bauen Entwickler Claude in eigene Anwendungen ein. Dafür gibt es zwei Wege: die Messages-API für volle Kontrolle und Claude Managed Agents für lange Aufgaben, die Anthropic betreibt.",
-  "stand": "2026-10-16",
+  "stand": "2026-10-21",
   "grafik": {
     "art": "schritte",
     "titel_de": "Der Weg für neue Entwickler",
@@ -50,6 +50,10 @@
         {
           "text_de": "Managed Agents (Beta): Agenten können dynamische Workflows nutzen – ein Programm, das viele Agenten in Phasen im Hintergrund ausführt",
           "quelle": "https://platform.claude.com/docs/en/managed-agents/multiagent-orchestration"
+        },
+        {
+          "text_de": "API-Version 2026-10-21: temperature, top_p und top_k liefern einen 400-Fehler; neue SDK-Hauptversionen (z. B. Python SDK 2.0.0, TypeScript SDK 1.0.0) senden sie standardmäßig",
+          "quelle": "https://platform.claude.com/docs/en/api/migration-2026-10-21"
         }
       ],
       "quelle": "https://platform.claude.com/docs/en/api/overview"
@@ -107,7 +111,6 @@
   "gesehen": [
     "opentelemetry-export-beta",
     "managed-agents-dynamische-workflows",
-    "managed-agents-web-fetch-url-regel",
-    "sonnet-5-5-cache-lesepreis"
+    "api-version-2026-10-21"
   ]
 }
