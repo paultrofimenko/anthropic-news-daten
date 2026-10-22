@@ -1449,6 +1449,7 @@
    "platform.claude.com/docs/en/api/beta/vaults/update",
    "platform.claude.com/docs/en/api/beta/webhooks",
    "platform.claude.com/docs/en/api/claude-code/routines-fire",
+   "platform.claude.com/docs/en/api/claude-models-on-google-cloud-anthropic-managed-iam-permissions",
    "platform.claude.com/docs/en/api/claude-platform-on-aws-iam-actions",
    "platform.claude.com/docs/en/api/completions",
    "platform.claude.com/docs/en/api/completions/create",
@@ -1649,6 +1650,9 @@
    "platform.claude.com/docs/en/build-with-claude/citations",
    "platform.claude.com/docs/en/build-with-claude/claude-in-amazon-bedrock",
    "platform.claude.com/docs/en/build-with-claude/claude-in-microsoft-foundry",
+   "platform.claude.com/docs/en/build-with-claude/claude-models-on-google-cloud/anthropic-managed",
+   "platform.claude.com/docs/en/build-with-claude/claude-models-on-google-cloud/google-managed",
+   "platform.claude.com/docs/en/build-with-claude/claude-models-on-google-cloud/overview",
    "platform.claude.com/docs/en/build-with-claude/claude-on-amazon-bedrock-legacy",
    "platform.claude.com/docs/en/build-with-claude/claude-on-vertex-ai",
    "platform.claude.com/docs/en/build-with-claude/claude-platform-on-aws",
@@ -2344,6 +2348,7 @@
    "anthropic.com/news/disrupting-ai-espionage",
    "anthropic.com/news/distillation-defenses",
    "anthropic.com/news/donate-public-first-action",
+   "anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation",
    "anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation",
    "anthropic.com/news/donation-public-first-action",
    "anthropic.com/news/dxc-anthropic-alliance",
@@ -2726,7 +2731,7 @@
   ]
  },
  "abschaltungen": {
-  "hash": "328e777c4a643429"
+  "hash": "c8384fb30e9b3655"
  },
  "modelle": {
   "hash": "a2a32ed82b857b07"
@@ -2888,9 +2893,14 @@
    "October 14, 2026",
    "October 15, 2026",
    "October 20, 2026",
-   "October 21, 2026"
+   "October 21, 2026",
+   "October 22, 2026"
   ],
   "zeilen": {
+   "October 22, 2026": [
+    "0e8870eda3",
+    "c62d6b1932"
+   ],
    "October 21, 2026": [
     "ecd68fcaa3",
     "7786d12cdb",
@@ -2942,10 +2952,6 @@
    ],
    "October 5, 2026": [
     "11c275e142"
-   ],
-   "October 1, 2026": [
-    "323d103291",
-    "3f1b6f1251"
    ]
   },
   "zeilenVersion": 2
