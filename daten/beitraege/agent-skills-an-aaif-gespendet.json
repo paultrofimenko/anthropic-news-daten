@@ -1,0 +1,13 @@
+{
+  "id": "agent-skills-an-aaif-gespendet",
+  "quelle": "anthropic",
+  "url": "https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation",
+  "titel_original": "Donating Agent Skills to the Agentic AI Foundation",
+  "titel_de": "Agent Skills gehen an die Agentic AI Foundation",
+  "kurz_de": "Anthropic spendet den offenen Standard Agent Skills an die Agentic AI Foundation (AAIF) unter dem Dach der Linux Foundation. Name, Logo, GitHub-Organisation und die Domain des Standards gehen mit.",
+  "briefing_de": "Anthropic übergibt den offenen Standard an eine neutrale Stiftung:\n- Die AAIF (unter der Linux Foundation) bekommt Name und Logo von Agent Skills, die GitHub-Organisation und die Domain des Standards. Anthropic hat die AAIF letztes Jahr mit Block und OpenAI mitgegründet und ihr auch MCP gespendet.\n- Laut Beitrag haben mehr als 70 Agent-Plattformen den Standard seit der Veröffentlichung im Dezember 2025 eingebaut, darunter ChatGPT, Cursor, GitHub Copilot und VS Code. Bisher wurden 1 Million Skills veröffentlicht und nahezu 280 Millionen installiert.\n- Gepflegt wird der Standard von Ingenieuren von Anthropic, Google, OpenAI und anderen als Einzelpersonen; Lead Maintainers sind David Soria Parra und Mahesh Murag.\n- Vorgeschlagene Roadmap: versionierte Releases, ein formaler Vorschlagsprozess und Sicherheitshinweise für Autoren und Nutzer von Skills.",
+  "arbeitsweise_de": "Skills bleiben offen und lassen sich weiter ohne Mitgliedschaft in der AAIF nutzen oder erweitern. Wer eigene Skills baut, kann auf einen herstellerneutralen Standard setzen.",
+  "bereich": "news",
+  "datum": "2026-10-22",
+  "wichtig": false
+}

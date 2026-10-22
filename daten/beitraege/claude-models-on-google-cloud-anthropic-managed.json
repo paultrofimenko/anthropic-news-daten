@@ -1,0 +1,14 @@
+{
+  "id": "claude-models-on-google-cloud-anthropic-managed",
+  "quelle": "platform-release-notes",
+  "url": "https://platform.claude.com/docs/en/build-with-claude/claude-models-on-google-cloud/anthropic-managed",
+  "titel_original": "Claude Models on Google Cloud (Anthropic managed)",
+  "titel_de": "Claude auf Google Cloud, von Anthropic betrieben",
+  "kurz_de": "Neu: Claude Models on Google Cloud (Anthropic managed) – die Claude API, von Anthropic betrieben und über dein Google-Cloud-Projekt erreichbar. Zugriff per Google Cloud IAM, Abrechnung über den Marketplace.",
+  "briefing_de": "Es gibt jetzt zwei Wege, Claude über Google Cloud zu nutzen:\n- Anthropic managed (neu): Anthropic betreibt die Claude API, Zugriff steuert Google Cloud IAM (Rollen `roles/claude.viewer`, `roles/claude.user`, `roles/claude.admin`), Abrechnung läuft über Google Cloud Marketplace. Anfragen gehen an Claude-API-Endpunkte (`/v1/{endpoint}`) mit `anthropic-version`-Header; Einrichtung legt eine neue Anthropic-Organisation für das Projekt an.\n- Google managed: Google betreibt Claude als Teil seiner Agent Platform, mit eigenen Prediction-Endpunkten und Abrechnung als Agent-Platform-Nutzung.\n- Fast mode ist für Claude Opus 5.5 auf Claude Models on Google Cloud (Anthropic managed) verfügbar.\n- Die Seite zu den Modell-Abschaltungen nennt diese Plattform jetzt unter den von Anthropic betriebenen Plattformen, für die ihre Daten gelten; bei Google managed gelten eigene Abschaltpläne. Neue Abschaltdaten gibt es dort dadurch nicht.",
+  "arbeitsweise_de": "Wer Claude über Google Cloud nutzt, sollte prüfen, welches der beiden Angebote er verwendet: Die Übersichtsseite erklärt den Unterschied. Beim Wechsel zu Anthropic managed wird der Client auf `AnthropicGoogleCloud` statt `AnthropicVertex` umgestellt.",
+  "bereich": "api",
+  "datum": "2026-10-22",
+  "wichtig": false,
+  "ereignis": { "art": "neu", "titel": "Claude Models on Google Cloud (Anthropic managed)" }
+}
