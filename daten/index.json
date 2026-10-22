@@ -1,8 +1,21 @@
 {
  "version": 1,
- "erzeugt": "2026-10-22T04:52:01.543Z",
- "anzahl": 82,
+ "erzeugt": "2026-10-22T21:39:31.082Z",
+ "anzahl": 84,
  "beitraege": [
+  {
+   "id": "agent-skills-an-aaif-gespendet",
+   "quelle": "anthropic",
+   "url": "https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation",
+   "titel_original": "Donating Agent Skills to the Agentic AI Foundation",
+   "titel_de": "Agent Skills gehen an die Agentic AI Foundation",
+   "kurz_de": "Anthropic spendet den offenen Standard Agent Skills an die Agentic AI Foundation (AAIF) unter dem Dach der Linux Foundation. Name, Logo, GitHub-Organisation und die Domain des Standards gehen mit.",
+   "briefing_de": "Anthropic übergibt den offenen Standard an eine neutrale Stiftung:\n- Die AAIF (unter der Linux Foundation) bekommt Name und Logo von Agent Skills, die GitHub-Organisation und die Domain des Standards. Anthropic hat die AAIF letztes Jahr mit Block und OpenAI mitgegründet und ihr auch MCP gespendet.\n- Laut Beitrag haben mehr als 70 Agent-Plattformen den Standard seit der Veröffentlichung im Dezember 2025 eingebaut, darunter ChatGPT, Cursor, GitHub Copilot und VS Code. Bisher wurden 1 Million Skills veröffentlicht und nahezu 280 Millionen installiert.\n- Gepflegt wird der Standard von Ingenieuren von Anthropic, Google, OpenAI und anderen als Einzelpersonen; Lead Maintainers sind David Soria Parra und Mahesh Murag.\n- Vorgeschlagene Roadmap: versionierte Releases, ein formaler Vorschlagsprozess und Sicherheitshinweise für Autoren und Nutzer von Skills.",
+   "arbeitsweise_de": "Skills bleiben offen und lassen sich weiter ohne Mitgliedschaft in der AAIF nutzen oder erweitern. Wer eigene Skills baut, kann auf einen herstellerneutralen Standard setzen.",
+   "bereich": "news",
+   "datum": "2026-10-22",
+   "wichtig": false
+  },
   {
    "id": "claude-code-2-1-308",
    "quelle": "code-changelog",
@@ -14,6 +27,23 @@
    "bereich": "claude-code",
    "datum": "2026-10-22",
    "wichtig": false
+  },
+  {
+   "id": "claude-models-on-google-cloud-anthropic-managed",
+   "quelle": "platform-release-notes",
+   "url": "https://platform.claude.com/docs/en/build-with-claude/claude-models-on-google-cloud/anthropic-managed",
+   "titel_original": "Claude Models on Google Cloud (Anthropic managed)",
+   "titel_de": "Claude auf Google Cloud, von Anthropic betrieben",
+   "kurz_de": "Neu: Claude Models on Google Cloud (Anthropic managed) – die Claude API, von Anthropic betrieben und über dein Google-Cloud-Projekt erreichbar. Zugriff per Google Cloud IAM, Abrechnung über den Marketplace.",
+   "briefing_de": "Es gibt jetzt zwei Wege, Claude über Google Cloud zu nutzen:\n- Anthropic managed (neu): Anthropic betreibt die Claude API, Zugriff steuert Google Cloud IAM (Rollen `roles/claude.viewer`, `roles/claude.user`, `roles/claude.admin`), Abrechnung läuft über Google Cloud Marketplace. Anfragen gehen an Claude-API-Endpunkte (`/v1/{endpoint}`) mit `anthropic-version`-Header; Einrichtung legt eine neue Anthropic-Organisation für das Projekt an.\n- Google managed: Google betreibt Claude als Teil seiner Agent Platform, mit eigenen Prediction-Endpunkten und Abrechnung als Agent-Platform-Nutzung.\n- Fast mode ist für Claude Opus 5.5 auf Claude Models on Google Cloud (Anthropic managed) verfügbar.\n- Die Seite zu den Modell-Abschaltungen nennt diese Plattform jetzt unter den von Anthropic betriebenen Plattformen, für die ihre Daten gelten; bei Google managed gelten eigene Abschaltpläne. Neue Abschaltdaten gibt es dort dadurch nicht.",
+   "arbeitsweise_de": "Wer Claude über Google Cloud nutzt, sollte prüfen, welches der beiden Angebote er verwendet: Die Übersichtsseite erklärt den Unterschied. Beim Wechsel zu Anthropic managed wird der Client auf `AnthropicGoogleCloud` statt `AnthropicVertex` umgestellt.",
+   "bereich": "api",
+   "datum": "2026-10-22",
+   "wichtig": false,
+   "ereignis": {
+    "art": "neu",
+    "titel": "Claude Models on Google Cloud (Anthropic managed)"
+   }
   },
   {
    "id": "api-version-2026-10-21",
@@ -1395,6 +1425,13 @@
    "url": "https://platform.claude.com/docs/en/api/migration-2026-10-21"
   },
   {
+   "datum": "2026-10-22",
+   "art": "neu",
+   "titel": "Claude Models on Google Cloud (Anthropic managed)",
+   "beitrag": "claude-models-on-google-cloud-anthropic-managed",
+   "url": "https://platform.claude.com/docs/en/build-with-claude/claude-models-on-google-cloud/anthropic-managed"
+  },
+  {
    "datum": "2026-11-30",
    "art": "ende",
    "titel": "Abschaltung von Sonnet 4.5",
@@ -1739,7 +1776,7 @@
    "titel_de": "API und Plattform",
    "kurz_de": "Wie Programme Claude einbauen: Schnittstellen, Werkzeuge, Grenzen.",
    "einleitung_de": "Über die Claude-API (eine Schnittstelle, über die Programme mit Claude sprechen) bauen Entwickler Claude in eigene Anwendungen ein. Dafür gibt es zwei Wege: die Messages-API für volle Kontrolle und Claude Managed Agents für lange Aufgaben, die Anthropic betreibt.",
-   "stand": "2026-10-21",
+   "stand": "2026-10-22",
    "grafik": {
     "art": "schritte",
     "titel_de": "Der Weg für neue Entwickler",
@@ -1839,6 +1876,10 @@
      "text_de": "Jede Organisation bekommt automatisch eine Nutzungsstufe mit Grenzen für Anfragen und Token je Minute und für die monatlichen Ausgaben; mit der Zeit kann sie aufsteigen. Eine einzelne Anfrage darf bei Messages höchstens 32 MB groß sein, bei Batches 256 MB, bei Files 500 MB.",
      "punkte_de": [
       "Claude gibt es direkt bei Anthropic und über die Cloud-Angebote von Amazon (Bedrock), Google und Microsoft (Foundry) sowie die Claude Platform on AWS.",
+      {
+       "text_de": "Neu auf Google Cloud: Claude Models on Google Cloud (Anthropic managed) – die Claude API, von Anthropic betrieben und über dein Google-Cloud-Projekt erreichbar; Zugriff über Google Cloud IAM, Abrechnung über den Google Cloud Marketplace. Daneben gibt es weiter die Variante „Google managed“, die Google betreibt.",
+       "quelle": "https://platform.claude.com/docs/en/build-with-claude/claude-models-on-google-cloud/overview"
+      },
       "Die offiziellen SDKs übernehmen Anmeldung, Wiederholungen bei Fehlern und Streaming (die Antwort kommt Stück für Stück, während sie entsteht)."
      ],
      "quelle": "https://platform.claude.com/docs/en/api/overview"
@@ -1847,7 +1888,8 @@
    "gesehen": [
     "opentelemetry-export-beta",
     "managed-agents-dynamische-workflows",
-    "api-version-2026-10-21"
+    "api-version-2026-10-21",
+    "claude-models-on-google-cloud-anthropic-managed"
    ]
   },
   {
