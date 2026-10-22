@@ -1,0 +1,12 @@
+{
+  "id": "claude-code-2-1-308",
+  "quelle": "code-changelog",
+  "url": "https://code.claude.com/docs/en/changelog",
+  "titel_original": "Claude Code 2.1.308",
+  "titel_de": "Claude Code 2.1.308: Fehlerbehebungen",
+  "kurz_de": "Fassung 2.1.308 bringt laut Changelog nur Fehlerbehebungen und Verbesserungen der Zuverlässigkeit.",
+  "briefing_de": "Neu in Fassung 2.1.308:\n- Fehlerbehebungen und Verbesserungen der Zuverlässigkeit.",
+  "bereich": "claude-code",
+  "datum": "2026-10-22",
+  "wichtig": false
+}

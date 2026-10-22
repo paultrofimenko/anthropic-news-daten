@@ -1,0 +1,13 @@
+{
+  "id": "claude-code-2-1-307",
+  "quelle": "code-changelog",
+  "url": "https://code.claude.com/docs/en/changelog",
+  "titel_original": "Claude Code 2.1.307",
+  "titel_de": "Claude Code 2.1.307: API-Version 2026-10-21, Safety-Event und viele Fixes",
+  "kurz_de": "Fassung 2.1.307 bringt /claude-api api-version für die API-Version 2026-10-21, das OpenTelemetry-Event claude_code.safety_event und viele Fixes, u. a. zu MCP-Servern.",
+  "briefing_de": "Neu in Fassung 2.1.307:\n- /claude-api api-version stellt Claude-API-Code auf die API-Version 2026-10-21 um.\n- Neues OpenTelemetry-Event claude_code.safety_event für jeden Tool-Aufruf, den eine Berechtigungsregel, der Auto-Modus, eine Sicherheitsprüfung, ein Hook oder die Sandbox gestoppt, abgefragt oder zurückgegeben hat.\n- Fixes bei MCP-Servern: Anmeldehinweis bei gesperrtem macOS-Schlüsselbund, Zeitüberschreitungen nach dem Ruhezustand, HTTP-Tool-Aufrufe werden bei Verbindungsabbruch nur noch bei schreibgeschützten oder idempotenten Tools wiederholt.\n- Fix: Modell-nicht-gefunden-Fehler bei gesetztem CLAUDE_CODE_DISABLE_1M_CONTEXT und Aliassen mit [1m], etwa opus[1m].\n- Außerdem: unlesbare Tool-Aufrufe werden bis zu zweimal wiederholt, bevor der Zug mit Fehler endet; Code Review versteht @claude review stop.",
+  "arbeitsweise_de": "Wer Claude-API-Code pflegt, kann ihn mit /claude-api api-version auf die API-Version 2026-10-21 umstellen lassen. Wer Claude Code mit OpenTelemetry überwacht, kann gestoppte oder abgefragte Tool-Aufrufe jetzt über claude_code.safety_event auswerten.",
+  "bereich": "claude-code",
+  "datum": "2026-10-21",
+  "wichtig": false
+}
