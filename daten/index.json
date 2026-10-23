@@ -1,7 +1,7 @@
 {
  "version": 1,
- "erzeugt": "2026-10-23T17:11:39.168Z",
- "anzahl": 89,
+ "erzeugt": "2026-10-23T21:27:09.446Z",
+ "anzahl": 90,
  "beitraege": [
   {
    "id": "alignment-assessment-ukaisi",
@@ -219,6 +219,19 @@
    "kurz_de": "Mit Citrini Research ließ Anthropic Claude Binder gegen fünf Skorpion-Neurotoxine entwerfen. Von 211 getesteten Designs erfüllten 17 die Bindungskriterien – ein Gegenmittel ist das noch nicht.",
    "briefing_de": "Anthropic und Citrini Research testeten, ob Claude bei einem realen Gesundheitsproblem helfen kann: Skorpionstiche treffen mindestens 1,2 Millionen Menschen im Jahr, mehr als 3.250 sterben.\n- Ein Forschungsmodell in Claude Science lief 64 Stunden weitgehend selbstständig und zielte auf fünf Neurotoxine (Cn2, Ts1, AaH I, AaH II, LqhIII).\n- Es entstanden 318.484 Designs mit 12 Tools; 211 gingen ins Labor (Adaptyv Bio, Twist Bioscience).\n- 17 Designs erfüllten die Kriterien (Treffer in beiden Labs, KD höchstens 1 µM, kein Signal gegen CLEC12A), alle gegen nur ein Toxin. Cn2-B1 und Cn2-B2 erreichten einstellige Nanomolar-Werte.\n- Grenzen: nur rekombinante Toxine getestet, keine Neutralisation in Zellen oder Tieren. Anthropic: „we do not claim to have produced an antivenom.“",
    "bereich": "forschung",
+   "datum": "2026-10-20",
+   "wichtig": false
+  },
+  {
+   "id": "claude-tag-api-beta",
+   "quelle": "platform-doku",
+   "url": "https://platform.claude.com/docs/en/manage-claude/claude-tag-api",
+   "titel_original": "Claude Tag API",
+   "titel_de": "Claude Tag API: Slack-Einstellungen per Admin-API steuern",
+   "kurz_de": "Die Claude Tag API ist als Beta für Claude-Enterprise-Organisationen verfügbar: Sie liest und ändert Claude-Tag-Einstellungen für Slack-Kanäle und -Workspaces.",
+   "briefing_de": "Seit dem 20. Oktober 2026 gibt es die Claude Tag API (Beta):\n- Sie liest und ändert Claude-Tag-Einstellungen für Slack-Kanäle und Slack-Workspaces, zeigt, welche Einstellungen in einem Kanal gelten und woher sie kommen, und hängt Access-Bundles an.\n- Nur für Claude-Enterprise-Organisationen, nicht für Claude-Platform-Organisationen (Claude Console). Anfragen brauchen den Beta-Header `experimental-claude-tag-2026-10-21`.\n- Zugriff über einen Admin-API-Key, den der Primary Owner in claude.ai anlegt, mit dem Scope `read:claude_tag` oder `write:claude_tag`.\n- Die Endpunkte liegen unter `/v1/organizations/claude_tag/`. Einstellbar sind `enabled`, `instructions`, `model`, `environment_id` und `guest_policy`.",
+   "arbeitsweise_de": "Betreibst du Claude Tag in einer Enterprise-Organisation, kannst du Kanäle per Freigabe-Workflow aktivieren, die Konfiguration versionieren oder Einstellungen prüfen. Der Admin-API-Key gehört nicht in die Versionsverwaltung.",
+   "bereich": "api",
    "datum": "2026-10-20",
    "wichtig": false
   },
