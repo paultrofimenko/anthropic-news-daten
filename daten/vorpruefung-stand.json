@@ -1623,6 +1623,7 @@
    "platform.claude.com/docs/en/manage-claude/app-attest",
    "platform.claude.com/docs/en/manage-claude/authentication",
    "platform.claude.com/docs/en/manage-claude/claude-code-analytics-api",
+   "platform.claude.com/docs/en/manage-claude/claude-tag-api",
    "platform.claude.com/docs/en/manage-claude/cmek",
    "platform.claude.com/docs/en/manage-claude/cmek-admin-api",
    "platform.claude.com/docs/en/manage-claude/cmek-aws-kms",
@@ -2817,7 +2818,8 @@
     "b6dc5b24ee",
     "a57b5d7fa5",
     "10db948f14",
-    "e6c2154b31"
+    "e6c2154b31",
+    "9af7b855b6"
    ],
    "October 15, 2026": [
     "06f36b26ab",
@@ -2853,9 +2855,6 @@
    ],
    "October 6, 2026": [
     "b423810914"
-   ],
-   "October 5, 2026": [
-    "11c275e142"
    ]
   },
   "zeilenVersion": 2
