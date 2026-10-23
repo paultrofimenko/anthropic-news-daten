@@ -1,0 +1,13 @@
+{
+  "id": "claude-tag-api-beta",
+  "quelle": "platform-doku",
+  "url": "https://platform.claude.com/docs/en/manage-claude/claude-tag-api",
+  "titel_original": "Claude Tag API",
+  "titel_de": "Claude Tag API: Slack-Einstellungen per Admin-API steuern",
+  "kurz_de": "Die Claude Tag API ist als Beta für Claude-Enterprise-Organisationen verfügbar: Sie liest und ändert Claude-Tag-Einstellungen für Slack-Kanäle und -Workspaces.",
+  "briefing_de": "Seit dem 20. Oktober 2026 gibt es die Claude Tag API (Beta):\n- Sie liest und ändert Claude-Tag-Einstellungen für Slack-Kanäle und Slack-Workspaces, zeigt, welche Einstellungen in einem Kanal gelten und woher sie kommen, und hängt Access-Bundles an.\n- Nur für Claude-Enterprise-Organisationen, nicht für Claude-Platform-Organisationen (Claude Console). Anfragen brauchen den Beta-Header `experimental-claude-tag-2026-10-21`.\n- Zugriff über einen Admin-API-Key, den der Primary Owner in claude.ai anlegt, mit dem Scope `read:claude_tag` oder `write:claude_tag`.\n- Die Endpunkte liegen unter `/v1/organizations/claude_tag/`. Einstellbar sind `enabled`, `instructions`, `model`, `environment_id` und `guest_policy`.",
+  "arbeitsweise_de": "Betreibst du Claude Tag in einer Enterprise-Organisation, kannst du Kanäle per Freigabe-Workflow aktivieren, die Konfiguration versionieren oder Einstellungen prüfen. Der Admin-API-Key gehört nicht in die Versionsverwaltung.",
+  "bereich": "api",
+  "datum": "2026-10-20",
+  "wichtig": false
+}
