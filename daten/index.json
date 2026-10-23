@@ -1,7 +1,7 @@
 {
  "version": 1,
- "erzeugt": "2026-10-23T04:54:46.881Z",
- "anzahl": 87,
+ "erzeugt": "2026-10-23T11:43:11.873Z",
+ "anzahl": 88,
  "beitraege": [
   {
    "id": "claude-code-2-1-309",
@@ -13,6 +13,19 @@
    "briefing_de": "Neu in Fassung 2.1.309:\n- Sandbox und Berechtigungen: Startdateien der Shell liefen nicht mehr außerhalb der Sandbox, `denyWrite`-Muster greifen auch über Symlinks, und mehrere Bash-Rechteprüfungen (zusammengesetzte Befehle mit `cd`, `Edit(path)`-Deny-Regeln) wurden verschärft.\n- `claude ultrareview` verlangt Workspace-Vertrauen: im Terminal fragt es nach, in Skripten gibst du `--trust-workspace` an oder setzt `CLAUDE_CODE_DISABLE_ULTRAREVIEW_TRUST_CHECK=1`.\n- `sed -i` bekommt die normale Bash-Abfrage und läuft wie geschrieben, ohne simulierte Vorschau; es wird nicht mehr von `/rewind` zurückgesetzt.\n- Im Bypass-Modus in Desktop-App und VS Code lehnt Claude Code gefährliche `rm`/`rmdir`-Befehle sofort mit Umschreibhinweis ab.\n- Der Skill /claude-api baut Managed-Agents-Teams jetzt auf `multiagent_20261001` mit dynamischen Workflows statt `coordinator`.",
    "arbeitsweise_de": "Läuft `claude ultrareview` in Skripten oder CI, ergänze `--trust-workspace`, sonst bricht es ab. Verlässt du dich auf die Vorschau von `sed -i`, rechne damit, dass es jetzt direkt ausgeführt wird.",
    "bereich": "claude-code",
+   "datum": "2026-10-23",
+   "wichtig": false
+  },
+  {
+   "id": "cmek-doku-sammlung",
+   "quelle": "platform-doku",
+   "url": "https://platform.claude.com/docs/en/manage-claude/cmek-how-it-works",
+   "titel_original": "8 new CMEK pages in the Claude Platform docs",
+   "titel_de": "CMEK-Doku ausgebaut: Funktionsweise, Abdeckung, Schlüssel-Lebenszyklus",
+   "kurz_de": "Acht neue Doku-Seiten zu kundenverwalteten Schlüsseln (CMEK): wie sie funktionieren, was sie auf Claude Platform und Enterprise abdecken, Datenspeicherung/ZDR, Schlüssel-Lebenszyklus und Fehlersuche.",
+   "briefing_de": "Neu in der Plattform-Doku:\n- „How CMEK works“: Dein Schlüssel verpackt (wrapt) die Datenschlüssel, mit denen Anthropic gespeicherte Daten verschlüsselt; er verlässt dein KMS nie. Er schützt nur Daten, die nach Wirksamwerden geschrieben werden; bestehende Daten bleiben unter Anthropics Schlüssel. Auf Claude Platform schützt ein Schlüssel einen Workspace, auf Claude Enterprise die ganze Organisation.\n- „CMEK, data retention, and ZDR“: Auf Claude Platform können CMEK und ZDR nicht in einem Workspace zusammen laufen; ein Schlüssel geht nur an einen Workspace mit Standard-Datenspeicherung (30 Tage), danach lässt sich die Speicherung nicht mehr abschalten. Auf Claude Enterprise sind CMEK und ZDR kombinierbar, dann aber ohne Artifacts.\n- Zwei Abdeckungs-Seiten (Claude Platform, Claude Enterprise) listen, was mit deinem Schlüssel verschlüsselt wird und was abgeschaltet oder verändert ist, z. B. Playground in der Console und Structured Outputs mit Claude Fable oder Claude Mythos auf Claude Platform.\n- Außerdem neu: Schlüssel-Lebenszyklus (Rotieren, Deaktivieren, Löschen), Fehlersuche (z. B. Fehler cmek_key_disabled und cmek_key_network_blocked), Einrichtung per Admin API und die AWS-KMS-Bedingung, die einen Schlüssel auf bestimmte Workspaces begrenzt.",
+   "arbeitsweise_de": "Wer CMEK einführen will, sollte vorher die Abdeckungsseite des eigenen Produkts durchgehen: Der Schlüssel gilt nur für neue Daten, und einige Funktionen sind dann abgeschaltet oder verändert.",
+   "bereich": "unternehmen",
    "datum": "2026-10-23",
    "wichtig": false
   },
