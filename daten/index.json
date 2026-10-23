@@ -1,8 +1,21 @@
 {
  "version": 1,
- "erzeugt": "2026-10-22T21:39:31.082Z",
- "anzahl": 84,
+ "erzeugt": "2026-10-23T04:54:46.881Z",
+ "anzahl": 87,
  "beitraege": [
+  {
+   "id": "claude-code-2-1-309",
+   "quelle": "code-changelog",
+   "url": "https://code.claude.com/docs/en/changelog",
+   "titel_original": "Claude Code 2.1.309",
+   "titel_de": "Claude Code 2.1.309: Sandbox- und Rechte-Korrekturen",
+   "kurz_de": "Fassung 2.1.309 behebt viele Sandbox-, Berechtigungs- und Worktree-Fehler; `claude ultrareview` verlangt jetzt Workspace-Vertrauen.",
+   "briefing_de": "Neu in Fassung 2.1.309:\n- Sandbox und Berechtigungen: Startdateien der Shell liefen nicht mehr außerhalb der Sandbox, `denyWrite`-Muster greifen auch über Symlinks, und mehrere Bash-Rechteprüfungen (zusammengesetzte Befehle mit `cd`, `Edit(path)`-Deny-Regeln) wurden verschärft.\n- `claude ultrareview` verlangt Workspace-Vertrauen: im Terminal fragt es nach, in Skripten gibst du `--trust-workspace` an oder setzt `CLAUDE_CODE_DISABLE_ULTRAREVIEW_TRUST_CHECK=1`.\n- `sed -i` bekommt die normale Bash-Abfrage und läuft wie geschrieben, ohne simulierte Vorschau; es wird nicht mehr von `/rewind` zurückgesetzt.\n- Im Bypass-Modus in Desktop-App und VS Code lehnt Claude Code gefährliche `rm`/`rmdir`-Befehle sofort mit Umschreibhinweis ab.\n- Der Skill /claude-api baut Managed-Agents-Teams jetzt auf `multiagent_20261001` mit dynamischen Workflows statt `coordinator`.",
+   "arbeitsweise_de": "Läuft `claude ultrareview` in Skripten oder CI, ergänze `--trust-workspace`, sonst bricht es ab. Verlässt du dich auf die Vorschau von `sed -i`, rechne damit, dass es jetzt direkt ausgeführt wird.",
+   "bereich": "claude-code",
+   "datum": "2026-10-23",
+   "wichtig": false
+  },
   {
    "id": "agent-skills-an-aaif-gespendet",
    "quelle": "anthropic",
@@ -44,6 +57,31 @@
     "art": "neu",
     "titel": "Claude Models on Google Cloud (Anthropic managed)"
    }
+  },
+  {
+   "id": "formal-verification-mit-claude",
+   "quelle": "anthropic",
+   "url": "https://www.anthropic.com/research/formal-verification",
+   "titel_original": "LLMs are making formal software verification feasible at a much larger scale",
+   "titel_de": "Claude beweist Sicherheitseigenschaften von Open-Source-Bibliotheken",
+   "kurz_de": "Mit Theorem hat Claude für 239 Einstiegspunkte in 123 Open-Source-Bibliotheken Korrektheitsbeweise auf Assembler-Ebene geschrieben und Hunderte Fehler gefunden.",
+   "briefing_de": "Anthropics Frontier Red Team zeigt zusammen mit Theorem, dass LLMs formale Verifikation in großem Maßstab möglich machen:\n- Claude bewies Sicherheitseigenschaften für 239 Einstiegspunkte in 123 Open-Source-Bibliotheken auf RISC-V-Assembler-Ebene; für Eingaben unter 64 MB enden die Programme normal, ohne Speicherfehler oder verletzte Assertions (unter festen Annahmen).\n- Die Beweise umfassen rund 180 Millionen Zeilen Rocq; Claude fand und behob dabei Hunderte Fehler, auch solche, die Fuzzing jahrelang übersehen hatte.\n- Auf 36 kleinen Aufgaben brauchte Opus 5.5 etwa 40 % weniger Tokens als Opus 5, um die Hälfte zu beweisen; geteilte Arbeitsbereiche sparten 17 % Tokens.\n- Grenzen: „formal verifiziert“ heißt nicht „fehlerfrei“; die Beweise gelten für statische, single-threaded RISC-V-Binaries mit musl libc.\n- Veröffentlicht: ein Teil der Beweise, die Semantik und ein Claude-Skill, um Projekte hinzuzufügen.",
+   "arbeitsweise_de": "Wer Bibliotheken pflegt, kann die veröffentlichten Beweise und den Claude-Skill ansehen, um Verifikation auf eigene Projekte mit bestehenden Fuzz-Tests anzuwenden.",
+   "bereich": "forschung",
+   "datum": "2026-10-22",
+   "wichtig": false
+  },
+  {
+   "id": "guest-investigators-life-sciences",
+   "quelle": "anthropic",
+   "url": "https://www.anthropic.com/news/open-call-guest-investigators-life-sciences",
+   "titel_original": "Open call for guest investigators in the life sciences",
+   "titel_de": "Offener Aufruf: Gastforschende in den Lebenswissenschaften",
+   "kurz_de": "Anthropic lädt Forschende aus den Lebenswissenschaften ein, sich für 8–12-wöchige Projekte mit Claude und Anthropic-Forschenden zu bewerben – kostenlos.",
+   "briefing_de": "Anthropic sucht Gastforschende für Projekte in den Lebenswissenschaften:\n- Ausgewählte Teams arbeiten 8–12 Wochen direkt mit Anthropic-Forschenden und erhalten Analysen, Artefakte und Werkzeuge; Anthropic betreibt Modelle und Harnesses ohne Kosten.\n- Gesucht: Projekte zu kausaler Humanbiologie, struktureller und computergestützter Molekularbiologie, Medizinalchemie, Wirkstoffforschung und klinischer Forschung – für Leitende und Gruppen an Hochschulen, gemeinnützigen Einrichtungen oder staatlichen Labors.\n- Ergebnisse werden veröffentlicht, Daten und Code als Open Source; die Rechte an den eigenen Daten und an unabhängiger Folgeforschung bleiben bei den Forschenden.\n- Bewerbungsfenster etwa 14 Tage, Rückmeldung etwa 14 Tage nach Ende per E-Mail; ein festes Enddatum nennt die Seite nicht.",
+   "bereich": "forschung",
+   "datum": "2026-10-22",
+   "wichtig": false
   },
   {
    "id": "api-version-2026-10-21",
