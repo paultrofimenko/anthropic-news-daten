@@ -1,0 +1,13 @@
+{
+  "id": "claude-code-2-1-309",
+  "quelle": "code-changelog",
+  "url": "https://code.claude.com/docs/en/changelog",
+  "titel_original": "Claude Code 2.1.309",
+  "titel_de": "Claude Code 2.1.309: Sandbox- und Rechte-Korrekturen",
+  "kurz_de": "Fassung 2.1.309 behebt viele Sandbox-, Berechtigungs- und Worktree-Fehler; `claude ultrareview` verlangt jetzt Workspace-Vertrauen.",
+  "briefing_de": "Neu in Fassung 2.1.309:\n- Sandbox und Berechtigungen: Startdateien der Shell liefen nicht mehr außerhalb der Sandbox, `denyWrite`-Muster greifen auch über Symlinks, und mehrere Bash-Rechteprüfungen (zusammengesetzte Befehle mit `cd`, `Edit(path)`-Deny-Regeln) wurden verschärft.\n- `claude ultrareview` verlangt Workspace-Vertrauen: im Terminal fragt es nach, in Skripten gibst du `--trust-workspace` an oder setzt `CLAUDE_CODE_DISABLE_ULTRAREVIEW_TRUST_CHECK=1`.\n- `sed -i` bekommt die normale Bash-Abfrage und läuft wie geschrieben, ohne simulierte Vorschau; es wird nicht mehr von `/rewind` zurückgesetzt.\n- Im Bypass-Modus in Desktop-App und VS Code lehnt Claude Code gefährliche `rm`/`rmdir`-Befehle sofort mit Umschreibhinweis ab.\n- Der Skill /claude-api baut Managed-Agents-Teams jetzt auf `multiagent_20261001` mit dynamischen Workflows statt `coordinator`.",
+  "arbeitsweise_de": "Läuft `claude ultrareview` in Skripten oder CI, ergänze `--trust-workspace`, sonst bricht es ab. Verlässt du dich auf die Vorschau von `sed -i`, rechne damit, dass es jetzt direkt ausgeführt wird.",
+  "bereich": "claude-code",
+  "datum": "2026-10-23",
+  "wichtig": false
+}

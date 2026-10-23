@@ -1,0 +1,13 @@
+{
+  "id": "formal-verification-mit-claude",
+  "quelle": "anthropic",
+  "url": "https://www.anthropic.com/research/formal-verification",
+  "titel_original": "LLMs are making formal software verification feasible at a much larger scale",
+  "titel_de": "Claude beweist Sicherheitseigenschaften von Open-Source-Bibliotheken",
+  "kurz_de": "Mit Theorem hat Claude für 239 Einstiegspunkte in 123 Open-Source-Bibliotheken Korrektheitsbeweise auf Assembler-Ebene geschrieben und Hunderte Fehler gefunden.",
+  "briefing_de": "Anthropics Frontier Red Team zeigt zusammen mit Theorem, dass LLMs formale Verifikation in großem Maßstab möglich machen:\n- Claude bewies Sicherheitseigenschaften für 239 Einstiegspunkte in 123 Open-Source-Bibliotheken auf RISC-V-Assembler-Ebene; für Eingaben unter 64 MB enden die Programme normal, ohne Speicherfehler oder verletzte Assertions (unter festen Annahmen).\n- Die Beweise umfassen rund 180 Millionen Zeilen Rocq; Claude fand und behob dabei Hunderte Fehler, auch solche, die Fuzzing jahrelang übersehen hatte.\n- Auf 36 kleinen Aufgaben brauchte Opus 5.5 etwa 40 % weniger Tokens als Opus 5, um die Hälfte zu beweisen; geteilte Arbeitsbereiche sparten 17 % Tokens.\n- Grenzen: „formal verifiziert“ heißt nicht „fehlerfrei“; die Beweise gelten für statische, single-threaded RISC-V-Binaries mit musl libc.\n- Veröffentlicht: ein Teil der Beweise, die Semantik und ein Claude-Skill, um Projekte hinzuzufügen.",
+  "arbeitsweise_de": "Wer Bibliotheken pflegt, kann die veröffentlichten Beweise und den Claude-Skill ansehen, um Verifikation auf eigene Projekte mit bestehenden Fuzz-Tests anzuwenden.",
+  "bereich": "forschung",
+  "datum": "2026-10-22",
+  "wichtig": false
+}
