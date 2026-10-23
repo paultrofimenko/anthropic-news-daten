@@ -1624,10 +1624,18 @@
    "platform.claude.com/docs/en/manage-claude/authentication",
    "platform.claude.com/docs/en/manage-claude/claude-code-analytics-api",
    "platform.claude.com/docs/en/manage-claude/cmek",
+   "platform.claude.com/docs/en/manage-claude/cmek-admin-api",
    "platform.claude.com/docs/en/manage-claude/cmek-aws-kms",
+   "platform.claude.com/docs/en/manage-claude/cmek-aws-kms-workspaces",
    "platform.claude.com/docs/en/manage-claude/cmek-azure-key-vault",
    "platform.claude.com/docs/en/manage-claude/cmek-claude-platform-on-aws",
+   "platform.claude.com/docs/en/manage-claude/cmek-coverage-claude-enterprise",
+   "platform.claude.com/docs/en/manage-claude/cmek-coverage-claude-platform",
+   "platform.claude.com/docs/en/manage-claude/cmek-data-retention",
    "platform.claude.com/docs/en/manage-claude/cmek-google-cloud-kms",
+   "platform.claude.com/docs/en/manage-claude/cmek-how-it-works",
+   "platform.claude.com/docs/en/manage-claude/cmek-key-lifecycle",
+   "platform.claude.com/docs/en/manage-claude/cmek-troubleshooting",
    "platform.claude.com/docs/en/manage-claude/compliance-activity-feed",
    "platform.claude.com/docs/en/manage-claude/compliance-api",
    "platform.claude.com/docs/en/manage-claude/compliance-api-access",
@@ -2807,7 +2815,8 @@
     "679c1304dc",
     "b6dc5b24ee",
     "a57b5d7fa5",
-    "10db948f14"
+    "10db948f14",
+    "e6c2154b31"
    ],
    "October 15, 2026": [
     "06f36b26ab",
