@@ -1,0 +1,13 @@
+{
+  "id": "claude-code-2-1-310",
+  "quelle": "code-changelog",
+  "url": "https://code.claude.com/docs/en/changelog",
+  "titel_original": "Claude Code 2.1.310",
+  "titel_de": "Claude Code 2.1.310: Monitor-Tool auch auf Bedrock, Vertex und Foundry",
+  "kurz_de": "Claude Code 2.1.310 bringt das Monitor-Tool und Plugin-Monitore auf Bedrock, Vertex und Foundry, dazu Korrekturen bei Gateways, Kompaktierung und Aufräumen alter Dateien.",
+  "briefing_de": "Das Monitor-Tool und Plugin-Monitore laufen jetzt auch auf Bedrock, Vertex und Foundry sowie bei abgeschalteter Telemetrie oder nicht notwendigem Datenverkehr; lange Vordergrund-Sleeps werden dort ebenfalls blockiert.\n- Anfragen scheitern nicht mehr hinter Gateways, die den Beta-Wert `effort-2025-11-24` oder Systemnachrichten mitten im Gespräch ablehnen: Claude Code versucht es ohne sie erneut.\n- Das Aufräumen im Hintergrund löscht bei sehr großem `cleanupPeriodDays` keine neuen Dateien mehr, etwa eingefügte Bilder.\n- Die Kompaktierung nach „Prompt is too long“ behält bei dichtem Text wie base64 oder SVG nicht mehr zu viel Gespräch.\n- Cloud-Sessions und Remote Control lassen sich jetzt in Enterprise-Rollen pro Rolle freigeben.",
+  "arbeitsweise_de": "Wer Claude Code hinter einem Gateway oder auf Bedrock, Vertex oder Foundry nutzt, kann das Monitor-Tool jetzt dort einsetzen.",
+  "bereich": "claude-code",
+  "datum": "2026-10-24",
+  "wichtig": false
+}
