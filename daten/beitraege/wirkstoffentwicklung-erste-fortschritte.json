@@ -1,0 +1,12 @@
+{
+  "id": "wirkstoffentwicklung-erste-fortschritte",
+  "quelle": "anthropic",
+  "url": "https://www.anthropic.com/research/early-progress-drug-development",
+  "titel_original": "Early progress on accelerating drug development with Claude",
+  "titel_de": "Erste Fortschritte bei der Wirkstoffentwicklung mit Claude",
+  "kurz_de": "Anthropic berichtet über Forschungspartnerschaften mit sechs Organisationen der Medikamentenentwicklung und eigene Programme, darunter die übernommene Mithril Medicine.",
+  "briefing_de": "Das Life-Sciences-Team arbeitet seit einigen Monaten mit BigHat Biosciences, Bristol Myers Squibb, Divergence Labs, Enveda, Generate Biomedicines und The Column Group zusammen.\n- Generate: Ein mit Claude Code entworfenes Design war etwa 70 % kürzer als die Standardversion und in Labortests wirksamer.\n- Divergence Labs: Claude erzeugte rund 35.000 Antikörper-Designs in etwa einem Monat; 3 binden IgE, 20 lösen es ab.\n- BigHat: Rund 1.010 Varianten in etwa 10 Wochen; die besten banden mehr als 10x fester.\n- Enveda: Die Prüfzeit für Herstellungsdokumente sank um 89 % (von über 25 auf unter 3 Stunden); ein Entwurf eines Zulassungsdokuments dauerte vier Stunden statt etwa drei Monate.\n- Anthropic hat Mithril Medicine übernommen (Muskeldystrophie); klinische Studien könnten frühestens Ende 2028 beginnen. Das meiste ist noch präklinisch.",
+  "bereich": "forschung",
+  "datum": "2026-10-27",
+  "wichtig": false
+}

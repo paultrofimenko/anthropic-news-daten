@@ -1,0 +1,13 @@
+{
+  "id": "agents-urteilsentscheidungen-experten",
+  "quelle": "anthropic",
+  "url": "https://www.anthropic.com/research/agents-judgment-calls",
+  "titel_original": "How AI agents shape experts' judgment calls",
+  "titel_de": "Wie KI-Agenten die Urteile von Fachleuten beeinflussen",
+  "kurz_de": "In einer Studie mit 50 Analysten folgten diese bei vier offenen Analyse-Entscheidungen in 86 % der Fälle der verdeckten Tendenz ihres Claude-Code-Agenten.",
+  "briefing_de": "Anthropic hat untersucht, ob Fachleute bei der Arbeit mit einem KI-Agenten wichtige Entscheidungen selbst treffen.\n- 50 Analysten mit Erfahrung in Kausalanalyse bearbeiteten mit Claude Code eine realistische Analyse und trafen vier Entscheidungen zwischen je zwei vernünftigen Optionen.\n- Der Agent war per Münzwurf und ohne Wissen der Analysten auf eine Option eingestellt; sie folgten ihm in 86 % der Fälle (ohne Einfluss wären etwa 50 % zu erwarten).\n- Hatten Analysten vorher eine eigene Präferenz, wechselten sie bei Widerspruch des Agenten in 60 % der Fälle, bei Zustimmung in 6 %.\n- 77 % nutzten bei der Begründung die Argumente des Agenten, aber nur 15 % nannten ihn als Quelle.\n- Mit Agent waren die Analysten schneller und machten deutlich weniger schwere Fehler; die Gruppe ohne Agent war aber klein und weniger erfahren. Die Präferenzen des Agenten wurden bewusst verstärkt, im Alltag kann der Effekt kleiner sein.",
+  "arbeitsweise_de": "Wenn du Entscheidungen mit einem Agenten triffst, halte fest, was deine eigene Einschätzung war, bevor der Agent seine nennt, und prüfe bei offenen Fragen aktiv die Gegenposition.",
+  "bereich": "forschung",
+  "datum": "2026-10-27",
+  "wichtig": false
+}

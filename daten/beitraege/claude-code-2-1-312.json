@@ -1,0 +1,13 @@
+{
+  "id": "claude-code-2-1-312",
+  "quelle": "code-changelog",
+  "url": "https://code.claude.com/docs/en/changelog",
+  "titel_original": "Claude Code 2.1.312",
+  "titel_de": "Claude Code 2.1.312: Gateway-Claim, Klick zum Senden und viele Korrekturen",
+  "kurz_de": "Claude Code 2.1.312 bringt `oidc.user_id_claim` fürs Claude-Apps-Gateway und Klick zum Senden bei wartenden Nachrichten, dazu viele Korrekturen.",
+  "briefing_de": "Claude Code 2.1.312 ist vor allem ein Korrektur-Release.\n- Neu: `oidc.user_id_claim` für das Claude-Apps-Gateway, um Personen über einen anderen id_token-Claim als `sub` zu erkennen, etwa `oid` bei Microsoft Entra ID.\n- Neu: Im Vollbild sendet ein Klick auf den Hinweis „to send now“ unter einer wartenden Nachricht diese sofort.\n- Behoben: Write überschrieb sehr große CLAUDE.md-, Regel- oder @-eingebundene Dateien nach nur teilweisem Lesen; jetzt wird zum vollständigen Lesen oder Bearbeiten aufgefordert. Außerdem werden Skills nach einem `cd` in Unterverzeichnisse gefunden.\n- Geändert: Prompt- und Agent-Hooks laufen höchstens 24 gleichzeitig pro Session; Nutzungslimit-Meldungen sprechen vom „5-hour limit“; `claude_code.safety_event` wird nicht mehr gesendet.\n- Dazu Verbesserungen für Cloud-Sessions, Routinen, VS Code, Claude Tag und Code Review.",
+  "arbeitsweise_de": "Wer Hooks stark parallel einsetzt, beachtet die neue Grenze von 24 gleichzeitigen Prompt- und Agent-Hooks pro Session.",
+  "bereich": "claude-code",
+  "datum": "2026-10-27",
+  "wichtig": false
+}

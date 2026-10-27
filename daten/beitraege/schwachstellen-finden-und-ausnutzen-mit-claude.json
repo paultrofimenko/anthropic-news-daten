@@ -1,0 +1,13 @@
+{
+  "id": "schwachstellen-finden-und-ausnutzen-mit-claude",
+  "quelle": "anthropic",
+  "url": "https://www.anthropic.com/research/discovering-vulnerabilities-with-claude",
+  "titel_original": "Discovering and exploiting vulnerabilities in critical, real-world software with Claude",
+  "titel_de": "Claude findet und nutzt Schwachstellen in Browsern und Betriebssystemen aus",
+  "kurz_de": "Ein unveröffentlichtes internes Forschungsmodell fand kritische Schwachstellen und schrieb daraus Exploit-Ketten für Chrome, Safari, Android, Windows und Linux; die Hersteller wurden informiert.",
+  "briefing_de": "Das Frontier Red Team beschreibt fünf Angriffsketten, die ein unveröffentlichtes internes Forschungsmodell erstellt hat.\n- Chrome: Einmal-Klick-Codeausführung außerhalb der Sandbox; 62 CVEs sind vergeben und seit Chrome 156 behoben, alle kritisch oder hoch.\n- Safari: Umgehung der Same-Origin-Policy; Apple hat einen Fix veröffentlicht. Android: Umgehung der Sperre, Google hat das Problem behoben.\n- Windows: Remote-Denial-of-Service über HTTP/3 (CVE-2026-33096), von Microsoft behoben. Linux: Codeausführung als root ohne Nutzeraktion über einen Multipath-TCP-Listener (CVE-2026-98432), im Kernel behoben.\n- Erkenntnisse: Mehr Rechenaufwand zur Laufzeit und vielfältige Scanner finden deutlich mehr Schwachstellen; zusätzlich empfiehlt Anthropic Scans bei Pull Requests, dafür gibt es ein öffentliches Claude-Code-Plugin.\n- Gemeldet wurde unter koordinierter Offenlegung (90 Tage zum Patchen, danach 45 Tage bis zu weiteren Details). Das erweiterte Cyber Verification Program gibt qualifizierten Sicherheitsfachleuten Zugang zu den leistungsfähigsten Modellen.",
+  "arbeitsweise_de": "Scanne deinen eigenen Code regelmäßig und möglichst schon bei Pull Requests; Anthropic rät Verteidigern, das jetzt zu tun.",
+  "bereich": "forschung",
+  "datum": "2026-10-27",
+  "wichtig": false
+}
