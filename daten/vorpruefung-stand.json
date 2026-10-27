@@ -475,9 +475,51 @@
    "2.1.307",
    "2.1.309",
    "2.1.310",
-   "2.1.311"
+   "2.1.311",
+   "2.1.312"
   ],
   "zeilen": {
+   "2.1.312": [
+    "c2efe953ac",
+    "af830c108f",
+    "eeb4fe614c",
+    "1003bc9800",
+    "ef54b402ff",
+    "ea1cbc0f29",
+    "9806f62586",
+    "d14a0b1f56",
+    "14dd423412",
+    "acae1a4c50",
+    "7bcd6a39cb",
+    "a5a3f7ffd4",
+    "a0f147dc41",
+    "24a80b0c38",
+    "322fd572c2",
+    "86125e82f6",
+    "faedf1ffa6",
+    "d492329e19",
+    "36cacbaddf",
+    "b91f194d63",
+    "17ed9284e4",
+    "a7618f3e7d",
+    "3d897d466d",
+    "326329e989",
+    "22631e8a84",
+    "1dad713c01",
+    "304d0ecef8",
+    "3eaebc0668",
+    "2f8be1df10",
+    "e95f6c4c56",
+    "e9558e1f68",
+    "e77917ffcf",
+    "a5d59223df",
+    "54dae3e863",
+    "44e1734468",
+    "8c1107ed32",
+    "8d97c30d5f",
+    "db713f2774",
+    "044b8098e0"
+   ],
    "2.1.311": [
     "5b5e92b2a5",
     "d8a94d3809",
@@ -853,71 +895,6 @@
    ],
    "2.1.303": [
     "2756c919fa"
-   ],
-   "2.1.302": [
-    "9726a83d7b",
-    "831b345e2c",
-    "59aa9b8325",
-    "31aa236b30",
-    "023fd9b414",
-    "07df52f241",
-    "89779cbb9f",
-    "a8f936f612",
-    "586674009a",
-    "bf857d216e",
-    "513efa735e",
-    "3c84dcf7ee",
-    "5a6cf0bb22",
-    "ab6c6166b5",
-    "1fadaf6dd1",
-    "079050de02",
-    "7266878464",
-    "6aa70204bb",
-    "68e4a18a26",
-    "ed64a9944e",
-    "e06b386984",
-    "24ba5af54b",
-    "d029a09337",
-    "031f6a08ac",
-    "bdcb383b71",
-    "cfc01c4b54",
-    "339755c1ad",
-    "e983ac83f3",
-    "8979a356e2",
-    "139df97d67",
-    "e59b6dcdd5",
-    "bafe479107",
-    "e1c0f53074",
-    "b131763b57",
-    "616c80b02a",
-    "8b733248ae",
-    "27b934305d",
-    "534955fbe8",
-    "f279d48daf",
-    "f4552dd9be",
-    "c3b104169c",
-    "ae0273da69",
-    "59944655fc",
-    "ffba4b1cce",
-    "cb08056927",
-    "4ebf6cdbe9",
-    "be36a73501",
-    "f240a4bbc6",
-    "457d62c0c7",
-    "7e4eb2b15e",
-    "035cce30ae",
-    "7773662119",
-    "02ff015d60",
-    "ffa9ccc6d9",
-    "cbceeae307",
-    "3d9affbb37",
-    "072ad3ace3",
-    "c22997d9ea",
-    "8064feaf54",
-    "92eca7aa11",
-    "c94a34ab8f",
-    "d2db901e24",
-    "604d166c44"
    ]
   },
   "zeilenVersion": 2
@@ -2397,6 +2374,7 @@
    "anthropic.com/research/advanced-tool-use",
    "anthropic.com/research/agentic-misalignment",
    "anthropic.com/research/agents-in-biology",
+   "anthropic.com/research/agents-judgment-calls",
    "anthropic.com/research/ai-assistance-coding-skills",
    "anthropic.com/research/ai-expectations-gap",
    "anthropic.com/research/ai-fluency-index",
@@ -2467,10 +2445,12 @@
    "anthropic.com/research/diff-tool",
    "anthropic.com/research/discovering-cryptographic-weaknesses",
    "anthropic.com/research/discovering-language-model-behaviors-with-model-written-evaluations",
+   "anthropic.com/research/discovering-vulnerabilities-with-claude",
    "anthropic.com/research/disempowerment-patterns",
    "anthropic.com/research/distillation-defenses",
    "anthropic.com/research/distributed-representations-composition-superposition",
    "anthropic.com/research/donating-open-source-petri",
+   "anthropic.com/research/early-progress-drug-development",
    "anthropic.com/research/ecdsa-curve-origins",
    "anthropic.com/research/economic-index-geography",
    "anthropic.com/research/economic-index-june-2026-report",
@@ -2617,10 +2597,10 @@
   ]
  },
  "abschaltungen": {
-  "hash": "c8384fb30e9b3655"
+  "hash": "85f08088df56071d"
  },
  "modelle": {
-  "hash": "6cea0e280cd52f7a"
+  "hash": "34b61d1753bc86e1"
  },
  "platform-release-notes": {
   "schluessel": [
@@ -2789,13 +2769,18 @@
    ],
    "October 22, 2026": [
     "0e8870eda3",
-    "c62d6b1932"
+    "c62d6b1932",
+    "96abe1183d"
    ],
    "October 21, 2026": [
     "ecd68fcaa3",
     "7786d12cdb",
     "0a93cb28c3",
-    "c266068edb"
+    "c266068edb",
+    "b4cb28b4ba",
+    "2ad77f8774",
+    "45bde628e2",
+    "e9597487ed"
    ],
    "October 20, 2026": [
     "4bb3ba8520",
@@ -2805,23 +2790,30 @@
     "a57b5d7fa5",
     "10db948f14",
     "e6c2154b31",
-    "9af7b855b6"
+    "9af7b855b6",
+    "8fdee1656e",
+    "b10c4090fa",
+    "b1bd682027",
+    "b2b8140f4b"
    ],
    "October 15, 2026": [
     "06f36b26ab",
     "736d8b6181",
     "a4b043ada9",
     "b0c1a2f99e",
-    "408f2f5223"
+    "408f2f5223",
+    "3d9581bea9"
    ],
    "October 14, 2026": [
     "d3ab9175a4",
     "4bfd213226",
     "cf51b24d4c",
-    "44678f1f32"
+    "44678f1f32",
+    "ea276c70e2"
    ],
    "October 9, 2026": [
-    "513bb1c6b0"
+    "513bb1c6b0",
+    "12c3c5d7bf"
    ],
    "October 8, 2026": [
     "1a7a2858b6",
@@ -2837,10 +2829,15 @@
     "925700cf5c",
     "5af2746e44",
     "4f3be6038a",
-    "003ffc12bf"
+    "003ffc12bf",
+    "d169979ad5",
+    "0d8cff7831",
+    "942775796d",
+    "fb56d1aed6"
    ],
    "October 6, 2026": [
-    "b423810914"
+    "b423810914",
+    "446b238f45"
    ]
   },
   "zeilenVersion": 2
