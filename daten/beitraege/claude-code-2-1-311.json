@@ -1,0 +1,13 @@
+{
+  "id": "claude-code-2-1-311",
+  "quelle": "code-changelog",
+  "url": "https://code.claude.com/docs/en/changelog",
+  "titel_original": "Claude Code 2.1.311",
+  "titel_de": "Claude Code 2.1.311: Korrekturen bei Subagents, MCP und Kompaktierung",
+  "kurz_de": "Claude Code 2.1.311 behebt viele Fehler, etwa Freezes bei langen CLAUDE.md-Listen, Subagents ohne MCP-Tools und 1M-Kontext-Abbrüche, und bringt neue Self-hosted-Runner-Optionen.",
+  "briefing_de": "Claude Code 2.1.311 ist vor allem ein Fehlerkorrektur-Release.\n- Neu: `--hold-idle-file` und `--max-hold-min` für `self-hosted-runner`, um eine inaktive Session offen zu halten, solange der Host zurückgelassene Prozesse meldet.\n- Standard-Kontext-Sessions brechen nicht mehr mit „Usage credits required for 1M context“ ab, wenn eine Anfrage über 200K Tokens geht: Claude Code kompaktiert und macht weiter.\n- Behoben: lange Freezes bei sehr langen Listeneinträgen in CLAUDE.md, Unterbrechen bei hängenden MCP-Servern, und Subagents ohne MCP-Tools von später verbundenen Servern.\n- Verbessert: Shell-Befehle mit Timeout zeigen die bisherige Ausgabe und laufen im Hintergrund weiter; die Kompaktierung fragt einmal erneut nach einer Zusammenfassung, wenn keine kam.\n- Mehrere Korrekturen zu `/mcp`, `/rewind`, `/ide`, Remote Control und Cloud-Sessions.",
+  "arbeitsweise_de": "Wer Claude Code in selbst betriebenen Runnern einsetzt, kann Sessions mit den neuen Optionen offen halten, solange noch Prozesse laufen.",
+  "bereich": "claude-code",
+  "datum": "2026-10-27",
+  "wichtig": false
+}
