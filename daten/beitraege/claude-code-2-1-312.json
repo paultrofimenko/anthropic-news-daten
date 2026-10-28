@@ -1,0 +1,13 @@
+{
+  "id": "claude-code-2-1-312",
+  "quelle": "code-changelog",
+  "url": "https://code.claude.com/docs/en/changelog",
+  "titel_original": "Claude Code 2.1.312",
+  "titel_de": "Claude Code 2.1.312: Gateway-OIDC, Klick zum Senden und viele Korrekturen",
+  "kurz_de": "Claude Code 2.1.312 bringt `oidc.user_id_claim` fürs Claude-Apps-Gateway, Klick zum Senden in Warteschlangen-Nachrichten und viele Korrekturen, etwa bei Skills, Hooks und Cloud-Sessions.",
+  "briefing_de": "Claude Code 2.1.312 ist überwiegend ein Fehlerkorrektur-Release.\n- Neu: `oidc.user_id_claim` im Claude-Apps-Gateway, um Personen über einen anderen id_token-Claim als `sub` zu erkennen, etwa `oid` bei Microsoft Entra ID.\n- Neu: Im Vollbild sendet ein Klick auf den Hinweis „to send now“ unter einer wartenden Nachricht sie sofort.\n- Behoben: Claude überschrieb sehr große CLAUDE.md-, Regel- oder @-Dateien nach nur teilweisem Lesen; Write verlangt nun, sie ganz zu lesen oder direkt zu bearbeiten. Außerdem werden Skills nach einem Bash-`cd` tiefer ins Repo wieder gefunden.\n- Geändert: Prompt- und Agent-Hooks laufen höchstens 24 gleichzeitig pro Session; Nutzungslimit-Meldungen sagen „5-hour limit“; `claude_code.safety_event` wird nicht mehr gesendet.\n- Dazu Korrekturen und Verbesserungen für Cloud-Sessions, Remote Control, Claude Tag und Code Review.",
+  "arbeitsweise_de": "Wer Bedrock, Vertex, Foundry oder Mantle mit eigenen Deployment-Namen nutzt, bekommt jetzt den kürzeren System-Prompt; `CLAUDE_CODE_SIMPLE_SYSTEM_PROMPT=0` behält den vollen Prompt.",
+  "bereich": "claude-code",
+  "datum": "2026-10-27",
+  "wichtig": false
+}

@@ -1,0 +1,13 @@
+{
+  "id": "schwachstellen-finden-mit-claude",
+  "quelle": "anthropic",
+  "url": "https://www.anthropic.com/research/discovering-vulnerabilities-with-claude",
+  "titel_original": "Discovering and exploiting vulnerabilities in critical, real-world software with Claude",
+  "titel_de": "Claude findet kritische Schwachstellen in Browsern und Betriebssystemen",
+  "kurz_de": "Das Frontier Red Team beschreibt fünf Angriffsketten in Chrome, Safari, Android, Windows und Linux, gefunden mit einem internen Forschungsmodell. Die Lücken wurden gemeldet und sind behoben.",
+  "briefing_de": "Das Frontier Red Team setzte mehrere Monate ein unveröffentlichtes, internes Forschungsmodell auf weit verbreitete Software an.\n- Chrome (macOS): One-Click-RCE; 62 CVEs an Google gemeldet, gepatcht ab Chrome 156.\n- Safari: One-Click-Kette, die die Same-Origin-Policy umgeht; Apple stellte zeitnah einen Fix bereit.\n- Android: Umgehung des Sperrbildschirms auf einem Pixel 9; Google hat das Problem behoben.\n- Windows: Remote-Denial-of-Service über HTTP/3 (CVE-2026-33096). Linux: Zero-Click-RCE über Multipath-TCP (CVE-2026-98432), upstream gepatcht.\n- Anthropic erweiterte das Cyber Verification Program und veröffentlichte das Claude-Code-Plugin „security-guidance“ für das Scannen bei Pull Requests.",
+  "arbeitsweise_de": "Modelle können mehrere Schwachstellen verketten und funktionierende Exploits bauen. Laut Anthropic ist es wichtiger denn je, den eigenen Code zu scannen, etwa schon bei Pull Requests.",
+  "bereich": "forschung",
+  "datum": "2026-10-27",
+  "wichtig": false
+}

@@ -1,0 +1,12 @@
+{
+  "id": "agenten-urteil-von-experten",
+  "quelle": "anthropic",
+  "url": "https://www.anthropic.com/research/agents-judgment-calls",
+  "titel_original": "How AI agents shape experts' judgment calls",
+  "titel_de": "Wie KI-Agenten das Urteil von Experten lenken",
+  "kurz_de": "In einer Studie mit 50 Analysten folgten diese der verdeckten Vorliebe ihres Claude-Agenten bei Analyseentscheidungen in 86 % der Fälle. Anthropic sieht darin ein Risiko für die Eigenständigkeit menschlichen Urteils.",
+  "briefing_de": "Anthropic untersuchte, ob Experten bei Entscheidungen mit mehreren vertretbaren Optionen selbst entscheiden oder dem Agenten folgen.\n- 50 Analysten bearbeiteten mit Claude Opus 4.8 in Claude Code eine fiktive Beratungsaufgabe mit vier offenen Analyseentscheidungen; welche Option der Agent bevorzugte, wurde per Münzwurf festgelegt.\n- Die Analysten folgten dieser Vorliebe in 86 % der Fälle; wer widersprach, wechselte in 60 % der Fälle die Meinung (bei Zustimmung 6 %).\n- 77 % übernahmen Argumente des Agenten, nur 15 % nannten ihn als Quelle.\n- Einschränkungen laut Seite: eine Aufgabe, ein Feld, ein Modell, bewusst verstärkte Vorliebe.\n- Anthropic sieht das nicht als Argument gegen KI-Nutzung, sondern für eine bewusste Aufteilung der Entscheidungen zwischen Mensch und KI.",
+  "bereich": "forschung",
+  "datum": "2026-10-27",
+  "wichtig": false
+}

@@ -1,0 +1,12 @@
+{
+  "id": "wirkstoffentwicklung-mit-claude-fortschritte",
+  "quelle": "anthropic",
+  "url": "https://www.anthropic.com/research/early-progress-drug-development",
+  "titel_original": "Early progress on accelerating drug development with Claude",
+  "titel_de": "Erste Fortschritte bei der Wirkstoffentwicklung mit Claude",
+  "kurz_de": "Anthropic stellt Fallstudien aus Partnerschaften mit sechs Organisationen der Medikamentenentwicklung vor, etwa zu CAR-T-Designs, Antikörpern und Zulassungsunterlagen. Die Forschung ist größtenteils präklinisch.",
+  "briefing_de": "Das Life-Sciences-Team arbeitet mit BigHat Biosciences, Bristol Myers Squibb, Divergence Labs, Enveda, Generate Biomedicines und The Column Group zusammen.\n- Generate Biomedicines: ein mit Claude Code vorgeschlagenes CAR-T-Design war rund 70 % kürzer als der Standard und zeigte im Labor etwa 10-mal so viele Rezeptoren.\n- Divergence Labs: rund 35.000 Antikörper-Designs in etwa einem Monat; 20 lösten IgE, drei davon stärker als das Standardmedikament.\n- Enveda: Claude prüfte 1.061 Seiten Dokumente; die menschliche Prüfzeit sank um 89 %.\n- Anthropic übernahm Mithril Medicine (seltene Muskeldystrophien) als eigenes Programm.\n- Die Seite betont: frühes Stadium, größtenteils präklinisch.",
+  "bereich": "forschung",
+  "datum": "2026-10-27",
+  "wichtig": false
+}
