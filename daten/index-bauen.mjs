@@ -9,6 +9,7 @@ import { leseOrdner } from './format.mjs';
 import { bauZeitleiste, unklareAbschaltZeilen, unklareModelle } from './zeitleiste.mjs';
 import { leseWissen, sortiereWissen } from './wissen.mjs';
 import { nachpflegeListe } from './nachpflege.mjs';
+import { mitAenderungen } from './wissen-aenderungen.mjs';
 
 export const INDEX_VERSION = 1;
 
@@ -59,7 +60,9 @@ if (istHauptprogramm) {
   const wissenOrdner = resolve(process.argv[5] ?? join(hier, 'wissen'));
   const liste = existsSync(abschaltungen) ? readFileSync(abschaltungen, 'utf8') : '';
   const altText = existsSync(ziel) ? readFileSync(ziel, 'utf8') : '';
-  const neu = mitAltenAbschaltungen(bauIndex(leseOrdner(ordner).map((e) => e.beitrag), new Date(), liste, leseWissen(wissenOrdner).map((e) => e.wissen)), altText, unklareModelle(liste));
+  const jetzt = new Date();
+  // F-17: geänderte Abschnitte und Grafiken der Wissensblätter gegen den bisherigen Index markieren.
+  const neu = mitAenderungen(mitAltenAbschaltungen(bauIndex(leseOrdner(ordner).map((e) => e.beitrag), jetzt, liste, leseWissen(wissenOrdner).map((e) => e.wissen)), altText, unklareModelle(liste)), altText, jetzt);
   const index = mitAltemZeitstempel(neu, altText);
   writeFileSync(ziel, JSON.stringify(index, null, 1) + '\n');
   console.log(`${index.anzahl} Beiträge, ${index.zeitleiste.length} Ereignisse in der Zeitleiste, ${index.wissen.length} Wissensblätter: ${ziel}`);

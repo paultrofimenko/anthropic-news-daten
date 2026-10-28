@@ -101,7 +101,8 @@ Claude Code, API …). Sie sollen stimmen, wenn ein Beitrag etwas Wichtiges meld
   abgelöstes Modell als älter kennzeichnen oder entfernen, Preise, Kontextgrößen, Abschaltdaten,
   „nicht vor“-Daten. Jede Zahl so übernehmen, wie sie in der Quelle steht – nicht rechnen, nicht schätzen.
 - Aufbau behalten: gleiche Felder, gleiche Grafik-Art, Abschnitte nicht umsortieren oder neu schreiben,
-  wenn sie noch stimmen. Neue Aussage als Punkt: steht sie in der Quelle des Abschnitts, als einfacher Text;
+  wenn sie noch stimmen. Jede Änderung an einem Abschnitt oder an der Grafik hebt die App 30 Tage lang als
+  „Geändert am …“ hervor (der Index-Bau vergleicht selbst) – darum nichts nur umformulieren. Neue Aussage als Punkt: steht sie in der Quelle des Abschnitts, als einfacher Text;
   steht sie auf einer anderen Seite, als `{ "text_de": …, "quelle": … }` mit dieser Seite.
 - Jeden genannten Beitrag einzeln abschließen und seine id ins Feld „gesehen“ des Blatts schreiben (Liste von
   Beitrags-ids), wenn

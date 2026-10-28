@@ -4,7 +4,7 @@ name: Veröffentlichen
 on:
   push:
     branches: [main]
-    paths: ['daten/beitraege/**', 'daten/wissen/**', 'daten/quellen/**', 'daten/zeitleiste.mjs', 'daten/wissen.mjs', 'daten/nachpflege.mjs', 'daten/index-bauen.mjs']
+    paths: ['daten/beitraege/**', 'daten/wissen/**', 'daten/quellen/**', 'daten/zeitleiste.mjs', 'daten/wissen.mjs', 'daten/nachpflege.mjs', 'daten/index-bauen.mjs', 'daten/wissen-aenderungen.mjs']
   # Täglich einmal: Die Vorprüfung schreibt die Abschaltliste mit dem Actions-Schlüssel, und solche
   # Commits starten keine weitere Action. Ohne Änderung schreibt index-bauen nichts (kein leerer Commit).
   schedule:

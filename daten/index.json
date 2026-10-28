@@ -1680,7 +1680,14 @@
        "quelle": "https://platform.claude.com/docs/en/about-claude/models/choosing-a-model"
       }
      ],
-     "quelle": "https://platform.claude.com/docs/en/models/overview"
+     "quelle": "https://platform.claude.com/docs/en/models/overview",
+     "geaendert": {
+      "am": "2026-10-16",
+      "durch": [
+       "haiku-5-5",
+       "sonnet-5-5-cache-lesepreis"
+      ]
+     }
     },
     {
      "titel_de": "Kontext, Antwortlänge, Wissensstand",
@@ -1690,7 +1697,14 @@
       "Verlässliches Wissen: bis Juni 2026 bei allen vier.",
       "Seit Opus 4.7 zerlegen die Modelle Text feiner: In 1 Million Token passen jetzt grob 555.000 Wörter, bei älteren Modellen etwa 750.000 – das zählt beim Preisvergleich."
      ],
-     "quelle": "https://platform.claude.com/docs/en/models/overview"
+     "quelle": "https://platform.claude.com/docs/en/models/overview",
+     "geaendert": {
+      "am": "2026-10-16",
+      "durch": [
+       "haiku-5-5",
+       "sonnet-5-5-cache-lesepreis"
+      ]
+     }
     },
     {
      "titel_de": "Denken und Effort",
@@ -1703,7 +1717,14 @@
        "quelle": "https://platform.claude.com/docs/en/about-claude/models/choosing-a-model"
       }
      ],
-     "quelle": "https://platform.claude.com/docs/en/models/overview"
+     "quelle": "https://platform.claude.com/docs/en/models/overview",
+     "geaendert": {
+      "am": "2026-10-16",
+      "durch": [
+       "haiku-5-5",
+       "sonnet-5-5-cache-lesepreis"
+      ]
+     }
     },
     {
      "titel_de": "So wählst du das Modell",
@@ -1720,7 +1741,14 @@
       "Niedrigste Wartezeit und Kosten, Hilfsaufgaben für Agenten → Haiku 5.5",
       "Kombinieren spart: Ein günstiges Modell arbeitet, ein starkes entscheidet die schweren Fragen."
      ],
-     "quelle": "https://platform.claude.com/docs/en/about-claude/models/choosing-a-model"
+     "quelle": "https://platform.claude.com/docs/en/about-claude/models/choosing-a-model",
+     "geaendert": {
+      "am": "2026-10-16",
+      "durch": [
+       "haiku-5-5",
+       "sonnet-5-5-cache-lesepreis"
+      ]
+     }
     },
     {
      "titel_de": "Günstiger rechnen: Stapel und Zwischenspeicher",
@@ -1731,7 +1759,14 @@
       "Haiku 5.5 rechnet nach Länge der Anfrage: bis 100.000 Token Eingabe 0,10 $ Eingabe und 0,50 $ Ausgabe je Million Token, darüber 0,50 $ und 2,50 $.",
       "Opus 5.5 im schnellen Modus: 8 $ Eingabe und 40 $ Ausgabe je Million Token. Bei Opus 5.5 ist er keine Vorschau mehr, bei Opus 5 und Opus 4.8 schon."
      ],
-     "quelle": "https://platform.claude.com/docs/en/about-claude/pricing"
+     "quelle": "https://platform.claude.com/docs/en/about-claude/pricing",
+     "geaendert": {
+      "am": "2026-10-16",
+      "durch": [
+       "haiku-5-5",
+       "sonnet-5-5-cache-lesepreis"
+      ]
+     }
     },
     {
      "titel_de": "Abschaltungen",
@@ -1745,9 +1780,23 @@
        "quelle": "https://platform.claude.com/docs/en/models/overview"
       }
      ],
-     "quelle": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+     "quelle": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+     "geaendert": {
+      "am": "2026-10-16",
+      "durch": [
+       "haiku-5-5",
+       "sonnet-5-5-cache-lesepreis"
+      ]
+     }
     }
-   ]
+   ],
+   "grafik_geaendert": {
+    "am": "2026-10-16",
+    "durch": [
+     "haiku-5-5",
+     "sonnet-5-5-cache-lesepreis"
+    ]
+   }
   },
   {
    "bereich": "claude-code",
@@ -1821,7 +1870,11 @@
        "quelle": "https://code.claude.com/docs/en/plugins"
       }
      ],
-     "quelle": "https://code.claude.com/docs/en/best-practices"
+     "quelle": "https://code.claude.com/docs/en/best-practices",
+     "geaendert": {
+      "am": "2026-10-16",
+      "durch": []
+     }
     },
     {
      "titel_de": "Die Sitzung führen",
@@ -2005,7 +2058,13 @@
        "quelle": "https://platform.claude.com/docs/en/api/migration-2026-10-21"
       }
      ],
-     "quelle": "https://platform.claude.com/docs/en/api/overview"
+     "quelle": "https://platform.claude.com/docs/en/api/overview",
+     "geaendert": {
+      "am": "2026-10-21",
+      "durch": [
+       "api-version-2026-10-21"
+      ]
+     }
     },
     {
      "titel_de": "Fünf Bereiche von Funktionen",
@@ -2031,7 +2090,16 @@
        "quelle": "https://platform.claude.com/docs/en/release-notes/overview"
       }
      ],
-     "quelle": "https://platform.claude.com/docs/en/build-with-claude/overview"
+     "quelle": "https://platform.claude.com/docs/en/build-with-claude/overview",
+     "geaendert": {
+      "am": "2026-10-16",
+      "durch": [
+       "opentelemetry-export-beta",
+       "managed-agents-dynamische-workflows",
+       "managed-agents-web-fetch-url-regel",
+       "sonnet-5-5-cache-lesepreis"
+      ]
+     }
     },
     {
      "titel_de": "Kontext sparen",
@@ -2045,7 +2113,16 @@
       "Kontext bearbeiten: alte Werkzeug-Ergebnisse entfernen, wenn es eng wird",
       "Token vorher zählen"
      ],
-     "quelle": "https://platform.claude.com/docs/en/build-with-claude/overview"
+     "quelle": "https://platform.claude.com/docs/en/build-with-claude/overview",
+     "geaendert": {
+      "am": "2026-10-16",
+      "durch": [
+       "opentelemetry-export-beta",
+       "managed-agents-dynamische-workflows",
+       "managed-agents-web-fetch-url-regel",
+       "sonnet-5-5-cache-lesepreis"
+      ]
+     }
     },
     {
      "titel_de": "Grenzen und Plattformen",
@@ -2058,7 +2135,13 @@
       },
       "Die offiziellen SDKs übernehmen Anmeldung, Wiederholungen bei Fehlern und Streaming (die Antwort kommt Stück für Stück, während sie entsteht)."
      ],
-     "quelle": "https://platform.claude.com/docs/en/api/overview"
+     "quelle": "https://platform.claude.com/docs/en/api/overview",
+     "geaendert": {
+      "am": "2026-10-22",
+      "durch": [
+       "claude-models-on-google-cloud-anthropic-managed"
+      ]
+     }
     }
    ],
    "gesehen": [
