@@ -1,6 +1,6 @@
 {
  "version": 1,
- "erzeugt": "2026-10-28T05:46:51.812Z",
+ "erzeugt": "2026-10-28T12:03:33.790Z",
  "anzahl": 98,
  "beitraege": [
   {
@@ -215,8 +215,8 @@
    "titel_original": "Migrating to API version 2026-10-21",
    "titel_de": "Neue API-Version 2026-10-21 mit Breaking Changes",
    "kurz_de": "API-Version 2026-10-21 ist da: temperature, top_p und top_k liefern einen 400-Fehler. Neue SDK-Hauptversionen senden sie standardmäßig, dazu kommen Feldumbenennungen in der Admin API.",
-   "briefing_de": "Die Version löst 2023-06-01 ab; die neuen SDK- und CLI-Versionen senden sie standardmäßig.\n- Neue Versionen: Python SDK 2.0.0, TypeScript SDK 1.0.0, C# SDK 13.0.0, Go SDK 2.0.0, Java SDK 3.0.0, PHP SDK 1.0.0, Ruby SDK 2.0.0, ant CLI 2.0.0. Ohne SDK: Header anthropic-version: 2026-10-21 setzen.\n- Messages API: temperature, top_p und top_k liefern einen 400-Fehler, auch beim Standardwert. Ein document-Block direkt in einer assistant-Nachricht und citations auf text-Blöcken in user-Nachrichten liefern ebenfalls 400.\n- Admin API und Enterprise Analytics API: Felder umbenannt (z. B. roles → role_ids, actor.email → actor.email_address); workspace_id an API-Keys entfällt, stattdessen scope.\n- Die SDKs und die CLI stehen jetzt unter Apache 2.0 statt MIT; MessageParam ist eine Union je Rolle (UserMessageParam, AssistantMessageParam, SystemMessageParam).\n- Auf Amazon Bedrock gilt 2026-10-21 nur für Claude 4.7 und neuere Modelle.",
-   "arbeitsweise_de": "Vor dem SDK-Upgrade temperature, top_p und top_k aus Anfragen entfernen und Admin-API-Felder auf die neuen Namen umstellen. Wer Anfragen mit niedrigerer temperature auf Modellen braucht, die andere Werte erlauben, kann diese Anfragen auf 2023-06-01 lassen.",
+   "briefing_de": "Die Version löst 2023-06-01 ab; die neuen SDK- und CLI-Versionen senden sie standardmäßig.\n- Neue Versionen: Python SDK 2.0.0, TypeScript SDK 1.0.0, C# SDK 13.0.0, Go SDK 2.0.0, Java SDK 3.0.0, PHP SDK 1.0.0, Ruby SDK 2.0.0, ant CLI 2.0.0. Ohne SDK: Header anthropic-version: 2026-10-21 setzen.\n- Messages API: temperature, top_p und top_k liefern einen 400-Fehler, auch beim Standardwert. Ebenfalls 400: ein document-Block direkt in einer assistant-Nachricht und ein nicht leeres citations-Feld auf text-Blöcken in user-Nachrichten (auch in search_result-Blöcken). In assistant-Nachrichten bleiben citations erlaubt, ebenso \"citations\": {\"enabled\": true} an Dokumenten und Suchergebnissen.\n- Admin API und Enterprise Analytics API: Felder umbenannt (z. B. roles → role_ids, actor.email → actor.email_address); workspace_id an API-Keys entfällt, stattdessen scope.\n- Die SDKs und die CLI stehen jetzt unter Apache 2.0 statt MIT; MessageParam ist eine Union je Rolle (UserMessageParam, AssistantMessageParam, SystemMessageParam).\n- Auf Amazon Bedrock gilt 2026-10-21 nur für Claude 4.7 und neuere Modelle. Wer dort ältere Modelle (Opus 4.6 und früher) aufruft, bleibt bei der bisherigen SDK-Version bzw. API-Version.",
+   "arbeitsweise_de": "Vor dem SDK-Upgrade temperature, top_p und top_k aus Anfragen entfernen und Admin-API-Felder auf die neuen Namen umstellen. Ausnahme: Wer auf Amazon Bedrock Modelle bis Opus 4.6 aufruft, bleibt für diese Aufrufe beim bisherigen SDK – oder stellt sie erst auf Claude 4.7 oder neuer um. Wer Anfragen mit niedrigerer temperature auf Modellen braucht, die andere Werte erlauben, kann diese Anfragen auf 2023-06-01 lassen.",
    "bereich": "api",
    "datum": "2026-10-21",
    "wichtig": true,
@@ -647,7 +647,7 @@
    "titel_original": "OpenTelemetry export (beta)",
    "titel_de": "OpenTelemetry-Export für die Claude API startet in der Beta",
    "kurz_de": "Messages-API-Anfragen und Managed-Agents-Sessions lassen sich jetzt als OpenTelemetry-Spans in der eigenen Observability-Plattform verfolgen; SDK-Spans gibt es in sieben Sprachen.",
-   "briefing_de": "Die Beta bringt:\n- Das Claude SDK sendet Spans in Python, TypeScript, C#, Go, Java, PHP und Ruby; API-Spans richtest du als OpenTelemetry-Ziel in der Claude Console ein (Admin-Berechtigung).\n- Erfasst werden Messages-API-Anfragen, Sessions-API-Anfragen, Token-Nutzung, Server-Tools sowie Managed-Agents-Turns.\n- Inhaltsmodus: standardmäßig nur Metadaten, optional voller Inhalt mit Prompts und Antworten (Standardlimit 0,75 MB pro Span).\n- Partner u. a. Arize AI, Braintrust, Databricks, Datadog, Grafana Cloud, Honeycomb, Langfuse, LangSmith, New Relic, PostHog, Sentry und Splunk.\n- Neue Referenzseiten zu Spans und zur API für Telemetrie-Ziele.\n- Nachtrag: Das web_search-Tool in Managed Agents folgt jetzt den Domain-Einschränkungen der Organisation aus der Claude Console; der Agent erhält nur Treffer, die sowohl die Organisations- als auch die allowed_domains/blocked_domains-Liste des Tools erlauben.",
+   "briefing_de": "Die Beta bringt:\n- Das Claude SDK sendet Spans in Python, TypeScript, C#, Go, Java, PHP und Ruby; API-Spans richtest du als OpenTelemetry-Ziel in der Claude Console ein (Admin-Berechtigung). API-Tracing gibt es nur auf Claude Platform und Claude Platform on AWS, SDK-Tracing überall.\n- Erfasst werden Messages- und Sessions-API-Anfragen und die Token-Nutzung; Server-Tools und Managed-Agents-Turns nur über das API-Tracing.\n- Inhaltsmodus: standardmäßig nur Metadaten, optional voller Inhalt mit Prompts und Antworten (Standardlimit 0,75 MB pro Span). Bei einer HIPAA-, FERPA- oder K-12-Vereinbarung exportieren Ziele nur Metadaten, egal welcher Modus; SDK-Spans betrifft das nicht.\n- Partner u. a. Arize AI, Braintrust, Databricks, Datadog, Grafana Cloud, Honeycomb, Langfuse, LangSmith, New Relic, PostHog, Sentry und Splunk.\n- Neue Referenzseiten zu Spans und zur API für Telemetrie-Ziele.",
    "arbeitsweise_de": "Wer die API oder Managed Agents produktiv nutzt, kann Fehler, Latenz und Token-Verbrauch in der vorhandenen Observability-Plattform nachverfolgen.",
    "bereich": "api",
    "datum": "2026-10-14",
@@ -659,7 +659,7 @@
    "lernkarten": [
     {
      "frage_de": "Was lässt sich mit dem OpenTelemetry-Export der Claude API verfolgen?",
-     "antwort_de": "Messages-API- und Sessions-API-Anfragen, Token-Nutzung, Server-Tools und Managed-Agents-Turns – als Spans in der eigenen Observability-Plattform."
+     "antwort_de": "Messages- und Sessions-API-Anfragen und die Token-Nutzung – über das SDK und das API-Tracing. Server-Tools und Managed-Agents-Turns nur über das API-Tracing (Ziel in der Claude Console)."
     },
     {
      "frage_de": "Was enthalten die OpenTelemetry-Spans der Claude API standardmäßig?",
@@ -1082,7 +1082,7 @@
    "titel_original": "Restrict web search and web fetch domains",
    "titel_de": "Managed Agents: Domains für Websuche und Web-Fetch einschränken",
    "kurz_de": "Neue Doku-Seite: Bei Managed Agents lassen sich die Domains für web_search und web_fetch per allowed_domains oder blocked_domains je Tool begrenzen (Beta).",
-   "briefing_de": "Die neue Seite zu Managed Agents (Beta, Header managed-agents-2026-04-01) beschreibt:\n- Pro Tool-Eintrag gilt entweder allowed_domains oder blocked_domains, nicht beides; je 1 bis 64 Domains.\n- Eine Domain deckt auch ihre Subdomains ab; Schema, Port, Wildcard und IP-Adressen sind nicht erlaubt.\n- Nicht erlaubte web_fetch-Aufrufe liefern den Fehler url_not_allowed.\n- Zusätzlich: max_content_tokens für web_fetch und user_location für web_search.\n- In Multiagent-Sessions gelten alle Listen gleichzeitig; ein Roster-Agent kann nur einschränken, nicht erweitern.\n- Netzwerk-Einstellungen der Umgebung und Organisationseinstellungen wirken auf diese Tools nicht.",
+   "briefing_de": "Die neue Seite zu Managed Agents (Beta, Header managed-agents-2026-04-01) beschreibt:\n- Pro Tool-Eintrag gilt entweder allowed_domains oder blocked_domains, nicht beides; je 1 bis 64 Domains.\n- Eine Domain deckt auch ihre Subdomains ab; Schema, Port, Wildcard und IP-Adressen sind nicht erlaubt.\n- Nicht erlaubte web_fetch-Aufrufe liefern den Fehler url_not_allowed.\n- Zusätzlich: max_content_tokens für web_fetch und user_location für web_search.\n- In Multiagent-Sessions gelten alle Listen gleichzeitig; ein Roster-Agent kann nur einschränken, nicht erweitern.\n- Auch die Web-Einstellungen der Organisation (Claude Console → Capabilities) gelten in Sessions: Der Agent bekommt nur Treffer, die die Liste der Organisation und die des Tools erlauben (Domain-Einschränkungen seit 14.10.2026, Release Notes vom 20.10.2026). In einer Umgebung mit limited networking gilt zusätzlich deren allowed_hosts.",
    "arbeitsweise_de": "Wer Managed Agents mit Websuche baut, kann den Zugriff damit pro Agent und Tool begrenzen.",
    "bereich": "api",
    "datum": "2026-10-06",
