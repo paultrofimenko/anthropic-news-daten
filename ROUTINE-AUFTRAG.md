@@ -80,6 +80,11 @@ Die GitHub Action „Vorprüfung“ hat Neues gefunden und dich gestartet.
 - Deutsch, klar, sachlich, Du-Form. Fachwörter, die Entwickler so sagen, bleiben (Skills, Plugins, Effort).
 - **Nur, was in der Quelle steht.** Keine Vermutungen, keine Wertungen („bahnbrechend“), keine Zahlen
   aus dem Gedächtnis. Zahlen, Daten, Modellnamen und IDs genau so übernehmen, wie sie dastehen.
+- **Bedingungen, Plattformen und Ausnahmen der Quelle immer mitnehmen** („nur auf …“, „nur für …“, „gilt nicht,
+  wenn …“, „bleibt erlaubt“). Ein Rat in `arbeitsweise_de` nennt auch, für wen er nicht gilt. Lieber ein Punkt mehr
+  als eine fehlende Einschränkung – Stichproben gegen die Quelle fanden genau diese Lücke zweimal.
+- Jede Aussage stammt von der Seite unter `url`. Was nur auf einer anderen Seite steht, bekommt einen eigenen
+  Beitrag oder bleibt weg.
 - `titel_de` ist ein deutscher Titel, keine wörtliche Übersetzung, höchstens ca. 70 Zeichen.
 - `briefing_de`: 2–5 Punkte mit „- “, das Wichtigste zuerst.
 - `arbeitsweise_de` nur, wenn sich daraus für Entwickler etwas ändert (neues Modell nutzen, alte

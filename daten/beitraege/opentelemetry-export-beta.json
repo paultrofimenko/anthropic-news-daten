@@ -5,7 +5,7 @@
   "titel_original": "OpenTelemetry export (beta)",
   "titel_de": "OpenTelemetry-Export für die Claude API startet in der Beta",
   "kurz_de": "Messages-API-Anfragen und Managed-Agents-Sessions lassen sich jetzt als OpenTelemetry-Spans in der eigenen Observability-Plattform verfolgen; SDK-Spans gibt es in sieben Sprachen.",
-  "briefing_de": "Die Beta bringt:\n- Das Claude SDK sendet Spans in Python, TypeScript, C#, Go, Java, PHP und Ruby; API-Spans richtest du als OpenTelemetry-Ziel in der Claude Console ein (Admin-Berechtigung).\n- Erfasst werden Messages-API-Anfragen, Sessions-API-Anfragen, Token-Nutzung, Server-Tools sowie Managed-Agents-Turns.\n- Inhaltsmodus: standardmäßig nur Metadaten, optional voller Inhalt mit Prompts und Antworten (Standardlimit 0,75 MB pro Span).\n- Partner u. a. Arize AI, Braintrust, Databricks, Datadog, Grafana Cloud, Honeycomb, Langfuse, LangSmith, New Relic, PostHog, Sentry und Splunk.\n- Neue Referenzseiten zu Spans und zur API für Telemetrie-Ziele.\n- Nachtrag: Das web_search-Tool in Managed Agents folgt jetzt den Domain-Einschränkungen der Organisation aus der Claude Console; der Agent erhält nur Treffer, die sowohl die Organisations- als auch die allowed_domains/blocked_domains-Liste des Tools erlauben.",
+  "briefing_de": "Die Beta bringt:\n- Das Claude SDK sendet Spans in Python, TypeScript, C#, Go, Java, PHP und Ruby; API-Spans richtest du als OpenTelemetry-Ziel in der Claude Console ein (Admin-Berechtigung). API-Tracing gibt es nur auf Claude Platform und Claude Platform on AWS, SDK-Tracing überall.\n- Erfasst werden Messages- und Sessions-API-Anfragen und die Token-Nutzung; Server-Tools und Managed-Agents-Turns nur über das API-Tracing.\n- Inhaltsmodus: standardmäßig nur Metadaten, optional voller Inhalt mit Prompts und Antworten (Standardlimit 0,75 MB pro Span). Bei einer HIPAA-, FERPA- oder K-12-Vereinbarung exportieren Ziele nur Metadaten, egal welcher Modus; SDK-Spans betrifft das nicht.\n- Partner u. a. Arize AI, Braintrust, Databricks, Datadog, Grafana Cloud, Honeycomb, Langfuse, LangSmith, New Relic, PostHog, Sentry und Splunk.\n- Neue Referenzseiten zu Spans und zur API für Telemetrie-Ziele.",
   "arbeitsweise_de": "Wer die API oder Managed Agents produktiv nutzt, kann Fehler, Latenz und Token-Verbrauch in der vorhandenen Observability-Plattform nachverfolgen.",
   "bereich": "api",
   "datum": "2026-10-14",
@@ -17,7 +17,7 @@
   "lernkarten": [
     {
       "frage_de": "Was lässt sich mit dem OpenTelemetry-Export der Claude API verfolgen?",
-      "antwort_de": "Messages-API- und Sessions-API-Anfragen, Token-Nutzung, Server-Tools und Managed-Agents-Turns – als Spans in der eigenen Observability-Plattform."
+      "antwort_de": "Messages- und Sessions-API-Anfragen und die Token-Nutzung – über das SDK und das API-Tracing. Server-Tools und Managed-Agents-Turns nur über das API-Tracing (Ziel in der Claude Console)."
     },
     {
       "frage_de": "Was enthalten die OpenTelemetry-Spans der Claude API standardmäßig?",
