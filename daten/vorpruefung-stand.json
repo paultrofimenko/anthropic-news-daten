@@ -1049,6 +1049,8 @@
    "platform.claude.com/docs/en/api/beta/organization/analytics/artifacts/list",
    "platform.claude.com/docs/en/api/beta/organization/analytics/connectors",
    "platform.claude.com/docs/en/api/beta/organization/analytics/connectors/list",
+   "platform.claude.com/docs/en/api/beta/organization/analytics/cost",
+   "platform.claude.com/docs/en/api/beta/organization/analytics/cost/list",
    "platform.claude.com/docs/en/api/beta/organization/analytics/cost_report",
    "platform.claude.com/docs/en/api/beta/organization/analytics/cost_report/list",
    "platform.claude.com/docs/en/api/beta/organization/analytics/plugins",
@@ -1057,6 +1059,8 @@
    "platform.claude.com/docs/en/api/beta/organization/analytics/skills/list",
    "platform.claude.com/docs/en/api/beta/organization/analytics/summaries",
    "platform.claude.com/docs/en/api/beta/organization/analytics/summaries/list",
+   "platform.claude.com/docs/en/api/beta/organization/analytics/usage",
+   "platform.claude.com/docs/en/api/beta/organization/analytics/usage/list",
    "platform.claude.com/docs/en/api/beta/organization/analytics/usage_report",
    "platform.claude.com/docs/en/api/beta/organization/analytics/usage_report/list",
    "platform.claude.com/docs/en/api/beta/organization/analytics/user_cost_report",
@@ -1615,6 +1619,7 @@
    "platform.claude.com/docs/en/manage-claude/plugins-api",
    "platform.claude.com/docs/en/manage-claude/rate-limits-api",
    "platform.claude.com/docs/en/manage-claude/spend-limits-api",
+   "platform.claude.com/docs/en/manage-claude/usage-cost-analytics-api",
    "platform.claude.com/docs/en/manage-claude/usage-cost-api",
    "platform.claude.com/docs/en/manage-claude/user-management",
    "platform.claude.com/docs/en/manage-claude/user-profiles",
@@ -2763,9 +2768,18 @@
    "October 20, 2026",
    "October 21, 2026",
    "October 22, 2026",
-   "October 23, 2026"
+   "October 23, 2026",
+   "October 29, 2026",
+   "October 28, 2026"
   ],
   "zeilen": {
+   "October 29, 2026": [
+    "9e69334be1",
+    "93336812ad"
+   ],
+   "October 28, 2026": [
+    "405f59a289"
+   ],
    "October 23, 2026": [
     "9af7b855b6"
    ],
@@ -2820,26 +2834,6 @@
    "October 8, 2026": [
     "1a7a2858b6",
     "41b8096613"
-   ],
-   "October 7, 2026": [
-    "cdd06ce370",
-    "f65f34f1d6",
-    "cf999caee5",
-    "318b2a7e3e",
-    "446d46691e",
-    "68a7cf61dd",
-    "925700cf5c",
-    "5af2746e44",
-    "4f3be6038a",
-    "003ffc12bf",
-    "d169979ad5",
-    "0d8cff7831",
-    "942775796d",
-    "fb56d1aed6"
-   ],
-   "October 6, 2026": [
-    "b423810914",
-    "446b238f45"
    ]
   },
   "zeilenVersion": 2
