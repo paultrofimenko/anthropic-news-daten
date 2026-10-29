@@ -1,0 +1,13 @@
+{
+  "id": "usage-cost-analytics-api",
+  "quelle": "platform-release-notes",
+  "url": "https://platform.claude.com/docs/en/manage-claude/usage-cost-analytics-api",
+  "titel_original": "Usage and Cost Analytics API",
+  "titel_de": "Neue Usage and Cost Analytics API (Beta)",
+  "kurz_de": "Die Usage and Cost Analytics API liefert in der Beta Token-Nutzung und Kosten für Console- und Enterprise-Organisationen, gruppiert nach Modell, Workspace, API-Key oder Nutzer.",
+  "briefing_de": "Neue Beta-API für Nutzung und Kosten einer Organisation\n- Zwei Endpunkte: `GET /v1/organizations/analytics/usage` (Token- und Anfragezahlen) und `GET /v1/organizations/analytics/cost` (Kosten in USD).\n- Beta-Header `anthropic-beta: analytics-usage-cost-2026-08-24` plus `anthropic-version` bei jeder Anfrage; SDK und `ant`-CLI senden beide Header selbst.\n- Ergebnisse lassen sich nach Dimensionen wie Modell, Workspace, API-Key sowie Nutzer oder Service-Account gruppieren und in tägliche, stündliche oder minütliche Zeitfenster teilen.\n- Dieselben Endpunkte gelten für Claude-Console- und Claude-Enterprise-Organisationen. Die bisherige Usage and Cost API sowie die Enterprise-Endpunkte `usage_report`, `cost_report`, `user_usage_report` und `user_cost_report` sind jetzt Legacy, bleiben aber unterstützt.",
+  "arbeitsweise_de": "Wer Nutzung oder Kosten per Admin API ausliest, kann auf die neuen Endpunkte umziehen; die Doku hat Migrationsabschnitte für die alte Usage and Cost API und die Enterprise-Reports. Nötig ist ein Admin-Zugang (Admin API Key oder OAuth-Token mit Scope `org:admin`; Enterprise: Key mit Scope `read:analytics`). Für Einzelkonten ist die Admin API nicht verfügbar. Bestehende Integrationen laufen weiter.",
+  "bereich": "api",
+  "datum": "2026-10-29",
+  "wichtig": false
+}

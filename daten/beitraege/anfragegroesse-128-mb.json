@@ -1,0 +1,12 @@
+{
+  "id": "anfragegroesse-128-mb",
+  "quelle": "platform-release-notes",
+  "url": "https://platform.claude.com/docs/en/api/overview",
+  "titel_original": "Maximum request size raised to 128 MB",
+  "titel_de": "Messages API nimmt jetzt Anfragen bis 128 MB an",
+  "kurz_de": "Auf der Claude API von Anthropic steigt die maximale Anfragegröße für Messages und Token Counting von 32 MB auf 128 MB.",
+  "briefing_de": "Größere Anfragen auf der Claude API\n- Messages API und Token Counting API: Limit von 32 MB auf 128 MB angehoben, gilt auf der first-party Claude API.\n- Andere Limits laut Doku: Message Batches 256 MB, Files API 500 MB, Sessions/Agents/Environments 32 MB.\n- Partner-Plattformen haben eigene Limits: Bedrock 20 MB, Claude Models on Google Cloud (Google managed) 30 MB; Claude Platform on AWS, Claude Models on Google Cloud (Anthropic managed) und Microsoft Foundry bis 32 MB für Messages und Token Counting.\n- Wird das Limit überschritten, kommt der Fehler 413 `request_too_large`.",
+  "bereich": "api",
+  "datum": "2026-10-28",
+  "wichtig": false
+}
