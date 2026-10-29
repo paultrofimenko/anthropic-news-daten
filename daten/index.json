@@ -1,8 +1,21 @@
 {
  "version": 1,
- "erzeugt": "2026-10-29T01:00:28.657Z",
- "anzahl": 99,
+ "erzeugt": "2026-10-29T18:30:16.439Z",
+ "anzahl": 101,
  "beitraege": [
+  {
+   "id": "usage-cost-analytics-api",
+   "quelle": "platform-release-notes",
+   "url": "https://platform.claude.com/docs/en/manage-claude/usage-cost-analytics-api",
+   "titel_original": "Usage and Cost Analytics API",
+   "titel_de": "Neue Usage and Cost Analytics API (Beta)",
+   "kurz_de": "Die Usage and Cost Analytics API liefert in der Beta Token-Nutzung und Kosten für Console- und Enterprise-Organisationen, gruppiert nach Modell, Workspace, API-Key oder Nutzer.",
+   "briefing_de": "Neue Beta-API für Nutzung und Kosten einer Organisation\n- Zwei Endpunkte: `GET /v1/organizations/analytics/usage` (Token- und Anfragezahlen) und `GET /v1/organizations/analytics/cost` (Kosten in USD).\n- Beta-Header `anthropic-beta: analytics-usage-cost-2026-08-24` plus `anthropic-version` bei jeder Anfrage; SDK und `ant`-CLI senden beide Header selbst.\n- Ergebnisse lassen sich nach Dimensionen wie Modell, Workspace, API-Key sowie Nutzer oder Service-Account gruppieren und in tägliche, stündliche oder minütliche Zeitfenster teilen.\n- Dieselben Endpunkte gelten für Claude-Console- und Claude-Enterprise-Organisationen. Die bisherige Usage and Cost API sowie die Enterprise-Endpunkte `usage_report`, `cost_report`, `user_usage_report` und `user_cost_report` sind jetzt Legacy, bleiben aber unterstützt.",
+   "arbeitsweise_de": "Wer Nutzung oder Kosten per Admin API ausliest, kann auf die neuen Endpunkte umziehen; die Doku hat Migrationsabschnitte für die alte Usage and Cost API und die Enterprise-Reports. Nötig ist ein Admin-Zugang (Admin API Key oder OAuth-Token mit Scope `org:admin`; Enterprise: Key mit Scope `read:analytics`). Für Einzelkonten ist die Admin API nicht verfügbar. Bestehende Integrationen laufen weiter.",
+   "bereich": "api",
+   "datum": "2026-10-29",
+   "wichtig": false
+  },
   {
    "id": "ai-for-science-stiftungen-institute",
    "quelle": "anthropic",
@@ -12,6 +25,18 @@
    "kurz_de": "Anthropic nimmt 20 Stiftungen, Institutionen und Forschungsgruppen in das Programm AI for Science auf, das Forschenden kostenlose Claude-Credits für wirkungsstarke Projekte gibt.",
    "briefing_de": "Das Programm AI for Science (Start: Mai 2025) wächst:\n- 20 Stiftungen, Institutionen und Forschungsgruppen weltweit sind neu dabei, darunter Sloan Foundation, Simons Foundation, Schmidt Sciences, US National Science Foundation, Wellcome Sanger Institute, Francis Crick Institute und EMBL.\n- Mit dem HHMI Janelia Research Campus entsteht der „Model Hardware Standard“ (MHS), eine Spezifikation, mit der KI-Agenten Laborgeräte sicher bedienen können. MHS ist derzeit eine Research Preview.\n- Mit dem Allen Institute entstehen KI-Agenten-Teams, die große offene Datensätze analysieren; Monate manueller Arbeit sollen auf Stunden schrumpfen.\n- Neue Projekte sind u. a. FlyWire (Verschaltungskarte eines erwachsenen Fruchtfliegengehirns), LEAP (Klimamodelle), AstroPath (Tumore zellweise abbilden) und gnomAD (offene Referenz genetischer Variation).\n- Viele Kooperationen stehen laut Beitrag noch am Anfang; für Wissenschaftler gibt es zusätzlich einen vergünstigten Team-Plan.",
    "bereich": "news",
+   "datum": "2026-10-28",
+   "wichtig": false
+  },
+  {
+   "id": "anfragegroesse-128-mb",
+   "quelle": "platform-release-notes",
+   "url": "https://platform.claude.com/docs/en/api/overview",
+   "titel_original": "Maximum request size raised to 128 MB",
+   "titel_de": "Messages API nimmt jetzt Anfragen bis 128 MB an",
+   "kurz_de": "Auf der Claude API von Anthropic steigt die maximale Anfragegröße für Messages und Token Counting von 32 MB auf 128 MB.",
+   "briefing_de": "Größere Anfragen auf der Claude API\n- Messages API und Token Counting API: Limit von 32 MB auf 128 MB angehoben, gilt auf der first-party Claude API.\n- Andere Limits laut Doku: Message Batches 256 MB, Files API 500 MB, Sessions/Agents/Environments 32 MB.\n- Partner-Plattformen haben eigene Limits: Bedrock 20 MB, Claude Models on Google Cloud (Google managed) 30 MB; Claude Platform on AWS, Claude Models on Google Cloud (Anthropic managed) und Microsoft Foundry bis 32 MB für Messages und Token Counting.\n- Wird das Limit überschritten, kommt der Fehler 413 `request_too_large`.",
+   "bereich": "api",
    "datum": "2026-10-28",
    "wichtig": false
   },
