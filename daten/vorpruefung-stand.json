@@ -1192,6 +1192,25 @@
    "platform.claude.com/docs/en/api/beta/organization/api_keys/list",
    "platform.claude.com/docs/en/api/beta/organization/api_keys/retrieve",
    "platform.claude.com/docs/en/api/beta/organization/api_keys/update",
+   "platform.claude.com/docs/en/api/beta/organization/claude_tag",
+   "platform.claude.com/docs/en/api/beta/organization/claude_tag/bundles",
+   "platform.claude.com/docs/en/api/beta/organization/claude_tag/bundles/list",
+   "platform.claude.com/docs/en/api/beta/organization/claude_tag/bundles/retrieve",
+   "platform.claude.com/docs/en/api/beta/organization/claude_tag/bundles/targets",
+   "platform.claude.com/docs/en/api/beta/organization/claude_tag/bundles/targets/create",
+   "platform.claude.com/docs/en/api/beta/organization/claude_tag/bundles/targets/delete",
+   "platform.claude.com/docs/en/api/beta/organization/claude_tag/bundles/targets/list",
+   "platform.claude.com/docs/en/api/beta/organization/claude_tag/bundles/targets/retrieve",
+   "platform.claude.com/docs/en/api/beta/organization/claude_tag/slack_channels",
+   "platform.claude.com/docs/en/api/beta/organization/claude_tag/slack_channels/create",
+   "platform.claude.com/docs/en/api/beta/organization/claude_tag/slack_channels/delete",
+   "platform.claude.com/docs/en/api/beta/organization/claude_tag/slack_channels/list",
+   "platform.claude.com/docs/en/api/beta/organization/claude_tag/slack_channels/retrieve",
+   "platform.claude.com/docs/en/api/beta/organization/claude_tag/slack_channels/update",
+   "platform.claude.com/docs/en/api/beta/organization/claude_tag/slack_workspaces",
+   "platform.claude.com/docs/en/api/beta/organization/claude_tag/slack_workspaces/list",
+   "platform.claude.com/docs/en/api/beta/organization/claude_tag/slack_workspaces/retrieve",
+   "platform.claude.com/docs/en/api/beta/organization/claude_tag/slack_workspaces/update",
    "platform.claude.com/docs/en/api/beta/organization/compliance_settings",
    "platform.claude.com/docs/en/api/beta/organization/compliance_settings/retrieve",
    "platform.claude.com/docs/en/api/beta/organization/compliance_settings/update",
@@ -2889,9 +2908,13 @@
    "October 22, 2026",
    "October 23, 2026",
    "October 29, 2026",
-   "October 28, 2026"
+   "October 28, 2026",
+   "October 30, 2026"
   ],
   "zeilen": {
+   "October 30, 2026": [
+    "ddf770551d"
+   ],
    "October 29, 2026": [
     "9e69334be1",
     "93336812ad"
@@ -2949,10 +2972,6 @@
    "October 9, 2026": [
     "513bb1c6b0",
     "12c3c5d7bf"
-   ],
-   "October 8, 2026": [
-    "1a7a2858b6",
-    "41b8096613"
    ]
   },
   "zeilenVersion": 2
