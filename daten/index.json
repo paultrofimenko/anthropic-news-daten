@@ -1,8 +1,21 @@
 {
  "version": 1,
- "erzeugt": "2026-10-29T18:30:16.439Z",
- "anzahl": 101,
+ "erzeugt": "2026-10-30T10:05:12.732Z",
+ "anzahl": 102,
  "beitraege": [
+  {
+   "id": "claude-code-2-1-314",
+   "quelle": "code-changelog",
+   "url": "https://code.claude.com/docs/en/changelog",
+   "titel_original": "Claude Code 2.1.314",
+   "titel_de": "Claude Code 2.1.314: Schreibsperre außerhalb des Arbeitsordners und viele Fixes",
+   "kurz_de": "Fassung 2.1.314 bringt die Einstellung permissions.blockWritesOutsideWorkingDirectories, Gruppenfilter für Claude-apps-Gateway-Upstreams, Idle-Compaction in VS Code und Claude Desktop sowie viele Fixes.",
+   "briefing_de": "Neu in Fassung 2.1.314:\n- permissions.blockWritesOutsideWorkingDirectories: Write, Edit und NotebookEdit lehnen Pfade außerhalb der Arbeitsverzeichnisse in jedem Berechtigungsmodus ab.\n- Claude-apps-Gateway: Upstreams haben eine optionale Liste groups – nur Entwickler aus den genannten IdP-Gruppen werden an diesen Upstream geleitet, auch beim Failover. Bedrock-Upstreams bekommen guardrail_trace, das protokolliert, welcher Amazon-Bedrock-Guardrail-Filter bei einer Anfrage angeschlagen hat (ohne den getroffenen Text).\n- Idle-Compaction in VS Code und im Code-Tab von Claude Desktop: Eine Unterhaltung mit über 200K Token, die ungenutzt liegt, wird zusammengefasst; die Zusammenfassung wird bei der nächsten Nachricht verwendet, wenn der Prompt-Cache abgelaufen ist.\n- Fixes u. a.: „Invalid effort level“, wenn eine Organisation den Effort eines Modells begrenzt (Claude Code senkt den Effort und versucht es erneut); claude -p beendet sich bei Startfehlern mit Fehlermeldung und Exit-Code 1; Bedrock-Sitzungen mit vielen Bildern und /compact; Microsoft Foundry ohne Deployment für das Standardmodell fällt auf ein älteres Modell derselben Familie zurück; Modell-IDs mit Punkt hinter einem LLM-Gateway (etwa claude-opus-4.8) werden richtig erkannt.\n- Außerdem viele Fixes zu MCP-Anmeldung, TLS-Zertifikaten, Remote Control, Sandbox, Hooks, Vim-Modus und Oberfläche.",
+   "arbeitsweise_de": "Wer Claude Code verwaltet, kann mit permissions.blockWritesOutsideWorkingDirectories Schreibzugriffe von Write, Edit und NotebookEdit auf die Arbeitsverzeichnisse begrenzen. Wer ein Claude-apps-Gateway betreibt, kann Upstreams per groups auf IdP-Gruppen einschränken.",
+   "bereich": "claude-code",
+   "datum": "2026-10-30",
+   "wichtig": false
+  },
   {
    "id": "usage-cost-analytics-api",
    "quelle": "platform-release-notes",
