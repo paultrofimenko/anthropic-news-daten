@@ -1,7 +1,7 @@
 {
  "version": 1,
- "erzeugt": "2026-10-30T10:05:12.732Z",
- "anzahl": 102,
+ "erzeugt": "2026-10-30T22:25:06.676Z",
+ "anzahl": 104,
  "beitraege": [
   {
    "id": "claude-code-2-1-314",
@@ -15,6 +15,41 @@
    "bereich": "claude-code",
    "datum": "2026-10-30",
    "wichtig": false
+  },
+  {
+   "id": "claude-tag-api-referenz",
+   "quelle": "platform-doku",
+   "url": "https://platform.claude.com/docs/en/api/beta/organization/claude_tag",
+   "titel_original": "Claude Tag API reference",
+   "titel_de": "Claude Tag API: neue Referenzseiten für Kanäle, Workspaces und Bundles",
+   "kurz_de": "In der Platform-Doku gibt es neue API-Referenzseiten zur Claude Tag API: Slack-Kanäle, Slack-Workspaces, Bundles und Bundle Targets, alle mit Beta-Header experimental-claude-tag-2026-10-21.",
+   "briefing_de": "Neu sind Referenzseiten unter claude_tag in der Platform-Doku:\n- Slack-Kanäle (`/v1/organizations/claude_tag/slack_channels`): einrichten, auflisten, abrufen, ändern, entfernen.\n- Slack-Workspaces (`.../slack_workspaces`): auflisten, abrufen, ändern.\n- Bundles und Bundle Targets: Ein Bundle lässt sich per POST `.../bundles/{bundle_id}/targets` an einen Slack-Kanal oder -Workspace anhängen; an einem Workspace gilt es in allen Kanälen darin. Der Kanal oder Workspace muss schon eingerichtet sein.\n- Alle Endpunkte brauchen den Beta-Header `experimental-claude-tag-2026-10-21`. Änderungen laufen per POST (nicht PATCH): nicht genannte Einstellungen bleiben, `null` löscht eine Einstellung, sodass sie geerbt wird.\n- Ein Kanal lässt sich nur entfernen, wenn Claude dort nicht aktiviert ist (sonst 400); das Entfernen ist unumkehrbar. Gruppen-Direktnachrichten liefern bei Ändern und Entfernen 400.",
+   "bereich": "api",
+   "datum": "2026-10-30",
+   "wichtig": false
+  },
+  {
+   "id": "fast-mode-opus-4-8-abschaltung",
+   "quelle": "platform-release-notes",
+   "url": "https://platform.claude.com/docs/en/release-notes/overview",
+   "titel_original": "Fast mode deprecated for Claude Opus 4.8",
+   "titel_de": "Fast Mode für Claude Opus 4.8 wird am 30. November 2026 abgeschaltet",
+   "kurz_de": "Fast Mode für Claude Opus 4.8 ist veraltet und wird am 30. November 2026 entfernt. Danach liefern Anfragen an claude-opus-4-8 mit speed: \"fast\" einen Fehler. Wechsel auf Opus 5.5 nötig.",
+   "briefing_de": "Am 30. Oktober 2026 wurde Fast Mode für Claude Opus 4.8 als veraltet markiert.\n- Entfernt wird er am 30. November 2026.\n- Danach geben Anfragen an `claude-opus-4-8` mit `speed: \"fast\"` einen Fehler zurück.\n- Um Fast Mode weiter zu nutzen, ist der Wechsel auf Claude Opus 5.5 vorgesehen; die Seite verweist auf den Migrationsleitfaden „Migrating from Claude Opus 4.8“.",
+   "arbeitsweise_de": "Wer Fast Mode mit Opus 4.8 nutzt, stellt diese Aufrufe vor dem 30. November 2026 auf Opus 5.5 um. Das betrifft nur Anfragen mit speed: \"fast\"; Opus 4.8 ohne Fast Mode wird in dieser Meldung nicht erwähnt.",
+   "bereich": "api",
+   "datum": "2026-10-30",
+   "wichtig": true,
+   "lernkarten": [
+    {
+     "frage_de": "Was passiert nach dem 30. November 2026 mit Anfragen an claude-opus-4-8 mit speed: \"fast\"?",
+     "antwort_de": "Sie geben einen Fehler zurück, weil Fast Mode für Claude Opus 4.8 entfernt wird."
+    },
+    {
+     "frage_de": "Wie nutzt man Fast Mode in der Claude API weiter, wenn er für Claude Opus 4.8 wegfällt?",
+     "antwort_de": "Indem man auf Claude Opus 5.5 migriert; dort ist Fast Mode verfügbar."
+    }
+   ]
   },
   {
    "id": "usage-cost-analytics-api",
@@ -1674,7 +1709,7 @@
    "titel_de": "Modelle",
    "kurz_de": "Fable, Opus, Sonnet, Haiku – was sie können, was sie kosten, wann sie abgeschaltet werden.",
    "einleitung_de": "Claude gibt es in vier aktuellen Modellen, vom schnellen, günstigen Haiku bis zum besonders starken Fable. Abgerechnet wird nach Token – Wortstücken, aus denen ein Modell Text zusammensetzt. Oft hilft die Einstellung „Effort“ mehr als ein anderes Modell.",
-   "stand": "2026-10-16",
+   "stand": "2026-10-30",
    "grafik": {
     "art": "balken",
     "titel_de": "Preis je Million Token",
@@ -1828,17 +1863,23 @@
       {
        "text_de": "Ältere Modelle wie Fable 5, Opus 5, Opus 4.8, Sonnet 5 und Haiku 4.5 sind weiter verfügbar.",
        "quelle": "https://platform.claude.com/docs/en/models/overview"
+      },
+      {
+       "text_de": "Fast Mode für Opus 4.8 ist veraltet und wird am 30.11.2026 entfernt. Danach liefern Anfragen an claude-opus-4-8 mit speed: \"fast\" einen Fehler – Wechsel auf Opus 5.5.",
+       "quelle": "https://platform.claude.com/docs/en/build-with-claude/fast-mode"
       }
      ],
      "quelle": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
      "geaendert": {
-      "am": "2026-10-16",
+      "am": "2026-10-30",
       "durch": [
-       "haiku-5-5",
-       "sonnet-5-5-cache-lesepreis"
+       "fast-mode-opus-4-8-abschaltung"
       ]
      }
     }
+   ],
+   "gesehen": [
+    "fast-mode-opus-4-8-abschaltung"
    ],
    "grafik_geaendert": {
     "am": "2026-10-16",
@@ -2055,7 +2096,7 @@
    "titel_de": "API und Plattform",
    "kurz_de": "Wie Programme Claude einbauen: Schnittstellen, Werkzeuge, Grenzen.",
    "einleitung_de": "Über die Claude-API (eine Schnittstelle, über die Programme mit Claude sprechen) bauen Entwickler Claude in eigene Anwendungen ein. Dafür gibt es zwei Wege: die Messages-API für volle Kontrolle und Claude Managed Agents für lange Aufgaben, die Anthropic betreibt.",
-   "stand": "2026-10-22",
+   "stand": "2026-10-30",
    "grafik": {
     "art": "schritte",
     "titel_de": "Der Weg für neue Entwickler",
@@ -2195,10 +2236,7 @@
     }
    ],
    "gesehen": [
-    "opentelemetry-export-beta",
-    "managed-agents-dynamische-workflows",
-    "api-version-2026-10-21",
-    "claude-models-on-google-cloud-anthropic-managed"
+    "fast-mode-opus-4-8-abschaltung"
    ]
   },
   {
