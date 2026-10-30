@@ -1,0 +1,12 @@
+{
+  "id": "claude-tag-api-referenz",
+  "quelle": "platform-doku",
+  "url": "https://platform.claude.com/docs/en/api/beta/organization/claude_tag",
+  "titel_original": "Claude Tag API reference",
+  "titel_de": "Claude Tag API: neue Referenzseiten für Kanäle, Workspaces und Bundles",
+  "kurz_de": "In der Platform-Doku gibt es neue API-Referenzseiten zur Claude Tag API: Slack-Kanäle, Slack-Workspaces, Bundles und Bundle Targets, alle mit Beta-Header experimental-claude-tag-2026-10-21.",
+  "briefing_de": "Neu sind Referenzseiten unter claude_tag in der Platform-Doku:\n- Slack-Kanäle (`/v1/organizations/claude_tag/slack_channels`): einrichten, auflisten, abrufen, ändern, entfernen.\n- Slack-Workspaces (`.../slack_workspaces`): auflisten, abrufen, ändern.\n- Bundles und Bundle Targets: Ein Bundle lässt sich per POST `.../bundles/{bundle_id}/targets` an einen Slack-Kanal oder -Workspace anhängen; an einem Workspace gilt es in allen Kanälen darin. Der Kanal oder Workspace muss schon eingerichtet sein.\n- Alle Endpunkte brauchen den Beta-Header `experimental-claude-tag-2026-10-21`. Änderungen laufen per POST (nicht PATCH): nicht genannte Einstellungen bleiben, `null` löscht eine Einstellung, sodass sie geerbt wird.\n- Ein Kanal lässt sich nur entfernen, wenn Claude dort nicht aktiviert ist (sonst 400); das Entfernen ist unumkehrbar. Gruppen-Direktnachrichten liefern bei Ändern und Entfernen 400.",
+  "bereich": "api",
+  "datum": "2026-10-30",
+  "wichtig": false
+}

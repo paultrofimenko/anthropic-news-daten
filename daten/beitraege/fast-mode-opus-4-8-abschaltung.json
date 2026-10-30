@@ -1,0 +1,23 @@
+{
+  "id": "fast-mode-opus-4-8-abschaltung",
+  "quelle": "platform-release-notes",
+  "url": "https://platform.claude.com/docs/en/release-notes/overview",
+  "titel_original": "Fast mode deprecated for Claude Opus 4.8",
+  "titel_de": "Fast Mode für Claude Opus 4.8 wird am 30. November 2026 abgeschaltet",
+  "kurz_de": "Fast Mode für Claude Opus 4.8 ist veraltet und wird am 30. November 2026 entfernt. Danach liefern Anfragen an claude-opus-4-8 mit speed: \"fast\" einen Fehler. Wechsel auf Opus 5.5 nötig.",
+  "briefing_de": "Am 30. Oktober 2026 wurde Fast Mode für Claude Opus 4.8 als veraltet markiert.\n- Entfernt wird er am 30. November 2026.\n- Danach geben Anfragen an `claude-opus-4-8` mit `speed: \"fast\"` einen Fehler zurück.\n- Um Fast Mode weiter zu nutzen, ist der Wechsel auf Claude Opus 5.5 vorgesehen; die Seite verweist auf den Migrationsleitfaden „Migrating from Claude Opus 4.8“.",
+  "arbeitsweise_de": "Wer Fast Mode mit Opus 4.8 nutzt, stellt diese Aufrufe vor dem 30. November 2026 auf Opus 5.5 um. Das betrifft nur Anfragen mit speed: \"fast\"; Opus 4.8 ohne Fast Mode wird in dieser Meldung nicht erwähnt.",
+  "bereich": "api",
+  "datum": "2026-10-30",
+  "wichtig": true,
+  "lernkarten": [
+    {
+      "frage_de": "Was passiert nach dem 30. November 2026 mit Anfragen an claude-opus-4-8 mit speed: \"fast\"?",
+      "antwort_de": "Sie geben einen Fehler zurück, weil Fast Mode für Claude Opus 4.8 entfernt wird."
+    },
+    {
+      "frage_de": "Wie nutzt man Fast Mode in der Claude API weiter, wenn er für Claude Opus 4.8 wegfällt?",
+      "antwort_de": "Indem man auf Claude Opus 5.5 migriert; dort ist Fast Mode verfügbar."
+    }
+  ]
+}

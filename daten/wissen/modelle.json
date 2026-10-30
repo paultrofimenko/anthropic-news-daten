@@ -3,7 +3,7 @@
   "titel_de": "Modelle",
   "kurz_de": "Fable, Opus, Sonnet, Haiku – was sie können, was sie kosten, wann sie abgeschaltet werden.",
   "einleitung_de": "Claude gibt es in vier aktuellen Modellen, vom schnellen, günstigen Haiku bis zum besonders starken Fable. Abgerechnet wird nach Token – Wortstücken, aus denen ein Modell Text zusammensetzt. Oft hilft die Einstellung „Effort“ mehr als ein anderes Modell.",
-  "stand": "2026-10-16",
+  "stand": "2026-10-30",
   "grafik": {
     "art": "balken",
     "titel_de": "Preis je Million Token",
@@ -122,9 +122,16 @@
         {
           "text_de": "Ältere Modelle wie Fable 5, Opus 5, Opus 4.8, Sonnet 5 und Haiku 4.5 sind weiter verfügbar.",
           "quelle": "https://platform.claude.com/docs/en/models/overview"
+        },
+        {
+          "text_de": "Fast Mode für Opus 4.8 ist veraltet und wird am 30.11.2026 entfernt. Danach liefern Anfragen an claude-opus-4-8 mit speed: \"fast\" einen Fehler – Wechsel auf Opus 5.5.",
+          "quelle": "https://platform.claude.com/docs/en/build-with-claude/fast-mode"
         }
       ],
       "quelle": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
     }
+  ],
+  "gesehen": [
+    "fast-mode-opus-4-8-abschaltung"
   ]
 }

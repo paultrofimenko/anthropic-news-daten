@@ -3,7 +3,7 @@
   "titel_de": "API und Plattform",
   "kurz_de": "Wie Programme Claude einbauen: Schnittstellen, Werkzeuge, Grenzen.",
   "einleitung_de": "Über die Claude-API (eine Schnittstelle, über die Programme mit Claude sprechen) bauen Entwickler Claude in eigene Anwendungen ein. Dafür gibt es zwei Wege: die Messages-API für volle Kontrolle und Claude Managed Agents für lange Aufgaben, die Anthropic betreibt.",
-  "stand": "2026-10-22",
+  "stand": "2026-10-30",
   "grafik": {
     "art": "schritte",
     "titel_de": "Der Weg für neue Entwickler",
@@ -113,9 +113,6 @@
     }
   ],
   "gesehen": [
-    "opentelemetry-export-beta",
-    "managed-agents-dynamische-workflows",
-    "api-version-2026-10-21",
-    "claude-models-on-google-cloud-anthropic-managed"
+    "fast-mode-opus-4-8-abschaltung"
   ]
 }
