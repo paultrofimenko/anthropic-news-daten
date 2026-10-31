@@ -1,0 +1,13 @@
+{
+  "id": "claude-code-2-1-316",
+  "quelle": "code-changelog",
+  "url": "https://code.claude.com/docs/en/changelog",
+  "titel_original": "Claude Code 2.1.316",
+  "titel_de": "Claude Code 2.1.316: Gruppenbudgets im Gateway, Subagent-Effort und Fast-Mode-Abschaltung",
+  "kurz_de": "Fassung 2.1.316 bringt gemeinsame Gruppenbudgets und layered Policies im Claude-apps-Gateway, CLAUDE_CODE_SUBAGENT_EFFORT und den Hinweis, dass Fast Mode für Opus 4.8 am 30. November 2026 entfällt.",
+  "briefing_de": "Neu in Fassung 2.1.316:\n- Claude-apps-Gateway: Pooled Group Budgets – ein monatliches Budget, das die Mitglieder einer Gruppe zusätzlich zu ihrem eigenen Limit teilen, gesetzt mit pooled_budget in der Spend-Limits-Admin-API. Außerdem managed.policy_mode: layered (alle passenden Policies gelten, jede über den darunter aufgeführten gemergt) und guardrail.input_tagging für Bedrock-Upstreams.\n- Neue Umgebungsvariablen: CLAUDE_CODE_SUBAGENT_EFFORT setzt den Effort von Subagents, wenn nichts anderes angegeben ist (statt den der Sitzung zu erben); CLAUDE_CODE_DISABLE_ULTRATHINK schaltet das Schlüsselwort ultrathink ab; CLAUDE_CODE_DISABLE_LOOPED_CROSS_CERT_DROP behält Systemzertifikate, die sich gegenseitig zertifizieren, für Server, deren private CA das braucht.\n- Fast Mode für Opus 4.8 ist seit dem 30. Oktober 2026 veraltet und wird am 30. November 2026 entfernt. Danach liefern Fast-Mode-Anfragen auf Opus 4.8 einen Fehler und fallen nicht auf Standard-Opus-4.8 zurück. Die Quelle empfiehlt den Wechsel auf Opus 5.5.\n- Fixes u. a.: Gateway prüft jedes in einer Anfrage genannte Modell gegen availableModels, deniedModels und models (blockiert: 400); --restricted-Sitzungen laden keine Dateien von außerhalb der Arbeitsverzeichnisse hoch, wenn eine Read-Regel sie abdeckt; sonnet, opus und haiku auf Vertex AI und Amazon Bedrock wechseln auf ein älteres Modell, wenn das neueste für Konto oder Region noch nicht verfügbar ist.\n- Außerdem: Änderungen für VS Code, Cloud-Sitzungen, Claude Tag und Code Review (Severity-Karte in den Analytics) sowie viele weitere Fixes.",
+  "arbeitsweise_de": "Wer Fast Mode auf Opus 4.8 nutzt, sollte vor dem 30. November 2026 auf Opus 5.5 wechseln, sonst enden diese Anfragen mit einem Fehler. Wer ein Claude-apps-Gateway betreibt, kann gemeinsame Gruppenbudgets per pooled_budget setzen. CLAUDE_CODE_SUBAGENT_EFFORT gilt nur, wenn für den Subagent nichts anderes angegeben ist.",
+  "bereich": "claude-code",
+  "datum": "2026-10-31",
+  "wichtig": false
+}
