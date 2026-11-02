@@ -1641,6 +1641,7 @@
    "platform.claude.com/docs/en/build-with-claude/fast-mode",
    "platform.claude.com/docs/en/build-with-claude/files",
    "platform.claude.com/docs/en/build-with-claude/handling-stop-reasons",
+   "platform.claude.com/docs/en/build-with-claude/message-threads",
    "platform.claude.com/docs/en/build-with-claude/mid-conversation-effort-example",
    "platform.claude.com/docs/en/build-with-claude/mid-conversation-system-messages",
    "platform.claude.com/docs/en/build-with-claude/multilingual-support",
@@ -2889,9 +2890,13 @@
    "October 23, 2026",
    "October 29, 2026",
    "October 28, 2026",
-   "October 30, 2026"
+   "October 30, 2026",
+   "November 2, 2026"
   ],
   "zeilen": {
+   "November 2, 2026": [
+    "2187053245"
+   ],
    "October 30, 2026": [
     "ddf770551d"
    ],
@@ -2948,10 +2953,6 @@
     "cf51b24d4c",
     "44678f1f32",
     "ea276c70e2"
-   ],
-   "October 9, 2026": [
-    "513bb1c6b0",
-    "12c3c5d7bf"
    ]
   },
   "zeilenVersion": 2
