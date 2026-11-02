@@ -3,7 +3,7 @@
   "titel_de": "API und Plattform",
   "kurz_de": "Wie Programme Claude einbauen: Schnittstellen, Werkzeuge, Grenzen.",
   "einleitung_de": "Über die Claude-API (eine Schnittstelle, über die Programme mit Claude sprechen) bauen Entwickler Claude in eigene Anwendungen ein. Dafür gibt es zwei Wege: die Messages-API für volle Kontrolle und Claude Managed Agents für lange Aufgaben, die Anthropic betreibt.",
-  "stand": "2026-10-30",
+  "stand": "2026-11-02",
   "grafik": {
     "art": "schritte",
     "titel_de": "Der Weg für neue Entwickler",
@@ -94,7 +94,11 @@
         },
         "Automatisches Zusammenfassen, sobald eine Token-Schwelle erreicht ist",
         "Kontext bearbeiten: alte Werkzeug-Ergebnisse entfernen, wenn es eng wird",
-        "Token vorher zählen"
+        "Token vorher zählen",
+        {
+          "text_de": "Message Threads (Beta, Header message-threads-2026-08-12): Das Gespräch bleibt kurz auf dem Server, spätere Anfragen senden nur neue Nachrichten; ein Thread läuft 5 Minuten nach der letzten Anfrage ab. Nicht mit Batches, Token Counting und Compaction nutzbar",
+          "quelle": "https://platform.claude.com/docs/en/build-with-claude/message-threads"
+        }
       ],
       "quelle": "https://platform.claude.com/docs/en/build-with-claude/overview"
     },
@@ -113,6 +117,7 @@
     }
   ],
   "gesehen": [
-    "fast-mode-opus-4-8-abschaltung"
+    "fast-mode-opus-4-8-abschaltung",
+    "message-threads-beta"
   ]
 }

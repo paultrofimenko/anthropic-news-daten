@@ -1,0 +1,24 @@
+{
+  "id": "message-threads-beta",
+  "quelle": "platform-release-notes",
+  "url": "https://platform.claude.com/docs/en/build-with-claude/message-threads",
+  "titel_original": "Message threads",
+  "titel_de": "Message Threads: nur neue Nachrichten senden (Beta)",
+  "kurz_de": "Mit Message Threads hält die Messages API ein Gespräch kurz auf dem Server. Spätere Anfragen senden nur neue Nachrichten, das senkt die Anfragegröße und die Zeit bis zum ersten Token (Beta).",
+  "briefing_de": "Message Threads sind neu in der Beta der Messages API\n- Du schickst das ganze Gespräch einmal mit `\"thread\": {\"type\": \"create\"}`, danach nur die neuen Nachrichten mit `\"thread\": {\"type\": \"continue\", \"previous_message_id\": \"<id>\"}`; `system` und `tools` lässt du dann weg.\n- Beta-Header: `message-threads-2026-08-12`. Die SDKs haben einen Thread-Helper, der die Anfragen baut und den Header setzt.\n- Ein Thread ist Best-Effort: Er läuft 5 Minuten nach der letzten Anfrage ab und wird spätestens 1 Stunde nach der letzten Nutzung gelöscht. Danach gibt eine Continue-Anfrage einen 404-Fehler; dann sendest du das volle Gespräch erneut als Create-Anfrage.\n- Verfügbar auf der Claude API, Claude Platform on AWS, Claude Models on Google Cloud (Anthropic managed) und Claude in Microsoft Foundry. Preise und Rate Limits ändern sich nicht.\n- Nicht unterstützt: Message Batches, Token Counting, Compaction und die meisten Context-Editing-Strategien; ebenso nicht für Organisationen mit aktivierter HIPAA-Readiness oder Inference Hooks. Threads sind nicht ZDR-geeignet.",
+  "arbeitsweise_de": "Lohnt sich vor allem bei langen Agent-Schleifen, in denen sonst jede Runde das ganze Gespräch neu hochlädt. Behalte immer eine eigene Kopie aller Nachrichten und baue den Replay-Pfad von Anfang an ein, weil ein Thread jederzeit ablaufen kann. Nicht geeignet, wenn du Batches, Token Counting oder Compaction brauchst, HIPAA-Readiness nutzt oder ZDR verlangst.",
+  "bereich": "api",
+  "datum": "2026-11-02",
+  "wichtig": true,
+  "ereignis": { "art": "neu", "titel": "Message Threads (Beta) in der Messages API" },
+  "lernkarten": [
+    {
+      "frage_de": "Wie senden Message Threads der Messages API lange Gespräche effizienter?",
+      "antwort_de": "Das Gespräch bleibt kurz auf dem Server: Du sendest es einmal mit thread type create, danach nur die neuen Nachrichten plus previous_message_id (type continue). Beta-Header: message-threads-2026-08-12."
+    },
+    {
+      "frage_de": "Wie lange lebt ein Message Thread der Messages API, und was tust du, wenn er weg ist?",
+      "antwort_de": "Er läuft 5 Minuten nach der letzten Anfrage ab und wird spätestens 1 Stunde nach der letzten Nutzung gelöscht. Eine Continue-Anfrage gibt dann 404; sende das volle Gespräch erneut als Create-Anfrage."
+    }
+  ]
+}
