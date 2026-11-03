@@ -1715,6 +1715,7 @@
    "platform.claude.com/docs/en/build-with-claude/streaming",
    "platform.claude.com/docs/en/build-with-claude/structured-outputs",
    "platform.claude.com/docs/en/build-with-claude/task-budgets",
+   "platform.claude.com/docs/en/build-with-claude/text-watermark",
    "platform.claude.com/docs/en/build-with-claude/thinking",
    "platform.claude.com/docs/en/build-with-claude/thinking-steering-and-cost",
    "platform.claude.com/docs/en/build-with-claude/thinking-tool-workflows",
@@ -2942,9 +2943,13 @@
    "October 29, 2026",
    "October 28, 2026",
    "October 30, 2026",
-   "November 2, 2026"
+   "November 2, 2026",
+   "November 3, 2026"
   ],
   "zeilen": {
+   "November 3, 2026": [
+    "93176a22b3"
+   ],
    "November 2, 2026": [
     "2187053245"
    ],
@@ -2997,13 +3002,6 @@
     "b0c1a2f99e",
     "408f2f5223",
     "3d9581bea9"
-   ],
-   "October 14, 2026": [
-    "d3ab9175a4",
-    "4bfd213226",
-    "cf51b24d4c",
-    "44678f1f32",
-    "ea276c70e2"
    ]
   },
   "zeilenVersion": 2
