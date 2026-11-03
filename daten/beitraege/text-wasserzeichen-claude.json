@@ -1,0 +1,12 @@
+{
+  "id": "text-wasserzeichen-claude",
+  "quelle": "platform-release-notes",
+  "url": "https://platform.claude.com/docs/en/release-notes/overview",
+  "titel_original": "November 3, 2026",
+  "titel_de": "Claude-Text trägt jetzt Anthropics Text-Wasserzeichen",
+  "kurz_de": "Von Claude Mythos 5, Opus 4.7 und Sonnet 4.6 erzeugter Text trägt Anthropics Text-Wasserzeichen. Bei Sonnet 4.6 fehlt es evtl., wenn temperature, top_p oder top_k vom Standard abweichen.",
+  "briefing_de": "Neu in den Platform Release Notes vom 3. November 2026:\n- Text von Claude Mythos 5, Claude Opus 4.7 und Claude Sonnet 4.6 trägt Anthropics Text-Wasserzeichen, auf den Plattformen, die im Support-Artikel „How Claude marks AI-generated content“ aufgelistet sind.\n- Ausnahme: Bei Claude Sonnet 4.6 kann Text für Anfragen, die temperature, top_p oder top_k auf einen Nicht-Standardwert setzen, das Wasserzeichen eventuell nicht tragen.\n- Es gibt jetzt eine eigene Doku-Seite „Text watermark“ in der Platform-Doku.",
+  "bereich": "api",
+  "datum": "2026-11-03",
+  "wichtig": false
+}
