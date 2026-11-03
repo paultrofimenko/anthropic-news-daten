@@ -1,0 +1,12 @@
+{
+  "id": "provable-inference-flashprove",
+  "quelle": "anthropic",
+  "url": "https://www.anthropic.com/research/provable-inference",
+  "titel_original": "Progress on provable inference for large language models",
+  "titel_de": "FlashProve: Beweise, dass eine Antwort vom richtigen Modell stammt",
+  "kurz_de": "Anthropic stellt FlashProve vor, einen Open-Source-Prototyp für kryptografische Inferenz-Beweise (zkSNARK): Ein Nutzer kann prüfen, dass eine Antwort vom zugesagten Modell stammt.",
+  "briefing_de": "Anthropic zeigt Fortschritte bei „provable inference“ – kryptografischen Beweisen, dass eine Antwort vom behaupteten Modell erzeugt wurde, ohne die Gewichte zu verraten:\n- Das System FlashProve nutzt zkSNARKs. Für Llama 4 Maverick (400B, Mixture-of-Experts, 4-Bit-Gewichte) erzeugt eine H100-GPU Beweise mit rund 110 Tokens/Sekunde; ein Beweis ist ca. 19 MB groß pro Anfrage mit 1.024 Tokens. Das sind ca. 70–95× die GPU-Zeit von vLLM.\n- Veröffentlicht sind Blogpost, technischer Bericht, Protokollbeschreibung, Code (Prover, schneller Verifier in C++, Verifier in Lean) und Lean-Beweise unter Apache 2.0.\n- Grenzen: Prototyp; Beweis gilt für ein Integer-Modell bei Greedy-Decoding; es wird MoE vorausgesetzt; Kontexte nur bis 1.024 Tokens; Seitenkanalangriffe sind nicht abgedeckt.\n- Mögliche Anwendungen laut Anthropic: Prüfung durch unabhängige Evaluatoren, Schutz vor heimlich ausgetauschten Modellen bei Routing-Diensten sowie Werkzeuge für Auditoren und Regulierer.",
+  "bereich": "forschung",
+  "datum": "2026-11-02",
+  "wichtig": false
+}
