@@ -1,0 +1,12 @@
+{
+  "id": "provable-inference",
+  "quelle": "anthropic",
+  "url": "https://www.anthropic.com/research/provable-inference",
+  "titel_original": "Provable inference for large language models",
+  "titel_de": "Provable Inference: Beweisbar das richtige Modell",
+  "kurz_de": "Das Frontier Red Team stellt FlashProve vor, einen quelloffenen Prototyp, der per zkSNARK beweist, dass eine Antwort vom zugesagten Modell stammt. Bisher bis 1.024 Token und ein Zwischenstand.",
+  "briefing_de": "Anthropic zeigt, wie sich prüfen lässt, ob eine Antwort wirklich vom angegebenen Modell kommt – ohne die Gewichte preiszugeben.\n- Der Anbieter legt sich per Commitment auf ein Modell fest und liefert zu jeder Antwort einen kryptografischen Beweis (zkSNARK). Die Architektur bleibt sichtbar, die Gewichte nicht.\n- Der Prototyp FlashProve ist quelloffen (Apache-2.0, mit Lean-Beweisen und technischem Bericht). Gemessen mit Llama 4 Maverick (400B-MoE, 4-Bit): etwa 110 Token/s auf einer H100, rund 19 MB Beweis je 1.024-Token-Anfrage, 70–95-fache GPU-Zeit gegenüber reiner Inferenz mit vLLM. Die Prüfung eines Beweises dauert 17 s (24 Threads) bzw. 21 s (1 Thread), ohne GPU.\n- Einschränkungen laut Artikel: nur Kontexte bis 1.024 Token, exakte Integer-Version mit Greedy-Decoding (Gleitkomma oder gesampelte Ausgaben können abweichen), setzt MoE-Architektur voraus, Seitenkanäle nicht abgedeckt, schneller Code ohne formale Garantie und Prover nicht formal verifiziert.\n- Die Autoren nennen es ausdrücklich einen Zwischenstand. Anthropic spricht nun von „Inference Verification“.",
+  "bereich": "forschung",
+  "datum": "2026-11-02",
+  "wichtig": false
+}
