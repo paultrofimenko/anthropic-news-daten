@@ -1,7 +1,7 @@
 {
  "version": 1,
- "erzeugt": "2026-11-03T17:06:28.949Z",
- "anzahl": 108,
+ "erzeugt": "2026-11-03T23:26:32.186Z",
+ "anzahl": 109,
  "beitraege": [
   {
    "id": "claude-code-2-1-317",
@@ -13,6 +13,18 @@
    "briefing_de": "Neu in Fassung 2.1.317:\n- Claude-apps-Gateway: Die Admin-API hat einen Kostenbericht, GET /v1/organizations/analytics/cost, für vergangene Ausgaben über einen Datumsbereich – gesamt, je Entwickler, je Tag oder je IdP-Gruppe. Dafür speichert ein Gateway mit gesetztem admin: täglich die IdP-Gruppen jedes Entwicklers, aufbewahrt für admin.identity_retention_days.\n- Agent SDK: onFailure: \"block\" für Hook-Callbacks – schlägt ein Callback fehl, wird die Aktion blockiert statt ausgeführt.\n- Sicherheit und Hinweise: Eine Rückfrage erscheint, bevor ein Web- oder Shell-Tool-Aufruf deine Konto-E-Mail-Adresse ans Netz sendet. /schedule warnt, wenn eine neue geplante Cloud-Aufgabe Connectoren bekommt, um die du nicht gebeten hast, und sagt, wie man sie entfernt. Neue Hinweise gibt es in Claude Desktops Code-Tab (Remote Managed Settings noch nicht geladen bzw. geladen) und beim Auto Mode, wenn sein Check für einen Subagent-Tool-Aufruf keine Antwort hat.\n- OTel: Metriken, Events und Spans bekommen anthropic.plan, anthropic.seat_type, anthropic.provider und anthropic.custom_base_url. Neue Variable CLAUDE_CODE_DISABLE_NESTED_SESSION_ID=1 (auf einem selbst gehosteten Runner): claude -p innerhalb einer Sitzung nutzt deren Sitzungs-ID und Transkript wie in früheren Fassungen.\n- Fixes u. a.: claude -p beendet sich mit Code 1 (Text- und JSON-Ausgabe), wenn volle Platte oder Quota das Transkript oder Schreibvorgänge in ~/.claude.json verloren hat (volle NFS-Exporte werden eventuell nicht erkannt); claude auth status beendet sich nicht mehr vor einem langsamen Token-Refresh; Auto Mode scheitert nicht mehr bei einem LLM-Gateway, das auf seinen serverseitigen Sicherheitscheck 403 oder 422 antwortet (403 mit apiKeyHelper unverändert); /design-sync meldet vorab, wenn dein Design System zu Claude umgezogen ist; OTel-Exporte über Proxys hängen nicht mehr (Timeout 10 s, per OTEL_EXPORTER_OTLP_TIMEOUT bis 30 s).\n- Dazu viele weitere Fixes zu MCP-Servern, Agent Teams, Kompaktierung, Hintergrundsitzungen und Barrierefreiheit.",
    "arbeitsweise_de": "Wer ein Claude-apps-Gateway betreibt, kann vergangene Kosten jetzt über die Admin-API abfragen und nach Entwickler, Tag oder IdP-Gruppe aufschlüsseln – die Gruppen-Aufschlüsselung setzt voraus, dass admin: gesetzt ist. Wer Agent-SDK-Hooks als Schutz nutzt, kann mit onFailure: \"block\" erreichen, dass ein fehlgeschlagener Callback die Aktion stoppt. Wer claude -p in Skripten nutzt, sollte beachten, dass es bei verlorenen Schreibvorgängen nun mit Code 1 endet.",
    "bereich": "claude-code",
+   "datum": "2026-11-03",
+   "wichtig": false
+  },
+  {
+   "id": "text-wasserzeichen-claude",
+   "quelle": "platform-release-notes",
+   "url": "https://platform.claude.com/docs/en/release-notes/overview",
+   "titel_original": "November 3, 2026",
+   "titel_de": "Claude-Text trägt jetzt Anthropics Text-Wasserzeichen",
+   "kurz_de": "Von Claude Mythos 5, Opus 4.7 und Sonnet 4.6 erzeugter Text trägt Anthropics Text-Wasserzeichen. Bei Sonnet 4.6 fehlt es evtl., wenn temperature, top_p oder top_k vom Standard abweichen.",
+   "briefing_de": "Neu in den Platform Release Notes vom 3. November 2026:\n- Text von Claude Mythos 5, Claude Opus 4.7 und Claude Sonnet 4.6 trägt Anthropics Text-Wasserzeichen, auf den Plattformen, die im Support-Artikel „How Claude marks AI-generated content“ aufgelistet sind.\n- Ausnahme: Bei Claude Sonnet 4.6 kann Text für Anfragen, die temperature, top_p oder top_k auf einen Nicht-Standardwert setzen, das Wasserzeichen eventuell nicht tragen.\n- Es gibt jetzt eine eigene Doku-Seite „Text watermark“ in der Platform-Doku.",
+   "bereich": "api",
    "datum": "2026-11-03",
    "wichtig": false
   },
