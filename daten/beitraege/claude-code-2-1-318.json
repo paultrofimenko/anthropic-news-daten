@@ -1,0 +1,13 @@
+{
+  "id": "claude-code-2-1-318",
+  "quelle": "code-changelog",
+  "url": "https://code.claude.com/docs/en/changelog",
+  "titel_original": "Claude Code 2.1.318",
+  "titel_de": "Claude Code 2.1.318: Anmelde-Ablaufdatum, effort für Mods und viele Fixes",
+  "kurz_de": "Fassung 2.1.318 zeigt das Ende einer gespeicherten claude.ai-Anmeldung an, erlaubt effort bei $.model.fork in Mods und behebt viele Fehler bei Konfiguration und Sitzungen.",
+  "briefing_de": "Neu in Fassung 2.1.318:\n- Das Ablaufdatum einer gespeicherten claude.ai-Anmeldung steht in `claude auth status` (`loginExpiresAt`) und in den JSON-Ergebnissen von `claude -p` (`credential_expires_at`); `claude -p` warnt 10 Tage vorher einzeilig auf stderr.\n- Ein Mod kann bei `$.model.fork` eine `effort`-Option setzen, sodass ein kurzer Nebenauftrag unabhängig vom Effort der Sitzung auf `low` läuft; das Ergebnis nennt den gesendeten Effort.\n- Neu: `assume_role` bei `mantle`-Upstreams des Claude-apps-Gateways, für eine Rolle in einem anderen AWS-Konto und für AWS-Kostenzuordnung pro Entwickler.\n- Viele Fixes: `~/.claude.json`, Einstellungen und gespeicherte Anmeldung überstehen das Speichern auf geteilten Netzwerk-Home-Verzeichnissen besser; `--continue` verliert nach abgebrochenen Wiederholungen eines fehlerhaften Tool-Aufrufs nicht mehr das frühere Gespräch (Regression in 2.1.314).\n- Geändert: Claude Code installiert oder aktualisiert die IDE-Erweiterung nicht mehr, wenn es in einem IDE-Terminal startet (stattdessen `/ide` aus einem externen Terminal oder die Erweiterungsansicht des Editors); Hintergrund-Subagents schieben einen Shell-Befehl auf allen Providern nach 3 Minuten in den Hintergrund.",
+  "arbeitsweise_de": "Wer Claude Code in Skripten mit `claude -p` betreibt, kann das Ablaufdatum der gespeicherten claude.ai-Anmeldung jetzt auslesen und rechtzeitig `claude auth login` oder `claude setup-token` einplanen. Wer die IDE-Erweiterung bisher über ein IDE-Terminal installiert hat, nutzt künftig `/ide` aus einem externen Terminal oder die Erweiterungsansicht des Editors.",
+  "bereich": "claude-code",
+  "datum": "2026-11-04",
+  "wichtig": false
+}
