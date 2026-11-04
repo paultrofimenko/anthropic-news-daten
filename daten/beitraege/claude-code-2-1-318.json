@@ -1,0 +1,13 @@
+{
+  "id": "claude-code-2-1-318",
+  "quelle": "code-changelog",
+  "url": "https://code.claude.com/docs/en/changelog",
+  "titel_original": "Claude Code 2.1.318",
+  "titel_de": "Claude Code 2.1.318: Effort für Mod-Forks, Login-Ablauf und viele Fixes",
+  "kurz_de": "Fassung 2.1.318 bringt eine effort-Option für $.model.fork in Mods, das Ablaufdatum des claude.ai-Logins in claude auth status und viele Fixes rund um Konfiguration und Login.",
+  "briefing_de": "Neu in Fassung 2.1.318:\n- Mods: $.model.fork hat eine effort-Option, so läuft ein kurzer Nebenauftrag auf low, egal welchen Effort die Sitzung nutzt; das Ergebnis nennt den gesendeten Effort.\n- Das Ablaufdatum eines gespeicherten claude.ai-Logins steht in claude auth status (loginExpiresAt) und in den JSON-Ergebnissen von claude -p (credential_expires_at); claude -p warnt ab 10 Tagen vor dem Ende per stderr.\n- Neu: assume_role bei mantle-Upstreams des Claude-Apps-Gateways, für eine Rolle in einem anderen AWS-Konto und AWS-Kostenzuordnung je Entwickler.\n- Viele Fixes: ~/.claude.json, Einstellungen und Login überstehen Speichern auf gemeinsamen Netzwerk-Home-Verzeichnissen besser; --continue verliert nach fehlgeschlagenen Wiederholungen eines fehlerhaften Tool-Aufrufs den früheren Verlauf nicht mehr (Regression in 2.1.314).\n- Geändert: Die IDE-Erweiterung wird nicht mehr installiert oder aktualisiert, wenn Claude Code in einem IDE-Terminal startet; nutze /ide aus einem externen Terminal oder die Erweiterungsansicht des Editors.",
+  "arbeitsweise_de": "Wer Claude Code unbeaufsichtigt mit claude -p oder dem Agent SDK betreibt, kann das Ablaufdatum des claude.ai-Logins jetzt abfragen und rechtzeitig claude auth login oder claude setup-token nutzen. Wer die IDE-Erweiterung bisher über das IDE-Terminal installieren oder aktualisieren ließ, muss das nun über /ide aus einem Terminal außerhalb der IDE oder über den Editor erledigen.",
+  "bereich": "claude-code",
+  "datum": "2026-11-04",
+  "wichtig": false
+}
