@@ -1,0 +1,13 @@
+{
+  "id": "ip-allowlist-beta",
+  "quelle": "platform-release-notes",
+  "url": "https://platform.claude.com/docs/en/manage-claude/ip-allowlist",
+  "titel_original": "IP allowlisting (beta)",
+  "titel_de": "IP-Allowlist für die Organisation in der Console (Beta)",
+  "kurz_de": "In der Claude Console lässt sich in der Beta eine IP-Allowlist einrichten: Anfragen von Adressen außerhalb der Liste werden abgelehnt. Bis zu 1.000 IPv4-/IPv6-Einträge oder CIDR-Bereiche je Organisation.",
+  "briefing_de": "Die Liste gilt für die ganze Organisation und begrenzt, von wo ein (z. B. geleakter) API-Key genutzt werden kann.\n- Eingetragen werden IPv4- und IPv6-Adressen oder CIDR-Bereiche (höchstens /8 bei IPv4, /32 bei IPv6), bis zu 1.000 Einträge.\n- Auf Claude Platform gilt sie für die Console und für Messages, Message Batches, Token Counting, Models, Files und Skills, für mehrere Managed-Agents-Endpunkte sowie für Admin API und Compliance API (mit einem Key, der nur diese Organisation abdeckt). Nicht erlaubte Anfragen bekommen z. B. bei der Messages API einen 403 `permission_error`.\n- Claude Enterprise hat eine eigene Allowlist, die u. a. Claude im Browser, Desktop- und Mobile-Apps sowie Claude Code mit Claude-Konto abdeckt; Owner und Primary Owner richten sie ein.\n- Admins werden bei einer nicht erlaubten Adresse ebenfalls ausgesperrt; die Doku beschreibt optional einen Weg zurück, um das zu vermeiden. Die Funktion ist in Beta, Einstellungen und Verhalten können sich ändern. Laut Doku ersetzt die Liste keine kurze Key-Laufzeit oder Workload Identity Federation.",
+  "arbeitsweise_de": "Wer die Allowlist einschaltet, trägt vorher alle Netze ein (Rechenzentren, CI, Büros, VPNs, Proxys, Sandboxes) – Heim- und Mobilfunk-Adressen können sich unangekündigt ändern. Gilt nur für die in der Doku genannten Dienste.",
+  "bereich": "unternehmen",
+  "datum": "2026-11-05",
+  "wichtig": false
+}

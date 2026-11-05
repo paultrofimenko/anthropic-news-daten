@@ -1,0 +1,13 @@
+{
+  "id": "admin-api-nutzer-abmelden",
+  "quelle": "platform-release-notes",
+  "url": "https://platform.claude.com/docs/en/manage-claude/user-management#sign-a-member-out-everywhere",
+  "titel_original": "Sign a member out everywhere (Admin API, beta)",
+  "titel_de": "Admin API: Mitglieder überall abmelden (Beta)",
+  "kurz_de": "Neu in der Beta: Mit POST /v1/organizations/users/{user_id}/sign_out meldest du ein Claude-Enterprise-Mitglied auf allen Geräten ab. Pflicht-Beta-Header: admin-user-sign-out-2026-10-08.",
+  "briefing_de": "- Der Endpunkt gilt für Claude-Enterprise-Organisationen (claude.ai) und braucht den Scope `write:members`.\n- Jede Anfrage muss den Header `anthropic-beta: admin-user-sign-out-2026-10-08` enthalten, sonst gibt es 400.\n- Beendet werden Sitzungen, vertrauenswürdige Geräte und OAuth-Tokens für die Organisation; laut Doku reicht die Abmeldung aber an das ganze Claude-Konto, auch Sitzungen in anderen Organisationen und auf einem Einzelplan.\n- Das Mitglied bleibt in der Organisation und kann sich sofort wieder anmelden. Dauerhaft aussperren: entfernen oder bei SSO den Account im Identity Provider deaktivieren.\n- Funktioniert bei jedem SSO-Modus.",
+  "arbeitsweise_de": "Nützlich bei verlorenen Geräten oder Sicherheitsvorfällen. Der Key muss vorher angelegt werden und gilt nur in der Organisation, in der er erstellt wurde. Hat dein SDK den Endpunkt noch nicht, sende die Anfrage per HTTP mit dem Header. Gilt nicht für Claude-Console-Organisationen.",
+  "bereich": "unternehmen",
+  "datum": "2026-11-05",
+  "wichtig": false
+}

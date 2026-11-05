@@ -1,0 +1,12 @@
+{
+  "id": "analytics-api-doku-sammlung",
+  "quelle": "platform-doku",
+  "url": "https://platform.claude.com/docs/en/api/organization/analytics",
+  "titel_original": "41 new entries in the Claude Platform docs (Analytics API)",
+  "titel_de": "Analytics-API-Referenz: 41 neue Doku-Seiten",
+  "kurz_de": "Die Platform-Doku hat 41 neue Seiten zur Analytics-API der Organisation, u. a. zu Zusammenfassungen, Nutzern, Chat-Projekten und Connectors.",
+  "briefing_de": "Neu ist der Bereich „Analytics“ in der API-Referenz (`/v1/organizations/analytics/…`). Erfasste Beispiele: Summaries, Users, Apps/Chat/Projects und Connectors.\n- „Get Activity Summaries“ liefert organisationsweite Tageswerte für einen Zeitraum von höchstens 366 Tagen, frühestens ab 2026-01-01.\n- Verfügbar für Organisationen mit Claude-Enterprise-Plan; der Key braucht den Scope `read:analytics`.\n- Daten kommen typischerweise mit einem Tag Verzögerung und können in den Folgetagen um wenige Prozent korrigiert werden.\n- Filtern lässt sich nach RBAC-Gruppe (`filter[]=rbac_group_id:…`).",
+  "bereich": "api",
+  "datum": "2026-11-05",
+  "wichtig": false
+}
