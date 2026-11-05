@@ -1,0 +1,12 @@
+{
+  "id": "guest-pass-bedingungen",
+  "quelle": "anthropic",
+  "url": "https://www.anthropic.com/legal/guest-pass-terms",
+  "titel_original": "Guest Pass Terms",
+  "titel_de": "Bedingungen für Claude-Gästepässe",
+  "kurz_de": "Anthropic veröffentlicht Bedingungen für Claude-Gästepässe: Abonnenten können Bekannte einladen, standardmäßig mit 7 Tagen Claude Pro gratis. Gültig ab 5. Nov 2026.",
+  "briefing_de": "Ein Guest Pass lässt berechtigte Claude-Nutzer (Referrer) anderen (Guests) Zugang zu einem Plan oder Feature geben. Ohne andere Angabe im Angebot: 7 Tage kostenlos Claude Pro.\n- Berechtigt sind, sofern das Angebot nichts anderes sagt, Pro- und Max-Abonnenten mit mindestens 31 Tagen Abo. Der Empfehlungslink funktioniert nur, solange man berechtigt bleibt; bei Kündigung oder Downgrade werden unbenutzte Pässe unverfügbar.\n- Einlösen dürfen nur Personen, die noch nie ein bezahltes Abo oder eine Testphase eines Claude-Produkts hatten (auch über Team oder Enterprise); eins pro Person und Konto. Ohne Kündigung vor Ende der Testphase läuft der Plan als bezahltes Abo zum dann gültigen Standardpreis weiter.\n- Belohnung für den Referrer, falls das Angebot sie vorsieht: standardmäßig erst, wenn der Guest zahlender Abonnent wird, nicht schon bei Einlösung oder Teststart. Promo-Guthaben verfällt ohne andere Angabe nach 90 Tagen und entfällt bei Kündigung oder Downgrade auf Free.\n- Verboten: Pässe oder Link verkaufen, auf Gutschein-/Deal-Seiten posten, massenhaft oder automatisiert verteilen, sich selbst einlösen. Wer öffentlich teilt, muss eine mögliche Belohnung offenlegen. Anthropic kann das Programm jederzeit ändern oder beenden.",
+  "bereich": "richtlinien",
+  "datum": "2026-11-05",
+  "wichtig": false
+}

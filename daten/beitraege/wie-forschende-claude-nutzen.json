@@ -1,0 +1,12 @@
+{
+  "id": "wie-forschende-claude-nutzen",
+  "quelle": "anthropic",
+  "url": "https://www.anthropic.com/research/how-researchers-use-claude",
+  "titel_original": "How scientists use Claude",
+  "titel_de": "Wie Forschende Claude nutzen",
+  "kurz_de": "Anthropic wertet 207.000 Forschungs-Sitzungen mit Claude und Claude Code aus: Meist geht es um Datenanalyse und Schreiben, am stärksten in Informatik, Mathematik und Statistik.",
+  "briefing_de": "Studie des Economics-Teams mit datenschutzschonender Methode: 207.000 Sitzungen auf Claude und Claude Code (Verbraucher-Pläne).\n- Gemessen an der Zahl der Forschenden nutzen formale Wissenschaften (Informatik, Mathematik, Statistik) Claude mehr, Gesundheit und Labor-Naturwissenschaften weniger.\n- Datenanalyse macht rund ein Drittel der Sitzungen auf Claude aus und fast die Hälfte auf Claude Code. Ideenfindung und Datensammlung kommen seltener vor, obwohl Befragte sie als wichtigste Aufgaben für Entdeckungen einstufen. Auf Claude Science ist der Anteil der Ideenfindung etwa doppelt so hoch wie auf Claude.\n- Aufgaben, die sich laut Anthropics Maß am besten für KI eignen (oberste 20 %), erhalten zwei- bis viermal so viel Nutzung, wie der Zeitaufwand der Forschenden erwarten ließe.\n- Szenarien: Bei breiter Nutzung heutiger Fähigkeiten könnte der Output in manchen Fächern auf das Doppelte steigen; automatisierte nichtphysische Arbeit könnte ihn in Informatik und Statistik bis auf das 15-Fache heben, in Chemie und Biologie auf das Drei- bis Vierfache. Rund 40 % der befragten KI-nutzenden Forschenden erwarten bis 2030 eigenständige Forschungsprojekte durch KI-Modelle.",
+  "bereich": "forschung",
+  "datum": "2026-11-05",
+  "wichtig": false
+}
