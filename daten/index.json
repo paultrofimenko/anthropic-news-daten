@@ -1,7 +1,7 @@
 {
  "version": 1,
- "erzeugt": "2026-11-05T17:26:59.092Z",
- "anzahl": 114,
+ "erzeugt": "2026-11-05T23:40:30.706Z",
+ "anzahl": 116,
  "beitraege": [
   {
    "id": "admin-api-nutzer-abmelden",
@@ -29,6 +29,18 @@
    "wichtig": false
   },
   {
+   "id": "guest-pass-bedingungen",
+   "quelle": "anthropic",
+   "url": "https://www.anthropic.com/legal/guest-pass-terms",
+   "titel_original": "Guest Pass Terms",
+   "titel_de": "Bedingungen für Claude-Gästepässe",
+   "kurz_de": "Anthropic veröffentlicht Bedingungen für Claude-Gästepässe: Abonnenten können Bekannte einladen, standardmäßig mit 7 Tagen Claude Pro gratis. Gültig ab 5. Nov 2026.",
+   "briefing_de": "Ein Guest Pass lässt berechtigte Claude-Nutzer (Referrer) anderen (Guests) Zugang zu einem Plan oder Feature geben. Ohne andere Angabe im Angebot: 7 Tage kostenlos Claude Pro.\n- Berechtigt sind, sofern das Angebot nichts anderes sagt, Pro- und Max-Abonnenten mit mindestens 31 Tagen Abo. Der Empfehlungslink funktioniert nur, solange man berechtigt bleibt; bei Kündigung oder Downgrade werden unbenutzte Pässe unverfügbar.\n- Einlösen dürfen nur Personen, die noch nie ein bezahltes Abo oder eine Testphase eines Claude-Produkts hatten (auch über Team oder Enterprise); eins pro Person und Konto. Ohne Kündigung vor Ende der Testphase läuft der Plan als bezahltes Abo zum dann gültigen Standardpreis weiter.\n- Belohnung für den Referrer, falls das Angebot sie vorsieht: standardmäßig erst, wenn der Guest zahlender Abonnent wird, nicht schon bei Einlösung oder Teststart. Promo-Guthaben verfällt ohne andere Angabe nach 90 Tagen und entfällt bei Kündigung oder Downgrade auf Free.\n- Verboten: Pässe oder Link verkaufen, auf Gutschein-/Deal-Seiten posten, massenhaft oder automatisiert verteilen, sich selbst einlösen. Wer öffentlich teilt, muss eine mögliche Belohnung offenlegen. Anthropic kann das Programm jederzeit ändern oder beenden.",
+   "bereich": "richtlinien",
+   "datum": "2026-11-05",
+   "wichtig": false
+  },
+  {
    "id": "ip-allowlist-beta",
    "quelle": "platform-release-notes",
    "url": "https://platform.claude.com/docs/en/manage-claude/ip-allowlist",
@@ -38,6 +50,18 @@
    "briefing_de": "Die Liste gilt für die ganze Organisation und begrenzt, von wo ein (z. B. geleakter) API-Key genutzt werden kann.\n- Eingetragen werden IPv4- und IPv6-Adressen oder CIDR-Bereiche (höchstens /8 bei IPv4, /32 bei IPv6), bis zu 1.000 Einträge.\n- Auf Claude Platform gilt sie für die Console und für Messages, Message Batches, Token Counting, Models, Files und Skills, für mehrere Managed-Agents-Endpunkte sowie für Admin API und Compliance API (mit einem Key, der nur diese Organisation abdeckt). Nicht erlaubte Anfragen bekommen z. B. bei der Messages API einen 403 `permission_error`.\n- Claude Enterprise hat eine eigene Allowlist, die u. a. Claude im Browser, Desktop- und Mobile-Apps sowie Claude Code mit Claude-Konto abdeckt; Owner und Primary Owner richten sie ein.\n- Admins werden bei einer nicht erlaubten Adresse ebenfalls ausgesperrt; die Doku beschreibt optional einen Weg zurück, um das zu vermeiden. Die Funktion ist in Beta, Einstellungen und Verhalten können sich ändern. Laut Doku ersetzt die Liste keine kurze Key-Laufzeit oder Workload Identity Federation.",
    "arbeitsweise_de": "Wer die Allowlist einschaltet, trägt vorher alle Netze ein (Rechenzentren, CI, Büros, VPNs, Proxys, Sandboxes) – Heim- und Mobilfunk-Adressen können sich unangekündigt ändern. Gilt nur für die in der Doku genannten Dienste.",
    "bereich": "unternehmen",
+   "datum": "2026-11-05",
+   "wichtig": false
+  },
+  {
+   "id": "wie-forschende-claude-nutzen",
+   "quelle": "anthropic",
+   "url": "https://www.anthropic.com/research/how-researchers-use-claude",
+   "titel_original": "How scientists use Claude",
+   "titel_de": "Wie Forschende Claude nutzen",
+   "kurz_de": "Anthropic wertet 207.000 Forschungs-Sitzungen mit Claude und Claude Code aus: Meist geht es um Datenanalyse und Schreiben, am stärksten in Informatik, Mathematik und Statistik.",
+   "briefing_de": "Studie des Economics-Teams mit datenschutzschonender Methode: 207.000 Sitzungen auf Claude und Claude Code (Verbraucher-Pläne).\n- Gemessen an der Zahl der Forschenden nutzen formale Wissenschaften (Informatik, Mathematik, Statistik) Claude mehr, Gesundheit und Labor-Naturwissenschaften weniger.\n- Datenanalyse macht rund ein Drittel der Sitzungen auf Claude aus und fast die Hälfte auf Claude Code. Ideenfindung und Datensammlung kommen seltener vor, obwohl Befragte sie als wichtigste Aufgaben für Entdeckungen einstufen. Auf Claude Science ist der Anteil der Ideenfindung etwa doppelt so hoch wie auf Claude.\n- Aufgaben, die sich laut Anthropics Maß am besten für KI eignen (oberste 20 %), erhalten zwei- bis viermal so viel Nutzung, wie der Zeitaufwand der Forschenden erwarten ließe.\n- Szenarien: Bei breiter Nutzung heutiger Fähigkeiten könnte der Output in manchen Fächern auf das Doppelte steigen; automatisierte nichtphysische Arbeit könnte ihn in Informatik und Statistik bis auf das 15-Fache heben, in Chemie und Biologie auf das Drei- bis Vierfache. Rund 40 % der befragten KI-nutzenden Forschenden erwarten bis 2030 eigenständige Forschungsprojekte durch KI-Modelle.",
+   "bereich": "forschung",
    "datum": "2026-11-05",
    "wichtig": false
   },
