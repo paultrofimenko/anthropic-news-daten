@@ -1,7 +1,7 @@
 {
  "version": 1,
- "erzeugt": "2026-11-04T17:17:27.493Z",
- "anzahl": 110,
+ "erzeugt": "2026-11-05T06:52:06.014Z",
+ "anzahl": 111,
  "beitraege": [
   {
    "id": "claude-code-2-1-318",
@@ -13,6 +13,18 @@
    "briefing_de": "Neu in Fassung 2.1.318:\n- Mods: $.model.fork hat eine effort-Option, so läuft ein kurzer Nebenauftrag auf low, egal welchen Effort die Sitzung nutzt; das Ergebnis nennt den gesendeten Effort.\n- Das Ablaufdatum eines gespeicherten claude.ai-Logins steht in claude auth status (loginExpiresAt) und in den JSON-Ergebnissen von claude -p (credential_expires_at); claude -p warnt ab 10 Tagen vor dem Ende per stderr.\n- Neu: assume_role bei mantle-Upstreams des Claude-Apps-Gateways, für eine Rolle in einem anderen AWS-Konto und AWS-Kostenzuordnung je Entwickler.\n- Viele Fixes: ~/.claude.json, Einstellungen und Login überstehen Speichern auf gemeinsamen Netzwerk-Home-Verzeichnissen besser; --continue verliert nach fehlgeschlagenen Wiederholungen eines fehlerhaften Tool-Aufrufs den früheren Verlauf nicht mehr (Regression in 2.1.314).\n- Geändert: Die IDE-Erweiterung wird nicht mehr installiert oder aktualisiert, wenn Claude Code in einem IDE-Terminal startet; nutze /ide aus einem externen Terminal oder die Erweiterungsansicht des Editors.",
    "arbeitsweise_de": "Wer Claude Code unbeaufsichtigt mit claude -p oder dem Agent SDK betreibt, kann das Ablaufdatum des claude.ai-Logins jetzt abfragen und rechtzeitig claude auth login oder claude setup-token nutzen. Wer die IDE-Erweiterung bisher über das IDE-Terminal installieren oder aktualisieren ließ, muss das nun über /ide aus einem Terminal außerhalb der IDE oder über den Editor erledigen.",
    "bereich": "claude-code",
+   "datum": "2026-11-04",
+   "wichtig": false
+  },
+  {
+   "id": "vault-partikel-mit-claude",
+   "quelle": "anthropic",
+   "url": "https://www.anthropic.com/research/investigating-vault-particles-with-claude",
+   "titel_original": "Investigating vault particles with Claude",
+   "titel_de": "Claude hilft, die 3D-Struktur eines Vault-Partikels aus Phagen zu klären",
+   "kurz_de": "Anthropics Biologie-Team hat mit Claude die erste 3D-Struktur eines Vault-Partikels aus Prokaryoten bestimmt. Die Reinigung dauerte etwa 90 Minuten statt drei Tagen; die Funktion von Vaults bleibt unbekannt.",
+   "briefing_de": "Vaults sind große, hohle Proteinhüllen in Zellen; ihre Funktion ist seit der Entdeckung 1986 ungeklärt.\n- Das Team fand Vault-Proteine in 29 Bakterien-Phyla und vier Archaeen-Phyla (in weniger als 1 % der Arten mit sequenziertem Genom) und bestimmte per Kryo-EM die Struktur eines Phagen-Vaults (L05): 96 Kopien eines Proteins, etwa 9,5 Megadalton, rund 54 nm lang und 45 nm breit.\n- Claude suchte in Proteindatenbanken, entwarf die DNA-Konstrukte, optimierte die Isolierung und verarbeitete die Mikroskopiedaten. Die Reinigung dauerte etwa 90 Minuten statt etwa drei Tagen, ein erstes Strukturmodell lag 34 Stunden später vor.\n- Mit zwei zusätzlichen Segmenten wuchs der eingeschlossene Raum um etwa 20 %; einzelne Änderungen nahe der Kappe verhinderten das Schließen der Hülle.\n- Grenzen: Die biologische Funktion der Vaults ist weiter unbekannt. Das Preprint ist bei bioRxiv eingereicht; Strukturen und weitere Daten sollen später folgen.",
+   "bereich": "forschung",
    "datum": "2026-11-04",
    "wichtig": false
   },
