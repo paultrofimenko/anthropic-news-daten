@@ -2761,6 +2761,7 @@
    "anthropic.com/research/introducing-anthropic-science",
    "anthropic.com/research/introspection",
    "anthropic.com/research/investigating-unintended-model-actions",
+   "anthropic.com/research/investigating-vault-particles-with-claude",
    "anthropic.com/research/labor-market-impacts",
    "anthropic.com/research/language-models-mostly-know-what-they-know",
    "anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source",
@@ -3037,7 +3038,8 @@
     "2187053245"
    ],
    "October 30, 2026": [
-    "ddf770551d"
+    "ddf770551d",
+    "1ae761ebe0"
    ],
    "October 29, 2026": [
     "9e69334be1",
@@ -3088,5 +3090,11 @@
    ]
   },
   "zeilenVersion": 2
+ },
+ "_stoerungen": {
+  "platform-doku": {
+   "anzahl": 1,
+   "deckel": true
+  }
  }
 }
