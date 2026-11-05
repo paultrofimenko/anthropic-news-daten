@@ -1,8 +1,46 @@
 {
  "version": 1,
- "erzeugt": "2026-11-05T06:52:06.014Z",
- "anzahl": 111,
+ "erzeugt": "2026-11-05T17:26:59.092Z",
+ "anzahl": 114,
  "beitraege": [
+  {
+   "id": "admin-api-nutzer-abmelden",
+   "quelle": "platform-release-notes",
+   "url": "https://platform.claude.com/docs/en/manage-claude/user-management#sign-a-member-out-everywhere",
+   "titel_original": "Sign a member out everywhere (Admin API, beta)",
+   "titel_de": "Admin API: Mitglieder überall abmelden (Beta)",
+   "kurz_de": "Neu in der Beta: Mit POST /v1/organizations/users/{user_id}/sign_out meldest du ein Claude-Enterprise-Mitglied auf allen Geräten ab. Pflicht-Beta-Header: admin-user-sign-out-2026-10-08.",
+   "briefing_de": "- Der Endpunkt gilt für Claude-Enterprise-Organisationen (claude.ai) und braucht den Scope `write:members`.\n- Jede Anfrage muss den Header `anthropic-beta: admin-user-sign-out-2026-10-08` enthalten, sonst gibt es 400.\n- Beendet werden Sitzungen, vertrauenswürdige Geräte und OAuth-Tokens für die Organisation; laut Doku reicht die Abmeldung aber an das ganze Claude-Konto, auch Sitzungen in anderen Organisationen und auf einem Einzelplan.\n- Das Mitglied bleibt in der Organisation und kann sich sofort wieder anmelden. Dauerhaft aussperren: entfernen oder bei SSO den Account im Identity Provider deaktivieren.\n- Funktioniert bei jedem SSO-Modus.",
+   "arbeitsweise_de": "Nützlich bei verlorenen Geräten oder Sicherheitsvorfällen. Der Key muss vorher angelegt werden und gilt nur in der Organisation, in der er erstellt wurde. Hat dein SDK den Endpunkt noch nicht, sende die Anfrage per HTTP mit dem Header. Gilt nicht für Claude-Console-Organisationen.",
+   "bereich": "unternehmen",
+   "datum": "2026-11-05",
+   "wichtig": false
+  },
+  {
+   "id": "analytics-api-doku-sammlung",
+   "quelle": "platform-doku",
+   "url": "https://platform.claude.com/docs/en/api/organization/analytics",
+   "titel_original": "41 new entries in the Claude Platform docs (Analytics API)",
+   "titel_de": "Analytics-API-Referenz: 41 neue Doku-Seiten",
+   "kurz_de": "Die Platform-Doku hat 41 neue Seiten zur Analytics-API der Organisation, u. a. zu Zusammenfassungen, Nutzern, Chat-Projekten und Connectors.",
+   "briefing_de": "Neu ist der Bereich „Analytics“ in der API-Referenz (`/v1/organizations/analytics/…`). Erfasste Beispiele: Summaries, Users, Apps/Chat/Projects und Connectors.\n- „Get Activity Summaries“ liefert organisationsweite Tageswerte für einen Zeitraum von höchstens 366 Tagen, frühestens ab 2026-01-01.\n- Verfügbar für Organisationen mit Claude-Enterprise-Plan; der Key braucht den Scope `read:analytics`.\n- Daten kommen typischerweise mit einem Tag Verzögerung und können in den Folgetagen um wenige Prozent korrigiert werden.\n- Filtern lässt sich nach RBAC-Gruppe (`filter[]=rbac_group_id:…`).",
+   "bereich": "api",
+   "datum": "2026-11-05",
+   "wichtig": false
+  },
+  {
+   "id": "ip-allowlist-beta",
+   "quelle": "platform-release-notes",
+   "url": "https://platform.claude.com/docs/en/manage-claude/ip-allowlist",
+   "titel_original": "IP allowlisting (beta)",
+   "titel_de": "IP-Allowlist für die Organisation in der Console (Beta)",
+   "kurz_de": "In der Claude Console lässt sich in der Beta eine IP-Allowlist einrichten: Anfragen von Adressen außerhalb der Liste werden abgelehnt. Bis zu 1.000 IPv4-/IPv6-Einträge oder CIDR-Bereiche je Organisation.",
+   "briefing_de": "Die Liste gilt für die ganze Organisation und begrenzt, von wo ein (z. B. geleakter) API-Key genutzt werden kann.\n- Eingetragen werden IPv4- und IPv6-Adressen oder CIDR-Bereiche (höchstens /8 bei IPv4, /32 bei IPv6), bis zu 1.000 Einträge.\n- Auf Claude Platform gilt sie für die Console und für Messages, Message Batches, Token Counting, Models, Files und Skills, für mehrere Managed-Agents-Endpunkte sowie für Admin API und Compliance API (mit einem Key, der nur diese Organisation abdeckt). Nicht erlaubte Anfragen bekommen z. B. bei der Messages API einen 403 `permission_error`.\n- Claude Enterprise hat eine eigene Allowlist, die u. a. Claude im Browser, Desktop- und Mobile-Apps sowie Claude Code mit Claude-Konto abdeckt; Owner und Primary Owner richten sie ein.\n- Admins werden bei einer nicht erlaubten Adresse ebenfalls ausgesperrt; die Doku beschreibt optional einen Weg zurück, um das zu vermeiden. Die Funktion ist in Beta, Einstellungen und Verhalten können sich ändern. Laut Doku ersetzt die Liste keine kurze Key-Laufzeit oder Workload Identity Federation.",
+   "arbeitsweise_de": "Wer die Allowlist einschaltet, trägt vorher alle Netze ein (Rechenzentren, CI, Büros, VPNs, Proxys, Sandboxes) – Heim- und Mobilfunk-Adressen können sich unangekündigt ändern. Gilt nur für die in der Doku genannten Dienste.",
+   "bereich": "unternehmen",
+   "datum": "2026-11-05",
+   "wichtig": false
+  },
   {
    "id": "claude-code-2-1-318",
    "quelle": "code-changelog",
