@@ -1,0 +1,12 @@
+{
+  "id": "vault-partikel-mit-claude",
+  "quelle": "anthropic",
+  "url": "https://www.anthropic.com/research/investigating-vault-particles-with-claude",
+  "titel_original": "Investigating vault particles with Claude",
+  "titel_de": "Claude hilft, die 3D-Struktur eines Vault-Partikels aus Phagen zu klären",
+  "kurz_de": "Anthropics Biologie-Team hat mit Claude die erste 3D-Struktur eines Vault-Partikels aus Prokaryoten bestimmt. Die Reinigung dauerte etwa 90 Minuten statt drei Tagen; die Funktion von Vaults bleibt unbekannt.",
+  "briefing_de": "Vaults sind große, hohle Proteinhüllen in Zellen; ihre Funktion ist seit der Entdeckung 1986 ungeklärt.\n- Das Team fand Vault-Proteine in 29 Bakterien-Phyla und vier Archaeen-Phyla (in weniger als 1 % der Arten mit sequenziertem Genom) und bestimmte per Kryo-EM die Struktur eines Phagen-Vaults (L05): 96 Kopien eines Proteins, etwa 9,5 Megadalton, rund 54 nm lang und 45 nm breit.\n- Claude suchte in Proteindatenbanken, entwarf die DNA-Konstrukte, optimierte die Isolierung und verarbeitete die Mikroskopiedaten. Die Reinigung dauerte etwa 90 Minuten statt etwa drei Tagen, ein erstes Strukturmodell lag 34 Stunden später vor.\n- Mit zwei zusätzlichen Segmenten wuchs der eingeschlossene Raum um etwa 20 %; einzelne Änderungen nahe der Kappe verhinderten das Schließen der Hülle.\n- Grenzen: Die biologische Funktion der Vaults ist weiter unbekannt. Das Preprint ist bei bioRxiv eingereicht; Strukturen und weitere Daten sollen später folgen."
+  ,"bereich": "forschung",
+  "datum": "2026-11-04",
+  "wichtig": false
+}
