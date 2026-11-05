@@ -1650,6 +1650,23 @@
    "platform.claude.com/docs/en/api/models/retrieve",
    "platform.claude.com/docs/en/api/opentelemetry/spans",
    "platform.claude.com/docs/en/api/organization",
+   "platform.claude.com/docs/en/api/organization/analytics",
+   "platform.claude.com/docs/en/api/organization/analytics/apps",
+   "platform.claude.com/docs/en/api/organization/analytics/apps/chat",
+   "platform.claude.com/docs/en/api/organization/analytics/apps/chat/projects",
+   "platform.claude.com/docs/en/api/organization/analytics/apps/chat/projects/list",
+   "platform.claude.com/docs/en/api/organization/analytics/artifacts",
+   "platform.claude.com/docs/en/api/organization/analytics/artifacts/list",
+   "platform.claude.com/docs/en/api/organization/analytics/connectors",
+   "platform.claude.com/docs/en/api/organization/analytics/connectors/list",
+   "platform.claude.com/docs/en/api/organization/analytics/plugins",
+   "platform.claude.com/docs/en/api/organization/analytics/plugins/list",
+   "platform.claude.com/docs/en/api/organization/analytics/skills",
+   "platform.claude.com/docs/en/api/organization/analytics/skills/list",
+   "platform.claude.com/docs/en/api/organization/analytics/summaries",
+   "platform.claude.com/docs/en/api/organization/analytics/summaries/list",
+   "platform.claude.com/docs/en/api/organization/analytics/users",
+   "platform.claude.com/docs/en/api/organization/analytics/users/list",
    "platform.claude.com/docs/en/api/organization/api_keys",
    "platform.claude.com/docs/en/api/organization/api_keys/list",
    "platform.claude.com/docs/en/api/organization/api_keys/retrieve",
@@ -1688,6 +1705,21 @@
    "platform.claude.com/docs/en/api/organization/invites/retrieve",
    "platform.claude.com/docs/en/api/organization/rate_limits",
    "platform.claude.com/docs/en/api/organization/rate_limits/list",
+   "platform.claude.com/docs/en/api/organization/rbac_groups",
+   "platform.claude.com/docs/en/api/organization/rbac_groups/create",
+   "platform.claude.com/docs/en/api/organization/rbac_groups/delete",
+   "platform.claude.com/docs/en/api/organization/rbac_groups/list",
+   "platform.claude.com/docs/en/api/organization/rbac_groups/members",
+   "platform.claude.com/docs/en/api/organization/rbac_groups/members/add",
+   "platform.claude.com/docs/en/api/organization/rbac_groups/members/list",
+   "platform.claude.com/docs/en/api/organization/rbac_groups/members/remove",
+   "platform.claude.com/docs/en/api/organization/rbac_groups/retrieve",
+   "platform.claude.com/docs/en/api/organization/rbac_groups/update",
+   "platform.claude.com/docs/en/api/organization/rbac_roles",
+   "platform.claude.com/docs/en/api/organization/rbac_roles/list",
+   "platform.claude.com/docs/en/api/organization/rbac_roles/permissions",
+   "platform.claude.com/docs/en/api/organization/rbac_roles/permissions/list",
+   "platform.claude.com/docs/en/api/organization/rbac_roles/retrieve",
    "platform.claude.com/docs/en/api/organization/retrieve",
    "platform.claude.com/docs/en/api/organization/service_accounts",
    "platform.claude.com/docs/en/api/organization/service_accounts/archive",
@@ -1699,6 +1731,14 @@
    "platform.claude.com/docs/en/api/organization/service_accounts/workspaces/add",
    "platform.claude.com/docs/en/api/organization/service_accounts/workspaces/list",
    "platform.claude.com/docs/en/api/organization/service_accounts/workspaces/remove",
+   "platform.claude.com/docs/en/api/organization/spend_limits",
+   "platform.claude.com/docs/en/api/organization/spend_limits/effective",
+   "platform.claude.com/docs/en/api/organization/spend_limits/effective/list",
+   "platform.claude.com/docs/en/api/organization/spend_limits/increase_requests",
+   "platform.claude.com/docs/en/api/organization/spend_limits/increase_requests/approve",
+   "platform.claude.com/docs/en/api/organization/spend_limits/increase_requests/deny",
+   "platform.claude.com/docs/en/api/organization/spend_limits/increase_requests/list",
+   "platform.claude.com/docs/en/api/organization/spend_limits/increase_requests/retrieve",
    "platform.claude.com/docs/en/api/organization/users",
    "platform.claude.com/docs/en/api/organization/users/list",
    "platform.claude.com/docs/en/api/organization/users/remove",
@@ -1865,6 +1905,7 @@
    "platform.claude.com/docs/en/manage-claude/inference-hooks",
    "platform.claude.com/docs/en/manage-claude/inference-hooks-configuration",
    "platform.claude.com/docs/en/manage-claude/inference-hooks-endpoint",
+   "platform.claude.com/docs/en/manage-claude/ip-allowlist",
    "platform.claude.com/docs/en/manage-claude/opentelemetry",
    "platform.claude.com/docs/en/manage-claude/opentelemetry/api",
    "platform.claude.com/docs/en/manage-claude/opentelemetry/sdk",
@@ -3028,9 +3069,14 @@
    "October 28, 2026",
    "October 30, 2026",
    "November 2, 2026",
-   "November 3, 2026"
+   "November 3, 2026",
+   "November 5, 2026"
   ],
   "zeilen": {
+   "November 5, 2026": [
+    "39520524aa",
+    "8d0866244d"
+   ],
    "November 3, 2026": [
     "93176a22b3"
    ],
@@ -3079,22 +3125,8 @@
     "b10c4090fa",
     "b1bd682027",
     "b2b8140f4b"
-   ],
-   "October 15, 2026": [
-    "06f36b26ab",
-    "736d8b6181",
-    "a4b043ada9",
-    "b0c1a2f99e",
-    "408f2f5223",
-    "3d9581bea9"
    ]
   },
   "zeilenVersion": 2
- },
- "_stoerungen": {
-  "platform-doku": {
-   "anzahl": 1,
-   "deckel": true
-  }
  }
 }
