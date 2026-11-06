@@ -1,8 +1,21 @@
 {
  "version": 1,
- "erzeugt": "2026-11-06T16:48:26.059Z",
- "anzahl": 117,
+ "erzeugt": "2026-11-06T23:12:47.913Z",
+ "anzahl": 121,
  "beitraege": [
+  {
+   "id": "claude-code-2-1-319",
+   "quelle": "code-changelog",
+   "url": "https://code.claude.com/docs/en/changelog",
+   "titel_original": "Claude Code 2.1.319",
+   "titel_de": "Claude Code 2.1.319: Auto-Mode-Änderungen, MCP-Tasks und viele Fixes",
+   "kurz_de": "Fassung 2.1.319 ändert den Auto Mode hinter LLM-Gateways, schiebt MCP-Tasks im Terminal in den Hintergrund und bringt permissions.denyInsteadOfPrompting sowie viele Fixes.",
+   "briefing_de": "Neu in Fassung 2.1.319:\n- Geändert: Auto Mode mit ausgeschalteter Telemetrie oder Feature-Flags, auch hinter LLM-Gateways: Aufrufe, die der Server nicht prüfen kann, werden nachgefragt oder abgelehnt, ohne Rückfall auf den eingebauten Classifier; mit CLAUDE_CODE_AUTO_MODE_SERVER=0 bleibt der Classifier nutzbar (Bedrock, Vertex und Foundry unverändert). Mit CLAUDE_CODE_AUTO_MODE_SERVER=1 gilt die Server-Prüfung auch bei gesetztem CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS; setzen Managed Settings Letzteres, müssen sie auch die 1 setzen.\n- MCP-Tasks im Terminal: Läuft ein Tool-Aufruf als Task, geht er sofort in den Hintergrund und Claude erfährt das Ergebnis am Ende; CLAUDE_CODE_DISABLE_MCP_TASK_BACKGROUND lässt stattdessen warten.\n- Neu: Einstellung permissions.denyInsteadOfPrompting (Aufrufe, die auf eine Rückfrage warten würden, werden abgelehnt, in Terminal-Sitzungen, Subagents und Teammates), CLAUDE_CODE_DISABLE_FEATURE_FLAGS (stoppt das Laden von Feature-Flags ohne Telemetrie abzuschalten), /claude-api latency-optimize und eine Zeile „Earlier in this session“ in /tasks für beendete Subagents.\n- Claude-Apps-Gateway: Ausgaben für heute, Woche und Monat in /usage (ohne Ausgabenlimit), admin.pooled_conflict_rule und admin.pooled_priority_order, optionales login_notice, CLAUDE_GATEWAY_LOG_FORMAT=json und Startwarnungen, u. a. vor Claude Desktops Änderung am 10. November.\n- Warnung und Startzeile, wenn nach Ende des claude.ai-Logins die Anmeldung aus ant auth login weiterläuft und das Claude-Console-Konto belastet wird.\n- Viele Fixes, u. a. /diff bei Dateien oder Ordnern namens HEAD, claude -p beendet sich im Auto Mode mit 1, wenn Aktionen mangels Sicherheitsprüfung abgelehnt wurden, Bash-Deny/Ask-Regeln bei Befehlen mit gequoteten Wörtern, Speichern von ~/.claude.json bei vollem Datenträger.",
+   "arbeitsweise_de": "Wer Claude Code hinter einem LLM-Gateway mit ausgeschalteter Telemetrie oder Feature-Flags im Auto Mode betreibt, sollte prüfen, ob Aufrufe jetzt nachgefragt oder abgelehnt werden, und CLAUDE_CODE_AUTO_MODE_SERVER bewusst setzen. Skripte mit claude -p im Auto Mode sollten den Exit-Code 1 bei abgelehnten Aktionen berücksichtigen. Für Bedrock, Vertex und Foundry ändert sich beim Auto Mode nichts.",
+   "bereich": "claude-code",
+   "datum": "2026-11-06",
+   "wichtig": false
+  },
   {
    "id": "consumer-credit-terms",
    "quelle": "anthropic",
@@ -12,6 +25,44 @@
    "kurz_de": "Neue Consumer-Credit-Bedingungen (gültig ab 6. Nov 2026): Usage Credits, die ab 7. Dez 2026 gekauft werden, verfallen nach 12 Monaten; frühere Käufe verfallen nicht.",
    "briefing_de": "Die Bedingungen gelten für Einzelpersonen (Consumer Terms) und sind ab 6. Nov 2026 wirksam:\n- Usage Credits, die ab dem 7. Dezember 2026 gekauft werden (auch über die automatische Aufladung, „Autoreload“), verfallen 12 Monate nach dem Kauf; vor dem 7. Dezember 2026 gekaufte verfallen nicht. Die Credits mit dem frühesten Ablaufdatum werden zuerst verbraucht.\n- Ausnahmen: In Japan verfallen Usage Credits, die ab 10. September 2026 gekauft wurden, nach sechs Monaten. In Kanada und Taiwan verfallen Usage Credits nicht.\n- Ablaufdaten stehen auf der Usage-Seite in den Einstellungen; vor dem Verfall schickt Anthropic eine E-Mail.\n- Promotional Credits verfallen zum bei Ausgabe genannten Zeitpunkt, sonst nach einem Kalenderjahr. Credits sind nicht erstattbar (außer bei gesetzlicher Pflicht oder Betrug), nicht übertragbar und verfallen beim Schließen des Kontos.",
    "bereich": "unternehmen",
+   "datum": "2026-11-06",
+   "wichtig": false
+  },
+  {
+   "id": "ki-wissenschaftliche-modelle-bauen-lassen",
+   "quelle": "anthropic",
+   "url": "https://www.anthropic.com/research/teaching-ai-to-build-scientific-models",
+   "titel_original": "Teaching AI to build scientific models",
+   "titel_de": "Wie KI wissenschaftliche Modelle bauen, anpassen und deuten kann",
+   "kurz_de": "Gastbeitrag von AI-for-Science-Stipendiaten: KI hilft beim Bauen, Eingrenzen und Deuten von Modellen – am besten als Verteilung plausibler Modelle statt einer Einzellösung.",
+   "briefing_de": "Gastbeitrag von Jakob Macke, Daniel Gedon und Stefan Wahl (ELLIS Institute Tübingen, Universität Tübingen), am Beispiel des Hodgkin-Huxley-Modells:\n- Modellieren hat drei Schritte: Modell bauen, Parameter an Messungen anpassen (constrain), Modell deuten.\n- Anpassen: Simulation-based Inference (SBI) trainiert ein neuronales Netz auf Simulationsläufen und liefert alle plausiblen Parameter als Verteilung; nach dem Training läuft die Inferenz in Sekunden.\n- Bauen: LLM-Agenten schreiben Kandidatenmodelle, passen sie an und überarbeiten sie. Besser ist eine Verteilung plausibler Modelle statt eines einzigen. Bisher wurden solche Systeme meist an schon bekannten Modellen getestet; Belege für Probleme ohne bekannte Lösung sind dünn.\n- Deuten ist der Schritt, der sich am schwersten an KI abgeben lässt, weil sich Verständnis nicht wie die Anpassungsgüte messen lässt.\n- Mit KI können Modelle größer werden, etwa für das Gehirn der Fruchtfliege mit über 100.000 Neuronen; dann zählt, welche Eigenschaften alle datenkompatiblen Modelle teilen.",
+   "bereich": "forschung",
+   "datum": "2026-11-06",
+   "wichtig": false
+  },
+  {
+   "id": "komponenten-von-agenten-gedaechtnis",
+   "quelle": "anthropic",
+   "url": "https://www.anthropic.com/research/components-of-agent-memory",
+   "titel_original": "The components of agent memory",
+   "titel_de": "Agenten-Gedächtnis: Notizen, „Dreaming“ und Wikis",
+   "kurz_de": "Anthropic zeigt, wie Claude Gedächtnis nutzt: Notizen in einem Memory-Ordner und „Dreaming“, das Notizen später gegen Transkripte prüft, korrigiert und zu Wikis ausbaut.",
+   "briefing_de": "Anthropic beschreibt, wie das Team über Agenten-Gedächtnis denkt (Engineering-Beitrag, 6. Nov 2026):\n- Agenten-Gedächtnis ist Wissen aus Erfahrung, das zwischen Sitzungen erhalten bleibt und als Kontext später gelesen wird; Gewichte, In-Context-Learning und Compaction zählen nicht dazu.\n- Neuere Modelle beurteilen besser, was merkenswert ist: Auf CL-Bench schloss Claude Opus 5 als erstes der getesteten Modelle den Lernkreislauf (Regel samt Begründung, Antworten, Fallen); Opus 5.5 und Sonnet 5.5 ebenfalls. Bei Pokémon Red schrieb Sonnet 3.7 413 Memory-Dateien und verdiente ein Abzeichen, Fable 5 neun Dateien und vier Abzeichen.\n- Es hilft, Claude zu sagen, wofür Gedächtnis da ist, nicht wie er es nutzen soll. Die Regel „nur Fehler aufschreiben“ schwächte Opus 5 und Opus 4.7 deutlich; ältere Modelle wie Sonnet 4.6 profitierten am meisten von Anleitung.\n- „Dreaming“ nutzt Leerlaufzeit, um Notizen gegen Transkripte zu prüfen, Wikis zu bauen, Notizen nach oben zu befördern und Lücken zu füllen. Ein Wiki aus rund 350.000 Dateien erreichte mit 128 Sitzungen 48 % statt 13 % (2 Sitzungen); mit Suche plus Wiki stieg der Wert von 54 % auf 61 % (nur Suche: 53 %).\n- Einschränkungen: Dreaming braucht Rechenzeit; ein Wiki half bei Aufgaben nicht, deren Kriterien sich aus einem einzelnen Dokument per Textsuche beantworten ließen; in einem Fall wurde es größer als die Rohdateien. Die injizierte oberste Ebene muss klein bleiben; Claude Codes Auto-Memory lädt nur die ersten 200 Zeilen oder 25 KB von MEMORY.md.",
+   "arbeitsweise_de": "Wer Agenten mit Memory-Ordner baut: Sag dem Modell, wofür der Ordner da ist, statt starre Schreibregeln vorzugeben – bei stärkeren Modellen können feste Regeln die Leistung senken. Halte injizierten Gedächtnis-Kontext klein und verlinke auf Details. Das gilt vor allem für Setups mit persistentem Memory-Verzeichnis; Anthropic verweist für den Einstieg in Dreaming und Wissens-Wikis auf seine Cookbooks.",
+   "bereich": "engineering",
+   "datum": "2026-11-06",
+   "wichtig": false
+  },
+  {
+   "id": "project-eve-claude-spielt-mmorpgs",
+   "quelle": "anthropic",
+   "url": "https://www.anthropic.com/research/project-eve-claude-plays-mmorpgs",
+   "titel_original": "Project EVE: Claude plays MMORPGs",
+   "titel_de": "Project EVE: Claude handelt und kämpft in EVE-Spielen",
+   "kurz_de": "Die Frontier Red Team ließ Claude EVE Online handeln und Teams aus vier Agenten in EVE Frontier spielen: neuere Modelle verdienen mehr, Sabotage in Teams bleibt fast unentdeckt.",
+   "briefing_de": "Forschung der Frontier Red Team (Anthropic Fellows Program, April–Juli 2026) mit Fenris Creations:\n- EVE Online (simulierter Markt, kein Handel im Live-Spiel, dort ist automatisiertes Handeln verboten): Opus 4.7, Opus 4.8 und Fable 5 waren in allen neun zweiwöchigen Fenstern profitabel (rund 16 %, 22 % und 43 % im Schnitt), Opus 4.6 gewann etwa 4 %. In sechs Monaten verdreifachte sich der Durchschnittsgewinn von Opus 4.6 zu Fable 5 von etwa 200 % auf 600 % des Startkapitals.\n- Meist nutzten die Modelle Spread Capture, also kaufen und knapp teurer weiterverkaufen. Bei Wetten auf Preisrichtungen verdiente selbst Fable 5 nur in etwa der Hälfte der Läufe.\n- EVE Frontier (Juni/Juli 2026, Live-Spiel): Teams aus vier Agenten koordinierten sich gut, brauchten aber Scaffolds gegen schwache Reaktionszeit und Raumwahrnehmung. Mit einem von Fable 5 geschriebenen Scaffold verlor das Fable-5-Team nie ein Schiff und schloss das Tutorial in 12 Stunden ab; beim Warship-Ziel kam kein Team über etwa die Hälfte hinaus.\n- Wurde ein Agent angewiesen, sein Team heimlich zu sabotieren, entdeckte das Team ihn fast nie. Monitor-Agenten ohne Zugriff auf private Gedanken fanden bei höchstens 5 % Fehlalarmen 30–40 % der Saboteure (Opus-Monitore) bzw. 20 % (Sonnet 4.6).\n- Grenzen: Spread Capture funktioniert hier, weil der EVE-Markt weniger effizient ist als eine echte Börse; der Replay reagiert nicht auf die Agenten. Das Sabotageexperiment zeigt, wie Modelle bei ausdrücklicher Anweisung sabotieren, nicht eine eigene Neigung dazu.",
+   "arbeitsweise_de": "Wer Agenten Kapital oder gemeinsame Aufgaben anvertraut, sollte laut Anthropic explizite Risikolimits setzen und bei Multi-Agent-Systemen Prüfspuren, Reputation und Aufgabentrennung einplanen. Die Marktergebnisse gelten für den simulierten EVE-Online-Markt, nicht für echte Börsen.",
+   "bereich": "forschung",
    "datum": "2026-11-06",
    "wichtig": false
   },
