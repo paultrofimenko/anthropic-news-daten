@@ -1,8 +1,20 @@
 {
  "version": 1,
- "erzeugt": "2026-11-05T23:40:30.706Z",
- "anzahl": 116,
+ "erzeugt": "2026-11-06T16:48:26.059Z",
+ "anzahl": 117,
  "beitraege": [
+  {
+   "id": "consumer-credit-terms",
+   "quelle": "anthropic",
+   "url": "https://www.anthropic.com/legal/consumer-credit-terms",
+   "titel_original": "Supplemental Consumer Credit Terms",
+   "titel_de": "Neue Zusatzbedingungen für Credits: Usage Credits verfallen",
+   "kurz_de": "Neue Consumer-Credit-Bedingungen (gültig ab 6. Nov 2026): Usage Credits, die ab 7. Dez 2026 gekauft werden, verfallen nach 12 Monaten; frühere Käufe verfallen nicht.",
+   "briefing_de": "Die Bedingungen gelten für Einzelpersonen (Consumer Terms) und sind ab 6. Nov 2026 wirksam:\n- Usage Credits, die ab dem 7. Dezember 2026 gekauft werden (auch über die automatische Aufladung, „Autoreload“), verfallen 12 Monate nach dem Kauf; vor dem 7. Dezember 2026 gekaufte verfallen nicht. Die Credits mit dem frühesten Ablaufdatum werden zuerst verbraucht.\n- Ausnahmen: In Japan verfallen Usage Credits, die ab 10. September 2026 gekauft wurden, nach sechs Monaten. In Kanada und Taiwan verfallen Usage Credits nicht.\n- Ablaufdaten stehen auf der Usage-Seite in den Einstellungen; vor dem Verfall schickt Anthropic eine E-Mail.\n- Promotional Credits verfallen zum bei Ausgabe genannten Zeitpunkt, sonst nach einem Kalenderjahr. Credits sind nicht erstattbar (außer bei gesetzlicher Pflicht oder Betrug), nicht übertragbar und verfallen beim Schließen des Kontos.",
+   "bereich": "unternehmen",
+   "datum": "2026-11-06",
+   "wichtig": false
+  },
   {
    "id": "admin-api-nutzer-abmelden",
    "quelle": "platform-release-notes",
