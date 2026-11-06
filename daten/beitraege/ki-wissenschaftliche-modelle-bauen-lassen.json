@@ -1,0 +1,12 @@
+{
+  "id": "ki-wissenschaftliche-modelle-bauen-lassen",
+  "quelle": "anthropic",
+  "url": "https://www.anthropic.com/research/teaching-ai-to-build-scientific-models",
+  "titel_original": "Teaching AI to build scientific models",
+  "titel_de": "Wie KI wissenschaftliche Modelle bauen, anpassen und deuten kann",
+  "kurz_de": "Gastbeitrag von AI-for-Science-Stipendiaten: KI hilft beim Bauen, Eingrenzen und Deuten von Modellen – am besten als Verteilung plausibler Modelle statt einer Einzellösung.",
+  "briefing_de": "Gastbeitrag von Jakob Macke, Daniel Gedon und Stefan Wahl (ELLIS Institute Tübingen, Universität Tübingen), am Beispiel des Hodgkin-Huxley-Modells:\n- Modellieren hat drei Schritte: Modell bauen, Parameter an Messungen anpassen (constrain), Modell deuten.\n- Anpassen: Simulation-based Inference (SBI) trainiert ein neuronales Netz auf Simulationsläufen und liefert alle plausiblen Parameter als Verteilung; nach dem Training läuft die Inferenz in Sekunden.\n- Bauen: LLM-Agenten schreiben Kandidatenmodelle, passen sie an und überarbeiten sie. Besser ist eine Verteilung plausibler Modelle statt eines einzigen. Bisher wurden solche Systeme meist an schon bekannten Modellen getestet; Belege für Probleme ohne bekannte Lösung sind dünn.\n- Deuten ist der Schritt, der sich am schwersten an KI abgeben lässt, weil sich Verständnis nicht wie die Anpassungsgüte messen lässt.\n- Mit KI können Modelle größer werden, etwa für das Gehirn der Fruchtfliege mit über 100.000 Neuronen; dann zählt, welche Eigenschaften alle datenkompatiblen Modelle teilen.",
+  "bereich": "forschung",
+  "datum": "2026-11-06",
+  "wichtig": false
+}

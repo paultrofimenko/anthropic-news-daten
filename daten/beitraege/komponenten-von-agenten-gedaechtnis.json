@@ -1,0 +1,13 @@
+{
+  "id": "komponenten-von-agenten-gedaechtnis",
+  "quelle": "anthropic",
+  "url": "https://www.anthropic.com/research/components-of-agent-memory",
+  "titel_original": "The components of agent memory",
+  "titel_de": "Agenten-Gedächtnis: Notizen, „Dreaming“ und Wikis",
+  "kurz_de": "Anthropic zeigt, wie Claude Gedächtnis nutzt: Notizen in einem Memory-Ordner und „Dreaming“, das Notizen später gegen Transkripte prüft, korrigiert und zu Wikis ausbaut.",
+  "briefing_de": "Anthropic beschreibt, wie das Team über Agenten-Gedächtnis denkt (Engineering-Beitrag, 6. Nov 2026):\n- Agenten-Gedächtnis ist Wissen aus Erfahrung, das zwischen Sitzungen erhalten bleibt und als Kontext später gelesen wird; Gewichte, In-Context-Learning und Compaction zählen nicht dazu.\n- Neuere Modelle beurteilen besser, was merkenswert ist: Auf CL-Bench schloss Claude Opus 5 als erstes der getesteten Modelle den Lernkreislauf (Regel samt Begründung, Antworten, Fallen); Opus 5.5 und Sonnet 5.5 ebenfalls. Bei Pokémon Red schrieb Sonnet 3.7 413 Memory-Dateien und verdiente ein Abzeichen, Fable 5 neun Dateien und vier Abzeichen.\n- Es hilft, Claude zu sagen, wofür Gedächtnis da ist, nicht wie er es nutzen soll. Die Regel „nur Fehler aufschreiben“ schwächte Opus 5 und Opus 4.7 deutlich; ältere Modelle wie Sonnet 4.6 profitierten am meisten von Anleitung.\n- „Dreaming“ nutzt Leerlaufzeit, um Notizen gegen Transkripte zu prüfen, Wikis zu bauen, Notizen nach oben zu befördern und Lücken zu füllen. Ein Wiki aus rund 350.000 Dateien erreichte mit 128 Sitzungen 48 % statt 13 % (2 Sitzungen); mit Suche plus Wiki stieg der Wert von 54 % auf 61 % (nur Suche: 53 %).\n- Einschränkungen: Dreaming braucht Rechenzeit; ein Wiki half bei Aufgaben nicht, deren Kriterien sich aus einem einzelnen Dokument per Textsuche beantworten ließen; in einem Fall wurde es größer als die Rohdateien. Die injizierte oberste Ebene muss klein bleiben; Claude Codes Auto-Memory lädt nur die ersten 200 Zeilen oder 25 KB von MEMORY.md.",
+  "arbeitsweise_de": "Wer Agenten mit Memory-Ordner baut: Sag dem Modell, wofür der Ordner da ist, statt starre Schreibregeln vorzugeben – bei stärkeren Modellen können feste Regeln die Leistung senken. Halte injizierten Gedächtnis-Kontext klein und verlinke auf Details. Das gilt vor allem für Setups mit persistentem Memory-Verzeichnis; Anthropic verweist für den Einstieg in Dreaming und Wissens-Wikis auf seine Cookbooks.",
+  "bereich": "engineering",
+  "datum": "2026-11-06",
+  "wichtig": false
+}
