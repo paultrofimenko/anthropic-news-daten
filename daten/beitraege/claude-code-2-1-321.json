@@ -1,0 +1,12 @@
+{
+  "id": "claude-code-2-1-321",
+  "quelle": "code-changelog",
+  "url": "https://code.claude.com/docs/en/changelog",
+  "titel_original": "Claude Code 2.1.321",
+  "titel_de": "Claude Code 2.1.321: Fable 5.2 als Standard, Sicherheits-Fixes",
+  "kurz_de": "Claude Code 2.1.321 macht Claude Fable 5.2 zum Standard-Fable-Modell ($8/$40 pro MTok), ergänzt `--settings` für `claude remote-control` und behebt viele Fehler, auch bei Bash-Berechtigungen.",
+  "briefing_de": "- Neu: Claude Fable 5.2 (`claude-fable-5-2`) ist jetzt das Standard-Fable-Modell – 1M Kontext, $8/$40 pro MTok, Cache-Reads $0,20/MTok.\n- Neu: `claude remote-control --settings <file>` wendet eine Settings-Datei auf jede gestartete Sitzung an; ändert sich die Datei, startet keine neue Sitzung, bis du `claude remote-control` neu startest.\n- Sicherheit: Ein MCP-OAuth-Fix verhindert, dass Secrets wie Refresh-Tokens bei einer Server-Weiterleitung an einen anderen Host gehen; ein schreibgeschützter Bash-Befehl lief einmal ohne Rückfrage außerhalb der Sandbox; Bash-Prüfungen beurteilten Dateischreibzugriffe teils aus dem falschen Ordner; Deny-Regeln greifen jetzt auch bei `cp`/`mv` in ein Verzeichnis.\n- Viele weitere Fixes, u. a. zu Remote Control, Hooks, Plugins, Windows- und macOS-Besonderheiten sowie `NotebookEdit`/Edit auf Netzwerkpfaden (UNC, WSL, `/net`).",
+  "bereich": "claude-code",
+  "datum": "2026-11-09",
+  "wichtig": false
+}

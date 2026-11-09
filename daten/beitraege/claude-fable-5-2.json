@@ -1,0 +1,27 @@
+{
+  "id": "claude-fable-5-2",
+  "quelle": "platform-release-notes",
+  "url": "https://platform.claude.com/docs/en/models/fable-5-2/overview",
+  "titel_original": "Claude Fable 5.2 and Claude Mythos 5.2",
+  "titel_de": "Claude Fable 5.2 und Mythos 5.2 erscheinen – günstiger als 5.1",
+  "kurz_de": "Claude Fable 5.2 (claude-fable-5-2) ist da: 1M Kontext, 128k Output, $8/$40 pro MTok statt $10/$50 bei Fable 5.1. Mythos 5.2 bietet dasselbe nur für verifizierte Organisationen.",
+  "briefing_de": "Claude Fable 5.2 (`claude-fable-5-2`) ist für anspruchsvolles Reasoning und langlaufende Agenten-Arbeit gedacht; veröffentlicht am 9. November 2026.\n- Claude Mythos 5.2 (`claude-mythos-5-2`) hat dieselben Fähigkeiten, steht aber nur Organisationen offen, die über Anthropics Verifizierungsprogramme (z. B. Cyber Verification Program) geprüft sind.\n- Beide: 1M Token Kontext, 128k maximale Ausgabe, Adaptive Thinking immer an, Standard-Effort `high`.\n- Preis: $8 pro MTok Input, $40 pro MTok Output (Fable/Mythos 5.1: $10/$50); Cache-Reads $0,20 pro MTok; Batch $4/$20.\n- Fast Mode für Fable 5.2 in Messages-API-Anfragen auf der Claude API: bis zu 2,5-mal mehr Output-Token pro Sekunde, $16/$80 pro MTok; `speed: \"fast\"` setzen, kein Beta-Header.\n- Verfügbar auf der Claude API, Claude Platform on AWS, Amazon Bedrock, Google Cloud (Anthropic- und Google-managed) und Microsoft Foundry. Beide Modelle brauchen 30 Tage Datenaufbewahrung und gibt es unter Zero Data Retention nur mit ausdrücklicher Genehmigung von Anthropic.",
+  "arbeitsweise_de": "Für die meisten Workloads empfiehlt die Doku, mit dem aktuellen Opus-Modell zu starten und erst auf Fable 5.2 zu wechseln, wenn Evals mit Opus bei höherem Effort nicht reichen. Beim Umstieg von Fable 5.1 gibt es vier Änderungen, die Code brechen können (siehe eigenen Beitrag zum Umstieg). Das betrifft nicht, wenn Claude Code, claude.ai, Managed Agents oder das Agent SDK deine Anfragen bauen.",
+  "bereich": "modelle",
+  "datum": "2026-11-09",
+  "wichtig": true,
+  "ereignis": {
+    "art": "neu",
+    "titel": "Claude Fable 5.2 erscheint"
+  },
+  "lernkarten": [
+    {
+      "frage_de": "Was kostet Claude Fable 5.2 pro Million Token, und wie viel weniger als Fable 5.1?",
+      "antwort_de": "$8 pro MTok Input und $40 pro MTok Output; Fable 5.1 kostet $10 bzw. $50."
+    },
+    {
+      "frage_de": "Wie lautet die Modell-ID von Claude Fable 5.2 und wer darf Claude Mythos 5.2 nutzen?",
+      "antwort_de": "claude-fable-5-2. Mythos 5.2 (claude-mythos-5-2) hat dieselben Fähigkeiten, aber nur für über Anthropics Verifizierungsprogramme verifizierte Organisationen."
+    }
+  ]
+}

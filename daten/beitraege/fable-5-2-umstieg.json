@@ -1,0 +1,23 @@
+{
+  "id": "fable-5-2-umstieg",
+  "quelle": "platform-doku",
+  "url": "https://platform.claude.com/docs/en/models/fable-5-2/whats-new-fable-5-2",
+  "titel_original": "What's new in Claude Fable 5.2",
+  "titel_de": "Fable 5.2: Vier Änderungen, die Code brechen können",
+  "kurz_de": "Beim Umstieg von Fable 5.1 auf 5.2 können vier Änderungen Code brechen: Prefix-Check für alle Konten, Thinking-Blöcke nur für Fable/Mythos 5.2, neues Computer-Use-Toolset, Advisor-Paarung.",
+  "briefing_de": "Vier Änderungen gegenüber Claude Fable 5.1 können Code brechen:\n- Prefix-Check für jedes Konto: Wer Thinking-Blöcke zurückschickt, nachdem `system`, `tools` oder eine frühere Nachricht geändert wurde, bekommt einen 400-Fehler. Bei Fable 5.1 gilt das nur für Konten ab 31.08.2026. Mit Beta-Header `thinking-binding-controls-2026-08-01` und `prefix_mismatch_behavior: \"drop_block\"` werden die Blöcke stattdessen verworfen – nur als Übergang, das kann die Output-Token erhöhen.\n- Thinking-Blöcke von Fable 5.2 lesen nur Fable 5.2 und Mythos 5.2; jedes andere Modell (auch Opus 5.5 und Fable 5.1) verwirft sie, die Anfrage gelingt trotzdem. Blöcke funktionieren zudem nur im erzeugenden oder einem verknüpften Konto.\n- Das alte Tool `computer_20251124` liefert auf jeder Plattform außer Amazon Bedrock einen 400-Fehler; stattdessen `computer_toolset_20260801`.\n- Advisor-Tool (Beta): Ein Fable-5.2- oder Mythos-5.2-Executor akzeptiert nur Fable 5.2 oder Mythos 5.2 als Advisor, sonst 400.\n- Immer geltend: Adaptive Thinking ist dauerhaft an (`enabled` mit `budget_tokens` und `disabled` geben 400), und erzwungene Tool-Nutzung (`tool_choice` `any` oder `tool`) wird nicht unterstützt.",
+  "arbeitsweise_de": "Baust du das `messages`-Array selbst, teste vor dem Wechsel, ob dein Code den Verlauf verändert – auch wenn dein Konto den Fehler bei Fable 5.1 nie gesehen hat. Ändere `system`/`tools` nur in neuen Konversationen. Ausnahme: Claude Code, claude.ai, Managed Agents und das Agent SDK bauen die Anfragen selbst, dort ändert sich für dich beim Prefix-Check nichts. Bei Organisationen mit kundenverwalteten Schlüsseln (CMEK) sind Structured Outputs für Fable/Mythos 5.2 nicht verfügbar.",
+  "bereich": "api",
+  "datum": "2026-11-09",
+  "wichtig": true,
+  "lernkarten": [
+    {
+      "frage_de": "Warum kann ein Wechsel von Claude Fable 5.1 auf Fable 5.2 plötzlich einen 400-Fehler auslösen?",
+      "antwort_de": "Der Prefix-Check gilt bei Fable 5.2 für jedes Konto: Wird `system`, `tools` oder eine frühere Nachricht geändert und ein Thinking-Block zurückgeschickt, kommt ein 400-Fehler."
+    },
+    {
+      "frage_de": "Welches Computer-Use-Tool nutzt Claude Fable 5.2 statt computer_20251124?",
+      "antwort_de": "Das Toolset `computer_toolset_20260801`. `computer_20251124` gibt einen 400-Fehler, außer auf Amazon Bedrock."
+    }
+  ]
+}

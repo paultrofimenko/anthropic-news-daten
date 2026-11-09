@@ -3,7 +3,7 @@
   "titel_de": "API und Plattform",
   "kurz_de": "Wie Programme Claude einbauen: Schnittstellen, Werkzeuge, Grenzen.",
   "einleitung_de": "Über die Claude-API (eine Schnittstelle, über die Programme mit Claude sprechen) bauen Entwickler Claude in eigene Anwendungen ein. Dafür gibt es zwei Wege: die Messages-API für volle Kontrolle und Claude Managed Agents für lange Aufgaben, die Anthropic betreibt.",
-  "stand": "2026-11-02",
+  "stand": "2026-11-09",
   "grafik": {
     "art": "schritte",
     "titel_de": "Der Weg für neue Entwickler",
@@ -80,6 +80,10 @@
         {
           "text_de": "In Managed Agents holt web_fetch nur noch URLs, die in der Sitzung schon aufgetaucht sind (z. B. im Text einer Nutzernachricht); andere liefern den Fehler url_not_in_prior_context",
           "quelle": "https://platform.claude.com/docs/en/release-notes/overview"
+        },
+        {
+          "text_de": "Bei Claude Fable 5.2 und Mythos 5.2 gibt das alte Computer-Tool computer_20251124 auf jeder Plattform außer Amazon Bedrock einen 400-Fehler – stattdessen das Toolset computer_toolset_20260801. Beim Berater-Tool (Beta) akzeptiert ein Fable-5.2- oder Mythos-5.2-Executor nur Fable 5.2 oder Mythos 5.2 als Berater.",
+          "quelle": "https://platform.claude.com/docs/en/models/fable-5-2/whats-new-fable-5-2"
         }
       ],
       "quelle": "https://platform.claude.com/docs/en/build-with-claude/overview"
@@ -118,6 +122,7 @@
   ],
   "gesehen": [
     "fast-mode-opus-4-8-abschaltung",
-    "message-threads-beta"
+    "message-threads-beta",
+    "fable-5-2-umstieg"
   ]
 }

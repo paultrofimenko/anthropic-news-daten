@@ -1,0 +1,13 @@
+{
+  "id": "multi-agent-teams-sicher-skalieren",
+  "quelle": "claude-dev-rss",
+  "url": "https://claude.dev/blog/safely-scaling-multi-agent-teams-with-fable-5-2/",
+  "titel_original": "Safely scaling multi-agent teams with Claude Fable 5.2",
+  "titel_de": "1.000 Agenten beweisen Fermats Satz – mit mehreren Sicherheitsschichten",
+  "kurz_de": "Ein Team aus 1.000 Agenten mit einer frühen Fassung von Fable 5.2 hat den formalen Beweis von Fermats letztem Satz in 28,7 Stunden reproduziert – abgesichert durch Sandbox und Monitoring.",
+  "briefing_de": "Im Experiment reproduzierte ein Team aus 1.000 Agenten (früher Fable-5.2-Stand) den formalen Beweis von Fermats letztem Satz – ohne die Plattform Prove2Me und ohne Steuerung durch einen Forscher.\n- Es brauchte 28,7 Stunden, ein Drittel der Output-Token der Vorlage vom September und schrieb einen Beweis, der ein Siebtel so lang ist. Die Vorlage hatte 11 Tage und rund 6 Milliarden Output-Token gebraucht.\n- Harness: Shell, Datei-Editor, Lean mit Mathlib, eigener Git-Branch und eine gemeinsame Postgres-Datenbank zum Aufgabenverteilen; Struktur nur ein Lead und 999 Helfer, 60 Aussagen als Vorgabe.\n- Sicherheit: Jeder Agent lief in einer eigenen Sandbox ohne Internet; ein Classifier prüfte jeden Shell-Befehl und jede Dateiänderung vorab, ein Offline-Monitor prüfte alle Aktionen. Blockiert der Classifier, hält das ganze Team an, bis ein Mensch prüft.\n- Die Autoren nennen das ein Spielzeug-Experiment, das zeigt: Agententeams mit Modellen wie Fable 5.2 können ehrgeizige, lange Ziele innerhalb sorgfältiger Sicherheitsgrenzen erreichen.",
+  "arbeitsweise_de": "Wer viele Agenten parallel laufen lässt: In diesem Setup war eine eigene Sandbox je Agent nötig – ein einzelner gemeinsamer Rechner kam bei etwa 100 Agenten an seine Grenzen. Eine SQL-Datenbank diente als einfache gemeinsame Koordination.",
+  "bereich": "engineering",
+  "datum": "2026-11-09",
+  "wichtig": false
+}

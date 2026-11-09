@@ -1,0 +1,13 @@
+{
+  "id": "fable-5-2-prompting",
+  "quelle": "platform-doku",
+  "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5-2",
+  "titel_original": "Prompting Claude Fable 5.2",
+  "titel_de": "Fable 5.2 richtig prompten: Effort, Abschluss, Subagenten",
+  "kurz_de": "Neuer Prompting-Leitfaden für Fable 5.2: mit Effort `high` starten, bei frühem Abbruch einen Abschluss-Absatz in den System-Prompt, Subagenten und Codebesitz klar regeln.",
+  "briefing_de": "Der Leitfaden behandelt Muster, die speziell für Claude Fable 5.2 gelten.\n- Effort: bei `high` (API-Standard) starten und Stufen mit eigenen Evals testen. `low` für schnelle, klar umrissene Aufgaben, `medium` für interaktives Coding und Chat, `xhigh` nur für die härtesten Dauerläufe, `max` zum Ausloten der Grenze.\n- Ab `high` denkt das Modell vor fast jeder Antwort; eine Zeile wie „antworte direkt“ stoppt das ab `medium` laut Anthropics Tests nicht – für einfache Anfragen lieber niedrigeren Effort wählen.\n- Bei langen Aufgaben (häufiger bei `low`/`medium`) beendet das Modell Züge manchmal zu früh; der Leitfaden bietet dafür Text für den System-Prompt. Eigene Bestätigung für riskante oder nicht umkehrbare Aktionen beibehalten.\n- Weitere Abschnitte: Codebesitz klären, Fortschritt bei langen Zügen, Erwartungen an Subagenten, angesammelte Vorsicht, Anweisungen für ältere Modelle prüfen, verständliche Abschlussberichte, Refusals.",
+  "arbeitsweise_de": "Änderungen am System-Prompt nur in neuen Konversationen vornehmen: Auf Fable 5.2 erzwingt die API den Prefix-Check für jedes Konto, ein gespeicherter Verlauf mit geändertem Text kann sonst einen 400-Fehler liefern. Den Effort-Sweep neu laufen lassen statt Einstellungen von Fable 5.1 oder Opus 5.5 zu übernehmen.",
+  "bereich": "entwickler",
+  "datum": "2026-11-09",
+  "wichtig": false
+}
