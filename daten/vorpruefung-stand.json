@@ -2053,6 +2053,13 @@
    "platform.claude.com/docs/en/manage-claude/compliance-faq",
    "platform.claude.com/docs/en/manage-claude/compliance-integration-patterns",
    "platform.claude.com/docs/en/manage-claude/compliance-org-data",
+   "platform.claude.com/docs/en/manage-claude/compliance-security-posture/check-events-against-results",
+   "platform.claude.com/docs/en/manage-claude/compliance-security-posture/detect-changes",
+   "platform.claude.com/docs/en/manage-claude/compliance-security-posture/events-reference",
+   "platform.claude.com/docs/en/manage-claude/compliance-security-posture/ocsf-mapping",
+   "platform.claude.com/docs/en/manage-claude/compliance-security-posture/overview",
+   "platform.claude.com/docs/en/manage-claude/compliance-security-posture/results-reference",
+   "platform.claude.com/docs/en/manage-claude/compliance-security-posture/send-events",
    "platform.claude.com/docs/en/manage-claude/compliance-sessions",
    "platform.claude.com/docs/en/manage-claude/data-residency",
    "platform.claude.com/docs/en/manage-claude/inference-hooks",
@@ -3254,7 +3261,8 @@
    "November 5, 2026": [
     "39520524aa",
     "8d0866244d",
-    "6be4e5e6c6"
+    "6be4e5e6c6",
+    "8a1c08ee8d"
    ],
    "November 3, 2026": [
     "93176a22b3"
