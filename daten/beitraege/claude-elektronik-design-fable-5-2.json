@@ -1,0 +1,12 @@
+{
+  "id": "claude-elektronik-design-fable-5-2",
+  "quelle": "anthropic",
+  "url": "https://www.anthropic.com/research/claude-electronics-design",
+  "titel_original": "Claude can design electronic prototypes from start to finish",
+  "titel_de": "Claude entwirft Elektronikgeräte von der Schaltung bis zur Firmware",
+  "kurz_de": "Mit Diode ließ Anthropic Claude Fable 5.2 drei Geräte entwerfen; die Prototypen liefen ohne Korrekturen an der Schaltung, zeigen aber nur frühe Prototypenreife.",
+  "briefing_de": "Anthropic testete mit der Platinenfirma Diode, wie weit Claude Fable 5.2 Elektronik von Anfang bis Ende entwerfen kann.\n- Drei Geräte aus kurzen Prompts: ein USB-C-Speakerphone mit Bluetooth, ein Sprachassistenten-Hub und ein Handheld-Haustier. Claude schrieb Spezifikation und Schaltplan, platzierte Bauteile, verlegte Leiterbahnen, entwarf druckbare Gehäuse, schrieb die Firmware und erstellte die Stückliste.\n- Diode fertigte die Platinen direkt aus Claudes Dateien und baute sie auf; die Prototypen liefen ohne Korrekturen an der Schaltung. Weil es frühe Prototypen sind, ist offen, wie sie bei längerer Nutzung halten und ob sie kommerzielle Zertifizierungen bestehen würden.\n- Benchmarks: Fable 5.2 erreicht 69 % auf Diodes internem PCB Gym (Fable 5: 25 %) und 83,5 % auf BenchCAD, fast das Doppelte von Fable 5.1.\n- Claude überarbeitete eigene Entwürfe ungefragt (z. B. Leiterbahnen löschen und neu verlegen), schrieb für den Hub einen eigenen Router, prüfte Gehäuse auf Kollisionen und führte Fertigungs- und Beschaffungsprüfungen selbst aus.",
+  "bereich": "forschung",
+  "datum": "2026-11-09",
+  "wichtig": false
+}

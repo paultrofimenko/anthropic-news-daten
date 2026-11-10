@@ -1,0 +1,12 @@
+{
+  "id": "claude-code-2-1-322",
+  "quelle": "code-changelog",
+  "url": "https://code.claude.com/docs/en/changelog",
+  "titel_original": "Claude Code 2.1.322",
+  "titel_de": "Claude Code 2.1.322: Fast Mode auf Vertex",
+  "kurz_de": "Fassung 2.1.322 bringt Fast Mode auf Vertex in den Regionen global, us und eu; lehnt Vertex ihn ab, fällt Claude Code auf Standardgeschwindigkeit zurück.",
+  "briefing_de": "Neu in Fassung 2.1.322:\n- Fast Mode auf Vertex in den Regionen global, us und eu; lehnt Vertex ihn ab, fällt Claude Code auf Standardgeschwindigkeit zurück.",
+  "bereich": "claude-code",
+  "datum": "2026-11-10",
+  "wichtig": false
+}

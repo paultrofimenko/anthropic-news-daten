@@ -1,0 +1,13 @@
+{
+  "id": "fermat-agententeam-fable-5-2",
+  "quelle": "claude-dev-rss",
+  "url": "https://claude.dev/blog/safely-scaling-multi-agent-teams-with-fable-5-2/",
+  "titel_original": "Safely scaling multi-agent teams with Claude Fable 5.2",
+  "titel_de": "1.000 Agenten beweisen Fermats Letzten Satz – mit mehrschichtiger Absicherung",
+  "kurz_de": "Ein Team aus 1.000 Agenten mit einer frühen Fable-5.2-Fassung reproduzierte in einem Spielzeug-Experiment den Lean-Beweis des Fermatschen Satzes in 28,7 Stunden – sandboxed und überwacht.",
+  "briefing_de": "Anthropic beschreibt ein Experiment, das ausdrücklich ein Spielzeug-Experiment ist.\n- Ergebnis: 1.000 Agenten (eine frühe Fable-5.2-Fassung) formalisierten den Beweis in 28,7 Stunden, mit einem Drittel der Output-Token und einem Beweis, der ein Siebtel so lang ist wie beim ersten Mal (damals: 11 Tage, rund 6 Mrd. Output-Token, mit Prove2Me und einem Forscher).\n- Werkzeuge je Agent: Shell und Editor in einer eigenen Sandbox ohne Netz, ein eigener Git-Branch mit Merge Requests und eine gemeinsame Postgres-Datenbank. Struktur nur: ein Lead und 999 Helfer.\n- Der Lead baute in den ersten 10 Minuten fünf Tabellen zur Koordination; Teams wurden später umverteilt.\n- Absicherung: Sandbox ohne Netzzugang (nur Pipe zu einem Gateway), eingeschränkte Rechte, ein Classifier prüft jeden Tool-Aufruf, ein Offline-Monitor prüft die Aktionen. Bei über einer Million Tool-Aufrufen erreichte keiner die Blockierschwelle. Nach dem Lauf kam ein paralleler Monitor hinzu, der auch den Gedankengang sieht.\n- Anthropic schließt daraus, dass Agententeams mit Modellen wie Fable 5.2 ehrgeizige Langzeitziele innerhalb sorgfältiger Sicherheitsgrenzen erreichen können.",
+  "arbeitsweise_de": "Für eigene Multi-Agent-Aufbauten: Beim Lauf teilten sich Agenten ohne Netzzugang nur Git und eine SQL-Datenbank; ein einzelner Rechner stieß bei etwa 100 Agenten an Grenzen. Das ist ein Forschungsexperiment von Anthropic, kein Produkt.",
+  "bereich": "entwickler",
+  "datum": "2026-11-09",
+  "wichtig": false
+}

@@ -1,0 +1,13 @@
+{
+  "id": "modellwahl-fable-opus-sonnet-haiku",
+  "quelle": "claude-dev-rss",
+  "url": "https://claude.dev/blog/which-claude-model-should-you-build-with/",
+  "titel_original": "Which Claude model should you build with? Fable, Opus, Sonnet, or Haiku",
+  "titel_de": "Welches Claude-Modell wofür? Leitfaden zu Fable, Opus, Sonnet und Haiku",
+  "kurz_de": "Anthropic rät, die meiste Arbeit mit Opus 5.5 zu beginnen, für klare Aufgaben auf Sonnet 5.5, für Masse auf Haiku 5.5 und für die härtesten Projekte auf Fable 5.2 zu gehen.",
+  "briefing_de": "Aktuell gibt es vier allgemein verfügbare Modelle: Haiku 5.5, Sonnet 5.5, Opus 5.5 und Fable 5.2; Mythos 5.2 nur über die Verification Programs.\n- Start mit Opus 5.5 bei Standard-Effort (auch Standardmodell in Claude Code); es kostet halb so viel pro Token wie Fable 5.2.\n- Sonnet 5.5 für klar umrissene Alltagsarbeit; Haiku 5.5 für einfache Massenaufgaben wie Klassifikation, Routing und Extraktion sowie als Subagent. Haiku-Preis: ab $0,10 / $0,50 bis 100K Prompt-Token, darüber fünffach.\n- Fable 5.2 für die härtesten Projekte in Coding, Finanzen und Wissenschaft, wenn Opus 5.5 nicht reicht und für lange unbeaufsichtigte Läufe.\n- Erst Effort anpassen, bevor das Modell wechselt; ein Effort-Level mehr kann so viel kosten wie ein größeres Modell. Wenn ein Modell nicht reicht: zuerst Selbstprüfung (Test, Build, Skript) ermöglichen, dann das nächstgrößere Modell mit niedrigerem Effort testen.\n- Fable 5.2 erzeugt Ausgaben bis zu 30 % schneller als Fable 5.1; Cache-Reads kosten bei Opus 5.5 und Fable 5.2 je $0,20, bei Sonnet 5.5 $0,10 je Mio. Token. Fast Mode gibt es auf der Claude API für Opus 5.5 und Fable 5.2.",
+  "arbeitsweise_de": "Bei hartem Aufgabenmix beide Optionen messen: Auf FrontierCode 2.0 erreicht Fable 5.2 laut Beitrag fast den Bestwert von Opus 5.5 (45,3 % vs. 45,5 %) bei etwa halben Kosten pro Aufgabe. Für alltägliche Aufgaben bleibt Opus 5.5 der Startpunkt. Preise sind Claude-API-Listenpreise.",
+  "bereich": "entwickler",
+  "datum": "2026-11-09",
+  "wichtig": false
+}

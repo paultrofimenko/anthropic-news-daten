@@ -1,0 +1,31 @@
+{
+  "id": "fable-mythos-5-2",
+  "quelle": "anthropic",
+  "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+  "titel_original": "Introducing Claude Fable 5.2 and Claude Mythos 5.2",
+  "titel_de": "Fable 5.2 und Mythos 5.2: schneller, günstiger, mit Fast Mode",
+  "kurz_de": "Claude Fable 5.2 (claude-fable-5-2) erscheint für $8 / $40 je Mio. Token, laut Anthropic bis zu 30 % schneller als Fable 5.1; Mythos 5.2 ist das gleiche Modell für verifizierte Organisationen.",
+  "briefing_de": "Claude Fable und Claude Mythos sind dasselbe zugrunde liegende Modell; Fable hat starke Cybersecurity- und Biologie-Schutzmaßnahmen und steht allen Nutzern offen.\n- Erschienen am 09.11.2026, Modell-ID claude-fable-5-2, laut Anthropic auf allen Plattformen, u. a. Amazon Web Services, Google Cloud und Microsoft Azure.\n- Preis: $8 je Mio. Input-Token und $40 je Mio. Output-Token (günstiger als Fable 5.1); Ausgabe bis zu 30 % schneller als bei Fable 5.1 und Mythos 5.1.\n- Optionaler Fast Mode: bis zu 2,5-fache Token-Geschwindigkeit für $16 / $80 je Mio. Token; verfügbar in Claude Code, auf der Claude Platform, Claude Models on Google Cloud (Anthropic und Google managed) und Microsoft Foundry (Anthropic hosted). Fast Mode von Mythos nur für Organisationen in den Verification Programs.\n- Mythos 5.2 gibt es nur für geprüfte Organisationen (Cyber und Life Sciences Verification Program); Fable-Schutzmaßnahmen blockieren die meisten Cybersecurity-Aufgaben und den Großteil der Biologie-Forschung. Laut Anthropic etwa 55 % weniger Blockierungen als bei Fable 5.1.\n- Empfehlung: für die meisten Coding- und Wissensaufgaben mit Opus 5.5 starten und je nach Aufgabe zu Fable/Mythos hoch oder zu Sonnet 5.5 / Haiku 5.5 herunter wechseln; Fable 5.2 kann auch als Advisor oder Orchestrator dienen.\n- Aktion für Abonnenten: diese Woche zusätzliche Fable-Nutzung (ein bis drei Fable-Resets je nach Abodauer; Fable bei Pro und Standard-Plätzen im Team-Tarif bis zu 50 % der wöchentlichen Limits eingeschlossen).",
+  "arbeitsweise_de": "Wer Aufgaben hat, bei denen Opus 5.5 auch mit höherem Effort nicht reicht, kann Fable 5.2 testen; dafür die Modell-ID claude-fable-5-2 setzen. Für die meisten Aufgaben bleibt Opus 5.5 der empfohlene Start. Cybersecurity- und Biologie-Aufgaben blockiert Fable 5.2 meist; dafür ist Mythos 5.2 für verifizierte Organisationen gedacht. Beim Wechsel können API-Änderungen Code brechen – siehe den Beitrag zu den API-Änderungen.",
+  "bereich": "modelle",
+  "datum": "2026-11-09",
+  "wichtig": true,
+  "ereignis": {
+    "art": "neu",
+    "titel": "Fable 5.2 und Mythos 5.2 erscheinen"
+  },
+  "lernkarten": [
+    {
+      "frage_de": "Was kostet Claude Fable 5.2 je Million Token, und wie lautet die Modell-ID?",
+      "antwort_de": "Modell-ID claude-fable-5-2; $8 je Mio. Input-Token und $40 je Mio. Output-Token. Der optionale Fast Mode kostet $16 / $80."
+    },
+    {
+      "frage_de": "Worin unterscheiden sich Claude Fable 5.2 und Claude Mythos 5.2?",
+      "antwort_de": "Es ist dasselbe Modell. Fable hat starke Cybersecurity- und Biologie-Schutzmaßnahmen und steht allen offen; Mythos steht verifizierten Organisationen aus den Verification Programs offen."
+    },
+    {
+      "frage_de": "Wie viel schneller macht der Fast Mode Claude Fable 5.2 laut Anthropic?",
+      "antwort_de": "Er beschleunigt die Token-Erzeugung um bis zu das 2,5-Fache und kostet $16 je Mio. Input- und $80 je Mio. Output-Token."
+    }
+  ]
+}

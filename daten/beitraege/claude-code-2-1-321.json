@@ -1,0 +1,13 @@
+{
+  "id": "claude-code-2-1-321",
+  "quelle": "code-changelog",
+  "url": "https://code.claude.com/docs/en/changelog",
+  "titel_original": "Claude Code 2.1.321",
+  "titel_de": "Claude Code 2.1.321: Fable 5.2 als Standard und viele Sicherheits-Fixes",
+  "kurz_de": "Fassung 2.1.321 bringt Claude Fable 5.2 als Standard-Fable-Modell, --settings für claude remote-control und viele Fixes, u. a. bei Bash-Rechten und MCP-OAuth.",
+  "briefing_de": "Neu in Fassung 2.1.321:\n- Claude Fable 5.2 (claude-fable-5-2) ist jetzt das Standard-Fable-Modell: 1M Kontext, $8 / $40 je Mtok, Cache-Reads $0,20 je Mtok.\n- Neu: claude remote-control --settings <Datei> wendet eine Settings-Datei auf jede gestartete Sitzung an; ändert sich die Datei, startet keine neue Sitzung, bis claude remote-control neu gestartet wird.\n- Sicherheits-Fixes: MCP-OAuth schickte Geheimnisse wie Refresh-Tokens an einen anderen Host, wenn ein Server umleitete; ein schreibgeschützter Bash-Befehl lief ohne Rückfrage außerhalb der Sandbox; Bash-Rechteprüfungen beurteilten Dateischreibzugriffe im falschen Ordner; Deny-Regeln und Prompts für geschützte Dateien griffen bei cp/mv in einen Ordner nicht.\n- NotebookEdit und Edit: Fixes auf Netzwerkpfaden (UNC-Freigaben, WSL-Ordner, /net-Mounts), u. a. wurde die erste Zelle gelöscht oder die erste von mehreren Fundstellen geändert.\n- Dazu viele weitere Fixes, u. a. zu Remote Control, Hooks, Plugins, Screen-Reader-Modus, Fast Mode und Bash-Verhalten bei zsh.",
+  "arbeitsweise_de": "Wer claude remote-control mit einer Settings-Datei betreibt, muss es nach Änderungen an der Datei neu starten. Die Fixes bei MCP-OAuth und Bash-Rechten wirken ohne Zutun; wer MCP-Server mit OAuth nutzt, sollte auf diese Fassung aktualisieren.",
+  "bereich": "claude-code",
+  "datum": "2026-11-09",
+  "wichtig": false
+}

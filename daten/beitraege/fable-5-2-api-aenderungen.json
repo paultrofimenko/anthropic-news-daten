@@ -1,0 +1,27 @@
+{
+  "id": "fable-5-2-api-aenderungen",
+  "quelle": "platform-release-notes",
+  "url": "https://platform.claude.com/docs/en/release-notes/overview",
+  "titel_original": "Claude Platform Release Notes: November 9, 2026",
+  "titel_de": "Fable 5.2 in der API: Prefix-Check, Computer Use und Advisor ändern sich",
+  "kurz_de": "Fable 5.2 und Mythos 5.2 bringen API-Änderungen, die Code brechen können: Prefix-Check für alle Konten, neues Computer-Use-Toolset, Advisor nur Fable/Mythos 5.2.",
+  "briefing_de": "Release Notes vom 9. November 2026 zu claude-fable-5-2 und claude-mythos-5-2 (1M Kontext, 128k max. Output, Adaptive Thinking immer an, $8 / $40 je MTok; Fable 5.1 und Mythos 5.1 kosten $10 / $50).\n- Prefix-Check gilt für jedes Konto: Wer system, tools oder eine frühere Nachricht ändert und dann einen Thinking-Block einer späteren Runde zurückschickt, bekommt einen 400-Fehler. Fable 5.1 liefert den Fehler standardmäßig nur bei Konten, die ab dem 31.08.2026 erstellt wurden.\n- Modellwechsel: Auf der Claude API und Claude Models on Google Cloud (Google managed) behält ein Gespräch beim Wechsel auf Fable/Mythos 5.2 das Reasoning anderer Modelle. In die andere Richtung verwirft die API die Thinking-Blocks von Fable/Mythos 5.2; die Anfrage gelingt trotzdem.\n- Computer Use nur über computer_toolset_20260801; das frühere Tool computer_20251124 liefert auf allen Plattformen außer Amazon Bedrock einen 400-Fehler.\n- Advisor-Tool (Beta): Ein Fable/Mythos-5.2-Executor akzeptiert nur Fable 5.2 oder Mythos 5.2 als Advisor, sonst 400-Fehler. Jeder Executor akzeptiert Fable 5.2 als Advisor.\n- Beide Modelle brauchen 30 Tage Datenaufbewahrung; ohne ausdrückliche Genehmigung von Anthropic nicht unter Zero Data Retention. Thinking-Blocks funktionieren nur im erzeugenden oder einem verknüpften Konto.\n- Fast Mode für Fable 5.2 in Messages-API-Anfragen auf der Claude API: bis zu 2,5-fache Ausgabegeschwindigkeit, $16 / $80 je MTok, per speed: \"fast\" ohne Beta-Header.",
+  "arbeitsweise_de": "Vor dem Wechsel auf claude-fable-5-2 prüfen, ob der eigene Code system, tools oder frühere Nachrichten nachträglich ändert, und das Computer-Use-Tool auf computer_toolset_20260801 umstellen (außer auf Amazon Bedrock). Wer das Advisor-Tool nutzt, setzt dessen model auf Fable 5.2 oder Mythos 5.2. Wer nur Claude Code, claude.ai, Managed Agents oder das Agent SDK nutzt, baut die Anfragen nicht selbst – die Release Notes nennen für diese Fälle keine Änderung; die Details stehen im Migrationsleitfaden.",
+  "bereich": "api",
+  "datum": "2026-11-09",
+  "wichtig": true,
+  "lernkarten": [
+    {
+      "frage_de": "Was löst bei Claude Fable 5.2 einen 400-Fehler wegen des Prefix-Checks aus?",
+      "antwort_de": "Wenn system, tools oder eine frühere Nachricht geändert wurden und danach ein Thinking-Block einer späteren Runde zurückgeschickt wird. Bei Fable 5.2 gilt das für jedes Konto."
+    },
+    {
+      "frage_de": "Wie nutzt man Computer Use mit Claude Fable 5.2 und Mythos 5.2?",
+      "antwort_de": "Über das Toolset computer_toolset_20260801. Das frühere Tool computer_20251124 liefert einen 400-Fehler, außer auf Amazon Bedrock."
+    },
+    {
+      "frage_de": "Welchen Advisor akzeptiert ein Claude-Fable-5.2-Executor im Advisor-Tool?",
+      "antwort_de": "Nur Claude Fable 5.2 oder Claude Mythos 5.2; jeder andere Advisor liefert einen 400-Fehler. Umgekehrt akzeptiert jeder Executor Fable 5.2 als Advisor."
+    }
+  ]
+}

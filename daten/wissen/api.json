@@ -3,7 +3,7 @@
   "titel_de": "API und Plattform",
   "kurz_de": "Wie Programme Claude einbauen: Schnittstellen, Werkzeuge, Grenzen.",
   "einleitung_de": "Über die Claude-API (eine Schnittstelle, über die Programme mit Claude sprechen) bauen Entwickler Claude in eigene Anwendungen ein. Dafür gibt es zwei Wege: die Messages-API für volle Kontrolle und Claude Managed Agents für lange Aufgaben, die Anthropic betreibt.",
-  "stand": "2026-11-02",
+  "stand": "2026-11-10",
   "grafik": {
     "art": "schritte",
     "titel_de": "Der Weg für neue Entwickler",
@@ -54,6 +54,10 @@
         {
           "text_de": "API-Version 2026-10-21: temperature, top_p und top_k liefern einen 400-Fehler; neue SDK-Hauptversionen (z. B. Python SDK 2.0.0, TypeScript SDK 1.0.0) senden sie standardmäßig",
           "quelle": "https://platform.claude.com/docs/en/api/migration-2026-10-21"
+        },
+        {
+          "text_de": "Claude Fable 5.2 und Mythos 5.2 (seit 09.11.2026): Der Prefix-Check für Thinking-Blocks gilt für jedes Konto – wer system, tools oder frühere Nachrichten ändert und dann einen späteren Thinking-Block zurückschickt, bekommt einen 400-Fehler",
+          "quelle": "https://platform.claude.com/docs/en/release-notes/overview"
         }
       ],
       "quelle": "https://platform.claude.com/docs/en/api/overview"
@@ -79,6 +83,10 @@
         "Unterbau: Skills, MCP (Model Context Protocol – ein Standard, um andere Dienste anzuschließen), Werkzeugsuche für Tausende Werkzeuge, Werkzeugaufrufe aus Code heraus",
         {
           "text_de": "In Managed Agents holt web_fetch nur noch URLs, die in der Sitzung schon aufgetaucht sind (z. B. im Text einer Nutzernachricht); andere liefern den Fehler url_not_in_prior_context",
+          "quelle": "https://platform.claude.com/docs/en/release-notes/overview"
+        },
+        {
+          "text_de": "Fable 5.2 und Mythos 5.2: Computer Use nur über computer_toolset_20260801 (das frühere computer_20251124 liefert außer auf Amazon Bedrock einen 400-Fehler); beim Berater-Tool akzeptiert ein Fable-5.2-Executor nur Fable 5.2 oder Mythos 5.2 als Berater",
           "quelle": "https://platform.claude.com/docs/en/release-notes/overview"
         }
       ],
@@ -117,7 +125,6 @@
     }
   ],
   "gesehen": [
-    "fast-mode-opus-4-8-abschaltung",
-    "message-threads-beta"
+    "fable-5-2-api-aenderungen"
   ]
 }

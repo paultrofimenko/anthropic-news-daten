@@ -1,0 +1,13 @@
+{
+  "id": "fable-5-2-doku-hinweise",
+  "quelle": "platform-doku",
+  "url": "https://platform.claude.com/docs/en/models/fable-5-2/whats-new-fable-5-2",
+  "titel_original": "What's new in Claude Fable 5.2",
+  "titel_de": "Fable 5.2 in der Doku: Effort, Verhalten und Migrationshinweise",
+  "kurz_de": "Neue Doku-Seiten zu Fable 5.2 und Mythos 5.2: Was ist neu, Migrationsleitfaden, Prompting-Hinweise, Modellseiten und System-Prompt.",
+  "briefing_de": "Zu Fable 5.2 und Mythos 5.2 gibt es neue Doku-Seiten: Modellübersichten (Fable und Mythos), „What’s new“, Migrationsleitfaden, Prompting-Leitfaden und die System-Prompts für claude.ai und die Apps.\n- Mythos 5.2 hat laut Doku dieselben Spezifikationen und Preise wie Fable 5.2 (claude-mythos-5-2, nur für verifizierte Organisationen).\n- Thinking: Adaptive Thinking ist immer an; thinking mit budget_tokens oder type disabled liefert einen 400-Fehler. Forced Tool Use (tool_choice any oder tool) wird nicht unterstützt; Structured Outputs (strict Tool Use und JSON Outputs) sind nicht verfügbar.\n- Effort: alle fünf Stufen (low bis max), API-Standard high. Für die schwersten Langläufer xhigh, max nur zum Ausloten der Grenze.\n- Verhalten: Zeilen im Prompt, die weniger Denken verlangen, stoppen das Denken ab medium nicht; Runden können vor Abschluss enden (häufiger bei low und medium); wer nichts zum Code-Besitz sagt, bekommt eher Ergänzungen statt Korrekturen; viele Tool-Aufrufe mit wenig Text; je nach Harness delegiert das Modell viel an Subagents.\n- Betas in der Doku: Compaction on demand (Header compact-2026-09-04) und Mid-conversation-Tool-Änderungen (inline-tools-2026-09-15).\n- Preise: Cache-Writes $10 (5 min) und $16 (1 h), Cache-Reads $0,20, Batch $4 / $20 je MTok.",
+  "arbeitsweise_de": "Beim Umstieg von Fable 5.1 oder Opus 5.5 den Effort-Sweep neu laufen lassen statt alte Einstellungen zu übernehmen, Prompt-Zeilen wie „antworte direkt ohne Nachdenken“ entfernen und stattdessen den Effort senken, und bei Coding-Agenten im Prompt festlegen, wem der Code gehört. Die Hinweise stammen aus der Doku; wer andere Modelle nutzt, ist davon nicht betroffen.",
+  "bereich": "api",
+  "datum": "2026-11-09",
+  "wichtig": false
+}

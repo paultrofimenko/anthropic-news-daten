@@ -1,0 +1,18 @@
+{
+  "id": "fable-mythos-5-2-abschaltung",
+  "quelle": "abschaltungen",
+  "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+  "titel_original": "Model deprecations: claude-fable-5-2 and claude-mythos-5-2",
+  "titel_de": "Fable 5.2 und Mythos 5.2: Abschaltung frühestens am 9. November 2027",
+  "kurz_de": "In der Abschaltliste stehen claude-fable-5-2 und claude-mythos-5-2 als aktiv; geplante Abschaltung nicht vor dem 9. November 2027.",
+  "briefing_de": "Neu in der Abschaltliste:\n- claude-fable-5-2: Status Active, nicht abgekündigt, voraussichtliche Abschaltung frühestens am 9. November 2027.\n- claude-mythos-5-2: Status Active, ebenfalls nicht vor dem 9. November 2027.\n- Zum Vergleich in derselben Tabelle: claude-fable-5-1 und claude-mythos-5-1 frühestens am 1. September 2027.",
+  "bereich": "modelle",
+  "datum": "2026-11-09",
+  "wichtig": true,
+  "lernkarten": [
+    {
+      "frage_de": "Wann werden claude-fable-5-2 und claude-mythos-5-2 laut Abschaltliste frühestens abgeschaltet?",
+      "antwort_de": "Nicht vor dem 9. November 2027; beide Modelle sind als Active geführt und nicht abgekündigt."
+    }
+  ]
+}
