@@ -1,0 +1,13 @@
+{
+  "id": "compliance-api-security-posture-daten",
+  "quelle": "platform-release-notes",
+  "url": "https://platform.claude.com/docs/en/release-notes/overview",
+  "titel_original": "November 5, 2026",
+  "titel_de": "Compliance API liefert jetzt Security-posture-Daten (Beta)",
+  "kurz_de": "Die Compliance API enthält Security-posture-Daten, in der Beta für Claude-Enterprise-Organisationen. Der Activity Feed erfasst Änderungen an Bestätigungen auf der Seite Security posture.",
+  "briefing_de": "Neu in den Platform Release Notes vom 5. November 2026:\n- Die Compliance API enthält Security-posture-Daten, in der Beta für Claude-Enterprise-Organisationen.\n- Der Activity Feed zeichnet Änderungen an Bestätigungen (Attestations) auf der Seite „Security posture“ in den Organization settings von claude.ai auf.\n- Der Endpunkt `GET /v1/compliance/organizations/{organization_id}/security_posture` gibt die aktuellen Security-posture-Ergebnisse einer Organisation zurück.\n- Dazu gibt es eine neue Doku-Unterseite „Security posture in the Compliance API“ mit Anleitungen: Ereignisse ins SIEM senden, Änderungen erkennen, Zuordnung zu OCSF, Referenzen zu Ereignissen und Ergebnissen sowie Abgleich gespeicherter Ereignisse mit den aktuellen Ergebnissen.",
+  "arbeitsweise_de": "Wer für eine Enterprise-Organisation Sicherheitswerkzeuge oder ein SIEM betreibt, kann die Änderungen an Bestätigungen über den Activity Feed einlesen und die aktuellen Ergebnisse per Endpunkt abfragen. Die Funktion ist laut Quelle nur für Claude-Enterprise-Organisationen und noch in der Beta.",
+  "bereich": "unternehmen",
+  "datum": "2026-11-05",
+  "wichtig": false
+}
