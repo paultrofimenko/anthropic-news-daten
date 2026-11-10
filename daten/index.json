@@ -1,8 +1,160 @@
 {
  "version": 1,
- "erzeugt": "2026-11-06T23:12:47.913Z",
- "anzahl": 121,
+ "erzeugt": "2026-11-10T03:38:58.377Z",
+ "anzahl": 130,
  "beitraege": [
+  {
+   "id": "claude-code-2-1-322",
+   "quelle": "code-changelog",
+   "url": "https://code.claude.com/docs/en/changelog",
+   "titel_original": "Claude Code 2.1.322",
+   "titel_de": "Claude Code 2.1.322: Fast Mode auf Vertex",
+   "kurz_de": "Fassung 2.1.322 bringt Fast Mode auf Vertex in den Regionen global, us und eu; lehnt Vertex ihn ab, fällt Claude Code auf Standardgeschwindigkeit zurück.",
+   "briefing_de": "Neu in Fassung 2.1.322:\n- Fast Mode auf Vertex in den Regionen global, us und eu; lehnt Vertex ihn ab, fällt Claude Code auf Standardgeschwindigkeit zurück.",
+   "bereich": "claude-code",
+   "datum": "2026-11-10",
+   "wichtig": false
+  },
+  {
+   "id": "claude-code-2-1-321",
+   "quelle": "code-changelog",
+   "url": "https://code.claude.com/docs/en/changelog",
+   "titel_original": "Claude Code 2.1.321",
+   "titel_de": "Claude Code 2.1.321: Fable 5.2 als Standard und viele Sicherheits-Fixes",
+   "kurz_de": "Fassung 2.1.321 bringt Claude Fable 5.2 als Standard-Fable-Modell, --settings für claude remote-control und viele Fixes, u. a. bei Bash-Rechten und MCP-OAuth.",
+   "briefing_de": "Neu in Fassung 2.1.321:\n- Claude Fable 5.2 (claude-fable-5-2) ist jetzt das Standard-Fable-Modell: 1M Kontext, $8 / $40 je Mtok, Cache-Reads $0,20 je Mtok.\n- Neu: claude remote-control --settings <Datei> wendet eine Settings-Datei auf jede gestartete Sitzung an; ändert sich die Datei, startet keine neue Sitzung, bis claude remote-control neu gestartet wird.\n- Sicherheits-Fixes: MCP-OAuth schickte Geheimnisse wie Refresh-Tokens an einen anderen Host, wenn ein Server umleitete; ein schreibgeschützter Bash-Befehl lief ohne Rückfrage außerhalb der Sandbox; Bash-Rechteprüfungen beurteilten Dateischreibzugriffe im falschen Ordner; Deny-Regeln und Prompts für geschützte Dateien griffen bei cp/mv in einen Ordner nicht.\n- NotebookEdit und Edit: Fixes auf Netzwerkpfaden (UNC-Freigaben, WSL-Ordner, /net-Mounts), u. a. wurde die erste Zelle gelöscht oder die erste von mehreren Fundstellen geändert.\n- Dazu viele weitere Fixes, u. a. zu Remote Control, Hooks, Plugins, Screen-Reader-Modus, Fast Mode und Bash-Verhalten bei zsh.",
+   "arbeitsweise_de": "Wer claude remote-control mit einer Settings-Datei betreibt, muss es nach Änderungen an der Datei neu starten. Die Fixes bei MCP-OAuth und Bash-Rechten wirken ohne Zutun; wer MCP-Server mit OAuth nutzt, sollte auf diese Fassung aktualisieren.",
+   "bereich": "claude-code",
+   "datum": "2026-11-09",
+   "wichtig": false
+  },
+  {
+   "id": "claude-elektronik-design-fable-5-2",
+   "quelle": "anthropic",
+   "url": "https://www.anthropic.com/research/claude-electronics-design",
+   "titel_original": "Claude can design electronic prototypes from start to finish",
+   "titel_de": "Claude entwirft Elektronikgeräte von der Schaltung bis zur Firmware",
+   "kurz_de": "Mit Diode ließ Anthropic Claude Fable 5.2 drei Geräte entwerfen; die Prototypen liefen ohne Korrekturen an der Schaltung, zeigen aber nur frühe Prototypenreife.",
+   "briefing_de": "Anthropic testete mit der Platinenfirma Diode, wie weit Claude Fable 5.2 Elektronik von Anfang bis Ende entwerfen kann.\n- Drei Geräte aus kurzen Prompts: ein USB-C-Speakerphone mit Bluetooth, ein Sprachassistenten-Hub und ein Handheld-Haustier. Claude schrieb Spezifikation und Schaltplan, platzierte Bauteile, verlegte Leiterbahnen, entwarf druckbare Gehäuse, schrieb die Firmware und erstellte die Stückliste.\n- Diode fertigte die Platinen direkt aus Claudes Dateien und baute sie auf; die Prototypen liefen ohne Korrekturen an der Schaltung. Weil es frühe Prototypen sind, ist offen, wie sie bei längerer Nutzung halten und ob sie kommerzielle Zertifizierungen bestehen würden.\n- Benchmarks: Fable 5.2 erreicht 69 % auf Diodes internem PCB Gym (Fable 5: 25 %) und 83,5 % auf BenchCAD, fast das Doppelte von Fable 5.1.\n- Claude überarbeitete eigene Entwürfe ungefragt (z. B. Leiterbahnen löschen und neu verlegen), schrieb für den Hub einen eigenen Router, prüfte Gehäuse auf Kollisionen und führte Fertigungs- und Beschaffungsprüfungen selbst aus.",
+   "bereich": "forschung",
+   "datum": "2026-11-09",
+   "wichtig": false
+  },
+  {
+   "id": "fable-5-2-api-aenderungen",
+   "quelle": "platform-release-notes",
+   "url": "https://platform.claude.com/docs/en/release-notes/overview",
+   "titel_original": "Claude Platform Release Notes: November 9, 2026",
+   "titel_de": "Fable 5.2 in der API: Prefix-Check, Computer Use und Advisor ändern sich",
+   "kurz_de": "Fable 5.2 und Mythos 5.2 bringen API-Änderungen, die Code brechen können: Prefix-Check für alle Konten, neues Computer-Use-Toolset, Advisor nur Fable/Mythos 5.2.",
+   "briefing_de": "Release Notes vom 9. November 2026 zu claude-fable-5-2 und claude-mythos-5-2 (1M Kontext, 128k max. Output, Adaptive Thinking immer an, $8 / $40 je MTok; Fable 5.1 und Mythos 5.1 kosten $10 / $50).\n- Prefix-Check gilt für jedes Konto: Wer system, tools oder eine frühere Nachricht ändert und dann einen Thinking-Block einer späteren Runde zurückschickt, bekommt einen 400-Fehler. Fable 5.1 liefert den Fehler standardmäßig nur bei Konten, die ab dem 31.08.2026 erstellt wurden.\n- Modellwechsel: Auf der Claude API und Claude Models on Google Cloud (Google managed) behält ein Gespräch beim Wechsel auf Fable/Mythos 5.2 das Reasoning anderer Modelle. In die andere Richtung verwirft die API die Thinking-Blocks von Fable/Mythos 5.2; die Anfrage gelingt trotzdem.\n- Computer Use nur über computer_toolset_20260801; das frühere Tool computer_20251124 liefert auf allen Plattformen außer Amazon Bedrock einen 400-Fehler.\n- Advisor-Tool (Beta): Ein Fable/Mythos-5.2-Executor akzeptiert nur Fable 5.2 oder Mythos 5.2 als Advisor, sonst 400-Fehler. Jeder Executor akzeptiert Fable 5.2 als Advisor.\n- Beide Modelle brauchen 30 Tage Datenaufbewahrung; ohne ausdrückliche Genehmigung von Anthropic nicht unter Zero Data Retention. Thinking-Blocks funktionieren nur im erzeugenden oder einem verknüpften Konto.\n- Fast Mode für Fable 5.2 in Messages-API-Anfragen auf der Claude API: bis zu 2,5-fache Ausgabegeschwindigkeit, $16 / $80 je MTok, per speed: \"fast\" ohne Beta-Header.",
+   "arbeitsweise_de": "Vor dem Wechsel auf claude-fable-5-2 prüfen, ob der eigene Code system, tools oder frühere Nachrichten nachträglich ändert, und das Computer-Use-Tool auf computer_toolset_20260801 umstellen (außer auf Amazon Bedrock). Wer das Advisor-Tool nutzt, setzt dessen model auf Fable 5.2 oder Mythos 5.2. Wer nur Claude Code, claude.ai, Managed Agents oder das Agent SDK nutzt, baut die Anfragen nicht selbst – die Release Notes nennen für diese Fälle keine Änderung; die Details stehen im Migrationsleitfaden.",
+   "bereich": "api",
+   "datum": "2026-11-09",
+   "wichtig": true,
+   "lernkarten": [
+    {
+     "frage_de": "Was löst bei Claude Fable 5.2 einen 400-Fehler wegen des Prefix-Checks aus?",
+     "antwort_de": "Wenn system, tools oder eine frühere Nachricht geändert wurden und danach ein Thinking-Block einer späteren Runde zurückgeschickt wird. Bei Fable 5.2 gilt das für jedes Konto."
+    },
+    {
+     "frage_de": "Wie nutzt man Computer Use mit Claude Fable 5.2 und Mythos 5.2?",
+     "antwort_de": "Über das Toolset computer_toolset_20260801. Das frühere Tool computer_20251124 liefert einen 400-Fehler, außer auf Amazon Bedrock."
+    },
+    {
+     "frage_de": "Welchen Advisor akzeptiert ein Claude-Fable-5.2-Executor im Advisor-Tool?",
+     "antwort_de": "Nur Claude Fable 5.2 oder Claude Mythos 5.2; jeder andere Advisor liefert einen 400-Fehler. Umgekehrt akzeptiert jeder Executor Fable 5.2 als Advisor."
+    }
+   ]
+  },
+  {
+   "id": "fable-5-2-doku-hinweise",
+   "quelle": "platform-doku",
+   "url": "https://platform.claude.com/docs/en/models/fable-5-2/whats-new-fable-5-2",
+   "titel_original": "What's new in Claude Fable 5.2",
+   "titel_de": "Fable 5.2 in der Doku: Effort, Verhalten und Migrationshinweise",
+   "kurz_de": "Neue Doku-Seiten zu Fable 5.2 und Mythos 5.2: Was ist neu, Migrationsleitfaden, Prompting-Hinweise, Modellseiten und System-Prompt.",
+   "briefing_de": "Zu Fable 5.2 und Mythos 5.2 gibt es neue Doku-Seiten: Modellübersichten (Fable und Mythos), „What’s new“, Migrationsleitfaden, Prompting-Leitfaden und die System-Prompts für claude.ai und die Apps.\n- Mythos 5.2 hat laut Doku dieselben Spezifikationen und Preise wie Fable 5.2 (claude-mythos-5-2, nur für verifizierte Organisationen).\n- Thinking: Adaptive Thinking ist immer an; thinking mit budget_tokens oder type disabled liefert einen 400-Fehler. Forced Tool Use (tool_choice any oder tool) wird nicht unterstützt; Structured Outputs (strict Tool Use und JSON Outputs) sind nicht verfügbar.\n- Effort: alle fünf Stufen (low bis max), API-Standard high. Für die schwersten Langläufer xhigh, max nur zum Ausloten der Grenze.\n- Verhalten: Zeilen im Prompt, die weniger Denken verlangen, stoppen das Denken ab medium nicht; Runden können vor Abschluss enden (häufiger bei low und medium); wer nichts zum Code-Besitz sagt, bekommt eher Ergänzungen statt Korrekturen; viele Tool-Aufrufe mit wenig Text; je nach Harness delegiert das Modell viel an Subagents.\n- Betas in der Doku: Compaction on demand (Header compact-2026-09-04) und Mid-conversation-Tool-Änderungen (inline-tools-2026-09-15).\n- Preise: Cache-Writes $10 (5 min) und $16 (1 h), Cache-Reads $0,20, Batch $4 / $20 je MTok.",
+   "arbeitsweise_de": "Beim Umstieg von Fable 5.1 oder Opus 5.5 den Effort-Sweep neu laufen lassen statt alte Einstellungen zu übernehmen, Prompt-Zeilen wie „antworte direkt ohne Nachdenken“ entfernen und stattdessen den Effort senken, und bei Coding-Agenten im Prompt festlegen, wem der Code gehört. Die Hinweise stammen aus der Doku; wer andere Modelle nutzt, ist davon nicht betroffen.",
+   "bereich": "api",
+   "datum": "2026-11-09",
+   "wichtig": false
+  },
+  {
+   "id": "fable-mythos-5-2",
+   "quelle": "anthropic",
+   "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+   "titel_original": "Introducing Claude Fable 5.2 and Claude Mythos 5.2",
+   "titel_de": "Fable 5.2 und Mythos 5.2: schneller, günstiger, mit Fast Mode",
+   "kurz_de": "Claude Fable 5.2 (claude-fable-5-2) erscheint für $8 / $40 je Mio. Token, laut Anthropic bis zu 30 % schneller als Fable 5.1; Mythos 5.2 ist das gleiche Modell für verifizierte Organisationen.",
+   "briefing_de": "Claude Fable und Claude Mythos sind dasselbe zugrunde liegende Modell; Fable hat starke Cybersecurity- und Biologie-Schutzmaßnahmen und steht allen Nutzern offen.\n- Erschienen am 09.11.2026, Modell-ID claude-fable-5-2, laut Anthropic auf allen Plattformen, u. a. Amazon Web Services, Google Cloud und Microsoft Azure.\n- Preis: $8 je Mio. Input-Token und $40 je Mio. Output-Token (günstiger als Fable 5.1); Ausgabe bis zu 30 % schneller als bei Fable 5.1 und Mythos 5.1.\n- Optionaler Fast Mode: bis zu 2,5-fache Token-Geschwindigkeit für $16 / $80 je Mio. Token; verfügbar in Claude Code, auf der Claude Platform, Claude Models on Google Cloud (Anthropic und Google managed) und Microsoft Foundry (Anthropic hosted). Fast Mode von Mythos nur für Organisationen in den Verification Programs.\n- Mythos 5.2 gibt es nur für geprüfte Organisationen (Cyber und Life Sciences Verification Program); Fable-Schutzmaßnahmen blockieren die meisten Cybersecurity-Aufgaben und den Großteil der Biologie-Forschung. Laut Anthropic etwa 55 % weniger Blockierungen als bei Fable 5.1.\n- Empfehlung: für die meisten Coding- und Wissensaufgaben mit Opus 5.5 starten und je nach Aufgabe zu Fable/Mythos hoch oder zu Sonnet 5.5 / Haiku 5.5 herunter wechseln; Fable 5.2 kann auch als Advisor oder Orchestrator dienen.\n- Aktion für Abonnenten: diese Woche zusätzliche Fable-Nutzung (ein bis drei Fable-Resets je nach Abodauer; Fable bei Pro und Standard-Plätzen im Team-Tarif bis zu 50 % der wöchentlichen Limits eingeschlossen).",
+   "arbeitsweise_de": "Wer Aufgaben hat, bei denen Opus 5.5 auch mit höherem Effort nicht reicht, kann Fable 5.2 testen; dafür die Modell-ID claude-fable-5-2 setzen. Für die meisten Aufgaben bleibt Opus 5.5 der empfohlene Start. Cybersecurity- und Biologie-Aufgaben blockiert Fable 5.2 meist; dafür ist Mythos 5.2 für verifizierte Organisationen gedacht. Beim Wechsel können API-Änderungen Code brechen – siehe den Beitrag zu den API-Änderungen.",
+   "bereich": "modelle",
+   "datum": "2026-11-09",
+   "wichtig": true,
+   "ereignis": {
+    "art": "neu",
+    "titel": "Fable 5.2 und Mythos 5.2 erscheinen"
+   },
+   "lernkarten": [
+    {
+     "frage_de": "Was kostet Claude Fable 5.2 je Million Token, und wie lautet die Modell-ID?",
+     "antwort_de": "Modell-ID claude-fable-5-2; $8 je Mio. Input-Token und $40 je Mio. Output-Token. Der optionale Fast Mode kostet $16 / $80."
+    },
+    {
+     "frage_de": "Worin unterscheiden sich Claude Fable 5.2 und Claude Mythos 5.2?",
+     "antwort_de": "Es ist dasselbe Modell. Fable hat starke Cybersecurity- und Biologie-Schutzmaßnahmen und steht allen offen; Mythos steht verifizierten Organisationen aus den Verification Programs offen."
+    },
+    {
+     "frage_de": "Wie viel schneller macht der Fast Mode Claude Fable 5.2 laut Anthropic?",
+     "antwort_de": "Er beschleunigt die Token-Erzeugung um bis zu das 2,5-Fache und kostet $16 je Mio. Input- und $80 je Mio. Output-Token."
+    }
+   ]
+  },
+  {
+   "id": "fable-mythos-5-2-abschaltung",
+   "quelle": "abschaltungen",
+   "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+   "titel_original": "Model deprecations: claude-fable-5-2 and claude-mythos-5-2",
+   "titel_de": "Fable 5.2 und Mythos 5.2: Abschaltung frühestens am 9. November 2027",
+   "kurz_de": "In der Abschaltliste stehen claude-fable-5-2 und claude-mythos-5-2 als aktiv; geplante Abschaltung nicht vor dem 9. November 2027.",
+   "briefing_de": "Neu in der Abschaltliste:\n- claude-fable-5-2: Status Active, nicht abgekündigt, voraussichtliche Abschaltung frühestens am 9. November 2027.\n- claude-mythos-5-2: Status Active, ebenfalls nicht vor dem 9. November 2027.\n- Zum Vergleich in derselben Tabelle: claude-fable-5-1 und claude-mythos-5-1 frühestens am 1. September 2027.",
+   "bereich": "modelle",
+   "datum": "2026-11-09",
+   "wichtig": true,
+   "lernkarten": [
+    {
+     "frage_de": "Wann werden claude-fable-5-2 und claude-mythos-5-2 laut Abschaltliste frühestens abgeschaltet?",
+     "antwort_de": "Nicht vor dem 9. November 2027; beide Modelle sind als Active geführt und nicht abgekündigt."
+    }
+   ]
+  },
+  {
+   "id": "fermat-agententeam-fable-5-2",
+   "quelle": "claude-dev-rss",
+   "url": "https://claude.dev/blog/safely-scaling-multi-agent-teams-with-fable-5-2/",
+   "titel_original": "Safely scaling multi-agent teams with Claude Fable 5.2",
+   "titel_de": "1.000 Agenten beweisen Fermats Letzten Satz – mit mehrschichtiger Absicherung",
+   "kurz_de": "Ein Team aus 1.000 Agenten mit einer frühen Fable-5.2-Fassung reproduzierte in einem Spielzeug-Experiment den Lean-Beweis des Fermatschen Satzes in 28,7 Stunden – sandboxed und überwacht.",
+   "briefing_de": "Anthropic beschreibt ein Experiment, das ausdrücklich ein Spielzeug-Experiment ist.\n- Ergebnis: 1.000 Agenten (eine frühe Fable-5.2-Fassung) formalisierten den Beweis in 28,7 Stunden, mit einem Drittel der Output-Token und einem Beweis, der ein Siebtel so lang ist wie beim ersten Mal (damals: 11 Tage, rund 6 Mrd. Output-Token, mit Prove2Me und einem Forscher).\n- Werkzeuge je Agent: Shell und Editor in einer eigenen Sandbox ohne Netz, ein eigener Git-Branch mit Merge Requests und eine gemeinsame Postgres-Datenbank. Struktur nur: ein Lead und 999 Helfer.\n- Der Lead baute in den ersten 10 Minuten fünf Tabellen zur Koordination; Teams wurden später umverteilt.\n- Absicherung: Sandbox ohne Netzzugang (nur Pipe zu einem Gateway), eingeschränkte Rechte, ein Classifier prüft jeden Tool-Aufruf, ein Offline-Monitor prüft die Aktionen. Bei über einer Million Tool-Aufrufen erreichte keiner die Blockierschwelle. Nach dem Lauf kam ein paralleler Monitor hinzu, der auch den Gedankengang sieht.\n- Anthropic schließt daraus, dass Agententeams mit Modellen wie Fable 5.2 ehrgeizige Langzeitziele innerhalb sorgfältiger Sicherheitsgrenzen erreichen können.",
+   "arbeitsweise_de": "Für eigene Multi-Agent-Aufbauten: Beim Lauf teilten sich Agenten ohne Netzzugang nur Git und eine SQL-Datenbank; ein einzelner Rechner stieß bei etwa 100 Agenten an Grenzen. Das ist ein Forschungsexperiment von Anthropic, kein Produkt.",
+   "bereich": "entwickler",
+   "datum": "2026-11-09",
+   "wichtig": false
+  },
+  {
+   "id": "modellwahl-fable-opus-sonnet-haiku",
+   "quelle": "claude-dev-rss",
+   "url": "https://claude.dev/blog/which-claude-model-should-you-build-with/",
+   "titel_original": "Which Claude model should you build with? Fable, Opus, Sonnet, or Haiku",
+   "titel_de": "Welches Claude-Modell wofür? Leitfaden zu Fable, Opus, Sonnet und Haiku",
+   "kurz_de": "Anthropic rät, die meiste Arbeit mit Opus 5.5 zu beginnen, für klare Aufgaben auf Sonnet 5.5, für Masse auf Haiku 5.5 und für die härtesten Projekte auf Fable 5.2 zu gehen.",
+   "briefing_de": "Aktuell gibt es vier allgemein verfügbare Modelle: Haiku 5.5, Sonnet 5.5, Opus 5.5 und Fable 5.2; Mythos 5.2 nur über die Verification Programs.\n- Start mit Opus 5.5 bei Standard-Effort (auch Standardmodell in Claude Code); es kostet halb so viel pro Token wie Fable 5.2.\n- Sonnet 5.5 für klar umrissene Alltagsarbeit; Haiku 5.5 für einfache Massenaufgaben wie Klassifikation, Routing und Extraktion sowie als Subagent. Haiku-Preis: ab $0,10 / $0,50 bis 100K Prompt-Token, darüber fünffach.\n- Fable 5.2 für die härtesten Projekte in Coding, Finanzen und Wissenschaft, wenn Opus 5.5 nicht reicht und für lange unbeaufsichtigte Läufe.\n- Erst Effort anpassen, bevor das Modell wechselt; ein Effort-Level mehr kann so viel kosten wie ein größeres Modell. Wenn ein Modell nicht reicht: zuerst Selbstprüfung (Test, Build, Skript) ermöglichen, dann das nächstgrößere Modell mit niedrigerem Effort testen.\n- Fable 5.2 erzeugt Ausgaben bis zu 30 % schneller als Fable 5.1; Cache-Reads kosten bei Opus 5.5 und Fable 5.2 je $0,20, bei Sonnet 5.5 $0,10 je Mio. Token. Fast Mode gibt es auf der Claude API für Opus 5.5 und Fable 5.2.",
+   "arbeitsweise_de": "Bei hartem Aufgabenmix beide Optionen messen: Auf FrontierCode 2.0 erreicht Fable 5.2 laut Beitrag fast den Bestwert von Opus 5.5 (45,3 % vs. 45,5 %) bei etwa halben Kosten pro Aufgabe. Für alltägliche Aufgaben bleibt Opus 5.5 der Startpunkt. Preise sind Claude-API-Listenpreise.",
+   "bereich": "entwickler",
+   "datum": "2026-11-09",
+   "wichtig": false
+  },
   {
    "id": "claude-code-2-1-319",
    "quelle": "code-changelog",
@@ -1927,6 +2079,13 @@
    "url": "https://platform.claude.com/docs/en/build-with-claude/message-threads"
   },
   {
+   "datum": "2026-11-09",
+   "art": "neu",
+   "titel": "Fable 5.2 und Mythos 5.2 erscheinen",
+   "beitrag": "fable-mythos-5-2",
+   "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+  },
+  {
    "datum": "2026-11-30",
    "art": "ende",
    "titel": "Abschaltung von Sonnet 4.5",
@@ -1943,7 +2102,7 @@
    "titel_de": "Modelle",
    "kurz_de": "Fable, Opus, Sonnet, Haiku – was sie können, was sie kosten, wann sie abgeschaltet werden.",
    "einleitung_de": "Claude gibt es in vier aktuellen Modellen, vom schnellen, günstigen Haiku bis zum besonders starken Fable. Abgerechnet wird nach Token – Wortstücken, aus denen ein Modell Text zusammensetzt. Oft hilft die Einstellung „Effort“ mehr als ein anderes Modell.",
-   "stand": "2026-10-30",
+   "stand": "2026-11-10",
    "grafik": {
     "art": "balken",
     "titel_de": "Preis je Million Token",
@@ -1955,10 +2114,10 @@
     ],
     "zeilen": [
      {
-      "name": "Fable 5.1",
+      "name": "Fable 5.2",
       "werte": [
-       10,
-       50
+       8,
+       40
       ]
      },
      {
@@ -1990,21 +2149,22 @@
      "titel_de": "Die vier aktuellen Modelle",
      "text_de": "Alle vier verstehen Text und Bilder, schreiben Text, beherrschen viele Sprachen und können Werkzeuge benutzen. Für die meisten Aufgaben empfiehlt Anthropic, mit Opus 5.5 anzufangen.",
      "punkte_de": [
-      "Fable 5.1 – für anspruchsvolles Denken und lange Agenten-Arbeit (eine KI erledigt selbstständig viele Schritte nacheinander). Am langsamsten.",
+      "Fable 5.2 – für anspruchsvolles Denken und lange Agenten-Arbeit (eine KI erledigt selbstständig viele Schritte nacheinander). Mittleres Tempo.",
       "Opus 5.5 – für lange Programmier- und Wissensarbeit. Mittleres Tempo.",
       "Sonnet 5.5 – die beste Mischung aus Tempo und Intelligenz, halb so teuer wie Opus 5.5. Schnell.",
       "Haiku 5.5 – für viele, zeitkritische Aufgaben wie Einordnen, Herausziehen und Weiterleiten von Daten. Das schnellste und das günstigste Modell.",
       {
-       "text_de": "Fable 5.1 ist das stärkste Modell, das allen Kunden offensteht. Mythos 5.1 kann dasselbe, ist aber nur für Organisationen freigegeben, die Anthropic über eigene Prüfprogramme bestätigt hat, etwa das „Cyber Verification Program“.",
+       "text_de": "Fable 5.2 ist das stärkste Modell, das allen Kunden offensteht. Mythos 5.2 kann dasselbe, ist aber nur für Organisationen freigegeben, die Anthropic über eigene Prüfprogramme bestätigt hat, etwa das „Cyber Verification Program“.",
        "quelle": "https://platform.claude.com/docs/en/about-claude/models/choosing-a-model"
       }
      ],
      "quelle": "https://platform.claude.com/docs/en/models/overview",
      "geaendert": {
-      "am": "2026-10-16",
+      "am": "2026-11-10",
       "durch": [
-       "haiku-5-5",
-       "sonnet-5-5-cache-lesepreis"
+       "fable-mythos-5-2",
+       "fable-mythos-5-2-abschaltung",
+       "fable-5-2-api-aenderungen"
       ]
      }
     },
@@ -2027,9 +2187,9 @@
     },
     {
      "titel_de": "Denken und Effort",
-     "text_de": "„Adaptives Denken“ heißt: Das Modell entscheidet selbst, wie viel es vor der Antwort nachdenkt. Bei Fable 5.1 und Opus 5.5 ist es immer an. Wie viel Mühe es sich gibt, steuert der Effort-Wert.",
+     "text_de": "„Adaptives Denken“ heißt: Das Modell entscheidet selbst, wie viel es vor der Antwort nachdenkt. Bei Fable 5.2 und Opus 5.5 ist es immer an. Wie viel Mühe es sich gibt, steuert der Effort-Wert.",
      "punkte_de": [
-      "Voreinstellung über die API (die Schnittstelle für Programme): Opus 5.5 und Haiku 5.5 „medium“, Fable 5.1 und Sonnet 5.5 „high“.",
+      "Voreinstellung über die API (die Schnittstelle für Programme): Opus 5.5 und Haiku 5.5 „medium“, Fable 5.2 und Sonnet 5.5 „high“.",
       "Das ältere „Extended Thinking“ mit festem Denkbudget nehmen die aktuellen Modelle nicht mehr an.",
       {
        "text_de": "Anthropic rät: Den Effort anzupassen ist oft der bessere Hebel, als das Modell zu wechseln.",
@@ -2038,23 +2198,24 @@
      ],
      "quelle": "https://platform.claude.com/docs/en/models/overview",
      "geaendert": {
-      "am": "2026-10-16",
+      "am": "2026-11-10",
       "durch": [
-       "haiku-5-5",
-       "sonnet-5-5-cache-lesepreis"
+       "fable-mythos-5-2",
+       "fable-mythos-5-2-abschaltung",
+       "fable-5-2-api-aenderungen"
       ]
      }
     },
     {
      "titel_de": "So wählst du das Modell",
-     "text_de": "Anthropic beschreibt zwei Wege. Entweder klein anfangen: mit Haiku 5.5 bauen, gründlich testen und nur dort aufsteigen, wo es nicht reicht. Oder stark anfangen: mit Opus 5.5 bauen und später Effort senken oder auf ein günstigeres Modell gehen. Reicht Opus 5.5 selbst auf „xhigh“ oder „max“ nicht, ist Fable 5.1 der nächste Schritt.",
+     "text_de": "Anthropic beschreibt zwei Wege. Entweder klein anfangen: mit Haiku 5.5 bauen, gründlich testen und nur dort aufsteigen, wo es nicht reicht. Oder stark anfangen: mit Opus 5.5 bauen und später Effort senken oder auf ein günstigeres Modell gehen. Reicht Opus 5.5 selbst auf „xhigh“ oder „max“ nicht, ist Fable 5.2 der nächste Schritt.",
      "punkte_de": [
       {
        "text_de": "Älteres Modell: Haiku 4.5 kann schon ab dem 15.10.2026 abgeschaltet werden, so steht es in der Liste. Anthropic benachrichtigt Kunden, die ein Modell nutzen, aber mindestens 60 Tage vorher – bisher ist nichts angekündigt.",
        "quelle": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
       },
       "Wer von Haiku 4.5 wechselt: Anthropic beschreibt auf einer eigenen Seite „What's new in Claude Haiku 5.5“ Änderungen, die bestehenden Code brechen – vorher lesen.",
-      "Höchste Leistung, Agenten über Stunden, Recherche bis zum fertigen Dokument → Fable 5.1",
+      "Höchste Leistung, Agenten über Stunden, Recherche bis zum fertigen Dokument → Fable 5.2",
       "Komplexes Programmieren, große Umbauten, viel Bildverarbeitung, Computersteuerung → Opus 5.5",
       "Alltägliches Programmieren, Datenanalyse, Texte → Sonnet 5.5",
       "Niedrigste Wartezeit und Kosten, Hilfsaufgaben für Agenten → Haiku 5.5",
@@ -2062,10 +2223,11 @@
      ],
      "quelle": "https://platform.claude.com/docs/en/about-claude/models/choosing-a-model",
      "geaendert": {
-      "am": "2026-10-16",
+      "am": "2026-11-10",
       "durch": [
-       "haiku-5-5",
-       "sonnet-5-5-cache-lesepreis"
+       "fable-mythos-5-2",
+       "fable-mythos-5-2-abschaltung",
+       "fable-5-2-api-aenderungen"
       ]
      }
     },
@@ -2073,17 +2235,19 @@
      "titel_de": "Günstiger rechnen: Stapel und Zwischenspeicher",
      "text_de": "Neben dem Grundpreis gibt es zwei große Rabatte. Anfragen über die Batch-Schnittstelle (Stapel, Antwort kommt später) kosten die Hälfte – 50 % weniger für Eingabe und Ausgabe. Wiederholte Anfangsteile einer Anfrage lassen sich zwischenspeichern; ein Treffer im Zwischenspeicher kostet nur einen Bruchteil des Eingabepreises.",
      "punkte_de": [
-      "Zwischenspeicher-Treffer: normal 10 % des Eingabepreises, bei Opus 5.5 und Sonnet 5.5 nur 5 % (0,20 $ bzw. 0,10 $ je Million Token), bei Fable 5.1 nur 2,5 % (0,25 $).",
+      "Zwischenspeicher-Treffer: normal 10 % des Eingabepreises, bei Opus 5.5 und Sonnet 5.5 nur 5 % (0,20 $ bzw. 0,10 $ je Million Token), bei Fable 5.2 nur 2,5 % (0,20 $).",
       "Das volle Kontextfenster von 1 Million Token kostet ab Generation 4.6 keinen Aufschlag – eine sehr lange Anfrage kostet je Token so viel wie eine kurze. Ausnahme ist Haiku 5.5.",
       "Haiku 5.5 rechnet nach Länge der Anfrage: bis 100.000 Token Eingabe 0,10 $ Eingabe und 0,50 $ Ausgabe je Million Token, darüber 0,50 $ und 2,50 $.",
-      "Opus 5.5 im schnellen Modus: 8 $ Eingabe und 40 $ Ausgabe je Million Token. Bei Opus 5.5 ist er keine Vorschau mehr, bei Opus 5 und Opus 4.8 schon."
+      "Opus 5.5 im schnellen Modus: 8 $ Eingabe und 40 $ Ausgabe je Million Token. Bei Opus 5.5 ist er keine Vorschau mehr, bei Opus 5 und Opus 4.8 schon.",
+      "Fable 5.2 im schnellen Modus: 16 $ Eingabe und 80 $ Ausgabe je Million Token."
      ],
      "quelle": "https://platform.claude.com/docs/en/about-claude/pricing",
      "geaendert": {
-      "am": "2026-10-16",
+      "am": "2026-11-10",
       "durch": [
-       "haiku-5-5",
-       "sonnet-5-5-cache-lesepreis"
+       "fable-mythos-5-2",
+       "fable-mythos-5-2-abschaltung",
+       "fable-5-2-api-aenderungen"
       ]
      }
     },
@@ -2093,9 +2257,9 @@
      "punkte_de": [
       "Sonnet 4.5 ist seit 30.09.2026 abgekündigt und wird am 30.11.2026 abgeschaltet – Nachfolger: Sonnet 5.5.",
       "Haiku 4.5: nicht vor dem 15.10.2026. Opus 4.5: nicht vor dem 24.11.2026.",
-      "Fable 5.1 nicht vor dem 01.09.2027, Opus 5.5 nicht vor dem 22.09.2027, Sonnet 5.5 nicht vor dem 28.09.2027, Haiku 5.5 nicht vor dem 07.10.2027.",
+      "Fable 5.2 nicht vor dem 09.11.2027, Fable 5.1 nicht vor dem 01.09.2027, Opus 5.5 nicht vor dem 22.09.2027, Sonnet 5.5 nicht vor dem 28.09.2027, Haiku 5.5 nicht vor dem 07.10.2027.",
       {
-       "text_de": "Ältere Modelle wie Fable 5, Opus 5, Opus 4.8, Sonnet 5 und Haiku 4.5 sind weiter verfügbar.",
+       "text_de": "Ältere Modelle wie Fable 5.1, Fable 5, Opus 5, Opus 4.8, Sonnet 5 und Haiku 4.5 sind weiter verfügbar.",
        "quelle": "https://platform.claude.com/docs/en/models/overview"
       },
       {
@@ -2105,21 +2269,26 @@
      ],
      "quelle": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
      "geaendert": {
-      "am": "2026-10-30",
+      "am": "2026-11-10",
       "durch": [
-       "fast-mode-opus-4-8-abschaltung"
+       "fable-mythos-5-2",
+       "fable-mythos-5-2-abschaltung",
+       "fable-5-2-api-aenderungen"
       ]
      }
     }
    ],
    "gesehen": [
-    "fast-mode-opus-4-8-abschaltung"
+    "fable-mythos-5-2",
+    "fable-mythos-5-2-abschaltung",
+    "fable-5-2-api-aenderungen"
    ],
    "grafik_geaendert": {
-    "am": "2026-10-16",
+    "am": "2026-11-10",
     "durch": [
-     "haiku-5-5",
-     "sonnet-5-5-cache-lesepreis"
+     "fable-mythos-5-2",
+     "fable-mythos-5-2-abschaltung",
+     "fable-5-2-api-aenderungen"
     ]
    }
   },
@@ -2330,7 +2499,7 @@
    "titel_de": "API und Plattform",
    "kurz_de": "Wie Programme Claude einbauen: Schnittstellen, Werkzeuge, Grenzen.",
    "einleitung_de": "Über die Claude-API (eine Schnittstelle, über die Programme mit Claude sprechen) bauen Entwickler Claude in eigene Anwendungen ein. Dafür gibt es zwei Wege: die Messages-API für volle Kontrolle und Claude Managed Agents für lange Aufgaben, die Anthropic betreibt.",
-   "stand": "2026-11-02",
+   "stand": "2026-11-10",
    "grafik": {
     "art": "schritte",
     "titel_de": "Der Weg für neue Entwickler",
@@ -2381,13 +2550,17 @@
       {
        "text_de": "API-Version 2026-10-21: temperature, top_p und top_k liefern einen 400-Fehler; neue SDK-Hauptversionen (z. B. Python SDK 2.0.0, TypeScript SDK 1.0.0) senden sie standardmäßig",
        "quelle": "https://platform.claude.com/docs/en/api/migration-2026-10-21"
+      },
+      {
+       "text_de": "Claude Fable 5.2 und Mythos 5.2 (seit 09.11.2026): Der Prefix-Check für Thinking-Blocks gilt für jedes Konto – wer system, tools oder frühere Nachrichten ändert und dann einen späteren Thinking-Block zurückschickt, bekommt einen 400-Fehler",
+       "quelle": "https://platform.claude.com/docs/en/release-notes/overview"
       }
      ],
      "quelle": "https://platform.claude.com/docs/en/api/overview",
      "geaendert": {
-      "am": "2026-10-21",
+      "am": "2026-11-10",
       "durch": [
-       "api-version-2026-10-21"
+       "fable-5-2-api-aenderungen"
       ]
      }
     },
@@ -2413,16 +2586,17 @@
       {
        "text_de": "In Managed Agents holt web_fetch nur noch URLs, die in der Sitzung schon aufgetaucht sind (z. B. im Text einer Nutzernachricht); andere liefern den Fehler url_not_in_prior_context",
        "quelle": "https://platform.claude.com/docs/en/release-notes/overview"
+      },
+      {
+       "text_de": "Fable 5.2 und Mythos 5.2: Computer Use nur über computer_toolset_20260801 (das frühere computer_20251124 liefert außer auf Amazon Bedrock einen 400-Fehler); beim Berater-Tool akzeptiert ein Fable-5.2-Executor nur Fable 5.2 oder Mythos 5.2 als Berater",
+       "quelle": "https://platform.claude.com/docs/en/release-notes/overview"
       }
      ],
      "quelle": "https://platform.claude.com/docs/en/build-with-claude/overview",
      "geaendert": {
-      "am": "2026-10-16",
+      "am": "2026-11-10",
       "durch": [
-       "opentelemetry-export-beta",
-       "managed-agents-dynamische-workflows",
-       "managed-agents-web-fetch-url-regel",
-       "sonnet-5-5-cache-lesepreis"
+       "fable-5-2-api-aenderungen"
       ]
      }
     },
@@ -2471,8 +2645,7 @@
     }
    ],
    "gesehen": [
-    "fast-mode-opus-4-8-abschaltung",
-    "message-threads-beta"
+    "fable-5-2-api-aenderungen"
    ]
   },
   {
