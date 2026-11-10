@@ -1,0 +1,12 @@
+{
+  "id": "compliance-api-security-posture",
+  "quelle": "platform-doku",
+  "url": "https://platform.claude.com/docs/en/api/compliance/organizations/security_posture/retrieve",
+  "titel_original": "Get an organization's security posture",
+  "titel_de": "Compliance API: Sicherheitsstatus einer Organisation abrufen",
+  "kurz_de": "Neuer Compliance-API-Endpunkt: GET /v1/compliance/organizations/{organization_id}/security_posture liefert die Sicherheitskontrollen einer Organisation mit aktuellem Ergebnis und Bestätigungen.",
+  "briefing_de": "Neu in der Doku: Endpunkt GET /v1/compliance/organizations/{organization_id}/security_posture.\n- Er liefert in einer nicht paginierten Liste `controls` die Sicherheitskontrollen der Organisation, zum Zeitpunkt der Anfrage ausgewertet, jeweils mit Bestätigung (Attestation), soweit der Endpunkt eine zurückgibt.\n- Pro Kontrolle gibt es u. a. `rating` (descriptive, failed, not_attested, passed), `status`, `current_value`, `desired_state` und `section`. Eine fehlende Kontrolle gilt nicht als bestanden.\n- Der Header `anthropic-version` ist Pflicht, Query-Parameter sind nicht erlaubt (jeweils 400). Auch 400, wenn die Compliance API für die übergeordnete Organisation des API-Keys nicht aktiviert ist.\n- Kommentare und Autoren der Bestätigungen sieht nur ein Key mit `read:compliance_user_data` oder `read:org_audit`, der in der Organisation erstellt wurde (`comments_status`).\n- Fehler: 404 bei unbekannter oder nicht lesbarer Organisation, 429 bei Ratenlimit, 503 `posture_evaluation_failed` (Wartezeit laut `Retry-After`), 504 bei Zeitüberschreitung.",
+  "bereich": "unternehmen",
+  "datum": "2026-11-10",
+  "wichtig": false
+}
