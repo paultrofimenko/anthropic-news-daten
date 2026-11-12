@@ -1,8 +1,21 @@
 {
  "version": 1,
- "erzeugt": "2026-11-10T21:19:50.306Z",
- "anzahl": 133,
+ "erzeugt": "2026-11-12T00:46:52.546Z",
+ "anzahl": 135,
  "beitraege": [
+  {
+   "id": "effort-pro-nachricht-beta",
+   "quelle": "platform-doku",
+   "url": "https://platform.claude.com/docs/en/build-with-claude/effort-per-message",
+   "titel_original": "Per-message effort",
+   "titel_de": "Effort mitten im Gespräch ändern, ohne den Cache zu verlieren (Beta)",
+   "kurz_de": "Per-message effort (Beta): Eine system-Nachricht mit output_config.effort setzt mitten im Gespräch einen neuen Effort-Level, der gecachte Prefix bleibt gültig. Beta-Header: mid-conversation-output-config-2026-07-01.",
+   "briefing_de": "Neue Doku-Seite zu einem Beta-Feature der Messages API.\n- So geht's: eine Nachricht mit role \"system\", leerem content und dem neuen Level in output_config.effort in messages einfügen, den Beta-Header mid-conversation-output-config-2026-07-01 senden und den Top-Level-Wert unverändert lassen.\n- Wann der Level gilt: direkt nach einem user-Turn mit neuer Eingabe antwortet Claude schon mit dem neuen Level; an anderer Stelle gilt er ab dem nächsten user-Turn mit neuer Eingabe. Ein user-Turn nur mit tool_result-Blöcken zählt nicht als neue Eingabe.\n- Die Nachricht muss nach allem bisher Gesendeten stehen und bei späteren Anfragen an ihrem Platz bleiben; Einfügen davor, Verschieben oder Entfernen macht bei Modellen mit Preserved Thinking die Thinking-Blöcke der späteren assistant-Turns ungültig.\n- Unterstützte Modelle laut Doku: claude-fable-5-2, claude-mythos-5-2, claude-fable-5-1, claude-mythos-5-1, claude-opus-5-5, claude-opus-5, claude-sonnet-5-5, claude-haiku-5-5. Nicht verfügbar in Managed Agents; dort Effort über die Modelleinstellungen des Agents setzen.",
+   "arbeitsweise_de": "Wer den Effort zwischen Runden wechselt, sollte laut Doku die Per-message-Variante dem Ändern des Top-Level-Werts vorziehen: Ein Top-Level-Wechsel startet den Cache neu. Einschränkungen: Ohne Beta-Header gibt es einen 400-Fehler; Modelle ohne Unterstützung (z. B. Claude Fable 5) ebenfalls. Bei Claude Sonnet 5.5 mit thinking: {\"type\": \"between_tools\"} und Claude Haiku 5.5 mit thinking: {\"type\": \"disabled\"} lässt sich der Level nicht mitten im Gespräch ändern (400-Fehler); dort Adaptive Thinking nutzen.",
+   "bereich": "api",
+   "datum": "2026-11-12",
+   "wichtig": false
+  },
   {
    "id": "anthropic-roadshow-boersengang",
    "quelle": "anthropic",
@@ -61,6 +74,18 @@
    "kurz_de": "Mit Diode ließ Anthropic Claude Fable 5.2 drei Geräte entwerfen; die Prototypen liefen ohne Korrekturen an der Schaltung, zeigen aber nur frühe Prototypenreife.",
    "briefing_de": "Anthropic testete mit der Platinenfirma Diode, wie weit Claude Fable 5.2 Elektronik von Anfang bis Ende entwerfen kann.\n- Drei Geräte aus kurzen Prompts: ein USB-C-Speakerphone mit Bluetooth, ein Sprachassistenten-Hub und ein Handheld-Haustier. Claude schrieb Spezifikation und Schaltplan, platzierte Bauteile, verlegte Leiterbahnen, entwarf druckbare Gehäuse, schrieb die Firmware und erstellte die Stückliste.\n- Diode fertigte die Platinen direkt aus Claudes Dateien und baute sie auf; die Prototypen liefen ohne Korrekturen an der Schaltung. Weil es frühe Prototypen sind, ist offen, wie sie bei längerer Nutzung halten und ob sie kommerzielle Zertifizierungen bestehen würden.\n- Benchmarks: Fable 5.2 erreicht 69 % auf Diodes internem PCB Gym (Fable 5: 25 %) und 83,5 % auf BenchCAD, fast das Doppelte von Fable 5.1.\n- Claude überarbeitete eigene Entwürfe ungefragt (z. B. Leiterbahnen löschen und neu verlegen), schrieb für den Hub einen eigenen Router, prüfte Gehäuse auf Kollisionen und führte Fertigungs- und Beschaffungsprüfungen selbst aus.",
    "bereich": "forschung",
+   "datum": "2026-11-09",
+   "wichtig": false
+  },
+  {
+   "id": "dreams-fable-5-2",
+   "quelle": "platform-release-notes",
+   "url": "https://platform.claude.com/docs/en/release-notes/overview",
+   "titel_original": "Claude Platform Release Notes, November 9, 2026",
+   "titel_de": "Dreams unterstützt jetzt Claude Fable 5.2",
+   "kurz_de": "Dreams (Research Preview) in Managed Agents unterstützt jetzt Claude Fable 5.2.",
+   "briefing_de": "- Betroffen: Dreams in Claude Managed Agents (Research Preview).\n- Neu unterstützt: Claude Fable 5.2.\n- Die vollständige Liste steht in der Doku unter „Supported models“ (Feature availability).",
+   "bereich": "api",
    "datum": "2026-11-09",
    "wichtig": false
   },
