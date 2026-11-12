@@ -1,0 +1,13 @@
+{
+  "id": "effort-pro-nachricht-beta",
+  "quelle": "platform-doku",
+  "url": "https://platform.claude.com/docs/en/build-with-claude/effort-per-message",
+  "titel_original": "Per-message effort",
+  "titel_de": "Effort mitten im Gespräch ändern, ohne den Cache zu verlieren (Beta)",
+  "kurz_de": "Per-message effort (Beta): Eine system-Nachricht mit output_config.effort setzt mitten im Gespräch einen neuen Effort-Level, der gecachte Prefix bleibt gültig. Beta-Header: mid-conversation-output-config-2026-07-01.",
+  "briefing_de": "Neue Doku-Seite zu einem Beta-Feature der Messages API.\n- So geht's: eine Nachricht mit role \"system\", leerem content und dem neuen Level in output_config.effort in messages einfügen, den Beta-Header mid-conversation-output-config-2026-07-01 senden und den Top-Level-Wert unverändert lassen.\n- Wann der Level gilt: direkt nach einem user-Turn mit neuer Eingabe antwortet Claude schon mit dem neuen Level; an anderer Stelle gilt er ab dem nächsten user-Turn mit neuer Eingabe. Ein user-Turn nur mit tool_result-Blöcken zählt nicht als neue Eingabe.\n- Die Nachricht muss nach allem bisher Gesendeten stehen und bei späteren Anfragen an ihrem Platz bleiben; Einfügen davor, Verschieben oder Entfernen macht bei Modellen mit Preserved Thinking die Thinking-Blöcke der späteren assistant-Turns ungültig.\n- Unterstützte Modelle laut Doku: claude-fable-5-2, claude-mythos-5-2, claude-fable-5-1, claude-mythos-5-1, claude-opus-5-5, claude-opus-5, claude-sonnet-5-5, claude-haiku-5-5. Nicht verfügbar in Managed Agents; dort Effort über die Modelleinstellungen des Agents setzen.",
+  "arbeitsweise_de": "Wer den Effort zwischen Runden wechselt, sollte laut Doku die Per-message-Variante dem Ändern des Top-Level-Werts vorziehen: Ein Top-Level-Wechsel startet den Cache neu. Einschränkungen: Ohne Beta-Header gibt es einen 400-Fehler; Modelle ohne Unterstützung (z. B. Claude Fable 5) ebenfalls. Bei Claude Sonnet 5.5 mit thinking: {\"type\": \"between_tools\"} und Claude Haiku 5.5 mit thinking: {\"type\": \"disabled\"} lässt sich der Level nicht mitten im Gespräch ändern (400-Fehler); dort Adaptive Thinking nutzen.",
+  "bereich": "api",
+  "datum": "2026-11-12",
+  "wichtig": false
+}

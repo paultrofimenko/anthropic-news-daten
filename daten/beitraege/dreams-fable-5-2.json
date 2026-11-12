@@ -1,0 +1,12 @@
+{
+  "id": "dreams-fable-5-2",
+  "quelle": "platform-release-notes",
+  "url": "https://platform.claude.com/docs/en/release-notes/overview",
+  "titel_original": "Claude Platform Release Notes, November 9, 2026",
+  "titel_de": "Dreams unterstützt jetzt Claude Fable 5.2",
+  "kurz_de": "Dreams (Research Preview) in Managed Agents unterstützt jetzt Claude Fable 5.2.",
+  "briefing_de": "- Betroffen: Dreams in Claude Managed Agents (Research Preview).\n- Neu unterstützt: Claude Fable 5.2.\n- Die vollständige Liste steht in der Doku unter „Supported models“ (Feature availability).",
+  "bereich": "api",
+  "datum": "2026-11-09",
+  "wichtig": false
+}
