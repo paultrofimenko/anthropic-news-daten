@@ -1960,6 +1960,7 @@
    "platform.claude.com/docs/en/build-with-claude/context-editing",
    "platform.claude.com/docs/en/build-with-claude/context-windows",
    "platform.claude.com/docs/en/build-with-claude/effort",
+   "platform.claude.com/docs/en/build-with-claude/effort-per-message",
    "platform.claude.com/docs/en/build-with-claude/embeddings",
    "platform.claude.com/docs/en/build-with-claude/extended-thinking",
    "platform.claude.com/docs/en/build-with-claude/fallback-credit",
@@ -3074,10 +3075,10 @@
   ]
  },
  "abschaltungen": {
-  "hash": "271e577c6b39809b"
+  "hash": "1f86ae2eac4e16b4"
  },
  "modelle": {
-  "hash": "f6ce0755917dd421"
+  "hash": "b3bccf03645acefc"
  },
  "platform-release-notes": {
   "schluessel": [
@@ -3256,7 +3257,11 @@
     "3334da74b7",
     "b7194c3fa3",
     "f150666ce5",
-    "a1bbf0943f"
+    "a1bbf0943f",
+    "b479365a4f",
+    "e82c689988",
+    "17034c98e2",
+    "6c60cfeb34"
    ],
    "November 5, 2026": [
     "39520524aa",
