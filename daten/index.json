@@ -1,7 +1,7 @@
 {
  "version": 1,
- "erzeugt": "2026-11-12T00:46:52.546Z",
- "anzahl": 135,
+ "erzeugt": "2026-11-12T19:57:52.503Z",
+ "anzahl": 138,
  "beitraege": [
   {
    "id": "effort-pro-nachricht-beta",
@@ -12,6 +12,58 @@
    "kurz_de": "Per-message effort (Beta): Eine system-Nachricht mit output_config.effort setzt mitten im Gespräch einen neuen Effort-Level, der gecachte Prefix bleibt gültig. Beta-Header: mid-conversation-output-config-2026-07-01.",
    "briefing_de": "Neue Doku-Seite zu einem Beta-Feature der Messages API.\n- So geht's: eine Nachricht mit role \"system\", leerem content und dem neuen Level in output_config.effort in messages einfügen, den Beta-Header mid-conversation-output-config-2026-07-01 senden und den Top-Level-Wert unverändert lassen.\n- Wann der Level gilt: direkt nach einem user-Turn mit neuer Eingabe antwortet Claude schon mit dem neuen Level; an anderer Stelle gilt er ab dem nächsten user-Turn mit neuer Eingabe. Ein user-Turn nur mit tool_result-Blöcken zählt nicht als neue Eingabe.\n- Die Nachricht muss nach allem bisher Gesendeten stehen und bei späteren Anfragen an ihrem Platz bleiben; Einfügen davor, Verschieben oder Entfernen macht bei Modellen mit Preserved Thinking die Thinking-Blöcke der späteren assistant-Turns ungültig.\n- Unterstützte Modelle laut Doku: claude-fable-5-2, claude-mythos-5-2, claude-fable-5-1, claude-mythos-5-1, claude-opus-5-5, claude-opus-5, claude-sonnet-5-5, claude-haiku-5-5. Nicht verfügbar in Managed Agents; dort Effort über die Modelleinstellungen des Agents setzen.",
    "arbeitsweise_de": "Wer den Effort zwischen Runden wechselt, sollte laut Doku die Per-message-Variante dem Ändern des Top-Level-Werts vorziehen: Ein Top-Level-Wechsel startet den Cache neu. Einschränkungen: Ohne Beta-Header gibt es einen 400-Fehler; Modelle ohne Unterstützung (z. B. Claude Fable 5) ebenfalls. Bei Claude Sonnet 5.5 mit thinking: {\"type\": \"between_tools\"} und Claude Haiku 5.5 mit thinking: {\"type\": \"disabled\"} lässt sich der Level nicht mitten im Gespräch ändern (400-Fehler); dort Adaptive Thinking nutzen.",
+   "bereich": "api",
+   "datum": "2026-11-12",
+   "wichtig": false
+  },
+  {
+   "id": "managed-agents-self-hosted",
+   "quelle": "platform-release-notes",
+   "url": "https://platform.claude.com/docs/en/managed-agents/self-hosted",
+   "titel_original": "Self-hosted Claude Managed Agents",
+   "titel_de": "Managed Agents lassen sich komplett selbst hosten",
+   "kurz_de": "Self-hosted Claude Managed Agents: Du betreibst den ganzen Dienst samt Sandboxes auf eigener Infrastruktur und speicherst Agents und Sessions selbst. Zugang über das Anthropic-Account-Team.",
+   "briefing_de": "Am 12. November 2026 gestartet:\n- Du betreibst den gesamten Managed-Agents-Dienst (API, Agent-Loop, Speicher für Agents, Sessions und Verlauf) und die Sandboxes in einem Cloud-Konto oder On-Premise-Rechenzentrum. Bisher gab es nur selbst gehostete Sandboxes.\n- Das Modell läuft bei Anthropic oder bei einem Anbieter deiner Wahl: Amazon Bedrock, Claude Models on Google Cloud (Google managed), Microsoft Foundry oder ein eigenes Modell-Gateway.\n- Der Server (`cma-server`) braucht PostgreSQL 16 oder neuer; ohne Datenbank liegen die Daten im Speicher und gehen beim Neustart verloren. Du installierst jede Version selbst und trägst die Sicherheitsverantwortung.\n- Die API ist dieselbe wie beim gehosteten Dienst, aber nicht alles ist verfügbar: keine Cloud-Environments, keine Messages API, keine Datei-Ressourcen, keine `mcp_oauth`-Credentials, keine Scheduled Deployments, Dreams und Webhooks. Web-Tools, MCP-Server und Git-Hosts brauchen Einträge in den Server-Einstellungen.\n- Zugang: Anthropic-Account-Team kontaktieren.",
+   "arbeitsweise_de": "Relevant, wenn Agents-Daten die eigene Infrastruktur nicht verlassen dürfen oder Modellaufrufe über einen bestimmten Anbieter laufen müssen. Wer nur die Tools auf eigener Infrastruktur laufen lassen will, kommt mit selbst gehosteten Sandboxes aus. Vor einem Umzug die Liste der Unterschiede prüfen: Es wird nichts vom gehosteten Dienst übernommen, auch kein Session-Verlauf.",
+   "bereich": "api",
+   "datum": "2026-11-12",
+   "wichtig": true,
+   "ereignis": {
+    "art": "neu",
+    "titel": "Self-hosted Managed Agents starten"
+   },
+   "lernkarten": [
+    {
+     "frage_de": "Was hostest du bei self-hosted Claude Managed Agents selbst, und was bei selbst gehosteten Sandboxes?",
+     "antwort_de": "Self-hosted Managed Agents: Sandboxes und der Dienst (API, Agent-Loop, Speicher); das Modell läuft bei Anthropic oder einem Anbieter deiner Wahl. Selbst gehostete Sandboxes: nur die Sandboxes, den Dienst betreibt Anthropic."
+    },
+    {
+     "frage_de": "Welche Datenbank braucht der Server von self-hosted Claude Managed Agents?",
+     "antwort_de": "PostgreSQL 16 oder neuer. Ohne Datenbank hält der Server seine Daten im Speicher, ein Neustart löscht sie."
+    }
+   ]
+  },
+  {
+   "id": "managed-agents-self-hosted-lizenz",
+   "quelle": "anthropic",
+   "url": "https://www.anthropic.com/legal/self-hosted-managed-agents-license",
+   "titel_original": "Claude Managed Agents Server Software License Agreement",
+   "titel_de": "Lizenzvertrag für den Managed-Agents-Server",
+   "kurz_de": "Neue Lizenz für die Server-Software von self-hosted Managed Agents: erlaubt Managed Service oder interne Nutzung, mit Pflichten zu Updates (Sicherheitsupdates binnen 1 Werktag) und Meldungen.",
+   "briefing_de": "Neue Rechtsseite auf anthropic.com:\n- Die Lizenz ist nicht exklusiv, weltweit, kostenlos und nicht übertragbar. Zwei Einsatzarten: Managed Service (Betrieb für zahlende Kunden) oder Internal Deployment (eigene Infrastruktur für das eigene Geschäft). Anthropic kann per schriftlicher Mitteilung auf eine Art beschränken.\n- Verboten sind unter anderem: Software ändern, Reverse Engineering, Nutzung mit KI-Modellen Dritter (außer die Doku erlaubt es) sowie das Entwickeln oder Trainieren anderer Produkte oder Modelle damit.\n- Pflichten: Safety Updates binnen 1 Werktag einspielen, Rollbacks binnen 8 Stunden nach Mitteilung, sonstige Updates in der Regel binnen 30 Tagen; Sicherheitsvorfälle binnen 48 Stunden nach Bestätigung melden, unbefugten Zugriff binnen 72 Stunden.\n- Haftung von Anthropic auf US$100.000 begrenzt; Laufzeit unbefristet, Kündigung mit 90 Tagen Frist, danach 90 Tage Auslauf.",
+   "bereich": "unternehmen",
+   "datum": "2026-11-12",
+   "wichtig": false
+  },
+  {
+   "id": "preserved-thinking-prefix-check",
+   "quelle": "platform-doku",
+   "url": "https://platform.claude.com/docs/en/build-with-claude/preserved-thinking/prefix-checks",
+   "titel_original": "Prefix checks on thinking blocks",
+   "titel_de": "Preserved Thinking: Prefix-Check für Thinking-Blöcke",
+   "kurz_de": "Neue Doku-Seiten zu Preserved Thinking: Ändern sich System-Prompt, Tools oder frühere Nachrichten nach einem Thinking-Block, schlägt der Prefix-Check fehl – je nach Modell mit 400-Fehler.",
+   "briefing_de": "Neue Doku-Seiten unter „Preserved thinking“:\n- Jede Anfrage, die Thinking-Blöcke zurückschickt, wird geprüft: Der Check schlägt fehl, wenn `system`, `tools` oder eine frühere Nachricht nach dem Block geändert wurde, oder wenn ein Thinking-Block zwischen anderen fehlt oder verschoben wurde.\n- Ohne `prefix_mismatch_behavior`: 400-Fehler bei Claude Fable 5.2, Mythos 5.2 und Mythos 5.1; bei Fable 5.1, Opus 5.5, Sonnet 5.5 und Haiku 5.5 ein möglicher 400-Fehler – sonst gehen die ungültigen Blöcke ohne Fehler ans Modell und werden berechnet. Der Check läuft auf der Claude API und einigen Cloud-Plattformen.\n- Gegenmittel: append-only arbeiten (Antworten unverändert zurückschicken, `system` und `tools` einmal je Unterhaltung bauen, Änderungen als neue Nachricht am Ende). Mit dem Beta-Header `thinking-binding-controls-2026-08-01` gibt es `prefix_mismatch_behavior` mit `\"error\"` oder `\"drop_block\"`.\n- Nichts zu ändern ist, wenn Claude Code, claude.ai oder Managed Agents den Verlauf verwalten oder du kein Modell mit Preserved Thinking nutzt.",
+   "arbeitsweise_de": "Wer den Verlauf selbst verwaltet, sollte System-Prompt (z. B. mit Datum) und Tool-Liste nicht mitten in einer Unterhaltung umbauen, sondern Änderungen als Nachricht am Ende anhängen. Nicht betroffen sind Claude Code, claude.ai und Managed Agents als Verlaufsverwalter.",
    "bereich": "api",
    "datum": "2026-11-12",
    "wichtig": false
@@ -2148,6 +2200,13 @@
    "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
   },
   {
+   "datum": "2026-11-12",
+   "art": "neu",
+   "titel": "Self-hosted Managed Agents starten",
+   "beitrag": "managed-agents-self-hosted",
+   "url": "https://platform.claude.com/docs/en/managed-agents/self-hosted"
+  },
+  {
    "datum": "2026-11-30",
    "art": "ende",
    "titel": "Abschaltung von Sonnet 4.5",
@@ -2561,7 +2620,7 @@
    "titel_de": "API und Plattform",
    "kurz_de": "Wie Programme Claude einbauen: Schnittstellen, Werkzeuge, Grenzen.",
    "einleitung_de": "Über die Claude-API (eine Schnittstelle, über die Programme mit Claude sprechen) bauen Entwickler Claude in eigene Anwendungen ein. Dafür gibt es zwei Wege: die Messages-API für volle Kontrolle und Claude Managed Agents für lange Aufgaben, die Anthropic betreibt.",
-   "stand": "2026-11-10",
+   "stand": "2026-11-12",
    "grafik": {
     "art": "schritte",
     "titel_de": "Der Weg für neue Entwickler",
@@ -2616,13 +2675,17 @@
       {
        "text_de": "Claude Fable 5.2 und Mythos 5.2 (seit 09.11.2026): Der Prefix-Check für Thinking-Blocks gilt für jedes Konto – wer system, tools oder frühere Nachrichten ändert und dann einen späteren Thinking-Block zurückschickt, bekommt einen 400-Fehler",
        "quelle": "https://platform.claude.com/docs/en/release-notes/overview"
+      },
+      {
+       "text_de": "Self-hosted Claude Managed Agents (seit 12.11.2026): Du betreibst den ganzen Managed-Agents-Dienst samt Sandboxes auf eigener Infrastruktur, das Modell läuft bei Anthropic oder einem Anbieter deiner Wahl; Zugang über das Anthropic-Account-Team",
+       "quelle": "https://platform.claude.com/docs/en/managed-agents/self-hosted"
       }
      ],
      "quelle": "https://platform.claude.com/docs/en/api/overview",
      "geaendert": {
-      "am": "2026-11-10",
+      "am": "2026-11-12",
       "durch": [
-       "fable-5-2-api-aenderungen"
+       "managed-agents-self-hosted"
       ]
      }
     },
@@ -2707,7 +2770,8 @@
     }
    ],
    "gesehen": [
-    "fable-5-2-api-aenderungen"
+    "fable-5-2-api-aenderungen",
+    "managed-agents-self-hosted"
    ]
   },
   {
