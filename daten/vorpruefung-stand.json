@@ -1974,6 +1974,9 @@
    "platform.claude.com/docs/en/build-with-claude/overview",
    "platform.claude.com/docs/en/build-with-claude/pdf-support",
    "platform.claude.com/docs/en/build-with-claude/preserved-thinking",
+   "platform.claude.com/docs/en/build-with-claude/preserved-thinking/change-tools-or-instructions",
+   "platform.claude.com/docs/en/build-with-claude/preserved-thinking/fix-bound-to-a-different-conversation",
+   "platform.claude.com/docs/en/build-with-claude/preserved-thinking/prefix-checks",
    "platform.claude.com/docs/en/build-with-claude/prompt-caching",
    "platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices",
    "platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview",
@@ -2114,6 +2117,8 @@
    "platform.claude.com/docs/en/managed-agents/secure-deployment",
    "platform.claude.com/docs/en/managed-agents/secure-deployment-monitoring",
    "platform.claude.com/docs/en/managed-agents/secure-deployment-risks",
+   "platform.claude.com/docs/en/managed-agents/self-hosted",
+   "platform.claude.com/docs/en/managed-agents/self-hosted-data-and-access",
    "platform.claude.com/docs/en/managed-agents/self-hosted-sandboxes",
    "platform.claude.com/docs/en/managed-agents/self-hosted-sandboxes-custom-tools",
    "platform.claude.com/docs/en/managed-agents/self-hosted-sandboxes-memory",
@@ -2121,6 +2126,16 @@
    "platform.claude.com/docs/en/managed-agents/self-hosted-sandboxes-reference",
    "platform.claude.com/docs/en/managed-agents/self-hosted-sandboxes-security",
    "platform.claude.com/docs/en/managed-agents/self-hosted-sandboxes-workers",
+   "platform.claude.com/docs/en/managed-agents/self-hosted/agent-identity",
+   "platform.claude.com/docs/en/managed-agents/self-hosted/call-the-api",
+   "platform.claude.com/docs/en/managed-agents/self-hosted/configuration-reference",
+   "platform.claude.com/docs/en/managed-agents/self-hosted/configure",
+   "platform.claude.com/docs/en/managed-agents/self-hosted/console",
+   "platform.claude.com/docs/en/managed-agents/self-hosted/differences",
+   "platform.claude.com/docs/en/managed-agents/self-hosted/inference-provider",
+   "platform.claude.com/docs/en/managed-agents/self-hosted/kubernetes",
+   "platform.claude.com/docs/en/managed-agents/self-hosted/quickstart",
+   "platform.claude.com/docs/en/managed-agents/self-hosted/upgrade",
    "platform.claude.com/docs/en/managed-agents/session-observability",
    "platform.claude.com/docs/en/managed-agents/session-operations",
    "platform.claude.com/docs/en/managed-agents/session-threads",
@@ -2530,6 +2545,7 @@
    "anthropic.com/legal/promotion-credit-terms",
    "anthropic.com/legal/promotion-terms",
    "anthropic.com/legal/referral-partner-program-terms",
+   "anthropic.com/legal/self-hosted-managed-agents-license",
    "anthropic.com/legal/service-specific-terms",
    "anthropic.com/legal/startup-program-addendum",
    "anthropic.com/legal/supported-regions",
@@ -3246,9 +3262,13 @@
    "November 2, 2026",
    "November 3, 2026",
    "November 5, 2026",
-   "November 9, 2026"
+   "November 9, 2026",
+   "November 12, 2026"
   ],
   "zeilen": {
+   "November 12, 2026": [
+    "74c008ff3c"
+   ],
    "November 9, 2026": [
     "1625bd8d41",
     "a17ae252b6",
@@ -3293,16 +3313,6 @@
     "0e8870eda3",
     "c62d6b1932",
     "96abe1183d"
-   ],
-   "October 21, 2026": [
-    "ecd68fcaa3",
-    "7786d12cdb",
-    "0a93cb28c3",
-    "c266068edb",
-    "b4cb28b4ba",
-    "2ad77f8774",
-    "45bde628e2",
-    "e9597487ed"
    ]
   },
   "zeilenVersion": 2

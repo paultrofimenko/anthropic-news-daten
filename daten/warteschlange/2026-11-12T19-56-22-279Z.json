@@ -1,0 +1,160 @@
+{
+ "zeit": "2026-11-12T19:56:22.279Z",
+ "neu": [
+  {
+   "quelle": "anthropic",
+   "name": "anthropic.com",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://www.anthropic.com/legal/self-hosted-managed-agents-license",
+   "titel": null,
+   "datum": "2026-11-12T17:16:02.127Z"
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/build-with-claude/preserved-thinking/prefix-checks",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/build-with-claude/preserved-thinking/change-tools-or-instructions",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/build-with-claude/preserved-thinking/fix-bound-to-a-different-conversation",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/managed-agents/self-hosted",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/managed-agents/self-hosted-data-and-access",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/managed-agents/self-hosted/agent-identity",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/managed-agents/self-hosted/call-the-api",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/managed-agents/self-hosted/configuration-reference",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/managed-agents/self-hosted/configure",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/managed-agents/self-hosted/console",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/managed-agents/self-hosted/differences",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/managed-agents/self-hosted/inference-provider",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/managed-agents/self-hosted/kubernetes",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/managed-agents/self-hosted/quickstart",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/managed-agents/self-hosted/upgrade",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-release-notes",
+   "name": "Claude Platform Release Notes",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/release-notes/overview",
+   "titel": "November 12, 2026",
+   "zeilen": [
+    "* We’ve launched [self-hosted Claude Managed Agents](https://platform.claude.com/docs/en/managed-agents/self-hosted). You run the whole Managed Agents service, not only [self-hosted sandboxes](https://platform.claude.com/docs/en/managed-agents/self-hosted-sandboxes), on your own infrastructure, and you store agents, sessions, and session history there. The server sends model requests to the provider that you choose, which is Anthropic by default. To request access, contact your Anthropic account team."
+   ]
+  }
+ ]
+}
