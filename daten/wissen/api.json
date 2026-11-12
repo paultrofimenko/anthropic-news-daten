@@ -3,7 +3,7 @@
   "titel_de": "API und Plattform",
   "kurz_de": "Wie Programme Claude einbauen: Schnittstellen, Werkzeuge, Grenzen.",
   "einleitung_de": "Über die Claude-API (eine Schnittstelle, über die Programme mit Claude sprechen) bauen Entwickler Claude in eigene Anwendungen ein. Dafür gibt es zwei Wege: die Messages-API für volle Kontrolle und Claude Managed Agents für lange Aufgaben, die Anthropic betreibt.",
-  "stand": "2026-11-10",
+  "stand": "2026-11-12",
   "grafik": {
     "art": "schritte",
     "titel_de": "Der Weg für neue Entwickler",
@@ -58,6 +58,10 @@
         {
           "text_de": "Claude Fable 5.2 und Mythos 5.2 (seit 09.11.2026): Der Prefix-Check für Thinking-Blocks gilt für jedes Konto – wer system, tools oder frühere Nachrichten ändert und dann einen späteren Thinking-Block zurückschickt, bekommt einen 400-Fehler",
           "quelle": "https://platform.claude.com/docs/en/release-notes/overview"
+        },
+        {
+          "text_de": "Self-hosted Claude Managed Agents (seit 12.11.2026): Du betreibst den ganzen Managed-Agents-Dienst samt Sandboxes auf eigener Infrastruktur, das Modell läuft bei Anthropic oder einem Anbieter deiner Wahl; Zugang über das Anthropic-Account-Team",
+          "quelle": "https://platform.claude.com/docs/en/managed-agents/self-hosted"
         }
       ],
       "quelle": "https://platform.claude.com/docs/en/api/overview"
@@ -125,6 +129,7 @@
     }
   ],
   "gesehen": [
-    "fable-5-2-api-aenderungen"
+    "fable-5-2-api-aenderungen",
+    "managed-agents-self-hosted"
   ]
 }

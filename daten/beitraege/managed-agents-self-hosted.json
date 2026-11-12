@@ -1,0 +1,24 @@
+{
+  "id": "managed-agents-self-hosted",
+  "quelle": "platform-release-notes",
+  "url": "https://platform.claude.com/docs/en/managed-agents/self-hosted",
+  "titel_original": "Self-hosted Claude Managed Agents",
+  "titel_de": "Managed Agents lassen sich komplett selbst hosten",
+  "kurz_de": "Self-hosted Claude Managed Agents: Du betreibst den ganzen Dienst samt Sandboxes auf eigener Infrastruktur und speicherst Agents und Sessions selbst. Zugang über das Anthropic-Account-Team.",
+  "briefing_de": "Am 12. November 2026 gestartet:\n- Du betreibst den gesamten Managed-Agents-Dienst (API, Agent-Loop, Speicher für Agents, Sessions und Verlauf) und die Sandboxes in einem Cloud-Konto oder On-Premise-Rechenzentrum. Bisher gab es nur selbst gehostete Sandboxes.\n- Das Modell läuft bei Anthropic oder bei einem Anbieter deiner Wahl: Amazon Bedrock, Claude Models on Google Cloud (Google managed), Microsoft Foundry oder ein eigenes Modell-Gateway.\n- Der Server (`cma-server`) braucht PostgreSQL 16 oder neuer; ohne Datenbank liegen die Daten im Speicher und gehen beim Neustart verloren. Du installierst jede Version selbst und trägst die Sicherheitsverantwortung.\n- Die API ist dieselbe wie beim gehosteten Dienst, aber nicht alles ist verfügbar: keine Cloud-Environments, keine Messages API, keine Datei-Ressourcen, keine `mcp_oauth`-Credentials, keine Scheduled Deployments, Dreams und Webhooks. Web-Tools, MCP-Server und Git-Hosts brauchen Einträge in den Server-Einstellungen.\n- Zugang: Anthropic-Account-Team kontaktieren.",
+  "arbeitsweise_de": "Relevant, wenn Agents-Daten die eigene Infrastruktur nicht verlassen dürfen oder Modellaufrufe über einen bestimmten Anbieter laufen müssen. Wer nur die Tools auf eigener Infrastruktur laufen lassen will, kommt mit selbst gehosteten Sandboxes aus. Vor einem Umzug die Liste der Unterschiede prüfen: Es wird nichts vom gehosteten Dienst übernommen, auch kein Session-Verlauf.",
+  "bereich": "api",
+  "datum": "2026-11-12",
+  "wichtig": true,
+  "ereignis": { "art": "neu", "titel": "Self-hosted Managed Agents starten" },
+  "lernkarten": [
+    {
+      "frage_de": "Was hostest du bei self-hosted Claude Managed Agents selbst, und was bei selbst gehosteten Sandboxes?",
+      "antwort_de": "Self-hosted Managed Agents: Sandboxes und der Dienst (API, Agent-Loop, Speicher); das Modell läuft bei Anthropic oder einem Anbieter deiner Wahl. Selbst gehostete Sandboxes: nur die Sandboxes, den Dienst betreibt Anthropic."
+    },
+    {
+      "frage_de": "Welche Datenbank braucht der Server von self-hosted Claude Managed Agents?",
+      "antwort_de": "PostgreSQL 16 oder neuer. Ohne Datenbank hält der Server seine Daten im Speicher, ein Neustart löscht sie."
+    }
+  ]
+}

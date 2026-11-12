@@ -1,0 +1,13 @@
+{
+  "id": "preserved-thinking-prefix-check",
+  "quelle": "platform-doku",
+  "url": "https://platform.claude.com/docs/en/build-with-claude/preserved-thinking/prefix-checks",
+  "titel_original": "Prefix checks on thinking blocks",
+  "titel_de": "Preserved Thinking: Prefix-Check für Thinking-Blöcke",
+  "kurz_de": "Neue Doku-Seiten zu Preserved Thinking: Ändern sich System-Prompt, Tools oder frühere Nachrichten nach einem Thinking-Block, schlägt der Prefix-Check fehl – je nach Modell mit 400-Fehler.",
+  "briefing_de": "Neue Doku-Seiten unter „Preserved thinking“:\n- Jede Anfrage, die Thinking-Blöcke zurückschickt, wird geprüft: Der Check schlägt fehl, wenn `system`, `tools` oder eine frühere Nachricht nach dem Block geändert wurde, oder wenn ein Thinking-Block zwischen anderen fehlt oder verschoben wurde.\n- Ohne `prefix_mismatch_behavior`: 400-Fehler bei Claude Fable 5.2, Mythos 5.2 und Mythos 5.1; bei Fable 5.1, Opus 5.5, Sonnet 5.5 und Haiku 5.5 ein möglicher 400-Fehler – sonst gehen die ungültigen Blöcke ohne Fehler ans Modell und werden berechnet. Der Check läuft auf der Claude API und einigen Cloud-Plattformen.\n- Gegenmittel: append-only arbeiten (Antworten unverändert zurückschicken, `system` und `tools` einmal je Unterhaltung bauen, Änderungen als neue Nachricht am Ende). Mit dem Beta-Header `thinking-binding-controls-2026-08-01` gibt es `prefix_mismatch_behavior` mit `\"error\"` oder `\"drop_block\"`.\n- Nichts zu ändern ist, wenn Claude Code, claude.ai oder Managed Agents den Verlauf verwalten oder du kein Modell mit Preserved Thinking nutzt.",
+  "arbeitsweise_de": "Wer den Verlauf selbst verwaltet, sollte System-Prompt (z. B. mit Datum) und Tool-Liste nicht mitten in einer Unterhaltung umbauen, sondern Änderungen als Nachricht am Ende anhängen. Nicht betroffen sind Claude Code, claude.ai und Managed Agents als Verlaufsverwalter.",
+  "bereich": "api",
+  "datum": "2026-11-12",
+  "wichtig": false
+}

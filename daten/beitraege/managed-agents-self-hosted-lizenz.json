@@ -1,0 +1,13 @@
+{
+  "id": "managed-agents-self-hosted-lizenz",
+  "quelle": "anthropic",
+  "url": "https://www.anthropic.com/legal/self-hosted-managed-agents-license",
+  "titel_original": "Claude Managed Agents Server Software License Agreement",
+  "titel_de": "Lizenzvertrag für den Managed-Agents-Server",
+  "kurz_de": "Neue Lizenz für die Server-Software von self-hosted Managed Agents: erlaubt Managed Service oder interne Nutzung, mit Pflichten zu Updates (Sicherheitsupdates binnen 1 Werktag) und Meldungen.",
+  "briefing_de": "Neue Rechtsseite auf anthropic.com:\n- Die Lizenz ist nicht exklusiv, weltweit, kostenlos und nicht übertragbar. Zwei Einsatzarten: Managed Service (Betrieb für zahlende Kunden) oder Internal Deployment (eigene Infrastruktur für das eigene Geschäft). Anthropic kann per schriftlicher Mitteilung auf eine Art beschränken.\n- Verboten sind unter anderem: Software ändern, Reverse Engineering, Nutzung mit KI-Modellen Dritter (außer die Doku erlaubt es) sowie das Entwickeln oder Trainieren anderer Produkte oder Modelle damit.\n- Pflichten: Safety Updates binnen 1 Werktag einspielen, Rollbacks binnen 8 Stunden nach Mitteilung, sonstige Updates in der Regel binnen 30 Tagen; Sicherheitsvorfälle binnen 48 Stunden nach Bestätigung melden, unbefugten Zugriff binnen 72 Stunden.\n- Haftung von Anthropic auf US$100.000 begrenzt; Laufzeit unbefristet, Kündigung mit 90 Tagen Frist, danach 90 Tage Auslauf."
+  ,
+  "bereich": "unternehmen",
+  "datum": "2026-11-12",
+  "wichtig": false
+}
