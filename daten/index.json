@@ -1,8 +1,21 @@
 {
  "version": 1,
- "erzeugt": "2026-11-12T19:57:52.503Z",
- "anzahl": 138,
+ "erzeugt": "2026-11-13T01:51:24.613Z",
+ "anzahl": 139,
  "beitraege": [
+  {
+   "id": "claude-code-2-1-323",
+   "quelle": "code-changelog",
+   "url": "https://code.claude.com/docs/en/changelog",
+   "titel_original": "Claude Code 2.1.323",
+   "titel_de": "Claude Code 2.1.323: Code Mode und Plugin-Versionsbereiche",
+   "kurz_de": "Fassung 2.1.323 bringt Code Mode (experimentell, opt-in: Claude schreibt JavaScript, um seine Tools aufzurufen) und engines[\"claude-code\"] in plugin.json für Versionsbereiche.",
+   "briefing_de": "Neu in Fassung 2.1.323:\n- Code Mode: experimentelles Opt-in, bei dem Claude JavaScript schreibt, um seine Tools aufzurufen; die Doku unter code.claude.com/docs/en/code-mode zeigt, wie man es einschaltet oder für eine Organisation ausschaltet.\n- `engines[\"claude-code\"]` in `plugin.json`: Plugins außerhalb ihres angegebenen Claude-Code-Versionsbereichs werden nicht installiert, aktualisiert oder geladen; Installation und Update wählen die neueste passende Version.\n- `claude plugin validate` prüft jetzt die Typen des TypeScript-Hooks-Moduls eines Plugins (Funde sind Warnungen, `--strict` lässt sie fehlschlagen).\n- Neue Warnungen: beim Start für Bash-Allow-Regeln mit `*` im Wert einer Variable (z. B. `Bash(PORT=* npm run dev)`) und wenn der Language Server eines Plugins nicht startet.\n- Viele Korrekturen bei Bash-Berechtigungen: u. a. Allow-Regeln mit angehängtem Platzhalter wie `Bash(ls*)`, Deny-/Ask-Regeln bei `sudo`/`env`-Wrappern und `sandbox.excludedCommands`.",
+   "arbeitsweise_de": "Wer Plugins baut, kann mit `engines[\"claude-code\"]` den unterstützten Claude-Code-Versionsbereich festlegen. Wer Bash-Allow-Regeln mit Platzhaltern nutzt, sollte sie prüfen: Eine Regel, die eine Variable nennt, wie `Bash(NODE_ENV*)`, fragt jetzt nach.",
+   "bereich": "claude-code",
+   "datum": "2026-11-13",
+   "wichtig": false
+  },
   {
    "id": "effort-pro-nachricht-beta",
    "quelle": "platform-doku",
