@@ -1,0 +1,12 @@
+{
+  "id": "safety-evaluations-gut-bauen",
+  "quelle": "anthropic",
+  "url": "https://www.anthropic.com/research/building-strong-safety-evaluations",
+  "titel_original": "Building strong safety evaluations",
+  "titel_de": "So baut man belastbare Safety-Evaluierungen",
+  "kurz_de": "Anthropic beschreibt, wie Safety Evals gestaltet, validiert und berichtet werden sollten: Multi-Turn statt Single-Turn, Grader gegen menschliche Labels prüfen, Unsicherheit angeben.",
+  "briefing_de": "Anthropic erklärt, worauf es bei Sicherheitsevaluierungen ankommt. Eine Safety Eval misst die Neigung eines Modells, Schaden zu verursachen, nicht seine Fähigkeiten.\n- Sicherheit zuerst: Evals möglichst in einer Sandbox ohne Internetzugang und mit Echtzeit-Überwachung laufen lassen; Fachexperten legen fest, was Schaden ist und was eine gute Antwort ist.\n- Design: Ablehnungsrate ist nicht immer das richtige Maß (bei Suizid und Selbstverletzung ist bloßes Ablehnen selbst ein Fehler). Gemessen werden sollten Befolgung schädlicher Anfragen und Überverweigerung harmloser Anfragen.\n- Multi-Turn: Gefahr entsteht oft über mehrere Nachrichten. Anthropic simuliert Nutzer mit einem separaten Claude-Modell; ein Grader-Modell bewertet jedes Transkript nach einer Rubric. Ein einziger fehlerhafter Turn lässt das Gespräch durchfallen („appropriate response rate“).\n- Validität: Datenkontamination, Reward Hacking und Sättigung vermeiden; Grader gegen blinde Expertenlabels prüfen (z. B. Cohen's Kappa). Richtwerte: mindestens 100 Items bei komplexen Multi-Turn-Evals, mindestens 1.000 bei einfachen Single-Turn-Evals.\n- Berichten: nach Kategorien aufschlüsseln, Konfidenzintervalle nennen (bei Multi-Turn auf der API teils über ±10 Prozentpunkte) und die Konfiguration dokumentieren.",
+  "bereich": "forschung",
+  "datum": "2026-11-13",
+  "wichtig": false
+}

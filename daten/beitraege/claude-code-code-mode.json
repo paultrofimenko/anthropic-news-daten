@@ -1,0 +1,13 @@
+{
+  "id": "claude-code-code-mode",
+  "quelle": "code-doku",
+  "url": "https://code.claude.com/docs/en/code-mode",
+  "titel_original": "Run tool calls from code with Code Mode",
+  "titel_de": "Claude Code: Code Mode (experimentell)",
+  "kurz_de": "Im experimentellen Code Mode schreibt Claude JavaScript, das mehrere Tool-Aufrufe in einem Schritt ausführt. Aus, solange CLAUDE_CODE_EXPERIMENTAL_CODE_MODE nicht auf 1 steht; ab Claude Code v2.1.323.",
+  "briefing_de": "Code Mode ist experimentell, standardmäßig aus und kann sich in jeder Fassung ändern oder entfallen.\n- Statt Tools wie Bash, Read oder Edit einzeln aufzurufen, schreibt Claude JavaScript, das die Aufrufe macht – auch parallel oder mit Ergebnissen aus vorherigen Aufrufen. Im Gespräch siehst du die Tool-Aufrufe, den Code mit Strg+O im Transcript-Viewer.\n- Einschalten: Umgebungsvariable CLAUDE_CODE_EXPERIMENTAL_CODE_MODE=1 (Shell oder ~/.claude/settings.json; in Projekt-Settings wird sie ignoriert). Voraussetzungen: Claude Code v2.1.323 oder neuer, native Fassung, Claude-Abo oder Console-Konto, Modell Opus 5.5, Sonnet 5.5, Haiku 5.5 oder Fable 5.2.\n- Nicht möglich über Gateway, Bedrock, Claude Platform on AWS, Google Cloud, Foundry; nicht mit HIPAA-Konfiguration oder Zero Data Retention; nicht mit -p, Agent SDK, VS-Code-Panel, Desktop-App oder Cloud-Sessions. Remote Control, Claude in Chrome und Computer Use stehen nicht zur Verfügung.\n- Grenzen: Sitzungen lassen sich nur im Terminal mit eingeschaltetem Code Mode fortsetzen. Im Auto-Modus prüft der Classifier den Code, nicht jeden Tool-Aufruf. Code, auf den Claude wartet, stoppt nach zehn Minuten; im Hintergrund (Start im Auto- oder bypassPermissions-Modus) bis zu zwei Stunden.\n- Organisationen sperren Code Mode, indem sie CLAUDE_CODE_EXPERIMENTAL_CODE_MODE=0 in die Managed Settings schreiben.",
+  "arbeitsweise_de": "Interessant für Aufgaben mit vielen zusammenhängenden Tool-Aufrufen: Änderungen über viele Dateien, Suchen mit Filterung vor dem Lesen, mehrere unabhängige Befehle gleichzeitig. Wegen des experimentellen Status und der Einschränkungen (nur interaktives Terminal, kein -p oder SDK, nicht über Gateways oder Cloud-Anbieter) nicht als feste Grundlage für Automatisierung einplanen. Wer Regeln durchsetzen muss: Deny-/Ask-Regeln und PreToolUse-Hooks gelten für die Tool-Aufrufe des Codes; im Auto-Modus sieht der Classifier zur Laufzeit berechnete Werte nicht.",
+  "bereich": "claude-code",
+  "datum": "2026-11-13",
+  "wichtig": false
+}
