@@ -1,0 +1,23 @@
+{
+ "zeit": "2026-11-13T19:44:30.025Z",
+ "neu": [
+  {
+   "quelle": "anthropic",
+   "name": "anthropic.com",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://www.anthropic.com/research/building-strong-safety-evaluations",
+   "titel": null,
+   "datum": "2026-11-13T18:39:33.493Z"
+  },
+  {
+   "quelle": "code-doku",
+   "name": "Claude-Code-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://code.claude.com/docs/en/code-mode",
+   "titel": null,
+   "datum": "2026-11-13T18:10:07.500Z"
+  }
+ ]
+}
