@@ -1,7 +1,7 @@
 {
  "version": 1,
- "erzeugt": "2026-11-13T01:51:24.613Z",
- "anzahl": 139,
+ "erzeugt": "2026-11-13T19:45:43.463Z",
+ "anzahl": 141,
  "beitraege": [
   {
    "id": "claude-code-2-1-323",
@@ -13,6 +13,31 @@
    "briefing_de": "Neu in Fassung 2.1.323:\n- Code Mode: experimentelles Opt-in, bei dem Claude JavaScript schreibt, um seine Tools aufzurufen; die Doku unter code.claude.com/docs/en/code-mode zeigt, wie man es einschaltet oder für eine Organisation ausschaltet.\n- `engines[\"claude-code\"]` in `plugin.json`: Plugins außerhalb ihres angegebenen Claude-Code-Versionsbereichs werden nicht installiert, aktualisiert oder geladen; Installation und Update wählen die neueste passende Version.\n- `claude plugin validate` prüft jetzt die Typen des TypeScript-Hooks-Moduls eines Plugins (Funde sind Warnungen, `--strict` lässt sie fehlschlagen).\n- Neue Warnungen: beim Start für Bash-Allow-Regeln mit `*` im Wert einer Variable (z. B. `Bash(PORT=* npm run dev)`) und wenn der Language Server eines Plugins nicht startet.\n- Viele Korrekturen bei Bash-Berechtigungen: u. a. Allow-Regeln mit angehängtem Platzhalter wie `Bash(ls*)`, Deny-/Ask-Regeln bei `sudo`/`env`-Wrappern und `sandbox.excludedCommands`.",
    "arbeitsweise_de": "Wer Plugins baut, kann mit `engines[\"claude-code\"]` den unterstützten Claude-Code-Versionsbereich festlegen. Wer Bash-Allow-Regeln mit Platzhaltern nutzt, sollte sie prüfen: Eine Regel, die eine Variable nennt, wie `Bash(NODE_ENV*)`, fragt jetzt nach.",
    "bereich": "claude-code",
+   "datum": "2026-11-13",
+   "wichtig": false
+  },
+  {
+   "id": "claude-code-code-mode",
+   "quelle": "code-doku",
+   "url": "https://code.claude.com/docs/en/code-mode",
+   "titel_original": "Run tool calls from code with Code Mode",
+   "titel_de": "Claude Code: Code Mode (experimentell)",
+   "kurz_de": "Im experimentellen Code Mode schreibt Claude JavaScript, das mehrere Tool-Aufrufe in einem Schritt ausführt. Aus, solange CLAUDE_CODE_EXPERIMENTAL_CODE_MODE nicht auf 1 steht; ab Claude Code v2.1.323.",
+   "briefing_de": "Code Mode ist experimentell, standardmäßig aus und kann sich in jeder Fassung ändern oder entfallen.\n- Statt Tools wie Bash, Read oder Edit einzeln aufzurufen, schreibt Claude JavaScript, das die Aufrufe macht – auch parallel oder mit Ergebnissen aus vorherigen Aufrufen. Im Gespräch siehst du die Tool-Aufrufe, den Code mit Strg+O im Transcript-Viewer.\n- Einschalten: Umgebungsvariable CLAUDE_CODE_EXPERIMENTAL_CODE_MODE=1 (Shell oder ~/.claude/settings.json; in Projekt-Settings wird sie ignoriert). Voraussetzungen: Claude Code v2.1.323 oder neuer, native Fassung, Claude-Abo oder Console-Konto, Modell Opus 5.5, Sonnet 5.5, Haiku 5.5 oder Fable 5.2.\n- Nicht möglich über Gateway, Bedrock, Claude Platform on AWS, Google Cloud, Foundry; nicht mit HIPAA-Konfiguration oder Zero Data Retention; nicht mit -p, Agent SDK, VS-Code-Panel, Desktop-App oder Cloud-Sessions. Remote Control, Claude in Chrome und Computer Use stehen nicht zur Verfügung.\n- Grenzen: Sitzungen lassen sich nur im Terminal mit eingeschaltetem Code Mode fortsetzen. Im Auto-Modus prüft der Classifier den Code, nicht jeden Tool-Aufruf. Code, auf den Claude wartet, stoppt nach zehn Minuten; im Hintergrund (Start im Auto- oder bypassPermissions-Modus) bis zu zwei Stunden.\n- Organisationen sperren Code Mode, indem sie CLAUDE_CODE_EXPERIMENTAL_CODE_MODE=0 in die Managed Settings schreiben.",
+   "arbeitsweise_de": "Interessant für Aufgaben mit vielen zusammenhängenden Tool-Aufrufen: Änderungen über viele Dateien, Suchen mit Filterung vor dem Lesen, mehrere unabhängige Befehle gleichzeitig. Wegen des experimentellen Status und der Einschränkungen (nur interaktives Terminal, kein -p oder SDK, nicht über Gateways oder Cloud-Anbieter) nicht als feste Grundlage für Automatisierung einplanen. Wer Regeln durchsetzen muss: Deny-/Ask-Regeln und PreToolUse-Hooks gelten für die Tool-Aufrufe des Codes; im Auto-Modus sieht der Classifier zur Laufzeit berechnete Werte nicht.",
+   "bereich": "claude-code",
+   "datum": "2026-11-13",
+   "wichtig": false
+  },
+  {
+   "id": "safety-evaluations-gut-bauen",
+   "quelle": "anthropic",
+   "url": "https://www.anthropic.com/research/building-strong-safety-evaluations",
+   "titel_original": "Building strong safety evaluations",
+   "titel_de": "So baut man belastbare Safety-Evaluierungen",
+   "kurz_de": "Anthropic beschreibt, wie Safety Evals gestaltet, validiert und berichtet werden sollten: Multi-Turn statt Single-Turn, Grader gegen menschliche Labels prüfen, Unsicherheit angeben.",
+   "briefing_de": "Anthropic erklärt, worauf es bei Sicherheitsevaluierungen ankommt. Eine Safety Eval misst die Neigung eines Modells, Schaden zu verursachen, nicht seine Fähigkeiten.\n- Sicherheit zuerst: Evals möglichst in einer Sandbox ohne Internetzugang und mit Echtzeit-Überwachung laufen lassen; Fachexperten legen fest, was Schaden ist und was eine gute Antwort ist.\n- Design: Ablehnungsrate ist nicht immer das richtige Maß (bei Suizid und Selbstverletzung ist bloßes Ablehnen selbst ein Fehler). Gemessen werden sollten Befolgung schädlicher Anfragen und Überverweigerung harmloser Anfragen.\n- Multi-Turn: Gefahr entsteht oft über mehrere Nachrichten. Anthropic simuliert Nutzer mit einem separaten Claude-Modell; ein Grader-Modell bewertet jedes Transkript nach einer Rubric. Ein einziger fehlerhafter Turn lässt das Gespräch durchfallen („appropriate response rate“).\n- Validität: Datenkontamination, Reward Hacking und Sättigung vermeiden; Grader gegen blinde Expertenlabels prüfen (z. B. Cohen's Kappa). Richtwerte: mindestens 100 Items bei komplexen Multi-Turn-Evals, mindestens 1.000 bei einfachen Single-Turn-Evals.\n- Berichten: nach Kategorien aufschlüsseln, Konfidenzintervalle nennen (bei Multi-Turn auf der API teils über ±10 Prozentpunkte) und die Konfiguration dokumentieren.",
+   "bereich": "forschung",
    "datum": "2026-11-13",
    "wichtig": false
   },
