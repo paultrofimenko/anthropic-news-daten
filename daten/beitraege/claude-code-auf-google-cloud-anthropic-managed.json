@@ -1,0 +1,13 @@
+{
+  "id": "claude-code-auf-google-cloud-anthropic-managed",
+  "quelle": "code-doku",
+  "url": "https://code.claude.com/docs/en/claude-models-on-google-cloud-anthropic-managed",
+  "titel_original": "Claude Code with Claude Models on Google Cloud (Anthropic managed)",
+  "titel_de": "Claude Code mit Claude auf Google Cloud (Anthropic managed)",
+  "kurz_de": "Neue Doku-Seite: Claude Code lässt sich mit der von Anthropic betriebenen Claude API in deinem Google-Cloud-Projekt nutzen – Anmeldung bei Google Cloud und drei Umgebungsvariablen, ab Claude Code v2.1.307.",
+  "briefing_de": "Neue Anleitung für Claude Code auf Claude Models on Google Cloud (Anthropic managed):\n- Voraussetzungen: Claude Code v2.1.307 oder neuer, abgeschlossene Kontoeinrichtung im Google-Cloud-Projekt, Rolle `roles/claude.user` je Google- oder Servicekonto, Projekt-ID und Workspace-ID (beginnt mit `wrkspc_`).\n- Einrichtung: Application Default Credentials per `gcloud auth application-default login` (oder Servicekonto-Schlüsseldatei über `GOOGLE_APPLICATION_CREDENTIALS`), dann in `env` der Einstellungen `CLAUDE_CODE_USE_ANTHROPIC_GOOGLE_CLOUD`, `ANTHROPIC_GOOGLE_CLOUD_PROJECT` und `ANTHROPIC_GOOGLE_CLOUD_WORKSPACE_ID` setzen. Eine Anmeldung bei Anthropic ist nicht nötig; `/status` zeigt `on Google Cloud`.\n- Nicht verfügbar: Fast mode, Remote Control und Cloud-Sessions, MCP-Connectors von claude.ai, Channels, `/design-sync` und `/import` sowie Server-managed settings (stattdessen Managed settings auf jedem Rechner).\n- Für Teams empfiehlt die Seite, Modell-IDs festzulegen (z. B. über `ANTHROPIC_DEFAULT_OPUS_MODEL`), damit ein Update nicht alle auf ein neueres Modell hebt.\n- Wer Claude über die Agent Platform (früher Vertex AI, von Google betrieben) nutzt, folgt stattdessen der Anleitung „Claude Code on Google Cloud's Agent Platform“.",
+  "arbeitsweise_de": "Prüfe zuerst, welches Google-Cloud-Angebot du nutzt (Anthropic managed oder Agent Platform), denn die Einrichtung unterscheidet sich. Für Teams lohnt es sich, Modell-IDs festzulegen und die Einstellungen als Managed settings zu verteilen.",
+  "bereich": "claude-code",
+  "datum": "2026-11-14",
+  "wichtig": false
+}
