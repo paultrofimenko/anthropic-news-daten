@@ -1,0 +1,13 @@
+{
+  "id": "claude-code-2-1-325",
+  "quelle": "code-changelog",
+  "url": "https://code.claude.com/docs/en/changelog",
+  "titel_original": "Claude Code 2.1.325",
+  "titel_de": "Claude Code 2.1.325: Sicherheitsfix und viele Fehlerbehebungen",
+  "kurz_de": "Claude Code 2.1.325 behebt ein Sicherheitsproblem beim Dekodieren zstd-komprimierter Antworten und bringt viele Fehlerbehebungen bei Subagents, MCP, Login und Sessions.",
+  "briefing_de": "Neu in Fassung 2.1.325:\n- Sicherheitsproblem behoben: Dekodieren von zstd-komprimierten Antworten.\n- Subagents mit eigenem Modell: werden bei der Einstellung `opusplan` oder `haiku` nicht mehr auf das Plan-Modus-Modell verschoben und bemessen Dateilesungen und MCP-Ergebnisse nicht mehr mit dem Modell der Hauptsession.\n- Sessions auf vielen Drittanbieter-Gateways und Foundry brechen nicht mehr bei jedem Zug mit einem Kontextlängenfehler ab, sondern verdichten; eine gespeicherte `sonnet[1m]`-Einstellung wird bei Neuinstallation nicht mehr in eine von der API abgelehnte Modell-ID umgeschrieben.\n- Login und Sessions: Hintergrund-Sessions mit claude.ai-Login nutzen (und rechnen über) keinen API-Schlüssel aus der Shell mehr ab; Wechsel zu einem anderen Login im Hintergrund werden verweigert; Token-Zählung auf Amazon Bedrock sendet nichts an Bedrock, wenn die verwaltete Einstellung `allowedProviders` es nicht erlaubt.\n- Viele weitere Korrekturen bei MCP (Verbindungen, Elicitation, Hintergrund-Aufgaben), Code Mode, `/stats`, `/insights`, `/voice`, Plan-Dateien und Terminal-Anzeige; neu u. a. ein Hinweis, wie es nach einer Richtlinien-Sperre weitergeht (`/rewind` oder `/clear`).",
+  "arbeitsweise_de": "Das Sicherheitsproblem betrifft das Dekodieren zstd-komprimierter Antworten; ein Update auf 2.1.325 ist daher sinnvoll. Wer Subagents mit eigenem Modell, Drittanbieter-Gateways oder MCP-Server einsetzt, profitiert von den Korrekturen.",
+  "bereich": "claude-code",
+  "datum": "2026-11-14",
+  "wichtig": false
+}
