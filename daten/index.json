@@ -1,8 +1,21 @@
 {
  "version": 1,
- "erzeugt": "2026-11-13T19:45:43.463Z",
- "anzahl": 141,
+ "erzeugt": "2026-11-14T10:29:59.337Z",
+ "anzahl": 142,
  "beitraege": [
+  {
+   "id": "claude-code-2-1-325",
+   "quelle": "code-changelog",
+   "url": "https://code.claude.com/docs/en/changelog",
+   "titel_original": "Claude Code 2.1.325",
+   "titel_de": "Claude Code 2.1.325: Sicherheitskorrektur und viele Fehlerbehebungen",
+   "kurz_de": "Fassung 2.1.325 behebt ein Sicherheitsproblem beim Dekodieren zstd-komprimierter Antworten und enthält viele Korrekturen zu Subagents, MCP, Anmeldung und Bedrock.",
+   "briefing_de": "Neu in Fassung 2.1.325:\n- Sicherheitskorrektur: Ein Problem beim Dekodieren zstd-komprimierter Antworten wurde behoben.\n- Subagents: Subagents mit eigenem Modell werden bei der Modelleinstellung `opusplan` oder `haiku` nicht mehr auf das Plan-Mode-Modell gesetzt und bemessen Dateilesungen und MCP-Ergebnisse nicht mehr mit dem Modell der Hauptsitzung.\n- Mehrere MCP-Korrekturen, u. a. bei „needs authentication“ nach einer kurz abgelehnten Token-Erneuerung, bei Elicitation im Headless-Modus und bei Hintergrund-Tasks.\n- Anmeldung: Sitzungen im Hintergrund, die mit dem claude.ai-Login gestartet wurden, nutzen (und berechnen) keinen API-Key oder Token aus der Shell mehr; ein Wechsel auf eine andere Anmeldung im Hintergrund wird jetzt abgelehnt, mit Hinweis.\n- Amazon Bedrock: Token-Zählung schickt die Unterhaltung nicht mehr an Bedrock, wenn die verwaltete Einstellung `allowedProviders` das nicht erlaubt.",
+   "arbeitsweise_de": "Wer Claude Code mit Subagents auf eigenem Modell, mit MCP-Servern oder über Bedrock mit `allowedProviders` betreibt, profitiert direkt von den Korrekturen. Das Update ist wegen der Sicherheitskorrektur zu empfehlen.",
+   "bereich": "claude-code",
+   "datum": "2026-11-14",
+   "wichtig": false
+  },
   {
    "id": "claude-code-2-1-323",
    "quelle": "code-changelog",
