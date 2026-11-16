@@ -1,0 +1,12 @@
+{
+  "id": "cvd-fristen-verkuerzt",
+  "quelle": "anthropic",
+  "url": "https://www.anthropic.com/research/coordinated-vulnerability-disclosure-timelines",
+  "titel_original": "Updating our coordinated vulnerability disclosure policy timelines",
+  "titel_de": "Anthropic verkürzt Fristen für die Offenlegung von Schwachstellen",
+  "kurz_de": "Ab dem 1. Januar 2027 gilt für Anthropics Schwachstellenmeldungen statt 90 Tagen eine Frist von 30 Tagen (hoch/kritisch) bzw. 45 Tagen (übrige). Aktiv ausgenutzte Lücken bleiben bei 7 Tagen.",
+  "briefing_de": "Das Frontier Red Team von Anthropic hat die Fristen der koordinierten Offenlegung von Schwachstellen angepasst, weil Frontier-Modelle Lücken deutlich besser finden.\n- Frist von 90 auf 30 Tage für Schwachstellen mit hohem oder kritischem Schweregrad, auf 45 Tage für alle übrigen.\n- Gilt für Meldungen an Hersteller und Maintainer ab dem 1. Januar 2027; laufende Meldungen behalten ihre bisherigen Fristen.\n- Reagiert ein Maintainer nicht, schaltet Anthropic nach 15 Tagen (bisher 30) einen externen Vulnerability-Coordinator ein; technische Details folgen 30 Tage (bisher 45) nach Verfügbarkeit eines Patches.\n- Ausnahmen: Für aktiv ausgenutzte Schwachstellen gilt weiterhin das 7-Tage-Fenster. Bei schwer behebbarer Software (z. B. kritische Infrastruktur) oder Änderungen an einer Spezifikation bzw. einem RFC wird ein Zeitplan mit dem Hersteller vereinbart. Nicht betroffen sind KI-entdeckte Befunde ohne menschliche Prüfung, etwa aus OSS Scanner.\n- Überfällige hoch/kritische Meldungen (über 90 Tage, noch nicht öffentlich) bekommen zusätzliche 30 Tage, danach Veröffentlichung im Dashboard.",
+  "bereich": "forschung",
+  "datum": "2026-11-16",
+  "wichtig": false
+}
