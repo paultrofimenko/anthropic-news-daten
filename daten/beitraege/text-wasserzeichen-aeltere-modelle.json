@@ -1,0 +1,12 @@
+{
+  "id": "text-wasserzeichen-aeltere-modelle",
+  "quelle": "platform-release-notes",
+  "url": "https://platform.claude.com/docs/en/release-notes/overview",
+  "titel_original": "November 16, 2026",
+  "titel_de": "Text-Wasserzeichen jetzt auch bei Opus 4.6, Opus 4.5, Sonnet 4.5 und Haiku 4.5",
+  "kurz_de": "Text von Claude Opus 4.6, Opus 4.5, Sonnet 4.5 und Haiku 4.5 trägt Anthropics Text-Wasserzeichen. Setzt eine Anfrage temperature, top_p oder top_k auf einen Nicht-Standardwert, fehlt es evtl.",
+  "briefing_de": "Neu in den Platform Release Notes vom 16. November 2026:\n- Von Claude Opus 4.6, Claude Opus 4.5, Claude Sonnet 4.5 und Claude Haiku 4.5 erzeugter Text trägt Anthropics Text-Wasserzeichen, auf den unterstützten Plattformen. Welche das sind, listet der Support-Artikel „How Claude marks AI-generated content“.\n- Ausnahme: Setzt eine Anfrage an eines dieser Modelle `temperature`, `top_p` oder `top_k` auf einen Nicht-Standardwert, trägt der Text das Wasserzeichen eventuell nicht.\n- Details stehen auf der Doku-Seite „Text watermark“.",
+  "bereich": "api",
+  "datum": "2026-11-16",
+  "wichtig": false
+}

@@ -1,0 +1,13 @@
+{
+  "id": "claude-code-2-1-326",
+  "quelle": "code-changelog",
+  "url": "https://code.claude.com/docs/en/changelog",
+  "titel_original": "Claude Code 2.1.326",
+  "titel_de": "Claude Code 2.1.326: Code Mode mit Agent Teams und viele Fehlerbehebungen",
+  "kurz_de": "Claude Code 2.1.326 erlaubt Code Mode bei aktivierten Agent Teams, warnt bei unvollständigen Tool-Regeln und behebt viele Fehler, u. a. bei /rewind, Berechtigungen und Sessions.",
+  "briefing_de": "Neu in Fassung 2.1.326:\n- Code Mode lässt sich einschalten, während Agent Teams aktiviert sind; wer es schon eingeschaltet hatte, dessen Sessions mit Teams starten jetzt in Code Mode.\n- Warnung beim Start, wenn ein Eintrag in `--allowedTools`, `--disallowedTools` oder `--tools` nicht wie eine vollständige Regel aussieht; neue Zeile in `/status`, wenn Anbieter oder eine Umgebungsvariable wie `DISABLE_TELEMETRY` Funktionen abschaltet.\n- `OTEL_RESOURCE_INCLUDE_HOST` fügt `host.name` und `host.id` zu den OpenTelemetry-Ressourcenattributen hinzu (standardmäßig aus). Mods bekommen `overflowX=\"scroll\"` auf `Box` sowie `maxLines` und `wrap=\"clip\"` auf `Text`.\n- Fehlerbehebungen u. a. bei `/rewind` (zeigt jetzt „Code changes unknown“, wenn Änderungen nicht verfolgt wurden), Berechtigungsregeln, Hooks, fortgesetzten Sessions, `claude purge` (Rückfragen erscheinen jetzt auch bei umgeleiteter Ausgabe) und der Anmeldung per `/login`.\n- Bei einem Fehler wegen `max_tokens` über dem Modelllimit wiederholt Claude Code die Anfrage mit dem Maximum, das die Anthropic API meldet.",
+  "arbeitsweise_de": "Wer Hooks oder Berechtigungsregeln über `--allowedTools`, `--disallowedTools` oder `--tools` setzt, sieht jetzt beim Start einen Hinweis auf unvollständige Regeln und sollte diese prüfen.",
+  "bereich": "claude-code",
+  "datum": "2026-11-16",
+  "wichtig": false
+}
