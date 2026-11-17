@@ -1,8 +1,21 @@
 {
  "version": 1,
- "erzeugt": "2026-11-16T19:38:33.911Z",
- "anzahl": 144,
+ "erzeugt": "2026-11-17T03:56:31.450Z",
+ "anzahl": 147,
  "beitraege": [
+  {
+   "id": "claude-code-2-1-326",
+   "quelle": "code-changelog",
+   "url": "https://code.claude.com/docs/en/changelog",
+   "titel_original": "Claude Code 2.1.326",
+   "titel_de": "Claude Code 2.1.326: Code Mode mit Agent Teams und viele Fehlerbehebungen",
+   "kurz_de": "Claude Code 2.1.326 erlaubt Code Mode bei aktivierten Agent Teams, warnt bei unvollständigen Tool-Regeln und behebt viele Fehler, u. a. bei /rewind, Berechtigungen und Sessions.",
+   "briefing_de": "Neu in Fassung 2.1.326:\n- Code Mode lässt sich einschalten, während Agent Teams aktiviert sind; wer es schon eingeschaltet hatte, dessen Sessions mit Teams starten jetzt in Code Mode.\n- Warnung beim Start, wenn ein Eintrag in `--allowedTools`, `--disallowedTools` oder `--tools` nicht wie eine vollständige Regel aussieht; neue Zeile in `/status`, wenn Anbieter oder eine Umgebungsvariable wie `DISABLE_TELEMETRY` Funktionen abschaltet.\n- `OTEL_RESOURCE_INCLUDE_HOST` fügt `host.name` und `host.id` zu den OpenTelemetry-Ressourcenattributen hinzu (standardmäßig aus). Mods bekommen `overflowX=\"scroll\"` auf `Box` sowie `maxLines` und `wrap=\"clip\"` auf `Text`.\n- Fehlerbehebungen u. a. bei `/rewind` (zeigt jetzt „Code changes unknown“, wenn Änderungen nicht verfolgt wurden), Berechtigungsregeln, Hooks, fortgesetzten Sessions, `claude purge` (Rückfragen erscheinen jetzt auch bei umgeleiteter Ausgabe) und der Anmeldung per `/login`.\n- Bei einem Fehler wegen `max_tokens` über dem Modelllimit wiederholt Claude Code die Anfrage mit dem Maximum, das die Anthropic API meldet.",
+   "arbeitsweise_de": "Wer Hooks oder Berechtigungsregeln über `--allowedTools`, `--disallowedTools` oder `--tools` setzt, sieht jetzt beim Start einen Hinweis auf unvollständige Regeln und sollte diese prüfen.",
+   "bereich": "claude-code",
+   "datum": "2026-11-16",
+   "wichtig": false
+  },
   {
    "id": "cvd-fristen-verkuerzt",
    "quelle": "anthropic",
@@ -12,6 +25,31 @@
    "kurz_de": "Ab dem 1. Januar 2027 gilt für Anthropics Schwachstellenmeldungen statt 90 Tagen eine Frist von 30 Tagen (hoch/kritisch) bzw. 45 Tagen (übrige). Aktiv ausgenutzte Lücken bleiben bei 7 Tagen.",
    "briefing_de": "Das Frontier Red Team von Anthropic hat die Fristen der koordinierten Offenlegung von Schwachstellen angepasst, weil Frontier-Modelle Lücken deutlich besser finden.\n- Frist von 90 auf 30 Tage für Schwachstellen mit hohem oder kritischem Schweregrad, auf 45 Tage für alle übrigen.\n- Gilt für Meldungen an Hersteller und Maintainer ab dem 1. Januar 2027; laufende Meldungen behalten ihre bisherigen Fristen.\n- Reagiert ein Maintainer nicht, schaltet Anthropic nach 15 Tagen (bisher 30) einen externen Vulnerability-Coordinator ein; technische Details folgen 30 Tage (bisher 45) nach Verfügbarkeit eines Patches.\n- Ausnahmen: Für aktiv ausgenutzte Schwachstellen gilt weiterhin das 7-Tage-Fenster. Bei schwer behebbarer Software (z. B. kritische Infrastruktur) oder Änderungen an einer Spezifikation bzw. einem RFC wird ein Zeitplan mit dem Hersteller vereinbart. Nicht betroffen sind KI-entdeckte Befunde ohne menschliche Prüfung, etwa aus OSS Scanner.\n- Überfällige hoch/kritische Meldungen (über 90 Tage, noch nicht öffentlich) bekommen zusätzliche 30 Tage, danach Veröffentlichung im Dashboard.",
    "bereich": "forschung",
+   "datum": "2026-11-16",
+   "wichtig": false
+  },
+  {
+   "id": "text-wasserzeichen-aeltere-modelle",
+   "quelle": "platform-release-notes",
+   "url": "https://platform.claude.com/docs/en/release-notes/overview",
+   "titel_original": "November 16, 2026",
+   "titel_de": "Text-Wasserzeichen jetzt auch bei Opus 4.6, Opus 4.5, Sonnet 4.5 und Haiku 4.5",
+   "kurz_de": "Text von Claude Opus 4.6, Opus 4.5, Sonnet 4.5 und Haiku 4.5 trägt Anthropics Text-Wasserzeichen. Setzt eine Anfrage temperature, top_p oder top_k auf einen Nicht-Standardwert, fehlt es evtl.",
+   "briefing_de": "Neu in den Platform Release Notes vom 16. November 2026:\n- Von Claude Opus 4.6, Claude Opus 4.5, Claude Sonnet 4.5 und Claude Haiku 4.5 erzeugter Text trägt Anthropics Text-Wasserzeichen, auf den unterstützten Plattformen. Welche das sind, listet der Support-Artikel „How Claude marks AI-generated content“.\n- Ausnahme: Setzt eine Anfrage an eines dieser Modelle `temperature`, `top_p` oder `top_k` auf einen Nicht-Standardwert, trägt der Text das Wasserzeichen eventuell nicht.\n- Details stehen auf der Doku-Seite „Text watermark“.",
+   "bereich": "api",
+   "datum": "2026-11-16",
+   "wichtig": false
+  },
+  {
+   "id": "verifikation-claude-code-team",
+   "quelle": "claude-dev",
+   "url": "https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification/",
+   "titel_original": "How the Claude Code team thinks about verification",
+   "titel_de": "Wie das Claude-Code-Team Änderungen verifiziert",
+   "kurz_de": "Ein Blogbeitrag beschreibt, wie das Claude-Code-Team Claudes Arbeit prüft: End-to-End-, Property- und Differential-Tests, ein Commit-Gate und ein Reviewer mit REVIEW.md.",
+   "briefing_de": "Der Beitrag beschreibt die internen Prozesse des Claude-Code-Teams (laut Artikel wird dort ca. 90 % des Codes von Claude geschrieben und reviewt):\n- Drei empfohlene Testarten: End-to-End-Tests (Priorität eins, echte Nutzerabläufe), Property-Tests (z. B. mit fast-check, Hypothesis, proptest) und Differential-Tests (altes und neues System mit denselben Eingaben).\n- Ein Skill `verify` in `.claude/skills/` startet die App und bedient sie vor dem Commit. Schlägt ein Check nach drei Runden weiter fehl, kommt ein Mensch dazu.\n- Ein Commit-Gate mit den Modi off, observe und enforce blockiert Commits, wenn die Session weder `/code-review` noch `/verify` enthielt; nach zwei Blockaden in einer Session wird der nächste Commit durchgelassen.\n- REVIEW.md wird aus dem Basis-Branch gelesen, nie aus dem Pull Request, damit Änderungen ihre eigenen Prüfregeln nicht verändern. Findings werden als Important, Nit oder Pre-existing markiert.\n- Ein separater Grader mit Rubrik verbesserte in internen Tests zur strukturierten Dateierzeugung die Erfolgsquote um bis zu 10 Punkte gegenüber einem Standard-Prompting-Loop.",
+   "arbeitsweise_de": "Die Zahlen (90 %, 39 Checklistenpunkte, drei Runden, bis zu 10 Punkte) beschreiben interne Abläufe und Tests von Anthropic und sind laut Artikel nicht pauschal übertragbar. Als Anregung taugen: Tests und Prüfschritte als Skill oder Hook festschreiben und wiederkehrende Fehler als Regel in CLAUDE.md oder REVIEW.md überführen.",
+   "bereich": "engineering",
    "datum": "2026-11-16",
    "wichtig": false
   },
