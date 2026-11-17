@@ -35,6 +35,7 @@
    "claude.dev/blog/claude-code-in-the-cloud",
    "claude.dev/blog/getting-started-with-claude-code-mods",
    "claude.dev/blog/getting-the-most-out-of-opus-5-5",
+   "claude.dev/blog/how-the-claude-code-team-thinks-about-verification",
    "claude.dev/blog/how-we-made-claude-ai-faster",
    "claude.dev/blog/lessons-from-building-claude-code-how-we-use-skills",
    "claude.dev/blog/lessons-from-building-claude-code-prompt-caching-is-everything",
@@ -3966,11 +3967,5 @@
    ]
   },
   "zeilenVersion": 2
- },
- "_stoerungen": {
-  "claude-dev-rss": {
-   "anzahl": 1,
-   "deckel": false
-  }
  }
 }
