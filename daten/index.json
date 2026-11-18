@@ -1,8 +1,58 @@
 {
  "version": 1,
- "erzeugt": "2026-11-17T03:56:31.450Z",
- "anzahl": 147,
+ "erzeugt": "2026-11-18T00:59:57.670Z",
+ "anzahl": 151,
  "beitraege": [
+  {
+   "id": "api-claude-tag-bundle-update",
+   "quelle": "platform-doku",
+   "url": "https://platform.claude.com/docs/en/api/beta/organization/claude_tag/bundles/update",
+   "titel_original": "Update Bundle",
+   "titel_de": "API-Endpunkt zum Ändern von Claude-Tag-Bundles",
+   "kurz_de": "Neue Beta-API-Doku: Mit POST /v1/organizations/claude_tag/bundles/{bundle_id} änderst du die Anweisungen eines Claude-Tag-Bundles.",
+   "briefing_de": "Der Endpunkt `POST /v1/organizations/claude_tag/bundles/{bundle_id}`:\n- ändert nur die `instructions` eines Bundles (bis 10.000 Bytes UTF-8); `null` oder leerer String löscht sie, nicht gesendete Felder bleiben unverändert.\n- Beta: Der Header `anthropic-beta: experimental-claude-tag-2026-10-21` ist Pflicht.\n- Neue Sessions nutzen die neuen Anweisungen, laufende behalten ihre. Bundles, die in claude.ai verwaltet werden, lehnt der Endpunkt mit 400 ab.\n- Ein Bundle ist ein benannter Satz an Zugriffen (Connectors, Repositories, Zugangsdaten), den Claude in einem Slack-Channel oder -Workspace nutzen kann; Anlegen und Bearbeiten läuft in claude.ai.",
+   "bereich": "api",
+   "datum": "2026-11-18",
+   "wichtig": false
+  },
+  {
+   "id": "claude-code-2-1-327",
+   "quelle": "code-changelog",
+   "url": "https://code.claude.com/docs/en/changelog",
+   "titel_original": "Claude Code 2.1.327",
+   "titel_de": "Claude Code 2.1.327: mehr Diagnose in /status und viele Fixes",
+   "kurz_de": "Claude Code 2.1.327 zeigt in /status defekte Konfigurationsdateien und andere Probleme, liest MCP-Server-JSON per stdin und behebt viele Fehler bei Sessions, Plugins und Artifacts.",
+   "briefing_de": "Neu in Fassung 2.1.327:\n- `/status` listet jetzt defekte Agent-, Skill-, Command- und Output-Style-Dateien, Keybinding-Fehler, eine nicht verfügbare Sandbox, ignorierte Permission-Settings und Hook-Matcher, die nie greifen; `/config` nennt, wenn andere Settings eine Zeile überschreiben.\n- `claude mcp add-json <name> -` liest das Server-JSON von stdin, damit Tokens nicht in der Befehlszeile stehen; nicht innerhalb einer Claude-Code-Session verfügbar.\n- Neu: Einstellung `attributionProject` benennt die Billing-Gruppe einer Session (für Claude-apps-Gateways mit `admin.billing_group_tag`); `/tui classic` benennt den Renderer ohne Vollbild, `/tui default` funktioniert weiter; `/install-github-app` fragt vor Änderungen an einem Repository nach.\n- Behoben u. a.: `claude mcp add`/`remove` mit Project-Scope löschte andere Schlüssel in `.mcp.json`; `/export` überschrieb Dateien ohne Rückfrage; Remote Control im Worktree-Modus löschte git-ignorierte Dateien wie `.env`; Grep lieferte beim Paging mit `head_limit` und `offset` doppelte oder fehlende Treffer.\n- Weitere Fixes betreffen Session-Resume, Kompaktierung, `claude -p`, Hänger und Abstürze, Remote-MCP-Server nach längeren Ausfällen sowie Artifact-Veröffentlichungen.",
+   "arbeitsweise_de": "Wer MCP-Server mit Tokens einrichtet, kann `claude mcp add-json <name> -` nutzen, damit Zugangsdaten nicht in der Befehlszeile stehen (nicht innerhalb einer Claude-Code-Session). Bei seltsamer Konfiguration lohnt ein Blick in `/status`.",
+   "bereich": "claude-code",
+   "datum": "2026-11-18",
+   "wichtig": false
+  },
+  {
+   "id": "linked-billing-bedingungen",
+   "quelle": "anthropic",
+   "url": "https://www.anthropic.com/legal/linked-billing-terms",
+   "titel_original": "Linked Billing Terms",
+   "titel_de": "Neue Bedingungen für Linked billing",
+   "kurz_de": "Anthropic hat Bedingungen für Linked billing veröffentlicht: Nutzung nur für eigene Direktkunden, kein Aufschlag auf Linked Usage und kein Gateway oder Weiterverkauf.",
+   "briefing_de": "Wichtige Punkte der Bedingungen:\n- Anthropic muss die Funktion für das Konto freischalten; Links entstehen nur über Anthropics Autorisierung, nie durch Abfrage von Passwörtern oder API-Keys.\n- Nutzung nur als Linked Usage markieren, wenn sie wirklich für diesen Kunden, auf dessen Weisung und bei aktivem Link anfällt. Keine Modellwahl, die dessen Nutzung aufbläht.\n- Erlaubt: eigene Gebühren für das Produkt; verboten: Aufschläge auf die von Anthropic berechnete Linked Usage, Gateways, Proxys, Pooling und Weiterverkauf.\n- Anthropic berechnet Linked Usage dem Kunden. Fälschlich markierte Nutzung zahlst du zu deinen eigenen Raten.\n- Ausgeschlossen: Claude.ai, Claude for Work, Abos und Marketplace-Konten. Anthropic kann die Beta ändern, beenden oder einen Link bei Verdacht auf Verstöße aussetzen.",
+   "bereich": "richtlinien",
+   "datum": "2026-11-17",
+   "wichtig": false
+  },
+  {
+   "id": "linked-billing-beta",
+   "quelle": "platform-release-notes",
+   "url": "https://platform.claude.com/docs/en/manage-claude/oauth-apps/organization-billing-connections",
+   "titel_original": "Linked billing",
+   "titel_de": "Linked billing: Kunden zahlen Claude-Nutzung über ihre eigene Organisation",
+   "kurz_de": "Linked billing (Beta): Kunden deiner App verknüpfen ihre Claude-Organisation und zahlen die Claude-Nutzung selbst. Per `billing_policy` wählst du je Anfrage, wer zahlt.",
+   "briefing_de": "Neu in der Beta (Beta-Header `user-profiles-billing-2026-10-01`):\n- Kunden deiner App verknüpfen einmalig ihre Claude-Organisation (Admin- oder Billing-Rolle nötig). Danach setzt du `billing_policy` je Anfrage an `/v1/messages` oder `/v1/chat/completions`: `bill_to: \"user_profile\"` = Kunde zahlt, `bill_to: \"self\"` oder weggelassen = du zahlst.\n- Dazu sendest du den Header `anthropic-user-profile-id`. Message Batches werden nicht unterstützt; `/v1/messages/count_tokens` akzeptiert und ignoriert `billing_policy`.\n- Kunden setzen beim Verknüpfen ein monatliches Ausgabenlimit und können die App jederzeit trennen. Bis die App veröffentlicht ist, können nur eingetragene Testnutzer verknüpfen (bis zu 10); neue Links brauchen dann ein Limit von höchstens 50 USD.\n- Einschränkungen: Nur für Organisationen, die Anthropic direkt bezahlen (Prepaid oder Rechnung); Marketplace- und reine Abo-Organisationen werden mit `403 user_profile_not_billable` abgelehnt. ZDR, BAAs und CMEK gelten nicht, weil die Anfragen in deiner Organisation laufen. Billbare Code-Execution-Funktionen sind bei Kundenabrechnung nicht erlaubt (400).\n- Die Beta kann sich ändern und ist laut Doku womöglich nicht für Produktion geeignet.",
+   "arbeitsweise_de": "Relevant nur, wenn du eine App für Kunden mit eigener Claude-Organisation baust. `bill_to: \"user_profile\"` nur für Nutzung setzen, die der Kunde selbst veranlasst, nicht für eigene Tests oder Arbeit für andere Kunden. Nicht geeignet für Kunden, die HIPAA, FERPA oder CMEK brauchen.",
+   "bereich": "api",
+   "datum": "2026-11-17",
+   "wichtig": false
+  },
   {
    "id": "claude-code-2-1-326",
    "quelle": "code-changelog",
