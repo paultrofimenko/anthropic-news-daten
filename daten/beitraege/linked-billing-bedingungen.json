@@ -1,0 +1,12 @@
+{
+  "id": "linked-billing-bedingungen",
+  "quelle": "anthropic",
+  "url": "https://www.anthropic.com/legal/linked-billing-terms",
+  "titel_original": "Linked Billing Terms",
+  "titel_de": "Neue Bedingungen für Linked billing",
+  "kurz_de": "Anthropic hat Bedingungen für Linked billing veröffentlicht: Nutzung nur für eigene Direktkunden, kein Aufschlag auf Linked Usage und kein Gateway oder Weiterverkauf.",
+  "briefing_de": "Wichtige Punkte der Bedingungen:\n- Anthropic muss die Funktion für das Konto freischalten; Links entstehen nur über Anthropics Autorisierung, nie durch Abfrage von Passwörtern oder API-Keys.\n- Nutzung nur als Linked Usage markieren, wenn sie wirklich für diesen Kunden, auf dessen Weisung und bei aktivem Link anfällt. Keine Modellwahl, die dessen Nutzung aufbläht.\n- Erlaubt: eigene Gebühren für das Produkt; verboten: Aufschläge auf die von Anthropic berechnete Linked Usage, Gateways, Proxys, Pooling und Weiterverkauf.\n- Anthropic berechnet Linked Usage dem Kunden. Fälschlich markierte Nutzung zahlst du zu deinen eigenen Raten.\n- Ausgeschlossen: Claude.ai, Claude for Work, Abos und Marketplace-Konten. Anthropic kann die Beta ändern, beenden oder einen Link bei Verdacht auf Verstöße aussetzen.",
+  "bereich": "richtlinien",
+  "datum": "2026-11-17",
+  "wichtig": false
+}

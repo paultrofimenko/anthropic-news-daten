@@ -1,0 +1,12 @@
+{
+  "id": "api-claude-tag-bundle-update",
+  "quelle": "platform-doku",
+  "url": "https://platform.claude.com/docs/en/api/beta/organization/claude_tag/bundles/update",
+  "titel_original": "Update Bundle",
+  "titel_de": "API-Endpunkt zum Ändern von Claude-Tag-Bundles",
+  "kurz_de": "Neue Beta-API-Doku: Mit POST /v1/organizations/claude_tag/bundles/{bundle_id} änderst du die Anweisungen eines Claude-Tag-Bundles.",
+  "briefing_de": "Der Endpunkt `POST /v1/organizations/claude_tag/bundles/{bundle_id}`:\n- ändert nur die `instructions` eines Bundles (bis 10.000 Bytes UTF-8); `null` oder leerer String löscht sie, nicht gesendete Felder bleiben unverändert.\n- Beta: Der Header `anthropic-beta: experimental-claude-tag-2026-10-21` ist Pflicht.\n- Neue Sessions nutzen die neuen Anweisungen, laufende behalten ihre. Bundles, die in claude.ai verwaltet werden, lehnt der Endpunkt mit 400 ab.\n- Ein Bundle ist ein benannter Satz an Zugriffen (Connectors, Repositories, Zugangsdaten), den Claude in einem Slack-Channel oder -Workspace nutzen kann; Anlegen und Bearbeiten läuft in claude.ai.",
+  "bereich": "api",
+  "datum": "2026-11-18",
+  "wichtig": false
+}

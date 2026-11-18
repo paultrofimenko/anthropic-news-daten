@@ -1,0 +1,13 @@
+{
+  "id": "linked-billing-beta",
+  "quelle": "platform-release-notes",
+  "url": "https://platform.claude.com/docs/en/manage-claude/oauth-apps/organization-billing-connections",
+  "titel_original": "Linked billing",
+  "titel_de": "Linked billing: Kunden zahlen Claude-Nutzung über ihre eigene Organisation",
+  "kurz_de": "Linked billing (Beta): Kunden deiner App verknüpfen ihre Claude-Organisation und zahlen die Claude-Nutzung selbst. Per `billing_policy` wählst du je Anfrage, wer zahlt.",
+  "briefing_de": "Neu in der Beta (Beta-Header `user-profiles-billing-2026-10-01`):\n- Kunden deiner App verknüpfen einmalig ihre Claude-Organisation (Admin- oder Billing-Rolle nötig). Danach setzt du `billing_policy` je Anfrage an `/v1/messages` oder `/v1/chat/completions`: `bill_to: \"user_profile\"` = Kunde zahlt, `bill_to: \"self\"` oder weggelassen = du zahlst.\n- Dazu sendest du den Header `anthropic-user-profile-id`. Message Batches werden nicht unterstützt; `/v1/messages/count_tokens` akzeptiert und ignoriert `billing_policy`.\n- Kunden setzen beim Verknüpfen ein monatliches Ausgabenlimit und können die App jederzeit trennen. Bis die App veröffentlicht ist, können nur eingetragene Testnutzer verknüpfen (bis zu 10); neue Links brauchen dann ein Limit von höchstens 50 USD.\n- Einschränkungen: Nur für Organisationen, die Anthropic direkt bezahlen (Prepaid oder Rechnung); Marketplace- und reine Abo-Organisationen werden mit `403 user_profile_not_billable` abgelehnt. ZDR, BAAs und CMEK gelten nicht, weil die Anfragen in deiner Organisation laufen. Billbare Code-Execution-Funktionen sind bei Kundenabrechnung nicht erlaubt (400).\n- Die Beta kann sich ändern und ist laut Doku womöglich nicht für Produktion geeignet.",
+  "arbeitsweise_de": "Relevant nur, wenn du eine App für Kunden mit eigener Claude-Organisation baust. `bill_to: \"user_profile\"` nur für Nutzung setzen, die der Kunde selbst veranlasst, nicht für eigene Tests oder Arbeit für andere Kunden. Nicht geeignet für Kunden, die HIPAA, FERPA oder CMEK brauchen.",
+  "bereich": "api",
+  "datum": "2026-11-17",
+  "wichtig": false
+}

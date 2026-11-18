@@ -1,0 +1,13 @@
+{
+  "id": "claude-code-2-1-327",
+  "quelle": "code-changelog",
+  "url": "https://code.claude.com/docs/en/changelog",
+  "titel_original": "Claude Code 2.1.327",
+  "titel_de": "Claude Code 2.1.327: mehr Diagnose in /status und viele Fixes",
+  "kurz_de": "Claude Code 2.1.327 zeigt in /status defekte Konfigurationsdateien und andere Probleme, liest MCP-Server-JSON per stdin und behebt viele Fehler bei Sessions, Plugins und Artifacts.",
+  "briefing_de": "Neu in Fassung 2.1.327:\n- `/status` listet jetzt defekte Agent-, Skill-, Command- und Output-Style-Dateien, Keybinding-Fehler, eine nicht verfügbare Sandbox, ignorierte Permission-Settings und Hook-Matcher, die nie greifen; `/config` nennt, wenn andere Settings eine Zeile überschreiben.\n- `claude mcp add-json <name> -` liest das Server-JSON von stdin, damit Tokens nicht in der Befehlszeile stehen; nicht innerhalb einer Claude-Code-Session verfügbar.\n- Neu: Einstellung `attributionProject` benennt die Billing-Gruppe einer Session (für Claude-apps-Gateways mit `admin.billing_group_tag`); `/tui classic` benennt den Renderer ohne Vollbild, `/tui default` funktioniert weiter; `/install-github-app` fragt vor Änderungen an einem Repository nach.\n- Behoben u. a.: `claude mcp add`/`remove` mit Project-Scope löschte andere Schlüssel in `.mcp.json`; `/export` überschrieb Dateien ohne Rückfrage; Remote Control im Worktree-Modus löschte git-ignorierte Dateien wie `.env`; Grep lieferte beim Paging mit `head_limit` und `offset` doppelte oder fehlende Treffer.\n- Weitere Fixes betreffen Session-Resume, Kompaktierung, `claude -p`, Hänger und Abstürze, Remote-MCP-Server nach längeren Ausfällen sowie Artifact-Veröffentlichungen.",
+  "arbeitsweise_de": "Wer MCP-Server mit Tokens einrichtet, kann `claude mcp add-json <name> -` nutzen, damit Zugangsdaten nicht in der Befehlszeile stehen (nicht innerhalb einer Claude-Code-Session). Bei seltsamer Konfiguration lohnt ein Blick in `/status`.",
+  "bereich": "claude-code",
+  "datum": "2026-11-18",
+  "wichtig": false
+}
