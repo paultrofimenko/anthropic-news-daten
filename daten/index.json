@@ -1,7 +1,7 @@
 {
  "version": 1,
- "erzeugt": "2026-11-18T11:47:31.382Z",
- "anzahl": 152,
+ "erzeugt": "2026-11-18T20:36:10.241Z",
+ "anzahl": 155,
  "beitraege": [
   {
    "id": "api-claude-tag-bundle-update",
@@ -29,6 +29,42 @@
    "wichtig": false
   },
   {
+   "id": "managed-agents-sandbox-pro-session",
+   "quelle": "platform-doku",
+   "url": "https://platform.claude.com/docs/en/managed-agents/self-hosted-sandboxes-per-session",
+   "titel_original": "Run one sandbox per session",
+   "titel_de": "Managed Agents: Eine eigene Sandbox pro Session",
+   "kurz_de": "Neue Doku-Seite (Beta) zu selbst gehosteten Managed-Agents-Sandboxes: Jede Session bekommt ihre eigene Sandbox – per Helm-Chart auf Kubernetes, Spawn-Skript oder SDK-Poller.",
+   "briefing_de": "Die Seite beschreibt drei Wege, pro Session eine frische Sandbox zu starten:\n- Helm-Chart `cma-sandboxes` auf Kubernetes (GKE, Amazon EKS u. a.): Ein Dispatcher startet je Session einen Pod unter gVisor; nach 30 Minuten Leerlauf stoppt der Pod, das `/workspace`-Volume bleibt bis zum Ende der Session. Sandbox-Pods unterstützen Memory Stores, aber keine Custom Tools.\n- Spawn-Skript: `ant beta:worker poll --on-work` ruft pro Arbeitsauftrag dein Skript auf, das auf beliebiger Plattform eine Sandbox startet.\n- SDK-Poller: Eigener Code holt die Aufträge (Python, TypeScript, Go) und startet die Sandbox.\n- Das Secret eines Arbeitsauftrags muss bei Skript und Poller als `ANTHROPIC_WORK_SECRET` in die passende Sandbox weitergereicht und nie geloggt werden.\n- Netzwerk: Standardmäßig erreicht eine Sandbox das öffentliche IPv4-Internet; ein prompt-injizierter Agent könnte Gelesenes dorthin senden. Einschränken per `egress.mode: fqdnGke` geht nur auf GKE mit Dataplane V2.",
+   "arbeitsweise_de": "Wer Managed Agents selbst hostet, kann hier das passende Muster wählen. Das Standard-Sandbox-Image ist schreibgeschützt und läuft ohne Root; zusätzliche Tools wie Python oder Git erfordern eigene Images.",
+   "bereich": "api",
+   "datum": "2026-11-18",
+   "wichtig": false
+  },
+  {
+   "id": "sonnet-4-5-abschaltung-claude-code",
+   "quelle": "abschaltungen",
+   "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+   "titel_original": "Model deprecations: Claude Code guidance and Sonnet 4.5 ID",
+   "titel_de": "Abschaltliste: Hinweise für Claude Code, Sonnet 4.5 auch ohne Datum",
+   "kurz_de": "Die Abschaltseite ergänzt Hinweise für Claude-Code-Nutzer. Die Abschaltung von Sonnet 4.5 am 30.11.2026 gilt auch für die ID ohne Datum, `claude-sonnet-4-5`.",
+   "briefing_de": "Neu auf der Seite „Model deprecations“:\n- Die Abschaltung von `claude-sonnet-4-5-20250929` am 30. November 2026 (Ersatz: `claude-sonnet-5-5`) umfasst auch `claude-sonnet-4-5`, die ID ohne Datum.\n- Claude Code nutzt die Claude API, auch bei Anmeldung mit einem Claude-Plan; die Daten der Seite gelten dann. Bei anderer Plattform oder Gateway gelten die Daten der jeweiligen Plattform.\n- Nach der Abschaltung zeigt Claude Code an der Claude API einen Fehler, der mit „There's an issue with the selected model“ beginnt. Mit eingerichteter Fallback-Modellkette wechselt Claude Code stattdessen zum nächsten Modell und versucht Sonnet 4.5 bei der nächsten Nachricht erneut.\n- Migration: Claude Code zuerst aktualisieren (ein neueres Modell kann eine neuere Fassung brauchen), das aktuelle Modell prüfen – auch bei Alias wie `sonnet` –, den empfohlenen Ersatz setzen, überall ändern, wo ein Modell gesetzt ist (auch Subagent-Definitionen), und Administratoren bitten, ihre Modellvorgaben zu ändern.",
+   "arbeitsweise_de": "Prüfe vor dem 30.11.2026, ob Claude Code, Subagenten oder API-Aufrufe noch Sonnet 4.5 verwenden – auch über Alias oder die ID ohne Datum. Gilt nur für die Claude API und Plattformen mit denselben Daten; Amazon Bedrock und Google Cloud (Google managed) haben eigene Zeitpläne.",
+   "bereich": "modelle",
+   "datum": "2026-11-18",
+   "wichtig": true,
+   "lernkarten": [
+    {
+     "frage_de": "Welche Sonnet-4.5-IDs betrifft die Abschaltung am 30. November 2026?",
+     "antwort_de": "`claude-sonnet-4-5-20250929` und auch `claude-sonnet-4-5`, die ID ohne Datum. Ersatz: `claude-sonnet-5-5`."
+    },
+    {
+     "frage_de": "Was passiert in Claude Code nach der Sonnet-4.5-Abschaltung, wenn eine Fallback-Modellkette gesetzt ist?",
+     "antwort_de": "Claude Code wechselt zum nächsten Modell der Kette und versucht Sonnet 4.5 bei der nächsten Nachricht erneut. Ohne Kette erscheint ein Fehler „There's an issue with the selected model“."
+    }
+   ]
+  },
+  {
    "id": "chaos-loop-claude-docs-start",
    "quelle": "claude-dev-rss",
    "url": "https://claude.dev/blog/chaos-loop-claude-docs-launch/",
@@ -38,6 +74,18 @@
    "briefing_de": "Claude Docs startete am 16. September 2026; bis zum 22. September entstanden über 4,6 Millionen Docs.\n- Ergebnis: bei etwa 2 Milliarden Anfragen nur 60 Serverfehler und keine Rollbacks. Der Dienst lief auf etwa 50 speicheroptimierten Pods, früher waren über 500 geschätzt.\n- Methode: Ab dem 4. September lief Claude in einer Claude-Code-Sitzung gegen ein Staging-Cluster, wählte Stress-Szenarien, las Telemetrie (über den Datadog-MCP), schlug Fixes vor, spielte sie auf Staging ein und testete erneut. Sub-Agents erledigten das meiste, bis zu 30 gleichzeitig.\n- Leitplanken: Zwei Invarianten mussten halten (Docs öffnen fast sofort, bestätigte Änderungen bleiben erhalten). Schwer rückgängig zu machende Änderungen wie Schema oder Schlüsselaufbau brauchten menschliche Freigabe.\n- Kosten: etwa 125.000 US-Dollar Inferenz zum Listenpreis von Claude Fable 5.2 (Stand November 2026); laut Autor hätte sich etwa die Hälfte im Rückblick sparen lassen. Der Ansatz setzte neuere Frontier-Modelle voraus, die ein Ziel über lange Läufe halten; ältere verloren es nach 10 bis 20 Iterationen.",
    "arbeitsweise_de": "Vorgehen laut Beitrag: Claude über den MCP-Server eines Observability-Anbieters an die Telemetrie anbinden, auf Staging ein Lastskript mit etwa dem 10-fachen echten Verkehr schreiben lassen, Invarianten vorher aufschreiben und nur schwer rückgängig zu machende Änderungen von Menschen freigeben lassen. Die Kostenschätzung von 3.000 bis 10.000 US-Dollar für einen kleineren Zwei-Wochen-Einsatz ist laut Autor eine grobe, nicht erprobte Schätzung.",
    "bereich": "engineering",
+   "datum": "2026-11-17",
+   "wichtig": false
+  },
+  {
+   "id": "claude-black-hole-physics",
+   "quelle": "anthropic",
+   "url": "https://www.anthropic.com/research/claude-black-hole-physics",
+   "titel_original": "Claude solves two open problems in the physics of black holes",
+   "titel_de": "Claude löst zwei offene Probleme der Schwarzen-Loch-Physik",
+   "kurz_de": "Claude Fable 5.2 hat laut Anthropic zwei offene Probleme der theoretischen Physik gelöst: einen Phasenübergang bei Schwarzen Löchern und die exakte Grenze einer Bootstrap-Methode.",
+   "briefing_de": "Anthropic beschreibt zwei Ergebnisse zu Schwarzen Löchern und Quantengravitation (Preprints verlinkt):\n- Hawking-Page-Übergang: Claude vervollständigte eine 2003 aufgestellte, nie gelöste Rechnung und zeigte, dass der Übergang auch dort abrupt ist, wo die Raumzeit keine feste Form mehr hat.\n- Modulares Bootstrap: Claude Fable 5.2 fand die exakte Obergrenze für die Masse des leichtesten Schwarzen Lochs bei der einfachsten Version der Methode und bewies, dass sie nicht weiter sinkt.\n- Vorgehen: Ein Anthropic-Forscher ließ Claude 22 offene Probleme auflisten; separate Agenten arbeiteten rund sechs Wochen im Hintergrund daran. Die Ergebnisse wurden im September in Lean formal verifiziert, ein Physiker prüfte alle Hauptergebnisse.\n- Einschränkung laut Anthropic: Keines der Ergebnisse beschreibt unser Universum direkt oder hat praktische Anwendungen.",
+   "bereich": "forschung",
    "datum": "2026-11-17",
    "wichtig": false
   },
@@ -2400,7 +2448,7 @@
    "titel_de": "Modelle",
    "kurz_de": "Fable, Opus, Sonnet, Haiku – was sie können, was sie kosten, wann sie abgeschaltet werden.",
    "einleitung_de": "Claude gibt es in vier aktuellen Modellen, vom schnellen, günstigen Haiku bis zum besonders starken Fable. Abgerechnet wird nach Token – Wortstücken, aus denen ein Modell Text zusammensetzt. Oft hilft die Einstellung „Effort“ mehr als ein anderes Modell.",
-   "stand": "2026-11-10",
+   "stand": "2026-11-18",
    "grafik": {
     "art": "balken",
     "titel_de": "Preis je Million Token",
@@ -2553,7 +2601,8 @@
      "titel_de": "Abschaltungen",
      "text_de": "Jedes Modell wird irgendwann abgeschaltet. Anthropic nennt für aktive Modelle ein frühestes Datum („nicht vor“) und kündigt die echte Abschaltung vorher an, mit Empfehlung für den Nachfolger.",
      "punkte_de": [
-      "Sonnet 4.5 ist seit 30.09.2026 abgekündigt und wird am 30.11.2026 abgeschaltet – Nachfolger: Sonnet 5.5.",
+      "Sonnet 4.5 ist seit 30.09.2026 abgekündigt und wird am 30.11.2026 abgeschaltet – Nachfolger: Sonnet 5.5. Das gilt auch für die ID ohne Datum, claude-sonnet-4-5.",
+      "Claude Code nutzt die Claude API, auch mit Claude-Plan – die Daten dieser Seite gelten dann; bei anderer Plattform oder Gateway gelten deren Daten. Nach der Abschaltung zeigt Claude Code einen Fehler, außer eine Fallback-Modellkette ist gesetzt.",
       "Haiku 4.5: nicht vor dem 15.10.2026. Opus 4.5: nicht vor dem 24.11.2026.",
       "Fable 5.2 nicht vor dem 09.11.2027, Fable 5.1 nicht vor dem 01.09.2027, Opus 5.5 nicht vor dem 22.09.2027, Sonnet 5.5 nicht vor dem 28.09.2027, Haiku 5.5 nicht vor dem 07.10.2027.",
       {
@@ -2567,19 +2616,15 @@
      ],
      "quelle": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
      "geaendert": {
-      "am": "2026-11-10",
+      "am": "2026-11-18",
       "durch": [
-       "fable-mythos-5-2",
-       "fable-mythos-5-2-abschaltung",
-       "fable-5-2-api-aenderungen"
+       "sonnet-4-5-abschaltung-claude-code"
       ]
      }
     }
    ],
    "gesehen": [
-    "fable-mythos-5-2",
-    "fable-mythos-5-2-abschaltung",
-    "fable-5-2-api-aenderungen"
+    "sonnet-4-5-abschaltung-claude-code"
    ],
    "grafik_geaendert": {
     "am": "2026-11-10",
