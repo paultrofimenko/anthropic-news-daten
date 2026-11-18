@@ -1,7 +1,7 @@
 {
  "version": 1,
- "erzeugt": "2026-11-18T00:59:57.670Z",
- "anzahl": 151,
+ "erzeugt": "2026-11-18T11:47:31.382Z",
+ "anzahl": 152,
  "beitraege": [
   {
    "id": "api-claude-tag-bundle-update",
@@ -26,6 +26,19 @@
    "arbeitsweise_de": "Wer MCP-Server mit Tokens einrichtet, kann `claude mcp add-json <name> -` nutzen, damit Zugangsdaten nicht in der Befehlszeile stehen (nicht innerhalb einer Claude-Code-Session). Bei seltsamer Konfiguration lohnt ein Blick in `/status`.",
    "bereich": "claude-code",
    "datum": "2026-11-18",
+   "wichtig": false
+  },
+  {
+   "id": "chaos-loop-claude-docs-start",
+   "quelle": "claude-dev-rss",
+   "url": "https://claude.dev/blog/chaos-loop-claude-docs-launch/",
+   "titel_original": "Using a \"chaos loop\" to harden the Claude Docs launch: 60 server errors across billions of requests",
+   "titel_de": "Chaos Loop: Wie Claude den Start von Claude Docs absicherte",
+   "kurz_de": "Ein Claude-Code-„Chaos Loop“ stresste Claude Docs vor dem Start auf Staging. Ergebnis: rund 2 Milliarden Anfragen, nur 60 Serverfehler, keine Rollbacks.",
+   "briefing_de": "Claude Docs startete am 16. September 2026; bis zum 22. September entstanden über 4,6 Millionen Docs.\n- Ergebnis: bei etwa 2 Milliarden Anfragen nur 60 Serverfehler und keine Rollbacks. Der Dienst lief auf etwa 50 speicheroptimierten Pods, früher waren über 500 geschätzt.\n- Methode: Ab dem 4. September lief Claude in einer Claude-Code-Sitzung gegen ein Staging-Cluster, wählte Stress-Szenarien, las Telemetrie (über den Datadog-MCP), schlug Fixes vor, spielte sie auf Staging ein und testete erneut. Sub-Agents erledigten das meiste, bis zu 30 gleichzeitig.\n- Leitplanken: Zwei Invarianten mussten halten (Docs öffnen fast sofort, bestätigte Änderungen bleiben erhalten). Schwer rückgängig zu machende Änderungen wie Schema oder Schlüsselaufbau brauchten menschliche Freigabe.\n- Kosten: etwa 125.000 US-Dollar Inferenz zum Listenpreis von Claude Fable 5.2 (Stand November 2026); laut Autor hätte sich etwa die Hälfte im Rückblick sparen lassen. Der Ansatz setzte neuere Frontier-Modelle voraus, die ein Ziel über lange Läufe halten; ältere verloren es nach 10 bis 20 Iterationen.",
+   "arbeitsweise_de": "Vorgehen laut Beitrag: Claude über den MCP-Server eines Observability-Anbieters an die Telemetrie anbinden, auf Staging ein Lastskript mit etwa dem 10-fachen echten Verkehr schreiben lassen, Invarianten vorher aufschreiben und nur schwer rückgängig zu machende Änderungen von Menschen freigeben lassen. Die Kostenschätzung von 3.000 bis 10.000 US-Dollar für einen kleineren Zwei-Wochen-Einsatz ist laut Autor eine grobe, nicht erprobte Schätzung.",
+   "bereich": "engineering",
+   "datum": "2026-11-17",
    "wichtig": false
   },
   {
