@@ -1,0 +1,23 @@
+{
+  "id": "sonnet-4-5-abschaltung-claude-code",
+  "quelle": "abschaltungen",
+  "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+  "titel_original": "Model deprecations: Claude Code guidance and Sonnet 4.5 ID",
+  "titel_de": "Abschaltliste: Hinweise für Claude Code, Sonnet 4.5 auch ohne Datum",
+  "kurz_de": "Die Abschaltseite ergänzt Hinweise für Claude-Code-Nutzer. Die Abschaltung von Sonnet 4.5 am 30.11.2026 gilt auch für die ID ohne Datum, `claude-sonnet-4-5`.",
+  "briefing_de": "Neu auf der Seite „Model deprecations“:\n- Die Abschaltung von `claude-sonnet-4-5-20250929` am 30. November 2026 (Ersatz: `claude-sonnet-5-5`) umfasst auch `claude-sonnet-4-5`, die ID ohne Datum.\n- Claude Code nutzt die Claude API, auch bei Anmeldung mit einem Claude-Plan; die Daten der Seite gelten dann. Bei anderer Plattform oder Gateway gelten die Daten der jeweiligen Plattform.\n- Nach der Abschaltung zeigt Claude Code an der Claude API einen Fehler, der mit „There's an issue with the selected model“ beginnt. Mit eingerichteter Fallback-Modellkette wechselt Claude Code stattdessen zum nächsten Modell und versucht Sonnet 4.5 bei der nächsten Nachricht erneut.\n- Migration: Claude Code zuerst aktualisieren (ein neueres Modell kann eine neuere Fassung brauchen), das aktuelle Modell prüfen – auch bei Alias wie `sonnet` –, den empfohlenen Ersatz setzen, überall ändern, wo ein Modell gesetzt ist (auch Subagent-Definitionen), und Administratoren bitten, ihre Modellvorgaben zu ändern.",
+  "arbeitsweise_de": "Prüfe vor dem 30.11.2026, ob Claude Code, Subagenten oder API-Aufrufe noch Sonnet 4.5 verwenden – auch über Alias oder die ID ohne Datum. Gilt nur für die Claude API und Plattformen mit denselben Daten; Amazon Bedrock und Google Cloud (Google managed) haben eigene Zeitpläne.",
+  "bereich": "modelle",
+  "datum": "2026-11-18",
+  "wichtig": true,
+  "lernkarten": [
+    {
+      "frage_de": "Welche Sonnet-4.5-IDs betrifft die Abschaltung am 30. November 2026?",
+      "antwort_de": "`claude-sonnet-4-5-20250929` und auch `claude-sonnet-4-5`, die ID ohne Datum. Ersatz: `claude-sonnet-5-5`."
+    },
+    {
+      "frage_de": "Was passiert in Claude Code nach der Sonnet-4.5-Abschaltung, wenn eine Fallback-Modellkette gesetzt ist?",
+      "antwort_de": "Claude Code wechselt zum nächsten Modell der Kette und versucht Sonnet 4.5 bei der nächsten Nachricht erneut. Ohne Kette erscheint ein Fehler „There's an issue with the selected model“."
+    }
+  ]
+}

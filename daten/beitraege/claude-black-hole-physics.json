@@ -1,0 +1,12 @@
+{
+  "id": "claude-black-hole-physics",
+  "quelle": "anthropic",
+  "url": "https://www.anthropic.com/research/claude-black-hole-physics",
+  "titel_original": "Claude solves two open problems in the physics of black holes",
+  "titel_de": "Claude löst zwei offene Probleme der Schwarzen-Loch-Physik",
+  "kurz_de": "Claude Fable 5.2 hat laut Anthropic zwei offene Probleme der theoretischen Physik gelöst: einen Phasenübergang bei Schwarzen Löchern und die exakte Grenze einer Bootstrap-Methode.",
+  "briefing_de": "Anthropic beschreibt zwei Ergebnisse zu Schwarzen Löchern und Quantengravitation (Preprints verlinkt):\n- Hawking-Page-Übergang: Claude vervollständigte eine 2003 aufgestellte, nie gelöste Rechnung und zeigte, dass der Übergang auch dort abrupt ist, wo die Raumzeit keine feste Form mehr hat.\n- Modulares Bootstrap: Claude Fable 5.2 fand die exakte Obergrenze für die Masse des leichtesten Schwarzen Lochs bei der einfachsten Version der Methode und bewies, dass sie nicht weiter sinkt.\n- Vorgehen: Ein Anthropic-Forscher ließ Claude 22 offene Probleme auflisten; separate Agenten arbeiteten rund sechs Wochen im Hintergrund daran. Die Ergebnisse wurden im September in Lean formal verifiziert, ein Physiker prüfte alle Hauptergebnisse.\n- Einschränkung laut Anthropic: Keines der Ergebnisse beschreibt unser Universum direkt oder hat praktische Anwendungen.",
+  "bereich": "forschung",
+  "datum": "2026-11-17",
+  "wichtig": false
+}

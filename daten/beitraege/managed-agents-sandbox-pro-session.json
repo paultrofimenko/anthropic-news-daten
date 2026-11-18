@@ -1,0 +1,13 @@
+{
+  "id": "managed-agents-sandbox-pro-session",
+  "quelle": "platform-doku",
+  "url": "https://platform.claude.com/docs/en/managed-agents/self-hosted-sandboxes-per-session",
+  "titel_original": "Run one sandbox per session",
+  "titel_de": "Managed Agents: Eine eigene Sandbox pro Session",
+  "kurz_de": "Neue Doku-Seite (Beta) zu selbst gehosteten Managed-Agents-Sandboxes: Jede Session bekommt ihre eigene Sandbox – per Helm-Chart auf Kubernetes, Spawn-Skript oder SDK-Poller.",
+  "briefing_de": "Die Seite beschreibt drei Wege, pro Session eine frische Sandbox zu starten:\n- Helm-Chart `cma-sandboxes` auf Kubernetes (GKE, Amazon EKS u. a.): Ein Dispatcher startet je Session einen Pod unter gVisor; nach 30 Minuten Leerlauf stoppt der Pod, das `/workspace`-Volume bleibt bis zum Ende der Session. Sandbox-Pods unterstützen Memory Stores, aber keine Custom Tools.\n- Spawn-Skript: `ant beta:worker poll --on-work` ruft pro Arbeitsauftrag dein Skript auf, das auf beliebiger Plattform eine Sandbox startet.\n- SDK-Poller: Eigener Code holt die Aufträge (Python, TypeScript, Go) und startet die Sandbox.\n- Das Secret eines Arbeitsauftrags muss bei Skript und Poller als `ANTHROPIC_WORK_SECRET` in die passende Sandbox weitergereicht und nie geloggt werden.\n- Netzwerk: Standardmäßig erreicht eine Sandbox das öffentliche IPv4-Internet; ein prompt-injizierter Agent könnte Gelesenes dorthin senden. Einschränken per `egress.mode: fqdnGke` geht nur auf GKE mit Dataplane V2.",
+  "arbeitsweise_de": "Wer Managed Agents selbst hostet, kann hier das passende Muster wählen. Das Standard-Sandbox-Image ist schreibgeschützt und läuft ohne Root; zusätzliche Tools wie Python oder Git erfordern eigene Images.",
+  "bereich": "api",
+  "datum": "2026-11-18",
+  "wichtig": false
+}
