@@ -1,0 +1,31 @@
+{
+ "zeit": "2026-11-18T20:34:46.711Z",
+ "neu": [
+  {
+   "quelle": "anthropic",
+   "name": "anthropic.com",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://www.anthropic.com/research/claude-black-hole-physics",
+   "titel": null,
+   "datum": "2026-11-18T18:52:11.583Z"
+  },
+  {
+   "quelle": "abschaltungen",
+   "name": "Modell-Abschaltungen",
+   "wichtig": true,
+   "art": "geaendert",
+   "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+   "titel": "Modell-Abschaltungen"
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/managed-agents/self-hosted-sandboxes-per-session",
+   "titel": null,
+   "datum": null
+  }
+ ]
+}

@@ -2834,6 +2834,7 @@
    "platform.claude.com/docs/en/managed-agents/self-hosted-sandboxes-custom-tools",
    "platform.claude.com/docs/en/managed-agents/self-hosted-sandboxes-memory",
    "platform.claude.com/docs/en/managed-agents/self-hosted-sandboxes-operations",
+   "platform.claude.com/docs/en/managed-agents/self-hosted-sandboxes-per-session",
    "platform.claude.com/docs/en/managed-agents/self-hosted-sandboxes-reference",
    "platform.claude.com/docs/en/managed-agents/self-hosted-sandboxes-security",
    "platform.claude.com/docs/en/managed-agents/self-hosted-sandboxes-workers",
@@ -3612,6 +3613,7 @@
    "anthropic.com/research/circuits-updates-sept-2024",
    "anthropic.com/research/claude-4-cyber",
    "anthropic.com/research/claude-accelerates-protein-design",
+   "anthropic.com/research/claude-black-hole-physics",
    "anthropic.com/research/claude-character",
    "anthropic.com/research/claude-code-auto-mode",
    "anthropic.com/research/claude-code-best-practices",
@@ -3807,7 +3809,7 @@
   ]
  },
  "abschaltungen": {
-  "hash": "1f86ae2eac4e16b4"
+  "hash": "4aa681b8f4e4b91f"
  },
  "modelle": {
   "hash": "b3bccf03645acefc"
