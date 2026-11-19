@@ -1,8 +1,33 @@
 {
  "version": 1,
- "erzeugt": "2026-11-18T20:36:10.241Z",
- "anzahl": 155,
+ "erzeugt": "2026-11-19T02:36:43.733Z",
+ "anzahl": 157,
  "beitraege": [
+  {
+   "id": "claude-code-2-1-328",
+   "quelle": "code-changelog",
+   "url": "https://code.claude.com/docs/en/changelog",
+   "titel_original": "Claude Code 2.1.328",
+   "titel_de": "Claude Code 2.1.328: Auto Mode bei Cloud-Anbietern, Code-Mode-Fixes",
+   "kurz_de": "Claude Code 2.1.328 bringt Auto Mode für Opus 4.6 und Sonnet 4.6 auf Bedrock, Agent Platform, Foundry und Claude apps gateway, \"onFailure\": \"block\" für mcp_tool-Hooks und viele Fixes.",
+   "briefing_de": "Neu in Fassung 2.1.328:\n- Auto Mode für Claude Opus 4.6 und Sonnet 4.6 auf Amazon Bedrock, Google Clouds Agent Platform, Microsoft Foundry und Claude apps gateway; interaktive Sessions ohne gesetzten Permission-Modus starten darin.\n- `\"onFailure\": \"block\"` gibt es jetzt auch für `mcp_tool`-Hooks: Schlägt der Aufruf des Hooks fehl, wird die Aktion blockiert (wie bei Command- und HTTP-Hooks).\n- Neu: `CLAUDE_CODE_DISABLE_DEFERRED_TOOL_RESUME` hindert `claude -p --resume` und `--continue` daran, einen von einem Hook zurückgestellten Tool-Aufruf auszuführen; `/status` und `claude doctor` warnen bei einem OpenTelemetry-Exporter ohne Endpunkt; für Self-hosted Runner kommen u. a. `--repository-folder`, `--hook-label`, `--metadata key=value` und neue Orchestrator-Metriken hinzu.\n- Behoben u. a.: Bash-Befehle in zsh brachen bei Wörtern mit `=` am Anfang ab (z. B. `echo ====`); das Speichern eines Scheduled Tasks konnte andere Tasks des Projekts löschen; die automatische Kompaktierung nutzte den alten System-Prompt; eine Regression aus 2.1.327 schaltete Effort für Subagents bei Bedrock, Agent Platform oder Foundry ab.\n- Viele weitere Fixes zu Code Mode, Remote Control und Cloud-Sessions, MCP-Tools mit `anyOf`/`oneOf`/`allOf`-Schema bei Drittanbietern sowie Terminal-Eingaben und Kopieren im Vollbildmodus.",
+   "arbeitsweise_de": "Wer Claude Code über Bedrock, Agent Platform, Foundry oder Claude apps gateway nutzt, kann Auto Mode jetzt mit Opus 4.6 und Sonnet 4.6 verwenden; dort startet eine interaktive Session ohne Permission-Modus darin. Wer MCP-Tool-Hooks als Absicherung einsetzt, kann mit `\"onFailure\": \"block\"` festlegen, dass ein fehlgeschlagener Hook die Aktion stoppt.",
+   "bereich": "claude-code",
+   "datum": "2026-11-19",
+   "wichtig": false
+  },
+  {
+   "id": "anthropic-boersengang-preis",
+   "quelle": "anthropic",
+   "url": "https://www.anthropic.com/news/anthropic-prices-initial-public-offering",
+   "titel_original": "Anthropic prices initial public offering",
+   "titel_de": "Anthropic legt Preis für Börsengang fest: 83 US-Dollar je Aktie",
+   "kurz_de": "Anthropic hat den Börsengang mit 83,00 US-Dollar je Class-A-Aktie bepreist. Handelsbeginn an der Nasdaq unter „ANT“ ist für den 19. November 2026 erwartet.",
+   "briefing_de": "Anthropic, PBC hat den Preis für den Börsengang seiner Class-A-Stammaktien festgelegt.\n- Preis: 83,00 US-Dollar je Aktie.\n- Angeboten werden 980.000.000 Aktien: 956.351.354 von Anthropic, 23.648.646 von bestimmten Altaktionären. Aus deren Verkäufen erhält Anthropic keine Erlöse.\n- Der Handel an der Nasdaq Global Select Market unter dem Kürzel „ANT“ soll am 19. November 2026 beginnen; der Abschluss des Angebots wird für den 20. November 2026 erwartet, vorbehaltlich üblicher Bedingungen.\n- Die Konsortialbanken haben eine 30-Tage-Option auf bis zu 147.000.000 zusätzliche Aktien.\n- Die Registrierungserklärung wurde am 18. November 2026 von der SEC für wirksam erklärt. Das Angebot erfolgt nur per Prospekt; die Mitteilung ist kein Verkaufsangebot.",
+   "bereich": "unternehmen",
+   "datum": "2026-11-18",
+   "wichtig": false
+  },
   {
    "id": "api-claude-tag-bundle-update",
    "quelle": "platform-doku",
