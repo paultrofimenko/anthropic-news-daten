@@ -1,0 +1,13 @@
+{
+  "id": "claude-code-2-1-329",
+  "quelle": "code-changelog",
+  "url": "https://code.claude.com/docs/en/changelog",
+  "titel_original": "Claude Code 2.1.329",
+  "titel_de": "Claude Code 2.1.329: Hook-Warnungen, /tasks erweitert, viele Fixes",
+  "kurz_de": "Claude Code 2.1.329 warnt im Trust-Dialog, wo Hooks eines Ordners deklariert sind, zeigt Scheduled Tasks, /loop-Wakeups und Forks in /tasks und behebt viele Fehler.",
+  "briefing_de": "Neu in Fassung 2.1.329:\n- Der Trust-Dialog warnt jetzt, wo die Hooks eines Ordners deklariert sind; in Claude Desktop und anderen nicht interaktiven Hosts erscheint eine Warnung in der Konversation, wenn Hooks in Managed Settings nicht geladen werden.\n- `/tasks` zeigt jetzt auch die Scheduled Tasks der Session, `/loop`-Wakeups, das Ziel (goal) und die Forks der Konversation; mit x lässt sich einer nach Rückfrage stoppen.\n- `/mcp` zeigt auf der Seite eines Servers eine Zeile „Server message“ mit der JSON-RPC-Fehlermeldung eines Remote-HTTP-MCP-Servers, der die Verbindung ablehnt; `/status` zeigt eine Zeile „Marketplace auto-update“ für verwaltete Marketplaces ohne automatische Updates.\n- Code Mode lässt sich jetzt auch einschalten, während OpenTelemetry-Events und -Metriken aktiv sind (Tracing hält ihn weiter aus); ein außer Kontrolle geratener Loop in Code Mode wird an einem Limit gestoppt.\n- Viele Fixes, u. a.: `~/.claude.json` wurde teils auf Standardwerte zurückgesetzt; wiederholte Abmeldungen auf macOS bei nicht beschreibbarem Keychain; `/teleport` ersetzte die offene Konversation (jetzt neue Session wie bei `/clear`, `/resume` holt die alte zurück); `/terminal-setup` beschädigte VS-Code-Dateien; `/code-review <pr number>` prüfte teils den ausgecheckten Branch statt des Pull Requests; Fixes für Self-hosted Runner, Remote Control, MCP und Bildschirmdarstellung.",
+  "arbeitsweise_de": "Wer Hooks in geteilten Repos nutzt, sieht im Trust-Dialog jetzt, woher sie stammen. Wer mit `--push-outcome-on-release` auf einem Self-hosted Runner arbeitet: Die Fassung behebt, dass dabei teils der Branch einer Session auf dem Git-Host gelöscht wurde.",
+  "bereich": "claude-code",
+  "datum": "2026-11-20",
+  "wichtig": false
+}
