@@ -1,0 +1,147 @@
+{
+ "zeit": "2026-11-20T20:23:59.784Z",
+ "neu": [
+  {
+   "quelle": "anthropic",
+   "name": "anthropic.com",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://www.anthropic.com/news/ipo-close",
+   "titel": null,
+   "datum": "2026-11-20T12:41:01.161Z"
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/api/beta/organization/claude_code",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/api/beta/organization/claude_code/managed_settings",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/api/beta/organization/claude_code/managed_settings/configuration",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/api/beta/organization/claude_code/managed_settings/configuration/retrieve",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/api/beta/organization/claude_code/managed_settings/configuration/update",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/api/beta/organization/claude_code/managed_settings/rbac_groups",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/api/beta/organization/claude_code/managed_settings/rbac_groups/list",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/api/beta/organization/claude_code/managed_settings/rbac_groups/retrieve",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/api/beta/organization/claude_code/managed_settings/rbac_groups/set",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/api/beta/organization/claude_code/managed_settings/rbac_groups/delete",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/api/beta/organization/claude_code/managed_settings/rbac_group_default",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/api/beta/organization/claude_code/managed_settings/rbac_group_default/retrieve",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/api/beta/organization/claude_code/managed_settings/rbac_group_default/update",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "abschaltungen",
+   "name": "Modell-Abschaltungen",
+   "wichtig": true,
+   "art": "geaendert",
+   "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+   "titel": "Modell-Abschaltungen"
+  },
+  {
+   "quelle": "modelle",
+   "name": "Modellübersicht",
+   "wichtig": true,
+   "art": "geaendert",
+   "url": "https://platform.claude.com/docs/en/models/overview",
+   "titel": "Modellübersicht"
+  }
+ ]
+}

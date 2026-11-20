@@ -2293,6 +2293,19 @@
    "platform.claude.com/docs/en/api/beta/organization/api_keys/list",
    "platform.claude.com/docs/en/api/beta/organization/api_keys/retrieve",
    "platform.claude.com/docs/en/api/beta/organization/api_keys/update",
+   "platform.claude.com/docs/en/api/beta/organization/claude_code",
+   "platform.claude.com/docs/en/api/beta/organization/claude_code/managed_settings",
+   "platform.claude.com/docs/en/api/beta/organization/claude_code/managed_settings/configuration",
+   "platform.claude.com/docs/en/api/beta/organization/claude_code/managed_settings/configuration/retrieve",
+   "platform.claude.com/docs/en/api/beta/organization/claude_code/managed_settings/configuration/update",
+   "platform.claude.com/docs/en/api/beta/organization/claude_code/managed_settings/rbac_group_default",
+   "platform.claude.com/docs/en/api/beta/organization/claude_code/managed_settings/rbac_group_default/retrieve",
+   "platform.claude.com/docs/en/api/beta/organization/claude_code/managed_settings/rbac_group_default/update",
+   "platform.claude.com/docs/en/api/beta/organization/claude_code/managed_settings/rbac_groups",
+   "platform.claude.com/docs/en/api/beta/organization/claude_code/managed_settings/rbac_groups/delete",
+   "platform.claude.com/docs/en/api/beta/organization/claude_code/managed_settings/rbac_groups/list",
+   "platform.claude.com/docs/en/api/beta/organization/claude_code/managed_settings/rbac_groups/retrieve",
+   "platform.claude.com/docs/en/api/beta/organization/claude_code/managed_settings/rbac_groups/set",
    "platform.claude.com/docs/en/api/beta/organization/claude_tag",
    "platform.claude.com/docs/en/api/beta/organization/claude_tag/bundles",
    "platform.claude.com/docs/en/api/beta/organization/claude_tag/bundles/list",
@@ -3598,6 +3611,7 @@
    "anthropic.com/news/introducing-the-anthropic-national-security-and-public-sector-advisory-council",
    "anthropic.com/news/investigating-incidents-cybersecurity-evals",
    "anthropic.com/news/investing-in-energy-to-secure-america-s-ai-future",
+   "anthropic.com/news/ipo-close",
    "anthropic.com/news/jay-kreps-appointed-to-board-of-directors",
    "anthropic.com/news/kiyoung-choi-representative-director-anthropic-korea",
    "anthropic.com/news/krishna-rao-joins-anthropic",
@@ -3944,10 +3958,10 @@
   ]
  },
  "abschaltungen": {
-  "hash": "4aa681b8f4e4b91f"
+  "hash": "e25c93216628c248"
  },
  "modelle": {
-  "hash": "b3bccf03645acefc"
+  "hash": "d988ade0bae3ef24"
  },
  "platform-release-notes": {
   "schluessel": [
