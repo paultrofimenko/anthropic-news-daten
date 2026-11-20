@@ -1,8 +1,21 @@
 {
  "version": 1,
- "erzeugt": "2026-11-19T02:36:43.733Z",
- "anzahl": 157,
+ "erzeugt": "2026-11-20T11:44:46.190Z",
+ "anzahl": 158,
  "beitraege": [
+  {
+   "id": "claude-code-2-1-329",
+   "quelle": "code-changelog",
+   "url": "https://code.claude.com/docs/en/changelog",
+   "titel_original": "Claude Code 2.1.329",
+   "titel_de": "Claude Code 2.1.329: Hinweise zu Hooks, mehr in /tasks, viele Fixes",
+   "kurz_de": "Claude Code 2.1.329 warnt im Trust-Dialog, wo Hooks eines Ordners deklariert sind, zeigt Scheduled Tasks und /loop-Wakeups in /tasks und behebt viele Fehler, u. a. beim Zurücksetzen von ~/.claude.json.",
+   "briefing_de": "Neu in Fassung 2.1.329:\n- Der Trust-Dialog warnt jetzt und nennt, wo die Hooks eines Ordners deklariert sind; im Gespräch, in Claude Desktop und anderen nicht interaktiven Hosts erscheint eine Warnung, wenn Hooks in Managed Settings nicht geladen werden können.\n- `/tasks` zeigt jetzt auch die Scheduled Tasks, `/loop`-Wakeups, das Ziel (goal) und die Forks dieser Session; mit x lässt sich einer nach Rückfrage stoppen.\n- `/mcp` zeigt auf der Seite eines Servers eine Zeile „Server message“ mit der JSON-RPC-Fehlermeldung eines entfernten HTTP-MCP-Servers, der die Verbindung ablehnt; `/status` hat eine Zeile „Marketplace auto-update“ für Managed Marketplaces ohne automatische Updates.\n- Code Mode lässt sich jetzt einschalten, während OpenTelemetry-Events und -Metriken aktiv sind (jeder Tool-Aufruf des Codes sendet seine Events); Tracing hält ihn weiterhin aus.\n- Behoben u. a.: `~/.claude.json` wurde bei Netzwerkstillstand oder Dateisperre teils auf Standardwerte zurückgesetzt; wiederholte Abmeldungen unter macOS, wenn der Keychain lesbar, aber nicht beschreibbar war; ein Statusline-Skript mit endloser Ausgabe fror den Prompt ein; `/teleport` ersetzte beim Wählen einer Cloud-Session die offene Unterhaltung (jetzt startet eine neue Session, `/resume` bringt die alte zurück); `/code-review <pr number>` konnte den ausgecheckten Branch statt des Pull Requests prüfen. Dazu viele weitere Fixes zu Code Mode, MCP, Remote Control, Self-hosted Runner und Terminal-Darstellung.",
+   "arbeitsweise_de": "Wer Hooks in Projekten nutzt oder Ordner fremder Herkunft öffnet, sieht im Trust-Dialog jetzt, wo Hooks deklariert sind. Wer `/loop` oder Scheduled Tasks einsetzt, findet sie nun gesammelt in `/tasks`. Die Fixes zu `~/.claude.json` und zu Abmeldungen unter macOS betreffen nur die genannten Fehlerfälle.",
+   "bereich": "claude-code",
+   "datum": "2026-11-20",
+   "wichtig": false
+  },
   {
    "id": "claude-code-2-1-328",
    "quelle": "code-changelog",
