@@ -1,8 +1,33 @@
 {
  "version": 1,
- "erzeugt": "2026-11-20T11:44:46.190Z",
- "anzahl": 158,
+ "erzeugt": "2026-11-21T02:20:05.969Z",
+ "anzahl": 161,
  "beitraege": [
+  {
+   "id": "claude-code-2-1-330",
+   "quelle": "code-changelog",
+   "url": "https://code.claude.com/docs/en/changelog",
+   "titel_original": "Claude Code 2.1.330",
+   "titel_de": "Claude Code 2.1.330: Mod „easel“ für Diagramme, Enterprise-Anmeldung, viele Fixes",
+   "kurz_de": "Claude Code 2.1.330 bringt die Anmeldung bei Organisationen der Enterprise Admin Console und den eingebauten Mod easel, der Diagramme zeichnet. Dazu viele Fixes, u. a. zu Code Mode, MCP und Worktrees.",
+   "briefing_de": "Neu in Fassung 2.1.330:\n- Anmeldung bei Organisationen, die in Anthropics Enterprise Admin Console verwaltet werden: Nach `claude auth login` übernimmt Claude Code die Einstellungen der Organisation und nutzt deren Cloud-Anbieter oder Gateway.\n- Neuer eingebauter Mod „easel“ zeichnet Diagramme auf Anfrage und unter MCP-Metrik-Ergebnissen. Verfügbar auf Pro, Max und, wo angeboten, Team und Enterprise, nur auf macOS und Linux; automatische Diagramme lassen sich in `/config` abschalten.\n- `CLAUDE_CODE_FULL_SIGN_IN_LINK=1` gibt den vollständigen Anmeldelink aus, falls der kurze einen Fehler zeigt oder ein Skript Werte daraus liest.\n- Self-hosted Runner: `--start-dir` bzw. `SELF_HOSTED_RUNNER_START_DIR` lässt Claude in einem Ordner eines Repositorys starten (Einstellungen und Hooks laden wie ohne); neue Hinweise bei nicht abrufbaren Plugin-Marketplaces und bei von Anthropic verwaltetem Git abgelehnten Plugin-Repositorys; zwei neue `/metrics`-Werte zu Zeiten bis Registrierung und erster Session.\n- `claude plugin install --json` liefert `commandPrinted` und `commandFailed`.\n- Behoben u. a.: Einfrieren nach dem Verdichten sehr langer Gespräche und bei WebFetch; `ExitWorktree` löschte einen Worktree, den eine andere laufende Session nutzte; verlorene Änderungen an Benutzereinstellungen bei gleichzeitigem Speichern; `--continue`/`--resume` mit ungültigem Zeitstempel; Fehler „JSON schema is invalid“ bei vielen MCP-Tools; langsame Bash-Befehle unter Linux und Windows; `/rewind` mit älterer Dateiversion. Dazu viele weitere Fixes zu Code Mode, MCP, Remote Control, LSP, Plugins und Terminal-Darstellung.",
+   "arbeitsweise_de": "Der Mod easel gilt nur für macOS und Linux und je nach Plan; wer ihn nicht möchte, schaltet automatische Diagramme in `/config` ab. Wer Claude Code über eine Organisation der Enterprise Admin Console nutzt, kann sich per `claude auth login` anmelden und erhält deren Einstellungen. Die Fixes betreffen nur die genannten Fehlerfälle.",
+   "bereich": "claude-code",
+   "datum": "2026-11-21",
+   "wichtig": false
+  },
+  {
+   "id": "anthropic-boersengang-abschluss",
+   "quelle": "anthropic",
+   "url": "https://www.anthropic.com/news/ipo-close",
+   "titel_original": "Anthropic announces closing of initial public offering and concurrent private placement",
+   "titel_de": "Anthropic schließt Börsengang ab: rund 93,5 Mrd. US-Dollar Bruttoerlös",
+   "kurz_de": "Anthropic hat den Börsengang abgeschlossen: 1.127.000.000 Class-A-Aktien zu 83,00 US-Dollar, inklusive voll ausgeübter Mehrzuteilungsoption. Dazu kommt eine parallele Privatplatzierung über rund 26,0 Mrd. US-Dollar.",
+   "briefing_de": "Anthropic gibt den Abschluss des Börsengangs und einer parallelen Privatplatzierung bekannt (Mitteilung vom 20. November 2026).\n- Börsengang: 1.127.000.000 Class-A-Aktien zu je 83,00 US-Dollar, darin die vollständig ausgeübte Mehrzuteilungsoption über 147.000.000 Aktien. 1.103.351.354 Aktien stammen von Anthropic, 23.648.646 von bestimmten verkaufenden Aktionären.\n- Bruttoerlös des Börsengangs: ca. 93,5 Mrd. US-Dollar vor Provisionen und Kosten; davon erhielt Anthropic ca. 91,6 Mrd. US-Dollar. Aus dem Verkauf der verkaufenden Aktionäre erhielt Anthropic nichts.\n- Privatplatzierung: 313.253.007 Class-N-Aktien zu 83,00 US-Dollar je Aktie an Advanced Micro Devices, Broadcom, Google, Micron Technology, Microsoft, NVIDIA und TSMC Partners, Gesamtpreis ca. 26,0 Mrd. US-Dollar. Diese Aktien sind nicht nach dem US-Wertpapiergesetz (Securities Act of 1933) registriert.\n- Gesamt: ca. 119,5 Mrd. US-Dollar Bruttoerlös aus Börsengang und Privatplatzierung, vor Provisionen und Kosten. Handelsbeginn war der 19. November 2026 an der Nasdaq Global Select Market unter „ANT“; Lead Bookrunner sind Goldman Sachs & Co. LLC und Morgan Stanley. Die Mitteilung ist kein Verkaufs- oder Kaufangebot.",
+   "bereich": "unternehmen",
+   "datum": "2026-11-20",
+   "wichtig": false
+  },
   {
    "id": "claude-code-2-1-329",
    "quelle": "code-changelog",
@@ -13,6 +38,19 @@
    "briefing_de": "Neu in Fassung 2.1.329:\n- Der Trust-Dialog warnt jetzt und nennt, wo die Hooks eines Ordners deklariert sind; im Gespräch, in Claude Desktop und anderen nicht interaktiven Hosts erscheint eine Warnung, wenn Hooks in Managed Settings nicht geladen werden können.\n- `/tasks` zeigt jetzt auch die Scheduled Tasks, `/loop`-Wakeups, das Ziel (goal) und die Forks dieser Session; mit x lässt sich einer nach Rückfrage stoppen.\n- `/mcp` zeigt auf der Seite eines Servers eine Zeile „Server message“ mit der JSON-RPC-Fehlermeldung eines entfernten HTTP-MCP-Servers, der die Verbindung ablehnt; `/status` hat eine Zeile „Marketplace auto-update“ für Managed Marketplaces ohne automatische Updates.\n- Code Mode lässt sich jetzt einschalten, während OpenTelemetry-Events und -Metriken aktiv sind (jeder Tool-Aufruf des Codes sendet seine Events); Tracing hält ihn weiterhin aus.\n- Behoben u. a.: `~/.claude.json` wurde bei Netzwerkstillstand oder Dateisperre teils auf Standardwerte zurückgesetzt; wiederholte Abmeldungen unter macOS, wenn der Keychain lesbar, aber nicht beschreibbar war; ein Statusline-Skript mit endloser Ausgabe fror den Prompt ein; `/teleport` ersetzte beim Wählen einer Cloud-Session die offene Unterhaltung (jetzt startet eine neue Session, `/resume` bringt die alte zurück); `/code-review <pr number>` konnte den ausgecheckten Branch statt des Pull Requests prüfen. Dazu viele weitere Fixes zu Code Mode, MCP, Remote Control, Self-hosted Runner und Terminal-Darstellung.",
    "arbeitsweise_de": "Wer Hooks in Projekten nutzt oder Ordner fremder Herkunft öffnet, sieht im Trust-Dialog jetzt, wo Hooks deklariert sind. Wer `/loop` oder Scheduled Tasks einsetzt, findet sie nun gesammelt in `/tasks`. Die Fixes zu `~/.claude.json` und zu Abmeldungen unter macOS betreffen nur die genannten Fehlerfälle.",
    "bereich": "claude-code",
+   "datum": "2026-11-20",
+   "wichtig": false
+  },
+  {
+   "id": "managed-settings-api-doku-sammlung",
+   "quelle": "platform-doku",
+   "url": "https://platform.claude.com/docs/en/api/beta/organization/claude_code/managed_settings",
+   "titel_original": "13 new entries in the Claude Platform docs (Claude Code Managed Settings API)",
+   "titel_de": "Managed-Settings-API für Claude Code: 13 neue Doku-Seiten",
+   "kurz_de": "Die Platform-Doku beschreibt eine neue Beta-API für Claude-Code-Managed-Settings: Modus, RBAC-Gruppen und Standard-Einstellungen per Admin-API-Key. Nur für Claude-Enterprise-Organisationen.",
+   "briefing_de": "Neu in der API-Referenz ist der Bereich „Claude Code Managed Settings“ unter `/v1/organizations/claude_code/managed_settings/…`.\n- Endpunkte: `configuration` (Modus und Reihenfolge der RBAC-Gruppen lesen und per POST ändern), `rbac_groups` (Einstellungen je Gruppe auflisten, lesen, setzen, löschen) und `rbac_group_default` (Standard-Einstellungen lesen und ändern).\n- Im Modus `organization` erhalten alle Mitglieder die Organisationseinstellungen (in claude.ai gesetzt); im Modus `rbac_groups` bekommt jedes Mitglied die Einstellungen der ersten RBAC-Gruppe aus `rbac_group_order`, in der es ist. Wer in keiner Gruppe ist, erhält die Standard-Einstellungen, oder keine, wenn kein Standard gesetzt ist.\n- Voraussetzungen: Beta, nur für Claude-Enterprise-Organisationen. Jede Anfrage braucht den Header `anthropic-beta: ce-claude-code-managed-settings-2026-10-06`, sonst (oder bei nicht freigeschalteter Organisation) kommt `404`. Zugang über einen Admin-API-Key der Organisation mit Scope `read:claude_code_managed_settings` bzw. `write:claude_code_managed_settings`.\n- Beim Wechsel in den Modus `rbac_groups` ohne Gruppen- und Standard-Einstellungen werden die Organisationseinstellungen als neuer Standard kopiert; die Kopie folgt späteren Änderungen der Organisationseinstellungen nicht. Es gibt Grenzen für Einstellungsdokumente und deren Versionsverlauf (Fehler `settings_document_limit_exceeded`, `settings_history_limit_exceeded`).",
+   "arbeitsweise_de": "Relevant nur, wenn deine Organisation Claude Enterprise nutzt und Claude-Code-Einstellungen zentral verwaltet. Wer ohne Enterprise-Plan arbeitet, kann die API nicht nutzen.",
+   "bereich": "api",
    "datum": "2026-11-20",
    "wichtig": false
   },
