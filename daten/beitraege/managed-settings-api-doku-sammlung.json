@@ -1,0 +1,13 @@
+{
+  "id": "managed-settings-api-doku-sammlung",
+  "quelle": "platform-doku",
+  "url": "https://platform.claude.com/docs/en/api/beta/organization/claude_code/managed_settings",
+  "titel_original": "13 new entries in the Claude Platform docs (Claude Code Managed Settings API)",
+  "titel_de": "Managed-Settings-API für Claude Code: 13 neue Doku-Seiten",
+  "kurz_de": "Die Platform-Doku beschreibt eine neue Beta-API für Claude-Code-Managed-Settings: Modus, RBAC-Gruppen und Standard-Einstellungen per Admin-API-Key. Nur für Claude-Enterprise-Organisationen.",
+  "briefing_de": "Neu in der API-Referenz ist der Bereich „Claude Code Managed Settings“ unter `/v1/organizations/claude_code/managed_settings/…`.\n- Endpunkte: `configuration` (Modus und Reihenfolge der RBAC-Gruppen lesen und per POST ändern), `rbac_groups` (Einstellungen je Gruppe auflisten, lesen, setzen, löschen) und `rbac_group_default` (Standard-Einstellungen lesen und ändern).\n- Im Modus `organization` erhalten alle Mitglieder die Organisationseinstellungen (in claude.ai gesetzt); im Modus `rbac_groups` bekommt jedes Mitglied die Einstellungen der ersten RBAC-Gruppe aus `rbac_group_order`, in der es ist. Wer in keiner Gruppe ist, erhält die Standard-Einstellungen, oder keine, wenn kein Standard gesetzt ist.\n- Voraussetzungen: Beta, nur für Claude-Enterprise-Organisationen. Jede Anfrage braucht den Header `anthropic-beta: ce-claude-code-managed-settings-2026-10-06`, sonst (oder bei nicht freigeschalteter Organisation) kommt `404`. Zugang über einen Admin-API-Key der Organisation mit Scope `read:claude_code_managed_settings` bzw. `write:claude_code_managed_settings`.\n- Beim Wechsel in den Modus `rbac_groups` ohne Gruppen- und Standard-Einstellungen werden die Organisationseinstellungen als neuer Standard kopiert; die Kopie folgt späteren Änderungen der Organisationseinstellungen nicht. Es gibt Grenzen für Einstellungsdokumente und deren Versionsverlauf (Fehler `settings_document_limit_exceeded`, `settings_history_limit_exceeded`).",
+  "arbeitsweise_de": "Relevant nur, wenn deine Organisation Claude Enterprise nutzt und Claude-Code-Einstellungen zentral verwaltet. Wer ohne Enterprise-Plan arbeitet, kann die API nicht nutzen.",
+  "bereich": "api",
+  "datum": "2026-11-20",
+  "wichtig": false
+}

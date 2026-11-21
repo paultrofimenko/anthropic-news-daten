@@ -1,0 +1,13 @@
+{
+  "id": "claude-code-2-1-330",
+  "quelle": "code-changelog",
+  "url": "https://code.claude.com/docs/en/changelog",
+  "titel_original": "Claude Code 2.1.330",
+  "titel_de": "Claude Code 2.1.330: Mod „easel“ für Diagramme, Enterprise-Anmeldung, viele Fixes",
+  "kurz_de": "Claude Code 2.1.330 bringt die Anmeldung bei Organisationen der Enterprise Admin Console und den eingebauten Mod easel, der Diagramme zeichnet. Dazu viele Fixes, u. a. zu Code Mode, MCP und Worktrees.",
+  "briefing_de": "Neu in Fassung 2.1.330:\n- Anmeldung bei Organisationen, die in Anthropics Enterprise Admin Console verwaltet werden: Nach `claude auth login` übernimmt Claude Code die Einstellungen der Organisation und nutzt deren Cloud-Anbieter oder Gateway.\n- Neuer eingebauter Mod „easel“ zeichnet Diagramme auf Anfrage und unter MCP-Metrik-Ergebnissen. Verfügbar auf Pro, Max und, wo angeboten, Team und Enterprise, nur auf macOS und Linux; automatische Diagramme lassen sich in `/config` abschalten.\n- `CLAUDE_CODE_FULL_SIGN_IN_LINK=1` gibt den vollständigen Anmeldelink aus, falls der kurze einen Fehler zeigt oder ein Skript Werte daraus liest.\n- Self-hosted Runner: `--start-dir` bzw. `SELF_HOSTED_RUNNER_START_DIR` lässt Claude in einem Ordner eines Repositorys starten (Einstellungen und Hooks laden wie ohne); neue Hinweise bei nicht abrufbaren Plugin-Marketplaces und bei von Anthropic verwaltetem Git abgelehnten Plugin-Repositorys; zwei neue `/metrics`-Werte zu Zeiten bis Registrierung und erster Session.\n- `claude plugin install --json` liefert `commandPrinted` und `commandFailed`.\n- Behoben u. a.: Einfrieren nach dem Verdichten sehr langer Gespräche und bei WebFetch; `ExitWorktree` löschte einen Worktree, den eine andere laufende Session nutzte; verlorene Änderungen an Benutzereinstellungen bei gleichzeitigem Speichern; `--continue`/`--resume` mit ungültigem Zeitstempel; Fehler „JSON schema is invalid“ bei vielen MCP-Tools; langsame Bash-Befehle unter Linux und Windows; `/rewind` mit älterer Dateiversion. Dazu viele weitere Fixes zu Code Mode, MCP, Remote Control, LSP, Plugins und Terminal-Darstellung.",
+  "arbeitsweise_de": "Der Mod easel gilt nur für macOS und Linux und je nach Plan; wer ihn nicht möchte, schaltet automatische Diagramme in `/config` ab. Wer Claude Code über eine Organisation der Enterprise Admin Console nutzt, kann sich per `claude auth login` anmelden und erhält deren Einstellungen. Die Fixes betreffen nur die genannten Fehlerfälle.",
+  "bereich": "claude-code",
+  "datum": "2026-11-21",
+  "wichtig": false
+}
