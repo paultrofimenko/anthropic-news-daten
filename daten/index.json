@@ -1,7 +1,7 @@
 {
  "version": 1,
- "erzeugt": "2026-11-21T02:20:05.969Z",
- "anzahl": 161,
+ "erzeugt": "2026-11-22T01:22:03.554Z",
+ "anzahl": 162,
  "beitraege": [
   {
    "id": "claude-code-2-1-330",
@@ -237,6 +237,19 @@
    "briefing_de": "Der Beitrag beschreibt die internen Prozesse des Claude-Code-Teams (laut Artikel wird dort ca. 90 % des Codes von Claude geschrieben und reviewt):\n- Drei empfohlene Testarten: End-to-End-Tests (Priorität eins, echte Nutzerabläufe), Property-Tests (z. B. mit fast-check, Hypothesis, proptest) und Differential-Tests (altes und neues System mit denselben Eingaben).\n- Ein Skill `verify` in `.claude/skills/` startet die App und bedient sie vor dem Commit. Schlägt ein Check nach drei Runden weiter fehl, kommt ein Mensch dazu.\n- Ein Commit-Gate mit den Modi off, observe und enforce blockiert Commits, wenn die Session weder `/code-review` noch `/verify` enthielt; nach zwei Blockaden in einer Session wird der nächste Commit durchgelassen.\n- REVIEW.md wird aus dem Basis-Branch gelesen, nie aus dem Pull Request, damit Änderungen ihre eigenen Prüfregeln nicht verändern. Findings werden als Important, Nit oder Pre-existing markiert.\n- Ein separater Grader mit Rubrik verbesserte in internen Tests zur strukturierten Dateierzeugung die Erfolgsquote um bis zu 10 Punkte gegenüber einem Standard-Prompting-Loop.",
    "arbeitsweise_de": "Die Zahlen (90 %, 39 Checklistenpunkte, drei Runden, bis zu 10 Punkte) beschreiben interne Abläufe und Tests von Anthropic und sind laut Artikel nicht pauschal übertragbar. Als Anregung taugen: Tests und Prüfschritte als Skill oder Hook festschreiben und wiederkehrende Fehler als Regel in CLAUDE.md oder REVIEW.md überführen.",
    "bereich": "engineering",
+   "datum": "2026-11-16",
+   "wichtig": false
+  },
+  {
+   "id": "webhook-ereignisse-externer-schluessel",
+   "quelle": "platform-release-notes",
+   "url": "https://platform.claude.com/docs/en/release-notes/overview",
+   "titel_original": "Claude Platform Release Notes, November 16, 2026",
+   "titel_de": "Organisations-Webhooks melden Ausfall von CMEK-Schlüsseln",
+   "kurz_de": "Zwei neue Ereignistypen in den Organisations-Webhooks (Beta): external_key.failed bei dauerhafter Ablehnung eines kundenverwalteten Schlüssels, external_key.recovered, wenn er wieder funktioniert.",
+   "briefing_de": "- Die Organisations-Webhooks (in Beta) kennen zwei neue Ereignistypen.\n- `external_key.failed` sendet Anthropic, wenn dein Key-Management-Service einen kundenverwalteten Verschlüsselungsschlüssel dauerhaft ablehnt.\n- `external_key.recovered` sendet Anthropic, wenn der Schlüssel wieder funktioniert.",
+   "arbeitsweise_de": "Wer Organisations-Webhooks nutzt und kundenverwaltete Verschlüsselungsschlüssel einsetzt, kann beide Ereignistypen abonnieren, um Schlüsselprobleme früh zu bemerken. Gilt nur für Organisationen mit solchen Schlüsseln; die Webhooks sind noch in Beta.",
+   "bereich": "api",
    "datum": "2026-11-16",
    "wichtig": false
   },
