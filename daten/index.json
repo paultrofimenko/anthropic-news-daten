@@ -1,7 +1,7 @@
 {
  "version": 1,
- "erzeugt": "2026-11-24T02:16:09.264Z",
- "anzahl": 169,
+ "erzeugt": "2026-11-24T23:56:09.566Z",
+ "anzahl": 171,
  "beitraege": [
   {
    "id": "claude-code-2-1-331",
@@ -13,6 +13,32 @@
    "briefing_de": "Neu in Fassung 2.1.331:\n- Code Mode läuft jetzt in Terminal-Sessions auf Amazon Bedrock, Google Clouds Agent Platform, Microsoft Foundry und Claude Platform on AWS.\n- Plugin-Manifeste kennen `optionalDependencies`: Plugins, die mit dem Plugin installiert werden, sich aber einzeln abschalten oder deinstallieren lassen.\n- `claude doctor` hat einen Abschnitt zur API-Erreichbarkeit (HTTP-Status oder Fehler, sonst der Grund, warum nicht getestet wurde).\n- `CLAUDE_CODE_DISABLE_RESPONSE_COMPRESSION` fordert unkomprimierte Modellantworten an, hinter einem Proxy, der komprimierte abschneidet; für self-hosted Runner und Remote Control noch nicht empfohlen.\n- Claude apps gateway: `oidc.groups_jsonpath` liest Gruppen mit einer kleinen JSONPath-Teilmenge (RFC 9535); `CLAUDE_GATEWAY_IDP_CONNECT_BY_HOSTNAME=1` reicht bei `oidc.use_proxy: true` den Hostnamen eines `https`-IdP an den Proxy, auch mit `NO_PROXY`.\n- Neu in Telemetrie und Oberfläche: `gen_ai.*`-Felder in `claude_code.llm_request`-Spans und ein Hinweis, wenn die Tap-Diktierfunktion von selbst stoppt (nach 15 Sekunden ohne erkannte Sprache oder bei 2 Minuten).\n- Behoben u. a.: hängende MCP-Tool-Aufrufe bei fehlerhaften Antworten, teilweise verlorene Zusammenfassungen bei /compact, Absturz bei Tool-Aufruf ohne Namen vom eigenen API-Endpunkt, `/rewind` löschte Dateien nach fehlgeschlagener Wiederherstellung, abgebrochene Plugin-Updates hinterließen unvollständige Ordner. Dazu viele Fixes zu Code Mode, Windows, VS Code und Terminal-Darstellung.\n- Vorab angekündigt: Ab dem 30. November 2026 (oder später) aktualisieren sich Plugin-Marketplaces in verwalteten `extraKnownMarketplaces` standardmäßig automatisch; abschalten mit `\"autoUpdate\": false` am Eintrag.",
    "arbeitsweise_de": "Wer Plugin-Marketplaces über verwaltete Einstellungen (`extraKnownMarketplaces`) ausliefert, sollte vor dem 30. November 2026 entscheiden, ob einzelne Einträge `\"autoUpdate\": false` bekommen. Unter Windows mit verwalteten Einstellungen in der Registry vor dem Upgrade prüfen: Eine `HKLM`-Richtlinie hat Vorrang vor `managed-settings.json`, ein fehlerhafter Wert kann den Start verhindern. Die Fixes betreffen nur die genannten Fälle.",
    "bereich": "claude-code",
+   "datum": "2026-11-24",
+   "wichtig": false
+  },
+  {
+   "id": "nach-dem-pr-mit-claude-code-ship",
+   "quelle": "claude-dev-rss",
+   "url": "https://claude.dev/blog/the-work-after-you-open-a-pr/",
+   "titel_original": "A practical guide to shipping with Claude Code",
+   "titel_de": "Nach dem Pull Request: Leitfaden zu /ship und /steward",
+   "kurz_de": "Ein Leitfaden zeigt, wie du mit /code-review, /ship und /steward die Nacharbeit nach einem Pull Request an Claude Code abgibst und Regeln dafür im Repo festhältst.",
+   "briefing_de": "Der Beitrag zeigt, wie du die Arbeit nach dem Öffnen eines PRs (fehlgeschlagene Checks, Review-Kommentare, Merge-Konflikte) an Claude Code übergibst.\n- `/code-review` prüft Commits und uncommittete Änderungen auf Korrektheitsfehler; Varianten: `--fix`, `--comment <PR>`, `ultra` (läuft in der Cloud, braucht Login bei claude.ai, kann separat zur Abrechnung kommen). Lokal liest es CLAUDE.md, aber nicht REVIEW.md.\n- `/ship` committet (wie `git add -A`), pusht, legt den PR an, reviewt und beobachtet ihn bis zu sieben Tage. Es committet keine Dateien mit geheimnisähnlichen Namen oder Regeldateien (CLAUDE.md, REVIEW.md, `.claude/`, `.github/`); in öffentlichen Repos committet es nicht.\n- Die Beobachtung läuft als du auf deinem Rechner und zählt gegen dein Kontingent. Sie braucht `gh auth login`, gilt nur für von dir geöffnete PRs, wartet bei allem außer auto mode auf deine Antwort und startet nicht im bypass-permissions-Modus. Unter Windows startet sie nicht. Claude soll den PR nie mergen und pro Problem höchstens dreimal pushen.\n- `/steward` führt nur die Beobachtung aus; das ist nicht dasselbe wie PR Steward, der Team-Dienst, den ein Admin einschaltet.\n- Wiederkehrendes gehört ins Repo: CLAUDE.md (Konventionen), REVIEW.md (Review-Regeln, nur Code Review und PR Steward), `.claude/skills/verify/SKILL.md`, `.claude/skills/steward/SKILL.md`.",
+   "arbeitsweise_de": "Wer GitHub nutzt, kann `/code-review` vor dem Push probieren und danach `/ship` an einem eigenen PR testen. Prüfe vorher `git status`, weil `/ship` wie `git add -A` committet. Die lokale Beobachtung nur in Repos laufen lassen, in denen du allen vertraust, die auf den Basis-Branch landen dürfen. Für Teams: Code Review, PR Steward und Claude Approvals müssen von Admins eingerichtet werden; Branch-Schutz bleibt nötig, weil PR Steward nicht freigibt oder mergt.",
+   "bereich": "claude-code",
+   "datum": "2026-11-24",
+   "wichtig": false
+  },
+  {
+   "id": "oauth-apps-doku-linked-billing-sammlung",
+   "quelle": "platform-doku",
+   "url": "https://platform.claude.com/docs/en/manage-claude/oauth-apps/linked-billing/set-up-your-app",
+   "titel_original": "Claude Platform OAuth and Linked billing docs",
+   "titel_de": "Neue Doku-Seiten zu OAuth-Apps und Linked billing",
+   "kurz_de": "Die Claude-Platform-Doku hat neue Seiten zu OAuth-Apps: Endpunkte, App-Einrichtung, Kunden verknüpfen, Test und Veröffentlichung, Kundenverwaltung und Fehler (Beta).",
+   "briefing_de": "Neu unter `manage-claude/oauth-apps` (Claude Platform OAuth ist eine Beta und kann sich ändern; laut Doku womöglich nicht für Produktion geeignet):\n- Endpunkte und Parameter: Endpunkte für Autorisierung, PAR, Token, Widerruf), Client-Authentifizierung per `private_key_jwt`-Variante.\n- App einrichten: App in der Claude Console anlegen (Admin-Rolle nötig), Client-Authentifizierung, Service-Konto. Die Organisation muss Anthropic direkt bezahlen (Prepaid oder Rechnung); Marketplace-Konten gehen nicht.\n- Kunden verknüpfen und abrechnen, Button „Link your Claude organization“ und was Kunden sehen (Freigabeseite, monatliches Ausgabenlimit, Entkoppeln, E-Mails).\n- Testen und veröffentlichen: neue Apps starten im Test mit bis zu 10 Testnutzern und Limit von höchstens 50 USD; zum Veröffentlichen sind Domain-Nachweis und Prüfung durch Anthropic nötig (bei Rechnungsabrechnung entfällt die Prüfung).\n- Kunden verwalten, eigene Zugangsdaten je Kunde und eine Fehlerseite.",
+   "arbeitsweise_de": "Nur relevant, wenn du Linked billing in einem eigenen Produkt einbauen willst; die Beta-Funktion selbst ist im Beitrag „Linked billing“ beschrieben.",
+   "bereich": "api",
    "datum": "2026-11-24",
    "wichtig": false
   },
