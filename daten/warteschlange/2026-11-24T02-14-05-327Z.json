@@ -1,0 +1,447 @@
+{
+ "zeit": "2026-11-24T02:14:05.327Z",
+ "neu": [
+  {
+   "quelle": "anthropic",
+   "name": "anthropic.com",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://www.anthropic.com/research/working-with-ai",
+   "titel": null,
+   "datum": "2026-11-23T22:13:27.525Z"
+  },
+  {
+   "quelle": "code-doku",
+   "name": "Claude-Code-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://code.claude.com/docs/en/approvals",
+   "titel": null,
+   "datum": "2026-11-23T19:52:09.246Z"
+  },
+  {
+   "quelle": "code-doku",
+   "name": "Claude-Code-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://code.claude.com/docs/en/approvals-classifiers",
+   "titel": null,
+   "datum": "2026-11-23T19:52:09.246Z"
+  },
+  {
+   "quelle": "code-doku",
+   "name": "Claude-Code-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://code.claude.com/docs/en/approvals-github-rules",
+   "titel": null,
+   "datum": "2026-11-23T19:52:09.246Z"
+  },
+  {
+   "quelle": "code-doku",
+   "name": "Claude-Code-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://code.claude.com/docs/en/approvals-policy",
+   "titel": null,
+   "datum": "2026-11-23T19:52:09.246Z"
+  },
+  {
+   "quelle": "code-doku",
+   "name": "Claude-Code-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://code.claude.com/docs/en/approvals-pull-requests",
+   "titel": null,
+   "datum": "2026-11-23T19:52:09.246Z"
+  },
+  {
+   "quelle": "code-doku",
+   "name": "Claude-Code-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://code.claude.com/docs/en/approvals-setup",
+   "titel": null,
+   "datum": "2026-11-23T19:52:09.246Z"
+  },
+  {
+   "quelle": "code-doku",
+   "name": "Claude-Code-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://code.claude.com/docs/en/approvals-troubleshooting",
+   "titel": null,
+   "datum": "2026-11-23T19:52:09.246Z"
+  },
+  {
+   "quelle": "code-doku",
+   "name": "Claude-Code-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://code.claude.com/docs/en/claude-ship",
+   "titel": null,
+   "datum": "2026-11-23T19:52:09.246Z"
+  },
+  {
+   "quelle": "code-doku",
+   "name": "Claude-Code-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://code.claude.com/docs/en/pr-steward",
+   "titel": null,
+   "datum": "2026-11-23T19:52:09.246Z"
+  },
+  {
+   "quelle": "code-doku",
+   "name": "Claude-Code-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://code.claude.com/docs/en/pr-steward-pull-requests",
+   "titel": null,
+   "datum": "2026-11-23T19:52:09.246Z"
+  },
+  {
+   "quelle": "code-doku",
+   "name": "Claude-Code-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://code.claude.com/docs/en/pr-steward-security",
+   "titel": null,
+   "datum": "2026-11-23T19:52:09.246Z"
+  },
+  {
+   "quelle": "code-doku",
+   "name": "Claude-Code-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://code.claude.com/docs/en/pr-steward-setup",
+   "titel": null,
+   "datum": "2026-11-23T21:03:12.501Z"
+  },
+  {
+   "quelle": "code-doku",
+   "name": "Claude-Code-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://code.claude.com/docs/en/pr-steward-troubleshooting",
+   "titel": null,
+   "datum": "2026-11-23T19:52:09.246Z"
+  },
+  {
+   "quelle": "code-doku",
+   "name": "Claude-Code-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://code.claude.com/docs/en/share-sessions",
+   "titel": null,
+   "datum": "2026-11-23T18:45:08.480Z"
+  },
+  {
+   "quelle": "code-doku",
+   "name": "Claude-Code-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://code.claude.com/docs/en/ship-command",
+   "titel": null,
+   "datum": "2026-11-23T19:52:09.246Z"
+  },
+  {
+   "quelle": "code-doku",
+   "name": "Claude-Code-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://code.claude.com/docs/en/ship-command-troubleshooting",
+   "titel": null,
+   "datum": "2026-11-23T19:52:09.246Z"
+  },
+  {
+   "quelle": "abschaltungen",
+   "name": "Modell-Abschaltungen",
+   "wichtig": true,
+   "art": "geaendert",
+   "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+   "titel": "Modell-Abschaltungen"
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/api/beta/organization/external_storage",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/api/beta/organization/external_storage/create",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/api/beta/organization/external_storage/list",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/api/beta/organization/external_storage/retrieve",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/api/beta/organization/external_storage/update",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/api/beta/organization/external_storage/delete",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/api/beta/organization/external_storage/activate",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/manage-claude/enterprise-frontier-safeguards/customer-managed-keys",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/manage-claude/enterprise-frontier-safeguards/customer-owned-storage",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/manage-claude/enterprise-frontier-safeguards/external-storage",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/manage-claude/enterprise-frontier-safeguards/external-storage-manage",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/manage-claude/enterprise-frontier-safeguards/faq",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/manage-claude/enterprise-frontier-safeguards/flagged-cases",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/manage-claude/enterprise-frontier-safeguards/human-review-and-access-transparency",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/manage-claude/enterprise-frontier-safeguards/overview",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/manage-claude/enterprise-frontier-safeguards/safety-case-files",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/manage-claude/enterprise-frontier-safeguards/safety-cases-api",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/manage-claude/enterprise-frontier-safeguards/setup-amazon-bedrock",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/manage-claude/enterprise-frontier-safeguards/setup-claude-models-on-google-cloud-anthropic-managed",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/manage-claude/enterprise-frontier-safeguards/setup-claude-platform-on-aws",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/manage-claude/enterprise-frontier-safeguards/setup-console",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/manage-claude/enterprise-frontier-safeguards/setup-google-cloud-agent-platform",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-release-notes",
+   "name": "Claude Platform Release Notes",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/release-notes/overview",
+   "titel": "November 23, 2026",
+   "zeilen": [
+    "* We announced the deprecation of the Claude Opus 4.5 model (`claude-opus-4-5-20251101` and `claude-opus-4-5`), with retirement on the Claude API scheduled for January 22, 2027. We recommend migrating to Claude Opus 5.5. See [Migrating from Claude Opus 4.5 or earlier](https://platform.claude.com/docs/en/models/opus-5-5/migration-guide#migrating-from-claude-opus-45). To check which dates apply on other platforms, see [Model deprecations](https://platform.claude.com/docs/en/about-claude/model-deprecations).",
+    "* We’ve launched [Enterprise Frontier Safeguards](https://platform.claude.com/docs/en/manage-claude/enterprise-frontier-safeguards/overview) (EFS) in beta on Claude Platform, Claude Platform on AWS, and Claude Models on Google Cloud (Anthropic managed). EFS is Zero Data Retention (ZDR) for eligible organizations that use [Claude’s most capable models](https://platform.claude.com/docs/en/manage-claude/api-and-data-retention#model-specific-data-retention-requirements). Anthropic doesn’t retain your prompts and responses. Encrypted copies of them, called Sealed Safety Data, go to a bucket in your own cloud account. A workspace on Anthropic-managed storage isn’t on EFS, because Anthropic stores that workspace’s Sealed Safety Data. To get access, see [Setup guide](https://platform.claude.com/docs/en/manage-claude/enterprise-frontier-safeguards/setup-console).",
+    "* We’ve added two event types to [organization webhooks](https://platform.claude.com/docs/en/manage-claude/organization-webhooks#customer-owned-storage-events), which are in beta. We send `external_storage.failed` when a bucket that you use as [customer-owned storage](https://platform.claude.com/docs/en/manage-claude/enterprise-frontier-safeguards/customer-owned-storage) fails our daily check, and `external_storage.recovered` when it passes again."
+   ]
+  },
+  {
+   "quelle": "code-changelog",
+   "name": "Claude Code Changelog",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://code.claude.com/docs/en/changelog",
+   "titel": "2.1.331",
+   "zeilen": [
+    "- Added Code Mode support in terminal sessions on Amazon Bedrock, Google Cloud's Agent Platform, Microsoft Foundry and Claude Platform on AWS",
+    "- Added `oidc.groups_jsonpath` to the Claude apps gateway, to read groups from the matching entries of a list of objects with a small subset of JSONPath (RFC 9535)",
+    "- Added an API connectivity section to `claude doctor` that reports whether the API can be reached, with the HTTP status or the error, or says why it wasn't tested",
+    "- Added a notice when tap-mode voice dictation stops by itself, after 15 seconds without recognized speech or at its 2-minute limit",
+    "- Added `CLAUDE_CODE_DISABLE_RESPONSE_COMPRESSION` to ask for uncompressed model responses behind a proxy that cuts compressed ones off; not advised yet for self-hosted runners or Remote Control",
+    "- Added `CLAUDE_GATEWAY_IDP_CONNECT_BY_HOSTNAME=1` for Claude apps gateways: with `oidc.use_proxy: true`, sign-in requests hand the proxy an `https` IdP's hostname even with `NO_PROXY` set",
+    "- Added `gen_ai.usage.*`, `gen_ai.response.model` and `gen_ai.operation.name` to `claude_code.llm_request` trace spans; `gen_ai.usage.input_tokens` includes prompt cache tokens",
+    "- Added `optionalDependencies` to plugin manifests: plugins that install with the plugin listing them and can be disabled or uninstalled on their own",
+    "- Fixed MCP tool calls hanging for up to 30 minutes on some malformed replies from a local or WebSocket server",
+    "- Fixed PushNotification telling a headless run, such as a scheduled one, that the terminal was active in its first minute, instead of saying whether a mobile push was requested",
+    "- Fixed `/install-github-app` skipping the repository step after setup warnings when no repository was found, and Esc not going back from its workflow list and sign-in steps",
+    "- Fixed one-line tool results cut with no ellipsis in narrow windows, Markdown stars in the Auto mode tab of /permissions, and a hook's reason to stop a forked skill showing twice",
+    "- Fixed `/diff` hiding its key hints and not selecting files in windows of 24 to 26 rows, and leaving out files added with `git add -N` in a repository with no commits",
+    "- Fixed the first-run theme list showing too few themes in short windows, and /usage and other tall screens coming out garbled there",
+    "- Fixed `/bug` in fullscreen hiding its Yes and No answers behind a long report, and Yes staying out of view in very short windows",
+    "- Fixed /compact and auto-compact sometimes losing part of the conversation summary when the summary quoted certain XML tags",
+    "- Fixed Claude not being told when permission rules on the Agent tool dropped its queued message to a subagent that had already ended",
+    "- Fixed a Remote Control message sometimes showing above the reply that was finishing when it was sent",
+    "- Fixed Stop hooks that read the transcript missing the last reply in Claude Desktop; SubagentStop hooks now wait for it too",
+    "- Fixed turns and subagents failing in cloud sessions, or timing out on long replies elsewhere, when a reply went silent while Claude was still thinking; Claude Code now tries the request once more",
+    "- Fixed Esc and Stop waiting about a minute or more when the contents of a cloud or network file that Claude is reading stall",
+    "- Fixed Code Mode sessions resumed with `--resume` or `--continue` in another permission mode losing thinking and the prompt cache; one begun in a mode that asks keeps that mode's limits on scripts",
+    "- Fixed Code Mode sending a request about every second when a `!` or slash command was typed while a script was running",
+    "- Fixed an interrupted or failed plugin update leaving a partial plugin folder that later loaded with skills or other components missing (anthropics/claude-code#102186)",
+    "- Windows: Fixed file writes on FAT32 and exFAT drives asking for permission every time in some plugin sessions",
+    "- Fixed Claude failing to read a notebook that has a null output or an error output with no traceback",
+    "- Fixed a rewind deleting files after a restore had failed",
+    "- Fixed auto mode sometimes refusing Claude's call to stop a /loop, which left the next wake-up to fire",
+    "- Fixed a Workflow agent's background shells and MCP servers sometimes being left running after it handed back its report",
+    "- Windows: Fixed `/desktop` downloading the older Claude Desktop installer, and asking for an update when an older install's folder was left behind",
+    "- Fixed `claude plugin install`, `marketplace add` and similar commands hanging with no output when managed settings needed an approval that could not be asked for",
+    "- Fixed a permission rule on a subagent's model, such as `Agent(model:*)`, blocking Claude's follow-up message to a subagent started on this version with no model named",
+    "- Fixed PermissionRequest hooks not saving `Skill(name:*)` allow rules outside local settings",
+    "- Fixed \"Ask your admin\" asking to raise your own limit when your team's pooled group budget blocked you, and saying \"Request sent\" when an admin had approved your request in the last few minutes",
+    "- Fixed Code Mode losing the middle of a long script output; Claude now gets a path to the uncut text (anthropics/claude-code#111373)",
+    "- Fixed hold-to-talk dictation stopping early and losing words when Claude Code was busy",
+    "- Fixed Code Mode with `--bare` not telling Claude what its scripts can call",
+    "- Fixed a crash when a custom API endpoint returned a tool call with no tool name; the call now fails with an error and the session continues",
+    "- Windows: Fixed a possible crash when the machine is almost out of memory",
+    "- Fixed the CLI freezing on some replies, and quoted text sometimes going missing or showing twice",
+    "- Windows: Fixed Claude Code refusing to start when managed settings in the registry contain non-ASCII characters such as Japanese (anthropics/claude-code#93280)",
+    "- Windows: Fixed Remote Control clients showing no steps for a new subagent",
+    "- Fixed @-mentions written as `@file#10-12` attaching the whole file instead of those lines",
+    "- Fixed Claude misreading a pasted artifact invitation link; it now asks you to accept the invitation and paste the artifact's own link",
+    "- Fixed sandboxed Bash commands sometimes failing to start on a full temp disk, for sandboxes whose file rules keep commands out of the temp directory",
+    "- Improved typing speed in screen reader mode, most of all in long sessions",
+    "- Improved start-up time: a session started soon after another no longer waits for the model list, and one outside a git repository without `.claude/settings.local.json` no longer waits on git",
+    "- Windows: Improved the speed of the first Bash command in a session on machines with no custom shell start-up files",
+    "- Improved the plugin auto-update notice to name plugins it newly installs as dependencies, separately from updated plugins",
+    "- Improved Code Mode tool search to show more of an MCP tool's description, with its limits, formats and defaults",
+    "- Improved the Console sign-in link shown by /login and `claude auth login --console`: it is now much shorter",
+    "- Improved Claude's list of your artifacts: it now marks web pages, so Claude is less likely to try opening one with the Claude Docs connector",
+    "- Improved the folder trust prompts in short terminals: fullscreen `/cd` and `/add-dir` show their choices in fewer rows, and the prompt at launch keeps the folder path in view when it has many warnings",
+    "- Changed the questions for stopping auto-connect in `/ide` and for `/clear`, `/compact` or `/rewind` in a subagent's view to list Yes first; they still start on No, so Down then Enter now answers No",
+    "- Changed what a `PermissionDenied` hook's `retry: true` tells Claude: make the refused call again only if you asked for that call",
+    "- Changed in a future release, on or after November 30, 2026: plugin marketplaces in managed `extraKnownMarketplaces` will auto-update by default. To opt one out, set `\"autoUpdate\": false` on its entry",
+    "- Windows: Changed start-up with managed settings in the registry: check them before upgrading, as an `HKLM` policy outranks `managed-settings.json` and a broken value can stop the start",
+    "- [VSCode] Added a warning and a link to the revoke page when you log out and the request to revoke your claude.ai login isn't confirmed",
+    "- [VSCode] Added a notice before sending a very large selection or attached text file, and advice under \"Prompt is too long\" that names the large part and what to do next",
+    "- [VSCode] Added \"Add Cell to Chat\" to the notebook cell menu, which attaches a cell with its outputs or error"
+   ]
+  }
+ ]
+}
