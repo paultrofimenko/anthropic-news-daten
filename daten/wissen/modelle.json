@@ -3,7 +3,7 @@
   "titel_de": "Modelle",
   "kurz_de": "Fable, Opus, Sonnet, Haiku – was sie können, was sie kosten, wann sie abgeschaltet werden.",
   "einleitung_de": "Claude gibt es in vier aktuellen Modellen, vom schnellen, günstigen Haiku bis zum besonders starken Fable. Abgerechnet wird nach Token – Wortstücken, aus denen ein Modell Text zusammensetzt. Oft hilft die Einstellung „Effort“ mehr als ein anderes Modell.",
-  "stand": "2026-11-18",
+  "stand": "2026-11-24",
   "grafik": {
     "art": "balken",
     "titel_de": "Preis je Million Token",
@@ -118,8 +118,9 @@
       "text_de": "Jedes Modell wird irgendwann abgeschaltet. Anthropic nennt für aktive Modelle ein frühestes Datum („nicht vor“) und kündigt die echte Abschaltung vorher an, mit Empfehlung für den Nachfolger.",
       "punkte_de": [
         "Sonnet 4.5 ist seit 30.09.2026 abgekündigt und wird am 30.11.2026 abgeschaltet – Nachfolger: Sonnet 5.5. Das gilt auch für die ID ohne Datum, claude-sonnet-4-5.",
+        "Opus 4.5 ist seit 23.11.2026 abgekündigt und wird am 22.01.2027 abgeschaltet – Nachfolger: Opus 5.5. Das gilt auch für die ID ohne Datum, claude-opus-4-5.",
         "Claude Code nutzt die Claude API, auch mit Claude-Plan – die Daten dieser Seite gelten dann; bei anderer Plattform oder Gateway gelten deren Daten. Nach der Abschaltung zeigt Claude Code einen Fehler, außer eine Fallback-Modellkette ist gesetzt.",
-        "Haiku 4.5: nicht vor dem 15.10.2026. Opus 4.5: nicht vor dem 24.11.2026.",
+        "Haiku 4.5: nicht vor dem 15.10.2026.",
         "Fable 5.2 nicht vor dem 09.11.2027, Fable 5.1 nicht vor dem 01.09.2027, Opus 5.5 nicht vor dem 22.09.2027, Sonnet 5.5 nicht vor dem 28.09.2027, Haiku 5.5 nicht vor dem 07.10.2027.",
         {
           "text_de": "Ältere Modelle wie Fable 5.1, Fable 5, Opus 5, Opus 4.8, Sonnet 5 und Haiku 4.5 sind weiter verfügbar.",
@@ -134,6 +135,7 @@
     }
   ],
   "gesehen": [
-    "sonnet-4-5-abschaltung-claude-code"
+    "sonnet-4-5-abschaltung-claude-code",
+    "opus-4-5-abschaltung"
   ]
 }

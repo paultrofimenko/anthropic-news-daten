@@ -1,0 +1,13 @@
+{
+  "id": "claude-ship-approvals-pr-steward",
+  "quelle": "code-doku",
+  "url": "https://code.claude.com/docs/en/claude-ship",
+  "titel_original": "Claude Ship",
+  "titel_de": "Claude Ship: Code Review, PR Steward und Claude Approvals für GitHub-PRs",
+  "kurz_de": "Neue Doku zu Claude Ship, drei Agenten für GitHub-Pull-Requests: Code Review, PR Steward (behebt Feedback und fehlschlagende Checks) und Claude Approvals (prüft eine Approval-Policy). Für Team und Enterprise.",
+  "briefing_de": "Neue Doku-Seiten für Claude Ship, eine Gruppe von Agenten, die GitHub-Pull-Requests merge-fertig machen sollen:\n- Code Review sucht u. a. Logikfehler und Sicherheitslücken und kommentiert nach Schwere sortiert an den Zeilen.\n- PR Steward arbeitet an fehlschlagenden Checks, Merge-Konflikten und Review-Kommentaren und pusht Commits. Er ist so gebaut, dass er Pull Requests weder freigibt noch mergt; die nötigen Freigaben erzwingst du per Branch Protection.\n- Claude Approvals ist ein Check, der meldet, wer noch freigeben muss. Eine Policy-Datei im Repository legt fest, wie viele Personen Änderungen an einem Pfad freigeben müssen und wo Claude freigeben darf. Der Check blockiert einen Merge nur, wenn du ihn in GitHub zum Pflicht-Check machst, im Observe-Modus normalerweise nicht.\n- Plan und Kosten: nur für Team und Enterprise; Code Review ist allgemein verfügbar, PR Steward und Approvals sind in öffentlicher Beta. Nicht verfügbar mit Zero Data Retention, HIPAA-Konfiguration oder kundenverwalteten Schlüsseln. Abrechnung nach Token-Nutzung über die Nutzungsguthaben der Organisation, getrennt von der Plan-Nutzung; auch der Observe-Modus von Approvals wird berechnet.\n- Warnung der Doku: Mit GitHub Auto-Merge oder Merge Queue und einer Policy ohne Personen-Freigabe kann eine Änderung ohne menschliches Zutun gemergt werden.\n- Lokal gibt es `/ship` (Pull Request öffnen, Review, Feedback bearbeiten) und `/steward` im Claude-Code-CLI; sie laufen in deiner Session und zählen auf deine Nutzung.",
+  "arbeitsweise_de": "Für Teams auf Team oder Enterprise: Approvals zuerst im Observe-Modus starten, die Policy prüfen und erst dann den Check zum Pflicht-Check machen. Bei Auto-Merge oder Merge Queue die Policy auf Merges ohne Personen-Freigabe prüfen. Nicht nutzbar bei Zero Data Retention, HIPAA-Konfiguration oder kundenverwalteten Schlüsseln.",
+  "bereich": "claude-code",
+  "datum": "2026-11-23",
+  "wichtig": false
+}

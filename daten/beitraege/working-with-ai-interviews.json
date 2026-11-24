@@ -1,0 +1,12 @@
+{
+  "id": "working-with-ai-interviews",
+  "quelle": "anthropic",
+  "url": "https://www.anthropic.com/research/working-with-ai",
+  "titel_original": "Working with AI",
+  "titel_de": "Working with AI: Wie 58 Unternehmen ihre Arbeit um KI herum neu ordnen",
+  "kurz_de": "Anthropic hat 66 Interviews mit 58 Unternehmenskunden ausgewertet: kaum KI-bedingte Entlassungen, aber meist weniger Einstellungen. Der größte Wert entsteht, wo Rollen und Abläufe um KI herum neu geordnet werden.",
+  "briefing_de": "Studie auf Basis von 66 Interviews in 58 Unternehmen in den USA, die Kunden von Anthropic sind (keine zufällige oder repräsentative Auswahl, anonym):\n- Wert: Die meisten Einsätze steigern laut Befragten den Output, statt Kosten zu senken. Coding-Agenten bringen Software-Fähigkeiten zu nichttechnischen Rollen.\n- Beschäftigung: Sehr wenige Entlassungen im Inland durch KI-Automatisierung; manche stellen wegen KI mehr ein, die meisten weniger. Viele nutzen weniger Auftragnehmer, vor allem im Ausland – ein mögliches Frühwarnsignal für die internationale Business-Services-Branche.\n- Engpässe: Widerstand von Fachleuten und Aufgaben, die KI nicht beschleunigt. Wenn Coding schneller wird, müssen z. B. Code Review, Vertrieb und strategische Entscheidungen mithalten.\n- Top-down (Workflow auswählen und automatisieren) kann zu Jobunsicherheit, Überwachungsängsten und Widerstand führen; Bottom-up (Tools verteilen und abwarten) führt zu ungleicher Nutzung und Einzelaufgaben-Lösungen.\n- Am wertvollsten waren Fälle mit echter Neuorganisation: breitere Rollen mit Verantwortung für ganze Abläufe, Umsetzung von Mitarbeitenden auf Engpass-Aufgaben, Infrastruktur für Coding durch Nicht-Entwickler und breiter interner Datenzugang.",
+  "bereich": "forschung",
+  "datum": "2026-11-23",
+  "wichtig": false
+}

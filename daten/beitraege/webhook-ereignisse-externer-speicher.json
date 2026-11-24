@@ -1,0 +1,13 @@
+{
+  "id": "webhook-ereignisse-externer-speicher",
+  "quelle": "platform-release-notes",
+  "url": "https://platform.claude.com/docs/en/release-notes/overview",
+  "titel_original": "Claude Platform Release Notes, November 23, 2026",
+  "titel_de": "Organisations-Webhooks melden Ausfall von Kundenspeicher",
+  "kurz_de": "Zwei neue Ereignistypen in den Organisations-Webhooks (Beta): external_storage.failed, wenn ein Bucket den täglichen Check nicht besteht, und external_storage.recovered, wenn er wieder besteht.",
+  "briefing_de": "- Die Organisations-Webhooks (in Beta) kennen zwei neue Ereignistypen.\n- `external_storage.failed` sendet Anthropic, wenn ein Bucket, den du als Customer-owned Storage nutzt, den täglichen Check nicht besteht.\n- `external_storage.recovered` sendet Anthropic, wenn der Bucket den Check wieder besteht.",
+  "arbeitsweise_de": "Wer Organisations-Webhooks und Customer-owned Storage (Enterprise Frontier Safeguards) nutzt, kann beide Ereignistypen abonnieren, um Bucket-Probleme früh zu bemerken. Gilt nur für Organisationen mit solchen Buckets; die Webhooks sind noch in Beta.",
+  "bereich": "api",
+  "datum": "2026-11-23",
+  "wichtig": false
+}

@@ -1,0 +1,23 @@
+{
+  "id": "opus-4-5-abschaltung",
+  "quelle": "abschaltungen",
+  "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+  "titel_original": "Deprecation of Claude Opus 4.5",
+  "titel_de": "Opus 4.5 wird am 22.01.2027 abgeschaltet",
+  "kurz_de": "Anthropic hat das Ende von Claude Opus 4.5 in der Claude API für den 22. Januar 2027 angekündigt und empfiehlt den Wechsel auf Opus 5.5.",
+  "briefing_de": "- Betroffen: `claude-opus-4-5-20251101` und `claude-opus-4-5` (dieselbe ID ohne Datum).\n- Abschaltung in der Claude API: 22. Januar 2027; angekündigt am 23. November 2026.\n- Empfohlener Ersatz: `claude-opus-5-5`, mit Umstiegsanleitung „Migrating from Claude Opus 4.5 or earlier“ im Opus-5.5-Migrationsleitfaden.\n- Für Claude Code und andere Plattformen als die Claude API gelten teils andere Daten; sie stehen in der Übersicht der Abschaltungen.",
+  "arbeitsweise_de": "Wer `claude-opus-4-5-20251101` oder `claude-opus-4-5` fest einträgt, sollte vor dem 22. Januar 2027 auf `claude-opus-5-5` umstellen. Gilt für die Claude API; auf anderen Plattformen und in Claude Code die dortigen Daten prüfen.",
+  "bereich": "modelle",
+  "datum": "2026-11-23",
+  "wichtig": true,
+  "lernkarten": [
+    {
+      "frage_de": "Wann wird Claude Opus 4.5 (claude-opus-4-5-20251101) in der Claude API abgeschaltet?",
+      "antwort_de": "Am 22. Januar 2027. Die Abschaltung wurde am 23. November 2026 angekündigt und gilt auch für `claude-opus-4-5` ohne Datum."
+    },
+    {
+      "frage_de": "Auf welches Modell empfiehlt Anthropic den Umstieg von Claude Opus 4.5?",
+      "antwort_de": "Auf `claude-opus-5-5`; die Anleitung steht im Opus-5.5-Migrationsleitfaden unter „Migrating from Claude Opus 4.5 or earlier“."
+    }
+  ]
+}

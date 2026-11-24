@@ -1,0 +1,13 @@
+{
+  "id": "cloud-sessions-teilen",
+  "quelle": "code-doku",
+  "url": "https://code.claude.com/docs/en/share-sessions",
+  "titel_original": "Share a cloud or Remote Control session",
+  "titel_de": "Cloud- und Remote-Control-Sessions per Link teilen",
+  "kurz_de": "Neue Doku erklärt, was Empfänger einer geteilten Cloud- oder Remote-Control-Session sehen (u. a. Tool-Aufrufe, Dateiinhalte, Zugangsdaten im Verlauf), wer den Link öffnen kann und wie man das Teilen beendet.",
+  "briefing_de": "- Empfänger sehen den bisherigen Verlauf mit Tool-Aufrufen und Ergebnissen: Nachrichten, gelesene und geschriebene Dateien, Befehle samt Ausgabe, Schlüssel oder Tokens, die darin vorkommen, Ergebnisse von Connectors und gelesene Webseiten. Dein Anzeigename erscheint; auf Max, Ultra und Pro lässt er sich ausblenden.\n- Bei Remote Control sehen sie zusätzlich Inhalte von Dateien, die Claude auf deinem Rechner gelesen hat (auch außerhalb des Startordners), sowie Text und Screenshots von Seiten, die über die Claude-in-Chrome-Erweiterung geöffnet wurden.\n- Team und Enterprise: Sichtbarkeit Private oder Team; für Cloud-Sessions brauchen Empfänger Zugriff auf die privaten Repositories über ihr verbundenes GitHub-Konto. Max, Ultra und Pro: Private oder Public; „Require repository access“ ist standardmäßig aus.\n- Teilen beenden: Sichtbarkeit zurück auf Private. Der Link funktioniert sonst weiter, auch nach Archivieren oder Beenden der Session.",
+  "arbeitsweise_de": "Vor dem Teilen den Verlauf und die ausgeklappten Tool-Aufrufe auf Zugangsdaten und vertrauliche Inhalte prüfen; im Zweifel Private lassen. Die Sichtbarkeit zurücksetzen, bevor du eine Session oder Organisation verlässt. Gilt für Cloud- und Remote-Control-Sessions, nicht für claude.ai-Chats.",
+  "bereich": "claude-code",
+  "datum": "2026-11-23",
+  "wichtig": false
+}

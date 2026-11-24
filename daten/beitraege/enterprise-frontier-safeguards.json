@@ -1,0 +1,13 @@
+{
+  "id": "enterprise-frontier-safeguards",
+  "quelle": "platform-doku",
+  "url": "https://platform.claude.com/docs/en/manage-claude/enterprise-frontier-safeguards/overview",
+  "titel_original": "Enterprise Frontier Safeguards",
+  "titel_de": "Enterprise Frontier Safeguards: ZDR mit Daten im eigenen Cloud-Konto (Beta)",
+  "kurz_de": "Enterprise Frontier Safeguards (Beta) ist Zero Data Retention für berechtigte Organisationen mit Claudes leistungsfähigsten Modellen: Anthropic speichert keine Prompts und Antworten, verschlüsselte Kopien liegen im eigenen Bucket.",
+  "briefing_de": "Enterprise Frontier Safeguards (EFS) ist in Beta und ist Zero Data Retention für berechtigte Organisationen, die Claudes leistungsfähigste Modelle nutzen.\n- Anthropic behält Prompts und Antworten nicht; verschlüsselte Kopien („Sealed Safety Data“) gehen in einen Bucket im eigenen Cloud-Konto. Dein Team kann sie auch dort nicht lesen.\n- EFS braucht einen eigenen Bucket: Ein Workspace mit von Anthropic verwaltetem Speicher ist nicht auf EFS.\n- Safety Cases prüft dein eigenes Team; Anthropic Human Review ist immer aus.\n- Auf Claude Platform gilt EFS für einen ganzen Workspace und alle Modelle darin; für nur einen Teil des Verkehrs separate Workspaces nutzen.\n- Anthropic berechnet nichts für EFS und ändert weder Modellverhalten noch API-Preise oder Rate Limits; den Speicher stellt dein Cloud-Anbieter in Rechnung.\n- Nicht abgedeckt: Daten, die Claude-Platform-Funktionen für sich speichern, z. B. Code-Execution-Container, Files-API-Uploads, Batch-API-Ergebnisse und Managed-Agents-Sessions.\n- Verfügbar auf Claude Platform, Claude Platform on AWS und Claude Models on Google Cloud (Anthropic managed). Neue Doku-Seiten u. a. zu Einrichtung, kundenverwalteten Schlüsseln, Safety Cases und Admin-API-Endpunkten für External Storage.",
+  "arbeitsweise_de": "Relevant für Organisationen, die Claudes leistungsfähigste Modelle mit Zero Data Retention nutzen wollen und Daten im eigenen Cloud-Konto halten müssen. Zugang und Einrichtung stehen im Setup-Guide; für Verkehr ohne EFS einen eigenen Workspace verwenden. Gilt nicht für Workspaces auf Anthropic-verwaltetem Speicher.",
+  "bereich": "api",
+  "datum": "2026-11-23",
+  "wichtig": false
+}
