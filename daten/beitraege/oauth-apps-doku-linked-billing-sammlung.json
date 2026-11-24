@@ -1,0 +1,13 @@
+{
+  "id": "oauth-apps-doku-linked-billing-sammlung",
+  "quelle": "platform-doku",
+  "url": "https://platform.claude.com/docs/en/manage-claude/oauth-apps/linked-billing/set-up-your-app",
+  "titel_original": "Claude Platform OAuth and Linked billing docs",
+  "titel_de": "Neue Doku-Seiten zu OAuth-Apps und Linked billing",
+  "kurz_de": "Die Claude-Platform-Doku hat neue Seiten zu OAuth-Apps: Endpunkte, App-Einrichtung, Kunden verknüpfen, Test und Veröffentlichung, Kundenverwaltung und Fehler (Beta).",
+  "briefing_de": "Neu unter `manage-claude/oauth-apps` (Claude Platform OAuth ist eine Beta und kann sich ändern; laut Doku womöglich nicht für Produktion geeignet):\n- Endpunkte und Parameter: Endpunkte für Autorisierung, PAR, Token, Widerruf), Client-Authentifizierung per `private_key_jwt`-Variante.\n- App einrichten: App in der Claude Console anlegen (Admin-Rolle nötig), Client-Authentifizierung, Service-Konto. Die Organisation muss Anthropic direkt bezahlen (Prepaid oder Rechnung); Marketplace-Konten gehen nicht.\n- Kunden verknüpfen und abrechnen, Button „Link your Claude organization“ und was Kunden sehen (Freigabeseite, monatliches Ausgabenlimit, Entkoppeln, E-Mails).\n- Testen und veröffentlichen: neue Apps starten im Test mit bis zu 10 Testnutzern und Limit von höchstens 50 USD; zum Veröffentlichen sind Domain-Nachweis und Prüfung durch Anthropic nötig (bei Rechnungsabrechnung entfällt die Prüfung).\n- Kunden verwalten, eigene Zugangsdaten je Kunde und eine Fehlerseite.",
+  "arbeitsweise_de": "Nur relevant, wenn du Linked billing in einem eigenen Produkt einbauen willst; die Beta-Funktion selbst ist im Beitrag „Linked billing“ beschrieben.",
+  "bereich": "api",
+  "datum": "2026-11-24",
+  "wichtig": false
+}

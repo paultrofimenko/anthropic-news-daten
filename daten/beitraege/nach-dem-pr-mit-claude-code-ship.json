@@ -1,0 +1,13 @@
+{
+  "id": "nach-dem-pr-mit-claude-code-ship",
+  "quelle": "claude-dev-rss",
+  "url": "https://claude.dev/blog/the-work-after-you-open-a-pr/",
+  "titel_original": "A practical guide to shipping with Claude Code",
+  "titel_de": "Nach dem Pull Request: Leitfaden zu /ship und /steward",
+  "kurz_de": "Ein Leitfaden zeigt, wie du mit /code-review, /ship und /steward die Nacharbeit nach einem Pull Request an Claude Code abgibst und Regeln dafür im Repo festhältst.",
+  "briefing_de": "Der Beitrag zeigt, wie du die Arbeit nach dem Öffnen eines PRs (fehlgeschlagene Checks, Review-Kommentare, Merge-Konflikte) an Claude Code übergibst.\n- `/code-review` prüft Commits und uncommittete Änderungen auf Korrektheitsfehler; Varianten: `--fix`, `--comment <PR>`, `ultra` (läuft in der Cloud, braucht Login bei claude.ai, kann separat zur Abrechnung kommen). Lokal liest es CLAUDE.md, aber nicht REVIEW.md.\n- `/ship` committet (wie `git add -A`), pusht, legt den PR an, reviewt und beobachtet ihn bis zu sieben Tage. Es committet keine Dateien mit geheimnisähnlichen Namen oder Regeldateien (CLAUDE.md, REVIEW.md, `.claude/`, `.github/`); in öffentlichen Repos committet es nicht.\n- Die Beobachtung läuft als du auf deinem Rechner und zählt gegen dein Kontingent. Sie braucht `gh auth login`, gilt nur für von dir geöffnete PRs, wartet bei allem außer auto mode auf deine Antwort und startet nicht im bypass-permissions-Modus. Unter Windows startet sie nicht. Claude soll den PR nie mergen und pro Problem höchstens dreimal pushen.\n- `/steward` führt nur die Beobachtung aus; das ist nicht dasselbe wie PR Steward, der Team-Dienst, den ein Admin einschaltet.\n- Wiederkehrendes gehört ins Repo: CLAUDE.md (Konventionen), REVIEW.md (Review-Regeln, nur Code Review und PR Steward), `.claude/skills/verify/SKILL.md`, `.claude/skills/steward/SKILL.md`.",
+  "arbeitsweise_de": "Wer GitHub nutzt, kann `/code-review` vor dem Push probieren und danach `/ship` an einem eigenen PR testen. Prüfe vorher `git status`, weil `/ship` wie `git add -A` committet. Die lokale Beobachtung nur in Repos laufen lassen, in denen du allen vertraust, die auf den Basis-Branch landen dürfen. Für Teams: Code Review, PR Steward und Claude Approvals müssen von Admins eingerichtet werden; Branch-Schutz bleibt nötig, weil PR Steward nicht freigibt oder mergt.",
+  "bereich": "claude-code",
+  "datum": "2026-11-24",
+  "wichtig": false
+}
