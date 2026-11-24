@@ -1,8 +1,108 @@
 {
  "version": 1,
- "erzeugt": "2026-11-22T01:22:03.554Z",
- "anzahl": 162,
+ "erzeugt": "2026-11-24T02:16:09.264Z",
+ "anzahl": 169,
  "beitraege": [
+  {
+   "id": "claude-code-2-1-331",
+   "quelle": "code-changelog",
+   "url": "https://code.claude.com/docs/en/changelog",
+   "titel_original": "Claude Code 2.1.331",
+   "titel_de": "Claude Code 2.1.331: Code Mode auf Cloud-Plattformen, Plugin-Abhängigkeiten, viele Fixes",
+   "kurz_de": "Claude Code 2.1.331 bringt Code Mode in Terminal-Sessions auf Bedrock, Google Clouds Agent Platform, Foundry und Claude Platform on AWS, optionale Plugin-Abhängigkeiten und einen API-Check in `claude doctor`. Dazu viele Fixes.",
+   "briefing_de": "Neu in Fassung 2.1.331:\n- Code Mode läuft jetzt in Terminal-Sessions auf Amazon Bedrock, Google Clouds Agent Platform, Microsoft Foundry und Claude Platform on AWS.\n- Plugin-Manifeste kennen `optionalDependencies`: Plugins, die mit dem Plugin installiert werden, sich aber einzeln abschalten oder deinstallieren lassen.\n- `claude doctor` hat einen Abschnitt zur API-Erreichbarkeit (HTTP-Status oder Fehler, sonst der Grund, warum nicht getestet wurde).\n- `CLAUDE_CODE_DISABLE_RESPONSE_COMPRESSION` fordert unkomprimierte Modellantworten an, hinter einem Proxy, der komprimierte abschneidet; für self-hosted Runner und Remote Control noch nicht empfohlen.\n- Claude apps gateway: `oidc.groups_jsonpath` liest Gruppen mit einer kleinen JSONPath-Teilmenge (RFC 9535); `CLAUDE_GATEWAY_IDP_CONNECT_BY_HOSTNAME=1` reicht bei `oidc.use_proxy: true` den Hostnamen eines `https`-IdP an den Proxy, auch mit `NO_PROXY`.\n- Neu in Telemetrie und Oberfläche: `gen_ai.*`-Felder in `claude_code.llm_request`-Spans und ein Hinweis, wenn die Tap-Diktierfunktion von selbst stoppt (nach 15 Sekunden ohne erkannte Sprache oder bei 2 Minuten).\n- Behoben u. a.: hängende MCP-Tool-Aufrufe bei fehlerhaften Antworten, teilweise verlorene Zusammenfassungen bei /compact, Absturz bei Tool-Aufruf ohne Namen vom eigenen API-Endpunkt, `/rewind` löschte Dateien nach fehlgeschlagener Wiederherstellung, abgebrochene Plugin-Updates hinterließen unvollständige Ordner. Dazu viele Fixes zu Code Mode, Windows, VS Code und Terminal-Darstellung.\n- Vorab angekündigt: Ab dem 30. November 2026 (oder später) aktualisieren sich Plugin-Marketplaces in verwalteten `extraKnownMarketplaces` standardmäßig automatisch; abschalten mit `\"autoUpdate\": false` am Eintrag.",
+   "arbeitsweise_de": "Wer Plugin-Marketplaces über verwaltete Einstellungen (`extraKnownMarketplaces`) ausliefert, sollte vor dem 30. November 2026 entscheiden, ob einzelne Einträge `\"autoUpdate\": false` bekommen. Unter Windows mit verwalteten Einstellungen in der Registry vor dem Upgrade prüfen: Eine `HKLM`-Richtlinie hat Vorrang vor `managed-settings.json`, ein fehlerhafter Wert kann den Start verhindern. Die Fixes betreffen nur die genannten Fälle.",
+   "bereich": "claude-code",
+   "datum": "2026-11-24",
+   "wichtig": false
+  },
+  {
+   "id": "claude-ship-approvals-pr-steward",
+   "quelle": "code-doku",
+   "url": "https://code.claude.com/docs/en/claude-ship",
+   "titel_original": "Claude Ship",
+   "titel_de": "Claude Ship: Code Review, PR Steward und Claude Approvals für GitHub-PRs",
+   "kurz_de": "Neue Doku zu Claude Ship, drei Agenten für GitHub-Pull-Requests: Code Review, PR Steward (behebt Feedback und fehlschlagende Checks) und Claude Approvals (prüft eine Approval-Policy). Für Team und Enterprise.",
+   "briefing_de": "Neue Doku-Seiten für Claude Ship, eine Gruppe von Agenten, die GitHub-Pull-Requests merge-fertig machen sollen:\n- Code Review sucht u. a. Logikfehler und Sicherheitslücken und kommentiert nach Schwere sortiert an den Zeilen.\n- PR Steward arbeitet an fehlschlagenden Checks, Merge-Konflikten und Review-Kommentaren und pusht Commits. Er ist so gebaut, dass er Pull Requests weder freigibt noch mergt; die nötigen Freigaben erzwingst du per Branch Protection.\n- Claude Approvals ist ein Check, der meldet, wer noch freigeben muss. Eine Policy-Datei im Repository legt fest, wie viele Personen Änderungen an einem Pfad freigeben müssen und wo Claude freigeben darf. Der Check blockiert einen Merge nur, wenn du ihn in GitHub zum Pflicht-Check machst, im Observe-Modus normalerweise nicht.\n- Plan und Kosten: nur für Team und Enterprise; Code Review ist allgemein verfügbar, PR Steward und Approvals sind in öffentlicher Beta. Nicht verfügbar mit Zero Data Retention, HIPAA-Konfiguration oder kundenverwalteten Schlüsseln. Abrechnung nach Token-Nutzung über die Nutzungsguthaben der Organisation, getrennt von der Plan-Nutzung; auch der Observe-Modus von Approvals wird berechnet.\n- Warnung der Doku: Mit GitHub Auto-Merge oder Merge Queue und einer Policy ohne Personen-Freigabe kann eine Änderung ohne menschliches Zutun gemergt werden.\n- Lokal gibt es `/ship` (Pull Request öffnen, Review, Feedback bearbeiten) und `/steward` im Claude-Code-CLI; sie laufen in deiner Session und zählen auf deine Nutzung.",
+   "arbeitsweise_de": "Für Teams auf Team oder Enterprise: Approvals zuerst im Observe-Modus starten, die Policy prüfen und erst dann den Check zum Pflicht-Check machen. Bei Auto-Merge oder Merge Queue die Policy auf Merges ohne Personen-Freigabe prüfen. Nicht nutzbar bei Zero Data Retention, HIPAA-Konfiguration oder kundenverwalteten Schlüsseln.",
+   "bereich": "claude-code",
+   "datum": "2026-11-23",
+   "wichtig": false
+  },
+  {
+   "id": "cloud-sessions-teilen",
+   "quelle": "code-doku",
+   "url": "https://code.claude.com/docs/en/share-sessions",
+   "titel_original": "Share a cloud or Remote Control session",
+   "titel_de": "Cloud- und Remote-Control-Sessions per Link teilen",
+   "kurz_de": "Neue Doku erklärt, was Empfänger einer geteilten Cloud- oder Remote-Control-Session sehen (u. a. Tool-Aufrufe, Dateiinhalte, Zugangsdaten im Verlauf), wer den Link öffnen kann und wie man das Teilen beendet.",
+   "briefing_de": "- Empfänger sehen den bisherigen Verlauf mit Tool-Aufrufen und Ergebnissen: Nachrichten, gelesene und geschriebene Dateien, Befehle samt Ausgabe, Schlüssel oder Tokens, die darin vorkommen, Ergebnisse von Connectors und gelesene Webseiten. Dein Anzeigename erscheint; auf Max, Ultra und Pro lässt er sich ausblenden.\n- Bei Remote Control sehen sie zusätzlich Inhalte von Dateien, die Claude auf deinem Rechner gelesen hat (auch außerhalb des Startordners), sowie Text und Screenshots von Seiten, die über die Claude-in-Chrome-Erweiterung geöffnet wurden.\n- Team und Enterprise: Sichtbarkeit Private oder Team; für Cloud-Sessions brauchen Empfänger Zugriff auf die privaten Repositories über ihr verbundenes GitHub-Konto. Max, Ultra und Pro: Private oder Public; „Require repository access“ ist standardmäßig aus.\n- Teilen beenden: Sichtbarkeit zurück auf Private. Der Link funktioniert sonst weiter, auch nach Archivieren oder Beenden der Session.",
+   "arbeitsweise_de": "Vor dem Teilen den Verlauf und die ausgeklappten Tool-Aufrufe auf Zugangsdaten und vertrauliche Inhalte prüfen; im Zweifel Private lassen. Die Sichtbarkeit zurücksetzen, bevor du eine Session oder Organisation verlässt. Gilt für Cloud- und Remote-Control-Sessions, nicht für claude.ai-Chats.",
+   "bereich": "claude-code",
+   "datum": "2026-11-23",
+   "wichtig": false
+  },
+  {
+   "id": "enterprise-frontier-safeguards",
+   "quelle": "platform-doku",
+   "url": "https://platform.claude.com/docs/en/manage-claude/enterprise-frontier-safeguards/overview",
+   "titel_original": "Enterprise Frontier Safeguards",
+   "titel_de": "Enterprise Frontier Safeguards: ZDR mit Daten im eigenen Cloud-Konto (Beta)",
+   "kurz_de": "Enterprise Frontier Safeguards (Beta) ist Zero Data Retention für berechtigte Organisationen mit Claudes leistungsfähigsten Modellen: Anthropic speichert keine Prompts und Antworten, verschlüsselte Kopien liegen im eigenen Bucket.",
+   "briefing_de": "Enterprise Frontier Safeguards (EFS) ist in Beta und ist Zero Data Retention für berechtigte Organisationen, die Claudes leistungsfähigste Modelle nutzen.\n- Anthropic behält Prompts und Antworten nicht; verschlüsselte Kopien („Sealed Safety Data“) gehen in einen Bucket im eigenen Cloud-Konto. Dein Team kann sie auch dort nicht lesen.\n- EFS braucht einen eigenen Bucket: Ein Workspace mit von Anthropic verwaltetem Speicher ist nicht auf EFS.\n- Safety Cases prüft dein eigenes Team; Anthropic Human Review ist immer aus.\n- Auf Claude Platform gilt EFS für einen ganzen Workspace und alle Modelle darin; für nur einen Teil des Verkehrs separate Workspaces nutzen.\n- Anthropic berechnet nichts für EFS und ändert weder Modellverhalten noch API-Preise oder Rate Limits; den Speicher stellt dein Cloud-Anbieter in Rechnung.\n- Nicht abgedeckt: Daten, die Claude-Platform-Funktionen für sich speichern, z. B. Code-Execution-Container, Files-API-Uploads, Batch-API-Ergebnisse und Managed-Agents-Sessions.\n- Verfügbar auf Claude Platform, Claude Platform on AWS und Claude Models on Google Cloud (Anthropic managed). Neue Doku-Seiten u. a. zu Einrichtung, kundenverwalteten Schlüsseln, Safety Cases und Admin-API-Endpunkten für External Storage.",
+   "arbeitsweise_de": "Relevant für Organisationen, die Claudes leistungsfähigste Modelle mit Zero Data Retention nutzen wollen und Daten im eigenen Cloud-Konto halten müssen. Zugang und Einrichtung stehen im Setup-Guide; für Verkehr ohne EFS einen eigenen Workspace verwenden. Gilt nicht für Workspaces auf Anthropic-verwaltetem Speicher.",
+   "bereich": "api",
+   "datum": "2026-11-23",
+   "wichtig": false
+  },
+  {
+   "id": "opus-4-5-abschaltung",
+   "quelle": "abschaltungen",
+   "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+   "titel_original": "Deprecation of Claude Opus 4.5",
+   "titel_de": "Opus 4.5 wird am 22.01.2027 abgeschaltet",
+   "kurz_de": "Anthropic hat das Ende von Claude Opus 4.5 in der Claude API für den 22. Januar 2027 angekündigt und empfiehlt den Wechsel auf Opus 5.5.",
+   "briefing_de": "- Betroffen: `claude-opus-4-5-20251101` und `claude-opus-4-5` (dieselbe ID ohne Datum).\n- Abschaltung in der Claude API: 22. Januar 2027; angekündigt am 23. November 2026.\n- Empfohlener Ersatz: `claude-opus-5-5`, mit Umstiegsanleitung „Migrating from Claude Opus 4.5 or earlier“ im Opus-5.5-Migrationsleitfaden.\n- Für Claude Code und andere Plattformen als die Claude API gelten teils andere Daten; sie stehen in der Übersicht der Abschaltungen.",
+   "arbeitsweise_de": "Wer `claude-opus-4-5-20251101` oder `claude-opus-4-5` fest einträgt, sollte vor dem 22. Januar 2027 auf `claude-opus-5-5` umstellen. Gilt für die Claude API; auf anderen Plattformen und in Claude Code die dortigen Daten prüfen.",
+   "bereich": "modelle",
+   "datum": "2026-11-23",
+   "wichtig": true,
+   "lernkarten": [
+    {
+     "frage_de": "Wann wird Claude Opus 4.5 (claude-opus-4-5-20251101) in der Claude API abgeschaltet?",
+     "antwort_de": "Am 22. Januar 2027. Die Abschaltung wurde am 23. November 2026 angekündigt und gilt auch für `claude-opus-4-5` ohne Datum."
+    },
+    {
+     "frage_de": "Auf welches Modell empfiehlt Anthropic den Umstieg von Claude Opus 4.5?",
+     "antwort_de": "Auf `claude-opus-5-5`; die Anleitung steht im Opus-5.5-Migrationsleitfaden unter „Migrating from Claude Opus 4.5 or earlier“."
+    }
+   ]
+  },
+  {
+   "id": "webhook-ereignisse-externer-speicher",
+   "quelle": "platform-release-notes",
+   "url": "https://platform.claude.com/docs/en/release-notes/overview",
+   "titel_original": "Claude Platform Release Notes, November 23, 2026",
+   "titel_de": "Organisations-Webhooks melden Ausfall von Kundenspeicher",
+   "kurz_de": "Zwei neue Ereignistypen in den Organisations-Webhooks (Beta): external_storage.failed, wenn ein Bucket den täglichen Check nicht besteht, und external_storage.recovered, wenn er wieder besteht.",
+   "briefing_de": "- Die Organisations-Webhooks (in Beta) kennen zwei neue Ereignistypen.\n- `external_storage.failed` sendet Anthropic, wenn ein Bucket, den du als Customer-owned Storage nutzt, den täglichen Check nicht besteht.\n- `external_storage.recovered` sendet Anthropic, wenn der Bucket den Check wieder besteht.",
+   "arbeitsweise_de": "Wer Organisations-Webhooks und Customer-owned Storage (Enterprise Frontier Safeguards) nutzt, kann beide Ereignistypen abonnieren, um Bucket-Probleme früh zu bemerken. Gilt nur für Organisationen mit solchen Buckets; die Webhooks sind noch in Beta.",
+   "bereich": "api",
+   "datum": "2026-11-23",
+   "wichtig": false
+  },
+  {
+   "id": "working-with-ai-interviews",
+   "quelle": "anthropic",
+   "url": "https://www.anthropic.com/research/working-with-ai",
+   "titel_original": "Working with AI",
+   "titel_de": "Working with AI: Wie 58 Unternehmen ihre Arbeit um KI herum neu ordnen",
+   "kurz_de": "Anthropic hat 66 Interviews mit 58 Unternehmenskunden ausgewertet: kaum KI-bedingte Entlassungen, aber meist weniger Einstellungen. Der größte Wert entsteht, wo Rollen und Abläufe um KI herum neu geordnet werden.",
+   "briefing_de": "Studie auf Basis von 66 Interviews in 58 Unternehmen in den USA, die Kunden von Anthropic sind (keine zufällige oder repräsentative Auswahl, anonym):\n- Wert: Die meisten Einsätze steigern laut Befragten den Output, statt Kosten zu senken. Coding-Agenten bringen Software-Fähigkeiten zu nichttechnischen Rollen.\n- Beschäftigung: Sehr wenige Entlassungen im Inland durch KI-Automatisierung; manche stellen wegen KI mehr ein, die meisten weniger. Viele nutzen weniger Auftragnehmer, vor allem im Ausland – ein mögliches Frühwarnsignal für die internationale Business-Services-Branche.\n- Engpässe: Widerstand von Fachleuten und Aufgaben, die KI nicht beschleunigt. Wenn Coding schneller wird, müssen z. B. Code Review, Vertrieb und strategische Entscheidungen mithalten.\n- Top-down (Workflow auswählen und automatisieren) kann zu Jobunsicherheit, Überwachungsängsten und Widerstand führen; Bottom-up (Tools verteilen und abwarten) führt zu ungleicher Nutzung und Einzelaufgaben-Lösungen.\n- Am wertvollsten waren Fälle mit echter Neuorganisation: breitere Rollen mit Verantwortung für ganze Abläufe, Umsetzung von Mitarbeitenden auf Engpass-Aufgaben, Infrastruktur für Coding durch Nicht-Entwickler und breiter interner Datenzugang.",
+   "bereich": "forschung",
+   "datum": "2026-11-23",
+   "wichtig": false
+  },
   {
    "id": "claude-code-2-1-330",
    "quelle": "code-changelog",
@@ -2528,6 +2628,15 @@
     "claude-sonnet-4-5-20250929"
    ],
    "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+  },
+  {
+   "datum": "2027-01-22",
+   "art": "ende",
+   "titel": "Abschaltung von Opus 4.5",
+   "modelle": [
+    "claude-opus-4-5-20251101"
+   ],
+   "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
   }
  ],
  "hinweise": [],
@@ -2537,7 +2646,7 @@
    "titel_de": "Modelle",
    "kurz_de": "Fable, Opus, Sonnet, Haiku – was sie können, was sie kosten, wann sie abgeschaltet werden.",
    "einleitung_de": "Claude gibt es in vier aktuellen Modellen, vom schnellen, günstigen Haiku bis zum besonders starken Fable. Abgerechnet wird nach Token – Wortstücken, aus denen ein Modell Text zusammensetzt. Oft hilft die Einstellung „Effort“ mehr als ein anderes Modell.",
-   "stand": "2026-11-18",
+   "stand": "2026-11-24",
    "grafik": {
     "art": "balken",
     "titel_de": "Preis je Million Token",
@@ -2691,8 +2800,9 @@
      "text_de": "Jedes Modell wird irgendwann abgeschaltet. Anthropic nennt für aktive Modelle ein frühestes Datum („nicht vor“) und kündigt die echte Abschaltung vorher an, mit Empfehlung für den Nachfolger.",
      "punkte_de": [
       "Sonnet 4.5 ist seit 30.09.2026 abgekündigt und wird am 30.11.2026 abgeschaltet – Nachfolger: Sonnet 5.5. Das gilt auch für die ID ohne Datum, claude-sonnet-4-5.",
+      "Opus 4.5 ist seit 23.11.2026 abgekündigt und wird am 22.01.2027 abgeschaltet – Nachfolger: Opus 5.5. Das gilt auch für die ID ohne Datum, claude-opus-4-5.",
       "Claude Code nutzt die Claude API, auch mit Claude-Plan – die Daten dieser Seite gelten dann; bei anderer Plattform oder Gateway gelten deren Daten. Nach der Abschaltung zeigt Claude Code einen Fehler, außer eine Fallback-Modellkette ist gesetzt.",
-      "Haiku 4.5: nicht vor dem 15.10.2026. Opus 4.5: nicht vor dem 24.11.2026.",
+      "Haiku 4.5: nicht vor dem 15.10.2026.",
       "Fable 5.2 nicht vor dem 09.11.2027, Fable 5.1 nicht vor dem 01.09.2027, Opus 5.5 nicht vor dem 22.09.2027, Sonnet 5.5 nicht vor dem 28.09.2027, Haiku 5.5 nicht vor dem 07.10.2027.",
       {
        "text_de": "Ältere Modelle wie Fable 5.1, Fable 5, Opus 5, Opus 4.8, Sonnet 5 und Haiku 4.5 sind weiter verfügbar.",
@@ -2705,15 +2815,16 @@
      ],
      "quelle": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
      "geaendert": {
-      "am": "2026-11-18",
+      "am": "2026-11-24",
       "durch": [
-       "sonnet-4-5-abschaltung-claude-code"
+       "opus-4-5-abschaltung"
       ]
      }
     }
    ],
    "gesehen": [
-    "sonnet-4-5-abschaltung-claude-code"
+    "sonnet-4-5-abschaltung-claude-code",
+    "opus-4-5-abschaltung"
    ],
    "grafik_geaendert": {
     "am": "2026-11-10",
