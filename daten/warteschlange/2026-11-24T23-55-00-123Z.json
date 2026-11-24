@@ -1,0 +1,112 @@
+{
+ "zeit": "2026-11-24T23:55:00.123Z",
+ "neu": [
+  {
+   "quelle": "claude-dev-rss",
+   "name": "claude.dev",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://claude.dev/blog/the-work-after-you-open-a-pr/",
+   "titel": "A practical guide to shipping with Claude Code",
+   "datum": "Tue, 24 Nov 2026 12:00:00 GMT"
+  },
+  {
+   "quelle": "abschaltungen",
+   "name": "Modell-Abschaltungen",
+   "wichtig": true,
+   "art": "geaendert",
+   "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+   "titel": "Modell-Abschaltungen"
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/manage-claude/oauth-apps/endpoints-and-parameters",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/manage-claude/oauth-apps/linked-billing",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/manage-claude/oauth-apps/linked-billing/set-up-your-app",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/manage-claude/oauth-apps/linked-billing/link-and-bill-a-customer",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/manage-claude/oauth-apps/linked-billing/link-button",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/manage-claude/oauth-apps/linked-billing/what-your-customers-see",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/manage-claude/oauth-apps/linked-billing/test-and-publish",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/manage-claude/oauth-apps/linked-billing/manage-customers",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/manage-claude/oauth-apps/linked-billing/credential-for-each-customer",
+   "titel": null,
+   "datum": null
+  },
+  {
+   "quelle": "platform-doku",
+   "name": "Claude-Platform-Doku",
+   "wichtig": false,
+   "art": "neu",
+   "url": "https://platform.claude.com/docs/en/manage-claude/oauth-apps/linked-billing/errors",
+   "titel": null,
+   "datum": null
+  }
+ ]
+}

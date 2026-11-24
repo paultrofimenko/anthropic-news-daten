@@ -19,6 +19,7 @@
    "claude.dev/blog/solving-code-review-at-anthropic",
    "claude.dev/blog/spending-your-effort",
    "claude.dev/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models",
+   "claude.dev/blog/the-work-after-you-open-a-pr",
    "claude.dev/blog/using-claude-code-the-unreasonable-effectiveness-of-html",
    "claude.dev/blog/what-a-task-costs-on-opus-5-5",
    "claude.dev/blog/which-claude-model-should-you-build-with",
@@ -46,6 +47,7 @@
    "claude.dev/blog/solving-code-review-at-anthropic",
    "claude.dev/blog/spending-your-effort",
    "claude.dev/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models",
+   "claude.dev/blog/the-work-after-you-open-a-pr",
    "claude.dev/blog/using-claude-code-the-unreasonable-effectiveness-of-html",
    "claude.dev/blog/what-a-task-costs-on-opus-5-5",
    "claude.dev/blog/which-claude-model-should-you-build-with"
@@ -2996,6 +2998,16 @@
    "platform.claude.com/docs/en/manage-claude/ip-allowlist",
    "platform.claude.com/docs/en/manage-claude/oauth-apps/app-review",
    "platform.claude.com/docs/en/manage-claude/oauth-apps/branding-samples",
+   "platform.claude.com/docs/en/manage-claude/oauth-apps/endpoints-and-parameters",
+   "platform.claude.com/docs/en/manage-claude/oauth-apps/linked-billing",
+   "platform.claude.com/docs/en/manage-claude/oauth-apps/linked-billing/credential-for-each-customer",
+   "platform.claude.com/docs/en/manage-claude/oauth-apps/linked-billing/errors",
+   "platform.claude.com/docs/en/manage-claude/oauth-apps/linked-billing/link-and-bill-a-customer",
+   "platform.claude.com/docs/en/manage-claude/oauth-apps/linked-billing/link-button",
+   "platform.claude.com/docs/en/manage-claude/oauth-apps/linked-billing/manage-customers",
+   "platform.claude.com/docs/en/manage-claude/oauth-apps/linked-billing/set-up-your-app",
+   "platform.claude.com/docs/en/manage-claude/oauth-apps/linked-billing/test-and-publish",
+   "platform.claude.com/docs/en/manage-claude/oauth-apps/linked-billing/what-your-customers-see",
    "platform.claude.com/docs/en/manage-claude/oauth-apps/oauth-reference",
    "platform.claude.com/docs/en/manage-claude/oauth-apps/organization-billing-connections",
    "platform.claude.com/docs/en/manage-claude/oauth-apps/overview",
@@ -4046,7 +4058,7 @@
   ]
  },
  "abschaltungen": {
-  "hash": "bc199d1f467e431e"
+  "hash": "a754c20af899d4cd"
  },
  "modelle": {
   "hash": "d988ade0bae3ef24"
