@@ -1,8 +1,21 @@
 {
  "version": 1,
- "erzeugt": "2026-11-24T23:56:09.566Z",
- "anzahl": 171,
+ "erzeugt": "2026-11-25T08:39:54.924Z",
+ "anzahl": 174,
  "beitraege": [
+  {
+   "id": "claude-code-2-1-332",
+   "quelle": "code-changelog",
+   "url": "https://code.claude.com/docs/en/changelog",
+   "titel_original": "Claude Code 2.1.332",
+   "titel_de": "Claude Code 2.1.332: Skills aus MCP-Servern, neuer Hook, viele Fixes",
+   "kurz_de": "Claude Code 2.1.332 bringt Skills aus MCP-Servern (Beta), den Hook-Ereignistyp `PreSkillShellCommand` und viele Fixes zu Freezes, Kompaktierung und Cloud-Anbietern.",
+   "briefing_de": "Neu in Fassung 2.1.332:\n- Skills aus MCP-Servern (Beta): Sie erscheinen als `server:skill` im `/`-Menü, andere Skills behalten ihre Namen.\n- Neues Hook-Ereignis `PreSkillShellCommand`: kann die Inline-Shell-Befehle eines Skills oder Befehls beim Laden ablehnen. Bei Fassung 2.1.331 und älter öffnet eine Einstellungsdatei, die es nennt, beim Start einen Dialog.\n- Neu u. a.: ein Fußzeilen-Hinweis, solange eine markierte Nachricht die Session auf ein anderes Modell gesetzt hat (bis zur Wahl mit `/model`), das OpenTelemetry-Ereignis `assistant_response` (wenn Response-Logging an ist) und die Cyber-Verification-Program-Stufe im Startkopf (bei Anmeldung mit claude.ai-Konto und passender Stufe).\n- Behoben u. a.: Freezes bei Hooks mit endloser Ausgabe, bei Berechtigungsregeln mit mehreren Wildcards und bei lokalen MCP-Servern, die stdout fluten; Hängen bei Lesen/@-Erwähnungen auf einer unbeschriebenen Named Pipe (jetzt Fehler nach 20 Sekunden); „Prompt is too long“ nach wiederholt fehlgeschlagener Auto-Kompaktierung.\n- Cloud-Anbieter: Der Alias `sonnet` auf Bedrock Mantle bedeutet jetzt Sonnet 5, nicht Sonnet 5.5; ein Konto ohne Sonnet 5 bekommt einen Fehler, dort also zuerst aktivieren. Dazu Fixes zu `availableModels`-Listen auf Bedrock, Google Clouds Agent Platform und Foundry.",
+   "arbeitsweise_de": "Wer Claude Code über Bedrock Mantle nutzt und den Alias `sonnet` verwendet, sollte prüfen, dass Sonnet 5 im Konto aktiviert ist; sonst gibt es nun einen Fehler. Wer Hooks als Absicherung nutzt, kann Skills mit `PreSkillShellCommand` vor dem Ausführen ihrer Inline-Shell-Befehle prüfen. Die Fixes betreffen nur die genannten Fälle.",
+   "bereich": "claude-code",
+   "datum": "2026-11-25",
+   "wichtig": false
+  },
   {
    "id": "claude-code-2-1-331",
    "quelle": "code-changelog",
@@ -40,6 +53,19 @@
    "arbeitsweise_de": "Nur relevant, wenn du Linked billing in einem eigenen Produkt einbauen willst; die Beta-Funktion selbst ist im Beitrag „Linked billing“ beschrieben.",
    "bereich": "api",
    "datum": "2026-11-24",
+   "wichtig": false
+  },
+  {
+   "id": "analytics-api-sitzungszaehlung-chat",
+   "quelle": "platform-release-notes",
+   "url": "https://platform.claude.com/docs/en/release-notes/overview",
+   "titel_original": "Claude Enterprise Analytics API: chat session counting (November 20 and 23, 2026)",
+   "titel_de": "Analytics-API: neue Sitzungszählung und Korrekturen bei Zählwerten",
+   "kurz_de": "Die Claude Enterprise Analytics API zählt einen Chat in „Chat and Cowork unified“ nach neuer Regel als Session. Dazu korrigieren Fixes Unterzählungen bei Web-Suchen, Connectors und Projekten; schon abgerufene Zahlen können sich ändern.",
+   "briefing_de": "Neue Regel (Release Notes vom 20. November 2026): Eine Session beginnt am ersten UTC-Tag, an dem Claude im Chat erfolgreich einen Bash-Befehl ausführt, eine Datei anlegt oder bearbeitet, und endet mit diesem Tag. Früher zählte ein Chat ab dem Wechsel in eine Cowork-Cloud-Session, auch an späteren Tagen.\n- Die Umstellung erreicht Chats schrittweise, bestehende später als neue; bis dahin gilt die alte Regel, frühere Aktivität wird nicht neu gezählt. Die API zeigt nicht, welche Regel ein Chat nutzt.\n- Zahlen in „List User Activity“ (u. a. `distinct_session_count`, `message_count`, `action_count`, `file_edit_count`, Connector-Zähler) können höher oder niedriger werden; Nutzung von Skills und Plugins zählt in `sessions`. Namen mancher nicht von Anthropic stammender Skills und Plugins fehlen in betroffenen Chats; Plugins erscheinen dann unter `plugin_name` = `third-party`.\n- Nachtrag vom 23. November: Zwei Fixes sind live. `web_search_count` in „List User Activity“ zählt nun mehr Suchen (gilt für Daten ab 17. November 2026 UTC). In „Get Connector Usage“ enthalten die Zähler `individual_auth_distinct_user_count` und `managed_auth_distinct_user_count` mehr Nutzer (ab 19. November 2026 UTC).\n- Angekündigt für den 24. November 2026: Ein Fix für Projektaktivität in „Get Chat Project Usage“ und in „List User Activity“ mit Filter `project_id` (Daten ab 20. November 2026 UTC) zählt mehr Nachrichten, etwa nach dem Wechsel eines Chats in eine Cowork-Cloud-Session; Werte können höher sein und mehr Projekte erscheinen.",
+   "arbeitsweise_de": "Wer Auswertungen auf die Enterprise Analytics API stützt, sollte bei Zeitreihen um den 17. bis 24. November 2026 mit Sprüngen rechnen: Die Fixes gelten nur für die genannten Tage und später und zählen frühere Tage nicht neu, bereits abgerufene Werte dieser Tage können sich ändern. Das betrifft nur Organisationen, die diese API nutzen.",
+   "bereich": "api",
+   "datum": "2026-11-23",
    "wichtig": false
   },
   {
@@ -844,6 +870,19 @@
    "briefing_de": "Neu in Fassung 2.1.318:\n- Mods: $.model.fork hat eine effort-Option, so läuft ein kurzer Nebenauftrag auf low, egal welchen Effort die Sitzung nutzt; das Ergebnis nennt den gesendeten Effort.\n- Das Ablaufdatum eines gespeicherten claude.ai-Logins steht in claude auth status (loginExpiresAt) und in den JSON-Ergebnissen von claude -p (credential_expires_at); claude -p warnt ab 10 Tagen vor dem Ende per stderr.\n- Neu: assume_role bei mantle-Upstreams des Claude-Apps-Gateways, für eine Rolle in einem anderen AWS-Konto und AWS-Kostenzuordnung je Entwickler.\n- Viele Fixes: ~/.claude.json, Einstellungen und Login überstehen Speichern auf gemeinsamen Netzwerk-Home-Verzeichnissen besser; --continue verliert nach fehlgeschlagenen Wiederholungen eines fehlerhaften Tool-Aufrufs den früheren Verlauf nicht mehr (Regression in 2.1.314).\n- Geändert: Die IDE-Erweiterung wird nicht mehr installiert oder aktualisiert, wenn Claude Code in einem IDE-Terminal startet; nutze /ide aus einem externen Terminal oder die Erweiterungsansicht des Editors.",
    "arbeitsweise_de": "Wer Claude Code unbeaufsichtigt mit claude -p oder dem Agent SDK betreibt, kann das Ablaufdatum des claude.ai-Logins jetzt abfragen und rechtzeitig claude auth login oder claude setup-token nutzen. Wer die IDE-Erweiterung bisher über das IDE-Terminal installieren oder aktualisieren ließ, muss das nun über /ide aus einem Terminal außerhalb der IDE oder über den Editor erledigen.",
    "bereich": "claude-code",
+   "datum": "2026-11-04",
+   "wichtig": false
+  },
+  {
+   "id": "sdk-fehlercodes-behandeln",
+   "quelle": "platform-doku",
+   "url": "https://platform.claude.com/docs/en/api/handle-errors",
+   "titel_original": "Handle errors",
+   "titel_de": "SDK: API-Fehler nach Fehlercode abfangen",
+   "kurz_de": "Die SDKs geben API-Fehlern den Fehlercode der API mit und haben je Code eine eigene Exception-Klasse. Die neue Seite „Handle errors“ zeigt, wie man Fehler nach Code, HTTP-Status, Verbindung und im Stream abfängt.",
+   "briefing_de": "Seit dem 4. November 2026 tragen API-Fehler im SDK den Fehlercode, die Meldung und Details der API; jeder Fehlercode hat eine eigene Exception-Klasse (in Go eine Konstante). Dafür braucht es die neueste SDK-Fassung.\n- Die Seite „Handle errors“ zeigt in Python, TypeScript, C#, Go, Java, PHP und Ruby, wie man einen Fehlercode, einen HTTP-Status, einen Verbindungsfehler und alle übrigen Fehler getrennt behandelt.\n- Der engere Fall gehört vor den breiteren: `enforced_spend_limit_reached` (Monatslimit) kommt mit Status 429; stünde der 429-Zweig zuerst, finge er diesen Code mit.\n- Fehler im Stream: Nach dem Start hat die API schon 200 geliefert und sendet ein Fehlerereignis. Das SDK wiederholt die Anfrage nicht. Der Fehler kommt als allgemeiner Status-Fehler an, sein HTTP-Status ist 200 oder fehlt; daher `error.type` prüfen, z. B. `overloaded_error`.\n- Bricht die Verbindung mitten im Stream ab, kommt kein Fehlerereignis, und der Verbindungs-Zweig fängt es eventuell nicht.",
+   "arbeitsweise_de": "Wer die SDKs nutzt, kann statt den Antworttext zu parsen nach Fehlercode abfangen – nach Update auf die neueste SDK-Fassung. Beim Streaming reicht ein Zweig für einen HTTP-Status nicht, dort `error.type` prüfen. Die Beispiele der Seite gelten für das Messages-API-SDK.",
+   "bereich": "api",
    "datum": "2026-11-04",
    "wichtig": false
   },
