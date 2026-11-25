@@ -1,0 +1,13 @@
+{
+  "id": "messages-api-nach-rust-migriert",
+  "quelle": "anthropic",
+  "url": "https://www.anthropic.com/research/migrating-api-to-rust",
+  "titel_original": "Migrating our Messages API to Rust",
+  "titel_de": "Wie Anthropic die Messages API nach Rust migrierte",
+  "kurz_de": "Anthropic hat den Kern-Request-Pfad der Messages API von Python nach Rust verlegt: ca. 70 % weniger CPU pro Request, mediane Time to First Token ca. 20 % kürzer – abgesichert per Shadowing mit Produktionsverkehr.",
+  "briefing_de": "Der Engineering-Beitrag beschreibt die Migration der Messages API von Python (2023 gebaut) nach Rust; der API-Traffic wuchs von Anfang 2024 bis Herbst 2026 etwa um den Faktor 1.800.\n- Ergebnis laut Anthropic: ca. 70 % weniger CPU pro Request und mediane Time to First Token ca. 20 % kürzer, ohne Offline-Zeit und ohne Einfrieren der Feature-Entwicklung. Die TTFT-Messung bezieht sich auf Claude-Code-Anfragen über einen kürzeren Zeitraum; die Zahlen stammen aus Anthropics eigener Auswertung.\n- Claude schrieb in etwa einer Woche eine erste Version des Kern-Request-Pfads in Rust. Rund 700 Integrationstests reichten zur Absicherung nicht (über 100 abgeschwächte Assertions, Kopplung an Python).\n- Lösung: Shadowing mit Produktionsverkehr. Das Modell läuft einmal, die Ausgabe geht an die Rust-Version; verglichen wird Schritt für Schritt über „Fingerprints“ statt gespeicherten Texts. Die Input-Übereinstimmung stieg von 24 % (Ende April) auf 99,6 % im August.\n- Agenten in Cloud-Sandboxes suchen und beheben Abweichungen; Menschen prüfen weiter, ob eine Abweichung ein Fehler oder eine bewusste Änderung ist. Kernlehre: Verifikation ist der neue Engpass, nicht das Schreiben von Code.",
+  "arbeitsweise_de": "Für eigene Migrationen mit Agenten: Ein laufendes Produktionssystem kann als Verifier dienen, wenn es ein gutes Signal liefert (Checkpoints, Fingerprints). Vorsicht: Ein Verifier belohnt übereinstimmende Ausgaben, nicht gute Lösungen – menschliche Prüfung bleibt nötig. Für API-Nutzer wird in der Quelle keine Änderung der Schnittstelle genannt.",
+  "bereich": "engineering",
+  "datum": "2026-11-25",
+  "wichtig": false
+}
