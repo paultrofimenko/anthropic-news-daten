@@ -1,0 +1,13 @@
+{
+  "id": "claude-code-2-1-332",
+  "quelle": "code-changelog",
+  "url": "https://code.claude.com/docs/en/changelog",
+  "titel_original": "Claude Code 2.1.332",
+  "titel_de": "Claude Code 2.1.332: Skills aus MCP-Servern, neuer Hook, viele Fixes",
+  "kurz_de": "Claude Code 2.1.332 bringt Skills aus MCP-Servern (Beta), den Hook-Ereignistyp `PreSkillShellCommand` und viele Fixes zu Freezes, Kompaktierung und Cloud-Anbietern.",
+  "briefing_de": "Neu in Fassung 2.1.332:\n- Skills aus MCP-Servern (Beta): Sie erscheinen als `server:skill` im `/`-Menü, andere Skills behalten ihre Namen.\n- Neues Hook-Ereignis `PreSkillShellCommand`: kann die Inline-Shell-Befehle eines Skills oder Befehls beim Laden ablehnen. Bei Fassung 2.1.331 und älter öffnet eine Einstellungsdatei, die es nennt, beim Start einen Dialog.\n- Neu u. a.: ein Fußzeilen-Hinweis, solange eine markierte Nachricht die Session auf ein anderes Modell gesetzt hat (bis zur Wahl mit `/model`), das OpenTelemetry-Ereignis `assistant_response` (wenn Response-Logging an ist) und die Cyber-Verification-Program-Stufe im Startkopf (bei Anmeldung mit claude.ai-Konto und passender Stufe).\n- Behoben u. a.: Freezes bei Hooks mit endloser Ausgabe, bei Berechtigungsregeln mit mehreren Wildcards und bei lokalen MCP-Servern, die stdout fluten; Hängen bei Lesen/@-Erwähnungen auf einer unbeschriebenen Named Pipe (jetzt Fehler nach 20 Sekunden); „Prompt is too long“ nach wiederholt fehlgeschlagener Auto-Kompaktierung.\n- Cloud-Anbieter: Der Alias `sonnet` auf Bedrock Mantle bedeutet jetzt Sonnet 5, nicht Sonnet 5.5; ein Konto ohne Sonnet 5 bekommt einen Fehler, dort also zuerst aktivieren. Dazu Fixes zu `availableModels`-Listen auf Bedrock, Google Clouds Agent Platform und Foundry.",
+  "arbeitsweise_de": "Wer Claude Code über Bedrock Mantle nutzt und den Alias `sonnet` verwendet, sollte prüfen, dass Sonnet 5 im Konto aktiviert ist; sonst gibt es nun einen Fehler. Wer Hooks als Absicherung nutzt, kann Skills mit `PreSkillShellCommand` vor dem Ausführen ihrer Inline-Shell-Befehle prüfen. Die Fixes betreffen nur die genannten Fälle.",
+  "bereich": "claude-code",
+  "datum": "2026-11-25",
+  "wichtig": false
+}

@@ -1,0 +1,13 @@
+{
+  "id": "sdk-fehlercodes-behandeln",
+  "quelle": "platform-doku",
+  "url": "https://platform.claude.com/docs/en/api/handle-errors",
+  "titel_original": "Handle errors",
+  "titel_de": "SDK: API-Fehler nach Fehlercode abfangen",
+  "kurz_de": "Die SDKs geben API-Fehlern den Fehlercode der API mit und haben je Code eine eigene Exception-Klasse. Die neue Seite „Handle errors“ zeigt, wie man Fehler nach Code, HTTP-Status, Verbindung und im Stream abfängt.",
+  "briefing_de": "Seit dem 4. November 2026 tragen API-Fehler im SDK den Fehlercode, die Meldung und Details der API; jeder Fehlercode hat eine eigene Exception-Klasse (in Go eine Konstante). Dafür braucht es die neueste SDK-Fassung.\n- Die Seite „Handle errors“ zeigt in Python, TypeScript, C#, Go, Java, PHP und Ruby, wie man einen Fehlercode, einen HTTP-Status, einen Verbindungsfehler und alle übrigen Fehler getrennt behandelt.\n- Der engere Fall gehört vor den breiteren: `enforced_spend_limit_reached` (Monatslimit) kommt mit Status 429; stünde der 429-Zweig zuerst, finge er diesen Code mit.\n- Fehler im Stream: Nach dem Start hat die API schon 200 geliefert und sendet ein Fehlerereignis. Das SDK wiederholt die Anfrage nicht. Der Fehler kommt als allgemeiner Status-Fehler an, sein HTTP-Status ist 200 oder fehlt; daher `error.type` prüfen, z. B. `overloaded_error`.\n- Bricht die Verbindung mitten im Stream ab, kommt kein Fehlerereignis, und der Verbindungs-Zweig fängt es eventuell nicht.",
+  "arbeitsweise_de": "Wer die SDKs nutzt, kann statt den Antworttext zu parsen nach Fehlercode abfangen – nach Update auf die neueste SDK-Fassung. Beim Streaming reicht ein Zweig für einen HTTP-Status nicht, dort `error.type` prüfen. Die Beispiele der Seite gelten für das Messages-API-SDK.",
+  "bereich": "api",
+  "datum": "2026-11-04",
+  "wichtig": false
+}

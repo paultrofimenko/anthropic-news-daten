@@ -1,0 +1,13 @@
+{
+  "id": "analytics-api-sitzungszaehlung-chat",
+  "quelle": "platform-release-notes",
+  "url": "https://platform.claude.com/docs/en/release-notes/overview",
+  "titel_original": "Claude Enterprise Analytics API: chat session counting (November 20 and 23, 2026)",
+  "titel_de": "Analytics-API: neue Sitzungszählung und Korrekturen bei Zählwerten",
+  "kurz_de": "Die Claude Enterprise Analytics API zählt einen Chat in „Chat and Cowork unified“ nach neuer Regel als Session. Dazu korrigieren Fixes Unterzählungen bei Web-Suchen, Connectors und Projekten; schon abgerufene Zahlen können sich ändern.",
+  "briefing_de": "Neue Regel (Release Notes vom 20. November 2026): Eine Session beginnt am ersten UTC-Tag, an dem Claude im Chat erfolgreich einen Bash-Befehl ausführt, eine Datei anlegt oder bearbeitet, und endet mit diesem Tag. Früher zählte ein Chat ab dem Wechsel in eine Cowork-Cloud-Session, auch an späteren Tagen.\n- Die Umstellung erreicht Chats schrittweise, bestehende später als neue; bis dahin gilt die alte Regel, frühere Aktivität wird nicht neu gezählt. Die API zeigt nicht, welche Regel ein Chat nutzt.\n- Zahlen in „List User Activity“ (u. a. `distinct_session_count`, `message_count`, `action_count`, `file_edit_count`, Connector-Zähler) können höher oder niedriger werden; Nutzung von Skills und Plugins zählt in `sessions`. Namen mancher nicht von Anthropic stammender Skills und Plugins fehlen in betroffenen Chats; Plugins erscheinen dann unter `plugin_name` = `third-party`.\n- Nachtrag vom 23. November: Zwei Fixes sind live. `web_search_count` in „List User Activity“ zählt nun mehr Suchen (gilt für Daten ab 17. November 2026 UTC). In „Get Connector Usage“ enthalten die Zähler `individual_auth_distinct_user_count` und `managed_auth_distinct_user_count` mehr Nutzer (ab 19. November 2026 UTC).\n- Angekündigt für den 24. November 2026: Ein Fix für Projektaktivität in „Get Chat Project Usage“ und in „List User Activity“ mit Filter `project_id` (Daten ab 20. November 2026 UTC) zählt mehr Nachrichten, etwa nach dem Wechsel eines Chats in eine Cowork-Cloud-Session; Werte können höher sein und mehr Projekte erscheinen.",
+  "arbeitsweise_de": "Wer Auswertungen auf die Enterprise Analytics API stützt, sollte bei Zeitreihen um den 17. bis 24. November 2026 mit Sprüngen rechnen: Die Fixes gelten nur für die genannten Tage und später und zählen frühere Tage nicht neu, bereits abgerufene Werte dieser Tage können sich ändern. Das betrifft nur Organisationen, die diese API nutzen.",
+  "bereich": "api",
+  "datum": "2026-11-23",
+  "wichtig": false
+}
