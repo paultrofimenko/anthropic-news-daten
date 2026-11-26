@@ -1,0 +1,13 @@
+{
+  "id": "messages-api-nach-rust-migriert",
+  "quelle": "anthropic",
+  "url": "https://www.anthropic.com/research/migrating-api-to-rust",
+  "titel_original": "Migrating our Messages API to Rust",
+  "titel_de": "Messages API wurde mit Claude nach Rust migriert",
+  "kurz_de": "Anthropic hat die Messages API von Python nach Rust umgezogen. Laut Artikel sinkt der CPU-Verbrauch pro Anfrage um etwa 70 %, der Speicherverbrauch um über 80 %, die mediane Zeit bis zum ersten Token um etwa 20 %.",
+  "briefing_de": "Anthropic beschreibt, wie die 2023 in Python gebaute Messages API mit Claude nach Rust migriert wurde:\n- Ergebnis laut Artikel: etwa 70 % weniger CPU pro Anfrage, über 80 % weniger Speicher, mediane Zeit bis zum ersten Token etwa 20 % kürzer – ohne Unterbrechung des Betriebs.\n- Eine Teilmigration (nur der Parser für Modellausgaben in Rust) brachte 8 bis 10 % weniger CPU und wurde verworfen, weil jedes Token dreimal zwischen Python und Rust wechselte.\n- Claude schrieb den Kern des Request-Pfads in etwa einer Woche; der Engpass war die Verifikation. Rund 700 Integrationstests waren an die Python-Version gekoppelt, ein Audit fand über 100 abgeschwächte Assertions.\n- Geprüft wurde per Shadowing mit Produktionsverkehr: Beide Versionen bekamen dieselbe Modellausgabe, verglichen wurden nur Metadaten, keine Nutzertexte. Die Übereinstimmung stieg von etwa 24 % (Ende April) auf 99,6 % (August).\n- Lehre laut Anthropic: Verifikation ist der neue Engpass; Menschen sollen sich auf Regeln und wichtige Entscheidungen konzentrieren.",
+  "arbeitsweise_de": "Wer größere Umbauten mit Claude plant, kann sich am Vorgehen orientieren: ein starkes Verifikationssignal (Vergleich mit echtem Verkehr statt nur Tests), schnelle Vergleichsschleifen in einer Sandbox und Korrekturen als Regeln (z. B. in CLAUDE.md) festhalten. Der Artikel beschreibt Anthropics eigene Umgebung; die Werte gelten nicht automatisch für andere Projekte.",
+  "bereich": "engineering",
+  "datum": "2026-11-25",
+  "wichtig": false
+}
