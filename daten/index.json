@@ -1,7 +1,7 @@
 {
  "version": 1,
- "erzeugt": "2026-11-25T08:39:54.924Z",
- "anzahl": 174,
+ "erzeugt": "2026-11-26T03:36:31.292Z",
+ "anzahl": 175,
  "beitraege": [
   {
    "id": "claude-code-2-1-332",
@@ -13,6 +13,19 @@
    "briefing_de": "Neu in Fassung 2.1.332:\n- Skills aus MCP-Servern (Beta): Sie erscheinen als `server:skill` im `/`-Menü, andere Skills behalten ihre Namen.\n- Neues Hook-Ereignis `PreSkillShellCommand`: kann die Inline-Shell-Befehle eines Skills oder Befehls beim Laden ablehnen. Bei Fassung 2.1.331 und älter öffnet eine Einstellungsdatei, die es nennt, beim Start einen Dialog.\n- Neu u. a.: ein Fußzeilen-Hinweis, solange eine markierte Nachricht die Session auf ein anderes Modell gesetzt hat (bis zur Wahl mit `/model`), das OpenTelemetry-Ereignis `assistant_response` (wenn Response-Logging an ist) und die Cyber-Verification-Program-Stufe im Startkopf (bei Anmeldung mit claude.ai-Konto und passender Stufe).\n- Behoben u. a.: Freezes bei Hooks mit endloser Ausgabe, bei Berechtigungsregeln mit mehreren Wildcards und bei lokalen MCP-Servern, die stdout fluten; Hängen bei Lesen/@-Erwähnungen auf einer unbeschriebenen Named Pipe (jetzt Fehler nach 20 Sekunden); „Prompt is too long“ nach wiederholt fehlgeschlagener Auto-Kompaktierung.\n- Cloud-Anbieter: Der Alias `sonnet` auf Bedrock Mantle bedeutet jetzt Sonnet 5, nicht Sonnet 5.5; ein Konto ohne Sonnet 5 bekommt einen Fehler, dort also zuerst aktivieren. Dazu Fixes zu `availableModels`-Listen auf Bedrock, Google Clouds Agent Platform und Foundry.",
    "arbeitsweise_de": "Wer Claude Code über Bedrock Mantle nutzt und den Alias `sonnet` verwendet, sollte prüfen, dass Sonnet 5 im Konto aktiviert ist; sonst gibt es nun einen Fehler. Wer Hooks als Absicherung nutzt, kann Skills mit `PreSkillShellCommand` vor dem Ausführen ihrer Inline-Shell-Befehle prüfen. Die Fixes betreffen nur die genannten Fälle.",
    "bereich": "claude-code",
+   "datum": "2026-11-25",
+   "wichtig": false
+  },
+  {
+   "id": "messages-api-nach-rust-migriert",
+   "quelle": "anthropic",
+   "url": "https://www.anthropic.com/research/migrating-api-to-rust",
+   "titel_original": "Migrating our Messages API to Rust",
+   "titel_de": "Messages API wurde mit Claude nach Rust migriert",
+   "kurz_de": "Anthropic hat die Messages API von Python nach Rust umgezogen. Laut Artikel sinkt der CPU-Verbrauch pro Anfrage um etwa 70 %, der Speicherverbrauch um über 80 %, die mediane Zeit bis zum ersten Token um etwa 20 %.",
+   "briefing_de": "Anthropic beschreibt, wie die 2023 in Python gebaute Messages API mit Claude nach Rust migriert wurde:\n- Ergebnis laut Artikel: etwa 70 % weniger CPU pro Anfrage, über 80 % weniger Speicher, mediane Zeit bis zum ersten Token etwa 20 % kürzer – ohne Unterbrechung des Betriebs.\n- Eine Teilmigration (nur der Parser für Modellausgaben in Rust) brachte 8 bis 10 % weniger CPU und wurde verworfen, weil jedes Token dreimal zwischen Python und Rust wechselte.\n- Claude schrieb den Kern des Request-Pfads in etwa einer Woche; der Engpass war die Verifikation. Rund 700 Integrationstests waren an die Python-Version gekoppelt, ein Audit fand über 100 abgeschwächte Assertions.\n- Geprüft wurde per Shadowing mit Produktionsverkehr: Beide Versionen bekamen dieselbe Modellausgabe, verglichen wurden nur Metadaten, keine Nutzertexte. Die Übereinstimmung stieg von etwa 24 % (Ende April) auf 99,6 % (August).\n- Lehre laut Anthropic: Verifikation ist der neue Engpass; Menschen sollen sich auf Regeln und wichtige Entscheidungen konzentrieren.",
+   "arbeitsweise_de": "Wer größere Umbauten mit Claude plant, kann sich am Vorgehen orientieren: ein starkes Verifikationssignal (Vergleich mit echtem Verkehr statt nur Tests), schnelle Vergleichsschleifen in einer Sandbox und Korrekturen als Regeln (z. B. in CLAUDE.md) festhalten. Der Artikel beschreibt Anthropics eigene Umgebung; die Werte gelten nicht automatisch für andere Projekte.",
+   "bereich": "engineering",
    "datum": "2026-11-25",
    "wichtig": false
   },
